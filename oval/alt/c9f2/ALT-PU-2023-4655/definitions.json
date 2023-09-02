@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234655",
+      "Version": "oval:org.altlinux.errata:def:20234655",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4655: package `shim` update to version 15.7-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4655",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4655",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03372",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03372",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-28733",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28733",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28737",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28737",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades shim to version 15.7-alt3. \nSecurity Fix(es):\n\n * BDU:2022-03372: Уязвимость функции grub_net_recv_ip4_packets программы-загрузчика операционных систем Grub, позволяющая нарушителю выполнить произвольный код путем отправки специально сформированных IP-пакетов\n\n * CVE-2022-28733: Integer underflow in grub_net_recv_ip4_packets; A malicious crafted IP packet can lead to an integer underflow in grub_net_recv_ip4_packets() function on rsm-\u003etotal_len value. Under certain circumstances the total_len value may end up wrapping around to a small integer number which will be used in memory allocation. If the attack succeeds in such way, subsequent operations can write past the end of the buffer.\n\n * CVE-2022-28737: There's a possible overflow in handle_image() when shim tries to load and execute crafted EFI executables; The handle_image() function takes into account the SizeOfRawData field from each section to be loaded. An attacker can leverage this to perform out-of-bound writes into memory. Arbitrary code execution is not discarded in such scenario.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-04"
+          },
+          "Updated": {
+            "Date": "2023-08-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://bdu.fstec.ru/vul/2022-03372",
+              "Impact": "High",
+              "Public": "20220607",
+              "CveID": "BDU:2022-03372"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28733",
+              "Impact": "High",
+              "Public": "20230720",
+              "CveID": "CVE-2022-28733"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28737",
+              "Impact": "High",
+              "Public": "20230720",
+              "CveID": "CVE-2022-28737"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234655001",
+                "Comment": "shim-unsigned is earlier than 0:15.7-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

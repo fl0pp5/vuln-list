@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212417",
+      "Version": "oval:org.altlinux.errata:def:20212417",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2417: package `kernel-image-std-def` update to version 5.10.54-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2417",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2417",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04028",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04028",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-37576",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37576",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.54-alt2. \nSecurity Fix(es):\n\n * BDU:2021-04028: Уязвимость функции rtas_args.nargs драйвера arch/powerpc/kvm/book3s_rtas.c ядра операционной системы Linux, позволяющая нарушителю вызвать повреждение памяти операционной системы хоста\n\n * CVE-2021-37576: arch/powerpc/kvm/book3s_rtas.c in the Linux kernel through 5.13.5 on the powerpc platform allows KVM guest OS users to cause host OS memory corruption via rtas_args.nargs, aka CID-f62f3c20647e.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-04"
+          },
+          "Updated": {
+            "Date": "2021-08-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04028",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "BDU:2021-04028"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37576",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-37576"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.54-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212417010",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.54-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

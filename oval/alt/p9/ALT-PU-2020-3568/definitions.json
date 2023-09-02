@@ -1,0 +1,289 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203568",
+      "Version": "oval:org.altlinux.errata:def:20203568",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3568: package `mediawiki` update to version 1.35.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3568",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3568",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01731",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01731",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01770",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01770",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01771",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01771",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01772",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01772",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03987",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03987",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-27621",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27621",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35474",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35474",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35475",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35475",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35477",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35477",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35478",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35478",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35479",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35479",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35480",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35480",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mediawiki to version 1.35.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01731: Уязвимость программного средства для реализации гипертекстовой среды MediaWiki, связанная с раскрытием информации, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-01770: Уязвимость компонента BlockLogFormatter.php программного средства для реализации гипертекстовой среды MediaWiki, связанная с недостатками используемых мер по защите структур веб-страницы, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-01771: Уязвимость программного средства для реализации гипертекстовой среды MediaWiki, связанная с недостатком механизма проверки вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-01772: Уязвимость сообщений userrights-expiry-current и userrights-expiry-none программного средства для реализации гипертекстовой среды MediaWiki, связанная с недостатком механизма кодирования или экранирования выходных данных, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-03987: Уязвимость компонентов Html::rawElement и Message::text программного средства для реализации гипертекстовой среды MediaWiki, позволяющая нарушителю провести атаку межсайтового скриптинга (XSS)\n\n * CVE-2020-27621: The FileImporter extension in MediaWiki through 1.35.0 was not properly attributing various user actions to a specific user's IP address. Instead, for various actions, it would report the IP address of an internal Wikimedia Foundation server by omitting X-Forwarded-For data. This resulted in an inability to properly audit and attribute various user actions performed via the FileImporter extension.\n\n * CVE-2020-35474: In MediaWiki before 1.35.1, the combination of Html::rawElement and Message::text leads to XSS because the definition of MediaWiki:recentchanges-legend-watchlistexpiry can be changed onwiki so that the output is raw HTML.\n\n * CVE-2020-35475: In MediaWiki before 1.35.1, the messages userrights-expiry-current and userrights-expiry-none can contain raw HTML. XSS can happen when a user visits Special:UserRights but does not have rights to change all userrights, and the table on the left side has unchangeable groups in it. (The right column with the changeable groups is not affected and is escaped correctly.)\n\n * CVE-2020-35477: MediaWiki before 1.35.1 blocks legitimate attempts to hide log entries in some situations. If one sets MediaWiki:Mainpage to Special:MyLanguage/Main Page, visits a log entry on Special:Log, and toggles the \"Change visibility of selected log entries\" checkbox (or a tags checkbox) next to it, there is a redirection to the main page's action=historysubmit (instead of the desired behavior in which a revision-deletion form appears).\n\n * CVE-2020-35478: MediaWiki before 1.35.1 allows XSS via BlockLogFormatter.php. MediaWiki:blanknamespace potentially can be output as raw HTML with SCRIPT tags via LogFormatter::makePageLink(). This affects MediaWiki 1.33.0 and later.\n\n * CVE-2020-35479: MediaWiki before 1.35.1 allows XSS via BlockLogFormatter.php. Language::translateBlockExpiry itself does not escape in all code paths. For example, the return of Language::userTimeAndDate is is always unsafe for HTML in a month value. This affects MediaWiki 1.12.0 and later.\n\n * CVE-2020-35480: An issue was discovered in MediaWiki before 1.35.1. Missing users (accounts that don't exist) and hidden users (accounts that have been explicitly hidden due to being abusive, or similar) that the viewer cannot see are handled differently, exposing sensitive information about the hidden status to unprivileged viewers. This exists on various code paths.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-30"
+          },
+          "Updated": {
+            "Date": "2020-12-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2021-01731",
+              "Impact": "Low",
+              "Public": "20201205",
+              "CveID": "BDU:2021-01731"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2021-01770",
+              "Impact": "Low",
+              "Public": "20201129",
+              "CveID": "BDU:2021-01770"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01771",
+              "Impact": "Low",
+              "Public": "20181001",
+              "CveID": "BDU:2021-01771"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://bdu.fstec.ru/vul/2021-01772",
+              "Impact": "High",
+              "Public": "20201128",
+              "CveID": "BDU:2021-01772"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-03987",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "BDU:2022-03987"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27621",
+              "Impact": "Low",
+              "Public": "20201022",
+              "CveID": "CVE-2020-27621"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35474",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35474"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35475",
+              "Impact": "High",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35475"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-670",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35477",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35477"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35478",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35478"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35479",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35479"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35480",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "CVE-2020-35480"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568001",
+                "Comment": "mediawiki is earlier than 0:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568002",
+                "Comment": "mediawiki-apache2 is earlier than 0:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568003",
+                "Comment": "mediawiki-common is earlier than 0:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568004",
+                "Comment": "mediawiki-extensions-PdfHandler is earlier than 0:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568005",
+                "Comment": "mediawiki-extensions-SyntaxHighlight_GeSHi is earlier than 1:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568006",
+                "Comment": "mediawiki-mysql is earlier than 0:1.35.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203568007",
+                "Comment": "mediawiki-postgresql is earlier than 0:1.35.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

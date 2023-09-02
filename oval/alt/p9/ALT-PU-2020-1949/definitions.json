@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201949",
+      "Version": "oval:org.altlinux.errata:def:20201949",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1949: package `salt` update to version 3000.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1949",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1949",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03941",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03941",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03942",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03942",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11651",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11651",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-11652",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11652",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades salt to version 3000.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03941: Уязвимость компонента master.py системы управления конфигурациями и удалённого выполнения операций SaltStack, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-03942: Уязвимость компонента ClearFuncs системы управления конфигурациями и удалённого выполнения операций SaltStack, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2020-11651: An issue was discovered in SaltStack Salt before 2019.2.4 and 3000 before 3000.2. The salt-master process ClearFuncs class does not properly validate method calls. This allows a remote user to access some methods without authentication. These methods can be used to retrieve user tokens from the salt master and/or run arbitrary commands on salt minions.\n\n * CVE-2020-11652: An issue was discovered in SaltStack Salt before 2019.2.4 and 3000 before 3000.2. The salt-master process ClearFuncs class allows access to some methods that improperly sanitize paths. These methods allow arbitrary directory access to authenticated users.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-12"
+          },
+          "Updated": {
+            "Date": "2020-05-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-03941",
+              "Impact": "Critical",
+              "Public": "20200430",
+              "CveID": "BDU:2020-03941"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-03942",
+              "Impact": "Low",
+              "Public": "20200430",
+              "CveID": "BDU:2020-03942"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11651",
+              "Impact": "Critical",
+              "Public": "20200430",
+              "CveID": "CVE-2020-11651"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11652",
+              "Impact": "Low",
+              "Public": "20200430",
+              "CveID": "CVE-2020-11652"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201949001",
+                "Comment": "python3-module-salt is earlier than 0:3000.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201949002",
+                "Comment": "salt-api is earlier than 0:3000.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201949003",
+                "Comment": "salt-master is earlier than 0:3000.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201949004",
+                "Comment": "salt-minion is earlier than 0:3000.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

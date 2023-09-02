@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234999",
+      "Version": "oval:org.altlinux.errata:def:20234999",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4999: package `ImageMagick` update to version 6.9.12.93-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4999",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4999",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00579",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00579",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02231",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02231",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-44268",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-44268",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-1906",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1906",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39978",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39978",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ImageMagick to version 6.9.12.93-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00579: Уязвимость графического редактора ImageMagick, связанная с ошибками при обработке входных данных, позволяющая нарушителю получить доступ к защищаемой информации\n\n * BDU:2023-02231: Уязвимость функции importmultispectralquantum() консольного графического редактора ImageMagick, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-44268: ImageMagick 7.1.0-49 is vulnerable to Information Disclosure. When it parses a PNG image (e.g., for resize), the resulting image could have embedded the content of an arbitrary. file (if the magick binary has permissions to read it).\n\n * CVE-2023-1906: A heap-based buffer overflow issue was discovered in ImageMagick's ImportMultiSpectralQuantum() function in MagickCore/quantum-import.c. An attacker could pass specially crafted file to convert, triggering an out-of-bounds read error, allowing an application to crash, resulting in a denial of service.\n\n * CVE-2023-39978: ImageMagick before 6.9.12-91 allows attackers to cause a denial of service (memory consumption) in Magick::Draw.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-01"
+          },
+          "Updated": {
+            "Date": "2023-09-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2023-00579",
+              "Impact": "High",
+              "Public": "20230206",
+              "CveID": "BDU:2023-00579"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-122, CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-02231",
+              "Impact": "Low",
+              "Public": "20230401",
+              "CveID": "BDU:2023-02231"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-44268",
+              "Impact": "Low",
+              "Public": "20230206",
+              "CveID": "CVE-2022-44268"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1906",
+              "Impact": "Low",
+              "Public": "20230412",
+              "CveID": "CVE-2023-1906"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39978",
+              "Impact": "Low",
+              "Public": "20230808",
+              "CveID": "CVE-2023-39978"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999001",
+                "Comment": "ImageMagick is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999002",
+                "Comment": "ImageMagick-doc is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999003",
+                "Comment": "ImageMagick-tools is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999004",
+                "Comment": "libImageMagick++6.9 is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999005",
+                "Comment": "libImageMagick-devel is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999006",
+                "Comment": "libImageMagick6-common is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999007",
+                "Comment": "libImageMagick6.7 is earlier than 0:6.9.12.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234999008",
+                "Comment": "perl-Magick is earlier than 0:6.9.12.93-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

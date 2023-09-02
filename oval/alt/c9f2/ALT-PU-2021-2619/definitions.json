@@ -1,0 +1,91 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212619",
+      "Version": "oval:org.altlinux.errata:def:20212619",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2619: package `mkimage` update to version 0.2.43-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2619",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2619",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades mkimage to version 0.2.43-alt1. \nSecurity Fix(es):\n\n * #39369: Лишние зависимости у mkimage\n\n * #39587: Копирование locale в efi-grub\n\n * #39855: [FR] Прошу добавить возможность задания UUID для ISO образа",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-25"
+          },
+          "Updated": {
+            "Date": "2021-08-25"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39369",
+              "Href": "https://bugzilla.altlinux.org/39369",
+              "Data": "Лишние зависимости у mkimage"
+            },
+            {
+              "Id": "39587",
+              "Href": "https://bugzilla.altlinux.org/39587",
+              "Data": "Копирование locale в efi-grub"
+            },
+            {
+              "Id": "39855",
+              "Href": "https://bugzilla.altlinux.org/39855",
+              "Data": "[FR] Прошу добавить возможность задания UUID для ISO образа"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212619001",
+                "Comment": "mkimage is earlier than 0:0.2.43-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212619002",
+                "Comment": "mkimage-preinstall is earlier than 0:0.2.43-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

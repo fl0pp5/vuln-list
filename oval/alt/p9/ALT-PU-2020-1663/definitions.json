@@ -1,0 +1,337 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201663",
+      "Version": "oval:org.altlinux.errata:def:20201663",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1663: package `gcc8` update to version 8.4.1-alt0.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1663",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1663",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-15847",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15847",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gcc8 to version 8.4.1-alt0.p9.1. \nSecurity Fix(es):\n\n * CVE-2019-15847: The POWER9 backend in GNU Compiler Collection (GCC) before version 10 could optimize multiple calls of the __builtin_darn intrinsic into a single call, thus reducing the entropy of the random number generator. This occurred because a volatile operation was not specified. For example, within a single execution of a program, the output of every __builtin_darn() call may be the same.\n\n * #38185: g++: пропадает макрос __linux при указании опции -std=c++11",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-03"
+          },
+          "Updated": {
+            "Date": "2020-04-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-331",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15847",
+              "Impact": "High",
+              "Public": "20190902",
+              "CveID": "CVE-2019-15847"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "38185",
+              "Href": "https://bugzilla.altlinux.org/38185",
+              "Data": "g++: пропадает макрос __linux при указании опции -std=c++11"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663001",
+                "Comment": "cpp8 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663002",
+                "Comment": "gcc-source is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663003",
+                "Comment": "gcc8 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663004",
+                "Comment": "gcc8-c++ is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663005",
+                "Comment": "gcc8-doc is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663006",
+                "Comment": "gcc8-fortran is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663007",
+                "Comment": "gcc8-fortran-doc is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663008",
+                "Comment": "gcc8-gdb-plugin is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663009",
+                "Comment": "gcc8-gnat is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663010",
+                "Comment": "gcc8-gnat-doc is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663011",
+                "Comment": "gcc8-go is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663012",
+                "Comment": "gcc8-go-doc is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663013",
+                "Comment": "gcc8-locales is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663014",
+                "Comment": "gcc8-objc is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663015",
+                "Comment": "gcc8-objc++ is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663016",
+                "Comment": "gcc8-plugin-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663017",
+                "Comment": "libasan5 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663018",
+                "Comment": "libasan8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663019",
+                "Comment": "libatomic1 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663020",
+                "Comment": "libatomic8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663021",
+                "Comment": "libgcc1 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663022",
+                "Comment": "libgccjit0 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663023",
+                "Comment": "libgccjit8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663024",
+                "Comment": "libgfortran5 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663025",
+                "Comment": "libgfortran8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663026",
+                "Comment": "libgfortran8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663027",
+                "Comment": "libgnat8 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663028",
+                "Comment": "libgnat8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663029",
+                "Comment": "libgnat8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663030",
+                "Comment": "libgo13 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663031",
+                "Comment": "libgo8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663032",
+                "Comment": "libgo8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663033",
+                "Comment": "libgomp1 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663034",
+                "Comment": "libgomp8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663035",
+                "Comment": "libgomp8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663036",
+                "Comment": "libitm1 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663037",
+                "Comment": "libitm8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663038",
+                "Comment": "liblsan0 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663039",
+                "Comment": "liblsan8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663040",
+                "Comment": "libmpx2 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663041",
+                "Comment": "libmpx8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663042",
+                "Comment": "libobjc4 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663043",
+                "Comment": "libobjc8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663044",
+                "Comment": "libobjc8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663045",
+                "Comment": "libquadmath0 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663046",
+                "Comment": "libquadmath8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663047",
+                "Comment": "libquadmath8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663048",
+                "Comment": "libstdc++6 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663049",
+                "Comment": "libstdc++8-devel is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663050",
+                "Comment": "libstdc++8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663051",
+                "Comment": "libtsan0 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663052",
+                "Comment": "libtsan8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663053",
+                "Comment": "libubsan1 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663054",
+                "Comment": "libubsan8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663055",
+                "Comment": "libvtv0 is earlier than 0:8.4.1-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201663056",
+                "Comment": "libvtv8-devel-static is earlier than 0:8.4.1-alt0.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

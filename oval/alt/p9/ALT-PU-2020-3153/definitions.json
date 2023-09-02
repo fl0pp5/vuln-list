@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203153",
+      "Version": "oval:org.altlinux.errata:def:20203153",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3153: package `atftp` update to version 0.7.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3153",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3153",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01952",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01952",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-01954",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01954",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11365",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11365",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11366",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11366",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades atftp to version 0.7.2-alt1. \nSecurity Fix(es):\n\n * BDU:2019-01952: Уязвимость функции вызова strncpy Atftpd, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю оказать воздействие на целостность и конфиденциальность данных или вызвать отказ в обслуживании\n\n * BDU:2019-01954: Уязвимость функции thread_list_mutex продвинутого TFTP-сервера Atftpd, связанная с разыменованием указателя NULL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-11365: An issue was discovered in atftpd in atftp 0.7.1. A remote attacker may send a crafted packet triggering a stack-based buffer overflow due to an insecurely implemented strncpy call. The vulnerability is triggered by sending an error packet of 3 bytes or fewer. There are multiple instances of this vulnerable strncpy pattern within the code base, specifically within tftpd_file.c, tftp_file.c, tftpd_mtftp.c, and tftp_mtftp.c.\n\n * CVE-2019-11366: An issue was discovered in atftpd in atftp 0.7.1. It does not lock the thread_list_mutex mutex before assigning the current thread data structure. As a result, the daemon is vulnerable to a denial of service attack due to a NULL pointer dereference. If thread_data is NULL when assigned to current, and modified by another thread before a certain tftpd_list.c check, there is a crash when dereferencing current-\u003enext.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-28"
+          },
+          "Updated": {
+            "Date": "2020-10-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-01952",
+              "Impact": "Critical",
+              "Public": "20190414",
+              "CveID": "BDU:2019-01952"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2019-01954",
+              "Impact": "Low",
+              "Public": "20190414",
+              "CveID": "BDU:2019-01954"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11365",
+              "Impact": "Critical",
+              "Public": "20190420",
+              "CveID": "CVE-2019-11365"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11366",
+              "Impact": "Low",
+              "Public": "20190420",
+              "CveID": "CVE-2019-11366"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203153001",
+                "Comment": "atftp is earlier than 0:0.7.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

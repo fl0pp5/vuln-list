@@ -1,0 +1,159 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231488",
+      "Version": "oval:org.altlinux.errata:def:20231488",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1488: package `podman` update to version 4.4.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1488",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1488",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-1227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1227",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27191",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27649",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27649",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0778",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0778",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades podman to version 4.4.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-1227: A privilege escalation flaw was found in Podman. This flaw allows an attacker to publish a malicious image to a public registry. Once this image is downloaded by a potential victim, the vulnerability is triggered after a user runs the 'podman top' command. This action gives the attacker access to the host filesystem, leading to information disclosure or denial of service.\n\n * CVE-2022-27191: The golang.org/x/crypto/ssh package before 0.0.0-20220314234659-1baeb1ce4c0b for Go allows an attacker to crash a server in certain circumstances involving AddHostKey.\n\n * CVE-2022-27649: A flaw was found in Podman, where containers were started incorrectly with non-empty default permissions. A vulnerability was found in Moby (Docker Engine), where containers were started incorrectly with non-empty inheritable Linux process capabilities. This flaw allows an attacker with access to programs with inheritable file capabilities to elevate those capabilities to the permitted set when execve(2) runs.\n\n * CVE-2023-0778: A Time-of-check Time-of-use (TOCTOU) flaw was found in podman. This issue may allow a malicious user to replace a normal file in a volume with a symlink while exporting the volume, allowing for access to arbitrary files on the host file system.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-22"
+          },
+          "Updated": {
+            "Date": "2023-03-22"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1227",
+              "Impact": "High",
+              "Public": "20220429",
+              "CveID": "CVE-2022-1227"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27191",
+              "Impact": "High",
+              "Public": "20220318",
+              "CveID": "CVE-2022-27191"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27649",
+              "Impact": "High",
+              "Public": "20220404",
+              "CveID": "CVE-2022-27649"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0778",
+              "Impact": "Low",
+              "Public": "20230327",
+              "CveID": "CVE-2023-0778"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231488001",
+                "Comment": "podman is earlier than 0:4.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231488002",
+                "Comment": "podman-docker is earlier than 0:4.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231488003",
+                "Comment": "podman-remote is earlier than 0:4.4.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

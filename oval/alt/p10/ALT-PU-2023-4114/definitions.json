@@ -1,0 +1,178 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234114",
+      "Version": "oval:org.altlinux.errata:def:20234114",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4114: package `bacula11` update to version 11.0.6-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4114",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4114",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades bacula11 to version 11.0.6-alt3. \nSecurity Fix(es):\n\n * #44709: Не производится ротации логов\n\n * #46151: Не работает сжатие LZO",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-08"
+          },
+          "Updated": {
+            "Date": "2023-07-08"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44709",
+              "Href": "https://bugzilla.altlinux.org/44709",
+              "Data": "Не производится ротации логов"
+            },
+            {
+              "Id": "46151",
+              "Href": "https://bugzilla.altlinux.org/46151",
+              "Data": "Не работает сжатие LZO"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114001",
+                "Comment": "bacula11 is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114002",
+                "Comment": "bacula11-bat is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114003",
+                "Comment": "bacula11-client is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114004",
+                "Comment": "bacula11-common is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114005",
+                "Comment": "bacula11-console is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114006",
+                "Comment": "bacula11-debug is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114007",
+                "Comment": "bacula11-director-common is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114008",
+                "Comment": "bacula11-director-mysql is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114009",
+                "Comment": "bacula11-director-postgresql is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114010",
+                "Comment": "bacula11-director-sqlite3 is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114011",
+                "Comment": "bacula11-nagios is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114012",
+                "Comment": "bacula11-storage is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114013",
+                "Comment": "bacula11-traymonitor is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114014",
+                "Comment": "baculum11-apache2 is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114015",
+                "Comment": "baculum11-common is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114016",
+                "Comment": "baculum11-mysql is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114017",
+                "Comment": "baculum11-postgresql is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114018",
+                "Comment": "baculum11-sqlite3 is earlier than 0:11.0.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234114019",
+                "Comment": "baculum11-tools is earlier than 0:11.0.6-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

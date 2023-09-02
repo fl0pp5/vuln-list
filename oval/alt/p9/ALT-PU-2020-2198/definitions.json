@@ -1,0 +1,204 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202198",
+      "Version": "oval:org.altlinux.errata:def:20202198",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2198: package `vim` update to version 8.2.0011-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2198",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2198",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00983",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00983",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01025",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01025",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0213",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0213",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0351",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0351",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vim to version 8.2.0011-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00983: Уязвимость текстового редактора vim, связанная доступом к ячейки памяти, предшествующей началу буфера, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-01025: Уязвимость функции NameBuff текстового редактора vim, позволяющая нарушителю вызвать переполнение буфера\n\n * CVE-2022-0213: vim is vulnerable to Heap-based Buffer Overflow\n\n * CVE-2022-0351: Access of Memory Location Before Start of Buffer in GitHub repository vim/vim prior to 8.2.\n\n * #37460: собрать с поддержкой python3",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-18"
+          },
+          "Updated": {
+            "Date": "2020-06-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-786",
+              "Href": "https://bdu.fstec.ru/vul/2022-00983",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "BDU:2022-00983"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-01025",
+              "Impact": "Low",
+              "Public": "20220114",
+              "CveID": "BDU:2022-01025"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0213",
+              "Impact": "Low",
+              "Public": "20220114",
+              "CveID": "CVE-2022-0213"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0351",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "CVE-2022-0351"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37460",
+              "Href": "https://bugzilla.altlinux.org/37460",
+              "Data": "собрать с поддержкой python3"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198001",
+                "Comment": "rpm-build-vim is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198002",
+                "Comment": "vim-X11 is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198003",
+                "Comment": "vim-X11-gnome2 is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198004",
+                "Comment": "vim-X11-gtk2 is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198005",
+                "Comment": "vim-X11-neXtaw is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198006",
+                "Comment": "vim-common is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198007",
+                "Comment": "vim-console is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198008",
+                "Comment": "vim-enhanced is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198009",
+                "Comment": "vim-minimal is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198010",
+                "Comment": "vim-spell-source is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198011",
+                "Comment": "vimtutor is earlier than 4:8.2.0011-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202198012",
+                "Comment": "xxd is earlier than 4:8.2.0011-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

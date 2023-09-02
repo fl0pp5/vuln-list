@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202941",
+      "Version": "oval:org.altlinux.errata:def:20202941",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2941: package `accel-ppp` update to version 1.12.0-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2941",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2941",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-15173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15173",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades accel-ppp to version 1.12.0-alt4. \nSecurity Fix(es):\n\n * CVE-2020-15173: In ACCEL-PPP (an implementation of PPTP/PPPoE/L2TP/SSTP), there is a buffer overflow when receiving an l2tp control packet ith an AVP which type is a string and no hidden flags, length set to less than 6. If your application is used in open networks or there are untrusted nodes in the network it is highly recommended to apply the patch. The problem was patched with commit 2324bcd5ba12cf28f47357a8f03cd41b7c04c52b As a workaround changes of commit 2324bcd5ba12cf28f47357a8f03cd41b7c04c52b can be applied to older versions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-05"
+          },
+          "Updated": {
+            "Date": "2020-10-05"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15173",
+              "Impact": "Critical",
+              "Public": "20200909",
+              "CveID": "CVE-2020-15173"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202941001",
+                "Comment": "accel-ppp is earlier than 0:1.12.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202941002",
+                "Comment": "kernel-source-accel-ppp is earlier than 0:1.12.0-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

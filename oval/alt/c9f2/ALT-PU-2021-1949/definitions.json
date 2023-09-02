@@ -1,0 +1,77 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211949",
+      "Version": "oval:org.altlinux.errata:def:20211949",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1949: package `service` update to version 0.5.31-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1949",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1949",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades service to version 0.5.31-alt1. \nSecurity Fix(es):\n\n * #35388: У systemd бывают униты не только .service",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-08"
+          },
+          "Updated": {
+            "Date": "2021-06-08"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "35388",
+              "Href": "https://bugzilla.altlinux.org/35388",
+              "Data": "У systemd бывают униты не только .service"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211949001",
+                "Comment": "service is earlier than 0:0.5.31-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

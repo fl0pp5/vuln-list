@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213602",
+      "Version": "oval:org.altlinux.errata:def:20213602",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3602: package `resource-agents` update to version 4.10.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3602",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3602",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades resource-agents to version 4.10.0-alt1. \nSecurity Fix(es):\n\n * #40747: Файловый конфликт с пакетом resource-agents",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-22"
+          },
+          "Updated": {
+            "Date": "2021-12-22"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40747",
+              "Href": "https://bugzilla.altlinux.org/40747",
+              "Data": "Файловый конфликт с пакетом resource-agents"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602001",
+                "Comment": "ldirectord is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602002",
+                "Comment": "resource-agents is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602003",
+                "Comment": "resource-agents-CTDB is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602004",
+                "Comment": "resource-agents-WinPopup is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602005",
+                "Comment": "resource-agents-fio is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602006",
+                "Comment": "resource-agents-iSCSI is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602007",
+                "Comment": "resource-agents-libvirt is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602008",
+                "Comment": "resource-agents-lvm is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602009",
+                "Comment": "resource-agents-lxc is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602010",
+                "Comment": "resource-agents-nfs is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602011",
+                "Comment": "resource-agents-tomcat is earlier than 0:4.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213602012",
+                "Comment": "resource-agents-xen is earlier than 0:4.10.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203052",
+      "Version": "oval:org.altlinux.errata:def:20203052",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3052: package `tpm2-tss` update to version 2.4.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3052",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3052",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-24455",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24455",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades tpm2-tss to version 2.4.3-alt1. \nSecurity Fix(es):\n\n * CVE-2020-24455: Missing initialization of a variable in the TPM2 source may allow a privileged user to potentially enable an escalation of privilege via local access. This affects tpm2-tss before 3.0.1 and before 2.4.3.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-13"
+          },
+          "Updated": {
+            "Date": "2020-10-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-909",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24455",
+              "Impact": "Low",
+              "Public": "20210226",
+              "CveID": "CVE-2020-24455"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203052001",
+                "Comment": "libtpm2-tss-common is earlier than 0:2.4.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203052002",
+                "Comment": "libtpm2-tss-devel is earlier than 0:2.4.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203052003",
+                "Comment": "libtpm2-tss0 is earlier than 0:2.4.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

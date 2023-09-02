@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203495",
+      "Version": "oval:org.altlinux.errata:def:20203495",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3495: package `hplip` update to version 3.20.11-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3495",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3495",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades hplip to version 3.20.11-alt2. \nSecurity Fix(es):\n\n * #39401: Ошибка запуска hplip, hp-toolbox error: dBus initialization error",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-11"
+          },
+          "Updated": {
+            "Date": "2020-12-11"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39401",
+              "Href": "https://bugzilla.altlinux.org/39401",
+              "Data": "Ошибка запуска hplip, hp-toolbox error: dBus initialization error"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495001",
+                "Comment": "hplip is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495002",
+                "Comment": "hplip-PPDs is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495003",
+                "Comment": "hplip-common is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495004",
+                "Comment": "hplip-gui is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495005",
+                "Comment": "hplip-gui-autostart is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495006",
+                "Comment": "hplip-hpcups is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495007",
+                "Comment": "hplip-hpcups-PPDs is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495008",
+                "Comment": "hplip-hpijs is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495009",
+                "Comment": "hplip-hpijs-PPDs is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495010",
+                "Comment": "hplip-ps-PPDs is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495011",
+                "Comment": "hplip-recommends is earlier than 1:3.20.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203495012",
+                "Comment": "hplip-sane is earlier than 1:3.20.11-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

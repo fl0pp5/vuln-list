@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203222",
+      "Version": "oval:org.altlinux.errata:def:20203222",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3222: package `wireshark` update to version 3.2.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3222",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3222",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00876",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00876",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00251",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00251",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-26575",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26575",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-28030",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-28030",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 3.2.8-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00876: Уязвимость функции в epan/dissectors/packet-fbzero.c программного обеспечения Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00251: Уязвимость программы для анализа трафика wireshark, связанная с неверными вычислениями, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-26575: In Wireshark through 3.2.7, the Facebook Zero Protocol (aka FBZERO) dissector could enter an infinite loop. This was addressed in epan/dissectors/packet-fbzero.c by correcting the implementation of offset advancement.\n\n * CVE-2020-28030: In Wireshark 3.2.0 to 3.2.7, the GQUIC dissector could crash. This was addressed in epan/dissectors/packet-gquic.c by correcting the implementation of offset advancement.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-06"
+          },
+          "Updated": {
+            "Date": "2020-11-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2021-00876",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00876"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://bdu.fstec.ru/vul/2022-00251",
+              "Impact": "High",
+              "Public": "20201113",
+              "CveID": "BDU:2022-00251"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26575",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26575"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-28030",
+              "Impact": "High",
+              "Public": "20201102",
+              "CveID": "CVE-2020-28030"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203222001",
+                "Comment": "tshark is earlier than 0:3.2.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203222002",
+                "Comment": "wireshark-base is earlier than 0:3.2.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203222003",
+                "Comment": "wireshark-devel is earlier than 0:3.2.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203222004",
+                "Comment": "wireshark-qt5 is earlier than 0:3.2.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,225 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223235",
+      "Version": "oval:org.altlinux.errata:def:20223235",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3235: package `node` update to version 14.21.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3235",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3235",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04390",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04390",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06821",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06821",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00348",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00348",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-32212",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32212",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32213",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32213",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32214",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32214",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32215",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-35256",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-35256",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-43548",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43548",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades node to version 14.21.1-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04390: Уязвимость программной платформы Node.js, связанная с недостатками обработки HTTP-запросов, позволяющая нарушителю выполнять атаку \u0026quot;контрабанда HTTP-запросов\u0026quot;\n\n * BDU:2022-06821: Уязвимость реализации параметра --inspect программного средства работы с объектами Node.js, позволяющей нарушителю выполнить произвольный код\n\n * BDU:2023-00348: Уязвимость анализатора HTTP-кода llhttp программного обеспечения для управления сетевой инфраструктурой SINEC INS (Infrastructure Network Services), позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-32212: A OS Command Injection vulnerability exists in Node.js versions \u003c14.20.0, \u003c16.20.0, \u003c18.5.0 due to an insufficient IsAllowedHost check that can easily be bypassed because IsIPAddress does not properly check if an IP address is invalid before making DBS requests allowing rebinding attacks.\n\n * CVE-2022-32213: The llhttp parser \u003cv14.20.1, \u003cv16.17.1 and \u003cv18.9.1 in the http module in Node.js does not correctly parse and validate Transfer-Encoding headers and can lead to HTTP Request Smuggling (HRS).\n\n * CVE-2022-32214: The llhttp parser \u003cv14.20.1, \u003cv16.17.1 and \u003cv18.9.1 in the http module in Node.js does not strictly use the CRLF sequence to delimit HTTP requests. This can lead to HTTP Request Smuggling (HRS).\n\n * CVE-2022-32215: The llhttp parser \u003cv14.20.1, \u003cv16.17.1 and \u003cv18.9.1 in the http module in Node.js does not correctly handle multi-line Transfer-Encoding headers. This can lead to HTTP Request Smuggling (HRS).\n\n * CVE-2022-35256: The llhttp parser in the http module in Node v18.7.0 does not correctly handle header fields that are not terminated with CLRF. This may result in HTTP Request Smuggling.\n\n * CVE-2022-43548: A OS Command Injection vulnerability exists in Node.js versions \u003c14.21.1, \u003c16.18.1, \u003c18.12.1, \u003c19.0.1 due to an insufficient IsAllowedHost check that can easily be bypassed because IsIPAddress does not properly check if an IP address is invalid before making DBS requests allowing rebinding attacks.The fix for this issue in https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32212 was incomplete and this new CVE is to complete the fix.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-29"
+          },
+          "Updated": {
+            "Date": "2022-11-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2022-04390",
+              "Impact": "High",
+              "Public": "20220707",
+              "CveID": "BDU:2022-04390"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-350",
+              "Href": "https://bdu.fstec.ru/vul/2022-06821",
+              "Impact": "High",
+              "Public": "20221104",
+              "CveID": "BDU:2022-06821"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2023-00348",
+              "Impact": "Critical",
+              "Public": "20221205",
+              "CveID": "BDU:2023-00348"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32212",
+              "Impact": "High",
+              "Public": "20220714",
+              "CveID": "CVE-2022-32212"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32213",
+              "Impact": "Low",
+              "Public": "20220714",
+              "CveID": "CVE-2022-32213"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32214",
+              "Impact": "Low",
+              "Public": "20220714",
+              "CveID": "CVE-2022-32214"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32215",
+              "Impact": "Low",
+              "Public": "20220714",
+              "CveID": "CVE-2022-32215"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-35256",
+              "Impact": "Low",
+              "Public": "20221205",
+              "CveID": "CVE-2022-35256"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43548",
+              "Impact": "High",
+              "Public": "20221205",
+              "CveID": "CVE-2022-43548"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223235001",
+                "Comment": "node is earlier than 0:14.21.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223235002",
+                "Comment": "node-devel is earlier than 0:14.21.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223235003",
+                "Comment": "node-doc is earlier than 0:14.21.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201811",
+      "Version": "oval:org.altlinux.errata:def:20201811",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1811: package `qt5-3d` update to version 5.12.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1811",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1811",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2015-9541",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-9541",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-3d to version 5.12.8-alt1. \nSecurity Fix(es):\n\n * CVE-2015-9541: Qt through 5.14 allows an exponential XML entity expansion attack via a crafted SVG document that is mishandled in QXmlStreamReader, a related issue to CVE-2003-1564.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-21"
+          },
+          "Updated": {
+            "Date": "2020-04-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-776",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-9541",
+              "Impact": "High",
+              "Public": "20200124",
+              "CveID": "CVE-2015-9541"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811001",
+                "Comment": "libqt5-3danimation is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811002",
+                "Comment": "libqt5-3dcore is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811003",
+                "Comment": "libqt5-3dextras is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811004",
+                "Comment": "libqt5-3dinput is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811005",
+                "Comment": "libqt5-3dlogic is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811006",
+                "Comment": "libqt5-3dquick is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811007",
+                "Comment": "libqt5-3dquickanimation is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811008",
+                "Comment": "libqt5-3dquickextras is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811009",
+                "Comment": "libqt5-3dquickinput is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811010",
+                "Comment": "libqt5-3dquickrender is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811011",
+                "Comment": "libqt5-3dquickscene2d is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811012",
+                "Comment": "libqt5-3drender is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811013",
+                "Comment": "qt5-3d is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811014",
+                "Comment": "qt5-3d-common is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811015",
+                "Comment": "qt5-3d-devel is earlier than 0:5.12.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201811016",
+                "Comment": "qt5-3d-doc is earlier than 0:5.12.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192565",
+      "Version": "oval:org.altlinux.errata:def:20192565",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2565: package `netdata` update to version 1.16.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2565",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2565",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-9834",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9834",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades netdata to version 1.16.0-alt1. \nSecurity Fix(es):\n\n * CVE-2019-9834: ** DISPUTED ** The Netdata web application through 1.13.0 allows remote attackers to inject their own malicious HTML code into an imported snapshot, aka HTML Injection. Successful exploitation will allow attacker-supplied HTML to run in the context of the affected browser, potentially allowing the attacker to steal authentication credentials or to control how the site is rendered to the user. NOTE: the vendor disputes the risk because there is a clear warning next to the button for importing a snapshot.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-29"
+          },
+          "Updated": {
+            "Date": "2019-08-29"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9834",
+              "Impact": "Low",
+              "Public": "20190315",
+              "CveID": "CVE-2019-9834"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192565001",
+                "Comment": "netdata is earlier than 0:1.16.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192565002",
+                "Comment": "netdata-postgres is earlier than 0:1.16.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

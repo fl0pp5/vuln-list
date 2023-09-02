@@ -1,0 +1,278 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222898",
+      "Version": "oval:org.altlinux.errata:def:20222898",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2898: package `gstreamer1.0` update to version 1.20.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2898",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2898",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06448",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06448",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06449",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06449",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06450",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06450",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06453",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06453",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06462",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06462",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1920",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1920",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1921",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1922",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1922",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1923",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1923",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1924",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1924",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1925",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1925",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2122",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2122",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gstreamer1.0 to version 1.20.3-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06448: Уязвимость функции gst_matroska_decompress_data мультимедийного фреймворка Gstreamer, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06449: Уязвимость функции gst_avi_demux_invert мультимедийного фреймворка Gstreamer, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06450: Уязвимость функции gst_matroska_demux_add_wvpk_header мультимедийного фреймворка Gstreamer, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06453: Уязвимость функции qtdemux_inflate мультимедийного фреймворка Gstreamer, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-06462: Уязвимость функции gst_matroska_decompress_data мультимедийного фреймворка Gstreamer, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2022-1920: Integer overflow in matroskademux element in gst_matroska_demux_add_wvpk_header function which allows a heap overwrite while parsing matroska files. Potential for arbitrary code execution through heap overwrite.\n\n * CVE-2022-1921: Integer overflow in avidemux element in gst_avi_demux_invert function which allows a heap overwrite while parsing avi files. Potential for arbitrary code execution through heap overwrite.\n\n * CVE-2022-1922: DOS / potential heap overwrite in mkv demuxing using zlib decompression. Integer overflow in matroskademux element in gst_matroska_decompress_data function which causes a segfault, or could cause a heap overwrite, depending on libc and OS. Depending on the libc used, and the underlying OS capabilities, it could be just a segfault or a heap overwrite. If the libc uses mmap for large chunks, and the OS supports mmap, then it is just a segfault (because the realloc before the integer overflow will use mremap to reduce the size of the chunk, and it will start to write to unmapped memory). However, if using a libc implementation that does not use mmap, or if the OS does not support mmap while using libc, then this could result in a heap overwrite.\n\n * CVE-2022-1923: DOS / potential heap overwrite in mkv demuxing using bzip decompression. Integer overflow in matroskademux element in bzip decompression function which causes a segfault, or could cause a heap overwrite, depending on libc and OS. Depending on the libc used, and the underlying OS capabilities, it could be just a segfault or a heap overwrite. If the libc uses mmap for large chunks, and the OS supports mmap, then it is just a segfault (because the realloc before the integer overflow will use mremap to reduce the size of the chunk, and it will start to write to unmapped memory). However, if using a libc implementation that does not use mmap, or if the OS does not support mmap while using libc, then this could result in a heap overwrite.\n\n * CVE-2022-1924: DOS / potential heap overwrite in mkv demuxing using lzo decompression. Integer overflow in matroskademux element in lzo decompression function which causes a segfault, or could cause a heap overwrite, depending on libc and OS. Depending on the libc used, and the underlying OS capabilities, it could be just a segfault or a heap overwrite. If the libc uses mmap for large chunks, and the OS supports mmap, then it is just a segfault (because the realloc before the integer overflow will use mremap to reduce the size of the chunk, and it will start to write to unmapped memory). However, if using a libc implementation that does not use mmap, or if the OS does not support mmap while using libc, then this could result in a heap overwrite.\n\n * CVE-2022-1925: DOS / potential heap overwrite in mkv demuxing using HEADERSTRIP decompression. Integer overflow in matroskaparse element in gst_matroska_decompress_data function which causes a heap overflow. Due to restrictions on chunk sizes in the matroskademux element, the overflow can't be triggered, however the matroskaparse element has no size checks.\n\n * CVE-2022-2122: DOS / potential heap overwrite in qtdemux using zlib decompression. Integer overflow in qtdemux element in qtdemux_inflate function which causes a segfault, or could cause a heap overwrite, depending on libc and OS. Depending on the libc used, and the underlying OS capabilities, it could be just a segfault or a heap overwrite.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-21"
+          },
+          "Updated": {
+            "Date": "2022-10-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06448",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "BDU:2022-06448"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-06449",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "BDU:2022-06449"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-190, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06450",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "BDU:2022-06450"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-190, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06453",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "BDU:2022-06453"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06462",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "BDU:2022-06462"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1920",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1920"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1921",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1921"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1922",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1922"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1923",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1923"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1924",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1924"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1925",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-1925"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2122",
+              "Impact": "High",
+              "Public": "20220719",
+              "CveID": "CVE-2022-2122"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898001",
+                "Comment": "gstreamer1.0 is earlier than 0:1.20.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898002",
+                "Comment": "gstreamer1.0-devel is earlier than 0:1.20.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898003",
+                "Comment": "gstreamer1.0-utils is earlier than 0:1.20.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898004",
+                "Comment": "libgstreamer1.0 is earlier than 0:1.20.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898005",
+                "Comment": "libgstreamer1.0-gir is earlier than 0:1.20.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222898006",
+                "Comment": "libgstreamer1.0-gir-devel is earlier than 0:1.20.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

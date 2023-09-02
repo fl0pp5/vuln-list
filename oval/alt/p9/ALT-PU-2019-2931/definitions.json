@@ -1,0 +1,173 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192931",
+      "Version": "oval:org.altlinux.errata:def:20192931",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2931: package `kernel-image-std-def` update to version 4.19.79-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2931",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2931",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03507",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03507",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16746",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16746",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 4.19.79-alt1. \nSecurity Fix(es):\n\n * BDU:2019-03507: Уязвимость компонента net/wireless/nl80211.c ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-16746: An issue was discovered in net/wireless/nl80211.c in the Linux kernel through 5.2.17. It does not check the length of variable elements in a beacon head, leading to a buffer overflow.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-15"
+          },
+          "Updated": {
+            "Date": "2019-10-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2019-03507",
+              "Impact": "Low",
+              "Public": "20190924",
+              "CveID": "BDU:2019-03507"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16746",
+              "Impact": "Critical",
+              "Public": "20190924",
+              "CveID": "CVE-2019-16746"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931001",
+                "Comment": "kernel-doc-std is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931003",
+                "Comment": "kernel-headers-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931005",
+                "Comment": "kernel-image-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931011",
+                "Comment": "kernel-modules-kvm-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:4.19.79-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192931013",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:4.19.79-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

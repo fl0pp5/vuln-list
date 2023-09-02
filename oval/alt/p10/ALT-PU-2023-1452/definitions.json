@@ -1,0 +1,267 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231452",
+      "Version": "oval:org.altlinux.errata:def:20231452",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1452: package `apache2` update to version 2.4.56-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1452",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1452",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01738",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01738",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02021",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02021",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-25690",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25690",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27522",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27522",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades apache2 to version 2.4.56-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01738: Уязвимость модуля mod_proxy веб-сервера Apache HTTP Server, позволяющая нарушителю отправить скрытый HTTP-запрос (атака типа HTTP Request Smuggling)\n\n * BDU:2023-02021: Уязвимость компонента mod_proxy_uwsgi веб-сервера Apache HTTP Server связанная с недостатками обработки HTTP-запросов, позволяющая нарушителю выполнять атаку \u0026quot;контрабанда HTTP-запросов\u0026quot;\n\n * CVE-2023-25690: Some mod_proxy configurations on Apache HTTP Server versions 2.4.0 through 2.4.55 allow a HTTP Request Smuggling attack.\n\n\n\n\nConfigurations are affected when mod_proxy is enabled along with some form of RewriteRule\n or ProxyPassMatch in which a non-specific pattern matches\n some portion of the user-supplied request-target (URL) data and is then\n re-inserted into the proxied request-target using variable \nsubstitution. For example, something like:\n\n\n\n\nRewriteEngine on\nRewriteRule \"^/here/(.*)\" \"http://example.com:8080/elsewhere?$1\"; [P]\nProxyPassReverse /here/ http://example.com:8080/\n\n\nRequest splitting/smuggling could result in bypass of access controls in the proxy server, proxying unintended URLs to existing origin servers, and cache poisoning. Users are recommended to update to at least version 2.4.56 of Apache HTTP Server.\n\n\n\n\n * CVE-2023-27522: HTTP Response Smuggling vulnerability in Apache HTTP Server via mod_proxy_uwsgi. This issue affects Apache HTTP Server: from 2.4.30 through 2.4.55.\n\nSpecial characters in the origin response header can truncate/split the response forwarded to the client.\n\n\n",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-17"
+          },
+          "Updated": {
+            "Date": "2023-03-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2023-01738",
+              "Impact": "Critical",
+              "Public": "20230202",
+              "CveID": "BDU:2023-01738"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:C/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2023-02021",
+              "Impact": "High",
+              "Public": "20230129",
+              "CveID": "BDU:2023-02021"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25690",
+              "Impact": "Critical",
+              "Public": "20230307",
+              "CveID": "CVE-2023-25690"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27522",
+              "Impact": "High",
+              "Public": "20230307",
+              "CveID": "CVE-2023-27522"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452001",
+                "Comment": "apache2 is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452002",
+                "Comment": "apache2-ab is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452003",
+                "Comment": "apache2-base is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452004",
+                "Comment": "apache2-cgi-bin is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452005",
+                "Comment": "apache2-cgi-bin-printenv is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452006",
+                "Comment": "apache2-cgi-bin-test-cgi is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452007",
+                "Comment": "apache2-compat is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452008",
+                "Comment": "apache2-configs-A1PROXIED is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452009",
+                "Comment": "apache2-datadirs is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452010",
+                "Comment": "apache2-devel is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452011",
+                "Comment": "apache2-docs is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452012",
+                "Comment": "apache2-full is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452013",
+                "Comment": "apache2-htcacheclean is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452014",
+                "Comment": "apache2-htcacheclean-control is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452015",
+                "Comment": "apache2-html is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452016",
+                "Comment": "apache2-htpasswd is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452017",
+                "Comment": "apache2-httpd-event is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452018",
+                "Comment": "apache2-httpd-prefork is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452019",
+                "Comment": "apache2-httpd-worker is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452020",
+                "Comment": "apache2-icons is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452021",
+                "Comment": "apache2-manual is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452022",
+                "Comment": "apache2-manual-addons is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452023",
+                "Comment": "apache2-mod_cache_disk is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452024",
+                "Comment": "apache2-mod_ldap is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452025",
+                "Comment": "apache2-mod_proxy_html is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452026",
+                "Comment": "apache2-mod_ssl is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452027",
+                "Comment": "apache2-mod_ssl-compat is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452028",
+                "Comment": "apache2-mods is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452029",
+                "Comment": "apache2-suexec is earlier than 1:2.4.56-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231452030",
+                "Comment": "rpm-build-apache2 is earlier than 1:2.4.56-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

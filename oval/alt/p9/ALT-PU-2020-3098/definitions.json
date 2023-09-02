@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203098",
+      "Version": "oval:org.altlinux.errata:def:20203098",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3098: package `make-initrd` update to version 2.11.0-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3098",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3098",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades make-initrd to version 2.11.0-alt3. \nSecurity Fix(es):\n\n * #38461: При переезде на новый make-initrd потеряли multipathd",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-21"
+          },
+          "Updated": {
+            "Date": "2020-10-21"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38461",
+              "Href": "https://bugzilla.altlinux.org/38461",
+              "Data": "При переезде на новый make-initrd потеряли multipathd"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098001",
+                "Comment": "make-initrd is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098002",
+                "Comment": "make-initrd-devmapper is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098003",
+                "Comment": "make-initrd-luks is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098004",
+                "Comment": "make-initrd-lvm is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098005",
+                "Comment": "make-initrd-mdadm is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098006",
+                "Comment": "make-initrd-multipath is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098007",
+                "Comment": "make-initrd-nfs is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098008",
+                "Comment": "make-initrd-plymouth is earlier than 0:2.11.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203098009",
+                "Comment": "make-initrd-ucode is earlier than 0:2.11.0-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

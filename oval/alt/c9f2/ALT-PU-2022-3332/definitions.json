@@ -1,0 +1,226 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223332",
+      "Version": "oval:org.altlinux.errata:def:20223332",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3332: package `libarchive` update to version 3.6.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3332",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3332",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03887",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03887",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01463",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01463",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01464",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01464",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01973",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01973",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07496",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07496",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-23177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23177",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31566",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31566",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36976",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36976",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26280",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26280",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-36227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36227",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libarchive to version 3.6.1-alt2. \nSecurity Fix(es):\n\n * BDU:2021-03887: Уязвимость функции do_uncompress_block and process_block библиотеки libarchive, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01463: Уязвимость библиотеки архивирования libarchive, связанная с отслеживанием символьных ссылок, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-01464: Уязвимость библиотеки архивирования libarchive, связанная с отслеживанием символьных ссылок, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-01973: Уязвимость реализации функции zipx_lzma_alone_init() библиотеки архивирования libarchive, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * BDU:2022-07496: Уязвимость функции calloc() библиотеки архивирования libarchive, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2021-23177: An improper link resolution flaw while extracting an archive can lead to changing the access control list (ACL) of the target of the link. An attacker may provide a malicious archive to a victim user, who would trigger this flaw when trying to extract the archive. A local attacker may use this flaw to change the ACL of a file on the system and gain more privileges.\n\n * CVE-2021-31566: An improper link resolution flaw can occur while extracting an archive leading to changing modes, times, access control lists, and flags of a file outside of the archive. An attacker may provide a malicious archive to a victim user, who would trigger this flaw when trying to extract the archive. A local attacker may use this flaw to gain more privileges in a system.\n\n * CVE-2021-36976: libarchive 3.4.1 through 3.5.1 has a use-after-free in copy_string (called from do_uncompress_block and process_block).\n\n * CVE-2022-26280: Libarchive v3.6.0 was discovered to contain an out-of-bounds read via the component zipx_lzma_alone_init.\n\n * CVE-2022-36227: In libarchive before 3.6.2, the software does not check for an error after calling calloc function that can return with a NULL pointer if the function fails, which leads to a resultant NULL pointer dereference. NOTE: the discoverer cites this CWE-476 remark but third parties dispute the code-execution impact: \"In rare circumstances, when NULL is equivalent to the 0x0 memory address and privileged code can access it, then writing or reading memory is possible, which may lead to code execution.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-13"
+          },
+          "Updated": {
+            "Date": "2022-12-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-03887",
+              "Impact": "Low",
+              "Public": "20210322",
+              "CveID": "BDU:2021-03887"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-61",
+              "Href": "https://bdu.fstec.ru/vul/2022-01463",
+              "Impact": "High",
+              "Public": "20220315",
+              "CveID": "BDU:2022-01463"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-61",
+              "Href": "https://bdu.fstec.ru/vul/2022-01464",
+              "Impact": "High",
+              "Public": "20220315",
+              "CveID": "BDU:2022-01464"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-01973",
+              "Impact": "Critical",
+              "Public": "20220225",
+              "CveID": "BDU:2022-01973"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-252, CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-07496",
+              "Impact": "Critical",
+              "Public": "20220711",
+              "CveID": "BDU:2022-07496"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23177",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "CVE-2021-23177"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31566",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "CVE-2021-31566"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36976",
+              "Impact": "Low",
+              "Public": "20210720",
+              "CveID": "CVE-2021-36976"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26280",
+              "Impact": "Low",
+              "Public": "20220328",
+              "CveID": "CVE-2022-26280"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36227",
+              "Impact": "Critical",
+              "Public": "20221122",
+              "CveID": "CVE-2022-36227"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223332001",
+                "Comment": "bsdcat is earlier than 0:3.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223332002",
+                "Comment": "bsdcpio is earlier than 0:3.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223332003",
+                "Comment": "bsdtar is earlier than 0:3.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223332004",
+                "Comment": "libarchive-devel is earlier than 0:3.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223332005",
+                "Comment": "libarchive13 is earlier than 0:3.6.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

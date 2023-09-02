@@ -1,0 +1,211 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221601",
+      "Version": "oval:org.altlinux.errata:def:20221601",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1601: package `clickhouse` update to version 22.3.2.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1601",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1601",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01316",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01316",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01317",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01317",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-42387",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42387",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42388",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42388",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42389",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42389",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42390",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42390",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42391",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42391",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43304",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43304",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43305",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43305",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades clickhouse to version 22.3.2.2-alt2. \nSecurity Fix(es):\n\n * BDU:2022-01316: Уязвимость кодека сжатия LZ4 системы управления базами данных ClickHouse OLAP, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-01317: Уязвимость кодека сжатия LZ4 системы управления базами данных ClickHouse OLAP, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-42387: Heap out-of-bounds read in Clickhouse's LZ4 compression codec when parsing a malicious query. As part of the LZ4::decompressImpl() loop, a 16-bit unsigned user-supplied value ('offset') is read from the compressed data. The offset is later used in the length of a copy operation, without checking the upper bounds of the source of the copy operation.\n\n * CVE-2021-42388: Heap out-of-bounds read in Clickhouse's LZ4 compression codec when parsing a malicious query. As part of the LZ4::decompressImpl() loop, a 16-bit unsigned user-supplied value ('offset') is read from the compressed data. The offset is later used in the length of a copy operation, without checking the lower bounds of the source of the copy operation.\n\n * CVE-2021-42389: Divide-by-zero in Clickhouse's Delta compression codec when parsing a malicious query. The first byte of the compressed buffer is used in a modulo operation without being checked for 0.\n\n * CVE-2021-42390: Divide-by-zero in Clickhouse's DeltaDouble compression codec when parsing a malicious query. The first byte of the compressed buffer is used in a modulo operation without being checked for 0.\n\n * CVE-2021-42391: Divide-by-zero in Clickhouse's Gorilla compression codec when parsing a malicious query. The first byte of the compressed buffer is used in a modulo operation without being checked for 0.\n\n * CVE-2021-43304: Heap buffer overflow in Clickhouse's LZ4 compression codec when parsing a malicious query. There is no verification that the copy operations in the LZ4::decompressImpl loop and especially the arbitrary copy operation wildCopy\u003ccopy_amount\u003e(op, ip, copy_end), don’t exceed the destination buffer’s limits.\n\n * CVE-2021-43305: Heap buffer overflow in Clickhouse's LZ4 compression codec when parsing a malicious query. There is no verification that the copy operations in the LZ4::decompressImpl loop and especially the arbitrary copy operation wildCopy\u003ccopy_amount\u003e(op, ip, copy_end), don’t exceed the destination buffer’s limits. This issue is very similar to CVE-2021-43304, but the vulnerable copy operation is in a different wildCopy call.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-29"
+          },
+          "Updated": {
+            "Date": "2022-03-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-01316",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "BDU:2022-01316"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-01317",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "BDU:2022-01317"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42387",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "CVE-2021-42387"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42388",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "CVE-2021-42388"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42389",
+              "Impact": "Low",
+              "Public": "20220314",
+              "CveID": "CVE-2021-42389"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42390",
+              "Impact": "Low",
+              "Public": "20220314",
+              "CveID": "CVE-2021-42390"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42391",
+              "Impact": "Low",
+              "Public": "20220314",
+              "CveID": "CVE-2021-42391"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43304",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "CVE-2021-43304"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43305",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "CVE-2021-43305"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221601001",
+                "Comment": "clickhouse-client is earlier than 0:22.3.2.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221601002",
+                "Comment": "clickhouse-common-static is earlier than 0:22.3.2.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221601003",
+                "Comment": "clickhouse-server is earlier than 0:22.3.2.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221601004",
+                "Comment": "clickhouse-test is earlier than 0:22.3.2.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

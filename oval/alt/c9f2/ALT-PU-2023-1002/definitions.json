@@ -1,0 +1,131 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231002",
+      "Version": "oval:org.altlinux.errata:def:20231002",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1002: package `libcairo` update to version 1.16.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1002",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1002",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03445",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03445",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-19876",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-19876",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35492",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35492",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libcairo to version 1.16.0-alt2. \nSecurity Fix(es):\n\n * BDU:2021-03445: Уязвимость компонента image-compositor.c библиотеки векторной графики Cairo, связанная с переполнением буфера стека данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2018-19876: cairo 1.16.0, in cairo_ft_apply_variations() in cairo-ft-font.c, would free memory using a free function incompatible with WebKit's fastMalloc, leading to an application crash with a \"free(): invalid pointer\" error.\n\n * CVE-2020-35492: A flaw was found in cairo's image-compositor.c in all versions prior to 1.17.4. This flaw allows an attacker who can provide a crafted input file to cairo's image-compositor (for example, by convincing a user to open a file in an application using cairo, or if an application uses cairo on untrusted input) to cause a stack buffer overflow -\u003e out-of-bounds WRITE. The highest impact from this vulnerability is to confidentiality, integrity, as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-03"
+          },
+          "Updated": {
+            "Date": "2023-01-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2021-03445",
+              "Impact": "High",
+              "Public": "20201202",
+              "CveID": "BDU:2021-03445"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-19876",
+              "Impact": "Low",
+              "Public": "20181205",
+              "CveID": "CVE-2018-19876"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35492",
+              "Impact": "High",
+              "Public": "20210318",
+              "CveID": "CVE-2020-35492"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231002001",
+                "Comment": "libcairo is earlier than 1:1.16.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231002002",
+                "Comment": "libcairo-devel is earlier than 1:1.16.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231002003",
+                "Comment": "libcairo-gobject is earlier than 1:1.16.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231002004",
+                "Comment": "libcairo-gobject-devel is earlier than 1:1.16.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231002005",
+                "Comment": "libcairo-tools is earlier than 1:1.16.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

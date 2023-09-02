@@ -1,0 +1,132 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192053",
+      "Version": "oval:org.altlinux.errata:def:20192053",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2053: package `apt` update to version 0.5.15lorg2-alt68",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2053",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2053",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades apt to version 0.5.15lorg2-alt68. \nSecurity Fix(es):\n\n * #30867: apt-get upgrade мешает\n\n * #33236: Непонятная ошибка при использовании proxy\n\n * #33732: https transport for apt (Feature request)\n\n * #36775: Ошибка при добавлении debuginfo репозитория",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-13"
+          },
+          "Updated": {
+            "Date": "2019-06-13"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "30867",
+              "Href": "https://bugzilla.altlinux.org/30867",
+              "Data": "apt-get upgrade мешает"
+            },
+            {
+              "Id": "33236",
+              "Href": "https://bugzilla.altlinux.org/33236",
+              "Data": "Непонятная ошибка при использовании proxy"
+            },
+            {
+              "Id": "33732",
+              "Href": "https://bugzilla.altlinux.org/33732",
+              "Data": "https transport for apt (Feature request)"
+            },
+            {
+              "Id": "36775",
+              "Href": "https://bugzilla.altlinux.org/36775",
+              "Data": "Ошибка при добавлении debuginfo репозитория"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192053001",
+                "Comment": "apt is earlier than 0:0.5.15lorg2-alt68"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192053002",
+                "Comment": "apt-https is earlier than 0:0.5.15lorg2-alt68"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192053003",
+                "Comment": "apt-rsync is earlier than 0:0.5.15lorg2-alt68"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192053004",
+                "Comment": "libapt is earlier than 0:0.5.15lorg2-alt68"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192053005",
+                "Comment": "libapt-devel is earlier than 0:0.5.15lorg2-alt68"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

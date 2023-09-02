@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223082",
+      "Version": "oval:org.altlinux.errata:def:20223082",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3082: package `libtasn1` update to version 4.19.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3082",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3082",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06694",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06694",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-46848",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-46848",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libtasn1 to version 4.19.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06694: Уязвимость функции asn1_encode_simple_der() библиотеки Libtasn1, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * CVE-2021-46848: GNU Libtasn1 before 4.19.0 has an ETYPE_OK off-by-one array size check that affects asn1_encode_simple_der.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-15"
+          },
+          "Updated": {
+            "Date": "2022-11-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125, CWE-193",
+              "Href": "https://bdu.fstec.ru/vul/2022-06694",
+              "Impact": "Critical",
+              "Public": "20221024",
+              "CveID": "BDU:2022-06694"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-193",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-46848",
+              "Impact": "Critical",
+              "Public": "20221024",
+              "CveID": "CVE-2021-46848"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223082001",
+                "Comment": "libtasn1 is earlier than 0:4.19.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223082002",
+                "Comment": "libtasn1-devel is earlier than 0:4.19.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223082003",
+                "Comment": "libtasn1-devel-doc is earlier than 0:4.19.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223082004",
+                "Comment": "libtasn1-utils is earlier than 0:4.19.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

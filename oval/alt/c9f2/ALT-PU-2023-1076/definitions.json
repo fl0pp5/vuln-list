@@ -1,0 +1,112 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231076",
+      "Version": "oval:org.altlinux.errata:def:20231076",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1076: package `libtasn1` update to version 4.14-alt1.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1076",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1076",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06694",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06694",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-46848",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-46848",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libtasn1 to version 4.14-alt1.c9f2.1. \nSecurity Fix(es):\n\n * BDU:2022-06694: Уязвимость функции asn1_encode_simple_der() библиотеки Libtasn1, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * CVE-2021-46848: GNU Libtasn1 before 4.19.0 has an ETYPE_OK off-by-one array size check that affects asn1_encode_simple_der.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-18"
+          },
+          "Updated": {
+            "Date": "2023-01-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125, CWE-193",
+              "Href": "https://bdu.fstec.ru/vul/2022-06694",
+              "Impact": "Critical",
+              "Public": "20221024",
+              "CveID": "BDU:2022-06694"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-193",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-46848",
+              "Impact": "Critical",
+              "Public": "20221024",
+              "CveID": "CVE-2021-46848"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231076001",
+                "Comment": "libtasn1 is earlier than 0:4.14-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231076002",
+                "Comment": "libtasn1-devel is earlier than 0:4.14-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231076003",
+                "Comment": "libtasn1-devel-doc is earlier than 0:4.14-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231076004",
+                "Comment": "libtasn1-utils is earlier than 0:4.14-alt1.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

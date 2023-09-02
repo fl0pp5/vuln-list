@@ -1,0 +1,107 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234765",
+      "Version": "oval:org.altlinux.errata:def:20234765",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4765: package `uwsgi` update to version 2.0.21-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4765",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4765",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-6758",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-6758",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7490",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7490",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades uwsgi to version 2.0.21-alt1. \nSecurity Fix(es):\n\n * CVE-2018-6758: The uwsgi_expand_path function in core/utils.c in Unbit uWSGI through 2.0.15 has a stack-based buffer overflow via a large directory length.\n\n * CVE-2018-7490: uWSGI before 2.0.17 mishandles a DOCUMENT_ROOT check during use of the --php-docroot option, allowing directory traversal.\n\n * #41510: Переместить из /usr/sbin/ в /usr/bin",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-14"
+          },
+          "Updated": {
+            "Date": "2023-08-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-6758",
+              "Impact": "Critical",
+              "Public": "20180206",
+              "CveID": "CVE-2018-6758"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7490",
+              "Impact": "High",
+              "Public": "20180226",
+              "CveID": "CVE-2018-7490"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41510",
+              "Href": "https://bugzilla.altlinux.org/41510",
+              "Data": "Переместить из /usr/sbin/ в /usr/bin"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234765001",
+                "Comment": "uwsgi is earlier than 0:2.0.21-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

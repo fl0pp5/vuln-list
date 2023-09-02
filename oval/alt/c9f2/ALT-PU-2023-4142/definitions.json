@@ -1,0 +1,144 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234142",
+      "Version": "oval:org.altlinux.errata:def:20234142",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4142: package `udisks2` update to version 2.9.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4142",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4142",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06045",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06045",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3802",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3802",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades udisks2 to version 2.9.4-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06045: Уязвимость программы для запросов и управления устройствами хранения Udisks для файловых систем ext2/3/4, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3802: A vulnerability found in udisks2. This flaw allows an attacker to input a specially crafted image file/USB leading to kernel panic. The highest threat from this vulnerability is to system availability.\n\n * #40054: Использует mkexfatfs",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-10"
+          },
+          "Updated": {
+            "Date": "2023-07-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-06045",
+              "Impact": "Low",
+              "Public": "20210717",
+              "CveID": "BDU:2022-06045"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3802",
+              "Impact": "Low",
+              "Public": "20211129",
+              "CveID": "CVE-2021-3802"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40054",
+              "Href": "https://bugzilla.altlinux.org/40054",
+              "Data": "Использует mkexfatfs"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142001",
+                "Comment": "libudisks2 is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142002",
+                "Comment": "libudisks2-devel is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142003",
+                "Comment": "libudisks2-devel-doc is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142004",
+                "Comment": "libudisks2-gir is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142005",
+                "Comment": "libudisks2-gir-devel is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142006",
+                "Comment": "udisks2 is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142007",
+                "Comment": "udisks2-module-bcache is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142008",
+                "Comment": "udisks2-module-btrfs is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142009",
+                "Comment": "udisks2-module-lvm2 is earlier than 0:2.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234142010",
+                "Comment": "udisks2-module-zram is earlier than 0:2.9.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

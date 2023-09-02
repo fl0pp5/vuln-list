@@ -1,0 +1,193 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213308",
+      "Version": "oval:org.altlinux.errata:def:20213308",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3308: package `exiv2` update to version 0.27.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3308",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3308",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05214",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05214",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05234",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05234",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05244",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05244",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05262",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05262",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-29457",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29457",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-29473",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29473",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31292",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31292",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3482",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3482",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades exiv2 to version 0.27.3-alt2. \nSecurity Fix(es):\n\n * BDU:2021-05214: Уязвимость функции Jp2Image::readMetadata() компонента jp2image.cpp библиотеки для управления метаданными медиафайлов Exiv2, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * BDU:2021-05234: Уязвимость библиотеки для управления метаданными медиафайлов Exiv2, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05244: Уязвимость библиотеки для управления метаданными медиафайлов Exiv2, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05262: Уязвимость функции CrwMap::encode библиотеки для управления метаданными медиафайлов Exiv2, связанная с целочисленным переполнением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-29457: Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. A heap buffer overflow was found in Exiv2 versions v0.27.3 and earlier. The heap overflow is triggered when Exiv2 is used to write metadata into a crafted image file. An attacker could potentially exploit the vulnerability to gain code execution, if they can trick the victim into running Exiv2 on a crafted image file. Note that this bug is only triggered when _writing_ the metadata, which is a less frequently used Exiv2 operation than _reading_ the metadata. For example, to trigger the bug in the Exiv2 command-line application, you need to add an extra command-line argument such as `insert`. The bug is fixed in version v0.27.4.\n\n * CVE-2021-29473: Exiv2 is a C++ library and a command-line utility to read, write, delete and modify Exif, IPTC, XMP and ICC image metadata. An out-of-bounds read was found in Exiv2 versions v0.27.3 and earlier. Exiv2 is a command-line utility and C++ library for reading, writing, deleting, and modifying the metadata of image files. The out-of-bounds read is triggered when Exiv2 is used to write metadata into a crafted image file. An attacker could potentially exploit the vulnerability to cause a denial of service by crashing Exiv2, if they can trick the victim into running Exiv2 on a crafted image file. Note that this bug is only triggered when writing the metadata, which is a less frequently used Exiv2 operation than reading the metadata. For example, to trigger the bug in the Exiv2 command-line application, you need to add an extra command-line argument such as `insert`. The bug is fixed in version v0.27.4. Please see our security policy for information about Exiv2 security.\n\n * CVE-2021-31292: An integer overflow in CrwMap::encode0x1810 of Exiv2 0.27.3 allows attackers to trigger a heap-based buffer overflow and cause a denial of service (DOS) via crafted metadata.\n\n * CVE-2021-3482: A flaw was found in Exiv2 in versions before and including 0.27.4-RC1. Improper input validation of the rawData.size property in Jp2Image::readMetadata() in jp2image.cpp can lead to a heap-based buffer overflow via a crafted JPG image containing malicious EXIF data.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-20"
+          },
+          "Updated": {
+            "Date": "2021-11-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-05214",
+              "Impact": "Low",
+              "Public": "20210405",
+              "CveID": "BDU:2021-05214"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2021-05234",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-05234"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-05244",
+              "Impact": "Low",
+              "Public": "20210423",
+              "CveID": "BDU:2021-05244"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05262",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-05262"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29457",
+              "Impact": "High",
+              "Public": "20210419",
+              "CveID": "CVE-2021-29457"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29473",
+              "Impact": "Low",
+              "Public": "20210426",
+              "CveID": "CVE-2021-29473"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31292",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-31292"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3482",
+              "Impact": "Low",
+              "Public": "20210408",
+              "CveID": "CVE-2021-3482"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213308001",
+                "Comment": "exiv2 is earlier than 0:0.27.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213308002",
+                "Comment": "libexiv2 is earlier than 0:0.27.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213308003",
+                "Comment": "libexiv2-devel is earlier than 0:0.27.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201784",
+      "Version": "oval:org.altlinux.errata:def:20201784",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1784: package `chromium` update to version 81.0.4044.113-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1784",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1784",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02444",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02444",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-6457",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6457",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades chromium to version 81.0.4044.113-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02444: Уязвимость функции распознавания речи браузера Google Chrome, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-6457: Use after free in speech recognizer in Google Chrome prior to 81.0.4044.113 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-20"
+          },
+          "Updated": {
+            "Date": "2020-04-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-02444",
+              "Impact": "Critical",
+              "Public": "20200415",
+              "CveID": "BDU:2020-02444"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6457",
+              "Impact": "Critical",
+              "Public": "20200521",
+              "CveID": "CVE-2020-6457"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201784001",
+                "Comment": "chromium is earlier than 0:81.0.4044.113-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201784002",
+                "Comment": "chromium-gnome is earlier than 0:81.0.4044.113-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201784003",
+                "Comment": "chromium-kde is earlier than 0:81.0.4044.113-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

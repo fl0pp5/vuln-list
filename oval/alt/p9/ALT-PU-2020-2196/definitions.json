@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202196",
+      "Version": "oval:org.altlinux.errata:def:20202196",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2196: package `npm` update to version 6.13.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2196",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2196",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04689",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04689",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04690",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04690",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04691",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04691",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16775",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16775",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16776",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16776",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16777",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16777",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades npm to version 6.13.7-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04689: Уязвимость набора инструментов командной строки пакетных менеджеров NPM и Yarn, позволяющая нарушителю перезаписать произвольные файлы в контексте целевого каталога\n\n * BDU:2019-04690: Уязвимость набора инструментов командной строки пакетных менеджеров NPM и Yarn, позволяющая нарушителю записывать произвольные файлы\n\n * BDU:2019-04691: Уязвимость набора инструментов командной строки пакетных менеджеров NPM и Yarn, позволяющая нарушителю записывать произвольные файлы\n\n * CVE-2019-16775: Versions of the npm CLI prior to 6.13.3 are vulnerable to an Arbitrary File Write. It is possible for packages to create symlinks to files outside of thenode_modules folder through the bin field upon installation. A properly constructed entry in the package.json bin field would allow a package publisher to create a symlink pointing to arbitrary files on a user's system when the package is installed. This behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n * CVE-2019-16776: Versions of the npm CLI prior to 6.13.3 are vulnerable to an Arbitrary File Write. It fails to prevent access to folders outside of the intended node_modules folder through the bin field. A properly constructed entry in the package.json bin field would allow a package publisher to modify and/or gain access to arbitrary files on a user's system when the package is installed. This behavior is still possible through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.\n\n * CVE-2019-16777: Versions of the npm CLI prior to 6.13.4 are vulnerable to an Arbitrary File Overwrite. It fails to prevent existing globally-installed binaries to be overwritten by other package installations. For example, if a package was installed globally and created a serve binary, any subsequent installs of packages that also create a serve binary would overwrite the previous serve binary. This behavior is still allowed in local installations and also through install scripts. This vulnerability bypasses a user using the --ignore-scripts install option.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-18"
+          },
+          "Updated": {
+            "Date": "2020-06-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+              "Cwe": "CWE-20, CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2019-04689",
+              "Impact": "High",
+              "Public": "20191211",
+              "CveID": "BDU:2019-04689"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2019-04690",
+              "Impact": "High",
+              "Public": "20191211",
+              "CveID": "BDU:2019-04690"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:N",
+              "Cwe": "CWE-20, CWE-61",
+              "Href": "https://bdu.fstec.ru/vul/2019-04691",
+              "Impact": "High",
+              "Public": "20191211",
+              "CveID": "BDU:2019-04691"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-61",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16775",
+              "Impact": "Low",
+              "Public": "20191213",
+              "CveID": "CVE-2019-16775"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16776",
+              "Impact": "High",
+              "Public": "20191213",
+              "CveID": "CVE-2019-16776"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16777",
+              "Impact": "Low",
+              "Public": "20191213",
+              "CveID": "CVE-2019-16777"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202196001",
+                "Comment": "npm is earlier than 0:6.13.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

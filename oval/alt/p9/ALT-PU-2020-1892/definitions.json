@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201892",
+      "Version": "oval:org.altlinux.errata:def:20201892",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1892: package `openssl1.1` update to version 1.1.1g-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1892",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1892",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00300",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00300",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02873",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02873",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-1551",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1551",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1967",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1967",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1g-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00300: Уязвимость функции PA-RISC CRYPTO_memcmp библиотеки OpenSSL, связанная с раскрытием информации, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2020-02873: Уязвимость функции SSL_check_chain реализации протокола TLS библиотеки OpenSSL, связанная с с возможностью разыменования нулевого указателя в результате неправильной обработки TLS расширения «signature_algorithms_cert», позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-1551: There is an overflow bug in the x64_64 Montgomery squaring procedure used in exponentiation with 512-bit moduli. No EC algorithms are affected. Analysis suggests that attacks against 2-prime RSA1024, 3-prime RSA1536, and DSA1024 as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH512 are considered just feasible. However, for an attack the target would have to re-use the DH512 private key, which is not recommended anyway. Also applications directly using the low level API BN_mod_exp may be affected if they use BN_FLG_CONSTTIME. Fixed in OpenSSL 1.1.1e (Affected 1.1.1-1.1.1d). Fixed in OpenSSL 1.0.2u (Affected 1.0.2-1.0.2t).\n\n * CVE-2020-1967: Server or client applications that call the SSL_check_chain() function during or after a TLS 1.3 handshake may crash due to a NULL pointer dereference as a result of incorrect handling of the \"signature_algorithms_cert\" TLS extension. The crash occurs if an invalid or unrecognised signature algorithm is received from the peer. This could be exploited by a malicious peer in a Denial of Service attack. OpenSSL version 1.1.1d, 1.1.1e, and 1.1.1f are affected by this issue. This issue did not affect OpenSSL versions prior to 1.1.1d. Fixed in OpenSSL 1.1.1g (Affected 1.1.1d-1.1.1f).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-29"
+          },
+          "Updated": {
+            "Date": "2020-04-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-00300",
+              "Impact": "Low",
+              "Public": "20191206",
+              "CveID": "BDU:2020-00300"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-02873",
+              "Impact": "High",
+              "Public": "20200421",
+              "CveID": "BDU:2020-02873"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1551",
+              "Impact": "Low",
+              "Public": "20191206",
+              "CveID": "CVE-2019-1551"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1967",
+              "Impact": "High",
+              "Public": "20200421",
+              "CveID": "CVE-2020-1967"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892005",
+                "Comment": "openssl is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1g-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201892008",
+                "Comment": "tsget is earlier than 0:1.1.1g-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193410",
+      "Version": "oval:org.altlinux.errata:def:20193410",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3410: package `viking` update to version 1.7.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3410",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3410",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades viking to version 1.7.0-alt2. \nSecurity Fix(es):\n\n * #37674: в 1.7 Не устанавливается локализация",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-30"
+          },
+          "Updated": {
+            "Date": "2019-12-30"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37674",
+              "Href": "https://bugzilla.altlinux.org/37674",
+              "Data": "в 1.7 Не устанавливается локализация"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193410001",
+                "Comment": "viking is earlier than 0:1.7.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

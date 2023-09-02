@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212532",
+      "Version": "oval:org.altlinux.errata:def:20212532",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2532: package `postgresql11` update to version 11.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2532",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2532",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04174",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04174",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3677",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3677",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql11 to version 11.13-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04174: Уязвимость системы управления базами данных PostgreSQL, связанная с непринятием мер по защите структуры запроса SQL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2021-3677: A flaw was found in postgresql. A purpose-crafted query can read arbitrary bytes of server memory. In the default configuration, any authenticated database user can complete this attack at will. The attack does not require the ability to create objects. If server settings include max_worker_processes=0, the known versions of this attack are infeasible. However, undiscovered variants of the attack may be independent of that setting.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-16"
+          },
+          "Updated": {
+            "Date": "2021-08-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2021-04174",
+              "Impact": "Critical",
+              "Public": "20210812",
+              "CveID": "BDU:2021-04174"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3677",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3677"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532001",
+                "Comment": "postgresql11 is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532002",
+                "Comment": "postgresql11-contrib is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532003",
+                "Comment": "postgresql11-docs is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532004",
+                "Comment": "postgresql11-perl is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532005",
+                "Comment": "postgresql11-python is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532006",
+                "Comment": "postgresql11-server is earlier than 0:11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212532007",
+                "Comment": "postgresql11-tcl is earlier than 0:11.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

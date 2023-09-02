@@ -1,0 +1,287 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211252",
+      "Version": "oval:org.altlinux.errata:def:20211252",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1252: package `chromium` update to version 88.0.4324.150-alt0.1.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1252",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1252",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00913",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00913",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00915",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00915",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01022",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01022",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01043",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01043",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01048",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01048",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01049",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01049",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01065",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01065",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-21142",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21142",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21143",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21143",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21144",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21144",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21145",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21145",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21146",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21146",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21147",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21147",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21148",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21148",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades chromium to version 88.0.4324.150-alt0.1.p9. \nSecurity Fix(es):\n\n * BDU:2021-00913: Уязвимость графической библиотеки Skia браузера Google Chrome, позволяющая нарушителю проводить спуфинг-атаки\n\n * BDU:2021-00915: Уязвимость обработчика JavaScript-сценариев V8 браузера Google Chrome, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01022: Уязвимость компонента Fonts браузера Google Chrome, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-01043: Уязвимость компонента Extensions браузера Google Chrome, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-01048: Уязвимость компонента Tab Groups браузера Google Chrome, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-01049: Уязвимость компонента Payments браузера Google Chrome, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-01065: Уязвимость компонента Navigation браузера Google Chrome, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2021-21142: Use after free in Payments in Google Chrome on Mac prior to 88.0.4324.146 allowed a remote attacker to potentially perform a sandbox escape via a crafted HTML page.\n\n * CVE-2021-21143: Heap buffer overflow in Extensions in Google Chrome prior to 88.0.4324.146 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension.\n\n * CVE-2021-21144: Heap buffer overflow in Tab Groups in Google Chrome prior to 88.0.4324.146 allowed an attacker who convinced a user to install a malicious extension to potentially exploit heap corruption via a crafted Chrome Extension.\n\n * CVE-2021-21145: Use after free in Fonts in Google Chrome prior to 88.0.4324.146 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.\n\n * CVE-2021-21146: Use after free in Navigation in Google Chrome prior to 88.0.4324.146 allowed a remote attacker who had compromised the renderer process to potentially perform a sandbox escape via a crafted HTML page.\n\n * CVE-2021-21147: Inappropriate implementation in Skia in Google Chrome prior to 88.0.4324.146 allowed a local attacker to spoof the contents of the Omnibox (URL bar) via a crafted HTML page.\n\n * CVE-2021-21148: Heap buffer overflow in V8 in Google Chrome prior to 88.0.4324.150 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-11"
+          },
+          "Updated": {
+            "Date": "2021-02-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cwe": "CWE-358",
+              "Href": "https://bdu.fstec.ru/vul/2021-00913",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-00913"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-00915",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-00915"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01022",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-01022"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01043",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-01043"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01048",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-01048"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01049",
+              "Impact": "Critical",
+              "Public": "20210202",
+              "CveID": "BDU:2021-01049"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01065",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "BDU:2021-01065"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21142",
+              "Impact": "Critical",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21142"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21143",
+              "Impact": "High",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21143"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21144",
+              "Impact": "High",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21144"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21145",
+              "Impact": "High",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21145"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21146",
+              "Impact": "Critical",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21146"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21147",
+              "Impact": "Low",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21147"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21148",
+              "Impact": "High",
+              "Public": "20210209",
+              "CveID": "CVE-2021-21148"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211252001",
+                "Comment": "chromium is earlier than 0:88.0.4324.150-alt0.1.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

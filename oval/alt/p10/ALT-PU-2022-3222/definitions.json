@@ -1,0 +1,152 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223222",
+      "Version": "oval:org.altlinux.errata:def:20223222",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3222: package `krb5` update to version 1.19.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3222",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3222",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06933",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06933",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-42898",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42898",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades krb5 to version 1.19.4-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06933: Уязвимость параметров PAC (Privileged Attribute Certificate) функции krb5_parse_pac пакетов Heimdal и MIT Kerberos программы сетевого взаимодействия Samba, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-42898: PAC parsing in MIT Kerberos 5 (aka krb5) before 1.19.4 and 1.20.x before 1.20.1 has integer overflows that may lead to remote code execution (in KDC, kadmind, or a GSS or Kerberos application server) on 32-bit platforms (which have a resultant heap-based buffer overflow), and cause a denial of service on other platforms. This occurs in krb5_pac_parse in lib/krb5/krb/pac.c. Heimdal before 7.7.1 has \"a similar bug.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-28"
+          },
+          "Updated": {
+            "Date": "2022-11-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:C/A:P",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:L",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-06933",
+              "Impact": "Low",
+              "Public": "20221115",
+              "CveID": "BDU:2022-06933"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42898",
+              "Impact": "High",
+              "Public": "20221225",
+              "CveID": "CVE-2022-42898"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222001",
+                "Comment": "krb5-doc is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222002",
+                "Comment": "krb5-kadmin is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222003",
+                "Comment": "krb5-kdc is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222004",
+                "Comment": "krb5-kinit is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222005",
+                "Comment": "krb5-ksu is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222006",
+                "Comment": "libkrb5 is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222007",
+                "Comment": "libkrb5-devel is earlier than 0:1.19.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223222008",
+                "Comment": "libkrb5-ldap is earlier than 0:1.19.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

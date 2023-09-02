@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222985",
+      "Version": "oval:org.altlinux.errata:def:20222985",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2985: package `pascalabcnet` update to version 3.8.3.3197-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2985",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2985",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades pascalabcnet to version 3.8.3.3197-alt1. \nSecurity Fix(es):\n\n * #43942: Не работает кнопка \"Коротко о главном\" в Помощи в PascalABCNETLinux\n\n * #43943: Не открывается страница скачивания в PascalABCNETLinux\n\n * #43944: Не открывается каталог с примерами в PascalABCNETLinux\n\n * #43945: Ошибка при \"Перекомпилировать все\" в PascalABCNETLinux\n\n * #43946: Ошибка при \"выполнении без связи с оболочкой\" в PascalABCNETLinux",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-02"
+          },
+          "Updated": {
+            "Date": "2022-11-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43942",
+              "Href": "https://bugzilla.altlinux.org/43942",
+              "Data": "Не работает кнопка \"Коротко о главном\" в Помощи в PascalABCNETLinux"
+            },
+            {
+              "Id": "43943",
+              "Href": "https://bugzilla.altlinux.org/43943",
+              "Data": "Не открывается страница скачивания в PascalABCNETLinux"
+            },
+            {
+              "Id": "43944",
+              "Href": "https://bugzilla.altlinux.org/43944",
+              "Data": "Не открывается каталог с примерами в PascalABCNETLinux"
+            },
+            {
+              "Id": "43945",
+              "Href": "https://bugzilla.altlinux.org/43945",
+              "Data": "Ошибка при \"Перекомпилировать все\" в PascalABCNETLinux"
+            },
+            {
+              "Id": "43946",
+              "Href": "https://bugzilla.altlinux.org/43946",
+              "Data": "Ошибка при \"выполнении без связи с оболочкой\" в PascalABCNETLinux"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222985001",
+                "Comment": "pascalabcnet is earlier than 0:3.8.3.3197-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

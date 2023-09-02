@@ -1,0 +1,260 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192690",
+      "Version": "oval:org.altlinux.errata:def:20192690",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2690: package `xymon` update to version 4.3.29-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2690",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2690",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-13273",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13273",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13274",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13274",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13451",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13451",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13452",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13452",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13455",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13455",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13473",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13473",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13474",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13474",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13484",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13484",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13485",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13485",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13486",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13486",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xymon to version 4.3.29-alt1. \nSecurity Fix(es):\n\n * CVE-2019-13273: In Xymon through 4.3.28, a buffer overflow vulnerability exists in the csvinfo CGI script. The overflow may be exploited by sending a crafted GET request that triggers an sprintf of the srcdb parameter.\n\n * CVE-2019-13274: In Xymon through 4.3.28, an XSS vulnerability exists in the csvinfo CGI script due to insufficient filtering of the db parameter.\n\n * CVE-2019-13451: In Xymon through 4.3.28, a buffer overflow vulnerability exists in history.c.\n\n * CVE-2019-13452: In Xymon through 4.3.28, a buffer overflow vulnerability exists in reportlog.c.\n\n * CVE-2019-13455: In Xymon through 4.3.28, a stack-based buffer overflow vulnerability exists in the alert acknowledgment CGI tool because of \u0026nbsp; expansion in acknowledge.c.\n\n * CVE-2019-13473: TELESTAR Bobs Rock Radio, Dabman D10, Dabman i30 Stereo, Imperial i110, Imperial i150, Imperial i200, Imperial i200-cd, Imperial i400, Imperial i450, Imperial i500-bt, and Imperial i600 TN81HH96-g102h-g102 devices have an undocumented TELNET service within the BusyBox subsystem, leading to root access.\n\n * CVE-2019-13474: TELESTAR Bobs Rock Radio, Dabman D10, Dabman i30 Stereo, Imperial i110, Imperial i150, Imperial i200, Imperial i200-cd, Imperial i400, Imperial i450, Imperial i500-bt, and Imperial i600 TN81HH96-g102h-g102 devices have insufficient access control for the /set_dname, /mylogo, /LocalPlay, /irdevice.xml, /Sendkey, /setvol, /hotkeylist, /init, /playlogo.jpg, /stop, /exit, /back, and /playinfo commands.\n\n * CVE-2019-13484: In Xymon through 4.3.28, a buffer overflow exists in the status-log viewer CGI because of \u0026nbsp; expansion in appfeed.c.\n\n * CVE-2019-13485: In Xymon through 4.3.28, a stack-based buffer overflow vulnerability exists in the history viewer component via a long hostname or service parameter to history.c.\n\n * CVE-2019-13486: In Xymon through 4.3.28, a stack-based buffer overflow exists in the status-log viewer component because of \u0026nbsp; expansion in svcstatus.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-13"
+          },
+          "Updated": {
+            "Date": "2019-09-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13273",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13273"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13274",
+              "Impact": "Low",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13274"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13451",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13451"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13452",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13452"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13455",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13455"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-798",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13473",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "CVE-2019-13473"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-798",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13474",
+              "Impact": "Critical",
+              "Public": "20190916",
+              "CveID": "CVE-2019-13474"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13484",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13484"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13485",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13485"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13486",
+              "Impact": "Critical",
+              "Public": "20190827",
+              "CveID": "CVE-2019-13486"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690001",
+                "Comment": "xymon is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690002",
+                "Comment": "xymon-apache2 is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690003",
+                "Comment": "xymon-bb-compatibility is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690004",
+                "Comment": "xymon-client is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690005",
+                "Comment": "xymon-common is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690006",
+                "Comment": "xymon-man is earlier than 0:4.3.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192690007",
+                "Comment": "xymon-web is earlier than 0:4.3.29-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

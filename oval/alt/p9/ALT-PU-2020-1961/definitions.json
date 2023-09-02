@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201961",
+      "Version": "oval:org.altlinux.errata:def:20201961",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1961: package `kde5-kio-extras` update to version 19.12.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1961",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1961",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-12755",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12755",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kde5-kio-extras to version 19.12.3-alt2. \nSecurity Fix(es):\n\n * CVE-2020-12755: fishProtocol::establishConnection in fish/fish.cpp in KDE kio-extras through 20.04.0 makes a cacheAuthentication call even if the user had not set the keepPassword option. This may lead to unintended KWallet storage of a password.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-13"
+          },
+          "Updated": {
+            "Date": "2020-05-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12755",
+              "Impact": "Low",
+              "Public": "20200509",
+              "CveID": "CVE-2020-12755"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201961001",
+                "Comment": "kde5-kio-extras is earlier than 0:19.12.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201961002",
+                "Comment": "kde5-kio-extras-common is earlier than 0:19.12.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201961003",
+                "Comment": "kde5-kio-extras-devel is earlier than 0:19.12.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201961004",
+                "Comment": "libkioarchive5 is earlier than 0:19.12.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201961005",
+                "Comment": "libmolletnetwork519 is earlier than 0:19.12.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

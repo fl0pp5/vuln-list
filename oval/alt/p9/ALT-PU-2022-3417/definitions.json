@@ -1,0 +1,187 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223417",
+      "Version": "oval:org.altlinux.errata:def:20223417",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3417: package `kernel-image-un-def` update to version 5.10.161-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3417",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3417",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07218",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07218",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01196",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01196",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-45934",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-45934",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-23586",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23586",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.161-alt1. \nSecurity Fix(es):\n\n * BDU:2022-07218: Уязвимость функции l2cap_config_req (net/bluetooth/l2cap_core.c) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-01196: Уязвимость модуля io_uring.c ядра операционной системы Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2022-45934: An issue was discovered in the Linux kernel through 6.0.10. l2cap_config_req in net/bluetooth/l2cap_core.c has an integer wraparound via L2CAP_CONF_REQ packets.\n\n * CVE-2023-23586: Due to a vulnerability in the io_uring subsystem, it is possible to leak kernel memory information to the user process. timens_install calls current_is_single_threaded to determine if the current process is single-threaded, but this call does not consider io_uring's io_worker threads, thus it is possible to insert a time namespace's vvar page to process's memory space via a page fault. When this time namespace is destroyed, the vvar page is also freed, but not removed from the process' memory, and a next page allocated by the kernel will be still available from the user-space process and can leak memory contents via this (read-only) use-after-free vulnerability. We recommend upgrading past version 5.10.161 or commit 788d0824269bef539fe31a785b1517882eafed93 https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/commit/io_uring",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-26"
+          },
+          "Updated": {
+            "Date": "2022-12-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-07218",
+              "Impact": "High",
+              "Public": "20221121",
+              "CveID": "BDU:2022-07218"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01196",
+              "Impact": "Low",
+              "Public": "20210221",
+              "CveID": "BDU:2023-01196"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-45934",
+              "Impact": "High",
+              "Public": "20221127",
+              "CveID": "CVE-2022-45934"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23586",
+              "Impact": "Low",
+              "Public": "20230217",
+              "CveID": "CVE-2023-23586"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.161-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223417010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.161-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

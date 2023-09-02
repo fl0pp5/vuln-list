@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211203",
+      "Version": "oval:org.altlinux.errata:def:20211203",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1203: package `imapfilter` update to version 2.7.5-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1203",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1203",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2016-10937",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-10937",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades imapfilter to version 2.7.5-alt2. \nSecurity Fix(es):\n\n * CVE-2016-10937: IMAPFilter through 2.6.12 does not validate the hostname in an SSL certificate.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-03"
+          },
+          "Updated": {
+            "Date": "2021-02-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-10937",
+              "Impact": "High",
+              "Public": "20190908",
+              "CveID": "CVE-2016-10937"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211203001",
+                "Comment": "imapfilter is earlier than 0:2.7.5-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201614",
+      "Version": "oval:org.altlinux.errata:def:20201614",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1614: package `php7-xmlrpc` update to version 7.3.16-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1614",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1614",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01677",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01677",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02386",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02386",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02387",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02387",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-7064",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7064",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7065",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7065",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7066",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7066",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-xmlrpc to version 7.3.16-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01677: Уязвимость функции mb_strtolower () при использовании кодировки UTF-32LE  интерпретатора языка программирования PHP, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2020-02386: Уязвимость реализации функции exif_read_data() интерпретатора языка программирования PHP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * BDU:2020-02387: Уязвимость реализации функции get_headers() интерпретатора языка программирования PHP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2020-7064: In PHP versions 7.2.x below 7.2.9, 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while parsing EXIF data with exif_read_data() function, it is possible for malicious data to cause PHP to read one byte of uninitialized memory. This could potentially lead to information disclosure or crash.\n\n * CVE-2020-7065: In PHP versions 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using mb_strtolower() function with UTF-32LE encoding, certain invalid strings could cause PHP to overwrite stack-allocated buffer. This could lead to memory corruption, crashes and potentially code execution.\n\n * CVE-2020-7066: In PHP versions 7.2.x below 7.2.29, 7.3.x below 7.3.16 and 7.4.x below 7.4.4, while using get_headers() with user-supplied URL, if the URL contains zero (\\0) character, the URL will be silently truncated at it. This may cause some software to make incorrect assumptions about the target of the get_headers() and possibly send some information to a wrong server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-26"
+          },
+          "Updated": {
+            "Date": "2020-03-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-01677",
+              "Impact": "High",
+              "Public": "20200317",
+              "CveID": "BDU:2020-01677"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-02386",
+              "Impact": "Low",
+              "Public": "20200217",
+              "CveID": "BDU:2020-02386"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-170",
+              "Href": "https://bdu.fstec.ru/vul/2020-02387",
+              "Impact": "Low",
+              "Public": "20200317",
+              "CveID": "BDU:2020-02387"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7064",
+              "Impact": "Low",
+              "Public": "20200401",
+              "CveID": "CVE-2020-7064"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7065",
+              "Impact": "High",
+              "Public": "20200401",
+              "CveID": "CVE-2020-7065"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7066",
+              "Impact": "Low",
+              "Public": "20200401",
+              "CveID": "CVE-2020-7066"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201614001",
+                "Comment": "php7-xmlrpc is earlier than 0:7.3.16-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

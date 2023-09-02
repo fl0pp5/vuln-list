@@ -1,0 +1,353 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193067",
+      "Version": "oval:org.altlinux.errata:def:20193067",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3067: package `samba` update to version 4.10.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3067",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3067",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03211",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03211",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01338",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01338",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01340",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01340",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04881",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04881",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10197",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10197",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10218",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10218",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14833",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14833",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14847",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14847",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades samba to version 4.10.10-alt1. \nSecurity Fix(es):\n\n * BDU:2019-03211: Уязвимость SMB-сервера (файл конфигурации smb.conf) пакета программ для сетевого взаимодействия Samba, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2020-01338: Уязвимость компонента LDAP dirsync пакета программ для сетевого взаимодействия Samba, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-01340: Уязвимость контроллера домена Samba Active Directory пакета программ для сетевого взаимодействия Samba, позволяющая нарушителю обойти существующие ограничения безопасности с помощью атаки методом «грубой силы» (brute force)\n\n * BDU:2020-04881: Уязвимость файловой системы Samba, существующая из-за неверного ограничения имени пути к каталогу с ограниченным доступом, позволяющая нарушителю получить доступ к файлам и папкам за пределами сетевых путей SMB\n\n * CVE-2019-10197: A flaw was found in samba versions 4.9.x up to 4.9.13, samba 4.10.x up to 4.10.8 and samba 4.11.x up to 4.11.0rc3, when certain parameters were set in the samba configuration file. An unauthenticated attacker could use this flaw to escape the shared directory and access the contents of directories outside the share.\n\n * CVE-2019-10218: A flaw was found in the samba client, all samba versions before samba 4.11.2, 4.10.10 and 4.9.15, where a malicious server can supply a pathname to the client with separators. This could allow the client to access files and folders outside of the SMB network pathnames. An attacker could use this vulnerability to create files outside of the current working directory using the privileges of the client user.\n\n * CVE-2019-14833: A flaw was found in Samba, all versions starting samba 4.5.0 before samba 4.9.15, samba 4.10.10, samba 4.11.2, in the way it handles a user password change or a new password for a samba user. The Samba Active Directory Domain Controller can be configured to use a custom script to check for password complexity. This configuration can fail to verify password complexity when non-ASCII characters are used in the password, which could lead to weak passwords being set for samba users, making it vulnerable to dictionary attacks.\n\n * CVE-2019-14847: A flaw was found in samba 4.0.0 before samba 4.9.15 and samba 4.10.x before 4.10.10. An attacker can crash AD DC LDAP server via dirsync resulting in denial of service. Privilege escalation is not possible with this issue.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-01"
+          },
+          "Updated": {
+            "Date": "2019-11-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2019-03211",
+              "Impact": "Critical",
+              "Public": "20190903",
+              "CveID": "BDU:2019-03211"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-01338",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "BDU:2020-01338"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-305, CWE-521",
+              "Href": "https://bdu.fstec.ru/vul/2020-01340",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "BDU:2020-01340"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2020-04881",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "BDU:2020-04881"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10197",
+              "Impact": "Critical",
+              "Public": "20190903",
+              "CveID": "CVE-2019-10197"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10218",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "CVE-2019-10218"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-305",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14833",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "CVE-2019-14833"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14847",
+              "Impact": "Low",
+              "Public": "20191106",
+              "CveID": "CVE-2019-14847"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067001",
+                "Comment": "libldb-modules-dc is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067002",
+                "Comment": "libnetapi is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067003",
+                "Comment": "libnetapi-devel is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067004",
+                "Comment": "libsmbclient is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067005",
+                "Comment": "libsmbclient-devel is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067006",
+                "Comment": "libwbclient is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067007",
+                "Comment": "libwbclient-devel is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067008",
+                "Comment": "python-module-samba is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067009",
+                "Comment": "python3-module-samba is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067010",
+                "Comment": "python3-module-samba-devel is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067011",
+                "Comment": "samba is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067012",
+                "Comment": "samba-client is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067013",
+                "Comment": "samba-common is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067014",
+                "Comment": "samba-common-libs is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067015",
+                "Comment": "samba-common-tools is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067016",
+                "Comment": "samba-ctdb is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067017",
+                "Comment": "samba-ctdb-tests is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067018",
+                "Comment": "samba-dc is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067019",
+                "Comment": "samba-dc-client is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067020",
+                "Comment": "samba-dc-common is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067021",
+                "Comment": "samba-dc-libs is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067022",
+                "Comment": "samba-dc-mitkrb5 is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067023",
+                "Comment": "samba-devel is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067024",
+                "Comment": "samba-doc is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067025",
+                "Comment": "samba-libs is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067026",
+                "Comment": "samba-pidl is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067027",
+                "Comment": "samba-test is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067028",
+                "Comment": "samba-util-private-headers is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067029",
+                "Comment": "samba-vfs-cephfs is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067030",
+                "Comment": "samba-vfs-glusterfs is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067031",
+                "Comment": "samba-winbind is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067032",
+                "Comment": "samba-winbind-clients is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067033",
+                "Comment": "samba-winbind-common is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067034",
+                "Comment": "samba-winbind-krb5-localauth is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067035",
+                "Comment": "samba-winbind-krb5-locator is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067036",
+                "Comment": "task-samba-dc is earlier than 0:4.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193067037",
+                "Comment": "task-samba-dc-mitkrb5 is earlier than 0:4.10.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

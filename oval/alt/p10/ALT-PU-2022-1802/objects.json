@@ -1,0 +1,46 @@
+{
+  "TextFileContent54Objects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:2001",
+      "Version": "1",
+      "comment": "Evaluate `/etc/os-release` file content",
+      "Path": {
+        "dataType": "string",
+        "Text": "/etc"
+      },
+      "Filepath": {
+        "Datatype": "string",
+        "Text": "os-release"
+      },
+      "Pattern": {
+        "Datatype": "string",
+        "Operation": "pattern match",
+        "Text": "cpe:\\/o:alt:(?!sp)[a-z\\-]+:p?(\\d+)(?:\\.\\d)*"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "Text": "1"
+      }
+    }
+  ],
+  "RpmInfoObjects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:20221802001",
+      "Version": "1",
+      "comment": "eepm is installed",
+      "Name": "eepm"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20221802002",
+      "Version": "1",
+      "comment": "eepm-repack is installed",
+      "Name": "eepm-repack"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20221802003",
+      "Version": "1",
+      "comment": "eepm-yum is installed",
+      "Name": "eepm-yum"
+    }
+  ]
+}

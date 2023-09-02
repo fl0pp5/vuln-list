@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212588",
+      "Version": "oval:org.altlinux.errata:def:20212588",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2588: package `prosody` update to version 0.11.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2588",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2588",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-37601",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37601",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades prosody to version 0.11.10-alt1. \nSecurity Fix(es):\n\n * CVE-2021-37601: muc.lib.lua in Prosody 0.11.0 through 0.11.9 allows remote attackers to obtain sensitive information (list of admins, members, owners, and banned entities of a Multi-User chat room) in some common configurations.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-20"
+          },
+          "Updated": {
+            "Date": "2021-08-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37601",
+              "Impact": "High",
+              "Public": "20210730",
+              "CveID": "CVE-2021-37601"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212588001",
+                "Comment": "prosody is earlier than 0:0.11.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

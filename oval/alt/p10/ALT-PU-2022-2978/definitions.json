@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222978",
+      "Version": "oval:org.altlinux.errata:def:20222978",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2978: package `zoneminder` update to version 1.36.29-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2978",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2978",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-39285",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39285",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39289",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39289",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39290",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39290",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39291",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39291",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zoneminder to version 1.36.29-alt1. \nSecurity Fix(es):\n\n * CVE-2022-39285: ZoneMinder is a free, open source Closed-circuit television software application The file parameter is vulnerable to a cross site scripting vulnerability (XSS) by backing out of the current \"tr\" \"td\" brackets. This then allows a malicious user to provide code that will execute when a user views the specific log on the \"view=log\" page. This vulnerability allows an attacker to store code within the logs that will be executed when loaded by a legitimate user. These actions will be performed with the permission of the victim. This could lead to data loss and/or further exploitation including account takeover. This issue has been addressed in versions `1.36.27` and `1.37.24`. Users are advised to upgrade. Users unable to upgrade should disable database logging.\n\n * CVE-2022-39289: ZoneMinder is a free, open source Closed-circuit television software application. In affected versions the ZoneMinder API Exposes Database Log contents to user without privileges, allows insertion, modification, deletion of logs without System Privileges. Users are advised yo upgrade as soon as possible. Users unable to upgrade should disable database logging.\n\n * CVE-2022-39290: ZoneMinder is a free, open source Closed-circuit television software application. In affected versions authenticated users can bypass CSRF keys by modifying the request supplied to the Zoneminder web application. These modifications include replacing HTTP POST with an HTTP GET and removing the CSRF key from the request. An attacker can take advantage of this by using an HTTP GET request to perform actions with no CSRF protection. This could allow an attacker to cause an authenticated user to perform unexpected actions on the web application. Users are advised to upgrade as soon as possible. There are no known workarounds for this issue.\n\n * CVE-2022-39291: ZoneMinder is a free, open source Closed-circuit television software application. Affected versions of zoneminder are subject to a vulnerability which allows users with \"View\" system permissions to inject new data into the logs stored by Zoneminder. This was observed through an HTTP POST request containing log information to the \"/zm/index.php\" endpoint. Submission is not rate controlled and could affect database performance and/or consume all storage resources. Users are advised to upgrade. There are no known workarounds for this issue.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-02"
+          },
+          "Updated": {
+            "Date": "2022-11-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39285",
+              "Impact": "Low",
+              "Public": "20221007",
+              "CveID": "CVE-2022-39285"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39289",
+              "Impact": "High",
+              "Public": "20221007",
+              "CveID": "CVE-2022-39289"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39290",
+              "Impact": "Low",
+              "Public": "20221007",
+              "CveID": "CVE-2022-39290"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39291",
+              "Impact": "Low",
+              "Public": "20221007",
+              "CveID": "CVE-2022-39291"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222978001",
+                "Comment": "zoneminder is earlier than 0:1.36.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222978002",
+                "Comment": "zoneminder-api is earlier than 0:1.36.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222978003",
+                "Comment": "zoneminder-nginx is earlier than 0:1.36.29-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

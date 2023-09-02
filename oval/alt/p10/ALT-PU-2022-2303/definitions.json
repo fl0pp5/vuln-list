@@ -1,0 +1,140 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222303",
+      "Version": "oval:org.altlinux.errata:def:20222303",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2303: package `php8.1` update to version 8.1.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2303",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2303",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04762",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04762",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-31627",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31627",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php8.1 to version 8.1.8-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04762: Уязвимость реализации функции finfo_buffer() интерпретатора языка программирования PHP, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-31627: In PHP versions 8.1.x below 8.1.8, when fileinfo functions, such as finfo_buffer, due to incorrect patch applied to the third party code from libmagic, incorrect function may be used to free allocated memory, which may lead to heap corruption.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-26"
+          },
+          "Updated": {
+            "Date": "2022-07-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-04762",
+              "Impact": "Critical",
+              "Public": "20220627",
+              "CveID": "BDU:2022-04762"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31627",
+              "Impact": "Critical",
+              "Public": "20220728",
+              "CveID": "CVE-2022-31627"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222303001",
+                "Comment": "php8.1 is earlier than 0:8.1.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222303002",
+                "Comment": "php8.1-devel is earlier than 0:8.1.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222303003",
+                "Comment": "php8.1-libs is earlier than 0:8.1.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222303004",
+                "Comment": "php8.1-mysqlnd is earlier than 0:8.1.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222303005",
+                "Comment": "rpm-build-php8.1-version is earlier than 0:8.1.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

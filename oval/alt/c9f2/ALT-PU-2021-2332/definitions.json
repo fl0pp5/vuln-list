@@ -1,0 +1,438 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212332",
+      "Version": "oval:org.altlinux.errata:def:20212332",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2332: package `ceph` update to version 14.2.22-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2332",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2332",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03228",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03228",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03709",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03709",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03733",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03733",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06309",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06309",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00208",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00208",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00286",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00286",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-10753",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10753",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1759",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1759",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1760",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1760",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20288",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20288",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3509",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3509",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3524",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3524",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3531",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3531",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ceph to version 14.2.22-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03228: Уязвимость системы хранения данных Ceph, связанная с непринятием мер по обработке последовательностей CRLF в HTTP-заголовках, позволяющая нарушителю внедрить произвольные HTTP-заголовки\n\n * BDU:2021-03709: Уязвимость системы хранения данных Ceph, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-03733: Уязвимость системы хранения данных Ceph, связанная с непринятием мер по защите структуры веб-страницы, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-06309: Уязвимость компонента RGW системы хранения данных Ceph, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00208: Уязвимость программной объектной сети хранения ceph, связанная с недостатками процедуры аутентификации, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-00286: Уязвимость компонента Dashboard системы хранения данных Ceph, связанная с непринятием мер по защите структуры веб-страницы, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2020-10753: A flaw was found in the Red Hat Ceph Storage RadosGW (Ceph Object Gateway). The vulnerability is related to the injection of HTTP headers via a CORS ExposeHeader tag. The newline character in the ExposeHeader tag in the CORS configuration file generates a header injection in the response when the CORS request is made. Ceph versions 3.x and 4.x are vulnerable to this issue.\n\n * CVE-2020-1759: A vulnerability was found in Red Hat Ceph Storage 4 and Red Hat Openshift Container Storage 4.2 where, A nonce reuse vulnerability was discovered in the secure mode of the messenger v2 protocol, which can allow an attacker to forge auth tags and potentially manipulate the data by leveraging the reuse of a nonce in a session. Messages encrypted using a reused nonce value are susceptible to serious confidentiality and integrity attacks.\n\n * CVE-2020-1760: A flaw was found in the Ceph Object Gateway, where it supports request sent by an anonymous user in Amazon S3. This flaw could lead to potential XSS attacks due to the lack of proper neutralization of untrusted input.\n\n * CVE-2021-20288: An authentication flaw was found in ceph in versions before 14.2.20. When the monitor handles CEPHX_GET_AUTH_SESSION_KEY requests, it doesn't sanitize other_keys, allowing key reuse. An attacker who can request a global_id can exploit the ability of any user to request a global_id previously associated with another user, as ceph does not force the reuse of old keys to generate new ones. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2021-3509: A flaw was found in Red Hat Ceph Storage 4, in the Dashboard component. In response to CVE-2020-27839, the JWT token was moved from localStorage to an httpOnly cookie. However, token cookies are used in the body of the HTTP response for the documentation, which again makes it available to XSS.The greatest threat to the system is for confidentiality, integrity, and availability.\n\n * CVE-2021-3524: A flaw was found in the Red Hat Ceph Storage RadosGW (Ceph Object Gateway) in versions before 14.2.21. The vulnerability is related to the injection of HTTP headers via a CORS ExposeHeader tag. The newline character in the ExposeHeader tag in the CORS configuration file generates a header injection in the response when the CORS request is made. In addition, the prior bug fix for CVE-2020-10753 did not account for the use of \\r as a header separator, thus a new flaw has been created.\n\n * CVE-2021-3531: A flaw was found in the Red Hat Ceph Storage RGW in versions before 14.2.21. When processing a GET Request for a swift URL that ends with two slashes it can cause the rgw to crash, resulting in a denial of service. The greatest threat to the system is of availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-26"
+          },
+          "Updated": {
+            "Date": "2021-07-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cwe": "CWE-113",
+              "Href": "https://bdu.fstec.ru/vul/2020-03228",
+              "Impact": "Low",
+              "Public": "20201120",
+              "CveID": "BDU:2020-03228"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03709",
+              "Impact": "Low",
+              "Public": "20210520",
+              "CveID": "BDU:2021-03709"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2021-03733",
+              "Impact": "Low",
+              "Public": "20200407",
+              "CveID": "BDU:2021-03733"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-06309",
+              "Impact": "Low",
+              "Public": "20210429",
+              "CveID": "BDU:2021-06309"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-00208",
+              "Impact": "High",
+              "Public": "20210414",
+              "CveID": "BDU:2022-00208"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-00286",
+              "Impact": "Low",
+              "Public": "20210415",
+              "CveID": "BDU:2022-00286"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-113",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10753",
+              "Impact": "Low",
+              "Public": "20200626",
+              "CveID": "CVE-2020-10753"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-323",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1759",
+              "Impact": "Low",
+              "Public": "20200413",
+              "CveID": "CVE-2020-1759"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1760",
+              "Impact": "Low",
+              "Public": "20200423",
+              "CveID": "CVE-2020-1760"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20288",
+              "Impact": "High",
+              "Public": "20210415",
+              "CveID": "CVE-2021-20288"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3509",
+              "Impact": "Low",
+              "Public": "20210527",
+              "CveID": "CVE-2021-3509"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3524",
+              "Impact": "Low",
+              "Public": "20210517",
+              "CveID": "CVE-2021-3524"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3531",
+              "Impact": "Low",
+              "Public": "20210518",
+              "CveID": "CVE-2021-3531"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332001",
+                "Comment": "ceph is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332002",
+                "Comment": "ceph-base is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332003",
+                "Comment": "ceph-common is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332004",
+                "Comment": "ceph-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332005",
+                "Comment": "ceph-fuse is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332006",
+                "Comment": "ceph-mds is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332007",
+                "Comment": "ceph-mgr is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332008",
+                "Comment": "ceph-mgr-ansible is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332009",
+                "Comment": "ceph-mgr-dashboard is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332010",
+                "Comment": "ceph-mgr-deepsea is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332011",
+                "Comment": "ceph-mgr-diskprediction-cloud is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332012",
+                "Comment": "ceph-mgr-diskprediction-local is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332013",
+                "Comment": "ceph-mgr-influx is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332014",
+                "Comment": "ceph-mgr-insights is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332015",
+                "Comment": "ceph-mgr-k8sevents is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332016",
+                "Comment": "ceph-mgr-prometheus is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332017",
+                "Comment": "ceph-mgr-restful is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332018",
+                "Comment": "ceph-mgr-rook is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332019",
+                "Comment": "ceph-mgr-ssh is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332020",
+                "Comment": "ceph-mgr-telegraf is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332021",
+                "Comment": "ceph-mgr-zabbix is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332022",
+                "Comment": "ceph-mon is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332023",
+                "Comment": "ceph-osd is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332024",
+                "Comment": "ceph-radosgw is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332025",
+                "Comment": "ceph-resource-agents is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332026",
+                "Comment": "cephfs-shell is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332027",
+                "Comment": "grafana-dashboards-ceph is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332028",
+                "Comment": "libcephfs-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332029",
+                "Comment": "libcephfs2 is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332030",
+                "Comment": "librados-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332031",
+                "Comment": "librados2 is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332032",
+                "Comment": "libradosstriper-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332033",
+                "Comment": "libradosstriper1 is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332034",
+                "Comment": "librbd-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332035",
+                "Comment": "librbd1 is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332036",
+                "Comment": "librgw-devel is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332037",
+                "Comment": "librgw2 is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332038",
+                "Comment": "python3-module-ceph is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332039",
+                "Comment": "python3-module-ceph-argparse is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332040",
+                "Comment": "python3-module-ceph_volume is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332041",
+                "Comment": "python3-module-cephfs is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332042",
+                "Comment": "python3-module-rados is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332043",
+                "Comment": "python3-module-rbd is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332044",
+                "Comment": "python3-module-rgw is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332045",
+                "Comment": "rbd-fuse is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332046",
+                "Comment": "rbd-mirror is earlier than 0:14.2.22-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212332047",
+                "Comment": "rbd-nbd is earlier than 0:14.2.22-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

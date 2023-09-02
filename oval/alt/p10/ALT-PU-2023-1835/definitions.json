@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231835",
+      "Version": "oval:org.altlinux.errata:def:20231835",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1835: package `kernel-image-rt` update to version 5.10.179-alt1.rt87",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1835",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1835",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07339",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07339",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-4379",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4379",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rt to version 5.10.179-alt1.rt87. \nSecurity Fix(es):\n\n * BDU:2022-07339: Уязвимость драйвера файловой системы NFS ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-4379: A use-after-free vulnerability was found in __nfs42_ssc_open() in fs/nfs/nfs4file.c in the Linux kernel. This flaw allows an attacker to conduct a remote denial",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-19"
+          },
+          "Updated": {
+            "Date": "2023-05-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-07339",
+              "Impact": "High",
+              "Public": "20221211",
+              "CveID": "BDU:2022-07339"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4379",
+              "Impact": "High",
+              "Public": "20230110",
+              "CveID": "CVE-2022-4379"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231835001",
+                "Comment": "kernel-headers-modules-rt is earlier than 0:5.10.179-alt1.rt87"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231835002",
+                "Comment": "kernel-headers-rt is earlier than 0:5.10.179-alt1.rt87"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231835003",
+                "Comment": "kernel-image-rt is earlier than 0:5.10.179-alt1.rt87"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231835004",
+                "Comment": "kernel-image-rt-checkinstall is earlier than 0:5.10.179-alt1.rt87"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

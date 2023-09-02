@@ -1,0 +1,158 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231887",
+      "Version": "oval:org.altlinux.errata:def:20231887",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1887: package `plymouth` update to version 22.02.122-alt2.20221016",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1887",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1887",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades plymouth to version 22.02.122-alt2.20221016. \nSecurity Fix(es):\n\n * #39326: Не показывается splash, если включен вывод на serial console\n\n * #44297: Не работает plymouth на UEFI с ядром un-def",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-26"
+          },
+          "Updated": {
+            "Date": "2023-05-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39326",
+              "Href": "https://bugzilla.altlinux.org/39326",
+              "Data": "Не показывается splash, если включен вывод на serial console"
+            },
+            {
+              "Id": "44297",
+              "Href": "https://bugzilla.altlinux.org/44297",
+              "Data": "Не работает plymouth на UEFI с ядром un-def"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887001",
+                "Comment": "libplymouth is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887002",
+                "Comment": "libplymouth-graphics is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887003",
+                "Comment": "plymouth is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887004",
+                "Comment": "plymouth-devel is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887005",
+                "Comment": "plymouth-plugin-fade-throbber is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887006",
+                "Comment": "plymouth-plugin-label is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887007",
+                "Comment": "plymouth-plugin-script is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887008",
+                "Comment": "plymouth-plugin-space-flares is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887009",
+                "Comment": "plymouth-plugin-two-step is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887010",
+                "Comment": "plymouth-scripts is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887011",
+                "Comment": "plymouth-system-theme is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887012",
+                "Comment": "plymouth-theme-bgrt is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887013",
+                "Comment": "plymouth-theme-bgrt-alt is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887014",
+                "Comment": "plymouth-theme-charge is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887015",
+                "Comment": "plymouth-theme-fade-in is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887016",
+                "Comment": "plymouth-theme-glow is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887017",
+                "Comment": "plymouth-theme-script is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887018",
+                "Comment": "plymouth-theme-solar is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887019",
+                "Comment": "plymouth-theme-spinfinity is earlier than 1:22.02.122-alt2.20221016"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231887020",
+                "Comment": "plymouth-theme-spinner is earlier than 1:22.02.122-alt2.20221016"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

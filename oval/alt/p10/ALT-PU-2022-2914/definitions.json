@@ -1,0 +1,363 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222914",
+      "Version": "oval:org.altlinux.errata:def:20222914",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2914: package `vim` update to version 9.0.0749-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2914",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2914",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05991",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05991",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05992",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05992",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06177",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06177",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06178",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06178",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06179",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06179",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06180",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06180",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06196",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06196",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3234",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3234",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3235",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3235",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3256",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3256",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3278",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3278",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3296",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3296",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3297",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3297",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3324",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3324",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3352",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3352",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3491",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3491",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vim to version 9.0.0749-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05991: Уязвимость функции utfc_ptr2len() текстового редактора Vim, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-05992: Уязвимость функции getcmdline_int() текстового редактора Vim, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-06177: Уязвимость функции win_redr_ruler() текстового редактора Vim, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-06178: Уязвимость функции ex_finally() текстового редактора Vim, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-06179: Уязвимость функции process_next_cpt_value() текстового редактора Vim, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2022-06180: Уязвимость текстового редактора Vim, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06196: Уязвимость функции did_set_string_option() текстового редактора Vim, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2022-3234: Heap-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.0483.\n\n * CVE-2022-3235: Use After Free in GitHub repository vim/vim prior to 9.0.0490.\n\n * CVE-2022-3256: Use After Free in GitHub repository vim/vim prior to 9.0.0530.\n\n * CVE-2022-3278: NULL Pointer Dereference in GitHub repository vim/vim prior to 9.0.0552.\n\n * CVE-2022-3296: Stack-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.0577.\n\n * CVE-2022-3297: Use After Free in GitHub repository vim/vim prior to 9.0.0579.\n\n * CVE-2022-3324: Stack-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.0598.\n\n * CVE-2022-3352: Use After Free in GitHub repository vim/vim prior to 9.0.0614.\n\n * CVE-2022-3491: Heap-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.0742.\n\n * #44022: vim Игнорирует ~/.vimrc",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-24"
+          },
+          "Updated": {
+            "Date": "2022-10-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05991",
+              "Impact": "High",
+              "Public": "20220914",
+              "CveID": "BDU:2022-05991"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05992",
+              "Impact": "High",
+              "Public": "20220914",
+              "CveID": "BDU:2022-05992"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06177",
+              "Impact": "High",
+              "Public": "20220925",
+              "CveID": "BDU:2022-06177"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2022-06178",
+              "Impact": "High",
+              "Public": "20220922",
+              "CveID": "BDU:2022-06178"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06179",
+              "Impact": "High",
+              "Public": "20220922",
+              "CveID": "BDU:2022-06179"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:L/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-06180",
+              "Impact": "Low",
+              "Public": "20220828",
+              "CveID": "BDU:2022-06180"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06196",
+              "Impact": "High",
+              "Public": "20220927",
+              "CveID": "BDU:2022-06196"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3234",
+              "Impact": "High",
+              "Public": "20220917",
+              "CveID": "CVE-2022-3234"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3235",
+              "Impact": "High",
+              "Public": "20220918",
+              "CveID": "CVE-2022-3235"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3256",
+              "Impact": "High",
+              "Public": "20220922",
+              "CveID": "CVE-2022-3256"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3278",
+              "Impact": "Low",
+              "Public": "20220923",
+              "CveID": "CVE-2022-3278"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3296",
+              "Impact": "High",
+              "Public": "20220925",
+              "CveID": "CVE-2022-3296"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3297",
+              "Impact": "High",
+              "Public": "20220925",
+              "CveID": "CVE-2022-3297"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3324",
+              "Impact": "High",
+              "Public": "20220927",
+              "CveID": "CVE-2022-3324"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3352",
+              "Impact": "High",
+              "Public": "20220929",
+              "CveID": "CVE-2022-3352"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3491",
+              "Impact": "High",
+              "Public": "20221203",
+              "CveID": "CVE-2022-3491"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44022",
+              "Href": "https://bugzilla.altlinux.org/44022",
+              "Data": "vim Игнорирует ~/.vimrc"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914001",
+                "Comment": "rpm-build-vim is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914002",
+                "Comment": "vim-X11 is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914003",
+                "Comment": "vim-X11-gnome2 is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914004",
+                "Comment": "vim-X11-gtk2 is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914005",
+                "Comment": "vim-X11-gtk3 is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914006",
+                "Comment": "vim-common is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914007",
+                "Comment": "vim-console is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914008",
+                "Comment": "vim-enhanced is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914009",
+                "Comment": "vim-minimal is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914010",
+                "Comment": "vim-spell-source is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914011",
+                "Comment": "vimtutor is earlier than 4:9.0.0749-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222914012",
+                "Comment": "xxd is earlier than 4:9.0.0749-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

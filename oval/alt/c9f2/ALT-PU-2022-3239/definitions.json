@@ -1,0 +1,108 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223239",
+      "Version": "oval:org.altlinux.errata:def:20223239",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3239: package `node` update to version 16.18.1-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3239",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3239",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06821",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06821",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-43548",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43548",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades node to version 16.18.1-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2022-06821: Уязвимость реализации параметра --inspect программного средства работы с объектами Node.js, позволяющей нарушителю выполнить произвольный код\n\n * CVE-2022-43548: A OS Command Injection vulnerability exists in Node.js versions \u003c14.21.1, \u003c16.18.1, \u003c18.12.1, \u003c19.0.1 due to an insufficient IsAllowedHost check that can easily be bypassed because IsIPAddress does not properly check if an IP address is invalid before making DBS requests allowing rebinding attacks.The fix for this issue in https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-32212 was incomplete and this new CVE is to complete the fix.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-29"
+          },
+          "Updated": {
+            "Date": "2022-11-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-350",
+              "Href": "https://bdu.fstec.ru/vul/2022-06821",
+              "Impact": "High",
+              "Public": "20221104",
+              "CveID": "BDU:2022-06821"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43548",
+              "Impact": "High",
+              "Public": "20221205",
+              "CveID": "CVE-2022-43548"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223239001",
+                "Comment": "node is earlier than 0:16.18.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223239002",
+                "Comment": "node-devel is earlier than 0:16.18.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223239003",
+                "Comment": "node-doc is earlier than 0:16.18.1-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

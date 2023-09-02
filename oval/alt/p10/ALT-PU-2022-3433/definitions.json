@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223433",
+      "Version": "oval:org.altlinux.errata:def:20223433",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3433: package `capnproto` update to version 0.10.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3433",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3433",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-46149",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-46149",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades capnproto to version 0.10.3-alt1. \nSecurity Fix(es):\n\n * CVE-2022-46149: Cap'n Proto is a data interchange format and remote procedure call (RPC) system. Cap'n Proro prior to versions 0.7.1, 0.8.1, 0.9.2, and 0.10.3, as well as versions of Cap'n Proto's Rust implementation prior to 0.13.7, 0.14.11, and 0.15.2 are vulnerable to out-of-bounds read due to logic error handling list-of-list. This issue may lead someone to remotely segfault a peer by sending it a malicious message, if the victim performs certain actions on a list-of-pointer type. Exfiltration of memory is possible if the victim performs additional certain actions on a list-of-pointer type. To be vulnerable, an application must perform a specific sequence of actions, described in the GitHub Security Advisory. The bug is present in inlined code, therefore the fix will require rebuilding dependent applications. Cap'n Proto has C++ fixes available in versions 0.7.1, 0.8.1, 0.9.2, and 0.10.3. The `capnp` Rust crate has fixes available in versions 0.13.7, 0.14.11, and 0.15.2.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-28"
+          },
+          "Updated": {
+            "Date": "2022-12-28"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-46149",
+              "Impact": "Low",
+              "Public": "20221130",
+              "CveID": "CVE-2022-46149"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223433001",
+                "Comment": "capnproto is earlier than 0:0.10.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223433002",
+                "Comment": "capnproto-devel is earlier than 0:0.10.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223433003",
+                "Comment": "capnproto-libs is earlier than 0:0.10.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

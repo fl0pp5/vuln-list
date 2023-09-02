@@ -1,0 +1,98 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221049",
+      "Version": "oval:org.altlinux.errata:def:20221049",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1049: package `qpdf` update to version 10.5.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1049",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1049",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-36978",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36978",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qpdf to version 10.5.0-alt1. \nSecurity Fix(es):\n\n * CVE-2021-36978: QPDF 9.x through 9.1.1 and 10.x through 10.0.4 has a heap-based buffer overflow in Pl_ASCII85Decoder::write (called from Pl_AES_PDF::flush and Pl_AES_PDF::finish) when a certain downstream write fails.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-14"
+          },
+          "Updated": {
+            "Date": "2022-01-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36978",
+              "Impact": "Low",
+              "Public": "20210720",
+              "CveID": "CVE-2021-36978"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221049001",
+                "Comment": "libqpdf-devel is earlier than 0:10.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221049002",
+                "Comment": "libqpdf28 is earlier than 0:10.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221049003",
+                "Comment": "qpdf is earlier than 0:10.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221049004",
+                "Comment": "qpdf-doc is earlier than 0:10.5.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

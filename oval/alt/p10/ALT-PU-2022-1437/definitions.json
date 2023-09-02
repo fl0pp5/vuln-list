@@ -1,0 +1,134 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221437",
+      "Version": "oval:org.altlinux.errata:def:20221437",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1437: package `golang` update to version 1.16.15-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1437",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1437",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-24921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24921",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.16.15-alt1. \nSecurity Fix(es):\n\n * CVE-2022-24921: regexp.Compile in Go before 1.16.15 and 1.17.x before 1.17.8 allows stack exhaustion via a deeply nested expression.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-05"
+          },
+          "Updated": {
+            "Date": "2022-03-05"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24921",
+              "Impact": "High",
+              "Public": "20220305",
+              "CveID": "CVE-2022-24921"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437001",
+                "Comment": "golang is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437002",
+                "Comment": "golang-docs is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437003",
+                "Comment": "golang-gdb is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437004",
+                "Comment": "golang-misc is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437005",
+                "Comment": "golang-shared is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437006",
+                "Comment": "golang-src is earlier than 0:1.16.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221437007",
+                "Comment": "golang-tests is earlier than 0:1.16.15-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

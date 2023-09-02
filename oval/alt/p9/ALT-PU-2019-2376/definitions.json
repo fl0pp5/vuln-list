@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192376",
+      "Version": "oval:org.altlinux.errata:def:20192376",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2376: package `thunar` update to version 1.8.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2376",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2376",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades thunar to version 1.8.8-alt1. \nSecurity Fix(es):\n\n * #37025: Невозмжно удалить файлы за пределами $HOME",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-06"
+          },
+          "Updated": {
+            "Date": "2019-08-06"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37025",
+              "Href": "https://bugzilla.altlinux.org/37025",
+              "Data": "Невозмжно удалить файлы за пределами $HOME"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192376001",
+                "Comment": "libthunar is earlier than 0:1.8.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192376002",
+                "Comment": "libthunar-devel is earlier than 0:1.8.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192376003",
+                "Comment": "thunar is earlier than 0:1.8.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203097",
+      "Version": "oval:org.altlinux.errata:def:20203097",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3097: package `LibreOffice` update to version 7.0.1.2-alt1.0.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3097",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3097",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03246",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03246",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02358",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02358",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03672",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03672",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03673",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03673",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03850",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03850",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-9853",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9853",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9854",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9854",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12801",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12801",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12802",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12802",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12803",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12803",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades LibreOffice to version 7.0.1.2-alt1.0.p9. \nSecurity Fix(es):\n\n * BDU:2019-03246: Уязвимость программного модуля LibreLogo пакета офисных программ LibreOffice, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * BDU:2020-02358: Уязвимость пакета офисных программ LibreOffice, связанная с ошибками при шифровании информации, позволяющая нарушителю получить доступ к защищаемой информации\n\n * BDU:2020-03672: Уязвимость компонента «скрытый режим» офисного пакета LibreOffice, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2020-03673: Уязвимость офисного пакета LibreOffice, связанная с некоректной проверкой вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2020-03850: Уязвимость механизма безопасности выполнения макросов пакета офисных программ LibreOffice, позволяющая нарушителю получить несанкционированный доступ к конфиденциальным данным, вызвать отказ в обслуживании или оказать воздействие на целостность данных\n\n * CVE-2019-9853: LibreOffice documents can contain macros. The execution of those macros is controlled by the document security settings, typically execution of macros are blocked by default. A URL decoding flaw existed in how the urls to the macros within the document were processed and categorized, resulting in the possibility to construct a document where macro execution bypassed the security settings. The documents were correctly detected as containing macros, and prompted the user to their existence within the documents, but macros within the document were subsequently not controlled by the security settings allowing arbitrary macro execution This issue affects: LibreOffice 6.2 series versions prior to 6.2.7; LibreOffice 6.3 series versions prior to 6.3.1.\n\n * CVE-2019-9854: LibreOffice has a feature where documents can specify that pre-installed macros can be executed on various script events such as mouse-over, document-open etc. Access is intended to be restricted to scripts under the share/Scripts/python, user/Scripts/python sub-directories of the LibreOffice install. Protection was added, to address CVE-2019-9852, to avoid a directory traversal attack where scripts in arbitrary locations on the file system could be executed by employing a URL encoding attack to defeat the path verification step. However this protection could be bypassed by taking advantage of a flaw in how LibreOffice assembled the final script URL location directly from components of the passed in path as opposed to solely from the sanitized output of the path verification step. This issue affects: Document Foundation LibreOffice 6.2 versions prior to 6.2.7; 6.3 versions prior to 6.3.1.\n\n * CVE-2020-12801: If LibreOffice has an encrypted document open and crashes, that document is auto-saved encrypted. On restart, LibreOffice offers to restore the document and prompts for the password to decrypt it. If the recovery is successful, and if the file format of the recovered document was not LibreOffice's default ODF file format, then affected versions of LibreOffice default that subsequent saves of the document are unencrypted. This may lead to a user accidentally saving a MSOffice file format document unencrypted while believing it to be encrypted. This issue affects: LibreOffice 6-3 series versions prior to 6.3.6; 6-4 series versions prior to 6.4.3.\n\n * CVE-2020-12802: LibreOffice has a 'stealth mode' in which only documents from locations deemed 'trusted' are allowed to retrieve remote resources. This mode is not the default mode, but can be enabled by users who want to disable LibreOffice's ability to include remote resources within a document. A flaw existed where remote graphic links loaded from docx documents were omitted from this protection prior to version 6.4.4. This issue affects: The Document Foundation LibreOffice versions prior to 6.4.4.\n\n * CVE-2020-12803: ODF documents can contain forms to be filled out by the user. Similar to HTML forms, the contained form data can be submitted to a URI, for example, to an external web server. To create submittable forms, ODF implements the XForms W3C standard, which allows data to be submitted without the need for macros or other active scripting Prior to version 6.4.4 LibreOffice allowed forms to be submitted to any URI, including file: URIs, enabling form submissions to overwrite local files. User-interaction is required to submit the form, but to avoid the possibility of malicious documents engineered to maximize the possibility of inadvertent user submission this feature has now been limited to http[s] URIs, removing the possibility to overwrite local files. This issue affects: The Document Foundation LibreOffice versions prior to 6.4.4.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-21"
+          },
+          "Updated": {
+            "Date": "2020-10-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-03246",
+              "Impact": "Critical",
+              "Public": "20190906",
+              "CveID": "BDU:2019-03246"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-311",
+              "Href": "https://bdu.fstec.ru/vul/2020-02358",
+              "Impact": "Low",
+              "Public": "20200518",
+              "CveID": "BDU:2020-02358"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-03672",
+              "Impact": "Low",
+              "Public": "20200608",
+              "CveID": "BDU:2020-03672"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-03673",
+              "Impact": "High",
+              "Public": "20200608",
+              "CveID": "BDU:2020-03673"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-116",
+              "Href": "https://bdu.fstec.ru/vul/2020-03850",
+              "Impact": "High",
+              "Public": "20200810",
+              "CveID": "BDU:2020-03850"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9853",
+              "Impact": "High",
+              "Public": "20190927",
+              "CveID": "CVE-2019-9853"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9854",
+              "Impact": "High",
+              "Public": "20190906",
+              "CveID": "CVE-2019-9854"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-312",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12801",
+              "Impact": "Low",
+              "Public": "20200518",
+              "CveID": "CVE-2020-12801"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12802",
+              "Impact": "Low",
+              "Public": "20200608",
+              "CveID": "CVE-2020-12802"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12803",
+              "Impact": "Low",
+              "Public": "20200608",
+              "CveID": "CVE-2020-12803"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097001",
+                "Comment": "LibreOffice is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097002",
+                "Comment": "LibreOffice-common is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097003",
+                "Comment": "LibreOffice-extensions is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097004",
+                "Comment": "LibreOffice-gtk3 is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097005",
+                "Comment": "LibreOffice-integrated is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097006",
+                "Comment": "LibreOffice-kde5 is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097007",
+                "Comment": "LibreOffice-langpack-be is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097008",
+                "Comment": "LibreOffice-langpack-de is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097009",
+                "Comment": "LibreOffice-langpack-es is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097010",
+                "Comment": "LibreOffice-langpack-fr is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097011",
+                "Comment": "LibreOffice-langpack-kk is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097012",
+                "Comment": "LibreOffice-langpack-pt-BR is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097013",
+                "Comment": "LibreOffice-langpack-ru is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097014",
+                "Comment": "LibreOffice-langpack-tt is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097015",
+                "Comment": "LibreOffice-langpack-uk is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097016",
+                "Comment": "LibreOffice-mimetypes is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097017",
+                "Comment": "LibreOffice-qt5 is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097018",
+                "Comment": "LibreOffice-sdk is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097019",
+                "Comment": "libreofficekit is earlier than 0:7.0.1.2-alt1.0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203097020",
+                "Comment": "libreofficekit-devel is earlier than 0:7.0.1.2-alt1.0.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

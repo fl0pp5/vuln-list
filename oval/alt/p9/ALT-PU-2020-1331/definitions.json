@@ -1,0 +1,225 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201331",
+      "Version": "oval:org.altlinux.errata:def:20201331",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1331: package `gcc-defaults` update to version 8-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1331",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1331",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades gcc-defaults to version 8-alt2. \nSecurity Fix(es):\n\n * #37086: Пакет libasan-devel-static отсутствует на ppc64le",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-25"
+          },
+          "Updated": {
+            "Date": "2020-02-25"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37086",
+              "Href": "https://bugzilla.altlinux.org/37086",
+              "Data": "Пакет libasan-devel-static отсутствует на ppc64le"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331001",
+                "Comment": "cpp is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331002",
+                "Comment": "gcc is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331003",
+                "Comment": "gcc-c++ is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331004",
+                "Comment": "gcc-doc is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331005",
+                "Comment": "gcc-fortran is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331006",
+                "Comment": "gcc-gdb-plugin is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331007",
+                "Comment": "gcc-gnat is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331008",
+                "Comment": "gcc-go is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331009",
+                "Comment": "gcc-locales is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331010",
+                "Comment": "gcc-objc is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331011",
+                "Comment": "gcc-objc++ is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331012",
+                "Comment": "gcc-plugin-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331013",
+                "Comment": "libasan-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331014",
+                "Comment": "libatomic-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331015",
+                "Comment": "libgccjit-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331016",
+                "Comment": "libgfortran-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331017",
+                "Comment": "libgfortran-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331018",
+                "Comment": "libgnat-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331019",
+                "Comment": "libgnat-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331020",
+                "Comment": "libgomp-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331021",
+                "Comment": "libgomp-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331022",
+                "Comment": "libitm-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331023",
+                "Comment": "liblsan-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331024",
+                "Comment": "libmpx-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331025",
+                "Comment": "libobjc-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331026",
+                "Comment": "libobjc-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331027",
+                "Comment": "libquadmath-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331028",
+                "Comment": "libstdc++-devel is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331029",
+                "Comment": "libstdc++-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331030",
+                "Comment": "libtsan-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331031",
+                "Comment": "libubsan-devel-static is earlier than 0:8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201331032",
+                "Comment": "libvtv-devel-static is earlier than 0:8-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

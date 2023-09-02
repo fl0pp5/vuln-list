@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201250",
+      "Version": "oval:org.altlinux.errata:def:20201250",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1250: package `moodle` update to version 3.8.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1250",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1250",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-14879",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14879",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14880",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14880",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14882",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14882",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14883",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14883",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14884",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14884",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18210",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18210",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades moodle to version 3.8.1-alt1. \nSecurity Fix(es):\n\n * CVE-2019-14879: A vulnerability was found in Moodle versions 3.7.x before 3.7.3, 3.6.x before 3.6.7 and 3.5.x before 3.5.9. When a cohort role assignment was removed, the associated capabilities were not being revoked (where applicable).\n\n * CVE-2019-14880: A vulnerability was found in Moodle versions 3.7 before 3.7.3, 3.6 before 3.6.7, 3.5 before 3.5.9 and earlier. OAuth 2 providers who do not verify users' email address changes require additional verification during sign-up to reduce the risk of account compromise.\n\n * CVE-2019-14882: A vulnerability was found in Moodle 3.7 to 3.7.3, 3.6 to 3.6.7, 3.5 to 3.5.9 and earlier where an open redirect existed in the Lesson edit page.\n\n * CVE-2019-14883: A vulnerability was found in Moodle 3.6 before 3.6.7 and 3.7 before 3.7.3, where tokens used to fetch inline atachments in email notifications were not disabled when a user's account was no longer active. Note: to access files, a user would need to know the file path, and their token.\n\n * CVE-2019-14884: A vulnerability was found in Moodle 3.7 before 3.73, 3.6 before 3.6.7 and 3.5 before 3.5.9, where a reflected XSS possible from some fatal error messages.\n\n * CVE-2019-18210: Persistent XSS in /course/modedit.php of Moodle through 3.7.2 allows authenticated users (Teacher and above) to inject JavaScript into the session of another user (e.g., enrolled student or site administrator) via the introeditor[text] parameter. NOTE: the discoverer and vendor disagree on whether Moodle customers have a reasonable expectation that anyone authenticated as a Teacher can be trusted with the ability to add arbitrary JavaScript (this ability is not documented on Moodle's Teacher_role page). Because the vendor has this expectation, they have stated \"this report has been closed as a false positive, and not a bug.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-17"
+          },
+          "Updated": {
+            "Date": "2020-02-17"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-273",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14879",
+              "Impact": "Low",
+              "Public": "20200107",
+              "CveID": "CVE-2019-14879"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14880",
+              "Impact": "Critical",
+              "Public": "20200331",
+              "CveID": "CVE-2019-14880"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14882",
+              "Impact": "Low",
+              "Public": "20200318",
+              "CveID": "CVE-2019-14882"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14883",
+              "Impact": "Low",
+              "Public": "20200318",
+              "CveID": "CVE-2019-14883"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14884",
+              "Impact": "Low",
+              "Public": "20200318",
+              "CveID": "CVE-2019-14884"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18210",
+              "Impact": "Low",
+              "Public": "20200211",
+              "CveID": "CVE-2019-18210"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201250001",
+                "Comment": "moodle is earlier than 0:3.8.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201250002",
+                "Comment": "moodle-apache2 is earlier than 0:3.8.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201250003",
+                "Comment": "moodle-base is earlier than 0:3.8.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201250004",
+                "Comment": "moodle-local-mysql is earlier than 0:3.8.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

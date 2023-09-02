@@ -1,0 +1,119 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223070",
+      "Version": "oval:org.altlinux.errata:def:20223070",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3070: package `libuv` update to version 1.44.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3070",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3070",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03700",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03700",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04210",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04210",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22918",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22918",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libuv to version 1.44.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03700: Уязвимость функции uv__idna_toascii() программной платформы Node.js, позволяющая нарушителю вызвать отказ в обслуживании или получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-04210: Уязвимость функции uv__idna_toascii() программной платформы Node.js, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2021-22918: Node.js before 16.4.1, 14.17.2, 12.22.2 is vulnerable to an out-of-bounds read when uv__idna_toascii() is used to convert strings to ASCII. The pointer p is read and increased without checking whether it is beyond pe, with the latter holding a pointer to the end of the buffer. This can lead to information disclosures or crashes. This function can be triggered via uv_getaddrinfo().",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-14"
+          },
+          "Updated": {
+            "Date": "2022-11-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03700",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "BDU:2021-03700"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04210",
+              "Impact": "Low",
+              "Public": "20210625",
+              "CveID": "BDU:2021-04210"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22918",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "CVE-2021-22918"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223070001",
+                "Comment": "libuv is earlier than 0:1.44.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223070002",
+                "Comment": "libuv-devel is earlier than 0:1.44.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

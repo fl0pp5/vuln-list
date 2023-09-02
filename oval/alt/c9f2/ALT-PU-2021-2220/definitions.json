@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212220",
+      "Version": "oval:org.altlinux.errata:def:20212220",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2220: package `golang` update to version 1.15.14-alt1.c9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2220",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2220",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00715",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00715",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-34558",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34558",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.15.14-alt1.c9. \nSecurity Fix(es):\n\n * BDU:2022-00715: Уязвимость пакета crypto/tls браузера Go, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-34558: The crypto/tls package of Go through 1.16.5 does not properly assert that the type of public key in an X.509 certificate matches the expected type when doing a RSA based key exchange, allowing a malicious TLS server to cause a TLS client to panic.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-13"
+          },
+          "Updated": {
+            "Date": "2021-07-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2022-00715",
+              "Impact": "Low",
+              "Public": "20210715",
+              "CveID": "BDU:2022-00715"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34558",
+              "Impact": "Low",
+              "Public": "20210715",
+              "CveID": "CVE-2021-34558"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220001",
+                "Comment": "golang is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220002",
+                "Comment": "golang-docs is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220003",
+                "Comment": "golang-gdb is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220004",
+                "Comment": "golang-misc is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220005",
+                "Comment": "golang-shared is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220006",
+                "Comment": "golang-src is earlier than 0:1.15.14-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212220007",
+                "Comment": "golang-tests is earlier than 0:1.15.14-alt1.c9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

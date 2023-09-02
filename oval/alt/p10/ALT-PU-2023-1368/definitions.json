@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231368",
+      "Version": "oval:org.altlinux.errata:def:20231368",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1368: package `libnma` update to version 1.10.6-alt0.p10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1368",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1368",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades libnma to version 1.10.6-alt0.p10.1. \nSecurity Fix(es):\n\n * #44273: Падает апплет сети при первом подключении к wi-fi сети",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-02"
+          },
+          "Updated": {
+            "Date": "2023-03-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44273",
+              "Href": "https://bugzilla.altlinux.org/44273",
+              "Data": "Падает апплет сети при первом подключении к wi-fi сети"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368001",
+                "Comment": "libnma is earlier than 0:1.10.6-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368002",
+                "Comment": "libnma-common is earlier than 0:1.10.6-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368003",
+                "Comment": "libnma-devel is earlier than 0:1.10.6-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368004",
+                "Comment": "libnma-devel-doc is earlier than 0:1.10.6-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368005",
+                "Comment": "libnma-gir is earlier than 0:1.10.6-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231368006",
+                "Comment": "libnma-gir-devel is earlier than 0:1.10.6-alt0.p10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

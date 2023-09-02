@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212014",
+      "Version": "oval:org.altlinux.errata:def:20212014",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2014: package `fcitx` update to version 4.2.9.8-alt2_1.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2014",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2014",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades fcitx to version 4.2.9.8-alt2_1.p9.1. \nSecurity Fix(es):\n\n * #40162: Пакет для настройки метода ввода fcitx через графический интерфейс",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-17"
+          },
+          "Updated": {
+            "Date": "2021-06-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40162",
+              "Href": "https://bugzilla.altlinux.org/40162",
+              "Data": "Пакет для настройки метода ввода fcitx через графический интерфейс"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014001",
+                "Comment": "fcitx is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014002",
+                "Comment": "fcitx-data is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014003",
+                "Comment": "fcitx-devel is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014004",
+                "Comment": "fcitx-gtk2 is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014005",
+                "Comment": "fcitx-gtk3 is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014006",
+                "Comment": "fcitx-libs is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014007",
+                "Comment": "fcitx-pinyin is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014008",
+                "Comment": "fcitx-qt4 is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014009",
+                "Comment": "fcitx-qw is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014010",
+                "Comment": "fcitx-table is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212014011",
+                "Comment": "fcitx-table-chinese is earlier than 0:4.2.9.8-alt2_1.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

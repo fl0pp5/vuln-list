@@ -1,0 +1,86 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221933",
+      "Version": "oval:org.altlinux.errata:def:20221933",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1933: package `dia` update to version 0.97.4-alt0.7.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1933",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1933",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-19451",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19451",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dia to version 0.97.4-alt0.7.1. \nSecurity Fix(es):\n\n * CVE-2019-19451: When GNOME Dia before 2019-11-27 is launched with a filename argument that is not a valid codepoint in the current encoding, it enters an endless loop, thus endlessly writing text to stdout. If this launch is from a thumbnailer service, this output will usually be written to disk via the system's logging facility (potentially with elevated privileges), thus filling up the disk and eventually rendering the system unusable. (The filename can be for a nonexistent file.) NOTE: this does not affect an upstream release, but affects certain Linux distribution packages with version numbers such as 0.97.3.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-24"
+          },
+          "Updated": {
+            "Date": "2022-05-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19451",
+              "Impact": "Low",
+              "Public": "20191129",
+              "CveID": "CVE-2019-19451"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221933001",
+                "Comment": "dia is earlier than 0:0.97.4-alt0.7.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

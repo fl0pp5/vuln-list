@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211874",
+      "Version": "oval:org.altlinux.errata:def:20211874",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1874: package `kernel-image-un-def` update to version 5.10.40-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1874",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1874",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04604",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04604",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-4157",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4157",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.40-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04604: Уязвимость функции decode_nfs_fh() ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии и вызвать аварийное завершение системы\n\n * CVE-2021-4157: An out of memory bounds write flaw (1 or 2 bytes of memory) in the Linux kernel NFS subsystem was found in the way users use mirroring (replication of files with NFS). A user, having access to the NFS mount, could potentially use this flaw to crash the system or escalate privileges on the system.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-05-28"
+          },
+          "Updated": {
+            "Date": "2021-05-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-04604",
+              "Impact": "High",
+              "Public": "20211220",
+              "CveID": "BDU:2022-04604"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4157",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2021-4157"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211874010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.40-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

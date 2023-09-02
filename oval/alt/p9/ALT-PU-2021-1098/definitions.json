@@ -1,0 +1,263 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211098",
+      "Version": "oval:org.altlinux.errata:def:20211098",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1098: package `moodle` update to version 3.10.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1098",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1098",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01190",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01190",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01191",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01191",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01192",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01192",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01193",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01193",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01194",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01194",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20183",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20183",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20184",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20184",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20185",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20185",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20186",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20186",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20187",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20187",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21809",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21809",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades moodle to version 3.10.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01190: Уязвимость реализации технологии аутентификации Shibboleth виртуальной обучающей среды Moodle, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-01191: Уязвимость фильтра преобразования текстовых выражений TeX виртуальной обучающей среды Moodle, позволяющая нарушителю проводить межсайтовые сценарные атаки\n\n * BDU:2021-01192: Уязвимость виртуальной обучающей среды Moodle, связанная с недостатками вводимых символов при обработке сообщений, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01193: Уязвимость реализации модуля «Gradebook» («Оценки») виртуальной обучающей среды Moodle, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-01194: Уязвимость виртуальной обучающей среды Moodle, связанная с недостаточной очисткой введенных пользователем данных в определенных поисковых запросах, позволяющая нарушителю проводить межсайтовые сценарные атаки\n\n * CVE-2021-20183: It was found in Moodle before version 3.10.1 that some search inputs were vulnerable to reflected XSS due to insufficient escaping of search queries.\n\n * CVE-2021-20184: It was found in Moodle before version 3.10.1, 3.9.4 and 3.8.7 that a insufficient capability checks in some grade related web services meant students were able to view other students grades.\n\n * CVE-2021-20185: It was found in Moodle before version 3.10.1, 3.9.4, 3.8.7 and 3.5.16 that messaging did not impose a character limit when sending messages, which could result in client-side (browser) denial of service for users receiving very large messages.\n\n * CVE-2021-20186: It was found in Moodle before version 3.10.1, 3.9.4, 3.8.7 and 3.5.16 that if the TeX notation filter was enabled, additional sanitizing of TeX content was required to prevent the risk of stored XSS.\n\n * CVE-2021-20187: It was found in Moodle before version 3.10.1, 3.9.4, 3.8.7 and 3.5.16 that it was possible for site administrators to execute arbitrary PHP scripts via a PHP include used during Shibboleth authentication.\n\n * CVE-2021-21809: A command execution vulnerability exists in the default legacy spellchecker plugin in Moodle 3.10. A specially crafted series of HTTP requests can lead to command execution. An attacker must have administrator privileges to exploit this vulnerabilities.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-20"
+          },
+          "Updated": {
+            "Date": "2021-01-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2021-01190",
+              "Impact": "High",
+              "Public": "20210113",
+              "CveID": "BDU:2021-01190"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2021-01191",
+              "Impact": "Low",
+              "Public": "20210112",
+              "CveID": "BDU:2021-01191"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-01192",
+              "Impact": "Low",
+              "Public": "20210112",
+              "CveID": "BDU:2021-01192"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-354",
+              "Href": "https://bdu.fstec.ru/vul/2021-01193",
+              "Impact": "Low",
+              "Public": "20210112",
+              "CveID": "BDU:2021-01193"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2021-01194",
+              "Impact": "Low",
+              "Public": "20210111",
+              "CveID": "BDU:2021-01194"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20183",
+              "Impact": "Low",
+              "Public": "20210128",
+              "CveID": "CVE-2021-20183"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-354",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20184",
+              "Impact": "Low",
+              "Public": "20210128",
+              "CveID": "CVE-2021-20184"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20185",
+              "Impact": "Low",
+              "Public": "20210128",
+              "CveID": "CVE-2021-20185"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20186",
+              "Impact": "Low",
+              "Public": "20210128",
+              "CveID": "CVE-2021-20186"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-829",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20187",
+              "Impact": "High",
+              "Public": "20210128",
+              "CveID": "CVE-2021-20187"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21809",
+              "Impact": "Critical",
+              "Public": "20210623",
+              "CveID": "CVE-2021-21809"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211098001",
+                "Comment": "moodle is earlier than 0:3.10.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211098002",
+                "Comment": "moodle-apache2 is earlier than 0:3.10.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211098003",
+                "Comment": "moodle-base is earlier than 0:3.10.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211098004",
+                "Comment": "moodle-local-mysql is earlier than 0:3.10.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

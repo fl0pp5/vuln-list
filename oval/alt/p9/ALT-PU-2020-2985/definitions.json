@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202985",
+      "Version": "oval:org.altlinux.errata:def:20202985",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2985: package `containerd` update to version 1.3.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2985",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2985",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04920",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04920",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01894",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01894",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16884",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16884",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15157",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15157",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades containerd to version 1.3.7-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04920: Уязвимость компонента AppArmor инструмента для запуска изолированных контейнеров runc, связанная с недостатками механизма авторизации, позволяющая нарушителю монтировать вредоносный образ Docker в каталог /proc\n\n * BDU:2021-01894: Уязвимость среды выполнения контейнеров Containerd, связанная с недостатком механизма хранения регистрационных данных, позволяющая нарушителю получить доступ несанкционированный доступ к защищаемой информации\n\n * CVE-2019-16884: runc through 1.0.0-rc8, as used in Docker through 19.03.2-ce and other products, allows AppArmor restriction bypass because libcontainer/rootfs_linux.go incorrectly checks mount targets, and thus a malicious Docker image can mount over a /proc directory.\n\n * CVE-2020-15157: In containerd (an industry-standard container runtime) before version 1.2.14 there is a credential leaking vulnerability. If a container image manifest in the OCI Image format or Docker Image V2 Schema 2 format includes a URL for the location of a specific image layer (otherwise known as a “foreign layer”), the default containerd resolver will follow that URL to attempt to download it. In v1.2.x but not 1.3.0 or later, the default containerd resolver will provide its authentication credentials if the server where the URL is located presents an HTTP 401 status code along with registry-specific HTTP headers. If an attacker publishes a public image with a manifest that directs one of the layers to be fetched from a web server they control and they trick a user or system into pulling the image, they can obtain the credentials used for pulling that image. In some cases, this may be the user's username and password for the registry. In other cases, this may be the credentials attached to the cloud virtual instance which can grant access to other cloud resources in the account. The default containerd resolver is used by the cri-containerd plugin (which can be used by Kubernetes), the ctr development tool, and other client programs that have explicitly linked against it. This vulnerability has been fixed in containerd 1.2.14. containerd 1.3 and later are not affected. If you are using containerd 1.3 or later, you are not affected. If you are using cri-containerd in the 1.2 series or prior, you should ensure you only pull images from trusted sources. Other container runtimes built on top of containerd but not using the default resolver (such as Docker) are not affected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-09"
+          },
+          "Updated": {
+            "Date": "2020-10-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2020-04920",
+              "Impact": "High",
+              "Public": "20190925",
+              "CveID": "BDU:2020-04920"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://bdu.fstec.ru/vul/2021-01894",
+              "Impact": "Low",
+              "Public": "20200924",
+              "CveID": "BDU:2021-01894"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16884",
+              "Impact": "High",
+              "Public": "20190925",
+              "CveID": "CVE-2019-16884"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15157",
+              "Impact": "Low",
+              "Public": "20201016",
+              "CveID": "CVE-2020-15157"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202985001",
+                "Comment": "containerd is earlier than 0:1.3.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

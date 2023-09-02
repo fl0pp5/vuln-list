@@ -1,0 +1,253 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213619",
+      "Version": "oval:org.altlinux.errata:def:20213619",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3619: package `python3-module-django` update to version 2.2.25-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3619",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3619",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05162",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05162",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05215",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05215",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05245",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05245",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05276",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05276",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-28658",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28658",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31542",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31542",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32052",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32052",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33203",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33203",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33571",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33571",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44420",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44420",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-django to version 2.2.25-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05162: Уязвимость функций URLValidator, validate_ipv4_address, validate_ipv46_address программной платформы для веб-приложений Django, связанная с недостаточной проверкой поступающих запросов, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-05215: Уязвимость компонентов MultiPartParser, UploadedFile, FieldFile программной платформы для веб-приложений Django, связанная с отсутствием ограничений на загрузку файлов, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-05245: Уязвимость функции TemplateDetailView компонента django/contrib/admindocs программной платформы для веб-приложений Django, связанная с недостатками ограничения имени пути к каталогу, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-05276: Уязвимость компонента MultiPartParser программной платформы для веб-приложений Django, связанная с недостатками ограничения имени пути к каталогу, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2021-28658: In Django 2.2 before 2.2.20, 3.0 before 3.0.14, and 3.1 before 3.1.8, MultiPartParser allowed directory traversal via uploaded files with suitably crafted file names. Built-in upload handlers were not affected by this vulnerability.\n\n * CVE-2021-31542: In Django 2.2 before 2.2.21, 3.1 before 3.1.9, and 3.2 before 3.2.1, MultiPartParser, UploadedFile, and FieldFile allowed directory traversal via uploaded files with suitably crafted file names.\n\n * CVE-2021-32052: In Django 2.2 before 2.2.22, 3.1 before 3.1.10, and 3.2 before 3.2.2 (with Python 3.9.5+), URLValidator does not prohibit newlines and tabs (unless the URLField form field is used). If an application uses values with newlines in an HTTP response, header injection can occur. Django itself is unaffected because HttpResponse prohibits newlines in HTTP headers.\n\n * CVE-2021-33203: Django before 2.2.24, 3.x before 3.1.12, and 3.2.x before 3.2.4 has a potential directory traversal via django.contrib.admindocs. Staff members could use the TemplateDetailView view to check the existence of arbitrary files. Additionally, if (and only if) the default admindocs templates have been customized by application developers to also show file contents, then not only the existence but also the file contents would have been exposed. In other words, there is directory traversal outside of the template root directories.\n\n * CVE-2021-33571: In Django 2.2 before 2.2.24, 3.x before 3.1.12, and 3.2 before 3.2.4, URLValidator, validate_ipv4_address, and validate_ipv46_address do not prohibit leading zero characters in octal literals. This may allow a bypass of access control that is based on IP addresses. (validate_ipv4_address and validate_ipv46_address are unaffected with Python 3.9.5+..) .\n\n * CVE-2021-44420: In Django 2.2 before 2.2.25, 3.1 before 3.1.14, and 3.2 before 3.2.10, HTTP requests for URLs with trailing newlines could bypass upstream access control based on URL paths.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-24"
+          },
+          "Updated": {
+            "Date": "2021-12-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2021-05162",
+              "Impact": "High",
+              "Public": "20210525",
+              "CveID": "BDU:2021-05162"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-434",
+              "Href": "https://bdu.fstec.ru/vul/2021-05215",
+              "Impact": "High",
+              "Public": "20210504",
+              "CveID": "BDU:2021-05215"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2021-05245",
+              "Impact": "Low",
+              "Public": "20210519",
+              "CveID": "BDU:2021-05245"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2021-05276",
+              "Impact": "Low",
+              "Public": "20210401",
+              "CveID": "BDU:2021-05276"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28658",
+              "Impact": "Low",
+              "Public": "20210406",
+              "CveID": "CVE-2021-28658"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31542",
+              "Impact": "High",
+              "Public": "20210505",
+              "CveID": "CVE-2021-31542"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32052",
+              "Impact": "Low",
+              "Public": "20210506",
+              "CveID": "CVE-2021-32052"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33203",
+              "Impact": "Low",
+              "Public": "20210608",
+              "CveID": "CVE-2021-33203"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33571",
+              "Impact": "High",
+              "Public": "20210608",
+              "CveID": "CVE-2021-33571"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44420",
+              "Impact": "High",
+              "Public": "20211208",
+              "CveID": "CVE-2021-44420"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213619001",
+                "Comment": "python3-module-django is earlier than 0:2.2.25-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213619002",
+                "Comment": "python3-module-django-dbbackend-mysql is earlier than 0:2.2.25-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213619003",
+                "Comment": "python3-module-django-dbbackend-psycopg2 is earlier than 0:2.2.25-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213619004",
+                "Comment": "python3-module-django-dbbackend-sqlite3 is earlier than 0:2.2.25-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213619005",
+                "Comment": "python3-module-django-doc is earlier than 0:2.2.25-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

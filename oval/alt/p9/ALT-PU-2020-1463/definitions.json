@@ -1,0 +1,164 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201463",
+      "Version": "oval:org.altlinux.errata:def:20201463",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1463: package `pve-qemu` update to version 4.1.1-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1463",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1463",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04502",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04502",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00071",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00071",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20382",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20382",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8608",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8608",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pve-qemu to version 4.1.1-alt4. \nSecurity Fix(es):\n\n * BDU:2020-04502: Уязвимость компонента tcp_subr.c библиотеки TCP-IP эмулятора Libslirp, связанная с недостатком механизма проверки размера копируемых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании]\n\n * BDU:2021-00071: Уязвимость функции zrle_compress_data программного обеспечения для эмуляции аппаратного обеспечения различных платформ QEMU, связанная с неправильным освобождением памяти перед удалением последней ссылки, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-20382: QEMU 4.1.0 has a memory leak in zrle_compress_data in ui/vnc-enc-zrle.c during a VNC disconnect operation because libz is misused, resulting in a situation where memory allocated in deflateInit2 is not freed in deflateEnd.\n\n * CVE-2020-8608: In libslirp 4.1.0, as used in QEMU 4.2.0, tcp_subr.c misuses snprintf return values, leading to a buffer overflow in later code.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-12"
+          },
+          "Updated": {
+            "Date": "2020-03-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2020-04502",
+              "Impact": "Low",
+              "Public": "20200206",
+              "CveID": "BDU:2020-04502"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2021-00071",
+              "Impact": "Low",
+              "Public": "20200305",
+              "CveID": "BDU:2021-00071"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20382",
+              "Impact": "Low",
+              "Public": "20200305",
+              "CveID": "CVE-2019-20382"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8608",
+              "Impact": "Low",
+              "Public": "20200206",
+              "CveID": "CVE-2020-8608"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201463001",
+                "Comment": "pve-qemu-aux is earlier than 1:4.1.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201463002",
+                "Comment": "pve-qemu-common is earlier than 1:4.1.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201463003",
+                "Comment": "pve-qemu-img is earlier than 1:4.1.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201463004",
+                "Comment": "pve-qemu-system is earlier than 1:4.1.1-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

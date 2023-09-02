@@ -1,0 +1,120 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232077",
+      "Version": "oval:org.altlinux.errata:def:20232077",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2077: package `sysstat` update to version 12.7.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2077",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2077",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-33204",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33204",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sysstat to version 12.7.4-alt1. \nSecurity Fix(es):\n\n * CVE-2023-33204: sysstat through 12.7.2 allows a multiplication integer overflow in check_overflow in common.c. NOTE: this issue exists because of an incomplete fix for CVE-2022-39377.\n\n * #44518: Ошибка при отображении графика Memory Statistics в isag.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-27"
+          },
+          "Updated": {
+            "Date": "2023-06-27"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33204",
+              "Impact": "High",
+              "Public": "20230518",
+              "CveID": "CVE-2023-33204"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44518",
+              "Href": "https://bugzilla.altlinux.org/44518",
+              "Data": "Ошибка при отображении графика Memory Statistics в isag."
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232077001",
+                "Comment": "sysstat is earlier than 0:12.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232077002",
+                "Comment": "sysstat-isag is earlier than 0:12.7.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

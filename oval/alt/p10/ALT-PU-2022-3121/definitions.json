@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223121",
+      "Version": "oval:org.altlinux.errata:def:20223121",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3121: package `plasma5-discover` update to version 5.25.5-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3121",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3121",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades plasma5-discover to version 5.25.5-alt5. \nSecurity Fix(es):\n\n * #43782: нет автостарта компонента, отвечающего за уведомления от plasma discover",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-18"
+          },
+          "Updated": {
+            "Date": "2022-11-18"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43782",
+              "Href": "https://bugzilla.altlinux.org/43782",
+              "Data": "нет автостарта компонента, отвечающего за уведомления от plasma discover"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121001",
+                "Comment": "libdiscovercommon0 is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121002",
+                "Comment": "libdiscovernotifiers0 is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121003",
+                "Comment": "plasma5-discover is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121004",
+                "Comment": "plasma5-discover-common is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121005",
+                "Comment": "plasma5-discover-core is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121006",
+                "Comment": "plasma5-discover-flatpak is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121007",
+                "Comment": "plasma5-discover-fwupd is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121008",
+                "Comment": "plasma5-discover-kns is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121009",
+                "Comment": "plasma5-discover-maxi is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121010",
+                "Comment": "plasma5-discover-packagekit is earlier than 0:5.25.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223121011",
+                "Comment": "plasma5-discover-snap is earlier than 0:5.25.5-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

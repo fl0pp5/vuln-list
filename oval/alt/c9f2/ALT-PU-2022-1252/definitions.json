@@ -1,0 +1,164 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221252",
+      "Version": "oval:org.altlinux.errata:def:20221252",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1252: package `podman` update to version 3.4.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1252",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1252",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-14370",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14370",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20199",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20199",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20291",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20291",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3602",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3602",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4024",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4024",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41190",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41190",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades podman to version 3.4.3-alt2. \nSecurity Fix(es):\n\n * CVE-2020-14370: An information disclosure vulnerability was found in containers/podman in versions before 2.0.5. When using the deprecated Varlink API or the Docker-compatible REST API, if multiple containers are created in a short duration, the environment variables from the first container will get leaked into subsequent containers. An attacker who has control over the subsequent containers could use this flaw to gain access to sensitive information stored in such variables.\n\n * CVE-2021-20199: Rootless containers run with Podman, receive all traffic with a source IP address of 127.0.0.1 (including from remote hosts). This impacts containerized applications that trust localhost (127.0.01) connections by default and do not require authentication. This issue affects Podman 1.8.0 onwards.\n\n * CVE-2021-20291: A deadlock vulnerability was found in 'github.com/containers/storage' in versions before 1.28.1. When a container image is processed, each layer is unpacked using `tar`. If one of those layers is not a valid `tar` archive this causes an error leading to an unexpected situation where the code indefinitely waits for the tar unpacked stream, which never finishes. An attacker could use this vulnerability to craft a malicious image, which when downloaded and stored by an application using containers/storage, would then cause a deadlock leading to a Denial of Service (DoS).\n\n * CVE-2021-3602: An information disclosure flaw was found in Buildah, when building containers using chroot isolation. Running processes in container builds (e.g. Dockerfile RUN commands) can access environment variables from parent and grandparent processes. When run in a container in a CI/CD environment, environment variables may include sensitive information that was shared with the container in order to be used only by Buildah itself (e.g. container registry credentials).\n\n * CVE-2021-4024: A flaw was found in podman. The `podman machine` function (used to create and manage Podman virtual machine containing a Podman process) spawns a `gvproxy` process on the host system. The `gvproxy` API is accessible on port 7777 on all IP addresses on the host. If that port is open on the host's firewall, an attacker can potentially use the `gvproxy` API to forward ports on the host to ports in the VM, making private services on the VM accessible to the network. This issue could be also used to interrupt the host's services by forwarding all ports to the VM.\n\n * CVE-2021-41190: The OCI Distribution Spec project defines an API protocol to facilitate and standardize the distribution of content. In the OCI Distribution Specification version 1.0.0 and prior, the Content-Type header alone was used to determine the type of document during push and pull operations. Documents that contain both “manifests” and “layers” fields could be interpreted as either a manifest or an index in the absence of an accompanying Content-Type header. If a Content-Type header changed between two pulls of the same digest, a client may interpret the resulting content differently. The OCI Distribution Specification has been updated to require that a mediaType value present in a manifest or index match the Content-Type header used during the push and pull operations. Clients pulling from a registry may distrust the Content-Type header and reject an ambiguous document that contains both “manifests” and “layers” fields or “manifests” and “config” fields if they are unable to update to version 1.0.1 of the spec.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-212",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14370",
+              "Impact": "Low",
+              "Public": "20200923",
+              "CveID": "CVE-2020-14370"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-346",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20199",
+              "Impact": "Low",
+              "Public": "20210202",
+              "CveID": "CVE-2021-20199"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20291",
+              "Impact": "Low",
+              "Public": "20210401",
+              "CveID": "CVE-2021-20291"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-212",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3602",
+              "Impact": "Low",
+              "Public": "20220303",
+              "CveID": "CVE-2021-3602"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4024",
+              "Impact": "Low",
+              "Public": "20211223",
+              "CveID": "CVE-2021-4024"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41190",
+              "Impact": "Low",
+              "Public": "20211117",
+              "CveID": "CVE-2021-41190"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221252001",
+                "Comment": "podman is earlier than 0:3.4.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221252002",
+                "Comment": "podman-docker is earlier than 0:3.4.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221252003",
+                "Comment": "podman-remote is earlier than 0:3.4.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

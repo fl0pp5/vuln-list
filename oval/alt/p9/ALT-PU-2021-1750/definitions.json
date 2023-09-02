@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211750",
+      "Version": "oval:org.altlinux.errata:def:20211750",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1750: package `pentaho-libxml` update to version 1.1.3-alt1_28jpp8",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1750",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1750",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades pentaho-libxml to version 1.1.3-alt1_28jpp8. \nSecurity Fix(es):\n\n * #40000: Насильно тащит java",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-29"
+          },
+          "Updated": {
+            "Date": "2021-04-29"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40000",
+              "Href": "https://bugzilla.altlinux.org/40000",
+              "Data": "Насильно тащит java"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211750001",
+                "Comment": "pentaho-libxml is earlier than 0:1.1.3-alt1_28jpp8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211750002",
+                "Comment": "pentaho-libxml-javadoc is earlier than 0:1.1.3-alt1_28jpp8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

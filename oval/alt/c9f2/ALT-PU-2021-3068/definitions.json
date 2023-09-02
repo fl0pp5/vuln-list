@@ -1,0 +1,288 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213068",
+      "Version": "oval:org.altlinux.errata:def:20213068",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3068: package `ruby` update to version 2.5.9-alt1.c9f2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3068",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3068",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00835",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00835",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00863",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00863",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00865",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00865",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00866",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00866",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04073",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04073",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01472",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01472",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-15845",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15845",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16201",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16201",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16254",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16254",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16255",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16255",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25613",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25613",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-5247",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-5247",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ruby to version 2.5.9-alt1.c9f2. \nSecurity Fix(es):\n\n * BDU:2020-00835: Уязвимость реализации метода интерпретатора языка программирования Ruby, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2020-00863: Уязвимость метода File.fnmatch интерпретатора языка программирования Ruby, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2020-00865: Уязвимость реализации класса WEBrick::HTTPAuth::DigestAuth библиотеки WEBrick интерпретатора языка программирования Ruby, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00866: Уязвимость библиотеки WEBrick интерпретатора языка программирования Ruby, позволяющая нарушителю осуществить межсайтовые сценарные атаки\n\n * BDU:2020-04073: Уязвимость HTTP-сервера для Ruby/Rack приложений Puma, связанная с некорректной нейтрализацией символов CR, LF, /r и /n перед внесением данных в HTTP-заголовки, позволяющая нарушителю осуществлять межсайтовые сценарные атаки\n\n * BDU:2021-01472: Уязвимость библиотеки WEBrick языка программирования Ruby, связанная с некорректной проверкой значения заголовка, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2019-15845: Ruby through 2.4.7, 2.5.x through 2.5.6, and 2.6.x through 2.6.4 mishandles path checking within File.fnmatch functions.\n\n * CVE-2019-16201: WEBrick::HTTPAuth::DigestAuth in Ruby through 2.4.7, 2.5.x through 2.5.6, and 2.6.x through 2.6.4 has a regular expression Denial of Service cause by looping/backtracking. A victim must expose a WEBrick server that uses DigestAuth to the Internet or a untrusted network.\n\n * CVE-2019-16254: Ruby through 2.4.7, 2.5.x through 2.5.6, and 2.6.x through 2.6.4 allows HTTP Response Splitting. If a program using WEBrick inserts untrusted input into the response header, an attacker can exploit it to insert a newline character to split a header, and inject malicious content to deceive clients. NOTE: this issue exists because of an incomplete fix for CVE-2017-17742, which addressed the CRLF vector, but did not address an isolated CR or an isolated LF.\n\n * CVE-2019-16255: Ruby through 2.4.7, 2.5.x through 2.5.6, and 2.6.x through 2.6.4 allows code injection if the first argument (aka the \"command\" argument) to Shell#[] or Shell#test in lib/shell.rb is untrusted data. An attacker can exploit this to call an arbitrary Ruby method.\n\n * CVE-2020-25613: An issue was discovered in Ruby through 2.5.8, 2.6.x through 2.6.6, and 2.7.x through 2.7.1. WEBrick, a simple HTTP server bundled with Ruby, had not checked the transfer-encoding header value rigorously. An attacker may potentially exploit this issue to bypass a reverse proxy (which also has a poor header check), which may lead to an HTTP Request Smuggling attack.\n\n * CVE-2020-5247: In Puma (RubyGem) before 4.3.2 and before 3.12.3, if an application using Puma allows untrusted input in a response header, an attacker can use newline characters (i.e. `CR`, `LF` or`/r`, `/n`) to end the header and inject malicious content, such as additional headers or an entirely new response body. This vulnerability is known as HTTP Response Splitting. While not an attack in itself, response splitting is a vector for several other attacks, such as cross-site scripting (XSS). This is related to CVE-2019-16254, which fixed this vulnerability for the WEBrick Ruby web server. This has been fixed in versions 4.3.2 and 3.12.3 by checking all headers for line endings and rejecting headers with those characters.\n\n * #39292: Обновить",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-19"
+          },
+          "Updated": {
+            "Date": "2021-10-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2020-00835",
+              "Impact": "Critical",
+              "Public": "20190727",
+              "CveID": "BDU:2020-00835"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-41, CWE-74, CWE-626",
+              "Href": "https://bdu.fstec.ru/vul/2020-00863",
+              "Impact": "Low",
+              "Public": "20191001",
+              "CveID": "BDU:2020-00863"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2020-00865",
+              "Impact": "High",
+              "Public": "20190727",
+              "CveID": "BDU:2020-00865"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2020-00866",
+              "Impact": "Low",
+              "Public": "20190727",
+              "CveID": "BDU:2020-00866"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-74, CWE-113",
+              "Href": "https://bdu.fstec.ru/vul/2020-04073",
+              "Impact": "Low",
+              "Public": "20200227",
+              "CveID": "BDU:2020-04073"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2021-01472",
+              "Impact": "High",
+              "Public": "20201014",
+              "CveID": "BDU:2021-01472"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15845",
+              "Impact": "Low",
+              "Public": "20191126",
+              "CveID": "CVE-2019-15845"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16201",
+              "Impact": "High",
+              "Public": "20191126",
+              "CveID": "CVE-2019-16201"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16254",
+              "Impact": "Low",
+              "Public": "20191126",
+              "CveID": "CVE-2019-16254"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16255",
+              "Impact": "High",
+              "Public": "20191126",
+              "CveID": "CVE-2019-16255"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25613",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25613"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-113",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-5247",
+              "Impact": "High",
+              "Public": "20200228",
+              "CveID": "CVE-2020-5247"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39292",
+              "Href": "https://bugzilla.altlinux.org/39292",
+              "Data": "Обновить"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068001",
+                "Comment": "erb is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068002",
+                "Comment": "gem is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068003",
+                "Comment": "irb is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068004",
+                "Comment": "libruby is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068005",
+                "Comment": "libruby-devel is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068006",
+                "Comment": "libruby-devel-static is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068007",
+                "Comment": "ri-doc is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068008",
+                "Comment": "ruby is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068009",
+                "Comment": "ruby-doc is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068010",
+                "Comment": "ruby-miniruby-src is earlier than 0:2.5.9-alt1.c9f2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213068011",
+                "Comment": "ruby-stdlibs is earlier than 0:2.5.9-alt1.c9f2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

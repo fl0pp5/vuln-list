@@ -1,0 +1,82 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212473",
+      "Version": "oval:org.altlinux.errata:def:20212473",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2473: package `packageinstall` update to version 1.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2473",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2473",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades packageinstall to version 1.4-alt1. \nSecurity Fix(es):\n\n * #40479: Некорректно отрисовывается прогресс операции packageinstall\n\n * #40511: Неточности в README.md для packageinstall",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-09"
+          },
+          "Updated": {
+            "Date": "2021-08-09"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40479",
+              "Href": "https://bugzilla.altlinux.org/40479",
+              "Data": "Некорректно отрисовывается прогресс операции packageinstall"
+            },
+            {
+              "Id": "40511",
+              "Href": "https://bugzilla.altlinux.org/40511",
+              "Data": "Неточности в README.md для packageinstall"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212473001",
+                "Comment": "packageinstall is earlier than 0:1.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

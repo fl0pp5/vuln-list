@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232096",
+      "Version": "oval:org.altlinux.errata:def:20232096",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2096: package `appinstall` update to version 1.4.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2096",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2096",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades appinstall to version 1.4.3-alt1. \nSecurity Fix(es):\n\n * #41897: Установил Zoom вместо ONLYOFFICE\n\n * #41900: Нет белого списка\n\n * #42802: Не сохраняется список установленных приложений в App Install.\n\n * #42812: Некорректно отображаются установленные программы в App Install.\n\n * #43747: Долго запускается на системах с KDE\n\n * #46564: Описание от другого пакета",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-28"
+          },
+          "Updated": {
+            "Date": "2023-06-28"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41897",
+              "Href": "https://bugzilla.altlinux.org/41897",
+              "Data": "Установил Zoom вместо ONLYOFFICE"
+            },
+            {
+              "Id": "41900",
+              "Href": "https://bugzilla.altlinux.org/41900",
+              "Data": "Нет белого списка"
+            },
+            {
+              "Id": "42802",
+              "Href": "https://bugzilla.altlinux.org/42802",
+              "Data": "Не сохраняется список установленных приложений в App Install."
+            },
+            {
+              "Id": "42812",
+              "Href": "https://bugzilla.altlinux.org/42812",
+              "Data": "Некорректно отображаются установленные программы в App Install."
+            },
+            {
+              "Id": "43747",
+              "Href": "https://bugzilla.altlinux.org/43747",
+              "Data": "Долго запускается на системах с KDE"
+            },
+            {
+              "Id": "46564",
+              "Href": "https://bugzilla.altlinux.org/46564",
+              "Data": "Описание от другого пакета"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232096001",
+                "Comment": "appinstall is earlier than 0:1.4.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221775",
+      "Version": "oval:org.altlinux.errata:def:20221775",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1775: package `composer` update to version 2.2.12-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1775",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1775",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05213",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02944",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02944",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-29472",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29472",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41116",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41116",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24828",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24828",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades composer to version 2.2.12-alt2. \nSecurity Fix(es):\n\n * BDU:2021-05213: Уязвимость компонента HgDriver менеджера зависимостей для PHP Composer, связанная с внедрением или модификацией аргумента, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-02944: Уязвимость реализации метода VcsDriver::getFileContent() менеджера зависимостей для PHP Composer, позволяющая нарушителю выполнить произвольные команды\n\n * CVE-2021-29472: Composer is a dependency manager for PHP. URLs for Mercurial repositories in the root composer.json and package source download URLs are not sanitized correctly. Specifically crafted URL values allow code to be executed in the HgDriver if hg/Mercurial is installed on the system. The impact to Composer users directly is limited as the composer.json file is typically under their own control and source download URLs can only be supplied by third party Composer repositories they explicitly trust to download and execute source code from, e.g. Composer plugins. The main impact is to services passing user input to Composer, including Packagist.org and Private Packagist. This allowed users to trigger remote code execution. The vulnerability has been patched on Packagist.org and Private Packagist within 12h of receiving the initial vulnerability report and based on a review of logs, to the best of our knowledge, was not abused by anyone. Other services/tools using VcsRepository/VcsDriver or derivatives may also be vulnerable and should upgrade their composer/composer dependency immediately. Versions 1.10.22 and 2.0.13 include patches for this issue.\n\n * CVE-2021-41116: Composer is an open source dependency manager for the PHP language. In affected versions windows users running Composer to install untrusted dependencies are subject to command injection and should upgrade their composer version. Other OSs and WSL are not affected. The issue has been resolved in composer versions 1.10.23 and 2.1.9. There are no workarounds for this issue.\n\n * CVE-2022-24828: Composer is a dependency manager for the PHP programming language. Integrators using Composer code to call `VcsDriver::getFileContent` can have a code injection vulnerability if the user can control the `$file` or `$identifier` argument. This leads to a vulnerability on packagist.org for example where the composer.json's `readme` field can be used as a vector for injecting parameters into hg/Mercurial via the `$file` argument, or git via the `$identifier` argument if you allow arbitrary data there (Packagist does not, but maybe other integrators do). Composer itself should not be affected by the vulnerability as it does not call `getFileContent` with arbitrary data into `$file`/`$identifier`. To the best of our knowledge this was not abused, and the vulnerability has been patched on packagist.org and Private Packagist within a day of the vulnerability report.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-27"
+          },
+          "Updated": {
+            "Date": "2022-04-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://bdu.fstec.ru/vul/2021-05213",
+              "Impact": "High",
+              "Public": "20210330",
+              "CveID": "BDU:2021-05213"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-94, CWE-141",
+              "Href": "https://bdu.fstec.ru/vul/2022-02944",
+              "Impact": "High",
+              "Public": "20220413",
+              "CveID": "BDU:2022-02944"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29472",
+              "Impact": "High",
+              "Public": "20210427",
+              "CveID": "CVE-2021-29472"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41116",
+              "Impact": "Critical",
+              "Public": "20211005",
+              "CveID": "CVE-2021-41116"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24828",
+              "Impact": "High",
+              "Public": "20220413",
+              "CveID": "CVE-2022-24828"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221775001",
+                "Comment": "composer is earlier than 0:2.2.12-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

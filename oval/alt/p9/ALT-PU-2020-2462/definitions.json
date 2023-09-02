@@ -1,0 +1,144 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202462",
+      "Version": "oval:org.altlinux.errata:def:20202462",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2462: package `kubernetes` update to version 1.18.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2462",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2462",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-8557",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8557",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8559",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8559",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kubernetes to version 1.18.6-alt1. \nSecurity Fix(es):\n\n * CVE-2020-8557: The Kubernetes kubelet component in versions 1.1-1.16.12, 1.17.0-1.17.8 and 1.18.0-1.18.5 do not account for disk usage by a pod which writes to its own /etc/hosts file. The /etc/hosts file mounted in a pod by kubelet is not included by the kubelet eviction manager when calculating ephemeral storage usage by a pod. If a pod writes a large amount of data to the /etc/hosts file, it could fill the storage space of the node and cause the node to fail.\n\n * CVE-2020-8559: The Kubernetes kube-apiserver in versions v1.6-v1.15, and versions prior to v1.16.13, v1.17.9 and v1.18.6 are vulnerable to an unvalidated redirect on proxied upgrade requests that could allow an attacker to escalate privileges from a node compromise to a full cluster compromise.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-28"
+          },
+          "Updated": {
+            "Date": "2020-07-28"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8557",
+              "Impact": "Low",
+              "Public": "20200723",
+              "CveID": "CVE-2020-8557"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8559",
+              "Impact": "Low",
+              "Public": "20200722",
+              "CveID": "CVE-2020-8559"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462001",
+                "Comment": "kubernetes-client is earlier than 0:1.18.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462002",
+                "Comment": "kubernetes-common is earlier than 0:1.18.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462003",
+                "Comment": "kubernetes-kubeadm is earlier than 0:1.18.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462004",
+                "Comment": "kubernetes-kubelet is earlier than 0:1.18.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462005",
+                "Comment": "kubernetes-master is earlier than 0:1.18.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202462006",
+                "Comment": "kubernetes-node is earlier than 0:1.18.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

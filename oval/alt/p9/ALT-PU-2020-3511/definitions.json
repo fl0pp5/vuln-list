@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203511",
+      "Version": "oval:org.altlinux.errata:def:20203511",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3511: package `httpie` update to version 2.3.0-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3511",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3511",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-10751",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10751",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades httpie to version 2.3.0-alt3. \nSecurity Fix(es):\n\n * CVE-2019-10751: All versions of the HTTPie package prior to version 1.0.3 are vulnerable to Open Redirect that allows an attacker to write an arbitrary file with supplied filename and content to the current directory, by redirecting a request from HTTP to a crafted URL pointing to a server in his or hers control.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-15"
+          },
+          "Updated": {
+            "Date": "2020-12-15"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10751",
+              "Impact": "High",
+              "Public": "20190823",
+              "CveID": "CVE-2019-10751"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203511001",
+                "Comment": "httpie is earlier than 0:2.3.0-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

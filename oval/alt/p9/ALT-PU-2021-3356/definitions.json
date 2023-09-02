@@ -1,0 +1,158 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213356",
+      "Version": "oval:org.altlinux.errata:def:20213356",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3356: package `lighttpd` update to version 1.4.61-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3356",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3356",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-30780",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30780",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades lighttpd to version 1.4.61-alt1. \nSecurity Fix(es):\n\n * CVE-2022-30780: Lighttpd 1.4.56 through 1.4.58 allows a remote attacker to cause a denial of service (CPU consumption from stuck connections) because connection_read_header_more in connections.c has a typo that disrupts use of multiple read operations on large headers.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-24"
+          },
+          "Updated": {
+            "Date": "2021-11-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30780",
+              "Impact": "High",
+              "Public": "20220611",
+              "CveID": "CVE-2022-30780"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356001",
+                "Comment": "lighttpd is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356002",
+                "Comment": "lighttpd-auth-gssapi is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356003",
+                "Comment": "lighttpd-auth-ldap is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356004",
+                "Comment": "lighttpd-auth-mysql is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356005",
+                "Comment": "lighttpd-cml is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356006",
+                "Comment": "lighttpd-doc is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356007",
+                "Comment": "lighttpd-geoip is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356008",
+                "Comment": "lighttpd-ldap-vhost is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356009",
+                "Comment": "lighttpd-maxminddb is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356010",
+                "Comment": "lighttpd-mysql-vhost is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356011",
+                "Comment": "lighttpd-pgsql-vhost is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356012",
+                "Comment": "lighttpd-rrdtool is earlier than 0:1.4.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213356013",
+                "Comment": "lighttpd-trigger_b4_dl is earlier than 0:1.4.61-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

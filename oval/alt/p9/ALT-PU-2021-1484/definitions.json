@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211484",
+      "Version": "oval:org.altlinux.errata:def:20211484",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1484: package `nut` update to version 2.7.4-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1484",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1484",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades nut to version 2.7.4-alt4. \nSecurity Fix(es):\n\n * #39720: при установке пакета Nut не ставится (отсутствует) графическая утилита управления ИБП",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-15"
+          },
+          "Updated": {
+            "Date": "2021-03-15"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39720",
+              "Href": "https://bugzilla.altlinux.org/39720",
+              "Data": "при установке пакета Nut не ставится (отсутствует) графическая утилита управления ИБП"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484001",
+                "Comment": "libnutclient is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484002",
+                "Comment": "libnutscan is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484003",
+                "Comment": "libupsclient is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484004",
+                "Comment": "libupsclient-devel is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484005",
+                "Comment": "nut is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484006",
+                "Comment": "nut-cgi is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484007",
+                "Comment": "nut-client is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484008",
+                "Comment": "nut-driver-ipmi is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484009",
+                "Comment": "nut-driver-snmp is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484010",
+                "Comment": "nut-server is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484011",
+                "Comment": "python-module-nut is earlier than 0:2.7.4-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211484012",
+                "Comment": "python3-module-nut is earlier than 0:2.7.4-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

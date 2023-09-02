@@ -1,0 +1,336 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211176",
+      "Version": "oval:org.altlinux.errata:def:20211176",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1176: package `dpdk` update to version 19.11.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1176",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1176",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03905",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03905",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03944",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03944",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03962",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03962",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00722",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00722",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00723",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00723",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-10722",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10722",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10723",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10723",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10724",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10724",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10725",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10726",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10726",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14374",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14374",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14375",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14375",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14376",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14376",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14377",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14377",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14378",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14378",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2132",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2132",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dpdk to version 19.11.5-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03905: Уязвимость набора библиотек и драйверов для быстрой обработки пакетов dpdk, связанная с целочисленным переполнением значения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-03944: Уязвимость функции vhost_user_set_log_base набора библиотек и драйверов для быстрой обработки пакетов dpdk, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-03962: Уязвимость модуля vhost-crypto набора библиотек и драйверов для быстрой обработки пакетов dpdk, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-00722: Уязвимость модуля vhost-user набора библиотек и драйверов для быстрой обработки пакетов dpdk, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-00723: Уязвимость функции virtio_dev_rx_batch_packed набора библиотек и драйверов для быстрой обработки пакетов dpdk, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-10722: A vulnerability was found in DPDK versions 18.05 and above. A missing check for an integer overflow in vhost_user_set_log_base() could result in a smaller memory map than requested, possibly allowing memory corruption.\n\n * CVE-2020-10723: A memory corruption issue was found in DPDK versions 17.05 and above. This flaw is caused by an integer truncation on the index of a payload. Under certain circumstances, the index (a UInt) is copied and truncated into a uint16, which can lead to out of bound indexing and possible memory corruption.\n\n * CVE-2020-10724: A vulnerability was found in DPDK versions 18.11 and above. The vhost-crypto library code is missing validations for user-supplied values, potentially allowing an information leak through an out-of-bounds memory read.\n\n * CVE-2020-10725: A flaw was found in DPDK version 19.11 and above that allows a malicious guest to cause a segmentation fault of the vhost-user backend application running on the host, which could result in a loss of connectivity for the other guests running on that host. This is caused by a missing validity check of the descriptor address in the function `virtio_dev_rx_batch_packed()`.\n\n * CVE-2020-10726: A vulnerability was found in DPDK versions 19.11 and above. A malicious container that has direct access to the vhost-user socket can keep sending VHOST_USER_GET_INFLIGHT_FD messages, causing a resource leak (file descriptors and virtual memory), which may result in a denial of service.\n\n * CVE-2020-14374: A flaw was found in dpdk in versions before 18.11.10 and before 19.11.5. A flawed bounds checking in the copy_data function leads to a buffer overflow allowing an attacker in a virtual machine to write arbitrary data to any address in the vhost_crypto application. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-14375: A flaw was found in dpdk in versions before 18.11.10 and before 19.11.5. Virtio ring descriptors, and the data they describe are in a region of memory accessible by from both the virtual machine and the host. An attacker in a VM can change the contents of the memory after vhost_crypto has validated it. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-14376: A flaw was found in dpdk in versions before 18.11.10 and before 19.11.5. A lack of bounds checking when copying iv_data from the VM guest memory into host memory can lead to a large buffer overflow. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-14377: A flaw was found in dpdk in versions before 18.11.10 and before 19.11.5. A complete lack of validation of attacker-controlled parameters can lead to a buffer over read. The results of the over read are then written back to the guest virtual machine memory. This vulnerability can be used by an attacker in a virtual machine to read significant amounts of host memory. The highest threat from this vulnerability is to data confidentiality and system availability.\n\n * CVE-2020-14378: An integer underflow in dpdk versions before 18.11.10 and before 19.11.5 in the `move_desc` function can lead to large amounts of CPU cycles being eaten up in a long running loop. An attacker could cause `move_desc` to get stuck in a 4,294,967,295-count iteration loop. Depending on how `vhost_crypto` is being used this could prevent other VMs or network tasks from being serviced by the busy DPDK lcore for an extended period.\n\n * CVE-2022-2132: A permissive list of allowed inputs flaw was found in DPDK. This issue allows a remote attacker to cause a denial of service triggered by sending a crafted Vhost header to DPDK.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-28"
+          },
+          "Updated": {
+            "Date": "2021-01-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-03905",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "BDU:2020-03905"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-03944",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "BDU:2020-03944"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-03962",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "BDU:2020-03962"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-00722",
+              "Impact": "Low",
+              "Public": "20200520",
+              "CveID": "BDU:2021-00722"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://bdu.fstec.ru/vul/2021-00723",
+              "Impact": "High",
+              "Public": "20200520",
+              "CveID": "BDU:2021-00723"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10722",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "CVE-2020-10722"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10723",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "CVE-2020-10723"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10724",
+              "Impact": "Low",
+              "Public": "20200519",
+              "CveID": "CVE-2020-10724"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10725",
+              "Impact": "High",
+              "Public": "20200520",
+              "CveID": "CVE-2020-10725"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10726",
+              "Impact": "Low",
+              "Public": "20200520",
+              "CveID": "CVE-2020-10726"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14374",
+              "Impact": "High",
+              "Public": "20200930",
+              "CveID": "CVE-2020-14374"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14375",
+              "Impact": "High",
+              "Public": "20200930",
+              "CveID": "CVE-2020-14375"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14376",
+              "Impact": "High",
+              "Public": "20200930",
+              "CveID": "CVE-2020-14376"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14377",
+              "Impact": "High",
+              "Public": "20200930",
+              "CveID": "CVE-2020-14377"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-191",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14378",
+              "Impact": "Low",
+              "Public": "20200930",
+              "CveID": "CVE-2020-14378"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2132",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-2132"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211176001",
+                "Comment": "dpdk is earlier than 0:19.11.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211176002",
+                "Comment": "dpdk-devel is earlier than 0:19.11.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211176003",
+                "Comment": "dpdk-examples is earlier than 0:19.11.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211176004",
+                "Comment": "dpdk-tools is earlier than 0:19.11.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211176005",
+                "Comment": "libdpdk is earlier than 0:19.11.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

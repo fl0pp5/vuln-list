@@ -1,0 +1,288 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211498",
+      "Version": "oval:org.altlinux.errata:def:20211498",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1498: package `qt4` update to version 4.8.7-alt22",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1498",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1498",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03630",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03630",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-17507",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17507",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt4 to version 4.8.7-alt22. \nSecurity Fix(es):\n\n * BDU:2021-03630: Уязвимость функции read_xbm_body кроссплатформенной IDE Qt, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-17507: An issue was discovered in Qt through 5.12.9, and 5.13.x through 5.15.x before 5.15.1. read_xbm_body in gui/image/qxbmhandler.cpp has a buffer over-read.\n\n * #37986: Пересобрать libqt4 без sqlite",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-16"
+          },
+          "Updated": {
+            "Date": "2021-03-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03630",
+              "Impact": "Low",
+              "Public": "20200815",
+              "CveID": "BDU:2021-03630"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17507",
+              "Impact": "Low",
+              "Public": "20200812",
+              "CveID": "CVE-2020-17507"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37986",
+              "Href": "https://bugzilla.altlinux.org/37986",
+              "Data": "Пересобрать libqt4 без sqlite"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498001",
+                "Comment": "libqt4 is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498002",
+                "Comment": "libqt4-clucene is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498003",
+                "Comment": "libqt4-core is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498004",
+                "Comment": "libqt4-dbus is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498005",
+                "Comment": "libqt4-declarative is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498006",
+                "Comment": "libqt4-designer is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498007",
+                "Comment": "libqt4-devel is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498008",
+                "Comment": "libqt4-gui is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498009",
+                "Comment": "libqt4-help is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498010",
+                "Comment": "libqt4-multimedia is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498011",
+                "Comment": "libqt4-network is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498012",
+                "Comment": "libqt4-opengl is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498013",
+                "Comment": "libqt4-qt3support is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498014",
+                "Comment": "libqt4-script is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498015",
+                "Comment": "libqt4-scripttools is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498016",
+                "Comment": "libqt4-sql is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498017",
+                "Comment": "libqt4-sql-interbase is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498018",
+                "Comment": "libqt4-sql-mysql is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498019",
+                "Comment": "libqt4-sql-odbc is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498020",
+                "Comment": "libqt4-sql-postgresql is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498021",
+                "Comment": "libqt4-sql-sqlite is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498022",
+                "Comment": "libqt4-svg is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498023",
+                "Comment": "libqt4-test is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498024",
+                "Comment": "libqt4-uitools is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498025",
+                "Comment": "libqt4-xml is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498026",
+                "Comment": "libqt4-xmlpatterns is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498027",
+                "Comment": "qt4 is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498028",
+                "Comment": "qt4-assistant is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498029",
+                "Comment": "qt4-common is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498030",
+                "Comment": "qt4-dbus is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498031",
+                "Comment": "qt4-designer is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498032",
+                "Comment": "qt4-devel is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498033",
+                "Comment": "qt4-doc is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498034",
+                "Comment": "qt4-doc-examples is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498035",
+                "Comment": "qt4-doc-examples-bin is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498036",
+                "Comment": "qt4-doc-examples-src is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498037",
+                "Comment": "qt4-doc-html is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498038",
+                "Comment": "qt4-qvfb is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498039",
+                "Comment": "qt4-sql is earlier than 0:4.8.7-alt22"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211498040",
+                "Comment": "rpm-macros-qt4 is earlier than 0:4.8.7-alt22"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

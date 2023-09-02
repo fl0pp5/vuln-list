@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203453",
+      "Version": "oval:org.altlinux.errata:def:20203453",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3453: package `dovecot` update to version 2.3.11.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3453",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3453",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05782",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05782",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05783",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05783",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05789",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05789",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12100",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12100",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12673",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12673",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12674",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12674",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dovecot to version 2.3.11.3-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05782: Уязвимость почтового сервера Dovecot, связанная с некорректной проверкой входных данных, позволяющая нарушителю привести к сбою в работе службы аутентификации\n\n * BDU:2020-05783: Уязвимость почтового сервера Dovecot, вызванная неконтролируемой рекурсией, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05789: Уязвимость почтового сервера Dovecot, связанная с некорректной проверкой входных данных, позволяющая нарушителю привести к нарушению в работе службы аутентификации\n\n * CVE-2020-12100: In Dovecot before 2.3.11.3, uncontrolled recursion in submission, lmtp, and lda allows remote attackers to cause a denial of service (resource consumption) via a crafted e-mail message with deeply nested MIME parts.\n\n * CVE-2020-12673: In Dovecot before 2.3.11.3, sending a specially formatted NTLM request will crash the auth service because of an out-of-bounds read.\n\n * CVE-2020-12674: In Dovecot before 2.3.11.3, sending a specially formatted RPA request will crash the auth service because a length of zero is mishandled.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-07"
+          },
+          "Updated": {
+            "Date": "2020-12-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-05782",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "BDU:2020-05782"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2020-05783",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "BDU:2020-05783"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-05789",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "BDU:2020-05789"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12100",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "CVE-2020-12100"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12673",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "CVE-2020-12673"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12674",
+              "Impact": "High",
+              "Public": "20200812",
+              "CveID": "CVE-2020-12674"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203453001",
+                "Comment": "dovecot is earlier than 0:2.3.11.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203453002",
+                "Comment": "dovecot-devel is earlier than 0:2.3.11.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

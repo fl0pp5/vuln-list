@@ -1,0 +1,179 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211068",
+      "Version": "oval:org.altlinux.errata:def:20211068",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1068: package `wireshark` update to version 3.4.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1068",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1068",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00213",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00214",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00214",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-26418",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26418",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26420",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26420",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26421",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26421",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 3.4.2-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00213: Уязвимость программы для анализа трафика wireshark, связанная с неправильным освобождением памяти перед удалением последний ссылки, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00214: Уязвимость программы для анализа трафика wireshark, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-26418: Memory leak in Kafka protocol dissector in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.\n\n * CVE-2020-26420: Memory leak in RTPS protocol dissector in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.\n\n * CVE-2020-26421: Crash in USB HID protocol dissector and possibly other dissectors in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-19"
+          },
+          "Updated": {
+            "Date": "2021-01-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-00213",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "BDU:2022-00213"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-00214",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "BDU:2022-00214"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26418",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26418"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26420",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26420"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26421",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26421"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211068001",
+                "Comment": "tshark is earlier than 0:3.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211068002",
+                "Comment": "wireshark-base is earlier than 0:3.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211068003",
+                "Comment": "wireshark-devel is earlier than 0:3.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211068004",
+                "Comment": "wireshark-qt5 is earlier than 0:3.4.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

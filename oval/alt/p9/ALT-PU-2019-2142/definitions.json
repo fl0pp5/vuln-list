@@ -1,0 +1,205 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192142",
+      "Version": "oval:org.altlinux.errata:def:20192142",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2142: package `krita` update to version 4.2.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2142",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2142",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades krita to version 4.2.1-alt1. \nSecurity Fix(es):\n\n * #36818: new version",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-25"
+          },
+          "Updated": {
+            "Date": "2019-06-25"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36818",
+              "Href": "https://bugzilla.altlinux.org/36818",
+              "Data": "new version"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142001",
+                "Comment": "krita is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142002",
+                "Comment": "krita-common is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142003",
+                "Comment": "libkritabasicflakes18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142004",
+                "Comment": "libkritacolor18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142005",
+                "Comment": "libkritacolord18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142006",
+                "Comment": "libkritacommand18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142007",
+                "Comment": "libkritaflake18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142008",
+                "Comment": "libkritaglobal18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142009",
+                "Comment": "libkritaimage18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142010",
+                "Comment": "libkritaimpex18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142011",
+                "Comment": "libkritalibbrush18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142012",
+                "Comment": "libkritalibkis18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142013",
+                "Comment": "libkritalibkra18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142014",
+                "Comment": "libkritalibpaintop18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142015",
+                "Comment": "libkritametadata18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142016",
+                "Comment": "libkritaodf18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142017",
+                "Comment": "libkritapigment18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142018",
+                "Comment": "libkritaplugin18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142019",
+                "Comment": "libkritapsd18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142020",
+                "Comment": "libkritaqml18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142021",
+                "Comment": "libkritastore18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142022",
+                "Comment": "libkritatext18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142023",
+                "Comment": "libkritatextlayout18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142024",
+                "Comment": "libkritaui18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142025",
+                "Comment": "libkritaversion18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142026",
+                "Comment": "libkritawidgets18 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192142027",
+                "Comment": "libkritawidgetutils18 is earlier than 0:4.2.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

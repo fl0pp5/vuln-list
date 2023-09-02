@@ -1,0 +1,104 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222506",
+      "Version": "oval:org.altlinux.errata:def:20222506",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2506: package `rsync` update to version 3.2.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2506",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2506",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05325",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05325",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-37434",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades rsync to version 3.2.5-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05325: Уязвимость компонента inflate.c библиотеки zlib, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-37434: zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-26"
+          },
+          "Updated": {
+            "Date": "2022-08-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05325",
+              "Impact": "Critical",
+              "Public": "20220805",
+              "CveID": "BDU:2022-05325"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434",
+              "Impact": "Critical",
+              "Public": "20220805",
+              "CveID": "CVE-2022-37434"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222506001",
+                "Comment": "rsync is earlier than 0:3.2.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222506002",
+                "Comment": "rsync-server is earlier than 0:3.2.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

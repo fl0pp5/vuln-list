@@ -1,0 +1,336 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201043",
+      "Version": "oval:org.altlinux.errata:def:20201043",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1043: package `kernel-image-un-def` update to version 5.4.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1043",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1043",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04788",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04788",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04804",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04804",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04855",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04855",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00350",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00350",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00356",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00356",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03026",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03026",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04865",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04865",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-14901",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14901",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19037",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19037",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19070",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19070",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19947",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19947",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19965",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19965",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20812",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20812",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20177",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.4.11-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04788: Уязвимость функции из marvell/mwifiex/tdls.c драйвера Marvell WiFi ядра операционной системы Linux, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2019-04804: Уязвимость функции spi_gpio_probe() (drivers/spi/spi-gpio.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-04855: Уязвимость функции ext4_empty_dir (fs/ext4/namei.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00350: Уязвимость компонента drivers/scsi/libsas/sas_discover.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00356: Уязвимость ядра операционных систем Linux, связанная с отсутствием защиты служебных данных, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2020-03026: Уязвимость функции prb_calc_retire_blk_tmo() (net/packet/af_packet.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04865: Уязвимость ядра операционной системы Linux , связанная с чтением за границами буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-14901: A heap overflow flaw was found in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The vulnerability allows a remote attacker to cause a system crash, resulting in a denial of service, or execute arbitrary code. The highest threat with this vulnerability is with the availability of the system. If code execution occurs, the code will run with the permissions of root. This will affect both confidentiality and integrity of files on the system.\n\n * CVE-2019-19037: ext4_empty_dir in fs/ext4/namei.c in the Linux kernel through 5.3.12 allows a NULL pointer dereference because ext4_read_dirblock(inode,0,DIRENT_HTREE) can be zero.\n\n * CVE-2019-19070: ** DISPUTED ** A memory leak in the spi_gpio_probe() function in drivers/spi/spi-gpio.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering devm_add_action_or_reset() failures, aka CID-d3b0ffa1d75d. NOTE: third parties dispute the relevance of this because the system must have already been out of memory before the probe began.\n\n * CVE-2019-19947: In the Linux kernel through 5.4.6, there are information leaks of uninitialized memory to a USB device in the drivers/net/can/usb/kvaser_usb/kvaser_usb_leaf.c driver, aka CID-da2311a6385c.\n\n * CVE-2019-19965: In the Linux kernel through 5.4.6, there is a NULL pointer dereference in drivers/scsi/libsas/sas_discover.c because of mishandling of port disconnection during discovery, related to a PHY down race condition, aka CID-f70267f379b5.\n\n * CVE-2019-20812: An issue was discovered in the Linux kernel before 5.4.7. The prb_calc_retire_blk_tmo() function in net/packet/af_packet.c can result in a denial of service (CPU consumption and soft lockup) in a certain failure case involving TPACKET_V3, aka CID-b43d1f9f7067.\n\n * CVE-2021-20177: A flaw was found in the Linux kernel's implementation of string matching within a packet. A privileged user (with root or CAP_NET_ADMIN) when inserting iptables rules could insert a rule which can panic the system. Kernel before kernel 5.5-rc1 is affected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-01-14"
+          },
+          "Updated": {
+            "Date": "2020-01-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cwe": "CWE-122, CWE-400, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-04788",
+              "Impact": "Critical",
+              "Public": "20191129",
+              "CveID": "BDU:2019-04788"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-04804",
+              "Impact": "High",
+              "Public": "20191118",
+              "CveID": "BDU:2019-04804"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2019-04855",
+              "Impact": "Low",
+              "Public": "20191120",
+              "CveID": "BDU:2019-04855"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-00350",
+              "Impact": "Low",
+              "Public": "20191206",
+              "CveID": "BDU:2020-00350"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-00356",
+              "Impact": "Low",
+              "Public": "20191207",
+              "CveID": "BDU:2020-00356"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2020-03026",
+              "Impact": "Low",
+              "Public": "20200602",
+              "CveID": "BDU:2020-03026"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04865",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "BDU:2021-04865"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14901",
+              "Impact": "Critical",
+              "Public": "20191129",
+              "CveID": "CVE-2019-14901"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19037",
+              "Impact": "Low",
+              "Public": "20191121",
+              "CveID": "CVE-2019-19037"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19070",
+              "Impact": "High",
+              "Public": "20191118",
+              "CveID": "CVE-2019-19070"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19947",
+              "Impact": "Low",
+              "Public": "20191224",
+              "CveID": "CVE-2019-19947"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19965",
+              "Impact": "Low",
+              "Public": "20191225",
+              "CveID": "CVE-2019-19965"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20812",
+              "Impact": "Low",
+              "Public": "20200603",
+              "CveID": "CVE-2019-20812"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20177",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-20177"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043001",
+                "Comment": "kernel-doc-un is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043008",
+                "Comment": "kernel-modules-drm-radeon-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043010",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043011",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.4.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201043012",
+                "Comment": "kernel-modules-v4l-un-def is earlier than 1:5.4.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,293 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201407",
+      "Version": "oval:org.altlinux.errata:def:20201407",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1407: package `pdns` update to version 4.2.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1407",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1407",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01943",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01943",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03644",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03644",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03645",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03645",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-15091",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15091",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-1046",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1046",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-10851",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-10851",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-14626",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-14626",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10162",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10162",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10163",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10163",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3871",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3871",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pdns to version 4.2.1-alt1. \nSecurity Fix(es):\n\n * BDU:2019-01943: Уязвимость компонента «Authoritative Server» DNS-сервера PowerDNS, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03644: Уязвимость функции синтаксического анализа DNS-сервера PowerDNS, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03645: Уязвимость DNS-сервера PowerDNS, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2017-15091: An issue has been found in the API component of PowerDNS Authoritative 4.x up to and including 4.0.4 and 3.x up to and including 3.4.11, where some operations that have an impact on the state of the server are still allowed even though the API has been configured as read-only via the api-readonly keyword. This missing check allows an attacker with valid API credentials to flush the cache, trigger a zone transfer or send a NOTIFY.\n\n * CVE-2018-1046: pdns before version 4.1.2 is vulnerable to a buffer overflow in dnsreplay. In the dnsreplay tool provided with PowerDNS Authoritative, replaying a specially crafted PCAP file can trigger a stack-based buffer overflow, leading to a crash and potentially arbitrary code execution. This buffer overflow only occurs when the -ecs-stamp option of dnsreplay is used.\n\n * CVE-2018-10851: PowerDNS Authoritative Server 3.3.0 up to 4.1.4 excluding 4.1.5 and 4.0.6, and PowerDNS Recursor 3.2 up to 4.1.4 excluding 4.1.5 and 4.0.9, are vulnerable to a memory leak while parsing malformed records that can lead to remote denial of service.\n\n * CVE-2018-14626: PowerDNS Authoritative Server 4.1.0 up to 4.1.4 inclusive and PowerDNS Recursor 4.0.0 up to 4.1.4 inclusive are vulnerable to a packet cache pollution via crafted query that can lead to denial of service.\n\n * CVE-2019-10162: A vulnerability has been found in PowerDNS Authoritative Server before versions 4.1.10, 4.0.8 allowing an authorized user to cause the server to exit by inserting a crafted record in a MASTER type zone under their control. The issue is due to the fact that the Authoritative Server will exit when it runs into a parsing error while looking up the NS/A/AAAA records it is about to use for an outgoing notify.\n\n * CVE-2019-10163: A Vulnerability has been found in PowerDNS Authoritative Server before versions 4.1.9, 4.0.8 allowing a remote, authorized master server to cause a high CPU load or even prevent any further updates to any slave zone by sending a large number of NOTIFY messages. Note that only servers configured as slaves are affected by this issue.\n\n * CVE-2019-3871: A vulnerability was found in PowerDNS Authoritative Server before 4.0.7 and before 4.1.7. An insufficient validation of data coming from the user when building a HTTP request from a DNS query in the HTTP Connector of the Remote backend, allowing a remote user to cause a denial of service by making the server connect to an invalid endpoint, or possibly information disclosure by making the server connect to an internal endpoint and somehow extracting meaningful information about the response",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-27"
+          },
+          "Updated": {
+            "Date": "2020-02-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-01943",
+              "Impact": "High",
+              "Public": "20190314",
+              "CveID": "BDU:2019-01943"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-285",
+              "Href": "https://bdu.fstec.ru/vul/2019-03644",
+              "Impact": "High",
+              "Public": "20190121",
+              "CveID": "BDU:2019-03644"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03645",
+              "Impact": "Low",
+              "Public": "20190121",
+              "CveID": "BDU:2019-03645"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-358",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15091",
+              "Impact": "High",
+              "Public": "20180123",
+              "CveID": "CVE-2017-15091"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1046",
+              "Impact": "High",
+              "Public": "20180716",
+              "CveID": "CVE-2018-1046"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-10851",
+              "Impact": "High",
+              "Public": "20181129",
+              "CveID": "CVE-2018-10851"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-14626",
+              "Impact": "High",
+              "Public": "20181129",
+              "CveID": "CVE-2018-14626"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10162",
+              "Impact": "High",
+              "Public": "20190730",
+              "CveID": "CVE-2019-10162"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10163",
+              "Impact": "Low",
+              "Public": "20190730",
+              "CveID": "CVE-2019-10163"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3871",
+              "Impact": "High",
+              "Public": "20190321",
+              "CveID": "CVE-2019-3871"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407001",
+                "Comment": "pdns is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407002",
+                "Comment": "pdns-backend-geoip is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407003",
+                "Comment": "pdns-backend-ldap is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407004",
+                "Comment": "pdns-backend-lua is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407005",
+                "Comment": "pdns-backend-lua2 is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407006",
+                "Comment": "pdns-backend-mydns is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407007",
+                "Comment": "pdns-backend-mysql is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407008",
+                "Comment": "pdns-backend-opendbx is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407009",
+                "Comment": "pdns-backend-pipe is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407010",
+                "Comment": "pdns-backend-postgresql is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407011",
+                "Comment": "pdns-backend-remote is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407012",
+                "Comment": "pdns-backend-sqlite is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407013",
+                "Comment": "pdns-backend-tinydns is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407014",
+                "Comment": "pdns-ixfrdist is earlier than 0:4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201407015",
+                "Comment": "pdns-tools is earlier than 0:4.2.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

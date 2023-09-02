@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201422",
+      "Version": "oval:org.altlinux.errata:def:20201422",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1422: package `plasma5-workspace` update to version 5.18.1-alt7",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1422",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1422",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades plasma5-workspace to version 5.18.1-alt7. \nSecurity Fix(es):\n\n * #38166: Проблема с alt-app-starter при запуске из контекстного меню главного меню",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-04"
+          },
+          "Updated": {
+            "Date": "2020-03-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38166",
+              "Href": "https://bugzilla.altlinux.org/38166",
+              "Data": "Проблема с alt-app-starter при запуске из контекстного меню главного меню"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422001",
+                "Comment": "libcolorcorrect5 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422002",
+                "Comment": "libkworkspace55 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422003",
+                "Comment": "libnotificationmanager1 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422004",
+                "Comment": "libplasma-geolocation-interface5 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422005",
+                "Comment": "libtaskmanager6 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422006",
+                "Comment": "libweather_ion7 is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422007",
+                "Comment": "plasma5-workspace is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422008",
+                "Comment": "plasma5-workspace-common is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422009",
+                "Comment": "plasma5-workspace-devel is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422010",
+                "Comment": "plasma5-workspace-qml is earlier than 1:5.18.1-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201422011",
+                "Comment": "sddm-theme-breeze is earlier than 1:5.18.1-alt7"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

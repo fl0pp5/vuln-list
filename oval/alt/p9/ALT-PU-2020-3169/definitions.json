@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203169",
+      "Version": "oval:org.altlinux.errata:def:20203169",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3169: package `gifsicle` update to version 1.92-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3169",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3169",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-00509",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00509",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-1000421",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-1000421",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gifsicle to version 1.92-alt1. \nSecurity Fix(es):\n\n * BDU:2018-00509: Уязвимость функции read_gif программного обеспечения для просмотра GIF-файлов gifview пакета программ для создания, редактирования и оптимизации GIF-файлов Gifsicle, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2017-1000421: Gifsicle gifview 1.89 and older is vulnerable to a use-after-free in the read_gif function resulting potential code execution",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-30"
+          },
+          "Updated": {
+            "Date": "2020-10-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2018-00509",
+              "Impact": "Critical",
+              "Public": "20170809",
+              "CveID": "BDU:2018-00509"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-1000421",
+              "Impact": "Critical",
+              "Public": "20180102",
+              "CveID": "CVE-2017-1000421"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203169001",
+                "Comment": "gifsicle is earlier than 0:1.92-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

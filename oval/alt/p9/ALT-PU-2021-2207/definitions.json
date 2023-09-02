@@ -1,0 +1,229 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212207",
+      "Version": "oval:org.altlinux.errata:def:20212207",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2207: package `kernel-image-std-def` update to version 5.4.129-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2207",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2207",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00284",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00284",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03938",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03938",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04854",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04854",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-26541",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26541",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22543",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22543",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-35039",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-35039",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.129-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00284: Уязвимость ядра операционной системы Linux, связанная с некорректной проверкой криптографической подписи, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-03938: Уязвимость компонента kernel/module.c ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-04854: Уязвимость операционной системы Linux вызвана переполнением буфера, позволяющая нарушителю выполнить произвольную команду управления\n\n * CVE-2020-26541: The Linux kernel through 5.8.13 does not properly enforce the Secure Boot Forbidden Signature Database (aka dbx) protection mechanism. This affects certs/blacklist.c and certs/system_keyring.c.\n\n * CVE-2021-22543: An issue was discovered in Linux: KVM through Improper handling of VM_IO|VM_PFNMAP vmas in KVM can bypass RO checks and can lead to pages being freed while still accessible by the VMM and guest. This allows users with the ability to start and control a VM to read/write random pages of memory and can result in local privilege escalation.\n\n * CVE-2021-35039: kernel/module.c in the Linux kernel before 5.12.14 mishandles Signature Verification, aka CID-0c18f29aae7c. Without CONFIG_MODULE_SIG, verification that a kernel module is signed, for loading via init_module, does not occur for a module.sig_enforce=1 command-line argument.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-12"
+          },
+          "Updated": {
+            "Date": "2021-07-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-200, CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2021-00284",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "BDU:2021-00284"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2021-03938",
+              "Impact": "High",
+              "Public": "20210622",
+              "CveID": "BDU:2021-03938"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-04854",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "BDU:2021-04854"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26541",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-26541"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22543",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2021-22543"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-35039",
+              "Impact": "High",
+              "Public": "20210707",
+              "CveID": "CVE-2021-35039"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207001",
+                "Comment": "kernel-doc-std is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.4.129-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212207013",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 2:5.4.129-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

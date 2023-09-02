@@ -1,0 +1,336 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203424",
+      "Version": "oval:org.altlinux.errata:def:20203424",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3424: package `thunderbird` update to version 78.5.0-alt0.1.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3424",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3424",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05385",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05385",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05537",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05537",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05538",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05538",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03536",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03536",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-15999",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15999",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-16012",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16012",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26951",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26951",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26953",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26953",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26956",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26956",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26958",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26958",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26959",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26959",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26960",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26960",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26961",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26961",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26965",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26965",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26966",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26966",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26968",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26968",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 78.5.0-alt0.1.p9. \nSecurity Fix(es):\n\n * BDU:2020-05385: Уязвимость библиотеки FreeType браузера Google Chrome, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2020-05537: Уязвимость синтаксического анализа и загрузки событий в коде SVG веб-браузера Firefox и почтового клиента Thunderbird, позволяющая нарушителю проводить межсайтовые сценарные атаки (XSS)\n\n * BDU:2020-05538: Уязвимость компонента WebRequestService веб-браузера Firefox и почтового клиента Thunderbird, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03536: Уязвимость программных средств Google Chrome, Firefox, Firefox ESR, Thunderbird, связанная с ошибкой подтверждения источника данных, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2020-15999: Heap buffer overflow in Freetype in Google Chrome prior to 86.0.4240.111 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.\n\n * CVE-2020-16012: Side-channel information leakage in graphics in Google Chrome prior to 87.0.4280.66 allowed a remote attacker to leak cross-origin data via a crafted HTML page.\n\n * CVE-2020-26951: A parsing and event loading mismatch in Firefox's SVG code could have allowed load events to fire, even after sanitization. An attacker already capable of exploiting an XSS vulnerability in privileged internal pages could have used this attack to bypass our built-in sanitizer. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26953: It was possible to cause the browser to enter fullscreen mode without displaying the security UI; thus making it possible to attempt a phishing attack or otherwise confuse the user. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26956: In some cases, removing HTML elements during sanitization would keep existing SVG event handlers and therefore lead to XSS. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26958: Firefox did not block execution of scripts with incorrect MIME types when the response was intercepted and cached through a ServiceWorker. This could lead to a cross-site script inclusion vulnerability, or a Content Security Policy bypass. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26959: During browser shutdown, reference decrementing could have occured on a previously freed object, resulting in a use-after-free, memory corruption, and a potentially exploitable crash. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26960: If the Compact() method was called on an nsTArray, the array could have been reallocated without updating other pointers, leading to a potential use-after-free and exploitable crash. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26961: When DNS over HTTPS is in use, it intentionally filters RFC1918 and related IP ranges from the responses as these do not make sense coming from a DoH resolver. However when an IPv4 address was mapped through IPv6, these addresses were erroneously let through, leading to a potential DNS Rebinding attack. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26965: Some websites have a feature \"Show Password\" where clicking a button will change a password field into a textbook field, revealing the typed password. If, when using a software keyboard that remembers user input, a user typed their password and used that feature, the type of the password field was changed, resulting in a keyboard layout change and the possibility for the software keyboard to remember the typed password. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26966: Searching for a single word from the address bar caused an mDNS request to be sent on the local network searching for a hostname consisting of that string; resulting in an information leak. *Note: This issue only affected Windows operating systems. Other operating systems are unaffected.*. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * CVE-2020-26968: Mozilla developers reported memory safety bugs present in Firefox 82 and Firefox ESR 78.4. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox \u003c 83, Firefox ESR \u003c 78.5, and Thunderbird \u003c 78.5.\n\n * #38081: Выставить текущий часовой пояс для Lightning по умолчанию",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-26"
+          },
+          "Updated": {
+            "Date": "2020-11-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-05385",
+              "Impact": "Low",
+              "Public": "20201020",
+              "CveID": "BDU:2020-05385"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-354",
+              "Href": "https://bdu.fstec.ru/vul/2020-05537",
+              "Impact": "High",
+              "Public": "20201117",
+              "CveID": "BDU:2020-05537"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-05538",
+              "Impact": "Low",
+              "Public": "20201117",
+              "CveID": "BDU:2020-05538"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-346",
+              "Href": "https://bdu.fstec.ru/vul/2021-03536",
+              "Impact": "Low",
+              "Public": "20200530",
+              "CveID": "BDU:2021-03536"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15999",
+              "Impact": "Low",
+              "Public": "20201103",
+              "CveID": "CVE-2020-15999"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16012",
+              "Impact": "Low",
+              "Public": "20210108",
+              "CveID": "CVE-2020-16012"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26951",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26951"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26953",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26953"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26956",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26956"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26958",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26958"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26959",
+              "Impact": "High",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26959"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26960",
+              "Impact": "High",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26960"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26961",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26961"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-212",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26965",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26965"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26966",
+              "Impact": "Low",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26966"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26968",
+              "Impact": "High",
+              "Public": "20201209",
+              "CveID": "CVE-2020-26968"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "38081",
+              "Href": "https://bugzilla.altlinux.org/38081",
+              "Data": "Выставить текущий часовой пояс для Lightning по умолчанию"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203424001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:78.5.0-alt0.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203424002",
+                "Comment": "thunderbird is earlier than 0:78.5.0-alt0.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203424003",
+                "Comment": "thunderbird-wayland is earlier than 0:78.5.0-alt0.1.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

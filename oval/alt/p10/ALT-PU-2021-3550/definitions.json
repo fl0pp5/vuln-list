@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213550",
+      "Version": "oval:org.altlinux.errata:def:20213550",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3550: package `glib2` update to version 2.68.4-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3550",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3550",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades glib2 to version 2.68.4-alt3. \nSecurity Fix(es):\n\n * #41530: /etc/profile.d/glib2.sh неправильно обрабатывает отсутствие /usr/bin/natspec",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-16"
+          },
+          "Updated": {
+            "Date": "2021-12-16"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41530",
+              "Href": "https://bugzilla.altlinux.org/41530",
+              "Data": "/etc/profile.d/glib2.sh неправильно обрабатывает отсутствие /usr/bin/natspec"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550001",
+                "Comment": "glib2 is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550002",
+                "Comment": "glib2-devel is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550003",
+                "Comment": "glib2-devel-static is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550004",
+                "Comment": "glib2-doc is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550005",
+                "Comment": "glib2-locales is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550006",
+                "Comment": "glib2-tests is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550007",
+                "Comment": "libgio is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550008",
+                "Comment": "libgio-devel is earlier than 0:2.68.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213550009",
+                "Comment": "libgio-doc is earlier than 0:2.68.4-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

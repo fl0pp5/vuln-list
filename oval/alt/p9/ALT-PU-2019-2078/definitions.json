@@ -1,0 +1,229 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192078",
+      "Version": "oval:org.altlinux.errata:def:20192078",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2078: package `thunderbird` update to version 60.7.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2078",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2078",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03564",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03564",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03565",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03565",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03611",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03611",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03612",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03612",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11703",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11703",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11704",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11704",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11705",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11705",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11706",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11706",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 60.7.1-alt1. \nSecurity Fix(es):\n\n * BDU:2019-03564: Уязвимость функции parser_get_next_char календаря iCal программного обеспечения для работы с электронной почтой Thunderbird, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю оказать воздействие на целостность данных, получить несанкционированный доступ к защищаемой информации, а также вызвать отказ в обслуживании\n\n * BDU:2019-03565: Уязвимость функции icalmemory_strdup_and_dequote календаря iCal программного обеспечения для работы с электронной почтой Thunderbird, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю оказать воздействие на целостность данных, получить несанкционированный доступ к защищаемой информации, а также вызвать отказ в обслуживании\n\n * BDU:2019-03611: Уязвимость библиотеки libical почтового клиента Thunderbird, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03612: Уязвимость библиотеки libical почтового клиента Thunderbird, связанная с отсутствием проверки типа передаваемого объекта (“type confusion”), позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-11703: A flaw in Thunderbird's implementation of iCal causes a heap buffer overflow in parser_get_next_char when processing certain email messages, resulting in a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 60.7.1.\n\n * CVE-2019-11704: A flaw in Thunderbird's implementation of iCal causes a heap buffer overflow in icalmemory_strdup_and_dequote when processing certain email messages, resulting in a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 60.7.1.\n\n * CVE-2019-11705: A flaw in Thunderbird's implementation of iCal causes a stack buffer overflow in icalrecur_add_bydayrules when processing certain email messages, resulting in a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 60.7.1.\n\n * CVE-2019-11706: A flaw in Thunderbird's implementation of iCal causes a type confusion in icaltimezone_get_vtimezone_properties when processing certain email messages, resulting in a crash. This vulnerability affects Thunderbird \u003c 60.7.1.\n\n * #18790: thunderbird-enigmail: отсутствует зависимость на pinentry\n\n * #36447: thunderbird-enigmail 60.6.1 перестал отправлять письма",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-18"
+          },
+          "Updated": {
+            "Date": "2019-06-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03564",
+              "Impact": "Critical",
+              "Public": "20190612",
+              "CveID": "BDU:2019-03564"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03565",
+              "Impact": "Critical",
+              "Public": "20190612",
+              "CveID": "BDU:2019-03565"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03611",
+              "Impact": "Critical",
+              "Public": "20190723",
+              "CveID": "BDU:2019-03611"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-704",
+              "Href": "https://bdu.fstec.ru/vul/2019-03612",
+              "Impact": "High",
+              "Public": "20190723",
+              "CveID": "BDU:2019-03612"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11703",
+              "Impact": "Critical",
+              "Public": "20190723",
+              "CveID": "CVE-2019-11703"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11704",
+              "Impact": "Critical",
+              "Public": "20190723",
+              "CveID": "CVE-2019-11704"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11705",
+              "Impact": "Critical",
+              "Public": "20190723",
+              "CveID": "CVE-2019-11705"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11706",
+              "Impact": "High",
+              "Public": "20190723",
+              "CveID": "CVE-2019-11706"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "18790",
+              "Href": "https://bugzilla.altlinux.org/18790",
+              "Data": "thunderbird-enigmail: отсутствует зависимость на pinentry"
+            },
+            {
+              "Id": "36447",
+              "Href": "https://bugzilla.altlinux.org/36447",
+              "Data": "thunderbird-enigmail 60.6.1 перестал отправлять письма"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192078001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:60.7.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192078002",
+                "Comment": "thunderbird is earlier than 0:60.7.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192078003",
+                "Comment": "thunderbird-enigmail is earlier than 0:60.7.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

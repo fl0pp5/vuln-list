@@ -1,0 +1,239 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203533",
+      "Version": "oval:org.altlinux.errata:def:20203533",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3533: package `mgetty` update to version 1.2.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3533",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3533",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-01132",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-01132",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00618",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00618",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-16741",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16741",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-16742",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16742",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-16743",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16743",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-16744",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16744",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-16745",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16745",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1010189",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010189",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1010190",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010190",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mgetty to version 1.2.1-alt1. \nSecurity Fix(es):\n\n * BDU:2018-01132: Уязвимость функции fax_notify_mail пакета mgetty операционных систем Red Hat Enterprise Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00618: Уязвимость функции do_activate() пакета mgetty, позволяющая нарушителю выполнить произвольные команды\n\n * CVE-2018-16741: An issue was discovered in mgetty before 1.2.1. In fax/faxq-helper.c, the function do_activate() does not properly sanitize shell metacharacters to prevent command injection. It is possible to use the ||, \u0026\u0026, or \u003e characters within a file created by the \"faxq-helper activate \u003cjobid\u003e\" command.\n\n * CVE-2018-16742: An issue was discovered in mgetty before 1.2.1. In contrib/scrts.c, a stack-based buffer overflow can be triggered via a command-line parameter.\n\n * CVE-2018-16743: An issue was discovered in mgetty before 1.2.1. In contrib/next-login/login.c, the command-line parameter username is passed unsanitized to strcpy(), which can cause a stack-based buffer overflow.\n\n * CVE-2018-16744: An issue was discovered in mgetty before 1.2.1. In fax_notify_mail() in faxrec.c, the mail_to parameter is not sanitized. It could allow for command injection if untrusted input can reach it, because popen is used.\n\n * CVE-2018-16745: An issue was discovered in mgetty before 1.2.1. In fax_notify_mail() in faxrec.c, the mail_to parameter is not sanitized. It could allow a buffer overflow if long untrusted input can reach it.\n\n * CVE-2019-1010189: mgetty prior to version 1.2.1 is affected by: Infinite Loop. The impact is: DoS, the program does never terminates. The component is: g3/g32pbm.c. The attack vector is: Local, the user should open a specially crafted file. The fixed version is: 1.2.1.\n\n * CVE-2019-1010190: mgetty prior to 1.2.1 is affected by: out-of-bounds read. The impact is: DoS, the program may crash if the memory is not mapped. The component is: putwhitespan() in g3/pbm2g3.c. The attack vector is: Local, the victim must open a specially crafted file. The fixed version is: 1.2.1.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-18"
+          },
+          "Updated": {
+            "Date": "2020-12-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2018-01132",
+              "Impact": "Low",
+              "Public": "20180913",
+              "CveID": "BDU:2018-01132"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77, CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2022-00618",
+              "Impact": "High",
+              "Public": "20180911",
+              "CveID": "BDU:2022-00618"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16741",
+              "Impact": "High",
+              "Public": "20180913",
+              "CveID": "CVE-2018-16741"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16742",
+              "Impact": "High",
+              "Public": "20180913",
+              "CveID": "CVE-2018-16742"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16743",
+              "Impact": "High",
+              "Public": "20180913",
+              "CveID": "CVE-2018-16743"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16744",
+              "Impact": "High",
+              "Public": "20180913",
+              "CveID": "CVE-2018-16744"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16745",
+              "Impact": "High",
+              "Public": "20180913",
+              "CveID": "CVE-2018-16745"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010189",
+              "Impact": "Low",
+              "Public": "20190724",
+              "CveID": "CVE-2019-1010189"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010190",
+              "Impact": "Low",
+              "Public": "20190724",
+              "CveID": "CVE-2019-1010190"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203533001",
+                "Comment": "mgetty is earlier than 0:1.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203533002",
+                "Comment": "mgetty-doc is earlier than 0:1.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203533003",
+                "Comment": "mgetty-sendfax is earlier than 0:1.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203533004",
+                "Comment": "mgetty-viewfax is earlier than 0:1.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203533005",
+                "Comment": "mgetty-voice is earlier than 0:1.2.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

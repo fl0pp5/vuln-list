@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193409",
+      "Version": "oval:org.altlinux.errata:def:20193409",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3409: package `gpsd` update to version 3.19-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3409",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3409",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05871",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05871",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-17937",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-17937",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gpsd to version 3.19-alt3. \nSecurity Fix(es):\n\n * BDU:2022-05871: Уязвимость демона отслеживания приемников GPS GPSd, связанная с переполнением буфера на стеке, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2018-17937: gpsd versions 2.90 to 3.17 and microjson versions 1.0 to 1.3, an open source project, allow a stack-based buffer overflow, which may allow remote attackers to execute arbitrary code on embedded platforms via traffic on Port 2947/TCP or crafted JSON inputs.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-30"
+          },
+          "Updated": {
+            "Date": "2019-12-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2022-05871",
+              "Impact": "High",
+              "Public": "20180615",
+              "CveID": "BDU:2022-05871"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-17937",
+              "Impact": "High",
+              "Public": "20190313",
+              "CveID": "CVE-2018-17937"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409001",
+                "Comment": "gpsd is earlier than 0:3.19-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409002",
+                "Comment": "gpsd-clients is earlier than 0:3.19-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409003",
+                "Comment": "libQgpsmm25 is earlier than 0:3.19-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409004",
+                "Comment": "libgps-devel is earlier than 0:3.19-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409005",
+                "Comment": "libgps25 is earlier than 0:3.19-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193409006",
+                "Comment": "python3-module-gps is earlier than 0:3.19-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

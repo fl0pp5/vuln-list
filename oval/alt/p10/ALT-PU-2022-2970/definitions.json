@@ -1,0 +1,291 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222970",
+      "Version": "oval:org.altlinux.errata:def:20222970",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2970: package `kernel-image-rt` update to version 5.10.152-alt1.rt75",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2970",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2970",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06272",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06272",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06273",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06273",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06274",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06274",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06620",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06620",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07349",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07349",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00631",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00631",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-2978",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2978",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3565",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3565",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3649",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3649",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41674",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41674",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42719",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42719",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42720",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42720",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-43750",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43750",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rt to version 5.10.152-alt1.rt75. \nSecurity Fix(es):\n\n * BDU:2022-06272: Уязвимость функции cfg80211_update_notlisted_nontrans файла net/wireless/scan.c ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06273: Уязвимость функционала подсчета ссылок в режиме BSS (Basic Service Set) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06274: Уязвимость ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06620: Уязвимость функции del_timer компонента drivers/isdn/mISDN/l1oip_core.c ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07349: Уязвимость драйвера drivers/usb/mon/mon_bin.c ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-00631: Уязвимость функции nilfs_new_inode компонента BPF ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-2978: A flaw use after free in the Linux kernel NILFS file system was found in the way user triggers function security_inode_alloc to fail with following call to function nilfs_mdt_destroy. A local user could use this flaw to crash the system or potentially escalate their privileges on the system.\n\n * CVE-2022-3565: A vulnerability, which was classified as critical, has been found in Linux Kernel. Affected by this issue is the function del_timer of the file drivers/isdn/mISDN/l1oip_core.c of the component Bluetooth. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211088.\n\n * CVE-2022-3649: A vulnerability was found in Linux Kernel. It has been classified as problematic. Affected is the function nilfs_new_inode of the file fs/nilfs2/inode.c of the component BPF. The manipulation leads to use after free. It is possible to launch the attack remotely. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211992.\n\n * CVE-2022-41674: An issue was discovered in the Linux kernel before 5.19.16. Attackers able to inject WLAN frames could cause a buffer overflow in the ieee80211_bss_info_update function in net/mac80211/scan.c.\n\n * CVE-2022-42719: A use-after-free in the mac80211 stack when parsing a multi-BSSID element in the Linux kernel 5.2 through 5.19.x before 5.19.16 could be used by attackers (able to inject WLAN frames) to crash the kernel and potentially execute code.\n\n * CVE-2022-42720: Various refcounting bugs in the multi-BSS handling in the mac80211 stack in the Linux kernel 5.1 through 5.19.x before 5.19.16 could be used by local attackers (able to inject WLAN frames) to trigger use-after-free conditions to potentially execute code.\n\n * CVE-2022-43750: drivers/usb/mon/mon_bin.c in usbmon in the Linux kernel before 5.19.15 and 6.x before 6.0.1 allows a user-space client to corrupt the monitor's internal memory.\n\n * #40762: Отсутствует модуль zram",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-01"
+          },
+          "Updated": {
+            "Date": "2022-11-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-06272",
+              "Impact": "High",
+              "Public": "20221013",
+              "CveID": "BDU:2022-06272"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06273",
+              "Impact": "High",
+              "Public": "20221013",
+              "CveID": "BDU:2022-06273"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06274",
+              "Impact": "High",
+              "Public": "20221013",
+              "CveID": "BDU:2022-06274"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06620",
+              "Impact": "High",
+              "Public": "20211017",
+              "CveID": "BDU:2022-06620"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07349",
+              "Impact": "High",
+              "Public": "20221026",
+              "CveID": "BDU:2022-07349"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00631",
+              "Impact": "High",
+              "Public": "20221011",
+              "CveID": "BDU:2023-00631"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2978",
+              "Impact": "High",
+              "Public": "20220824",
+              "CveID": "CVE-2022-2978"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-662",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3565",
+              "Impact": "High",
+              "Public": "20221017",
+              "CveID": "CVE-2022-3565"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3649",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "CVE-2022-3649"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41674",
+              "Impact": "High",
+              "Public": "20221014",
+              "CveID": "CVE-2022-41674"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42719",
+              "Impact": "High",
+              "Public": "20221013",
+              "CveID": "CVE-2022-42719"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42720",
+              "Impact": "High",
+              "Public": "20221014",
+              "CveID": "CVE-2022-42720"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43750",
+              "Impact": "Low",
+              "Public": "20221026",
+              "CveID": "CVE-2022-43750"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40762",
+              "Href": "https://bugzilla.altlinux.org/40762",
+              "Data": "Отсутствует модуль zram"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222970001",
+                "Comment": "kernel-headers-modules-rt is earlier than 0:5.10.152-alt1.rt75"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222970002",
+                "Comment": "kernel-headers-rt is earlier than 0:5.10.152-alt1.rt75"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222970003",
+                "Comment": "kernel-image-rt is earlier than 0:5.10.152-alt1.rt75"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222970004",
+                "Comment": "kernel-image-rt-checkinstall is earlier than 0:5.10.152-alt1.rt75"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

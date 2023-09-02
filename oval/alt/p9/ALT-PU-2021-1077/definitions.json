@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211077",
+      "Version": "oval:org.altlinux.errata:def:20211077",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1077: package `php7-zip` update to version 7.3.26-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1077",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1077",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01914",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01914",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-7071",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7071",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-zip to version 7.3.26-alt1.1. \nSecurity Fix(es):\n\n * BDU:2021-01914: Уязвимость функции URL языка программирования php, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2020-7071: In PHP versions 7.3.x below 7.3.26, 7.4.x below 7.4.14 and 8.0.0, when validating URL with functions like filter_var($url, FILTER_VALIDATE_URL), PHP will accept an URL with invalid password as valid URL. This may lead to functions that rely on URL being valid to mis-parse the URL and produce wrong data as components of the URL.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-19"
+          },
+          "Updated": {
+            "Date": "2021-01-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01914",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01914"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7071",
+              "Impact": "Low",
+              "Public": "20210215",
+              "CveID": "CVE-2020-7071"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211077001",
+                "Comment": "php7-zip is earlier than 0:7.3.26-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

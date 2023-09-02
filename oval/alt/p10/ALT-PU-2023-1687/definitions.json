@@ -1,0 +1,140 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231687",
+      "Version": "oval:org.altlinux.errata:def:20231687",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1687: package `zlib` update to version 1.2.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1687",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1687",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05325",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05325",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-37434",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zlib to version 1.2.13-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05325: Уязвимость компонента inflate.c библиотеки zlib, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-37434: zlib through 1.2.12 has a heap-based buffer over-read or buffer overflow in inflate in inflate.c via a large gzip header extra field. NOTE: only applications that call inflateGetHeader are affected. Some common applications bundle the affected zlib source code but may be unable to call inflateGetHeader (e.g., see the nodejs/node reference).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-28"
+          },
+          "Updated": {
+            "Date": "2023-04-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05325",
+              "Impact": "Critical",
+              "Public": "20220805",
+              "CveID": "BDU:2022-05325"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37434",
+              "Impact": "Critical",
+              "Public": "20220805",
+              "CveID": "CVE-2022-37434"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231687001",
+                "Comment": "libminizip is earlier than 0:1.2.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231687002",
+                "Comment": "libminizip-devel is earlier than 0:1.2.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231687003",
+                "Comment": "zlib is earlier than 0:1.2.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231687004",
+                "Comment": "zlib-devel is earlier than 0:1.2.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231687005",
+                "Comment": "zlib-devel-static is earlier than 0:1.2.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

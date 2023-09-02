@@ -1,0 +1,179 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223302",
+      "Version": "oval:org.altlinux.errata:def:20223302",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3302: package `helm` update to version 3.10.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3302",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3302",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05295",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05295",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05639",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05639",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-21303",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21303",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32690",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32690",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-36049",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36049",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-36055",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36055",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades helm to version 3.10.2-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05295: Уязвимость пакета strvals пакетного менеджера для Kubernetes Helm, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05639: Уязвимость программного средства синхронизации кластеров Kubernetes с источниками конфигурации Flux и пакетного менеджера для Kubernetes Helm, связанная c некорректной зачисткой или освобождением ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-21303: Helm is open-source software which is essentially \"The Kubernetes Package Manager\". Helm is a tool for managing Charts. Charts are packages of pre-configured Kubernetes resources. In Helm from version 3.0 and before version 3.5.2, there a few cases where data loaded from potentially untrusted sources was not properly sanitized. When a SemVer in the `version` field of a chart is invalid, in some cases Helm allows the string to be used \"as is\" without sanitizing. Helm fails to properly sanitized some fields present on Helm repository `index.yaml` files. Helm does not properly sanitized some fields in the `plugin.yaml` file for plugins In some cases, Helm does not properly sanitize the fields in the `Chart.yaml` file. By exploiting these attack vectors, core maintainers were able to send deceptive information to a terminal screen running the `helm` command, as well as obscure or alter information on the screen. In some cases, we could send codes that terminals used to execute higher-order logic, like clearing a terminal screen. Further, during evaluation, the Helm maintainers discovered a few other fields that were not properly sanitized when read out of repository index files. This fix remedies all such cases, and once again enforces SemVer2 policies on version fields. All users of the Helm 3 should upgrade to the fixed version 3.5.2 or later. Those who use Helm as a library should verify that they either sanitize this data on their own, or use the proper Helm API calls to sanitize the data.\n\n * CVE-2021-32690: Helm is a tool for managing Charts (packages of pre-configured Kubernetes resources). In versions of helm prior to 3.6.1, a vulnerability exists where the username and password credentials associated with a Helm repository could be passed on to another domain referenced by that Helm repository. This issue has been resolved in 3.6.1. There is a workaround through which one may check for improperly passed credentials. One may use a username and password for a Helm repository and may audit the Helm repository in order to check for another domain being used that could have received the credentials. In the `index.yaml` file for that repository, one may look for another domain in the `urls` list for the chart versions. If there is another domain found and that chart version was pulled or installed, the credentials would be passed on.\n\n * CVE-2022-36049: Flux2 is a tool for keeping Kubernetes clusters in sync with sources of configuration, and Flux's helm-controller is a Kubernetes operator that allows one to declaratively manage Helm chart releases. Helm controller is tightly integrated with the Helm SDK. A vulnerability found in the Helm SDK that affects flux2 v0.0.17 until v0.32.0 and helm-controller v0.0.4 until v0.23.0 allows for specific data inputs to cause high memory consumption. In some platforms, this could cause the controller to panic and stop processing reconciliations. In a shared cluster multi-tenancy environment, a tenant could create a HelmRelease that makes the controller panic, denying all other tenants from their Helm releases being reconciled. Patches are available in flux2 v0.32.0 and helm-controller v0.23.0.\n\n * CVE-2022-36055: Helm is a tool for managing Charts. Charts are packages of pre-configured Kubernetes resources. Fuzz testing, provided by the CNCF, identified input to functions in the _strvals_ package that can cause an out of memory panic. The _strvals_ package contains a parser that turns strings in to Go structures. The _strvals_ package converts these strings into structures Go can work with. Some string inputs can cause array data structures to be created causing an out of memory panic. Applications that use the _strvals_ package in the Helm SDK to parse user supplied input can suffer a Denial of Service when that input causes a panic that cannot be recovered from. The Helm Client will panic with input to `--set`, `--set-string`, and other value setting flags that causes an out of memory panic. Helm is not a long running service so the panic will not affect future uses of the Helm client. This issue has been resolved in 3.9.4. SDK users can validate strings supplied by users won't create large arrays causing significant memory usage before passing them to the _strvals_ functions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-08"
+          },
+          "Updated": {
+            "Date": "2022-12-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-05295",
+              "Impact": "Low",
+              "Public": "20220824",
+              "CveID": "BDU:2022-05295"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-05639",
+              "Impact": "High",
+              "Public": "20220907",
+              "CveID": "BDU:2022-05639"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21303",
+              "Impact": "Low",
+              "Public": "20210205",
+              "CveID": "CVE-2021-21303"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32690",
+              "Impact": "High",
+              "Public": "20210616",
+              "CveID": "CVE-2021-32690"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36049",
+              "Impact": "High",
+              "Public": "20220907",
+              "CveID": "CVE-2022-36049"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36055",
+              "Impact": "Low",
+              "Public": "20220901",
+              "CveID": "CVE-2022-36055"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223302001",
+                "Comment": "helm is earlier than 0:3.10.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

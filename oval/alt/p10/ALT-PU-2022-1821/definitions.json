@@ -1,0 +1,291 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221821",
+      "Version": "oval:org.altlinux.errata:def:20221821",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1821: package `ffmpeg` update to version 4.4.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1821",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1821",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04610",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04610",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05242",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05242",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00199",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00199",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-30123",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30123",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33815",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33815",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38171",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38171",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ffmpeg to version 4.4.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04610: Уязвимость функции dwa_uncompress компонента libavcodec/exr.c мультимедийной библиотеки FFmpeg, связанная с непроверенным индексированием массива, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05242: Уязвимость компонента libavcodec/dnxhddec.c мультимедийной библиотеки FFmpeg, связанная с непроверенным возвращаемым значением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00199: Уязвимость функции adts_decode_extradata компонента libavformat/adtsenc.c мультимедийной библиотеки FFmpeg, связанная с непроверенным возвращаемым значением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-30123: FFmpeg \u003c=4.3 contains a buffer overflow vulnerability in libavcodec through a crafted file that may lead to remote code execution.\n\n * CVE-2021-33815: dwa_uncompress in libavcodec/exr.c in FFmpeg 4.4 allows an out-of-bounds array access because dc_count is not strictly checked.\n\n * CVE-2021-38114: libavcodec/dnxhddec.c in FFmpeg 4.4 does not check the return value of the init_vlc function, a similar issue to CVE-2013-0868.\n\n * CVE-2021-38171: adts_decode_extradata in libavformat/adtsenc.c in FFmpeg 4.4 does not check the init_get_bits return value, which is a necessary step because the second argument to init_get_bits can be crafted.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-05"
+          },
+          "Updated": {
+            "Date": "2022-05-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-129",
+              "Href": "https://bdu.fstec.ru/vul/2021-04610",
+              "Impact": "High",
+              "Public": "20210527",
+              "CveID": "BDU:2021-04610"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-252",
+              "Href": "https://bdu.fstec.ru/vul/2021-05242",
+              "Impact": "Low",
+              "Public": "20210803",
+              "CveID": "BDU:2021-05242"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://bdu.fstec.ru/vul/2022-00199",
+              "Impact": "Critical",
+              "Public": "20210806",
+              "CveID": "BDU:2022-00199"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30123",
+              "Impact": "High",
+              "Public": "20210407",
+              "CveID": "CVE-2021-30123"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-129",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33815",
+              "Impact": "High",
+              "Public": "20210603",
+              "CveID": "CVE-2021-33815"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38114",
+              "Impact": "Low",
+              "Public": "20210804",
+              "CveID": "CVE-2021-38114"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38171",
+              "Impact": "Critical",
+              "Public": "20210821",
+              "CveID": "CVE-2021-38171"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821001",
+                "Comment": "ffmpeg is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821002",
+                "Comment": "ffmpeg-doc is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821003",
+                "Comment": "ffplay is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821004",
+                "Comment": "ffplay-doc is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821005",
+                "Comment": "ffprobe is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821006",
+                "Comment": "ffprobe-doc is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821007",
+                "Comment": "ffserver-doc is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821008",
+                "Comment": "libavcodec-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821009",
+                "Comment": "libavcodec58 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821010",
+                "Comment": "libavdevice-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821011",
+                "Comment": "libavdevice58 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821012",
+                "Comment": "libavfilter-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821013",
+                "Comment": "libavfilter7 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821014",
+                "Comment": "libavformat-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821015",
+                "Comment": "libavformat58 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821016",
+                "Comment": "libavresample-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821017",
+                "Comment": "libavresample4 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821018",
+                "Comment": "libavutil-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821019",
+                "Comment": "libavutil56 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821020",
+                "Comment": "libpostproc-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821021",
+                "Comment": "libpostproc55 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821022",
+                "Comment": "libswresample-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821023",
+                "Comment": "libswresample3 is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821024",
+                "Comment": "libswscale-devel is earlier than 2:4.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221821025",
+                "Comment": "libswscale5 is earlier than 2:4.4.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

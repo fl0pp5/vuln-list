@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222546",
+      "Version": "oval:org.altlinux.errata:def:20222546",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2546: package `halibut` update to version 1.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2546",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2546",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-42612",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42612",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42613",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42613",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42614",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42614",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades halibut to version 1.3-alt1. \nSecurity Fix(es):\n\n * CVE-2021-42612: A use after free in cleanup_index in index.c in Halibut 1.2 allows an attacker to cause a segmentation fault or possibly have other unspecified impact via a crafted text document.\n\n * CVE-2021-42613: A double free in cleanup_index in index.c in Halibut 1.2 allows an attacker to cause a denial of service or possibly have other unspecified impact via a crafted text document.\n\n * CVE-2021-42614: A use after free in info_width_internal in bk_info.c in Halibut 1.2 allows an attacker to cause a segmentation fault or possibly have unspecified other impact via a crafted text document.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-02"
+          },
+          "Updated": {
+            "Date": "2022-09-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42612",
+              "Impact": "High",
+              "Public": "20220524",
+              "CveID": "CVE-2021-42612"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42613",
+              "Impact": "High",
+              "Public": "20220524",
+              "CveID": "CVE-2021-42613"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42614",
+              "Impact": "High",
+              "Public": "20220524",
+              "CveID": "CVE-2021-42614"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222546001",
+                "Comment": "halibut is earlier than 0:1.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

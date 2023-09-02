@@ -1,0 +1,160 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223386",
+      "Version": "oval:org.altlinux.errata:def:20223386",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3386: package `kernel-image-un-def` update to version 5.10.160-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3386",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3386",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00359",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00359",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3545",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3545",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.160-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00359: Уязвимость драйвера drivers/net/ethernet/netronome/nfp/nfpcore/nfp_cppcore.c ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-3545: A vulnerability has been found in Linux Kernel and classified as critical. Affected by this vulnerability is the function area_cache_get of the file drivers/net/ethernet/netronome/nfp/nfpcore/nfp_cppcore.c of the component IPsec. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier VDB-211045 was assigned to this vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-21"
+          },
+          "Updated": {
+            "Date": "2022-12-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00359",
+              "Impact": "High",
+              "Public": "20220811",
+              "CveID": "BDU:2023-00359"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3545",
+              "Impact": "High",
+              "Public": "20221017",
+              "CveID": "CVE-2022-3545"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.160-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223386010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.160-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

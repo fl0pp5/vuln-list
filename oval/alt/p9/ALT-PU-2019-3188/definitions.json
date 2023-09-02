@@ -1,0 +1,177 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193188",
+      "Version": "oval:org.altlinux.errata:def:20193188",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3188: package `389-ds-base` update to version 1.4.1.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3188",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3188",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05827",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05827",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10224",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10224",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14824",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14824",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3883",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3883",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades 389-ds-base to version 1.4.1.10-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05827: Уязвимость плагина deref сервера службы каталогов 389 Directory Server, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2019-10224: A flaw has been found in 389-ds-base versions 1.4.x.x before 1.4.1.3. When executed in verbose mode, the dscreate and dsconf commands may display sensitive information, such as the Directory Manager password. An attacker, able to see the screen or record the terminal standard error output, could use this flaw to gain sensitive information.\n\n * CVE-2019-14824: A flaw was found in the 'deref' plugin of 389-ds-base where it could use the 'search' permission to display attribute values. In some configurations, this could allow an authenticated attacker to view private attributes, such as password hashes.\n\n * CVE-2019-3883: In 389-ds-base up to version 1.4.1.2, requests are handled by workers threads. Each sockets will be waited by the worker for at most 'ioblocktimeout' seconds. However this timeout applies only for un-encrypted requests. Connections using SSL/TLS are not taking this timeout into account during reads, and may hang longer.An unauthenticated attacker could repeatedly create hanging LDAP requests to hang all the workers, resulting in a Denial of Service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-25"
+          },
+          "Updated": {
+            "Date": "2019-11-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://bdu.fstec.ru/vul/2022-05827",
+              "Impact": "Low",
+              "Public": "20191105",
+              "CveID": "BDU:2022-05827"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10224",
+              "Impact": "Low",
+              "Public": "20191125",
+              "CveID": "CVE-2019-10224"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14824",
+              "Impact": "Low",
+              "Public": "20191108",
+              "CveID": "CVE-2019-14824"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3883",
+              "Impact": "High",
+              "Public": "20190417",
+              "CveID": "CVE-2019-3883"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188001",
+                "Comment": "389-ds is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188002",
+                "Comment": "389-ds-base is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188003",
+                "Comment": "389-ds-base-devel is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188004",
+                "Comment": "389-ds-base-legacy-tools is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188005",
+                "Comment": "389-ds-base-libs is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188006",
+                "Comment": "cockpit-389-ds is earlier than 0:1.4.1.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193188007",
+                "Comment": "python3-module-lib389 is earlier than 0:1.4.1.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

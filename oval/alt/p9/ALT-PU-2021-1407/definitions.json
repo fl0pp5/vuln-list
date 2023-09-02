@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211407",
+      "Version": "oval:org.altlinux.errata:def:20211407",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1407: package `xterm` update to version 366-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1407",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1407",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-27135",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27135",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xterm to version 366-alt1. \nSecurity Fix(es):\n\n * CVE-2021-27135: xterm before Patch #366 allows remote attackers to execute arbitrary code or cause a denial of service (segmentation fault) via a crafted UTF-8 combining character sequence.\n\n * #39725: Собрать версию \u003e 365 (CVE-2021-27135)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-25"
+          },
+          "Updated": {
+            "Date": "2021-02-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27135",
+              "Impact": "Critical",
+              "Public": "20210210",
+              "CveID": "CVE-2021-27135"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39725",
+              "Href": "https://bugzilla.altlinux.org/39725",
+              "Data": "Собрать версию \u003e 365 (CVE-2021-27135)"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211407001",
+                "Comment": "xterm is earlier than 0:366-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211407002",
+                "Comment": "xterm-experimental is earlier than 0:366-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

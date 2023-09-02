@@ -1,0 +1,87 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212253",
+      "Version": "oval:org.altlinux.errata:def:20212253",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2253: package `packageinstall` update to version 1.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2253",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2253",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades packageinstall to version 1.3-alt1. \nSecurity Fix(es):\n\n * #30389: По завершении предлагает ждать\n\n * #30931: Неправильная обработка вывода apt-get\n\n * #39768: [FR] apt-get update",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-16"
+          },
+          "Updated": {
+            "Date": "2021-07-16"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "30389",
+              "Href": "https://bugzilla.altlinux.org/30389",
+              "Data": "По завершении предлагает ждать"
+            },
+            {
+              "Id": "30931",
+              "Href": "https://bugzilla.altlinux.org/30931",
+              "Data": "Неправильная обработка вывода apt-get"
+            },
+            {
+              "Id": "39768",
+              "Href": "https://bugzilla.altlinux.org/39768",
+              "Data": "[FR] apt-get update"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212253001",
+                "Comment": "packageinstall is earlier than 0:1.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222499",
+      "Version": "oval:org.altlinux.errata:def:20222499",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2499: package `zabbix` update to version 6.0.7-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2499",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2499",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00876",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00876",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00884",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00884",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01708",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01708",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01720",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01720",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-23131",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23131",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23132",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23132",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23133",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23133",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23134",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23134",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 6.0.7-alt2. \nSecurity Fix(es):\n\n * BDU:2022-00876: Уязвимость конфигурации setup.php универсальной системы мониторинга Zabbix , связанная с ошибками авторизации, позволяющая нарушителю изменить параметры конфигурации\n\n * BDU:2022-00884: Уязвимость универсальной системы мониторинга Zabbix , связанная с обходом аутентификации посредством спуфинга, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2023-01708: Уязвимость универсальной системы мониторинга Zabbix, связанная с непринятием мер по защите структуры веб-страницы, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2023-01720: Уязвимость универсальной системы мониторинга Zabbix, связанная с неправильным присвоением разрешений для критичного ресурса, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2022-23131: In the case of instances where the SAML SSO authentication is enabled (non-default), session data can be modified by a malicious actor, because a user login stored in the session was not verified. Malicious unauthenticated actor may exploit this issue to escalate privileges and gain admin access to Zabbix Frontend. To perform the attack, SAML authentication is required to be enabled and the actor has to know the username of Zabbix user (or use the guest account, which is disabled by default).\n\n * CVE-2022-23132: During Zabbix installation from RPM, DAC_OVERRIDE SELinux capability is in use to access PID files in [/var/run/zabbix] folder. In this case, Zabbix Proxy or Server processes can bypass file read, write and execute permissions check on the file system level\n\n * CVE-2022-23133: An authenticated user can create a hosts group from the configuration with XSS payload, which will be available for other users. When XSS is stored by an authenticated malicious actor and other users try to search for groups during new host creation, the XSS payload will fire and the actor can steal session cookies and perform session hijacking to impersonate users or take over their accounts.\n\n * CVE-2022-23134: After the initial setup process, some steps of setup.php file are reachable not only by super-administrators, but by unauthenticated users as well. Malicious actor can pass step checks and potentially change the configuration of Zabbix Frontend.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-25"
+          },
+          "Updated": {
+            "Date": "2022-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2022-00876",
+              "Impact": "Low",
+              "Public": "20220113",
+              "CveID": "BDU:2022-00876"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-290",
+              "Href": "https://bdu.fstec.ru/vul/2022-00884",
+              "Impact": "Critical",
+              "Public": "20220113",
+              "CveID": "BDU:2022-00884"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2023-01708",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "BDU:2023-01708"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-732",
+              "Href": "https://bdu.fstec.ru/vul/2023-01720",
+              "Impact": "High",
+              "Public": "20211201",
+              "CveID": "BDU:2023-01720"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-290",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23131",
+              "Impact": "Critical",
+              "Public": "20220113",
+              "CveID": "CVE-2022-23131"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23132",
+              "Impact": "High",
+              "Public": "20220113",
+              "CveID": "CVE-2022-23132"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23133",
+              "Impact": "Low",
+              "Public": "20220113",
+              "CveID": "CVE-2022-23133"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23134",
+              "Impact": "Low",
+              "Public": "20220113",
+              "CveID": "CVE-2022-23134"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499001",
+                "Comment": "zabbix-agent is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499003",
+                "Comment": "zabbix-agent2 is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499004",
+                "Comment": "zabbix-common is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499008",
+                "Comment": "zabbix-contrib is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499009",
+                "Comment": "zabbix-doc is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499010",
+                "Comment": "zabbix-java-gateway is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499013",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499014",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499015",
+                "Comment": "zabbix-proxy is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499016",
+                "Comment": "zabbix-proxy-common is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499017",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499018",
+                "Comment": "zabbix-server-common is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499019",
+                "Comment": "zabbix-server-mysql is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499020",
+                "Comment": "zabbix-server-pgsql is earlier than 1:6.0.7-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222499021",
+                "Comment": "zabbix-source is earlier than 1:6.0.7-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

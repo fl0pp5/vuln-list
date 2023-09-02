@@ -1,0 +1,292 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223092",
+      "Version": "oval:org.altlinux.errata:def:20223092",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3092: package `firmware-intel-ucode` update to version 18-alt1.20220510",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3092",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3092",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05481",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05481",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05482",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05482",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05803",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05803",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03898",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03898",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05683",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05683",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05690",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05690",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05788",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05788",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8694",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8694",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8695",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8695",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-0127",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-0127",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-0145",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-0145",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-0146",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-0146",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33120",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33120",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-21151",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-21151",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firmware-intel-ucode to version 18-alt1.20220510. \nSecurity Fix(es):\n\n * BDU:2020-05481: Уязвимость драйвера для процессоров Intel(R) ядра операционной системы Linux, связанная с недостатками контроля доступа, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2020-05482: Уязвимость интерфейса RAPL процессоров Intel, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2021-05803: Уязвимость микропрограммного обеспечения BIOS/UEFI процессоров Intel, позволяющая нарушителю повысить свои привилегии и получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-03898: Уязвимость микропрограммного обеспечения процессоров Intel, связанная с неверным управлением генерацией кода, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-05683: Уязвимость микрокода процессоров Intel Microcode, связанная с недостаточным использованием потоков, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05690: Уязвимость микрокода процессоров Intel Intel Microcode, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * BDU:2022-05788: Уязвимость микрокода процессоров Intel Microcode, связанная с ошибками инициализации памяти, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2020-8694: Insufficient access control in the Linux kernel driver for some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.\n\n * CVE-2020-8695: Observable discrepancy in the RAPL interface for some Intel(R) Processors may allow a privileged user to potentially enable information disclosure via local access.\n\n * CVE-2021-0127: Insufficient control flow management in some Intel(R) Processors may allow an authenticated user to potentially enable a denial of service via local access.\n\n * CVE-2021-0145: Improper initialization of shared resources in some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.\n\n * CVE-2021-0146: Hardware allows activation of test or debug logic at runtime for some Intel(R) processors which may allow an unauthenticated user to potentially enable escalation of privilege via physical access.\n\n * CVE-2021-33120: Out of bounds read under complex microarchitectural condition in memory subsystem for some Intel Atom(R) Processors may allow authenticated user to potentially enable information disclosure or cause denial of service via network access.\n\n * CVE-2022-21151: Processor optimization removal or modification of security-critical code for some Intel(R) Processors may allow an authenticated user to potentially enable information disclosure via local access.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-16"
+          },
+          "Updated": {
+            "Date": "2022-11-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2020-05481",
+              "Impact": "Low",
+              "Public": "20200424",
+              "CveID": "BDU:2020-05481"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-05482",
+              "Impact": "Low",
+              "Public": "20200424",
+              "CveID": "BDU:2020-05482"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:P/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2021-05803",
+              "Impact": "High",
+              "Public": "20210911",
+              "CveID": "BDU:2021-05803"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-94, CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2022-03898",
+              "Impact": "Low",
+              "Public": "20211115",
+              "CveID": "BDU:2022-03898"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-691",
+              "Href": "https://bdu.fstec.ru/vul/2022-05683",
+              "Impact": "Low",
+              "Public": "20200122",
+              "CveID": "BDU:2022-05683"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-05690",
+              "Impact": "Low",
+              "Public": "20220209",
+              "CveID": "BDU:2022-05690"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-665",
+              "Href": "https://bdu.fstec.ru/vul/2022-05788",
+              "Impact": "Low",
+              "Public": "20201022",
+              "CveID": "BDU:2022-05788"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8694",
+              "Impact": "Low",
+              "Public": "20201112",
+              "CveID": "CVE-2020-8694"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8695",
+              "Impact": "Low",
+              "Public": "20201112",
+              "CveID": "CVE-2020-8695"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-0127",
+              "Impact": "Low",
+              "Public": "20220209",
+              "CveID": "CVE-2021-0127"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-0145",
+              "Impact": "Low",
+              "Public": "20220209",
+              "CveID": "CVE-2021-0145"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-0146",
+              "Impact": "Low",
+              "Public": "20211117",
+              "CveID": "CVE-2021-0146"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33120",
+              "Impact": "Low",
+              "Public": "20220209",
+              "CveID": "CVE-2021-33120"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-21151",
+              "Impact": "Low",
+              "Public": "20220512",
+              "CveID": "CVE-2022-21151"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223092001",
+                "Comment": "firmware-intel-ucode is earlier than 2:18-alt1.20220510"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

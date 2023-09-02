@@ -1,0 +1,137 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223096",
+      "Version": "oval:org.altlinux.errata:def:20223096",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3096: package `gmp` update to version 6.2.1-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3096",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3096",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05776",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05776",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-43618",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43618",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gmp to version 6.2.1-alt5. \nSecurity Fix(es):\n\n * BDU:2022-05776: Уязвимость компонента mpz/inp_raw.c библиотеки арифметических операций GMP на 32-разрядных платформах, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-43618: GNU Multiple Precision Arithmetic Library (GMP) through 6.2.1 has an mpz/inp_raw.c integer overflow and resultant buffer overflow via crafted input, leading to a segmentation fault on 32-bit platforms.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-17"
+          },
+          "Updated": {
+            "Date": "2022-11-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-05776",
+              "Impact": "High",
+              "Public": "20210915",
+              "CveID": "BDU:2022-05776"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43618",
+              "Impact": "High",
+              "Public": "20211115",
+              "CveID": "CVE-2021-43618"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223096001",
+                "Comment": "libgmp-devel is earlier than 0:6.2.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223096002",
+                "Comment": "libgmp10 is earlier than 0:6.2.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223096003",
+                "Comment": "libgmpxx-devel is earlier than 0:6.2.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223096004",
+                "Comment": "libgmpxx4 is earlier than 0:6.2.1-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

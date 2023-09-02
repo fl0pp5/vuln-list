@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202927",
+      "Version": "oval:org.altlinux.errata:def:20202927",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2927: package `mailutils` update to version 3.10-alt0.20200913.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2927",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2927",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-18862",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18862",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mailutils to version 3.10-alt0.20200913.1. \nSecurity Fix(es):\n\n * CVE-2019-18862: maidag in GNU Mailutils before 3.8 is installed setuid and allows local privilege escalation in the url mode.\n\n * #38371: [FR] сборка без emacs при --without mh",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-02"
+          },
+          "Updated": {
+            "Date": "2020-10-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18862",
+              "Impact": "High",
+              "Public": "20191111",
+              "CveID": "CVE-2019-18862"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "38371",
+              "Href": "https://bugzilla.altlinux.org/38371",
+              "Data": "[FR] сборка без emacs при --without mh"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927001",
+                "Comment": "libmailutils is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927002",
+                "Comment": "libmailutils-devel is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927003",
+                "Comment": "libmailutils-devel-static is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927004",
+                "Comment": "mailutils is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927005",
+                "Comment": "mailutils-comsatd is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927006",
+                "Comment": "mailutils-delivery-agents is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927007",
+                "Comment": "mailutils-doc is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927008",
+                "Comment": "mailutils-imap4d is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927009",
+                "Comment": "mailutils-locales is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927010",
+                "Comment": "mailutils-mh is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927011",
+                "Comment": "mailutils-pop3d is earlier than 0:3.10-alt0.20200913.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202927012",
+                "Comment": "mailutils-sieve is earlier than 0:3.10-alt0.20200913.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

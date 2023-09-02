@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231005",
+      "Version": "oval:org.altlinux.errata:def:20231005",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1005: package `libmspack` update to version 0.6-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1005",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1005",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01362",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01362",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-18584",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-18584",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libmspack to version 0.6-alt2. \nSecurity Fix(es):\n\n * BDU:2019-01362: Уязвимость библиотеки Libmspack и утилиты разархивации CAB-файлов СabExtract, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2018-18584: In mspack/cab.h in libmspack before 0.8alpha and cabextract before 1.8, the CAB block input buffer is one byte too small for the maximal Quantum block, leading to an out-of-bounds write.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-04"
+          },
+          "Updated": {
+            "Date": "2023-01-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-01362",
+              "Impact": "High",
+              "Public": "20181022",
+              "CveID": "BDU:2019-01362"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-18584",
+              "Impact": "Low",
+              "Public": "20181023",
+              "CveID": "CVE-2018-18584"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231005001",
+                "Comment": "libmspack is earlier than 0:0.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231005002",
+                "Comment": "libmspack-devel is earlier than 0:0.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231005003",
+                "Comment": "libmspack-tools is earlier than 0:0.6-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222563",
+      "Version": "oval:org.altlinux.errata:def:20222563",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2563: package `cifs-utils` update to version 6.15-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2563",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2563",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04321",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04321",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04338",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04338",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00213",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14342",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14342",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20208",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27239",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27239",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-29869",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-29869",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cifs-utils to version 6.15-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04321: Уязвимость пакета утилит для монтирования сетевых файловых систем CIFS cifs-utils операционной системы Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-04338: Уязвимость компонента mount.cifs.c пакета утилит для монтирования сетевых файловых систем CIFS cifs-utils операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2023-00213: Уязвимость команды arbitrary утилит файловой системы CIFS CIFS-utils, связанная с отсутствием мер по очистке входных данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-14342: It was found that cifs-utils' mount.cifs was invoking a shell when requesting the Samba password, which could be used to inject arbitrary commands. An attacker able to invoke mount.cifs with special permission, such as via sudo rules, could use this flaw to escalate their privileges.\n\n * CVE-2021-20208: A flaw was found in cifs-utils in versions before 6.13. A user when mounting a krb5 CIFS file system from within a container can use Kerberos credentials of the host. The highest threat from this vulnerability is to data confidentiality and integrity.\n\n * CVE-2022-27239: In cifs-utils through 6.14, a stack-based buffer overflow when parsing the mount.cifs ip= command-line argument could lead to local attackers gaining root privileges.\n\n * CVE-2022-29869: cifs-utils through 6.14, with verbose logging, can cause an information leak when a file contains = (equal sign) characters but is not a valid credentials file.\n\n * #40887: Не работает монтирование сетевой папки с помощью pam_mount",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-05"
+          },
+          "Updated": {
+            "Date": "2022-09-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-668",
+              "Href": "https://bdu.fstec.ru/vul/2022-04321",
+              "Impact": "Low",
+              "Public": "20220427",
+              "CveID": "BDU:2022-04321"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-04338",
+              "Impact": "High",
+              "Public": "20220427",
+              "CveID": "BDU:2022-04338"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2023-00213",
+              "Impact": "High",
+              "Public": "20200716",
+              "CveID": "BDU:2023-00213"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14342",
+              "Impact": "High",
+              "Public": "20200909",
+              "CveID": "CVE-2020-14342"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:C/C:L/I:H/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20208",
+              "Impact": "Low",
+              "Public": "20210419",
+              "CveID": "CVE-2021-20208"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27239",
+              "Impact": "High",
+              "Public": "20220427",
+              "CveID": "CVE-2022-27239"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-29869",
+              "Impact": "Low",
+              "Public": "20220428",
+              "CveID": "CVE-2022-29869"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40887",
+              "Href": "https://bugzilla.altlinux.org/40887",
+              "Data": "Не работает монтирование сетевой папки с помощью pam_mount"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222563001",
+                "Comment": "cifs-utils is earlier than 0:6.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222563002",
+                "Comment": "cifs-utils-devel is earlier than 0:6.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222563003",
+                "Comment": "pam_cifscreds is earlier than 0:6.15-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

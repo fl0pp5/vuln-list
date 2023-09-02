@@ -1,0 +1,329 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192234",
+      "Version": "oval:org.altlinux.errata:def:20192234",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2234: package `kernel-image-tegra` update to version 4.9.140-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2234",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2234",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01409",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01409",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02194",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02194",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02195",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02195",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02780",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02780",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02782",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02782",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03629",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03629",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03996",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03996",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00842",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00842",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-19985",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-19985",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11477",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11477",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11478",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11478",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11833",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11833",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3701",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3701",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3819",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3819",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3882",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3882",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-7222",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-7222",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-tegra to version 4.9.140-alt2. \nSecurity Fix(es):\n\n * BDU:2019-01409: Уязвимость функции hso_get_config_data ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02194: Уязвимость механизма TCP Selective Acknowledgement ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02195: Уязвимость механизма TCP Selective Acknowledgement ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02780: Уязвимость файла fs/ext4/extents.c ядра операционной системы Linux, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2019-02782: Уязвимость функции hid_debug_events_read () ядра операционной системы Linux, позволяющая нарушителю вызвать отказ  в обслуживании\n\n * BDU:2019-03629: Уязвимость драйвера vfio ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03996: Уязвимость ядра операционной системы Linux, связанная с отсутствием защиты служебных данных, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2020-00842: Уязвимость в функции can_can_gw_rcv in net/can/gw.c ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2018-19985: The function hso_get_config_data in drivers/net/usb/hso.c in the Linux kernel through 4.19.8 reads if_num from the USB device (as a u8) and uses it to index a small array, resulting in an object out-of-bounds (OOB) read that potentially allows arbitrary read in the kernel address space.\n\n * CVE-2019-11477: Jonathan Looney discovered that the TCP_SKB_CB(skb)-\u003etcp_gso_segs value was subject to an integer overflow in the Linux kernel when handling TCP Selective Acknowledgments (SACKs). A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit 3b4929f65b0d8249f19a50245cd88ed1a2f78cff.\n\n * CVE-2019-11478: Jonathan Looney discovered that the TCP retransmission queue implementation in tcp_fragment in the Linux kernel could be fragmented when handling certain TCP Selective Acknowledgment (SACK) sequences. A remote attacker could use this to cause a denial of service. This has been fixed in stable kernel releases 4.4.182, 4.9.182, 4.14.127, 4.19.52, 5.1.11, and is fixed in commit f070ef2ac66716357066b683fb0baf55f8191a2e.\n\n * CVE-2019-11833: fs/ext4/extents.c in the Linux kernel through 5.1.2 does not zero out the unused memory region in the extent tree block, which might allow local users to obtain sensitive information by reading uninitialized data in the filesystem.\n\n * CVE-2019-3701: An issue was discovered in can_can_gw_rcv in net/can/gw.c in the Linux kernel through 4.19.13. The CAN frame modification rules allow bitwise logical operations that can be also applied to the can_dlc field. The privileged user \"root\" with CAP_NET_ADMIN can create a CAN frame modification rule that makes the data length code a higher value than the available CAN frame data size. In combination with a configured checksum calculation where the result is stored relatively to the end of the data (e.g. cgw_csum_xor_rel) the tail of the skb (e.g. frag_list pointer in skb_shared_info) can be rewritten which finally can cause a system crash. Because of a missing check, the CAN drivers may write arbitrary content beyond the data registers in the CAN controller's I/O memory when processing can-gw manipulated outgoing frames.\n\n * CVE-2019-3819: A flaw was found in the Linux kernel in the function hid_debug_events_read() in drivers/hid/hid-debug.c file which may enter an infinite loop with certain parameters passed from a userspace. A local privileged user (\"root\") can cause a system lock up and a denial of service. Versions from v4.18 and newer are vulnerable.\n\n * CVE-2019-3882: A flaw was found in the Linux kernel's vfio interface implementation that permits violation of the user's locked memory limit. If a device is bound to a vfio driver, such as vfio-pci, and the local attacker is administratively granted ownership of the device, it may cause a system memory exhaustion and thus a denial of service (DoS). Versions 3.10, 4.14 and 4.18 are vulnerable.\n\n * CVE-2019-7222: The KVM implementation in the Linux kernel through 4.20.5 has an Information Leak.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-07-10"
+          },
+          "Updated": {
+            "Date": "2019-07-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2019-01409",
+              "Impact": "Low",
+              "Public": "20181212",
+              "CveID": "BDU:2019-01409"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-680",
+              "Href": "https://bdu.fstec.ru/vul/2019-02194",
+              "Impact": "High",
+              "Public": "20190617",
+              "CveID": "BDU:2019-02194"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02195",
+              "Impact": "High",
+              "Public": "20190617",
+              "CveID": "BDU:2019-02195"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2019-02780",
+              "Impact": "Low",
+              "Public": "20190515",
+              "CveID": "BDU:2019-02780"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02782",
+              "Impact": "Low",
+              "Public": "20190124",
+              "CveID": "BDU:2019-02782"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03629",
+              "Impact": "Low",
+              "Public": "20190712",
+              "CveID": "BDU:2019-03629"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2019-03996",
+              "Impact": "Low",
+              "Public": "20190202",
+              "CveID": "BDU:2019-03996"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-00842",
+              "Impact": "Low",
+              "Public": "20190103",
+              "CveID": "BDU:2020-00842"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-19985",
+              "Impact": "Low",
+              "Public": "20190321",
+              "CveID": "CVE-2018-19985"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11477",
+              "Impact": "High",
+              "Public": "20190619",
+              "CveID": "CVE-2019-11477"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11478",
+              "Impact": "High",
+              "Public": "20190619",
+              "CveID": "CVE-2019-11478"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11833",
+              "Impact": "Low",
+              "Public": "20190515",
+              "CveID": "CVE-2019-11833"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3701",
+              "Impact": "Low",
+              "Public": "20190103",
+              "CveID": "CVE-2019-3701"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3819",
+              "Impact": "Low",
+              "Public": "20190125",
+              "CveID": "CVE-2019-3819"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3882",
+              "Impact": "Low",
+              "Public": "20190424",
+              "CveID": "CVE-2019-3882"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-7222",
+              "Impact": "Low",
+              "Public": "20190321",
+              "CveID": "CVE-2019-7222"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192234001",
+                "Comment": "kernel-headers-modules-tegra is earlier than 0:4.9.140-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192234002",
+                "Comment": "kernel-headers-tegra is earlier than 0:4.9.140-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192234003",
+                "Comment": "kernel-image-tegra is earlier than 0:4.9.140-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

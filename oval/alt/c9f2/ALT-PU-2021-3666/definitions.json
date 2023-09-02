@@ -1,0 +1,267 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213666",
+      "Version": "oval:org.altlinux.errata:def:20213666",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3666: package `curl` update to version 7.79.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3666",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3666",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05346",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05346",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05649",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05649",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06010",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06010",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00343",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00343",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02169",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02169",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02170",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02170",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22922",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22922",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22923",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22923",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22925",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22925",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22926",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22926",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22945",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22945",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22946",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22946",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22947",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22947",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.79.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05346: Уязвимость реализации протокола STARTTLS программного средства для взаимодействия с серверами cURL, позволяющая нарушителю проводить атаки типа «человек посередине»\n\n * BDU:2021-05649: Уязвимость реализации команды «--ssl-reqd» программного средства для взаимодействия с серверами cURL, позволяющая нарушителю проводить атаки типа \u0026quot;человек посередине\u0026quot;\n\n * BDU:2021-06010: Уязвимость утилиты cURL, связанная с повторным освобождением памяти, позволяющая нарушителю выполнить отказ в обслуживании\n\n * BDU:2022-00343: Уязвимость служебной программы командной строки cURL, связанная с использованием неинициализированного ресурса, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-02169: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с недостатками алгоритма вычисления контрольной суммы, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2022-02170: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с недостаточной защитой регистрационных данных, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2021-22922: When curl is instructed to download content using the metalink feature, thecontents is verified against a hash provided in the metalink XML file.The metalink XML file points out to the client how to get the same contentfrom a set of different URLs, potentially hosted by different servers and theclient can then download the file from one or several of them. In a serial orparallel manner.If one of the servers hosting the contents has been breached and the contentsof the specific file on that server is replaced with a modified payload, curlshould detect this when the hash of the file mismatches after a completeddownload. It should remove the contents and instead try getting the contentsfrom another URL. This is not done, and instead such a hash mismatch is onlymentioned in text and the potentially malicious content is kept in the file ondisk.\n\n * CVE-2021-22923: When curl is instructed to get content using the metalink feature, and a user name and password are used to download the metalink XML file, those same credentials are then subsequently passed on to each of the servers from which curl will download or try to download the contents from. Often contrary to the user's expectations and intentions and without telling the user it happened.\n\n * CVE-2021-22925: curl supports the `-t` command line option, known as `CURLOPT_TELNETOPTIONS`in libcurl. This rarely used option is used to send variable=content pairs toTELNET servers.Due to flaw in the option parser for sending `NEW_ENV` variables, libcurlcould be made to pass on uninitialized data from a stack based buffer to theserver. Therefore potentially revealing sensitive internal information to theserver using a clear-text network protocol.This could happen because curl did not call and use sscanf() correctly whenparsing the string provided by the application.\n\n * CVE-2021-22926: libcurl-using applications can ask for a specific client certificate to be used in a transfer. This is done with the `CURLOPT_SSLCERT` option (`--cert` with the command line tool).When libcurl is built to use the macOS native TLS library Secure Transport, an application can ask for the client certificate by name or with a file name - using the same option. If the name exists as a file, it will be used instead of by name.If the appliction runs with a current working directory that is writable by other users (like `/tmp`), a malicious user can create a file name with the same name as the app wants to use by name, and thereby trick the application to use the file based cert instead of the one referred to by name making libcurl send the wrong client certificate in the TLS connection handshake.\n\n * CVE-2021-22945: When sending data to an MQTT server, libcurl \u003c= 7.73.0 and 7.78.0 could in some circumstances erroneously keep a pointer to an already freed memory area and both use that again in a subsequent call to send data and also free it *again*.\n\n * CVE-2021-22946: A user can tell curl \u003e= 7.20.0 and \u003c= 7.78.0 to require a successful upgrade to TLS when speaking to an IMAP, POP3 or FTP server (`--ssl-reqd` on the command line or`CURLOPT_USE_SSL` set to `CURLUSESSL_CONTROL` or `CURLUSESSL_ALL` withlibcurl). This requirement could be bypassed if the server would return a properly crafted but perfectly legitimate response.This flaw would then make curl silently continue its operations **withoutTLS** contrary to the instructions and expectations, exposing possibly sensitive data in clear text over the network.\n\n * CVE-2021-22947: When curl \u003e= 7.20.0 and \u003c= 7.78.0 connects to an IMAP or POP3 server to retrieve data using STARTTLS to upgrade to TLS security, the server can respond and send back multiple responses at once that curl caches. curl would then upgrade to TLS but not flush the in-queue of cached responses but instead continue using and trustingthe responses it got *before* the TLS handshake as if they were authenticated.Using this flaw, it allows a Man-In-The-Middle attacker to first inject the fake responses, then pass-through the TLS traffic from the legitimate server and trick curl into sending data back to the user thinking the attacker's injected data comes from the TLS-protected server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-30"
+          },
+          "Updated": {
+            "Date": "2021-12-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+              "Cwe": "CWE-310, CWE-345",
+              "Href": "https://bdu.fstec.ru/vul/2021-05346",
+              "Impact": "High",
+              "Public": "20210915",
+              "CveID": "BDU:2021-05346"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+              "Cwe": "CWE-319, CWE-325",
+              "Href": "https://bdu.fstec.ru/vul/2021-05649",
+              "Impact": "High",
+              "Public": "20210915",
+              "CveID": "BDU:2021-05649"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2021-06010",
+              "Impact": "Low",
+              "Public": "20210915",
+              "CveID": "BDU:2021-06010"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://bdu.fstec.ru/vul/2022-00343",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "BDU:2022-00343"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-354",
+              "Href": "https://bdu.fstec.ru/vul/2022-02169",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "BDU:2022-02169"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://bdu.fstec.ru/vul/2022-02170",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "BDU:2022-02170"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-755",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22922",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "CVE-2021-22922"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22923",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "CVE-2021-22923"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22925",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "CVE-2021-22925"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22926",
+              "Impact": "High",
+              "Public": "20210805",
+              "CveID": "CVE-2021-22926"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22945",
+              "Impact": "Critical",
+              "Public": "20210923",
+              "CveID": "CVE-2021-22945"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22946",
+              "Impact": "High",
+              "Public": "20210929",
+              "CveID": "CVE-2021-22946"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-345",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22947",
+              "Impact": "Low",
+              "Public": "20210929",
+              "CveID": "CVE-2021-22947"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213666001",
+                "Comment": "curl is earlier than 0:7.79.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213666002",
+                "Comment": "libcurl is earlier than 0:7.79.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213666003",
+                "Comment": "libcurl-devel is earlier than 0:7.79.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213666004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.79.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

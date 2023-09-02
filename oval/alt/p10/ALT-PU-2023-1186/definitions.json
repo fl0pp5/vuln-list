@@ -1,0 +1,131 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231186",
+      "Version": "oval:org.altlinux.errata:def:20231186",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1186: package `wavpack` update to version 5.6.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1186",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1186",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-44269",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44269",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2476",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2476",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wavpack to version 5.6.0-alt1. \nSecurity Fix(es):\n\n * CVE-2021-44269: An out of bounds read was found in Wavpack 5.4.0 in processing *.WAV files. This issue triggered in function WavpackPackSamples of file src/pack_utils.c, tainted variable cnt is too large, that makes pointer sptr read beyond heap bound.\n\n * CVE-2022-2476: A null pointer dereference bug was found in wavpack-5.4.0 The results from the ASAN log: AddressSanitizer:DEADLYSIGNAL ===================================================================84257==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x561b47a970c6 bp 0x7fff13952fb0 sp 0x7fff1394fca0 T0) ==84257==The signal is caused by a WRITE memory access. ==84257==Hint: address points to the zero page. #0 0x561b47a970c5 in main cli/wvunpack.c:834 #1 0x7efc4f5c0082 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x24082) #2 0x561b47a945ed in _start (/usr/local/bin/wvunpack+0xa5ed) AddressSanitizer can not provide additional info. SUMMARY: AddressSanitizer: SEGV cli/wvunpack.c:834 in main ==84257==ABORTING",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-06"
+          },
+          "Updated": {
+            "Date": "2023-02-06"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44269",
+              "Impact": "Low",
+              "Public": "20220310",
+              "CveID": "CVE-2021-44269"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2476",
+              "Impact": "Low",
+              "Public": "20220719",
+              "CveID": "CVE-2022-2476"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231186001",
+                "Comment": "libwavpack is earlier than 0:5.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231186002",
+                "Comment": "libwavpack-devel is earlier than 0:5.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231186003",
+                "Comment": "wavpack is earlier than 0:5.6.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

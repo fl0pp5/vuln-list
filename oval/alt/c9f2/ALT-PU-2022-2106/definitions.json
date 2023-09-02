@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222106",
+      "Version": "oval:org.altlinux.errata:def:20222106",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2106: package `php7-zip` update to version 7.4.30-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2106",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2106",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03725",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03725",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05351",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05351",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-31625",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31625",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-31626",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31626",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-zip to version 7.4.30-alt1. \nSecurity Fix(es):\n\n * BDU:2022-03725: Уязвимость функции mysqlnd/pdo (mysqlnd_wireprotocol.c) интерпретатора языка программирования PHP, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-05351: Уязвимость функции pg_query_params() интерпретатора языка программирования PHP, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-31625: In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when using Postgres database extension, supplying invalid parameters to the parametrized query may lead to PHP attempting to free memory using uninitialized data as pointers. This could lead to RCE vulnerability or denial of service.\n\n * CVE-2022-31626: In PHP versions 7.4.x below 7.4.30, 8.0.x below 8.0.20, and 8.1.x below 8.1.7, when pdo_mysql extension with mysqlnd driver, if the third party is allowed to supply host to connect to and the password for the connection, password of excessive length can trigger a buffer overflow in PHP, which can lead to a remote code execution vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-21"
+          },
+          "Updated": {
+            "Date": "2022-06-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-03725",
+              "Impact": "High",
+              "Public": "20220516",
+              "CveID": "BDU:2022-03725"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05351",
+              "Impact": "Critical",
+              "Public": "20220227",
+              "CveID": "BDU:2022-05351"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31625",
+              "Impact": "High",
+              "Public": "20220616",
+              "CveID": "CVE-2022-31625"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31626",
+              "Impact": "High",
+              "Public": "20220616",
+              "CveID": "CVE-2022-31626"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222106001",
+                "Comment": "php7-zip is earlier than 0:7.4.30-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

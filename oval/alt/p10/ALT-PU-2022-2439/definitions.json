@@ -1,0 +1,152 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222439",
+      "Version": "oval:org.altlinux.errata:def:20222439",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2439: package `privoxy` update to version 3.0.33-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2439",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2439",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-44540",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44540",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44541",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44541",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44542",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44542",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44543",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44543",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades privoxy to version 3.0.33-alt1. \nSecurity Fix(es):\n\n * CVE-2021-44540: A vulnerability was found in Privoxy which was fixed in get_url_spec_param() by freeing memory of compiled pattern spec before bailing.\n\n * CVE-2021-44541: A vulnerability was found in Privoxy which was fixed in process_encrypted_request_headers() by freeing header memory when failing to get the request destination.\n\n * CVE-2021-44542: A memory leak vulnerability was found in Privoxy when handling errors.\n\n * CVE-2021-44543: An XSS vulnerability was found in Privoxy which was fixed in cgi_error_no_template() by encode the template name when Privoxy is configured to servce the user-manual itself.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-16"
+          },
+          "Updated": {
+            "Date": "2022-08-16"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44540",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "CVE-2021-44540"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44541",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "CVE-2021-44541"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44542",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "CVE-2021-44542"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44543",
+              "Impact": "Low",
+              "Public": "20211223",
+              "CveID": "CVE-2021-44543"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222439001",
+                "Comment": "privoxy is earlier than 0:3.0.33-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

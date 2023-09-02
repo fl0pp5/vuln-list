@@ -1,0 +1,230 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221300",
+      "Version": "oval:org.altlinux.errata:def:20221300",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1300: package `kernel-image-un-def` update to version 5.10.100-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1300",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1300",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00737",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00737",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02564",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02564",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03863",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03863",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0435",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0435",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0492",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1998",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1998",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2938",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2938",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.100-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00737: Уязвимость функции cgroup_release_agent_write (kernel/cgroup/cgroup-v1.c) ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии в системе или вызвать отказ в обслуживании\n\n * BDU:2022-02564: Уязвимость реализации сетевого протокола TIPC операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2022-03863: Уязвимость реализации функции copy_info_records_to_user() ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии или вызвать отказ в обслуживании\n\n * CVE-2022-0435: A stack overflow flaw was found in the Linux kernel's TIPC protocol functionality in the way a user sends a packet with malicious content where the number of domain member nodes is higher than the 64 allowed. This flaw allows a remote user to crash the system or possibly escalate their privileges if they have access to the TIPC network.\n\n * CVE-2022-0492: A vulnerability was found in the Linux kernel’s cgroup_release_agent_write in the kernel/cgroup/cgroup-v1.c function. This flaw, under certain circumstances, allows the use of the cgroups v1 release_agent feature to escalate privileges and bypass the namespace isolation unexpectedly.\n\n * CVE-2022-1998: A use after free in the Linux kernel File System notify functionality was found in the way user triggers copy_info_records_to_user() call to fail in copy_event_to_user(). A local user could use this flaw to crash the system or potentially escalate their privileges on the system.\n\n * CVE-2022-2938: A flaw was found in the Linux kernel's implementation of Pressure Stall Information. While the feature is disabled by default, it could allow an attacker to crash the system or have other memory-corruption side effects.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-16"
+          },
+          "Updated": {
+            "Date": "2022-02-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-00737",
+              "Impact": "High",
+              "Public": "20220120",
+              "CveID": "BDU:2022-00737"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-02564",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "BDU:2022-02564"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-03863",
+              "Impact": "High",
+              "Public": "20220127",
+              "CveID": "BDU:2022-03863"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0435",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2022-0435"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0492",
+              "Impact": "High",
+              "Public": "20220303",
+              "CveID": "CVE-2022-0492"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1998",
+              "Impact": "High",
+              "Public": "20220609",
+              "CveID": "CVE-2022-1998"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2938",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "CVE-2022-2938"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.100-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221300010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.100-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211940",
+      "Version": "oval:org.altlinux.errata:def:20211940",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1940: package `golang` update to version 1.15.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1940",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1940",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00723",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00723",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01685",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01685",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01781",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01781",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01783",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01783",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33194",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33194",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33195",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33195",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33196",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33196",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33197",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33197",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33198",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33198",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.15.13-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00723: Уязвимость компонента math/big.Rat и метода unmarshaltext языка программирования Go, позволяющая нарушителю вызвать аварийный сбой и перезапуск устройства\n\n * BDU:2022-01685: Уязвимость компонента archive/zip языка программирования Golang, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01781: Уязвимость компонента net/http/httputil языка программирования Golang, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2022-01783: Уязвимость функций net.Lookup{Addr,CNAME,Host} языка программирования Golang, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-33194: golang.org/x/net before v0.0.0-20210520170846-37e1c6afe023 allows attackers to cause a denial of service (infinite loop) via crafted ParseFragment input.\n\n * CVE-2021-33195: Go before 1.15.13 and 1.16.x before 1.16.5 has functions for DNS lookups that do not validate replies from DNS servers, and thus a return value may contain an unsafe injection (e.g., XSS) that does not conform to the RFC1035 format.\n\n * CVE-2021-33196: In archive/zip in Go before 1.15.13 and 1.16.x before 1.16.5, a crafted file count (in an archive's header) can cause a NewReader or OpenReader panic.\n\n * CVE-2021-33197: In Go before 1.15.13 and 1.16.x before 1.16.5, some configurations of ReverseProxy (from net/http/httputil) result in a situation where an attacker is able to drop arbitrary headers.\n\n * CVE-2021-33198: In Go before 1.15.13 and 1.16.x before 1.16.5, there can be a panic for a large exponent to the math/big.Rat SetString or UnmarshalText method.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-07"
+          },
+          "Updated": {
+            "Date": "2021-06-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-789",
+              "Href": "https://bdu.fstec.ru/vul/2022-00723",
+              "Impact": "High",
+              "Public": "20210802",
+              "CveID": "BDU:2022-00723"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-01685",
+              "Impact": "High",
+              "Public": "20210518",
+              "CveID": "BDU:2022-01685"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://bdu.fstec.ru/vul/2022-01781",
+              "Impact": "Low",
+              "Public": "20210802",
+              "CveID": "BDU:2022-01781"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2022-01783",
+              "Impact": "High",
+              "Public": "20210802",
+              "CveID": "BDU:2022-01783"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33194",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2021-33194"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33195",
+              "Impact": "High",
+              "Public": "20210802",
+              "CveID": "CVE-2021-33195"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33196",
+              "Impact": "High",
+              "Public": "20210802",
+              "CveID": "CVE-2021-33196"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33197",
+              "Impact": "Low",
+              "Public": "20210802",
+              "CveID": "CVE-2021-33197"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33198",
+              "Impact": "High",
+              "Public": "20210802",
+              "CveID": "CVE-2021-33198"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940001",
+                "Comment": "golang is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940002",
+                "Comment": "golang-docs is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940003",
+                "Comment": "golang-gdb is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940004",
+                "Comment": "golang-misc is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940005",
+                "Comment": "golang-shared is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940006",
+                "Comment": "golang-src is earlier than 0:1.15.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211940007",
+                "Comment": "golang-tests is earlier than 0:1.15.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

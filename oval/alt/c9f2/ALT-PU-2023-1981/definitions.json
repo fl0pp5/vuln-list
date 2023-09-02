@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231981",
+      "Version": "oval:org.altlinux.errata:def:20231981",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1981: package `libbsd` update to version 0.10.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1981",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1981",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03611",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03611",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20367",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20367",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libbsd to version 0.10.0-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03611: Уязвимость библиотека для упрощение переноса проектов Libbsd, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2019-20367: nlist.c in libbsd before 0.10.0 has an out-of-bounds read during a comparison for a symbol name from the string table (strtab).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-13"
+          },
+          "Updated": {
+            "Date": "2023-06-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03611",
+              "Impact": "Critical",
+              "Public": "20200108",
+              "CveID": "BDU:2021-03611"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20367",
+              "Impact": "Critical",
+              "Public": "20200108",
+              "CveID": "CVE-2019-20367"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231981001",
+                "Comment": "libbsd is earlier than 0:0.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231981002",
+                "Comment": "libbsd-devel is earlier than 0:0.10.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

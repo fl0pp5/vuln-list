@@ -1,0 +1,135 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231647",
+      "Version": "oval:org.altlinux.errata:def:20231647",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1647: package `runc` update to version 1.1.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1647",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1647",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-25809",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25809",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27561",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27561",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28642",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28642",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades runc to version 1.1.5-alt1. \nSecurity Fix(es):\n\n * CVE-2023-25809: runc is a CLI tool for spawning and running containers according to the OCI specification. In affected versions it was found that rootless runc makes `/sys/fs/cgroup` writable in following conditons: 1. when runc is executed inside the user namespace, and the `config.json` does not specify the cgroup namespace to be unshared (e.g.., `(docker|podman|nerdctl) run --cgroupns=host`, with Rootless Docker/Podman/nerdctl) or 2. when runc is executed outside the user namespace, and `/sys` is mounted with `rbind, ro` (e.g., `runc spec --rootless`; this condition is very rare). A container may gain the write access to user-owned cgroup hierarchy `/sys/fs/cgroup/user.slice/...` on the host . Other users's cgroup hierarchies are not affected. Users are advised to upgrade to version 1.1.5. Users unable to upgrade may unshare the cgroup namespace (`(docker|podman|nerdctl) run --cgroupns=private)`. This is the default behavior of Docker/Podman/nerdctl on cgroup v2 hosts. or add `/sys/fs/cgroup` to `maskedPaths`.\n\n * CVE-2023-27561: runc through 1.1.4 has Incorrect Access Control leading to Escalation of Privileges, related to libcontainer/rootfs_linux.go. To exploit this, an attacker must be able to spawn two containers with custom volume-mount configurations, and be able to run custom images. NOTE: this issue exists because of a CVE-2019-19921 regression.\n\n * CVE-2023-28642: runc is a CLI tool for spawning and running containers according to the OCI specification. It was found that AppArmor can be bypassed when `/proc` inside the container is symlinked with a specific mount configuration. This issue has been fixed in runc version 1.1.5, by prohibiting symlinked `/proc`. See PR #3785 for details. users are advised to upgrade. Users unable to upgrade should avoid using an untrusted container image.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-20"
+          },
+          "Updated": {
+            "Date": "2023-04-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-281",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25809",
+              "Impact": "Low",
+              "Public": "20230329",
+              "CveID": "CVE-2023-25809"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-706",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27561",
+              "Impact": "High",
+              "Public": "20230303",
+              "CveID": "CVE-2023-27561"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28642",
+              "Impact": "High",
+              "Public": "20230329",
+              "CveID": "CVE-2023-28642"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231647001",
+                "Comment": "runc is earlier than 0:1.1.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

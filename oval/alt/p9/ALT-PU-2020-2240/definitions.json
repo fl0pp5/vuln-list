@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202240",
+      "Version": "oval:org.altlinux.errata:def:20202240",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2240: package `kernel-image-std-def` update to version 5.4.48-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2240",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2240",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03071",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03071",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06410",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06410",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-10757",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10757",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-13974",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13974",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.48-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03071: Уязвимость компонента drivers/tty/vt/keyboard.c ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-06410: Уязвимость компонента mm/mremap.c ядра операционной системы Linux, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю повысить свои привилегии в системе\n\n * CVE-2020-10757: A flaw was found in the Linux Kernel in versions after 4.5-rc1 in the way mremap handled DAX Huge Pages. This flaw allows a local attacker with access to a DAX enabled storage to escalate their privileges on the system.\n\n * CVE-2020-13974: An issue was discovered in the Linux kernel 4.4 through 5.7.1. drivers/tty/vt/keyboard.c has an integer overflow if k_ascii is called several times in a row, aka CID-b86dab054059. NOTE: Members in the community argue that the integer overflow does not lead to a security issue in this case.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-26"
+          },
+          "Updated": {
+            "Date": "2020-06-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-03071",
+              "Impact": "High",
+              "Public": "20200609",
+              "CveID": "BDU:2020-03071"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2021-06410",
+              "Impact": "High",
+              "Public": "20200609",
+              "CveID": "BDU:2021-06410"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10757",
+              "Impact": "High",
+              "Public": "20200609",
+              "CveID": "CVE-2020-10757"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13974",
+              "Impact": "High",
+              "Public": "20200609",
+              "CveID": "CVE-2020-13974"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240001",
+                "Comment": "kernel-doc-std is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240003",
+                "Comment": "kernel-headers-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240005",
+                "Comment": "kernel-image-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:5.4.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202240012",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:5.4.48-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

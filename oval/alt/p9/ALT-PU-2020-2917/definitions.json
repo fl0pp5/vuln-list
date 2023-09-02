@@ -1,0 +1,301 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202917",
+      "Version": "oval:org.altlinux.errata:def:20202917",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2917: package `ghostscript` update to version 9.27-alt1.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2917",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2917",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03223",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03223",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03225",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03225",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03226",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03226",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03227",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03227",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03228",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03228",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01769",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01769",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10216",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10216",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14811",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14811",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14812",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14812",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14813",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14813",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14817",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14817",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14869",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14869",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ghostscript to version 9.27-alt1.M90P.1. \nSecurity Fix(es):\n\n * BDU:2019-03223: Уязвимость процедуры .buildfont1 программы конвертирования файлов формата PostScript Ghostscript, позволяющая нарушителю повысить свои привилегии и получить доступ к файловой системе\n\n * BDU:2019-03225: Уязвимость процедуры .pdf_hook_DSC_Creator программы конвертирования файлов формата PostScript Ghostscript, позволяющая нарушителю получить доступ к файловой системе\n\n * BDU:2019-03226: Уязвимость процедуры .setuserparams2 программы конвертирования файлов формата PostScript Ghostscript, позволяющая нарушителю выполнить произвольные команды или получить доступ к файловой системе\n\n * BDU:2019-03227: Уязвимость процедуры setsystemparams программы конвертирования файлов формата PostScript Ghostscript, позволяющая нарушителю выполнить произвольные команды или получить доступ к файловой системе\n\n * BDU:2019-03228: Уязвимость процедуры .pdfexectoken программы конвертирования файлов формата PostScript Ghostscript, позволяющая нарушителю выполнить произвольные команды или получить доступ к файловой системе\n\n * BDU:2020-01769: Уязвимость процедуры .charkeys интерпретатора PostScript/PDF Ghostscript, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-10216: In ghostscript before version 9.50, the .buildfont1 procedure did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. An attacker could abuse this flaw by creating a specially crafted PostScript file that could escalate privileges and access files outside of restricted areas.\n\n * CVE-2019-14811: A flaw was found in, ghostscript versions prior to 9.50, in the .pdf_hook_DSC_Creator procedure where it did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. A specially crafted PostScript file could disable security protection and then have access to the file system, or execute arbitrary commands.\n\n * CVE-2019-14812: A flaw was found in all ghostscript versions 9.x before 9.50, in the .setuserparams2 procedure where it did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. A specially crafted PostScript file could disable security protection and then have access to the file system, or execute arbitrary commands.\n\n * CVE-2019-14813: A flaw was found in ghostscript, versions 9.x before 9.50, in the setsystemparams procedure where it did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. A specially crafted PostScript file could disable security protection and then have access to the file system, or execute arbitrary commands.\n\n * CVE-2019-14817: A flaw was found in, ghostscript versions prior to 9.50, in the .pdfexectoken and other procedures where it did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. A specially crafted PostScript file could disable security protection and then have access to the file system, or execute arbitrary commands.\n\n * CVE-2019-14869: A flaw was found in all versions of ghostscript 9.x before 9.50, where the `.charkeys` procedure, where it did not properly secure its privileged calls, enabling scripts to bypass `-dSAFER` restrictions. An attacker could abuse this flaw by creating a specially crafted PostScript file that could escalate privileges within the Ghostscript and access files outside of restricted areas or execute commands.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-02"
+          },
+          "Updated": {
+            "Date": "2020-10-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-648",
+              "Href": "https://bdu.fstec.ru/vul/2019-03223",
+              "Impact": "High",
+              "Public": "20190802",
+              "CveID": "BDU:2019-03223"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2019-03225",
+              "Impact": "High",
+              "Public": "20190820",
+              "CveID": "BDU:2019-03225"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-648",
+              "Href": "https://bdu.fstec.ru/vul/2019-03226",
+              "Impact": "High",
+              "Public": "20190820",
+              "CveID": "BDU:2019-03226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2019-03227",
+              "Impact": "Critical",
+              "Public": "20190820",
+              "CveID": "BDU:2019-03227"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2019-03228",
+              "Impact": "High",
+              "Public": "20190821",
+              "CveID": "BDU:2019-03228"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2020-01769",
+              "Impact": "High",
+              "Public": "20191114",
+              "CveID": "BDU:2020-01769"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10216",
+              "Impact": "High",
+              "Public": "20191127",
+              "CveID": "CVE-2019-10216"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14811",
+              "Impact": "High",
+              "Public": "20190903",
+              "CveID": "CVE-2019-14811"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14812",
+              "Impact": "High",
+              "Public": "20191127",
+              "CveID": "CVE-2019-14812"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14813",
+              "Impact": "Critical",
+              "Public": "20190906",
+              "CveID": "CVE-2019-14813"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14817",
+              "Impact": "High",
+              "Public": "20190903",
+              "CveID": "CVE-2019-14817"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14869",
+              "Impact": "High",
+              "Public": "20191115",
+              "CveID": "CVE-2019-14869"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917001",
+                "Comment": "ghostscript is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917002",
+                "Comment": "ghostscript-classic is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917003",
+                "Comment": "ghostscript-common is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917004",
+                "Comment": "ghostscript-gtk is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917005",
+                "Comment": "ghostscript-module-X is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917006",
+                "Comment": "ghostscript-utils is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917007",
+                "Comment": "libgs is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917008",
+                "Comment": "libgs-devel is earlier than 0:9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917009",
+                "Comment": "libijs is earlier than 0:0.35_9.27-alt1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202917010",
+                "Comment": "libijs-devel is earlier than 0:9.27-alt1.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

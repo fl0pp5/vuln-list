@@ -1,0 +1,245 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212550",
+      "Version": "oval:org.altlinux.errata:def:20212550",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2550: package `node` update to version 14.17.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2550",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2550",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00316",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00316",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00342",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00342",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01889",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01889",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01892",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01892",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02171",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02171",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22930",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22930",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22931",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22931",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22939",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22939",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22940",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22940",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3672",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3672",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades node to version 14.17.5-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00316: Уязвимость программной платформы Node.js, связанная с использованием памяти после её освобождения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-00342: Уязвимость библиотеки СИ для асинхронных запросов DNS c-ares, связанная с непринятием мер по защите структуры веб-страницы, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-01889: Уязвимость программной платформы Node.js, связанная с использованием памяти после её освобождения, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2022-01892: Уязвимость библиотеки dns программной платформы Node.js, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-02171: Уязвимость компонента API https программной платформы Node.js, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-22930: Node.js before 16.6.0, 14.17.4, and 12.22.4 is vulnerable to a use after free attack where an attacker might be able to exploit the memory corruption, to change process behavior.\n\n * CVE-2021-22931: Node.js before 16.6.0, 14.17.4, and 12.22.4 is vulnerable to Remote Code Execution, XSS, Application crashes due to missing input validation of host names returned by Domain Name Servers in Node.js dns library which can lead to output of wrong hostnames (leading to Domain Hijacking) and injection vulnerabilities in applications using the library.\n\n * CVE-2021-22939: If the Node.js https API was used incorrectly and \"undefined\" was in passed for the \"rejectUnauthorized\" parameter, no error was returned and connections to servers with an expired certificate would have been accepted.\n\n * CVE-2021-22940: Node.js before 16.6.1, 14.17.5, and 12.22.5 is vulnerable to a use after free attack where an attacker might be able to exploit the memory corruption, to change process behavior.\n\n * CVE-2021-3672: A flaw was found in c-ares library, where a missing input validation check of host names returned by DNS (Domain Name Servers) can lead to output of wrong hostnames which might potentially lead to Domain Hijacking. The highest threat from this vulnerability is to confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-17"
+          },
+          "Updated": {
+            "Date": "2021-08-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-00316",
+              "Impact": "Critical",
+              "Public": "20211007",
+              "CveID": "BDU:2022-00316"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-00342",
+              "Impact": "Low",
+              "Public": "20210810",
+              "CveID": "BDU:2022-00342"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-01889",
+              "Impact": "High",
+              "Public": "20210816",
+              "CveID": "BDU:2022-01889"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-01892",
+              "Impact": "Critical",
+              "Public": "20210816",
+              "CveID": "BDU:2022-01892"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2022-02171",
+              "Impact": "Low",
+              "Public": "20210816",
+              "CveID": "BDU:2022-02171"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22930",
+              "Impact": "Critical",
+              "Public": "20211007",
+              "CveID": "CVE-2021-22930"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22931",
+              "Impact": "Critical",
+              "Public": "20210816",
+              "CveID": "CVE-2021-22931"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22939",
+              "Impact": "Low",
+              "Public": "20210816",
+              "CveID": "CVE-2021-22939"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22940",
+              "Impact": "High",
+              "Public": "20210816",
+              "CveID": "CVE-2021-22940"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3672",
+              "Impact": "Low",
+              "Public": "20211123",
+              "CveID": "CVE-2021-3672"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212550001",
+                "Comment": "node is earlier than 0:14.17.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212550002",
+                "Comment": "node-devel is earlier than 0:14.17.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212550003",
+                "Comment": "node-doc is earlier than 0:14.17.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

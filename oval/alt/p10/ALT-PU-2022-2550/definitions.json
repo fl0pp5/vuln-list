@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222550",
+      "Version": "oval:org.altlinux.errata:def:20222550",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2550: package `gem-addressable` update to version 2.8.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2550",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2550",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04454",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04454",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-32740",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32740",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-addressable to version 2.8.0-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04454: Уязвимость библиотеки Addressable, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-32740: Addressable is an alternative implementation to the URI implementation that is part of Ruby's standard library. An uncontrolled resource consumption vulnerability exists after version 2.3.0 through version 2.7.0. Within the URI template implementation in Addressable, a maliciously crafted template may result in uncontrolled resource consumption, leading to denial of service when matched against a URI. In typical usage, templates would not normally be read from untrusted user input, but nonetheless, no previous security advisory for Addressable has cautioned against doing this. Users of the parsing capabilities in Addressable but not the URI template capabilities are unaffected. The vulnerability is patched in version 2.8.0. As a workaround, only create Template objects from trusted sources that have been validated not to produce catastrophic backtracking.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-02"
+          },
+          "Updated": {
+            "Date": "2022-09-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-04454",
+              "Impact": "High",
+              "Public": "20210703",
+              "CveID": "BDU:2021-04454"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32740",
+              "Impact": "High",
+              "Public": "20210706",
+              "CveID": "CVE-2021-32740"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222550001",
+                "Comment": "gem-addressable is earlier than 0:2.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222550002",
+                "Comment": "gem-addressable-devel is earlier than 0:2.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222550003",
+                "Comment": "gem-addressable-doc is earlier than 0:2.8.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

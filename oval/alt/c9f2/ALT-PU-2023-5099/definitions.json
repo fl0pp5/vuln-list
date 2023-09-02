@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235099",
+      "Version": "oval:org.altlinux.errata:def:20235099",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5099: package `jhead` update to version 3.08-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5099",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5099",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-1010301",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010301",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1010302",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010302",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19035",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19035",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26208",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6624",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6624",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6625",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6625",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades jhead to version 3.08-alt1. \nSecurity Fix(es):\n\n * CVE-2019-1010301: jhead 3.03 is affected by: Buffer Overflow. The impact is: Denial of service. The component is: gpsinfo.c Line 151 ProcessGpsInfo(). The attack vector is: Open a specially crafted JPEG file.\n\n * CVE-2019-1010302: jhead 3.03 is affected by: Incorrect Access Control. The impact is: Denial of service. The component is: iptc.c Line 122 show_IPTC(). The attack vector is: the victim must open a specially crafted JPEG file.\n\n * CVE-2019-19035: jhead 3.03 is affected by: heap-based buffer over-read. The impact is: Denial of service. The component is: ReadJpegSections and process_SOFn in jpgfile.c. The attack vector is: Open a specially crafted JPEG file.\n\n * CVE-2020-26208: JHEAD is a simple command line tool for displaying and some manipulation of EXIF header data embedded in Jpeg images from digital cameras. In affected versions there is a heap-buffer-overflow on jhead-3.04/jpgfile.c:285 ReadJpegSections. Crafted jpeg images can be provided to the user resulting in a program crash or potentially incorrect exif information retrieval. Users are advised to upgrade. There is no known workaround for this issue.\n\n * CVE-2020-6624: jhead through 3.04 has a heap-based buffer over-read in process_DQT in jpgqguess.c.\n\n * CVE-2020-6625: jhead through 3.04 has a heap-based buffer over-read in Get32s when called from ProcessGpsInfo in gpsinfo.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-24"
+          },
+          "Updated": {
+            "Date": "2023-08-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010301",
+              "Impact": "Low",
+              "Public": "20190715",
+              "CveID": "CVE-2019-1010301"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010302",
+              "Impact": "Low",
+              "Public": "20190715",
+              "CveID": "CVE-2019-1010302"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19035",
+              "Impact": "Low",
+              "Public": "20191117",
+              "CveID": "CVE-2019-19035"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26208",
+              "Impact": "Low",
+              "Public": "20220202",
+              "CveID": "CVE-2020-26208"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6624",
+              "Impact": "High",
+              "Public": "20200109",
+              "CveID": "CVE-2020-6624"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6625",
+              "Impact": "High",
+              "Public": "20200109",
+              "CveID": "CVE-2020-6625"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235099001",
+                "Comment": "jhead is earlier than 0:3.08-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

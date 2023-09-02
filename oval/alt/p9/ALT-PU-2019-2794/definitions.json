@@ -1,0 +1,215 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192794",
+      "Version": "oval:org.altlinux.errata:def:20192794",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2794: package `kubernetes` update to version 1.15.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2794",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2794",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02995",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02995",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02996",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02996",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04880",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04880",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11250",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11250",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11251",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11251",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9512",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9512",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9514",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9514",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kubernetes to version 1.15.4-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02995: Уязвимость реализации сетевого протокола HTTP/2 операционных систем Windows, веб-сервера Apache Traffic Server, веб-сервера H2O, сетевых программных средств netty, SwiftNIO, Envoy, программной платформы Node.js позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02996: Уязвимость реализации сетевого протокола HTTP/2 операционных систем Windows, веб-сервера Apache Traffic Server, веб-сервера H2O, сетевых программных средств netty, SwiftNIO, Envoy, программной платформы Node.js позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-04880: Уязвимость команды kubectl cp программного средства управления кластерами виртуальных машин Kubernetes, позволяющая нарушителю загрузить вредоносный файл\n\n * CVE-2019-11250: The Kubernetes client-go library logs request headers at verbosity levels of 7 or higher. This can disclose credentials to unauthorized users via logs or command output. Kubernetes components (such as kube-apiserver) prior to v1.16.0, which make use of basic or bearer token authentication, and run at high verbosity levels, are affected.\n\n * CVE-2019-11251: The Kubernetes kubectl cp command in versions 1.1-1.12, and versions prior to 1.13.11, 1.14.7, and 1.15.4 allows a combination of two symlinks provided by tar output of a malicious container to place a file outside of the destination directory specified in the kubectl cp invocation. This could be used to allow an attacker to place a nefarious file using a symlink, outside of the destination tree.\n\n * CVE-2019-9512: Some HTTP/2 implementations are vulnerable to ping floods, potentially leading to a denial of service. The attacker sends continual pings to an HTTP/2 peer, causing the peer to build an internal queue of responses. Depending on how efficiently this data is queued, this can consume excess CPU, memory, or both.\n\n * CVE-2019-9514: Some HTTP/2 implementations are vulnerable to a reset flood, potentially leading to a denial of service. The attacker opens a number of streams and sends an invalid request over each stream that should solicit a stream of RST_STREAM frames from the peer. Depending on how the peer queues the RST_STREAM frames, this can consume excess memory, CPU, or both.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-26"
+          },
+          "Updated": {
+            "Date": "2019-09-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02995",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "BDU:2019-02995"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02996",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "BDU:2019-02996"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-59, CWE-61",
+              "Href": "https://bdu.fstec.ru/vul/2020-04880",
+              "Impact": "Low",
+              "Public": "20190918",
+              "CveID": "BDU:2020-04880"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11250",
+              "Impact": "Low",
+              "Public": "20190829",
+              "CveID": "CVE-2019-11250"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11251",
+              "Impact": "Low",
+              "Public": "20200203",
+              "CveID": "CVE-2019-11251"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9512",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9512"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9514",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9514"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794001",
+                "Comment": "kubernetes-client is earlier than 0:1.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794002",
+                "Comment": "kubernetes-common is earlier than 0:1.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794003",
+                "Comment": "kubernetes-kubeadm is earlier than 0:1.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794004",
+                "Comment": "kubernetes-kubelet is earlier than 0:1.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794005",
+                "Comment": "kubernetes-master is earlier than 0:1.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192794006",
+                "Comment": "kubernetes-node is earlier than 0:1.15.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

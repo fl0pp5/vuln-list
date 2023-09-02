@@ -1,0 +1,210 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192997",
+      "Version": "oval:org.altlinux.errata:def:20192997",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2997: package `qt5-base` update to version 5.12.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2997",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2997",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2017-15011",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15011",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-base to version 5.12.5-alt1. \nSecurity Fix(es):\n\n * CVE-2017-15011: The named pipes in qtsingleapp in Qt 5.x, as used in qBittorrent and SugarSync, are configured for remote access and allow remote attackers to cause a denial of service (application crash) via an unspecified string.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-19"
+          },
+          "Updated": {
+            "Date": "2019-10-19"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15011",
+              "Impact": "High",
+              "Public": "20171004",
+              "CveID": "CVE-2017-15011"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997001",
+                "Comment": "libqt5-concurrent is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997002",
+                "Comment": "libqt5-core is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997003",
+                "Comment": "libqt5-dbus is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997004",
+                "Comment": "libqt5-eglfsdeviceintegration is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997005",
+                "Comment": "libqt5-eglfskmssupport is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997006",
+                "Comment": "libqt5-gui is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997007",
+                "Comment": "libqt5-network is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997008",
+                "Comment": "libqt5-opengl is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997009",
+                "Comment": "libqt5-printsupport is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997010",
+                "Comment": "libqt5-sql is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997011",
+                "Comment": "libqt5-test is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997012",
+                "Comment": "libqt5-widgets is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997013",
+                "Comment": "libqt5-xcbqpa is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997014",
+                "Comment": "libqt5-xml is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997015",
+                "Comment": "qt5-base-common is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997016",
+                "Comment": "qt5-base-devel is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997017",
+                "Comment": "qt5-base-devel-static is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997018",
+                "Comment": "qt5-base-doc is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997019",
+                "Comment": "qt5-qtbase is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997020",
+                "Comment": "qt5-qtbase-gui is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997021",
+                "Comment": "qt5-sql is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997022",
+                "Comment": "qt5-sql-interbase is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997023",
+                "Comment": "qt5-sql-mysql is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997024",
+                "Comment": "qt5-sql-odbc is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997025",
+                "Comment": "qt5-sql-postgresql is earlier than 0:5.12.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192997026",
+                "Comment": "rpm-macros-qt5 is earlier than 0:5.12.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

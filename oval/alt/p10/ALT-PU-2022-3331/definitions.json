@@ -1,0 +1,166 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223331",
+      "Version": "oval:org.altlinux.errata:def:20223331",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3331: package `sogo` update to version 5.8.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3331",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3331",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-4556",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4556",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4558",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4558",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sogo to version 5.8.0-alt1. \nSecurity Fix(es):\n\n * CVE-2022-4556: A vulnerability was found in Alinto SOGo up to 5.7.1 and classified as problematic. Affected by this issue is the function _migrateMailIdentities of the file SoObjects/SOGo/SOGoUserDefaults.m of the component Identity Handler. The manipulation of the argument fullName leads to cross site scripting. The attack may be launched remotely. Upgrading to version 5.8.0 is able to address this issue. The name of the patch is efac49ae91a4a325df9931e78e543f707a0f8e5e. It is recommended to upgrade the affected component. The identifier of this vulnerability is VDB-215960.\n\n * CVE-2022-4558: A vulnerability was found in Alinto SOGo up to 5.7.1. It has been classified as problematic. This affects an unknown part of the file SoObjects/SOGo/NSString+Utilities.m of the component Folder/Mail Handler. The manipulation leads to cross site scripting. It is possible to initiate the attack remotely. Upgrading to version 5.8.0 is able to address this issue. The name of the patch is 1e0f5f00890f751e84d67be4f139dd7f00faa5f3. It is recommended to upgrade the affected component. The identifier VDB-215961 was assigned to this vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-13"
+          },
+          "Updated": {
+            "Date": "2022-12-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4556",
+              "Impact": "Low",
+              "Public": "20221216",
+              "CveID": "CVE-2022-4556"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4558",
+              "Impact": "Low",
+              "Public": "20221216",
+              "CveID": "CVE-2022-4558"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331001",
+                "Comment": "sogo is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331002",
+                "Comment": "sogo-activesync is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331003",
+                "Comment": "sogo-apache2 is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331004",
+                "Comment": "sogo-devel is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331005",
+                "Comment": "sogo-ealarms-notify is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331006",
+                "Comment": "sogo-slapd-sockd is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331007",
+                "Comment": "sogo-tool is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331008",
+                "Comment": "sope-cards is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331009",
+                "Comment": "sope-cards-devel is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331010",
+                "Comment": "sope-gdl1-contentstore is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331011",
+                "Comment": "sope-gdl1-contentstore-devel is earlier than 0:5.8.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223331012",
+                "Comment": "task-sogo is earlier than 0:5.8.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

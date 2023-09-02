@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192081",
+      "Version": "oval:org.altlinux.errata:def:20192081",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2081: package `blueberry` update to version 1.2.5-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2081",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2081",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades blueberry to version 1.2.5-alt5. \nSecurity Fix(es):\n\n * #36908: Собрать с python3",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-18"
+          },
+          "Updated": {
+            "Date": "2019-06-18"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36908",
+              "Href": "https://bugzilla.altlinux.org/36908",
+              "Data": "Собрать с python3"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192081001",
+                "Comment": "blueberry is earlier than 0:1.2.5-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192081002",
+                "Comment": "cinnamon-applet-blueberry is earlier than 0:1.2.5-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

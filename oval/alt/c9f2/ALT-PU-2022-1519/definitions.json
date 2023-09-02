@@ -1,0 +1,270 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221519",
+      "Version": "oval:org.altlinux.errata:def:20221519",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1519: package `firefox-esr` update to version 91.7.0-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1519",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1519",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01146",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01146",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01147",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01147",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01446",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01446",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01447",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01447",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01448",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01448",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01454",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01454",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01459",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01459",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-26381",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26381",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26383",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26383",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26384",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26384",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26386",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26386",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26387",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26387",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26485",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26485",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26486",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26486",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 91.7.0-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2022-01146: Уязвимость параметра XSLT браузеров Mozilla Firefox и Focus, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-01147: Уязвимость программного интерфейса обработки 3D-графики и вычислений WebGPU браузеров Mozilla Firefox и Focus, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-01446: Уязвимость браузера Mozilla Firefox, связанная с недостаточным предупреждением об опасных действиях, позволяющая нарушителю выполнить спуфинговую атаку\n\n * BDU:2022-01447: Уязвимость браузера Mozilla Firefox, связанная с использованием памяти после освобождения, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-01448: Уязвимость браузера Mozilla Firefox, связанная с недостатками разграничения доступа, позволяющая нарушителю обойти введенные ограничения безопасности\n\n * BDU:2022-01454: Уязвимость браузера Mozilla Firefox, связанная с состоянием гонки при проверке подписей, позволяющая нарушителю выполнить спуфинговую атаку\n\n * BDU:2022-01459: Уязвимость браузера Mozilla Firefox, связанная с недостатками контроля доступа, позволяющая нарушителю получить доступ к конфиденциальной информации\n\n * CVE-2022-26381: An attacker could have caused a use-after-free by forcing a text reflow in an SVG object leading to a potentially exploitable crash. This vulnerability affects Firefox \u003c 98, Firefox ESR \u003c 91.7, and Thunderbird \u003c 91.7.\n\n * CVE-2022-26383: When resizing a popup after requesting fullscreen access, the popup would not display the fullscreen notification. This vulnerability affects Firefox \u003c 98, Firefox ESR \u003c 91.7, and Thunderbird \u003c 91.7.\n\n * CVE-2022-26384: If an attacker could control the contents of an iframe sandboxed with \u003ccode\u003eallow-popups\u003c/code\u003e but not \u003ccode\u003eallow-scripts\u003c/code\u003e, they were able to craft a link that, when clicked, would lead to JavaScript execution in violation of the sandbox. This vulnerability affects Firefox \u003c 98, Firefox ESR \u003c 91.7, and Thunderbird \u003c 91.7.\n\n * CVE-2022-26386: Previously Firefox for macOS and Linux would download temporary files to a user-specific directory in \u003ccode\u003e/tmp\u003c/code\u003e, but this behavior was changed to download them to \u003ccode\u003e/tmp\u003c/code\u003e where they could be affected by other local users. This behavior was reverted to the original, user-specific directory. \u003cbr\u003e*This bug only affects Firefox for macOS and Linux. Other operating systems are unaffected.*. This vulnerability affects Firefox ESR \u003c 91.7 and Thunderbird \u003c 91.7.\n\n * CVE-2022-26387: When installing an add-on, Firefox verified the signature before prompting the user; but while the user was confirming the prompt, the underlying add-on file could have been modified and Firefox would not have noticed. This vulnerability affects Firefox \u003c 98, Firefox ESR \u003c 91.7, and Thunderbird \u003c 91.7.\n\n * CVE-2022-26485: Removing an XSLT parameter during processing could have lead to an exploitable use-after-free. We have had reports of attacks in the wild abusing this flaw. This vulnerability affects Firefox \u003c 97.0.2, Firefox ESR \u003c 91.6.1, Firefox for Android \u003c 97.3.0, Thunderbird \u003c 91.6.2, and Focus \u003c 97.3.0.\n\n * CVE-2022-26486: An unexpected message in the WebGPU IPC framework could lead to a use-after-free and exploitable sandbox escape. We have had reports of attacks in the wild abusing this flaw. This vulnerability affects Firefox \u003c 97.0.2, Firefox ESR \u003c 91.6.1, Firefox for Android \u003c 97.3.0, Thunderbird \u003c 91.6.2, and Focus \u003c 97.3.0.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-19"
+          },
+          "Updated": {
+            "Date": "2022-03-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-01146",
+              "Impact": "High",
+              "Public": "20220305",
+              "CveID": "BDU:2022-01146"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-01147",
+              "Impact": "High",
+              "Public": "20220305",
+              "CveID": "BDU:2022-01147"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-357",
+              "Href": "https://bdu.fstec.ru/vul/2022-01446",
+              "Impact": "Low",
+              "Public": "20220308",
+              "CveID": "BDU:2022-01446"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-01447",
+              "Impact": "High",
+              "Public": "20220308",
+              "CveID": "BDU:2022-01447"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2022-01448",
+              "Impact": "Low",
+              "Public": "20220308",
+              "CveID": "BDU:2022-01448"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-367",
+              "Href": "https://bdu.fstec.ru/vul/2022-01454",
+              "Impact": "Low",
+              "Public": "20220308",
+              "CveID": "BDU:2022-01454"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2022-01459",
+              "Impact": "Low",
+              "Public": "20220308",
+              "CveID": "BDU:2022-01459"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26381",
+              "Impact": "High",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26381"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26383",
+              "Impact": "Low",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26383"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26384",
+              "Impact": "Critical",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26384"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26386",
+              "Impact": "Low",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26386"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26387",
+              "Impact": "High",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26387"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26485",
+              "Impact": "High",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26485"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26486",
+              "Impact": "Critical",
+              "Public": "20221222",
+              "CveID": "CVE-2022-26486"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221519001",
+                "Comment": "firefox-esr is earlier than 0:91.7.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221519002",
+                "Comment": "firefox-esr-config-privacy is earlier than 0:91.7.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221519003",
+                "Comment": "firefox-esr-wayland is earlier than 0:91.7.0-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

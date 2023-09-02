@@ -1,0 +1,244 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203407",
+      "Version": "oval:org.altlinux.errata:def:20203407",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3407: package `sssd` update to version 2.4.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3407",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3407",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00526",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00526",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-4254",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4254",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sssd to version 2.4.0-alt2. \nSecurity Fix(es):\n\n * BDU:2023-00526: Уязвимость пакета libsss_certmap сервиса управления доступом к удаленным каталогам и механизма аутентификации sssd, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2022-4254: sssd: libsss_certmap fails to sanitise certificate data used in LDAP filters",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-25"
+          },
+          "Updated": {
+            "Date": "2020-11-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-90",
+              "Href": "https://bdu.fstec.ru/vul/2023-00526",
+              "Impact": "High",
+              "Public": "20230124",
+              "CveID": "BDU:2023-00526"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-90",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4254",
+              "Impact": "High",
+              "Public": "20230201",
+              "CveID": "CVE-2022-4254"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407001",
+                "Comment": "libipa_hbac is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407002",
+                "Comment": "libipa_hbac-devel is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407003",
+                "Comment": "libsss_autofs is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407004",
+                "Comment": "libsss_certmap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407005",
+                "Comment": "libsss_certmap-devel is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407006",
+                "Comment": "libsss_idmap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407007",
+                "Comment": "libsss_idmap-devel is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407008",
+                "Comment": "libsss_nss_idmap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407009",
+                "Comment": "libsss_nss_idmap-devel is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407010",
+                "Comment": "libsss_simpleifp is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407011",
+                "Comment": "libsss_simpleifp-devel is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407012",
+                "Comment": "libsss_sudo is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407013",
+                "Comment": "python3-module-ipa_hbac is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407014",
+                "Comment": "python3-module-sss is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407015",
+                "Comment": "python3-module-sss-murmur is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407016",
+                "Comment": "python3-module-sss_nss_idmap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407017",
+                "Comment": "python3-module-sssdconfig is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407018",
+                "Comment": "sssd is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407019",
+                "Comment": "sssd-ad is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407020",
+                "Comment": "sssd-client is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407021",
+                "Comment": "sssd-dbus is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407022",
+                "Comment": "sssd-ipa is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407023",
+                "Comment": "sssd-kcm is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407024",
+                "Comment": "sssd-krb5 is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407025",
+                "Comment": "sssd-krb5-common is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407026",
+                "Comment": "sssd-ldap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407027",
+                "Comment": "sssd-nfs-idmap is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407028",
+                "Comment": "sssd-pac is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407029",
+                "Comment": "sssd-proxy is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407030",
+                "Comment": "sssd-tools is earlier than 0:2.4.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203407031",
+                "Comment": "sssd-winbind-idmap is earlier than 0:2.4.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193215",
+      "Version": "oval:org.altlinux.errata:def:20193215",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3215: package `oniguruma` update to version 6.9.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3215",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3215",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01691",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01691",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03593",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03593",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03594",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03594",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03595",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03595",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03616",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03616",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03777",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03777",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-13224",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13224",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13225",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13225",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16163",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16163",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19012",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19012",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19203",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19203",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19204",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19204",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19246",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19246",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades oniguruma to version 6.9.4-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01691: Уязвимость функции onig_new_deluxe библиотеки регулярных выражений для многобайтовых строк libonig, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации и нарушить ее целостность и доступность\n\n * BDU:2021-03593: Уязвимость функции search_in_range библиотеки для регулярных выражений Oniguruma, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-03594: Уязвимость функции fetch_interval_quantifier библиотеки для регулярных выражений Oniguruma, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03595: Уязвимость компонента str_lower_case_match библиотеки для регулярных выражений Oniguruma, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03616: Уязвимость библиотеки для регулярных выражений Oniguruma, связанная с неконтролируемой рекурсией, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03777: Уязвимость функции gb18030_mbc_enc_len библиотеки регулярных выражений Oniguruma, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-13224: A use-after-free in onig_new_deluxe() in regext.c in Oniguruma 6.9.2 allows attackers to potentially cause information disclosure, denial of service, or possibly code execution by providing a crafted regular expression. The attacker provides a pair of a regex pattern and a string, with a multi-byte encoding that gets handled by onig_new_deluxe(). Oniguruma issues often affect Ruby, as well as common optional libraries for PHP and Rust.\n\n * CVE-2019-13225: A NULL Pointer Dereference in match_at() in regexec.c in Oniguruma 6.9.2 allows attackers to potentially cause denial of service by providing a crafted regular expression. Oniguruma issues often affect Ruby, as well as common optional libraries for PHP and Rust.\n\n * CVE-2019-16163: Oniguruma before 6.9.3 allows Stack Exhaustion in regcomp.c because of recursion in regparse.c.\n\n * CVE-2019-19012: An integer overflow in the search_in_range function in regexec.c in Oniguruma 6.x before 6.9.4_rc2 leads to an out-of-bounds read, in which the offset of this read is under the control of an attacker. (This only affects the 32-bit compiled version). Remote attackers can cause a denial-of-service or information disclosure, or possibly have unspecified other impact, via a crafted regular expression.\n\n * CVE-2019-19203: An issue was discovered in Oniguruma 6.x before 6.9.4_rc2. In the function gb18030_mbc_enc_len in file gb18030.c, a UChar pointer is dereferenced without checking if it passed the end of the matched string. This leads to a heap-based buffer over-read.\n\n * CVE-2019-19204: An issue was discovered in Oniguruma 6.x before 6.9.4_rc2. In the function fetch_interval_quantifier (formerly known as fetch_range_quantifier) in regparse.c, PFETCH is called without checking PEND. This leads to a heap-based buffer over-read.\n\n * CVE-2019-19246: Oniguruma through 6.9.3, as used in PHP 7.3.x and other products, has a heap-based buffer over-read in str_lower_case_match in regexec.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-04"
+          },
+          "Updated": {
+            "Date": "2019-12-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-01691",
+              "Impact": "Critical",
+              "Public": "20190711",
+              "CveID": "BDU:2020-01691"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03593",
+              "Impact": "Critical",
+              "Public": "20191117",
+              "CveID": "BDU:2021-03593"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03594",
+              "Impact": "High",
+              "Public": "20191122",
+              "CveID": "BDU:2021-03594"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03595",
+              "Impact": "High",
+              "Public": "20191207",
+              "CveID": "BDU:2021-03595"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2021-03616",
+              "Impact": "High",
+              "Public": "20190910",
+              "CveID": "BDU:2021-03616"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03777",
+              "Impact": "High",
+              "Public": "20191122",
+              "CveID": "BDU:2021-03777"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13224",
+              "Impact": "Critical",
+              "Public": "20190710",
+              "CveID": "CVE-2019-13224"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13225",
+              "Impact": "Low",
+              "Public": "20190710",
+              "CveID": "CVE-2019-13225"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16163",
+              "Impact": "High",
+              "Public": "20190909",
+              "CveID": "CVE-2019-16163"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19012",
+              "Impact": "Critical",
+              "Public": "20191117",
+              "CveID": "CVE-2019-19012"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19203",
+              "Impact": "High",
+              "Public": "20191121",
+              "CveID": "CVE-2019-19203"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19204",
+              "Impact": "High",
+              "Public": "20191121",
+              "CveID": "CVE-2019-19204"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19246",
+              "Impact": "High",
+              "Public": "20191125",
+              "CveID": "CVE-2019-19246"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193215001",
+                "Comment": "liboniguruma-devel is earlier than 0:6.9.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193215002",
+                "Comment": "liboniguruma5 is earlier than 0:6.9.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

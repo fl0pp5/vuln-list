@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193231",
+      "Version": "oval:org.altlinux.errata:def:20193231",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3231: package `php7-xmlrpc` update to version 7.3.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3231",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3231",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00013",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00013",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11043",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11043",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-xmlrpc to version 7.3.11-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00013: Уязвимость компонента sapi/fpm/fpm/fpm_main.c расширения PHP-FPM интерпретатора языка программирования PHP, позволяющая нарушителю выполнять произвольные команды\n\n * CVE-2019-11043: In PHP versions 7.1.x below 7.1.33, 7.2.x below 7.2.24 and 7.3.x below 7.3.11 in certain configurations of FPM setup it is possible to cause FPM module to write past allocated buffers into the space reserved for FCGI protocol data, thus opening the possibility of remote code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-04"
+          },
+          "Updated": {
+            "Date": "2019-12-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+              "Cwe": "CWE-120, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-00013",
+              "Impact": "High",
+              "Public": "20191028",
+              "CveID": "BDU:2020-00013"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11043",
+              "Impact": "Critical",
+              "Public": "20191028",
+              "CveID": "CVE-2019-11043"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193231001",
+                "Comment": "php7-xmlrpc is earlier than 0:7.3.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

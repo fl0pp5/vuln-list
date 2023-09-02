@@ -1,0 +1,157 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231553",
+      "Version": "oval:org.altlinux.errata:def:20231553",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1553: package `python3-module-django` update to version 3.2.18-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1553",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1553",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00662",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00662",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-23969",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23969",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24580",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24580",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-django to version 3.2.18-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00662: Уязвимость программной платформы для веб-приложений Django, связанная с неограниченным распределением ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-23969: In Django 3.2 before 3.2.17, 4.0 before 4.0.9, and 4.1 before 4.1.6, the parsed values of Accept-Language headers are cached in order to avoid repetitive parsing. This leads to a potential denial-of-service vector via excessive memory usage if the raw value of Accept-Language headers is very large.\n\n * CVE-2023-24580: An issue was discovered in the Multipart Request Parser in Django 3.2 before 3.2.18, 4.0 before 4.0.10, and 4.1 before 4.1.7. Passing certain inputs (e.g., an excessive number of parts) to multipart forms could result in too many open files or memory exhaustion, and provided a potential vector for a denial-of-service attack.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-31"
+          },
+          "Updated": {
+            "Date": "2023-03-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://bdu.fstec.ru/vul/2023-00662",
+              "Impact": "Low",
+              "Public": "20230201",
+              "CveID": "BDU:2023-00662"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23969",
+              "Impact": "High",
+              "Public": "20230201",
+              "CveID": "CVE-2023-23969"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24580",
+              "Impact": "High",
+              "Public": "20230215",
+              "CveID": "CVE-2023-24580"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553001",
+                "Comment": "python3-module-django is earlier than 0:3.2.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553002",
+                "Comment": "python3-module-django-dbbackend-mysql is earlier than 0:3.2.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553003",
+                "Comment": "python3-module-django-dbbackend-oracle is earlier than 0:3.2.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553004",
+                "Comment": "python3-module-django-dbbackend-postgresql is earlier than 0:3.2.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553005",
+                "Comment": "python3-module-django-dbbackend-sqlite3 is earlier than 0:3.2.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231553006",
+                "Comment": "python3-module-django-doc is earlier than 0:3.2.18-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

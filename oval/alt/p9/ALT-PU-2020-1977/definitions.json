@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201977",
+      "Version": "oval:org.altlinux.errata:def:20201977",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1977: package `moodle` update to version 3.8.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1977",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1977",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-10738",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10738",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1754",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1754",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1755",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1755",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1756",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1756",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades moodle to version 3.8.3-alt1. \nSecurity Fix(es):\n\n * CVE-2020-10738: A flaw was found in Moodle versions 3.8 before 3.8.3, 3.7 before 3.7.6, 3.6 before 3.6.10, 3.5 before 3.5.12 and earlier unsupported versions. It was possible to create a SCORM package in such a way that when added to a course, it could be interacted with via web services in order to achieve remote code execution.\n\n * CVE-2020-1754: In Moodle before 3.8.2, 3.7.5, 3.6.9 and 3.5.11, users viewing the grade history report without the 'access all groups' capability were not restricted to viewing grades of users within their own groups.\n\n * CVE-2020-1755: In Moodle before 3.8.2, 3.7.5, 3.6.9 and 3.5.11, X-Forwarded-For headers could be used to spoof a user's IP, in order to bypass remote address checks.\n\n * CVE-2020-1756: In Moodle before 3.8.2, 3.7.5, 3.6.9 and 3.5.11, insufficient input escaping was applied to the PHP unit webrunner admin tool.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-18"
+          },
+          "Updated": {
+            "Date": "2020-05-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10738",
+              "Impact": "High",
+              "Public": "20200521",
+              "CveID": "CVE-2020-10738"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1754",
+              "Impact": "Low",
+              "Public": "20220805",
+              "CveID": "CVE-2020-1754"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-345",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1755",
+              "Impact": "Low",
+              "Public": "20220816",
+              "CveID": "CVE-2020-1755"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1756",
+              "Impact": "High",
+              "Public": "20220816",
+              "CveID": "CVE-2020-1756"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201977001",
+                "Comment": "moodle is earlier than 0:3.8.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201977002",
+                "Comment": "moodle-apache2 is earlier than 0:3.8.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201977003",
+                "Comment": "moodle-base is earlier than 0:3.8.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201977004",
+                "Comment": "moodle-local-mysql is earlier than 0:3.8.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

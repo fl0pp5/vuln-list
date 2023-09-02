@@ -1,0 +1,233 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202930",
+      "Version": "oval:org.altlinux.errata:def:20202930",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2930: package `upx` update to version 3.96-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2930",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2930",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-11243",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-11243",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14295",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14295",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14296",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14296",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20021",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20021",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20051",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20051",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20053",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20053",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20805",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20805",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27787",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27787",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27788",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27788",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27790",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27790",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades upx to version 3.96-alt1. \nSecurity Fix(es):\n\n * CVE-2018-11243: PackLinuxElf64::unpack in p_lx_elf.cpp in UPX 3.95 allows remote attackers to cause a denial of service (double free), limit the ability of a malware scanner to operate on the entire original data, or possibly have unspecified other impact via a crafted file.\n\n * CVE-2019-14295: An Integer overflow in the getElfSections function in p_vmlinx.cpp in UPX 3.95 allows remote attackers to cause a denial of service (crash) via a skewed offset larger than the size of the PE section in a UPX packed executable, which triggers an allocation of excessive memory.\n\n * CVE-2019-14296: canUnpack in p_vmlinx.cpp in UPX 3.95 allows remote attackers to cause a denial of service (SEGV or buffer overflow, and application crash) or possibly have unspecified other impact via a crafted UPX packed file.\n\n * CVE-2019-20021: A heap-based buffer over-read was discovered in canUnpack in p_mach.cpp in UPX 3.95 via a crafted Mach-O file.\n\n * CVE-2019-20051: A floating-point exception was discovered in PackLinuxElf::elf_hash in p_lx_elf.cpp in UPX 3.95. The vulnerability causes an application crash, which leads to denial of service.\n\n * CVE-2019-20053: An invalid memory address dereference was discovered in the canUnpack function in p_mach.cpp in UPX 3.95 via a crafted Mach-O file.\n\n * CVE-2019-20805: p_lx_elf.cpp in UPX before 3.96 has an integer overflow during unpacking via crafted values in a PT_DYNAMIC segment.\n\n * CVE-2020-27787: A Segmentaation fault was found in UPX in invert_pt_dynamic() function in p_lx_elf.cpp. An attacker with a crafted input file allows invalid memory address access that could lead to a denial of service.\n\n * CVE-2020-27788: An out-of-bounds read access vulnerability was discovered in UPX in PackLinuxElf64::canPack() function of p_lx_elf.cpp file. An attacker with a crafted input file could trigger this issue that could cause a crash leading to a denial of service.\n\n * CVE-2020-27790: A floating point exception issue was discovered in UPX in PackLinuxElf64::invert_pt_dynamic() function of p_lx_elf.cpp file. An attacker with a crafted input file could trigger this issue that could cause a crash leading to a denial of service. The highest impact is to Availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-02"
+          },
+          "Updated": {
+            "Date": "2020-10-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-11243",
+              "Impact": "High",
+              "Public": "20180518",
+              "CveID": "CVE-2018-11243"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14295",
+              "Impact": "Low",
+              "Public": "20190727",
+              "CveID": "CVE-2019-14295"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14296",
+              "Impact": "High",
+              "Public": "20190727",
+              "CveID": "CVE-2019-14296"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20021",
+              "Impact": "Low",
+              "Public": "20191227",
+              "CveID": "CVE-2019-20021"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20051",
+              "Impact": "Low",
+              "Public": "20191227",
+              "CveID": "CVE-2019-20051"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20053",
+              "Impact": "Low",
+              "Public": "20191227",
+              "CveID": "CVE-2019-20053"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20805",
+              "Impact": "Low",
+              "Public": "20200601",
+              "CveID": "CVE-2019-20805"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27787",
+              "Impact": "Low",
+              "Public": "20220818",
+              "CveID": "CVE-2020-27787"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27788",
+              "Impact": "Low",
+              "Public": "20220818",
+              "CveID": "CVE-2020-27788"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27790",
+              "Impact": "Low",
+              "Public": "20220818",
+              "CveID": "CVE-2020-27790"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202930001",
+                "Comment": "upx is earlier than 0:3.96-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

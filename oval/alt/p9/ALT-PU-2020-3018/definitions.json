@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203018",
+      "Version": "oval:org.altlinux.errata:def:20203018",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3018: package `php7-intl` update to version 7.3.23-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3018",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3018",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01912",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01912",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01913",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01913",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-7069",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7069",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7070",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7070",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-intl to version 7.3.23-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01912: Уязвимость функции openssl_encrypt() языка программирования php, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * BDU:2021-01913: Уязвимость механизма обработки файлов cookie языка программирования php, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2020-7069: In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when AES-CCM mode is used with openssl_encrypt() function with 12 bytes IV, only first 7 bytes of the IV is actually used. This can lead to both decreased security and incorrect encryption data.\n\n * CVE-2020-7070: In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when PHP is processing incoming HTTP cookie values, the cookie names are url-decoded. This may lead to cookies with prefixes like __Host confused with cookies that decode to such prefix, thus leading to an attacker being able to forge cookie which is supposed to be secure. See also CVE-2020-8184 for more information.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-10"
+          },
+          "Updated": {
+            "Date": "2020-10-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://bdu.fstec.ru/vul/2021-01912",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01912"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-565",
+              "Href": "https://bdu.fstec.ru/vul/2021-01913",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01913"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7069",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-7069"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-565",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7070",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-7070"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203018001",
+                "Comment": "php7-intl is earlier than 0:7.3.23-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

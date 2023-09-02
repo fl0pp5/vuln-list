@@ -1,0 +1,292 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223240",
+      "Version": "oval:org.altlinux.errata:def:20223240",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3240: package `djvu` update to version 3.5.28-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3240",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3240",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01852",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01852",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03577",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03577",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05177",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05177",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05252",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05252",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05253",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05253",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05254",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05254",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-15142",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15142",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15143",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15143",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15144",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15144",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15145",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15145",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18804",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18804",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3630",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3630",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades djvu to version 3.5.28-alt2. \nSecurity Fix(es):\n\n * BDU:2020-01852: Уязвимость функции DJVU::filter_fv at IW44EncodeCodec.cpp набора библиотек и утилит для DjVu-файлов DjVuLibre, позволяющая нарушителю  вызвать отказ в обслуживании\n\n * BDU:2021-03577: Уязвимость функции DJVU::DjVuTXT::decode() набора библиотек и утилит для просмотра, создания и редактирования DjVu-файлов DjVuLibre, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05177: Уязвимость библиотеки для просмотра, создания, редактирования DjVu-файлов DjVuLibre, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05252: Уязвимость компонента чтения DJVU библиотеки для просмотра, создания, редактирования DjVu-файлов DjVuLibre, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05253: Уязвимость компонента чтения растровых изображений библиотеки для просмотра, создания, редактирования DjVu-файлов DjVuLibre, связанная с выполнением цикла с недоступным условием выхода, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05254: Уязвимость функции сортировки библиотеки для просмотра, создания, редактирования DjVu-файлов DjVuLibre, связанная с неконтролируемой рекурсией, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-15142: In DjVuLibre 3.5.27, DjVmDir.cpp in the DJVU reader component allows attackers to cause a denial-of-service (application crash in GStringRep::strdup in libdjvu/GString.cpp caused by a heap-based buffer over-read) by crafting a DJVU file.\n\n * CVE-2019-15143: In DjVuLibre 3.5.27, the bitmap reader component allows attackers to cause a denial-of-service error (resource exhaustion caused by a GBitmap::read_rle_raw infinite loop) by crafting a corrupted image file, related to libdjvu/DjVmDir.cpp and libdjvu/GBitmap.cpp.\n\n * CVE-2019-15144: In DjVuLibre 3.5.27, the sorting functionality (aka GArrayTemplate\u003cTYPE\u003e::sort) allows attackers to cause a denial-of-service (application crash due to an Uncontrolled Recursion) by crafting a PBM image file that is mishandled in libdjvu/GContainer.h.\n\n * CVE-2019-15145: DjVuLibre 3.5.27 allows attackers to cause a denial-of-service attack (application crash via an out-of-bounds read) by crafting a corrupted JB2 image file that is mishandled in JB2Dict::JB2Codec::get_direct_context in libdjvu/JB2Image.h because of a missing zero-bytes check in libdjvu/GBitmap.h.\n\n * CVE-2019-18804: DjVuLibre 3.5.27 has a NULL pointer dereference in the function DJVU::filter_fv at IW44EncodeCodec.cpp.\n\n * CVE-2021-3630: An out-of-bounds write vulnerability was found in DjVuLibre in DJVU::DjVuTXT::decode() in DjVuText.cpp via a crafted djvu file which may lead to crash and segmentation fault. This flaw affects DjVuLibre versions prior to 3.5.28.\n\n * #16141: \"any2djvu -q\" returns wrong status code",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-29"
+          },
+          "Updated": {
+            "Date": "2022-11-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-01852",
+              "Impact": "High",
+              "Public": "20191009",
+              "CveID": "BDU:2020-01852"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03577",
+              "Impact": "Low",
+              "Public": "20210625",
+              "CveID": "BDU:2021-03577"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-05177",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "BDU:2021-05177"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-05252",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "BDU:2021-05252"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2021-05253",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "BDU:2021-05253"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2021-05254",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "BDU:2021-05254"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15142",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "CVE-2019-15142"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15143",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "CVE-2019-15143"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15144",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "CVE-2019-15144"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15145",
+              "Impact": "Low",
+              "Public": "20190818",
+              "CveID": "CVE-2019-15145"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18804",
+              "Impact": "High",
+              "Public": "20191107",
+              "CveID": "CVE-2019-18804"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3630",
+              "Impact": "Low",
+              "Public": "20210630",
+              "CveID": "CVE-2021-3630"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "16141",
+              "Href": "https://bugzilla.altlinux.org/16141",
+              "Data": "\"any2djvu -q\" returns wrong status code"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240001",
+                "Comment": "djvu-common is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240002",
+                "Comment": "djvu-doc is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240003",
+                "Comment": "djvu-utils is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240004",
+                "Comment": "djvu-xmltools is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240005",
+                "Comment": "libdjvu is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223240006",
+                "Comment": "libdjvu-devel is earlier than 0:3.5.28-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

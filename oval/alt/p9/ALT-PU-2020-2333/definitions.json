@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202333",
+      "Version": "oval:org.altlinux.errata:def:20202333",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2333: package `xrdp` update to version 0.9.13.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2333",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2333",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03635",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03635",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-4044",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-4044",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xrdp to version 0.9.13.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03635: Уязвимость множества функций из libscp_v0.c RDP сервера xrdp, связанная с переполнением буфера на стеке, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2020-4044: The xrdp-sesman service before version 0.9.13.1 can be crashed by connecting over port 3350 and supplying a malicious payload. Once the xrdp-sesman process is dead, an unprivileged attacker on the server could then proceed to start their own imposter sesman service listening on port 3350. This will allow them to capture any user credentials that are submitted to XRDP and approve or reject arbitrary login credentials. For xorgxrdp sessions in particular, this allows an unauthorized user to hijack an existing session. This is a buffer overflow attack, so there may be a risk of arbitrary code execution as well.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-09"
+          },
+          "Updated": {
+            "Date": "2020-07-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2021-03635",
+              "Impact": "High",
+              "Public": "20200708",
+              "CveID": "BDU:2021-03635"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-4044",
+              "Impact": "High",
+              "Public": "20200630",
+              "CveID": "CVE-2020-4044"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202333001",
+                "Comment": "xorg-drv-xrdp is earlier than 0:0.9.13.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202333002",
+                "Comment": "xrdp is earlier than 0:0.9.13.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

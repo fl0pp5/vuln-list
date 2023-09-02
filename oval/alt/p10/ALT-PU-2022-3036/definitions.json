@@ -1,0 +1,327 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223036",
+      "Version": "oval:org.altlinux.errata:def:20223036",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3036: package `util-linux` update to version 2.38.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3036",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3036",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03990",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03990",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00589",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00589",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-37600",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37600",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3995",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3995",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3996",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3996",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0563",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0563",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0563",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0563",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades util-linux to version 2.38.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03990: Уязвимость пакета служебных утилит командной строки util-linux, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * BDU:2022-00589: Уязвимость стандартного пакета служебных утилит командной строки util-linux, связанная с некорректными разрешениями и привилегиями доступа, позволяющая нарушителю обойти введенные ограничения безопасности\n\n * CVE-2021-37600: ** DISPUTED ** An integer overflow in util-linux through 2.37.1 can potentially cause a buffer overflow if an attacker were able to use system resources in a way that leads to a large number in the /proc/sysvipc/sem file. NOTE: this is unexploitable in GNU C Library environments, and possibly in all realistic environments.\n\n * CVE-2021-3995: A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows an unprivileged local attacker to unmount FUSE filesystems that belong to certain other users who have a UID that is a prefix of the UID of the attacker in its string form. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.\n\n * CVE-2021-3996: A logic error was found in the libmount library of util-linux in the function that allows an unprivileged user to unmount a FUSE filesystem. This flaw allows a local user on a vulnerable system to unmount other users' filesystems that are either world-writable themselves (like /tmp) or mounted in a world-writable directory. An attacker may use this flaw to cause a denial of service to applications that use the affected filesystems.\n\n * CVE-2022-0563: A flaw was found in the util-linux chfn and chsh utilities when compiled with Readline support. The Readline library uses an \"INPUTRC\" environment variable to get a path to the library config file. When the library cannot parse the specified file, it prints an error message containing data from the file. This flaw allows an unprivileged user to read root-owned files, potentially leading to privilege escalation. This flaw affects util-linux versions prior to 2.37.4.\n\n * CVE-2023-0563: A vulnerability classified as problematic has been found in PHPGurukul Bank Locker Management System 1.0. This affects an unknown part of the file add-locker-form.php of the component Assign Locker. The manipulation of the argument ahname leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-219717 was assigned to this vulnerability.\n\n * #40590: losetup cannot use hashalot package and therefore should not require it",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-08"
+          },
+          "Updated": {
+            "Date": "2022-11-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-03990",
+              "Impact": "Critical",
+              "Public": "20210730",
+              "CveID": "BDU:2021-03990"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2022-00589",
+              "Impact": "Low",
+              "Public": "20220125",
+              "CveID": "BDU:2022-00589"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37600",
+              "Impact": "Low",
+              "Public": "20210730",
+              "CveID": "CVE-2021-37600"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-552",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3995",
+              "Impact": "Low",
+              "Public": "20220823",
+              "CveID": "CVE-2021-3995"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-552",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3996",
+              "Impact": "Low",
+              "Public": "20220823",
+              "CveID": "CVE-2021-3996"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-209",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0563",
+              "Impact": "Low",
+              "Public": "20220221",
+              "CveID": "CVE-2022-0563"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0563",
+              "Impact": "Low",
+              "Public": "20230128",
+              "CveID": "CVE-2023-0563"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40590",
+              "Href": "https://bugzilla.altlinux.org/40590",
+              "Data": "losetup cannot use hashalot package and therefore should not require it"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036001",
+                "Comment": "agetty is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036002",
+                "Comment": "bash-completion-util-linux is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036003",
+                "Comment": "cfdisk is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036004",
+                "Comment": "fdisk is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036005",
+                "Comment": "getopt is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036006",
+                "Comment": "hardlink is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036007",
+                "Comment": "hwclock is earlier than 1:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036008",
+                "Comment": "libblkid is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036009",
+                "Comment": "libblkid-devel is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036010",
+                "Comment": "libblkid-devel-static is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036011",
+                "Comment": "libfdisk is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036012",
+                "Comment": "libfdisk-devel is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036013",
+                "Comment": "libfdisk-devel-static is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036014",
+                "Comment": "libmount is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036015",
+                "Comment": "libmount-devel is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036016",
+                "Comment": "libmount-devel-static is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036017",
+                "Comment": "libsmartcols is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036018",
+                "Comment": "libsmartcols-devel is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036019",
+                "Comment": "libsmartcols-devel-static is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036020",
+                "Comment": "libuuid is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036021",
+                "Comment": "libuuid-devel is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036022",
+                "Comment": "libuuid-devel-static is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036023",
+                "Comment": "look is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036024",
+                "Comment": "losetup is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036025",
+                "Comment": "lsblk is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036026",
+                "Comment": "mount is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036027",
+                "Comment": "rfkill is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036028",
+                "Comment": "schedutils is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036029",
+                "Comment": "setarch is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036030",
+                "Comment": "sfdisk is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036031",
+                "Comment": "util-linux is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036032",
+                "Comment": "util-linux-control is earlier than 0:2.38.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223036033",
+                "Comment": "uuidd is earlier than 0:2.38.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

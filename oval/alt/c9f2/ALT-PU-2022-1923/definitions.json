@@ -1,0 +1,86 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221923",
+      "Version": "oval:org.altlinux.errata:def:20221923",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1923: package `dnstracer` update to version 1.9-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1923",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1923",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2017-9430",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9430",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dnstracer to version 1.9-alt2. \nSecurity Fix(es):\n\n * CVE-2017-9430: Stack-based buffer overflow in dnstracer through 1.9 allows attackers to cause a denial of service (application crash) or possibly have unspecified other impact via a command line with a long name argument that is mishandled in a strcpy call for argv[0]. An example threat model is a web application that launches dnstracer with an untrusted name string.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-23"
+          },
+          "Updated": {
+            "Date": "2022-05-23"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9430",
+              "Impact": "Critical",
+              "Public": "20170605",
+              "CveID": "CVE-2017-9430"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221923001",
+                "Comment": "dnstracer is earlier than 0:1.9-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

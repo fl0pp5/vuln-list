@@ -1,0 +1,284 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211185",
+      "Version": "oval:org.altlinux.errata:def:20211185",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1185: package `tigervnc` update to version 1.10.1-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1185",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1185",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01411",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01411",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01412",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01412",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01413",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01413",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01414",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01414",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01455",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01455",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05229",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05229",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-15691",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15691",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15692",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15692",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15693",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15693",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15694",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15694",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15695",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15695",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26117",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26117",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades tigervnc to version 1.10.1-alt5. \nSecurity Fix(es):\n\n * BDU:2021-01411: Уязвимость функции CMsgReader::readSetCursor программного обеспечения VNC TigerVNC, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01412: Уязвимость функции DecodeManager::decodeRect программного обеспечения VNC TigerVNC, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01413: Уязвимость декодера CopyRectDecoder программного обеспечения VNC TigerVNC, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01414: Уязвимость декодера ZRLEDecoder программного обеспечения VNC TigerVNC, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01455: Уязвимость функции TightDecoder::FilterGradient программного обеспечения VNC TigerVNC, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05229: Уязвимость программного обеспечения для реализации VNC TigerVNC, связанная с ошибками процедуры подтверждения подлинности сертификата, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * CVE-2019-15691: TigerVNC version prior to 1.10.1 is vulnerable to stack use-after-return, which occurs due to incorrect usage of stack memory in ZRLEDecoder. If decoding routine would throw an exception, ZRLEDecoder may try to access stack variable, which has been already freed during the process of stack unwinding. Exploitation of this vulnerability could potentially result into remote code execution. This attack appear to be exploitable via network connectivity.\n\n * CVE-2019-15692: TigerVNC version prior to 1.10.1 is vulnerable to heap buffer overflow. Vulnerability could be triggered from CopyRectDecoder due to incorrect value checks. Exploitation of this vulnerability could potentially result into remote code execution. This attack appear to be exploitable via network connectivity.\n\n * CVE-2019-15693: TigerVNC version prior to 1.10.1 is vulnerable to heap buffer overflow, which occurs in TightDecoder::FilterGradient. Exploitation of this vulnerability could potentially result into remote code execution. This attack appear to be exploitable via network connectivity.\n\n * CVE-2019-15694: TigerVNC version prior to 1.10.1 is vulnerable to heap buffer overflow, which could be triggered from DecodeManager::decodeRect. Vulnerability occurs due to the signdness error in processing MemOutStream. Exploitation of this vulnerability could potentially result into remote code execution. This attack appear to be exploitable via network connectivity.\n\n * CVE-2019-15695: TigerVNC version prior to 1.10.1 is vulnerable to stack buffer overflow, which could be triggered from CMsgReader::readSetCursor. This vulnerability occurs due to insufficient sanitization of PixelFormat. Since remote attacker can choose offset from start of the buffer to start writing his values, exploitation of this vulnerability could potentially result into remote code execution. This attack appear to be exploitable via network connectivity.\n\n * CVE-2020-26117: In rfb/CSecurityTLS.cxx and rfb/CSecurityTLS.java in TigerVNC before 1.11.0, viewers mishandle TLS certificate exceptions. They store the certificates as authorities, meaning that the owner of a certificate could impersonate any server after a client had added an exception.\n\n * #39595: Запуск tigevnc из меню невозможен",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-29"
+          },
+          "Updated": {
+            "Date": "2021-01-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-754",
+              "Href": "https://bdu.fstec.ru/vul/2021-01411",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2021-01411"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01412",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2021-01412"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01413",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2021-01413"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-672",
+              "Href": "https://bdu.fstec.ru/vul/2021-01414",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2021-01414"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01455",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2021-01455"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2021-05229",
+              "Impact": "High",
+              "Public": "20200928",
+              "CveID": "BDU:2021-05229"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-672",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15691",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "CVE-2019-15691"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15692",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "CVE-2019-15692"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15693",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "CVE-2019-15693"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15694",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "CVE-2019-15694"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15695",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "CVE-2019-15695"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26117",
+              "Impact": "High",
+              "Public": "20200927",
+              "CveID": "CVE-2020-26117"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39595",
+              "Href": "https://bugzilla.altlinux.org/39595",
+              "Data": "Запуск tigevnc из меню невозможен"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211185001",
+                "Comment": "tigervnc is earlier than 0:1.10.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211185002",
+                "Comment": "tigervnc-common is earlier than 0:1.10.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211185003",
+                "Comment": "tigervnc-server is earlier than 0:1.10.1-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211185004",
+                "Comment": "xorg-extension-vnc is earlier than 0:1.10.1-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

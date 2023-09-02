@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232092",
+      "Version": "oval:org.altlinux.errata:def:20232092",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2092: package `e2fsprogs` update to version 1.46.4.0.5.4cda-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2092",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2092",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04671",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04671",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03599",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03599",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-5094",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5094",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5188",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5188",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades e2fsprogs to version 1.46.4.0.5.4cda-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04671: Уязвимость служебных утилит e2fsprogs для работы с файловыми системами ext2, ext3 и ext4, связанная с записью за границами кучи, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03599: Уязвимость функции повторного хэширования набора утилит для работы с файловыми системами E2fsprogs, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-5094: An exploitable code execution vulnerability exists in the quota file functionality of E2fsprogs 1.45.3. A specially crafted ext4 partition can cause an out-of-bounds write on the heap, resulting in code execution. An attacker can corrupt a partition to trigger this vulnerability.\n\n * CVE-2019-5188: A code execution vulnerability exists in the directory rehashing functionality of E2fsprogs e2fsck 1.45.4. A specially crafted ext4 directory can cause an out-of-bounds write on the stack, resulting in code execution. An attacker can corrupt a partition to trigger this vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-28"
+          },
+          "Updated": {
+            "Date": "2023-06-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-04671",
+              "Impact": "Low",
+              "Public": "20190924",
+              "CveID": "BDU:2019-04671"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03599",
+              "Impact": "Low",
+              "Public": "20200109",
+              "CveID": "BDU:2021-03599"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5094",
+              "Impact": "Low",
+              "Public": "20190924",
+              "CveID": "CVE-2019-5094"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5188",
+              "Impact": "Low",
+              "Public": "20200108",
+              "CveID": "CVE-2019-5188"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092001",
+                "Comment": "e2fsprogs is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092002",
+                "Comment": "libcom_err is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092003",
+                "Comment": "libcom_err-devel is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092004",
+                "Comment": "libcom_err-devel-static is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092005",
+                "Comment": "libe2fs is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092006",
+                "Comment": "libe2fs-devel is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092007",
+                "Comment": "libe2fs-devel-static is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092008",
+                "Comment": "libss is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092009",
+                "Comment": "libss-devel is earlier than 0:1.46.4.0.5.4cda-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232092010",
+                "Comment": "libss-devel-static is earlier than 0:1.46.4.0.5.4cda-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

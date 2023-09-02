@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231142",
+      "Version": "oval:org.altlinux.errata:def:20231142",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1142: package `kernel-image-rt` update to version 5.10.162-alt1.rt79",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1142",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1142",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rt to version 5.10.162-alt1.rt79. \nSecurity Fix(es):\n\n * #44829: Отсутствует модуль xt_owner",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-27"
+          },
+          "Updated": {
+            "Date": "2023-01-27"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44829",
+              "Href": "https://bugzilla.altlinux.org/44829",
+              "Data": "Отсутствует модуль xt_owner"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231142001",
+                "Comment": "kernel-headers-modules-rt is earlier than 0:5.10.162-alt1.rt79"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231142002",
+                "Comment": "kernel-headers-rt is earlier than 0:5.10.162-alt1.rt79"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231142003",
+                "Comment": "kernel-image-rt is earlier than 0:5.10.162-alt1.rt79"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231142004",
+                "Comment": "kernel-image-rt-checkinstall is earlier than 0:5.10.162-alt1.rt79"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

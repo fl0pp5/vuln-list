@@ -1,0 +1,180 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231147",
+      "Version": "oval:org.altlinux.errata:def:20231147",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1147: package `sudo` update to version 1.9.12p2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1147",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1147",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06664",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06664",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00210",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00210",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-43995",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43995",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22809",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22809",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sudo to version 1.9.12p2-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06664: Уязвимость реализации функции crypt() программы системного администрирования Sudo, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-00210: Уязвимость функции sudoedit программы системного администрирования Sudo, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2022-43995: Sudo 1.8.0 through 1.9.12, with the crypt() password backend, contains a plugins/sudoers/auth/passwd.c array-out-of-bounds error that can result in a heap-based buffer over-read. This can be triggered by arbitrary local users with access to Sudo by entering a password of seven characters or fewer. The impact could vary depending on the system libraries, compiler, and processor architecture.\n\n * CVE-2023-22809: In Sudo before 1.9.12p2, the sudoedit (aka -e) feature mishandles extra arguments passed in the user-provided environment variables (SUDO_EDITOR, VISUAL, and EDITOR), allowing a local attacker to append arbitrary entries to the list of files to process. This can lead to privilege escalation. Affected versions are 1.8.0 through 1.9.12.p1. The problem exists because a user-specified editor may contain a \"--\" argument that defeats a protection mechanism, e.g., an EDITOR='vim -- /path/to/extra/file' value.\n\n * #38612: Ошибка отображения имени целевого пользователяпри использовании ключа Default targetepw\n\n * #41907: ругань при установке\n\n * #44965: уязвимость (CVE-2023-22809)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-28"
+          },
+          "Updated": {
+            "Date": "2023-01-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06664",
+              "Impact": "High",
+              "Public": "20221028",
+              "CveID": "BDU:2022-06664"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-693",
+              "Href": "https://bdu.fstec.ru/vul/2023-00210",
+              "Impact": "High",
+              "Public": "20230118",
+              "CveID": "BDU:2023-00210"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43995",
+              "Impact": "High",
+              "Public": "20221102",
+              "CveID": "CVE-2022-43995"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22809",
+              "Impact": "High",
+              "Public": "20230118",
+              "CveID": "CVE-2023-22809"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "38612",
+              "Href": "https://bugzilla.altlinux.org/38612",
+              "Data": "Ошибка отображения имени целевого пользователяпри использовании ключа Default targetepw"
+            },
+            {
+              "Id": "41907",
+              "Href": "https://bugzilla.altlinux.org/41907",
+              "Data": "ругань при установке"
+            },
+            {
+              "Id": "44965",
+              "Href": "https://bugzilla.altlinux.org/44965",
+              "Data": "уязвимость (CVE-2023-22809)"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231147001",
+                "Comment": "sudo is earlier than 1:1.9.12p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231147002",
+                "Comment": "sudo-devel is earlier than 1:1.9.12p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231147003",
+                "Comment": "sudo-logsrvd is earlier than 1:1.9.12p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231147004",
+                "Comment": "sudo-python is earlier than 1:1.9.12p2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

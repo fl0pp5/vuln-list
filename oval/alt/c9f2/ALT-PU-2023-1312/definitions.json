@@ -1,0 +1,108 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231312",
+      "Version": "oval:org.altlinux.errata:def:20231312",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1312: package `memcached` update to version 1.6.18-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1312",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1312",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02665",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02665",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-37519",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37519",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades memcached to version 1.6.18-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02665: Уязвимость файла authfile.c программного средства кэширования данных memcached, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-37519: Buffer Overflow vulnerability in authfile.c memcached 1.6.9 allows attackers to cause a denial of service via crafted authenticattion file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-21"
+          },
+          "Updated": {
+            "Date": "2023-02-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2023-02665",
+              "Impact": "Low",
+              "Public": "20230203",
+              "CveID": "BDU:2023-02665"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37519",
+              "Impact": "Low",
+              "Public": "20230203",
+              "CveID": "CVE-2021-37519"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231312001",
+                "Comment": "memcached is earlier than 0:1.6.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231312002",
+                "Comment": "memcached-devel is earlier than 0:1.6.18-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231312003",
+                "Comment": "memcached-tool is earlier than 0:1.6.18-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

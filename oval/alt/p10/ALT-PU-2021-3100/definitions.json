@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213100",
+      "Version": "oval:org.altlinux.errata:def:20213100",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3100: package `propagator` update to version 20211007-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3100",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3100",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades propagator to version 20211007-alt1. \nSecurity Fix(es):\n\n * #40616: propagator: не работает автоматическая загрузка по сети при наличии \u003e= 2 интерфейсов\n\n * #40629: propagator: занудный ramdisk_size\n\n * #40687: udev: тупит при загрузке (init == propagator)\n\n * #40710: propagator: загрузка по http с нераспакованной ISO\n\n * #40803: propagator: load_ramdisk_fd: sloppy error handling\n\n * #41072: propagator: загрузка по http не всегда срабатывает",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-22"
+          },
+          "Updated": {
+            "Date": "2021-10-22"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40616",
+              "Href": "https://bugzilla.altlinux.org/40616",
+              "Data": "propagator: не работает автоматическая загрузка по сети при наличии \u003e= 2 интерфейсов"
+            },
+            {
+              "Id": "40629",
+              "Href": "https://bugzilla.altlinux.org/40629",
+              "Data": "propagator: занудный ramdisk_size"
+            },
+            {
+              "Id": "40687",
+              "Href": "https://bugzilla.altlinux.org/40687",
+              "Data": "udev: тупит при загрузке (init == propagator)"
+            },
+            {
+              "Id": "40710",
+              "Href": "https://bugzilla.altlinux.org/40710",
+              "Data": "propagator: загрузка по http с нераспакованной ISO"
+            },
+            {
+              "Id": "40803",
+              "Href": "https://bugzilla.altlinux.org/40803",
+              "Data": "propagator: load_ramdisk_fd: sloppy error handling"
+            },
+            {
+              "Id": "41072",
+              "Href": "https://bugzilla.altlinux.org/41072",
+              "Data": "propagator: загрузка по http не всегда срабатывает"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213100001",
+                "Comment": "propagator is earlier than 0:20211007-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

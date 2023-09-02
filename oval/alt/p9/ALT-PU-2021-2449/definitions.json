@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212449",
+      "Version": "oval:org.altlinux.errata:def:20212449",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2449: package `qt5-3d` update to version 5.12.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2449",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2449",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03630",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03630",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-17507",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17507",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-3d to version 5.12.11-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03630: Уязвимость функции read_xbm_body кроссплатформенной IDE Qt, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-17507: An issue was discovered in Qt through 5.12.9, and 5.13.x through 5.15.x before 5.15.1. read_xbm_body in gui/image/qxbmhandler.cpp has a buffer over-read.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-05"
+          },
+          "Updated": {
+            "Date": "2021-08-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03630",
+              "Impact": "Low",
+              "Public": "20200815",
+              "CveID": "BDU:2021-03630"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17507",
+              "Impact": "Low",
+              "Public": "20200812",
+              "CveID": "CVE-2020-17507"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449001",
+                "Comment": "libqt5-3danimation is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449002",
+                "Comment": "libqt5-3dcore is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449003",
+                "Comment": "libqt5-3dextras is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449004",
+                "Comment": "libqt5-3dinput is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449005",
+                "Comment": "libqt5-3dlogic is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449006",
+                "Comment": "libqt5-3dquick is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449007",
+                "Comment": "libqt5-3dquickanimation is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449008",
+                "Comment": "libqt5-3dquickextras is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449009",
+                "Comment": "libqt5-3dquickinput is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449010",
+                "Comment": "libqt5-3dquickrender is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449011",
+                "Comment": "libqt5-3dquickscene2d is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449012",
+                "Comment": "libqt5-3drender is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449013",
+                "Comment": "qt5-3d is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449014",
+                "Comment": "qt5-3d-common is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449015",
+                "Comment": "qt5-3d-devel is earlier than 0:5.12.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212449016",
+                "Comment": "qt5-3d-doc is earlier than 0:5.12.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

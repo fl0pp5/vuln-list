@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231834",
+      "Version": "oval:org.altlinux.errata:def:20231834",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1834: package `opensc` update to version 0.23.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1834",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1834",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-26570",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26570",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26571",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26571",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26572",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26572",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42778",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42778",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42779",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42779",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42780",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42780",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42781",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42781",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42782",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42782",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades opensc to version 0.23.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-26570: The Oberthur smart card software driver in OpenSC before 0.21.0-rc1 has a heap-based buffer overflow in sc_oberthur_read_file.\n\n * CVE-2020-26571: The gemsafe GPK smart card software driver in OpenSC before 0.21.0-rc1 has a stack-based buffer overflow in sc_pkcs15emu_gemsafeGPK_init.\n\n * CVE-2020-26572: The TCOS smart card software driver in OpenSC before 0.21.0-rc1 has a stack-based buffer overflow in tcos_decipher.\n\n * CVE-2021-42778: A heap double free issue was found in Opensc before version 0.22.0 in sc_pkcs15_free_tokeninfo.\n\n * CVE-2021-42779: A heap use after free issue was found in Opensc before version 0.22.0 in sc_file_valid.\n\n * CVE-2021-42780: A use after return issue was found in Opensc before version 0.22.0 in insert_pin function that could potentially crash programs using the library.\n\n * CVE-2021-42781: Heap buffer overflow issues were found in Opensc before version 0.22.0 in pkcs15-oberthur.c that could potentially crash programs using the library.\n\n * CVE-2021-42782: Stack buffer overflow issues were found in Opensc before version 0.22.0 in various places that could potentially crash programs using the library.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-19"
+          },
+          "Updated": {
+            "Date": "2023-05-19"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26570",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26570"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26571",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26571"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26572",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26572"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42778",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2021-42778"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42779",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2021-42779"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42780",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2021-42780"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42781",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2021-42781"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42782",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2021-42782"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231834001",
+                "Comment": "libopensc is earlier than 0:0.23.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231834002",
+                "Comment": "libopensc-devel is earlier than 0:0.23.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231834003",
+                "Comment": "opensc is earlier than 0:0.23.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

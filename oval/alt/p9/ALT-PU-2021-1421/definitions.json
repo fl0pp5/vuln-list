@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211421",
+      "Version": "oval:org.altlinux.errata:def:20211421",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1421: package `wireshark` update to version 3.4.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1421",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1421",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-22173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22173",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22174",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22174",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 3.4.3-alt1. \nSecurity Fix(es):\n\n * CVE-2021-22173: Memory leak in USB HID dissector in Wireshark 3.4.0 to 3.4.2 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-22174: Crash in USB HID dissector in Wireshark 3.4.0 to 3.4.2 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-01"
+          },
+          "Updated": {
+            "Date": "2021-03-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22173",
+              "Impact": "High",
+              "Public": "20210217",
+              "CveID": "CVE-2021-22173"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22174",
+              "Impact": "High",
+              "Public": "20210217",
+              "CveID": "CVE-2021-22174"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211421001",
+                "Comment": "tshark is earlier than 0:3.4.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211421002",
+                "Comment": "wireshark-base is earlier than 0:3.4.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211421003",
+                "Comment": "wireshark-devel is earlier than 0:3.4.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211421004",
+                "Comment": "wireshark-qt5 is earlier than 0:3.4.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

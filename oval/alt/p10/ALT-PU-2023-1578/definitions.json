@@ -1,0 +1,148 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231578",
+      "Version": "oval:org.altlinux.errata:def:20231578",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1578: package `xorg-server` update to version 1.20.14-alt8",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1578",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1578",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02146",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02146",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-1393",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1393",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xorg-server to version 1.20.14-alt8. \nSecurity Fix(es):\n\n * BDU:2023-02146: Уязвимость программного пакета X.Org Server, связанная с использованием памяти после ее освобождения, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2023-1393: A flaw was found in X.Org Server Overlay Window. A Use-After-Free may lead to local privilege escalation. If a client explicitly destroys the compositor overlay window (aka COW), the Xserver would leave a dangling pointer to that window in the CompScreen structure, which will trigger a use-after-free later.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-05"
+          },
+          "Updated": {
+            "Date": "2023-04-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-02146",
+              "Impact": "High",
+              "Public": "20230329",
+              "CveID": "BDU:2023-02146"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1393",
+              "Impact": "High",
+              "Public": "20230330",
+              "CveID": "CVE-2023-1393"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578001",
+                "Comment": "xorg-sdk is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578002",
+                "Comment": "xorg-server is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578003",
+                "Comment": "xorg-server-common is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578004",
+                "Comment": "xorg-xdmx is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578005",
+                "Comment": "xorg-xephyr is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578006",
+                "Comment": "xorg-xnest is earlier than 2:1.20.14-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231578007",
+                "Comment": "xorg-xvfb is earlier than 2:1.20.14-alt8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

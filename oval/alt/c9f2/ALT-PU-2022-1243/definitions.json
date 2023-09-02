@@ -1,0 +1,223 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221243",
+      "Version": "oval:org.altlinux.errata:def:20221243",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1243: package `golang` update to version 1.16.13-alt1.c9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1243",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1243",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00715",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00715",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-34558",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34558",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36221",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36221",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38297",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38297",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39293",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39293",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41771",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41771",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41772",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41772",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44716",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44716",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44717",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44717",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.16.13-alt1.c9. \nSecurity Fix(es):\n\n * BDU:2022-00715: Уязвимость пакета crypto/tls браузера Go, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-34558: The crypto/tls package of Go through 1.16.5 does not properly assert that the type of public key in an X.509 certificate matches the expected type when doing a RSA based key exchange, allowing a malicious TLS server to cause a TLS client to panic.\n\n * CVE-2021-36221: Go before 1.15.15 and 1.16.x before 1.16.7 has a race condition that can lead to a net/http/httputil ReverseProxy panic upon an ErrAbortHandler abort.\n\n * CVE-2021-38297: Go before 1.16.9 and 1.17.x before 1.17.2 has a Buffer Overflow via large arguments in a function invocation from a WASM module, when GOARCH=wasm GOOS=js is used.\n\n * CVE-2021-39293: In archive/zip in Go before 1.16.8 and 1.17.x before 1.17.1, a crafted archive header (falsely designating that many files are present) can cause a NewReader or OpenReader panic. NOTE: this issue exists because of an incomplete fix for CVE-2021-33196.\n\n * CVE-2021-41771: ImportedSymbols in debug/macho (for Open or OpenFat) in Go before 1.16.10 and 1.17.x before 1.17.3 Accesses a Memory Location After the End of a Buffer, aka an out-of-bounds slice situation.\n\n * CVE-2021-41772: Go before 1.16.10 and 1.17.x before 1.17.3 allows an archive/zip Reader.Open panic via a crafted ZIP archive containing an invalid name or an empty filename field.\n\n * CVE-2021-44716: net/http in Go before 1.16.12 and 1.17.x before 1.17.5 allows uncontrolled memory consumption in the header canonicalization cache via HTTP/2 requests.\n\n * CVE-2021-44717: Go before 1.16.12 and 1.17.x before 1.17.5 on UNIX allows write operations to an unintended file or unintended network connection as a consequence of erroneous closing of file descriptor 0 after file-descriptor exhaustion.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2022-00715",
+              "Impact": "Low",
+              "Public": "20210715",
+              "CveID": "BDU:2022-00715"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34558",
+              "Impact": "Low",
+              "Public": "20210715",
+              "CveID": "CVE-2021-34558"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36221",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-36221"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38297",
+              "Impact": "Critical",
+              "Public": "20211018",
+              "CveID": "CVE-2021-38297"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39293",
+              "Impact": "High",
+              "Public": "20220124",
+              "CveID": "CVE-2021-39293"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41771",
+              "Impact": "High",
+              "Public": "20211108",
+              "CveID": "CVE-2021-41771"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41772",
+              "Impact": "High",
+              "Public": "20211108",
+              "CveID": "CVE-2021-41772"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44716",
+              "Impact": "High",
+              "Public": "20220101",
+              "CveID": "CVE-2021-44716"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-404",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44717",
+              "Impact": "Low",
+              "Public": "20220101",
+              "CveID": "CVE-2021-44717"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243001",
+                "Comment": "golang is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243002",
+                "Comment": "golang-docs is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243003",
+                "Comment": "golang-gdb is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243004",
+                "Comment": "golang-misc is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243005",
+                "Comment": "golang-shared is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243006",
+                "Comment": "golang-src is earlier than 0:1.16.13-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221243007",
+                "Comment": "golang-tests is earlier than 0:1.16.13-alt1.c9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

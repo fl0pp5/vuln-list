@@ -1,0 +1,201 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221124",
+      "Version": "oval:org.altlinux.errata:def:20221124",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1124: package `python3-module-django` update to version 3.2.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1124",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1124",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00352",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00352",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00353",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00353",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00354",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00354",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-45115",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45115",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45116",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45116",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45452",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45452",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-django to version 3.2.11-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00352: Уязвимость компонента UserAttributeSimilarityValidator фреймворка для веб-разработки Django, позволяющая нарушителю выполнить отказ в обслуживании\n\n * BDU:2022-00353: Уязвимость функция Storage.save() фреймворка для веб-приложений Django, позволяющая нарушителю получить доступ к конфиденциальной информации\n\n * BDU:2022-00354: Уязвимость шаблона dictsort фреймворка для веб-приложений Django, позволяющая нарушителю получить доступ к конфиденциальной информации\n\n * CVE-2021-45115: An issue was discovered in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1. UserAttributeSimilarityValidator incurred significant overhead in evaluating a submitted password that was artificially large in relation to the comparison values. In a situation where access to user registration was unrestricted, this provided a potential vector for a denial-of-service attack.\n\n * CVE-2021-45116: An issue was discovered in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1. Due to leveraging the Django Template Language's variable resolution logic, the dictsort template filter was potentially vulnerable to information disclosure, or an unintended method call, if passed a suitably crafted key.\n\n * CVE-2021-45452: Storage.save in Django 2.2 before 2.2.26, 3.2 before 3.2.11, and 4.0 before 4.0.1 allows directory traversal if crafted filenames are directly passed to it.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-24"
+          },
+          "Updated": {
+            "Date": "2022-01-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-399",
+              "Href": "https://bdu.fstec.ru/vul/2022-00352",
+              "Impact": "High",
+              "Public": "20220104",
+              "CveID": "BDU:2022-00352"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2022-00353",
+              "Impact": "Low",
+              "Public": "20220104",
+              "CveID": "BDU:2022-00353"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-668",
+              "Href": "https://bdu.fstec.ru/vul/2022-00354",
+              "Impact": "Low",
+              "Public": "20220104",
+              "CveID": "BDU:2022-00354"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45115",
+              "Impact": "High",
+              "Public": "20220105",
+              "CveID": "CVE-2021-45115"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45116",
+              "Impact": "High",
+              "Public": "20220105",
+              "CveID": "CVE-2021-45116"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45452",
+              "Impact": "Low",
+              "Public": "20220105",
+              "CveID": "CVE-2021-45452"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124001",
+                "Comment": "python3-module-django is earlier than 0:3.2.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124002",
+                "Comment": "python3-module-django-dbbackend-mysql is earlier than 0:3.2.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124003",
+                "Comment": "python3-module-django-dbbackend-oracle is earlier than 0:3.2.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124004",
+                "Comment": "python3-module-django-dbbackend-postgresql is earlier than 0:3.2.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124005",
+                "Comment": "python3-module-django-dbbackend-sqlite3 is earlier than 0:3.2.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221124006",
+                "Comment": "python3-module-django-doc is earlier than 0:3.2.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223255",
+      "Version": "oval:org.altlinux.errata:def:20223255",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3255: package `dovecot` update to version 2.3.19.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3255",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3255",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-30550",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30550",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dovecot to version 2.3.19.1-alt2. \nSecurity Fix(es):\n\n * CVE-2022-30550: An issue was discovered in the auth component in Dovecot 2.2 and 2.3 before 2.3.20. When two passdb configuration entries exist with the same driver and args settings, incorrect username_filter and mechanism settings can be applied to passdb definitions. These incorrectly applied settings can lead to an unintended security configuration and can permit privilege escalation in certain configurations. The documentation does not advise against the use of passdb definitions that have the same driver and args settings. One such configuration would be where an administrator wishes to use the same PAM configuration or passwd file for both normal and master users but use the username_filter setting to restrict which of the users is able to be a master user.\n\n * #40786: Ошибки при обновлении",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-01"
+          },
+          "Updated": {
+            "Date": "2022-12-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30550",
+              "Impact": "High",
+              "Public": "20220717",
+              "CveID": "CVE-2022-30550"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40786",
+              "Href": "https://bugzilla.altlinux.org/40786",
+              "Data": "Ошибки при обновлении"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223255001",
+                "Comment": "dovecot is earlier than 0:2.3.19.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223255002",
+                "Comment": "dovecot-devel is earlier than 0:2.3.19.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

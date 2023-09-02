@@ -1,0 +1,247 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192823",
+      "Version": "oval:org.altlinux.errata:def:20192823",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2823: package `nginx` update to version 1.16.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2823",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2823",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-00984",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00984",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02994",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02994",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02997",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02997",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03638",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03638",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03782",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03782",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-16845",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16845",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9511",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9511",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9513",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9513",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9516",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9516",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nginx to version 1.16.1-alt1. \nSecurity Fix(es):\n\n * BDU:2019-00984: Уязвимость модуля ngx_http_mp4_module сервера nginx, позволяющая нарушителю вызвать отказ в обслуживании или раскрыть защищаемую информацию\n\n * BDU:2019-02994: Уязвимость реализации сетевого протокола HTTP/2 операционных систем Windows, сервера nginx, программной платформы Node.js, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02997: Уязвимость реализации сетевого протокола HTTP/2 операционных систем Windows, веб-сервера Apache Traffic Server, сетевых программных средств Envoy, программной платформы Node.js, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03638: Уязвимость реализации сетевого протокола HTTP/2 сервера nginx, программной платформы Node.js, сетевого программного средства SwiftNIO, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03782: Уязвимость реализации сетевого протокола HTTP/2 веб-сервера Apache HTTP Server, связанная с неконтролируемым расходом ресурса, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2018-16845: nginx before versions 1.15.6, 1.14.1 has a vulnerability in the ngx_http_mp4_module, which might allow an attacker to cause infinite loop in a worker process, cause a worker process crash, or might result in worker process memory disclosure by using a specially crafted mp4 file. The issue only affects nginx if it is built with the ngx_http_mp4_module (the module is not built by default) and the .mp4. directive is used in the configuration file. Further, the attack is only possible if an attacker is able to trigger processing of a specially crafted mp4 file with the ngx_http_mp4_module.\n\n * CVE-2019-9511: Some HTTP/2 implementations are vulnerable to window size manipulation and stream prioritization manipulation, potentially leading to a denial of service. The attacker requests a large amount of data from a specified resource over multiple streams. They manipulate window size and stream priority to force the server to queue the data in 1-byte chunks. Depending on how efficiently this data is queued, this can consume excess CPU, memory, or both.\n\n * CVE-2019-9513: Some HTTP/2 implementations are vulnerable to resource loops, potentially leading to a denial of service. The attacker creates multiple request streams and continually shuffles the priority of the streams in a way that causes substantial churn to the priority tree. This can consume excess CPU.\n\n * CVE-2019-9516: Some HTTP/2 implementations are vulnerable to a header leak, potentially leading to a denial of service. The attacker sends a stream of headers with a 0-length header name and 0-length header value, optionally Huffman encoded into 1-byte or greater headers. Some implementations allocate memory for these headers and keep the allocation alive until the session dies. This can consume excess memory.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-04"
+          },
+          "Updated": {
+            "Date": "2019-10-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2019-00984",
+              "Impact": "Low",
+              "Public": "20181106",
+              "CveID": "BDU:2019-00984"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02994",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "BDU:2019-02994"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-02997",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "BDU:2019-02997"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03638",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "BDU:2019-03638"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03782",
+              "Impact": "High",
+              "Public": "20190320",
+              "CveID": "BDU:2019-03782"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16845",
+              "Impact": "Low",
+              "Public": "20181107",
+              "CveID": "CVE-2018-16845"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9511",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9511"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9513",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9513"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9516",
+              "Impact": "Low",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9516"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823001",
+                "Comment": "nginx is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823002",
+                "Comment": "nginx-geoip is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823003",
+                "Comment": "nginx-image_filter is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823004",
+                "Comment": "nginx-pam is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823005",
+                "Comment": "nginx-perl is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823006",
+                "Comment": "nginx-spnego is earlier than 0:1.16.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192823007",
+                "Comment": "nginx-xslt is earlier than 0:1.16.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

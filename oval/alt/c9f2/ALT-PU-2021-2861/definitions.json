@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212861",
+      "Version": "oval:org.altlinux.errata:def:20212861",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2861: package `freeipa` update to version 4.8.9-alt4.c9f2.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2861",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2861",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades freeipa to version 4.8.9-alt4.c9f2.2. \nSecurity Fix(es):\n\n * #40343: Не работает без ntp-server",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-23"
+          },
+          "Updated": {
+            "Date": "2021-09-23"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40343",
+              "Href": "https://bugzilla.altlinux.org/40343",
+              "Data": "Не работает без ntp-server"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861001",
+                "Comment": "freeipa-client is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861002",
+                "Comment": "freeipa-client-automount is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861003",
+                "Comment": "freeipa-client-common is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861004",
+                "Comment": "freeipa-client-epn is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861005",
+                "Comment": "freeipa-client-samba is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861006",
+                "Comment": "freeipa-common is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861007",
+                "Comment": "freeipa-server is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861008",
+                "Comment": "freeipa-server-common is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861009",
+                "Comment": "freeipa-server-dns is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861010",
+                "Comment": "freeipa-server-trust-ad is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861011",
+                "Comment": "python3-module-freeipa is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861012",
+                "Comment": "python3-module-ipaclient is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861013",
+                "Comment": "python3-module-ipaserver is earlier than 0:4.8.9-alt4.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212861014",
+                "Comment": "python3-module-ipatests is earlier than 0:4.8.9-alt4.c9f2.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

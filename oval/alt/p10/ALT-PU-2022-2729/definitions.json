@@ -1,0 +1,279 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222729",
+      "Version": "oval:org.altlinux.errata:def:20222729",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2729: package `htmldoc` update to version 1.9.16-alt1_git_929606c_1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2729",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2729",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00209",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00209",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20308",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20308",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23165",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23165",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23180",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23180",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23191",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23206",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23206",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33235",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33235",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33236",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33236",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-40985",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-40985",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43579",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43579",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0137",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0137",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24191",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-34035",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-34035",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades htmldoc to version 1.9.16-alt1_git_929606c_1. \nSecurity Fix(es):\n\n * BDU:2022-00209: Уязвимость программного обеспечения для преобразования веб-страницы htmldoc, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-20308: Integer overflow in the htmldoc 1.9.11 and before may allow attackers to execute arbitrary code and cause a denial of service that is similar to CVE-2017-9181.\n\n * CVE-2021-23165: A flaw was found in htmldoc before v1.9.12. Heap buffer overflow in pspdf_prepare_outpages(), in ps-pdf.cxx may lead to execute arbitrary code and denial of service.\n\n * CVE-2021-23180: A flaw was found in htmldoc in v1.9.12 and before. Null pointer dereference in file_extension(),in file.c may lead to execute arbitrary code and denial of service.\n\n * CVE-2021-23191: A security issue was found in htmldoc v1.9.12 and before. A NULL pointer dereference in the function image_load_jpeg() in image.cxx may result in denial of service.\n\n * CVE-2021-23206: A flaw was found in htmldoc in v1.9.12 and prior. A stack buffer overflow in parse_table() in ps-pdf.cxx may lead to execute arbitrary code and denial of service.\n\n * CVE-2021-33235: Buffer overflow vulnerability in write_node in htmldoc through 1.9.11 allows attackers to cause a denial of service via htmldoc/htmldoc/html.cxx:588.\n\n * CVE-2021-33236: Buffer Overflow vulnerability in write_header in htmldoc through 1.9.11 allows attackers to casue a denial of service via /htmldoc/htmldoc/html.cxx:273.\n\n * CVE-2021-40985: A stack-based buffer under-read in htmldoc before 1.9.12, allows attackers to cause a denial of service via a crafted BMP image to image_load_bmp.\n\n * CVE-2021-43579: A stack-based buffer overflow in image_load_bmp() in HTMLDOC \u003c= 1.9.13 results in remote code execution if the victim converts an HTML document linking to a crafted BMP file.\n\n * CVE-2022-0137: A heap buffer overflow in image_set_mask function of HTMLDOC before 1.9.15 allows an attacker to write outside the buffer boundaries.\n\n * CVE-2022-24191: In HTMLDOC 1.9.14, an infinite loop in the gif_read_lzw function can lead to a pointer arbitrarily pointing to heap memory and resulting in a buffer overflow.\n\n * CVE-2022-34035: HTMLDoc v1.9.12 and below was discovered to contain a heap overflow via e_node htmldoc/htmldoc/html.cxx:588.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-04"
+          },
+          "Updated": {
+            "Date": "2022-10-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-00209",
+              "Impact": "Critical",
+              "Public": "20210308",
+              "CveID": "BDU:2022-00209"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20308",
+              "Impact": "Critical",
+              "Public": "20210405",
+              "CveID": "CVE-2021-20308"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23165",
+              "Impact": "Critical",
+              "Public": "20220316",
+              "CveID": "CVE-2021-23165"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23180",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-23180"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23191",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-23191"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23206",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-23206"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33235",
+              "Impact": "Low",
+              "Public": "20220815",
+              "CveID": "CVE-2021-33235"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33236",
+              "Impact": "Low",
+              "Public": "20220815",
+              "CveID": "CVE-2021-33236"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-40985",
+              "Impact": "Low",
+              "Public": "20211103",
+              "CveID": "CVE-2021-40985"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43579",
+              "Impact": "High",
+              "Public": "20220110",
+              "CveID": "CVE-2021-43579"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0137",
+              "Impact": "Low",
+              "Public": "20221114",
+              "CveID": "CVE-2022-0137"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24191",
+              "Impact": "Low",
+              "Public": "20220404",
+              "CveID": "CVE-2022-24191"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-34035",
+              "Impact": "High",
+              "Public": "20220718",
+              "CveID": "CVE-2022-34035"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222729001",
+                "Comment": "fonts-type1-htmldoc is earlier than 1:1.9.16-alt1_git_929606c_1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222729002",
+                "Comment": "htmldoc is earlier than 1:1.9.16-alt1_git_929606c_1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231929",
+      "Version": "oval:org.altlinux.errata:def:20231929",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1929: package `openssl1.1` update to version 1.1.1t-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1929",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1929",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02108",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02108",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03312",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03312",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-0464",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0465",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0466",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1t-alt3. \nSecurity Fix(es):\n\n * BDU:2023-02108: Уязвимость криптографической библиотеки OpenSSL, связанная с проверкой цепочек сертификатов X.509, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03312: Уязвимость криптографической библиотеки OpenSSL, связанная с игнорированием недействительной политики сертификатов в листовых сертификатах, которые пропускаются для этого сертификата, позволяющая нарушителю обойти проверку политик для сертификата\n\n * CVE-2023-0464: A security vulnerability has been identified in all supported versions\n\nof OpenSSL related to the verification of X.509 certificate chains\nthat include policy constraints.  Attackers may be able to exploit this\nvulnerability by creating a malicious certificate chain that triggers\nexponential use of computational resources, leading to a denial-of-service\n(DoS) attack on affected systems.\n\nPolicy processing is disabled by default but can be enabled by passing\nthe `-policy' argument to the command line utilities or by calling the\n`X509_VERIFY_PARAM_set1_policies()' function.\n\n * CVE-2023-0465: Applications that use a non-default option when verifying certificates may be\nvulnerable to an attack from a malicious CA to circumvent certain checks.\n\nInvalid certificate policies in leaf certificates are silently ignored by\nOpenSSL and other certificate policy checks are skipped for that certificate.\nA malicious CA could use this to deliberately assert invalid certificate policies\nin order to circumvent policy checking on the certificate altogether.\n\nPolicy processing is disabled by default but can be enabled by passing\nthe `-policy' argument to the command line utilities or by calling the\n`X509_VERIFY_PARAM_set1_policies()' function.\n\n * CVE-2023-0466: The function X509_VERIFY_PARAM_add0_policy() is documented to\nimplicitly enable the certificate policy check when doing certificate\nverification. However the implementation of the function does not\nenable the check which allows certificates with invalid or incorrect\npolicies to pass the certificate verification.\n\nAs suddenly enabling the policy check could break existing deployments it was\ndecided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy()\nfunction.\n\nInstead the applications that require OpenSSL to perform certificate\npolicy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly\nenable the policy check by calling X509_VERIFY_PARAM_set_flags() with\nthe X509_V_FLAG_POLICY_CHECK flag argument.\n\nCertificate policy checks are disabled by default in OpenSSL and are not\ncommonly used by applications.\n\n * #45583: openssl1.1: не собирается на LoongArch",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-01"
+          },
+          "Updated": {
+            "Date": "2023-06-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2023-02108",
+              "Impact": "High",
+              "Public": "20230322",
+              "CveID": "BDU:2023-02108"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2023-03312",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "BDU:2023-03312"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+              "Impact": "High",
+              "Public": "20230322",
+              "CveID": "CVE-2023-0464"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "CVE-2023-0465"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "CVE-2023-0466"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45583",
+              "Href": "https://bugzilla.altlinux.org/45583",
+              "Data": "openssl1.1: не собирается на LoongArch"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929005",
+                "Comment": "openssl is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1t-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231929008",
+                "Comment": "tsget is earlier than 0:1.1.1t-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203259",
+      "Version": "oval:org.altlinux.errata:def:20203259",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3259: package `kernel-image-std-debug` update to version 5.4.76-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3259",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3259",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05831",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05831",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-25656",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25656",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-debug to version 5.4.76-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05831: Уязвимость ядра операционной системы Linux, связанная с использованием памяти после её освобождения, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2020-25656: A flaw was found in the Linux kernel. A use-after-free was found in the way the console subsystem was using ioctls KDGKBSENT and KDSKBSENT. A local user could use this flaw to get read memory access out of bounds. The highest threat from this vulnerability is to data confidentiality.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-11"
+          },
+          "Updated": {
+            "Date": "2020-11-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-05831",
+              "Impact": "Low",
+              "Public": "20201016",
+              "CveID": "BDU:2020-05831"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25656",
+              "Impact": "Low",
+              "Public": "20201202",
+              "CveID": "CVE-2020-25656"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259001",
+                "Comment": "kernel-headers-modules-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259002",
+                "Comment": "kernel-headers-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259003",
+                "Comment": "kernel-image-domU-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259004",
+                "Comment": "kernel-image-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259005",
+                "Comment": "kernel-modules-drm-ancient-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259006",
+                "Comment": "kernel-modules-drm-nouveau-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259007",
+                "Comment": "kernel-modules-drm-radeon-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259008",
+                "Comment": "kernel-modules-drm-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259009",
+                "Comment": "kernel-modules-ide-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259010",
+                "Comment": "kernel-modules-staging-std-debug is earlier than 2:5.4.76-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203259011",
+                "Comment": "kernel-modules-v4l-std-debug is earlier than 2:5.4.76-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

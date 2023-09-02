@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192356",
+      "Version": "oval:org.altlinux.errata:def:20192356",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2356: package `u-boot-tools` update to version 2019.07-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2356",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2356",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-11059",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11059",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11690",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11690",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13103",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13103",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades u-boot-tools to version 2019.07-alt1. \nSecurity Fix(es):\n\n * CVE-2019-11059: Das U-Boot 2016.11-rc1 through 2019.04 mishandles the ext4 64-bit extension, resulting in a buffer overflow.\n\n * CVE-2019-11690: gen_rand_uuid in lib/uuid.c in Das U-Boot v2014.04 through v2019.04 lacks an srand call, which allows attackers to determine UUID values in scenarios where CONFIG_RANDOM_UUID is enabled, and Das U-Boot is relied upon for UUID values of a GUID Partition Table of a boot device.\n\n * CVE-2019-13103: A crafted self-referential DOS partition table will cause all Das U-Boot versions through 2019.07-rc4 to infinitely recurse, causing the stack to grow infinitely and eventually either crash or overwrite other data.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-01"
+          },
+          "Updated": {
+            "Date": "2019-08-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11059",
+              "Impact": "Critical",
+              "Public": "20190510",
+              "CveID": "CVE-2019-11059"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-330",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11690",
+              "Impact": "Low",
+              "Public": "20190503",
+              "CveID": "CVE-2019-11690"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13103",
+              "Impact": "High",
+              "Public": "20190729",
+              "CveID": "CVE-2019-13103"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192356001",
+                "Comment": "u-boot-tools is earlier than 0:2019.07-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

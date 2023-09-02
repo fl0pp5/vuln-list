@@ -1,0 +1,256 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202932",
+      "Version": "oval:org.altlinux.errata:def:20202932",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2932: package `nss` update to version 3.56.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2932",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2932",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03953",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03953",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03960",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03960",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03961",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03961",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00099",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00099",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12399",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12399",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12400",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12400",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12401",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12401",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12403",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12403",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6829",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6829",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nss to version 3.56.0-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03953: Уязвимость компонента Knowledge Management программной интеграционной платформы SAP NetWeaver, позволяющая нарушителю осуществить межсайтовые сценарные атаки\n\n * BDU:2020-03960: Уязвимость функции модульной инверсии набора библиотек NSS (Network Security Services), позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2020-03961: Уязвимость набора библиотек NSS (Network Security Services), связанная с использованием криптографического алгоритма ECDSA (Elliptic Curve Digital Signature Algorithm), содержащего дефекты, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-00099: Уязвимость подписи DSA веб-браузеров программного обеспечения Firefox, Firefox-esr и Thunderbird, связанная с раскрытием информации в результате расхождений, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2020-12399: NSS has shown timing differences when performing DSA signatures, which was exploitable and could eventually leak private keys. This vulnerability affects Thunderbird \u003c 68.9.0, Firefox \u003c 77, and Firefox ESR \u003c 68.9.\n\n * CVE-2020-12400: When converting coordinates from projective to affine, the modular inversion was not performed in constant time, resulting in a possible timing-based side channel attack. This vulnerability affects Firefox \u003c 80 and Firefox for Android \u003c 80.\n\n * CVE-2020-12401: During ECDSA signature generation, padding applied in the nonce designed to ensure constant-time scalar multiplication was removed, resulting in variable-time execution dependent on secret data. This vulnerability affects Firefox \u003c 80 and Firefox for Android \u003c 80.\n\n * CVE-2020-12403: A flaw was found in the way CHACHA20-POLY1305 was implemented in NSS in versions before 3.55. When using multi-part Chacha20, it could cause out-of-bounds reads. This issue was fixed by explicitly disabling multi-part ChaCha20 (which was not functioning correctly) and strictly enforcing tag length. The highest threat from this vulnerability is to confidentiality and system availability.\n\n * CVE-2020-6829: When performing EC scalar point multiplication, the wNAF point multiplication algorithm was used; which leaked partial information about the nonce used during signature generation. Given an electro-magnetic trace of a few signature generations, the private key could have been computed. This vulnerability affects Firefox \u003c 80 and Firefox for Android \u003c 80.\n\n * #38590: NSS and NSS_DISABLE_DBM\n\n * #38597: Сломана сборка с -Werror=strict-prototypes\n\n * #38636: В состав libnss больше не входит libpkix.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-03"
+          },
+          "Updated": {
+            "Date": "2020-10-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-80",
+              "Href": "https://bdu.fstec.ru/vul/2020-03953",
+              "Impact": "Critical",
+              "Public": "20200813",
+              "CveID": "BDU:2020-03953"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://bdu.fstec.ru/vul/2020-03960",
+              "Impact": "Low",
+              "Public": "20200716",
+              "CveID": "BDU:2020-03960"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://bdu.fstec.ru/vul/2020-03961",
+              "Impact": "Low",
+              "Public": "20200629",
+              "CveID": "BDU:2020-03961"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://bdu.fstec.ru/vul/2021-00099",
+              "Impact": "Low",
+              "Public": "20200602",
+              "CveID": "BDU:2021-00099"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12399",
+              "Impact": "Low",
+              "Public": "20200709",
+              "CveID": "CVE-2020-12399"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12400",
+              "Impact": "Low",
+              "Public": "20201008",
+              "CveID": "CVE-2020-12400"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12401",
+              "Impact": "Low",
+              "Public": "20201008",
+              "CveID": "CVE-2020-12401"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12403",
+              "Impact": "Critical",
+              "Public": "20210527",
+              "CveID": "CVE-2020-12403"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6829",
+              "Impact": "Low",
+              "Public": "20201028",
+              "CveID": "CVE-2020-6829"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "38590",
+              "Href": "https://bugzilla.altlinux.org/38590",
+              "Data": "NSS and NSS_DISABLE_DBM"
+            },
+            {
+              "Id": "38597",
+              "Href": "https://bugzilla.altlinux.org/38597",
+              "Data": "Сломана сборка с -Werror=strict-prototypes"
+            },
+            {
+              "Id": "38636",
+              "Href": "https://bugzilla.altlinux.org/38636",
+              "Data": "В состав libnss больше не входит libpkix."
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202932001",
+                "Comment": "libnss is earlier than 0:3.56.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202932002",
+                "Comment": "libnss-devel is earlier than 0:3.56.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202932003",
+                "Comment": "libnss-devel-static is earlier than 0:3.56.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202932004",
+                "Comment": "libnss-nssckbi-checkinstall is earlier than 0:3.56.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202932005",
+                "Comment": "nss-utils is earlier than 0:3.56.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

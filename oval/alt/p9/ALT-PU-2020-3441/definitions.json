@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203441",
+      "Version": "oval:org.altlinux.errata:def:20203441",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3441: package `libtorrent-rasterbar` update to version 1.1.13-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3441",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3441",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades libtorrent-rasterbar to version 1.1.13-alt2. \nSecurity Fix(es):\n\n * #31679: Отсутствует для python3",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-02"
+          },
+          "Updated": {
+            "Date": "2020-12-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "31679",
+              "Href": "https://bugzilla.altlinux.org/31679",
+              "Data": "Отсутствует для python3"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203441001",
+                "Comment": "libtorrent-rasterbar-devel is earlier than 3:1.1.13-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203441002",
+                "Comment": "libtorrent-rasterbar9 is earlier than 3:1.1.13-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203441003",
+                "Comment": "python-module-libtorrent-rasterbar is earlier than 3:1.1.13-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203441004",
+                "Comment": "python3-module-libtorrent-rasterbar is earlier than 3:1.1.13-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

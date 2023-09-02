@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192536",
+      "Version": "oval:org.altlinux.errata:def:20192536",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2536: package `libosinfo` update to version 1.6.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2536",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2536",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-13313",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13313",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libosinfo to version 1.6.0-alt1. \nSecurity Fix(es):\n\n * CVE-2019-13313: libosinfo 1.5.0 allows local users to discover credentials by listing a process, because credentials are passed to osinfo-install-script via the command line.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-24"
+          },
+          "Updated": {
+            "Date": "2019-08-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13313",
+              "Impact": "High",
+              "Public": "20190705",
+              "CveID": "CVE-2019-13313"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192536001",
+                "Comment": "libosinfo is earlier than 0:1.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192536002",
+                "Comment": "libosinfo-devel is earlier than 0:1.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192536003",
+                "Comment": "libosinfo-devel-doc is earlier than 0:1.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192536004",
+                "Comment": "libosinfo-gir is earlier than 0:1.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192536005",
+                "Comment": "libosinfo-gir-devel is earlier than 0:1.6.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

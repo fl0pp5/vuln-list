@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231062",
+      "Version": "oval:org.altlinux.errata:def:20231062",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1062: package `wireshark` update to version 4.0.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1062",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1062",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-3190",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3190",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3725",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4344",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4344",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4345",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4345",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 4.0.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-3190: Infinite loop in the F5 Ethernet Trailer protocol dissector in Wireshark 3.6.0 to 3.6.7 and 3.4.0 to 3.4.15 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-3725: Crash in the OPUS protocol dissector in Wireshark 3.6.0 to 3.6.8 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-4344: Memory exhaustion in the Kafka protocol dissector in Wireshark 4.0.0 to 4.0.1 and 3.6.0 to 3.6.9 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-4345: Infinite loops in the BPv6, OpenFlow, and Kafka protocol dissectors in Wireshark 4.0.0 to 4.0.1 and 3.6.0 to 3.6.9 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-17"
+          },
+          "Updated": {
+            "Date": "2023-01-17"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3190",
+              "Impact": "Low",
+              "Public": "20220913",
+              "CveID": "CVE-2022-3190"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3725",
+              "Impact": "High",
+              "Public": "20221027",
+              "CveID": "CVE-2022-3725"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4344",
+              "Impact": "Low",
+              "Public": "20230112",
+              "CveID": "CVE-2022-4344"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4345",
+              "Impact": "Low",
+              "Public": "20230112",
+              "CveID": "CVE-2022-4345"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231062001",
+                "Comment": "tshark is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231062002",
+                "Comment": "wireshark-base is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231062003",
+                "Comment": "wireshark-devel is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231062004",
+                "Comment": "wireshark-qt5 is earlier than 0:4.0.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202731",
+      "Version": "oval:org.altlinux.errata:def:20202731",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2731: package `sudo` update to version 1.8.31p2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2731",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2731",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00855",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00855",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00856",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00856",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00857",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00857",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-18634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18634",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18684",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18684",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19232",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19232",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19234",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19234",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sudo to version 1.8.31p2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00855: Уязвимость функции stdin getln программы системного администрирования Sudo, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2020-00856: Уязвимость учетной записи sudoer в файле Runas ALL программы системного администрирования Sudo, позволяющая нарушителю отключить аутентификацию пользователя по локальному паролю\n\n * BDU:2020-00857: Уязвимость учетной записи sudoer в файле Runas ALL программы системного администрирования Sudo, позволяющая нарушителю выдать себя за несуществующего пользователя\n\n * CVE-2019-18634: In Sudo before 1.8.26, if pwfeedback is enabled in /etc/sudoers, users can trigger a stack-based buffer overflow in the privileged sudo process. (pwfeedback is a default setting in Linux Mint and elementary OS; however, it is NOT the default for upstream and many other packages, and would exist only if enabled by an administrator.) The attacker needs to deliver a long string to the stdin of getln() in tgetpass.c.\n\n * CVE-2019-18684: ** DISPUTED ** Sudo through 1.8.29 allows local users to escalate to root if they have write access to file descriptor 3 of the sudo process. This occurs because of a race condition between determining a uid, and the setresuid and openat system calls. The attacker can write \"ALL ALL=(ALL) NOPASSWD:ALL\" to /proc/#####/fd/3 at a time when Sudo is prompting for a password. NOTE: This has been disputed due to the way Linux /proc works. It has been argued that writing to /proc/#####/fd/3 would only be viable if you had permission to write to /etc/sudoers. Even with write permission to /proc/#####/fd/3, it would not help you write to /etc/sudoers.\n\n * CVE-2019-19232: ** DISPUTED ** In Sudo through 1.8.29, an attacker with access to a Runas ALL sudoer account can impersonate a nonexistent user by invoking sudo with a numeric uid that is not associated with any user. NOTE: The software maintainer believes that this is not a vulnerability because running a command via sudo as a user not present in the local password database is an intentional feature. Because this behavior surprised some users, sudo 1.8.30 introduced an option to enable/disable this behavior with the default being disabled. However, this does not change the fact that sudo was behaving as intended, and as documented, in earlier versions.\n\n * CVE-2019-19234: ** DISPUTED ** In Sudo through 1.8.29, the fact that a user has been blocked (e.g., by using the ! character in the shadow file instead of a password hash) is not considered, allowing an attacker (who has access to a Runas ALL sudoer account) to impersonate any blocked user. NOTE: The software maintainer believes that this CVE is not valid. Disabling local password authentication for a user is not the same as disabling all access to that user--the user may still be able to login via other means (ssh key, kerberos, etc). Both the Linux shadow(5) and passwd(1) manuals are clear on this. Indeed it is a valid use case to have local accounts that are _only_ accessible via sudo and that cannot be logged into with a password. Sudo 1.8.30 added an optional setting to check the _shell_ of the target user (not the encrypted password!) against the contents of /etc/shells but that is not the same thing as preventing access to users with an invalid password hash.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-09-04"
+          },
+          "Updated": {
+            "Date": "2020-09-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-00855",
+              "Impact": "High",
+              "Public": "20200129",
+              "CveID": "BDU:2020-00855"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2020-00856",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "BDU:2020-00856"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2020-00857",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "BDU:2020-00857"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18634",
+              "Impact": "High",
+              "Public": "20200129",
+              "CveID": "CVE-2019-18634"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18684",
+              "Impact": "High",
+              "Public": "20191104",
+              "CveID": "CVE-2019-18684"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19232",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "CVE-2019-19232"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19234",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "CVE-2019-19234"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202731001",
+                "Comment": "sudo is earlier than 1:1.8.31p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202731002",
+                "Comment": "sudo-devel is earlier than 1:1.8.31p2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

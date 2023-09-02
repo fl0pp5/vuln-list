@@ -1,0 +1,271 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235197",
+      "Version": "oval:org.altlinux.errata:def:20235197",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5197: package `nextcloud-client` update to version 3.9.0-alt0.p10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5197",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5197",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04668",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04668",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01788",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01788",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22879",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22879",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22895",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22895",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32728",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32728",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39331",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39331",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39332",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39332",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39333",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39333",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39334",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39334",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-23942",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23942",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28997",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28997",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28998",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28998",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28999",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28999",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29000",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29000",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nextcloud-client to version 3.9.0-alt0.p10.1. \nSecurity Fix(es):\n\n * BDU:2021-04668: Уязвимость клиента инструмента синхронизации папок для рабочего стола Nextcloud, связанная с ошибками процедуры подтверждения подлинности сертификата, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2022-01788: Уязвимость функционала сквозного шифрования клиента инструмента синхронизации папок для рабочего стола Nextcloud, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2021-22879: Nextcloud Desktop Client prior to 3.1.3 is vulnerable to resource injection by way of missing validation of URLs, allowing a malicious server to execute remote commands. User interaction is needed for exploitation.\n\n * CVE-2021-22895: Nextcloud Desktop Client before 3.3.1 is vulnerable to improper certificate validation due to lack of SSL certificate verification when using the \"Register with a Provider\" flow.\n\n * CVE-2021-32728: The Nextcloud Desktop Client is a tool to synchronize files from Nextcloud Server with a computer. Clients using the Nextcloud end-to-end encryption feature download the public and private key via an API endpoint. In versions prior to 3.3.0, the Nextcloud Desktop client fails to check if a private key belongs to previously downloaded public certificate. If the Nextcloud instance serves a malicious public key, the data would be encrypted for this key and thus could be accessible to a malicious actor. This issue is fixed in Nextcloud Desktop Client version 3.3.0. There are no known workarounds aside from upgrading.\n\n * CVE-2022-39331: Nexcloud desktop is the Desktop sync client for Nextcloud. An attacker can inject arbitrary HyperText Markup Language into the Desktop Client application in the notifications. It is recommended that the Nextcloud Desktop client is upgraded to 3.6.1. There are no known workarounds for this issue.\n\n * CVE-2022-39332: Nexcloud desktop is the Desktop sync client for Nextcloud. An attacker can inject arbitrary HyperText Markup Language into the Desktop Client application via user status and information. It is recommended that the Nextcloud Desktop client is upgraded to 3.6.1. There are no known workarounds for this issue.\n\n * CVE-2022-39333: Nexcloud desktop is the Desktop sync client for Nextcloud. An attacker can inject arbitrary HyperText Markup Language into the Desktop Client application. It is recommended that the Nextcloud Desktop client is upgraded to 3.6.1. There are no known workarounds for this issue.\n\n * CVE-2022-39334: Nextcloud also ships a CLI utility called nextcloudcmd which is sometimes used for automated scripting and headless servers. Versions of nextcloudcmd prior to 3.6.1 would incorrectly trust invalid TLS certificates, which may enable a Man-in-the-middle attack that exposes sensitive data or credentials to a network attacker. This affects the CLI only. It does not affect the standard GUI desktop Nextcloud clients, and it does not affect the Nextcloud server.\n\n * CVE-2023-23942: The Nextcloud Desktop Client is a tool to synchronize files from a Nextcloud Server with your computer. Versions prior to 3.6.3 are missing sanitisation on qml labels which are used for basic HTML elements such as `strong`, `em` and `head` lines in the UI of the desktop client. The lack of sanitisation may allow for javascript injection. It is recommended that the Nextcloud Desktop Client is upgraded to 3.6.3. There are no known workarounds for this issue.\n\n * CVE-2023-28997: The Nextcloud Desktop Client is a tool to synchronize files from Nextcloud Server. Starting with version 3.0.0 and prior to version 3.6.5, a malicious server administrator can recover and modify the contents of end-to-end encrypted files. Users should upgrade the Nextcloud Desktop client to 3.6.5 to receive a patch. No known workarounds are available.\n\n * CVE-2023-28998: The Nextcloud Desktop Client is a tool to synchronize files from Nextcloud Server. Starting with version 3.0.0 and prior to version 3.6.5, a malicious server administrator can gain full access to an end-to-end encrypted folder. They can decrypt files, recover the folder structure, and add new files.? Users should upgrade the Nextcloud Desktop client to 3.6.5 to receive a patch. No known workarounds are available.\n\n * CVE-2023-28999: Nextcloud is an open-source productivity platform. In Nextcloud Desktop client 3.0.0 until 3.8.0, Nextcloud Android app 3.13.0 until 3.25.0, and Nextcloud iOS app 3.0.5 until 4.8.0, a malicious server administrator can gain full access to an end-to-end encrypted folder. They can decrypt files, recover the folder structure and add new files.? This issue is fixed in Nextcloud Desktop 3.8.0, Nextcloud Android 3.25.0, and Nextcloud iOS 4.8.0. No known workarounds are available.\n\n * CVE-2023-29000: The Nextcloud Desktop Client is a tool to synchronize files from Nextcloud Server. Starting with version 3.0.0 and prior to version 3.7.0, by trusting that the server will return a certificate that belongs to the keypair of the user, a malicious server could get the desktop client to encrypt files with a key known to the attacker. This issue is fixed in Nextcloud Desktop 3.7.0. No known workarounds are available.\n\n * #42096: Не появляется \"Главный диалог\" nextcloud-client",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-30"
+          },
+          "Updated": {
+            "Date": "2023-08-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2021-04668",
+              "Impact": "Low",
+              "Public": "20200620",
+              "CveID": "BDU:2021-04668"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2022-01788",
+              "Impact": "Low",
+              "Public": "20210818",
+              "CveID": "BDU:2022-01788"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22879",
+              "Impact": "High",
+              "Public": "20210414",
+              "CveID": "CVE-2021-22879"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22895",
+              "Impact": "Low",
+              "Public": "20210611",
+              "CveID": "CVE-2021-22895"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32728",
+              "Impact": "Low",
+              "Public": "20210818",
+              "CveID": "CVE-2021-32728"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39331",
+              "Impact": "Low",
+              "Public": "20221125",
+              "CveID": "CVE-2022-39331"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39332",
+              "Impact": "Low",
+              "Public": "20221125",
+              "CveID": "CVE-2022-39332"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39333",
+              "Impact": "Low",
+              "Public": "20221125",
+              "CveID": "CVE-2022-39333"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39334",
+              "Impact": "Low",
+              "Public": "20221125",
+              "CveID": "CVE-2022-39334"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23942",
+              "Impact": "Low",
+              "Public": "20230206",
+              "CveID": "CVE-2023-23942"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-323",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28997",
+              "Impact": "Low",
+              "Public": "20230404",
+              "CveID": "CVE-2023-28997"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-325",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28998",
+              "Impact": "Low",
+              "Public": "20230404",
+              "CveID": "CVE-2023-28998"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:L",
+              "Cwe": "CWE-311",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28999",
+              "Impact": "Low",
+              "Public": "20230404",
+              "CveID": "CVE-2023-28999"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29000",
+              "Impact": "Low",
+              "Public": "20230404",
+              "CveID": "CVE-2023-29000"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "42096",
+              "Href": "https://bugzilla.altlinux.org/42096",
+              "Data": "Не появляется \"Главный диалог\" nextcloud-client"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235197001",
+                "Comment": "nextcloud-client is earlier than 0:3.9.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235197002",
+                "Comment": "nextcloud-client-kde5 is earlier than 0:3.9.0-alt0.p10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

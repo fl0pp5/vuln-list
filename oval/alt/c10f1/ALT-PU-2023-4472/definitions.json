@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234472",
+      "Version": "oval:org.altlinux.errata:def:20234472",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4472: package `openssh` update to version 7.9p1-alt4.p10.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4472",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4472",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-38408",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssh to version 7.9p1-alt4.p10.2. \nSecurity Fix(es):\n\n * CVE-2023-38408: The PKCS#11 feature in ssh-agent in OpenSSH before 9.3p2 has an insufficiently trustworthy search path, leading to remote code execution if an agent is forwarded to an attacker-controlled system. (Code in /usr/lib is not necessarily safe for loading into ssh-agent.) NOTE: this issue exists because of an incomplete fix for CVE-2016-10009.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-24"
+          },
+          "Updated": {
+            "Date": "2023-07-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-428",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-38408",
+              "Impact": "Critical",
+              "Public": "20230720",
+              "CveID": "CVE-2023-38408"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472001",
+                "Comment": "openssh is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472002",
+                "Comment": "openssh-askpass-common is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472003",
+                "Comment": "openssh-clients is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472004",
+                "Comment": "openssh-common is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472005",
+                "Comment": "openssh-keysign is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472006",
+                "Comment": "openssh-server is earlier than 0:7.9p1-alt4.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234472007",
+                "Comment": "openssh-server-control is earlier than 0:7.9p1-alt4.p10.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

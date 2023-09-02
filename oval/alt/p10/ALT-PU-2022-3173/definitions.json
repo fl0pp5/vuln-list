@@ -1,0 +1,224 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223173",
+      "Version": "oval:org.altlinux.errata:def:20223173",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3173: package `pdns` update to version 4.6.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3173",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3173",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-17482",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17482",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24696",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24696",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24697",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24697",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24698",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24698",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36754",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36754",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27227",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pdns to version 4.6.3-alt2. \nSecurity Fix(es):\n\n * CVE-2020-17482: An issue has been found in PowerDNS Authoritative Server before 4.3.1 where an authorized user with the ability to insert crafted records into a zone might be able to leak the content of uninitialized memory.\n\n * CVE-2020-24696: An issue was discovered in PowerDNS Authoritative through 4.3.0 when --enable-experimental-gss-tsig is used. A remote, unauthenticated attacker can trigger a race condition leading to a crash, or possibly arbitrary code execution, by sending crafted queries with a GSS-TSIG signature.\n\n * CVE-2020-24697: An issue was discovered in PowerDNS Authoritative through 4.3.0 when --enable-experimental-gss-tsig is used. A remote, unauthenticated attacker can cause a denial of service by sending crafted queries with a GSS-TSIG signature.\n\n * CVE-2020-24698: An issue was discovered in PowerDNS Authoritative through 4.3.0 when --enable-experimental-gss-tsig is used. A remote, unauthenticated attacker might be able to cause a double-free, leading to a crash or possibly arbitrary code execution. by sending crafted queries with a GSS-TSIG signature.\n\n * CVE-2021-36754: PowerDNS Authoritative Server 4.5.0 before 4.5.1 allows anybody to crash the process by sending a specific query (QTYPE 65535) that causes an out-of-bounds exception.\n\n * CVE-2022-27227: In PowerDNS Authoritative Server before 4.4.3, 4.5.x before 4.5.4, and 4.6.x before 4.6.1 and PowerDNS Recursor before 4.4.8, 4.5.x before 4.5.8, and 4.6.x before 4.6.1, insufficient validation of an IXFR end condition causes incomplete zone transfers to be handled as successful transfers.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-18"
+          },
+          "Updated": {
+            "Date": "2022-11-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17482",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-17482"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24696",
+              "Impact": "High",
+              "Public": "20201002",
+              "CveID": "CVE-2020-24696"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24697",
+              "Impact": "High",
+              "Public": "20201002",
+              "CveID": "CVE-2020-24697"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24698",
+              "Impact": "Critical",
+              "Public": "20201002",
+              "CveID": "CVE-2020-24698"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36754",
+              "Impact": "High",
+              "Public": "20210730",
+              "CveID": "CVE-2021-36754"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27227",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2022-27227"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173001",
+                "Comment": "pdns is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173002",
+                "Comment": "pdns-backend-geoip is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173003",
+                "Comment": "pdns-backend-ldap is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173004",
+                "Comment": "pdns-backend-lua2 is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173005",
+                "Comment": "pdns-backend-mysql is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173006",
+                "Comment": "pdns-backend-pipe is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173007",
+                "Comment": "pdns-backend-postgresql is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173008",
+                "Comment": "pdns-backend-remote is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173009",
+                "Comment": "pdns-backend-sqlite is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173010",
+                "Comment": "pdns-backend-tinydns is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173011",
+                "Comment": "pdns-ixfrdist is earlier than 0:4.6.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223173012",
+                "Comment": "pdns-tools is earlier than 0:4.6.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

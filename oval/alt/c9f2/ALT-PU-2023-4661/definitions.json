@@ -1,0 +1,89 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234661",
+      "Version": "oval:org.altlinux.errata:def:20234661",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4661: package `monit` update to version 5.33.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4661",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4661",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-26563",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26563",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades monit to version 5.33.0-alt1. \nSecurity Fix(es):\n\n * CVE-2022-26563: An issue was discovered in Tildeslash Monit before 5.31.0, allows remote attackers to gain escilated privlidges due to improper PAM-authorization.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-07"
+          },
+          "Updated": {
+            "Date": "2023-08-07"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26563",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "CVE-2022-26563"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234661001",
+                "Comment": "monit is earlier than 0:5.33.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234661002",
+                "Comment": "monit-base is earlier than 0:5.33.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

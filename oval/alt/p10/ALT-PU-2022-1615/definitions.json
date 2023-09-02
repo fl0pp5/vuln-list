@@ -1,0 +1,139 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221615",
+      "Version": "oval:org.altlinux.errata:def:20221615",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1615: package `eepm` update to version 3.15.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1615",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1615",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades eepm to version 3.15.1-alt1. \nSecurity Fix(es):\n\n * #40113: yandex-browser: добавьте после установки, запуск скрипт update-ffmpeg\n\n * #41429: epm play glusterfs7\n\n * #41599: skype криво становится\n\n * #41775: Развалилась сборка zoom\n\n * #41921: epm play: Не работает установка edge\n\n * #41954: Поломался установщик zoom\n\n * #42115: Проблемы с пересборкой Cisco Webex",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-01"
+          },
+          "Updated": {
+            "Date": "2022-04-01"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40113",
+              "Href": "https://bugzilla.altlinux.org/40113",
+              "Data": "yandex-browser: добавьте после установки, запуск скрипт update-ffmpeg"
+            },
+            {
+              "Id": "41429",
+              "Href": "https://bugzilla.altlinux.org/41429",
+              "Data": "epm play glusterfs7"
+            },
+            {
+              "Id": "41599",
+              "Href": "https://bugzilla.altlinux.org/41599",
+              "Data": "skype криво становится"
+            },
+            {
+              "Id": "41775",
+              "Href": "https://bugzilla.altlinux.org/41775",
+              "Data": "Развалилась сборка zoom"
+            },
+            {
+              "Id": "41921",
+              "Href": "https://bugzilla.altlinux.org/41921",
+              "Data": "epm play: Не работает установка edge"
+            },
+            {
+              "Id": "41954",
+              "Href": "https://bugzilla.altlinux.org/41954",
+              "Data": "Поломался установщик zoom"
+            },
+            {
+              "Id": "42115",
+              "Href": "https://bugzilla.altlinux.org/42115",
+              "Data": "Проблемы с пересборкой Cisco Webex"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221615001",
+                "Comment": "eepm is earlier than 0:3.15.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221615002",
+                "Comment": "eepm-repack is earlier than 0:3.15.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221615003",
+                "Comment": "eepm-yum is earlier than 0:3.15.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

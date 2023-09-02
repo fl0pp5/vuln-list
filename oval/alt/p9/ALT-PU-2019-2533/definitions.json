@@ -1,0 +1,225 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192533",
+      "Version": "oval:org.altlinux.errata:def:20192533",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2533: package `dovecot` update to version 2.3.7.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2533",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2533",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01562",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01562",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02459",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02459",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03702",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03702",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03704",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03704",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10691",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10691",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11494",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11494",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11499",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11499",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-7524",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-7524",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dovecot to version 2.3.7.1-alt1. \nSecurity Fix(es):\n\n * BDU:2019-01562: Уязвимость почтового сервера Dovecot, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2019-02459: Уязвимость JSON-кодировщика почтового сервера Dovecot, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03702: Уязвимость реализации протокола Internet Message Access Protocol (IMAP) почтового сервера Dovecot, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03704: Уязвимость реализации протокола Internet Message Access Protocol (IMAP) почтового сервера Dovecot, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-10691: The JSON encoder in Dovecot before 2.3.5.2 allows attackers to repeatedly crash the authentication service by attempting to authenticate with an invalid UTF-8 sequence as the username.\n\n * CVE-2019-11494: In the IMAP Server in Dovecot 2.3.3 through 2.3.5.2, the submission-login service crashes when the client disconnects prematurely during the AUTH command.\n\n * CVE-2019-11499: In the IMAP Server in Dovecot 2.3.3 through 2.3.5.2, the submission-login component crashes if AUTH PLAIN is attempted over a TLS secured channel with an unacceptable authentication message.\n\n * CVE-2019-7524: In Dovecot before 2.2.36.3 and 2.3.x before 2.3.5.1, a local attacker can cause a buffer overflow in the indexer-worker process, which can be used to elevate to root. This occurs because of missing checks in the fts and pop3-uidl components.\n\n * #36351: Обновить dovecot\n\n * #37111: Последняя версия: 2.3.7.1",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-23"
+          },
+          "Updated": {
+            "Date": "2019-08-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-01562",
+              "Impact": "High",
+              "Public": "20190205",
+              "CveID": "BDU:2019-01562"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-228",
+              "Href": "https://bdu.fstec.ru/vul/2019-02459",
+              "Impact": "High",
+              "Public": "20190402",
+              "CveID": "BDU:2019-02459"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03702",
+              "Impact": "High",
+              "Public": "20190508",
+              "CveID": "BDU:2019-03702"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03704",
+              "Impact": "High",
+              "Public": "20190508",
+              "CveID": "BDU:2019-03704"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10691",
+              "Impact": "High",
+              "Public": "20190424",
+              "CveID": "CVE-2019-10691"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11494",
+              "Impact": "High",
+              "Public": "20190508",
+              "CveID": "CVE-2019-11494"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11499",
+              "Impact": "High",
+              "Public": "20190508",
+              "CveID": "CVE-2019-11499"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-7524",
+              "Impact": "High",
+              "Public": "20190328",
+              "CveID": "CVE-2019-7524"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "36351",
+              "Href": "https://bugzilla.altlinux.org/36351",
+              "Data": "Обновить dovecot"
+            },
+            {
+              "Id": "37111",
+              "Href": "https://bugzilla.altlinux.org/37111",
+              "Data": "Последняя версия: 2.3.7.1"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192533001",
+                "Comment": "dovecot is earlier than 0:2.3.7.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192533002",
+                "Comment": "dovecot-devel is earlier than 0:2.3.7.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

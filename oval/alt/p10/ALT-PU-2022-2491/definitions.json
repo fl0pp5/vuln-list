@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222491",
+      "Version": "oval:org.altlinux.errata:def:20222491",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2491: package `gifsicle` update to version 1.93-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2491",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2491",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02071",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02071",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-19752",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-19752",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gifsicle to version 1.93-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02071: Уязвимость функции find_color_or_error пакета программ для создания, редактирования и оптимизации GIF-файлов Gifsicle, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-19752: The find_color_or_error function in gifsicle 1.92 contains a NULL pointer dereference.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-25"
+          },
+          "Updated": {
+            "Date": "2022-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-02071",
+              "Impact": "High",
+              "Public": "20210707",
+              "CveID": "BDU:2022-02071"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-19752",
+              "Impact": "High",
+              "Public": "20210907",
+              "CveID": "CVE-2020-19752"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222491001",
+                "Comment": "gifsicle is earlier than 0:1.93-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

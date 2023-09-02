@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234980",
+      "Version": "oval:org.altlinux.errata:def:20234980",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4980: package `mbedtls` update to version 3.4.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4980",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4980",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00041",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00041",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-46392",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-46392",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-46393",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-46393",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mbedtls to version 3.4.1-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00041: Уязвимость реализации протоколов TLS и SSL программного обеспечения Mbed TLS, позволяющая нарушителю перезаписать данные в буфере памяти и восстановить закрытый RSA-ключ\n\n * CVE-2022-46392: An issue was discovered in Mbed TLS before 2.28.2 and 3.x before 3.3.0. An adversary with access to precise enough information about memory accesses (typically, an untrusted operating system attacking a secure enclave) can recover an RSA private key after observing the victim performing a single private-key operation, if the window size (MBEDTLS_MPI_WINDOW_SIZE) used for the exponentiation is 3 or smaller.\n\n * CVE-2022-46393: An issue was discovered in Mbed TLS before 2.28.2 and 3.x before 3.3.0. There is a potential heap-based buffer overflow and heap-based buffer over-read in DTLS if MBEDTLS_SSL_DTLS_CONNECTION_ID is enabled and MBEDTLS_SSL_CID_IN_LEN_MAX \u003e 2 * MBEDTLS_SSL_CID_OUT_LEN_MAX.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-24"
+          },
+          "Updated": {
+            "Date": "2023-08-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2023-00041",
+              "Impact": "Critical",
+              "Public": "20230110",
+              "CveID": "BDU:2023-00041"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-46392",
+              "Impact": "Low",
+              "Public": "20221215",
+              "CveID": "CVE-2022-46392"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-46393",
+              "Impact": "Critical",
+              "Public": "20221215",
+              "CveID": "CVE-2022-46393"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234980001",
+                "Comment": "libmbedcrypto14 is earlier than 0:3.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234980002",
+                "Comment": "libmbedtls-devel is earlier than 0:3.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234980003",
+                "Comment": "libmbedtls19 is earlier than 0:3.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234980004",
+                "Comment": "libmbedx509-5 is earlier than 0:3.4.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234980005",
+                "Comment": "mbedtls-utils is earlier than 0:3.4.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

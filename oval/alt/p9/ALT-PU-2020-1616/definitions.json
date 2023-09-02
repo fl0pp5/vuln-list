@@ -1,0 +1,201 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201616",
+      "Version": "oval:org.altlinux.errata:def:20201616",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1616: package `nss` update to version 3.51.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1616",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1616",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01824",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01824",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01970",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01970",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02871",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02871",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11745",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11745",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17006",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17006",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17023",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17023",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nss to version 3.51.0-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01824: Уязвимость браузера Firefox, связанная с записью за границами буфера в памяти, позволяющая нарушителю получить несанкционированный доступ к информации и нарушить ее целостность и доступность\n\n * BDU:2020-01970: Уязвимость расширения HelloRetryRequest браузера Firefox, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2020-02871: Уязвимость набора библиотек NSS (Network Security Services), существующая из-за недостаточной проверки входных данных, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-11745: When encrypting with a block cipher, if a call to NSC_EncryptUpdate was made with data smaller than the block size, a small out of bounds write could occur. This could have caused heap corruption and a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 68.3, Firefox ESR \u003c 68.3, and Firefox \u003c 71.\n\n * CVE-2019-17006: In Network Security Services (NSS) before 3.46, several cryptographic primitives had missing length checks. In cases where the application calling the library did not perform a sanity check on the inputs it could result in a crash due to a buffer overflow.\n\n * CVE-2019-17023: After a HelloRetryRequest has been sent, the client may negotiate a lower protocol that TLS 1.3, resulting in an invalid state transition in the TLS State Machine. If the client gets into this state, incoming Application Data records will be ignored. This vulnerability affects Firefox \u003c 72.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-26"
+          },
+          "Updated": {
+            "Date": "2020-03-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-01824",
+              "Impact": "High",
+              "Public": "20190927",
+              "CveID": "BDU:2020-01824"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2020-01970",
+              "Impact": "Low",
+              "Public": "20191203",
+              "CveID": "BDU:2020-01970"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-345",
+              "Href": "https://bdu.fstec.ru/vul/2020-02871",
+              "Impact": "High",
+              "Public": "20191226",
+              "CveID": "BDU:2020-02871"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11745",
+              "Impact": "High",
+              "Public": "20200108",
+              "CveID": "CVE-2019-11745"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17006",
+              "Impact": "Critical",
+              "Public": "20201022",
+              "CveID": "CVE-2019-17006"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17023",
+              "Impact": "Low",
+              "Public": "20200108",
+              "CveID": "CVE-2019-17023"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616001",
+                "Comment": "libnss is earlier than 0:3.51.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616002",
+                "Comment": "libnss-devel is earlier than 0:3.51.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616003",
+                "Comment": "libnss-devel-static is earlier than 0:3.51.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616004",
+                "Comment": "libnss-nssckbi-checkinstall is earlier than 0:3.51.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616005",
+                "Comment": "libnss-sysinit is earlier than 0:3.51.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201616006",
+                "Comment": "nss-utils is earlier than 0:3.51.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211145",
+      "Version": "oval:org.altlinux.errata:def:20211145",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1145: package `libevt` update to version 20140411-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1145",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1145",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-8754",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-8754",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libevt to version 20140411-alt2. \nSecurity Fix(es):\n\n * CVE-2018-8754: ** DISPUTED ** The libevt_record_values_read_event() function in libevt_record_values.c in libevt before 2018-03-17 does not properly check for out-of-bounds values of user SID data size, strings size, or data size. NOTE: the vendor has disputed this as described in libyal/libevt issue 5 on GitHub.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-25"
+          },
+          "Updated": {
+            "Date": "2021-01-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-8754",
+              "Impact": "Low",
+              "Public": "20180318",
+              "CveID": "CVE-2018-8754"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211145001",
+                "Comment": "libevt is earlier than 0:20140411-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211145002",
+                "Comment": "libevt-devel is earlier than 0:20140411-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211145003",
+                "Comment": "libevt-tools is earlier than 0:20140411-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211145004",
+                "Comment": "python-module-libevt is earlier than 0:20140411-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

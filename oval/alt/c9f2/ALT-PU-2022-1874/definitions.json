@@ -1,0 +1,173 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221874",
+      "Version": "oval:org.altlinux.errata:def:20221874",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1874: package `vim` update to version 8.2.4784-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1874",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1874",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03269",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03269",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03270",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03270",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1381",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1381",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1420",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1420",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vim to version 8.2.4784-alt1. \nSecurity Fix(es):\n\n * BDU:2022-03269: Уязвимость реализации функции skip_range() текстового редактора Vim, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2022-03270: Уязвимость текстового редактора Vim, связанная со смещением указателя за границы выделенной памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-1381: global heap buffer overflow in skip_range in GitHub repository vim/vim prior to 8.2.4763. This vulnerability is capable of crashing software, Bypass Protection Mechanism, Modify Memory, and possible remote execution\n\n * CVE-2022-1420: Use of Out-of-range Pointer Offset in GitHub repository vim/vim prior to 8.2.4774.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-16"
+          },
+          "Updated": {
+            "Date": "2022-05-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:N/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:H",
+              "Cwe": "CWE-119, CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-03269",
+              "Impact": "High",
+              "Public": "20220413",
+              "CveID": "BDU:2022-03269"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-119, CWE-125, CWE-823",
+              "Href": "https://bdu.fstec.ru/vul/2022-03270",
+              "Impact": "Low",
+              "Public": "20220414",
+              "CveID": "BDU:2022-03270"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1381",
+              "Impact": "High",
+              "Public": "20220418",
+              "CveID": "CVE-2022-1381"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-823",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1420",
+              "Impact": "Low",
+              "Public": "20220421",
+              "CveID": "CVE-2022-1420"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874001",
+                "Comment": "rpm-build-vim is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874002",
+                "Comment": "vim-X11 is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874003",
+                "Comment": "vim-X11-gnome2 is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874004",
+                "Comment": "vim-X11-gtk2 is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874005",
+                "Comment": "vim-X11-gtk3 is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874006",
+                "Comment": "vim-common is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874007",
+                "Comment": "vim-console is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874008",
+                "Comment": "vim-enhanced is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874009",
+                "Comment": "vim-minimal is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874010",
+                "Comment": "vim-spell-source is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874011",
+                "Comment": "vimtutor is earlier than 4:8.2.4784-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221874012",
+                "Comment": "xxd is earlier than 4:8.2.4784-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

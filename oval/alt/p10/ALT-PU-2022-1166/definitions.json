@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221166",
+      "Version": "oval:org.altlinux.errata:def:20221166",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1166: package `kf5-breeze-icons` update to version 5.90.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1166",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1166",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades kf5-breeze-icons to version 5.90.0-alt1. \nSecurity Fix(es):\n\n * #41630: Вернуть статусные иконки для Telegram",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-29"
+          },
+          "Updated": {
+            "Date": "2022-01-29"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41630",
+              "Href": "https://bugzilla.altlinux.org/41630",
+              "Data": "Вернуть статусные иконки для Telegram"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221166001",
+                "Comment": "icon-theme-breeze is earlier than 0:5.90.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

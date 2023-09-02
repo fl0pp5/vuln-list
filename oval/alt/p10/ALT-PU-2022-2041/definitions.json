@@ -1,0 +1,172 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222041",
+      "Version": "oval:org.altlinux.errata:def:20222041",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2041: package `golang` update to version 1.17.11-alt1.p10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2041",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2041",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-29804",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-29804",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30580",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30580",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30629",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30629",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30634",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.17.11-alt1.p10. \nSecurity Fix(es):\n\n * CVE-2022-29804: Incorrect conversion of certain invalid paths to valid, absolute paths in Clean in path/filepath before Go 1.17.11 and Go 1.18.3 on Windows allows potential directory traversal attack.\n\n * CVE-2022-30580: Code injection in Cmd.Start in os/exec before Go 1.17.11 and Go 1.18.3 allows execution of any binaries in the working directory named either \"..com\" or \"..exe\" by calling Cmd.Run, Cmd.Start, Cmd.Output, or Cmd.CombinedOutput when Cmd.Path is unset.\n\n * CVE-2022-30629: Non-random values for ticket_age_add in session tickets in crypto/tls before Go 1.17.11 and Go 1.18.3 allow an attacker that can observe TLS handshakes to correlate successive connections by comparing ticket ages during session resumption.\n\n * CVE-2022-30634: Infinite loop in Read in crypto/rand before Go 1.17.11 and Go 1.18.3 on Windows allows attacker to cause an indefinite hang by passing a buffer larger than 1 \u003c\u003c 32 - 1 bytes.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-14"
+          },
+          "Updated": {
+            "Date": "2022-06-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-29804",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-29804"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30580",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30580"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-330",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30629",
+              "Impact": "Low",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30629"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30634",
+              "Impact": "High",
+              "Public": "20220715",
+              "CveID": "CVE-2022-30634"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041001",
+                "Comment": "golang is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041002",
+                "Comment": "golang-docs is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041003",
+                "Comment": "golang-gdb is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041004",
+                "Comment": "golang-misc is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041005",
+                "Comment": "golang-shared is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041006",
+                "Comment": "golang-src is earlier than 0:1.17.11-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222041007",
+                "Comment": "golang-tests is earlier than 0:1.17.11-alt1.p10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223253",
+      "Version": "oval:org.altlinux.errata:def:20223253",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3253: package `protobuf` update to version 3.16.0-alt1.p10.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3253",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3253",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-1941",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1941",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades protobuf to version 3.16.0-alt1.p10.2. \nSecurity Fix(es):\n\n * CVE-2022-1941: A parsing vulnerability for the MessageSet type in the ProtocolBuffers versions prior to and including 3.16.1, 3.17.3, 3.18.2, 3.19.4, 3.20.1 and 3.21.5 for protobuf-cpp, and versions prior to and including 3.16.1, 3.17.3, 3.18.2, 3.19.4, 3.20.1 and 4.21.5 for protobuf-python can lead to out of memory failures. A specially crafted message with multiple key-value per elements creates parsing issues, and can lead to a Denial of Service against services receiving unsanitized input. We recommend upgrading to versions 3.18.3, 3.19.5, 3.20.2, 3.21.6 for protobuf-cpp and 3.18.3, 3.19.5, 3.20.2, 4.21.6 for protobuf-python. Versions for 3.16 and 3.17 are no longer updated.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-01"
+          },
+          "Updated": {
+            "Date": "2022-12-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1941",
+              "Impact": "High",
+              "Public": "20220922",
+              "CveID": "CVE-2022-1941"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253001",
+                "Comment": "libprotobuf-devel is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253002",
+                "Comment": "libprotobuf-lite-devel is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253003",
+                "Comment": "libprotobuf27 is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253004",
+                "Comment": "libprotobuf27-lite is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253005",
+                "Comment": "protobuf-bom is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253006",
+                "Comment": "protobuf-compiler is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253007",
+                "Comment": "protobuf-java is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253008",
+                "Comment": "protobuf-java-util is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253009",
+                "Comment": "protobuf-javadoc is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253010",
+                "Comment": "protobuf-javalite is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253011",
+                "Comment": "protobuf-parent is earlier than 0:3.16.0-alt1.p10.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223253012",
+                "Comment": "python3-module-protobuf is earlier than 0:3.16.0-alt1.p10.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212549",
+      "Version": "oval:org.altlinux.errata:def:20212549",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2549: package `evms` update to version 2.5.5-alt50",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2549",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2549",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades evms to version 2.5.5-alt50. \nSecurity Fix(es):\n\n * #39567: В инсталяторе не работает форматирование в xfs",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-17"
+          },
+          "Updated": {
+            "Date": "2021-08-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39567",
+              "Href": "https://bugzilla.altlinux.org/39567",
+              "Data": "В инсталяторе не работает форматирование в xfs"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549001",
+                "Comment": "evms is earlier than 0:2.5.5-alt50"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549002",
+                "Comment": "evms-cli is earlier than 0:2.5.5-alt50"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549003",
+                "Comment": "evms-ncurses is earlier than 0:2.5.5-alt50"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549004",
+                "Comment": "evms-test is earlier than 0:2.5.5-alt50"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549005",
+                "Comment": "libevms is earlier than 0:2.5.5-alt50"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212549006",
+                "Comment": "libevms-devel is earlier than 0:2.5.5-alt50"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

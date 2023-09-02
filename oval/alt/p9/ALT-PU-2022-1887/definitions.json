@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221887",
+      "Version": "oval:org.altlinux.errata:def:20221887",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1887: package `postgresql12` update to version 12.11-alt0.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1887",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1887",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-1552",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1552",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql12 to version 12.11-alt0.M90P.1. \nSecurity Fix(es):\n\n * CVE-2022-1552: A flaw was found in PostgreSQL. There is an issue with incomplete efforts to operate safely when a privileged user is maintaining another user's objects. The Autovacuum, REINDEX, CREATE INDEX, REFRESH MATERIALIZED VIEW, CLUSTER, and pg_amcheck commands activated relevant protections too late or not at all during the process. This flaw allows an attacker with permission to create non-temporary objects in at least one schema to execute arbitrary SQL functions under a superuser identity.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-18"
+          },
+          "Updated": {
+            "Date": "2022-05-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1552",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-1552"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887001",
+                "Comment": "libecpg6 is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887002",
+                "Comment": "libpq5 is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887003",
+                "Comment": "postgresql-devel is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887004",
+                "Comment": "postgresql-devel-static is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887005",
+                "Comment": "postgresql12 is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887006",
+                "Comment": "postgresql12-contrib is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887007",
+                "Comment": "postgresql12-docs is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887008",
+                "Comment": "postgresql12-perl is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887009",
+                "Comment": "postgresql12-python is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887010",
+                "Comment": "postgresql12-server is earlier than 0:12.11-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221887011",
+                "Comment": "postgresql12-tcl is earlier than 0:12.11-alt0.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

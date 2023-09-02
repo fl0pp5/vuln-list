@@ -1,0 +1,229 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192204",
+      "Version": "oval:org.altlinux.errata:def:20192204",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2204: package `sssd` update to version 2.2.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2204",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2204",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades sssd to version 2.2.0-alt2. \nSecurity Fix(es):\n\n * #36750: Не удаётся пересобрать gssntlmssp",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-07-03"
+          },
+          "Updated": {
+            "Date": "2019-07-03"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36750",
+              "Href": "https://bugzilla.altlinux.org/36750",
+              "Data": "Не удаётся пересобрать gssntlmssp"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204001",
+                "Comment": "libipa_hbac is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204002",
+                "Comment": "libipa_hbac-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204003",
+                "Comment": "libsss_autofs is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204004",
+                "Comment": "libsss_certmap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204005",
+                "Comment": "libsss_certmap-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204006",
+                "Comment": "libsss_idmap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204007",
+                "Comment": "libsss_idmap-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204008",
+                "Comment": "libsss_nss_idmap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204009",
+                "Comment": "libsss_nss_idmap-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204010",
+                "Comment": "libsss_simpleifp is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204011",
+                "Comment": "libsss_simpleifp-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204012",
+                "Comment": "libsss_sudo is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204013",
+                "Comment": "libwbclient-sssd is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204014",
+                "Comment": "libwbclient-sssd-devel is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204015",
+                "Comment": "python3-module-ipa_hbac is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204016",
+                "Comment": "python3-module-sss is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204017",
+                "Comment": "python3-module-sss-murmur is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204018",
+                "Comment": "python3-module-sss_nss_idmap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204019",
+                "Comment": "python3-module-sssdconfig is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204020",
+                "Comment": "sssd is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204021",
+                "Comment": "sssd-ad is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204022",
+                "Comment": "sssd-client is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204023",
+                "Comment": "sssd-dbus is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204024",
+                "Comment": "sssd-ipa is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204025",
+                "Comment": "sssd-kcm is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204026",
+                "Comment": "sssd-krb5 is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204027",
+                "Comment": "sssd-krb5-common is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204028",
+                "Comment": "sssd-ldap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204029",
+                "Comment": "sssd-nfs-idmap is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204030",
+                "Comment": "sssd-pac is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204031",
+                "Comment": "sssd-proxy is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204032",
+                "Comment": "sssd-tools is earlier than 0:2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192204033",
+                "Comment": "sssd-winbind-idmap is earlier than 0:2.2.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

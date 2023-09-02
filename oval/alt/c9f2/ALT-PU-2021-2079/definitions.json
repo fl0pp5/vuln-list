@@ -1,0 +1,157 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212079",
+      "Version": "oval:org.altlinux.errata:def:20212079",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2079: package `krb5` update to version 1.17.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2079",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2079",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01056",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01056",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03437",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03437",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-14844",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14844",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-28196",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-28196",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades krb5 to version 1.17.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01056: Уязвимость реализации протокола Kerberos операционных систем Red Hat Enterprise Linux, Fedora, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03437: Уязвимость реализации сетевого протокола Kerberos операционных систем Debian GNU/Linux, Red Hat Enterprise Linux, Ubuntu, Fedora, Альт 8 СП, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-14844: A flaw was found in, Fedora versions of krb5 from 1.16.1 to, including 1.17.x, in the way a Kerberos client could crash the KDC by sending one of the RFC 4556 \"enctypes\". A remote unauthenticated user could use this flaw to crash the KDC.\n\n * CVE-2020-28196: MIT Kerberos 5 (aka krb5) before 1.17.2 and 1.18.x before 1.18.3 allows unbounded recursion via an ASN.1-encoded Kerberos message because the lib/krb5/asn.1/asn1_encode.c support for BER indefinite lengths lacks a recursion limit.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-29"
+          },
+          "Updated": {
+            "Date": "2021-06-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20, CWE-628",
+              "Href": "https://bdu.fstec.ru/vul/2020-01056",
+              "Impact": "High",
+              "Public": "20190926",
+              "CveID": "BDU:2020-01056"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2023-03437",
+              "Impact": "High",
+              "Public": "20230626",
+              "CveID": "BDU:2023-03437"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-628",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14844",
+              "Impact": "High",
+              "Public": "20190926",
+              "CveID": "CVE-2019-14844"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-28196",
+              "Impact": "High",
+              "Public": "20201106",
+              "CveID": "CVE-2020-28196"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079001",
+                "Comment": "krb5-doc is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079002",
+                "Comment": "krb5-kadmin is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079003",
+                "Comment": "krb5-kdc is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079004",
+                "Comment": "krb5-kinit is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079005",
+                "Comment": "krb5-ksu is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079006",
+                "Comment": "libkrb5 is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079007",
+                "Comment": "libkrb5-devel is earlier than 0:1.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212079008",
+                "Comment": "libkrb5-ldap is earlier than 0:1.17.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202162",
+      "Version": "oval:org.altlinux.errata:def:20202162",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2162: package `kernel-image-rt` update to version 4.19.124-alt1.rt53",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2162",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2162",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02427",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02427",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01920",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01920",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03144",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03144",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27786",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27786",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3715",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rt to version 4.19.124-alt1.rt53. \nSecurity Fix(es):\n\n * BDU:2020-02427: Уязвимость функции pivot_root (fs/namespace.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01920: Уязвимость реализации протокола MIDI ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-03144: Уязвимость функции route4_change() (net/sched/cls_route.c) ядра операционной системы Linux, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2020-12114: A pivot_root race condition in fs/namespace.c in the Linux kernel 4.4.x before 4.4.221, 4.9.x before 4.9.221, 4.14.x before 4.14.178, 4.19.x before 4.19.119, and 5.x before 5.3 allows local users to cause a denial of service (panic) by corrupting a mountpoint reference counter.\n\n * CVE-2020-27786: A flaw was found in the Linux kernel’s implementation of MIDI, where an attacker with a local account and the permissions to issue ioctl commands to midi devices could trigger a use-after-free issue. A write to this specific memory while freed and before use causes the flow of execution to change and possibly allow for memory corruption or privilege escalation. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2021-3715: A flaw was found in the \"Routing decision\" classifier in the Linux kernel's Traffic Control networking subsystem in the way it handled changing of classification filters, leading to a use-after-free condition. This flaw allows unprivileged local users to escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-10"
+          },
+          "Updated": {
+            "Date": "2020-06-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-02427",
+              "Impact": "Low",
+              "Public": "20200504",
+              "CveID": "BDU:2020-02427"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01920",
+              "Impact": "High",
+              "Public": "20201211",
+              "CveID": "BDU:2021-01920"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-03144",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "BDU:2022-03144"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12114",
+              "Impact": "Low",
+              "Public": "20200504",
+              "CveID": "CVE-2020-12114"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27786",
+              "Impact": "High",
+              "Public": "20201211",
+              "CveID": "CVE-2020-27786"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3715"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202162001",
+                "Comment": "kernel-headers-modules-rt is earlier than 0:4.19.124-alt1.rt53"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202162002",
+                "Comment": "kernel-headers-rt is earlier than 0:4.19.124-alt1.rt53"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202162003",
+                "Comment": "kernel-image-rt is earlier than 0:4.19.124-alt1.rt53"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

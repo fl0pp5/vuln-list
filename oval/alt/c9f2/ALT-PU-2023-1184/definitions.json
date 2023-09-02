@@ -1,0 +1,171 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231184",
+      "Version": "oval:org.altlinux.errata:def:20231184",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1184: package `vim` update to version 9.0.1240-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1184",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1184",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00387",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00387",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00451",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00451",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-0288",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0288",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0433",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0433",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vim to version 9.0.1240-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00387: Уязвимость компонента src/normal.c текстового редактора Vim, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-00451: Уязвимость функций same_leader() и utfc_ptr2len() текстового редактора Vim, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * CVE-2023-0288: Heap-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.1189.\n\n * CVE-2023-0433: Heap-based Buffer Overflow in GitHub repository vim/vim prior to 9.0.1225.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-06"
+          },
+          "Updated": {
+            "Date": "2023-02-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2023-00387",
+              "Impact": "High",
+              "Public": "20230113",
+              "CveID": "BDU:2023-00387"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2023-00451",
+              "Impact": "High",
+              "Public": "20230121",
+              "CveID": "BDU:2023-00451"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0288",
+              "Impact": "High",
+              "Public": "20230113",
+              "CveID": "CVE-2023-0288"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0433",
+              "Impact": "High",
+              "Public": "20230121",
+              "CveID": "CVE-2023-0433"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184001",
+                "Comment": "rpm-build-vim is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184002",
+                "Comment": "vim-X11 is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184003",
+                "Comment": "vim-X11-gnome2 is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184004",
+                "Comment": "vim-X11-gtk2 is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184005",
+                "Comment": "vim-X11-gtk3 is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184006",
+                "Comment": "vim-common is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184007",
+                "Comment": "vim-console is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184008",
+                "Comment": "vim-enhanced is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184009",
+                "Comment": "vim-minimal is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184010",
+                "Comment": "vim-spell-source is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184011",
+                "Comment": "vimtutor is earlier than 4:9.0.1240-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231184012",
+                "Comment": "xxd is earlier than 4:9.0.1240-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

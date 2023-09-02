@@ -1,0 +1,146 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192467",
+      "Version": "oval:org.altlinux.errata:def:20192467",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2467: package `librecad` update to version 2.2.0-alt0.1.rc1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2467",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2467",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-19105",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-19105",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45341",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45341",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45342",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45342",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades librecad to version 2.2.0-alt0.1.rc1. \nSecurity Fix(es):\n\n * CVE-2018-19105: LibreCAD 2.1.3 allows remote attackers to cause a denial of service (0x89C04589 write access violation and application crash) or possibly have unspecified other impact via a crafted file.\n\n * CVE-2021-45341: A buffer overflow vulnerability in CDataMoji of the jwwlib component of LibreCAD 2.2.0-rc3 and older allows an attacker to achieve Remote Code Execution using a crafted JWW document.\n\n * CVE-2021-45342: A buffer overflow vulnerability in CDataList of the jwwlib component of LibreCAD 2.2.0-rc3 and older allows an attacker to achieve Remote Code Execution using a crafted JWW document.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-13"
+          },
+          "Updated": {
+            "Date": "2019-08-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-19105",
+              "Impact": "High",
+              "Public": "20181108",
+              "CveID": "CVE-2018-19105"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45341",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "CVE-2021-45341"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45342",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "CVE-2021-45342"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192467001",
+                "Comment": "librecad is earlier than 0:2.2.0-alt0.1.rc1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192467002",
+                "Comment": "librecad-data is earlier than 0:2.2.0-alt0.1.rc1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192467003",
+                "Comment": "librecad-plugins is earlier than 0:2.2.0-alt0.1.rc1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192573",
+      "Version": "oval:org.altlinux.errata:def:20192573",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2573: package `nmap` update to version 7.80-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2573",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2573",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2017-18594",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-18594",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-15173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-15173",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nmap to version 7.80-alt1. \nSecurity Fix(es):\n\n * CVE-2017-18594: nse_libssh2.cc in Nmap 7.70 is subject to a denial of service condition due to a double free when an SSH connection fails, as demonstrated by a leading \\n character to ssh-brute.nse or ssh-auth-methods.nse.\n\n * CVE-2018-15173: Nmap through 7.70, when the -sV option is used, allows remote attackers to cause a denial of service (stack consumption and application crash) via a crafted TCP-based service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-29"
+          },
+          "Updated": {
+            "Date": "2019-08-29"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-18594",
+              "Impact": "High",
+              "Public": "20190829",
+              "CveID": "CVE-2017-18594"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-15173",
+              "Impact": "High",
+              "Public": "20180808",
+              "CveID": "CVE-2018-15173"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192573001",
+                "Comment": "nmap is earlier than 20020501:7.80-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192573002",
+                "Comment": "zenmap is earlier than 20020501:7.80-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

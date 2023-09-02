@@ -1,0 +1,245 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212018",
+      "Version": "oval:org.altlinux.errata:def:20212018",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2018: package `zabbix` update to version 5.0.12-alt0.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2018",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2018",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01681",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01681",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02341",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02341",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-15132",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15132",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-27927",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27927",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 5.0.12-alt0.p9.1. \nSecurity Fix(es):\n\n * BDU:2023-01681: Уязвимость метода init() универсальной системы мониторинга Zabbix, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2023-02341: Уязвимость реализации сценариев api_jsonrpc.php и index.php универсальной системы мониторинга Zabbix, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2019-15132: Zabbix through 4.4.0alpha1 allows User Enumeration. With login requests, it is possible to enumerate application usernames based on the variability of server responses (e.g., the \"Login name or password is incorrect\" and \"No permissions for system access\" messages, or just blocking for a number of seconds). This affects both api_jsonrpc.php and index.php.\n\n * CVE-2021-27927: In Zabbix from 4.0.x before 4.0.28rc1, 5.0.0alpha1 before 5.0.10rc1, 5.2.x before 5.2.6rc1, and 5.4.0alpha1 before 5.4.0beta2, the CControllerAuthenticationUpdate controller lacks a CSRF protection mechanism. The code inside this controller calls diableSIDValidation inside the init() method. An attacker doesn't have to know Zabbix user login credentials, but has to know the correct Zabbix URL and contact information of an existing user with sufficient privileges.\n\n * #37494: обновить конфигурацию доступа для httpd-2.4\n\n * #40122: Пакет Zabbix Agent 2",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-17"
+          },
+          "Updated": {
+            "Date": "2021-06-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-352",
+              "Href": "https://bdu.fstec.ru/vul/2023-01681",
+              "Impact": "High",
+              "Public": "20210104",
+              "CveID": "BDU:2023-01681"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200, CWE-203",
+              "Href": "https://bdu.fstec.ru/vul/2023-02341",
+              "Impact": "Low",
+              "Public": "20190816",
+              "CveID": "BDU:2023-02341"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15132",
+              "Impact": "Low",
+              "Public": "20190817",
+              "CveID": "CVE-2019-15132"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27927",
+              "Impact": "High",
+              "Public": "20210303",
+              "CveID": "CVE-2021-27927"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37494",
+              "Href": "https://bugzilla.altlinux.org/37494",
+              "Data": "обновить конфигурацию доступа для httpd-2.4"
+            },
+            {
+              "Id": "40122",
+              "Href": "https://bugzilla.altlinux.org/40122",
+              "Data": "Пакет Zabbix Agent 2"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018001",
+                "Comment": "zabbix-agent is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018003",
+                "Comment": "zabbix-agent2 is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018004",
+                "Comment": "zabbix-common is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018008",
+                "Comment": "zabbix-contrib is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018009",
+                "Comment": "zabbix-doc is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018010",
+                "Comment": "zabbix-java-gateway is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018013",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018014",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018015",
+                "Comment": "zabbix-proxy is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018016",
+                "Comment": "zabbix-proxy-common is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018017",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018018",
+                "Comment": "zabbix-server-common is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018019",
+                "Comment": "zabbix-server-mysql is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018020",
+                "Comment": "zabbix-server-pgsql is earlier than 1:5.0.12-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212018021",
+                "Comment": "zabbix-source is earlier than 1:5.0.12-alt0.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

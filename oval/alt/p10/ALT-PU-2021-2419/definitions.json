@@ -1,0 +1,177 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212419",
+      "Version": "oval:org.altlinux.errata:def:20212419",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2419: package `LibreOffice` update to version 7.2.0.1-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2419",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2419",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades LibreOffice to version 7.2.0.1-alt1.1. \nSecurity Fix(es):\n\n * #40642: FTBFS: поддержка libfreetype-2.11.0-alt1",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-04"
+          },
+          "Updated": {
+            "Date": "2021-08-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40642",
+              "Href": "https://bugzilla.altlinux.org/40642",
+              "Data": "FTBFS: поддержка libfreetype-2.11.0-alt1"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419001",
+                "Comment": "LibreOffice is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419002",
+                "Comment": "LibreOffice-common is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419003",
+                "Comment": "LibreOffice-extensions is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419004",
+                "Comment": "LibreOffice-gtk3 is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419005",
+                "Comment": "LibreOffice-integrated is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419006",
+                "Comment": "LibreOffice-kde5 is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419007",
+                "Comment": "LibreOffice-langpack-be is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419008",
+                "Comment": "LibreOffice-langpack-de is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419009",
+                "Comment": "LibreOffice-langpack-es is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419010",
+                "Comment": "LibreOffice-langpack-fr is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419011",
+                "Comment": "LibreOffice-langpack-kk is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419012",
+                "Comment": "LibreOffice-langpack-pt-BR is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419013",
+                "Comment": "LibreOffice-langpack-ru is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419014",
+                "Comment": "LibreOffice-langpack-tt is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419015",
+                "Comment": "LibreOffice-langpack-uk is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419016",
+                "Comment": "LibreOffice-mimetypes is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419017",
+                "Comment": "LibreOffice-qt5 is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419018",
+                "Comment": "LibreOffice-sdk is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419019",
+                "Comment": "libreofficekit is earlier than 0:7.2.0.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212419020",
+                "Comment": "libreofficekit-devel is earlier than 0:7.2.0.1-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

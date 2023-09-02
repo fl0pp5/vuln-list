@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212646",
+      "Version": "oval:org.altlinux.errata:def:20212646",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2646: package `openssl1.1` update to version 1.1.1l-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2646",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2646",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04570",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04570",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04571",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04571",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3711",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3711",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3712",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3712",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1l-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04570: Уязвимость реализации криптографического алгоритма SM2 библиотеки OpenSSL, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-04571: Уязвимость функции X509_aux_print() библиотеки OpenSSL, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * CVE-2021-3711: In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt(). Typically an application will call this function twice. The first time, on entry, the \"out\" parameter can be NULL and, on exit, the \"outlen\" parameter is populated with the buffer size required to hold the decrypted plaintext. The application can then allocate a sufficiently sized buffer and call EVP_PKEY_decrypt() again, but this time passing a non-NULL value for the \"out\" parameter. A bug in the implementation of the SM2 decryption code means that the calculation of the buffer size required to hold the plaintext returned by the first call to EVP_PKEY_decrypt() can be smaller than the actual size required by the second call. This can lead to a buffer overflow when EVP_PKEY_decrypt() is called by the application a second time with a buffer that is too small. A malicious attacker who is able present SM2 content for decryption to an application could cause attacker chosen data to overflow the buffer by up to a maximum of 62 bytes altering the contents of other data held after the buffer, possibly changing application behaviour or causing the application to crash. The location of the buffer is application dependent but is typically heap allocated. Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k).\n\n * CVE-2021-3712: ASN.1 strings are represented internally within OpenSSL as an ASN1_STRING structure which contains a buffer holding the string data and a field holding the buffer length. This contrasts with normal C strings which are repesented as a buffer for the string data which is terminated with a NUL (0) byte. Although not a strict requirement, ASN.1 strings that are parsed using OpenSSL's own \"d2i\" functions (and other similar parsing functions) as well as any string whose value has been set with the ASN1_STRING_set() function will additionally NUL terminate the byte array in the ASN1_STRING structure. However, it is possible for applications to directly construct valid ASN1_STRING structures which do not NUL terminate the byte array by directly setting the \"data\" and \"length\" fields in the ASN1_STRING array. This can also happen by using the ASN1_STRING_set0() function. Numerous OpenSSL functions that print ASN.1 data have been found to assume that the ASN1_STRING byte array will be NUL terminated, even though this is not guaranteed for strings that have been directly constructed. Where an application requests an ASN.1 structure to be printed, and where that ASN.1 structure contains ASN1_STRINGs that have been directly constructed by the application without NUL terminating the \"data\" field, then a read buffer overrun can occur. The same thing can also occur during name constraints processing of certificates (for example if a certificate has been directly constructed by the application instead of loading it via the OpenSSL parsing functions, and the certificate contains non NUL terminated ASN1_STRING structures). It can also occur in the X509_get1_email(), X509_REQ_get1_email() and X509_get1_ocsp() functions. If a malicious actor can cause an application to directly construct an ASN1_STRING and then process it through one of the affected OpenSSL functions then this issue could be hit. This might result in a crash (causing a Denial of Service attack). It could also result in the disclosure of private memory contents (such as private keys, or sensitive plaintext). Fixed in OpenSSL 1.1.1l (Affected 1.1.1-1.1.1k). Fixed in OpenSSL 1.0.2za (Affected 1.0.2-1.0.2y).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-27"
+          },
+          "Updated": {
+            "Date": "2021-08-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-04570",
+              "Impact": "Critical",
+              "Public": "20210824",
+              "CveID": "BDU:2021-04570"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04571",
+              "Impact": "High",
+              "Public": "20210824",
+              "CveID": "BDU:2021-04571"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3711",
+              "Impact": "Critical",
+              "Public": "20210824",
+              "CveID": "CVE-2021-3711"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3712",
+              "Impact": "High",
+              "Public": "20210824",
+              "CveID": "CVE-2021-3712"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646005",
+                "Comment": "openssl is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1l-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212646008",
+                "Comment": "tsget is earlier than 0:1.1.1l-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

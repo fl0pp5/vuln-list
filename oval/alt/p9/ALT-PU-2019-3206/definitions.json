@@ -1,0 +1,176 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193206",
+      "Version": "oval:org.altlinux.errata:def:20193206",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3206: package `freeipa` update to version 4.7.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3206",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3206",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-10195",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10195",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14867",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14867",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades freeipa to version 4.7.4-alt1. \nSecurity Fix(es):\n\n * CVE-2019-10195: A flaw was found in IPA, all 4.6.x versions before 4.6.7, all 4.7.x versions before 4.7.4 and all 4.8.x versions before 4.8.3, in the way that FreeIPA's batch processing API logged operations. This included passing user passwords in clear text on FreeIPA masters. Batch processing of commands with passwords as arguments or options is not performed by default in FreeIPA but is possible by third-party components. An attacker having access to system logs on FreeIPA masters could use this flaw to produce log file content with passwords exposed.\n\n * CVE-2019-14867: A flaw was found in IPA, all 4.6.x versions before 4.6.7, all 4.7.x versions before 4.7.4 and all 4.8.x versions before 4.8.3, in the way the internal function ber_scanf() was used in some components of the IPA server, which parsed kerberos key data. An unauthenticated attacker who could trigger parsing of the krb principal key could cause the IPA server to crash or in some conditions, cause arbitrary code to be executed on the server hosting the IPA server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-29"
+          },
+          "Updated": {
+            "Date": "2019-11-29"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10195",
+              "Impact": "Low",
+              "Public": "20191127",
+              "CveID": "CVE-2019-10195"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14867",
+              "Impact": "High",
+              "Public": "20191127",
+              "CveID": "CVE-2019-14867"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206001",
+                "Comment": "freeipa-client is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206002",
+                "Comment": "freeipa-client-automount is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206003",
+                "Comment": "freeipa-client-common is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206004",
+                "Comment": "freeipa-common is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206005",
+                "Comment": "freeipa-server is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206006",
+                "Comment": "freeipa-server-common is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206007",
+                "Comment": "freeipa-server-dns is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206008",
+                "Comment": "freeipa-server-trust-ad is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206009",
+                "Comment": "python3-module-freeipa is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206010",
+                "Comment": "python3-module-ipaclient is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206011",
+                "Comment": "python3-module-ipaclient-ntp is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206012",
+                "Comment": "python3-module-ipaserver is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206013",
+                "Comment": "python3-module-ipaserver-ntp is earlier than 0:4.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193206014",
+                "Comment": "python3-module-ipatests is earlier than 0:4.7.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

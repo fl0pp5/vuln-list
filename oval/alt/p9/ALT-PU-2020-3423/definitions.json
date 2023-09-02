@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203423",
+      "Version": "oval:org.altlinux.errata:def:20203423",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3423: package `node` update to version 14.15.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3423",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3423",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01024",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01024",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03742",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03742",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8277",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8277",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23840",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23840",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades node to version 14.15.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01024: Уязвимость программной платформы Node.js, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03742: Уязвимость функций EVP_CipherUpdate, EVP_EncryptUpdate и EVP_DecryptUpdate инструментария для протоколов TLS и SSL OpenSSL, связанная с целочисленным переполнением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-8277: A Node.js application that allows an attacker to trigger a DNS request for a host of their choice could trigger a Denial of Service in versions \u003c 15.2.1, \u003c 14.15.1, and \u003c 12.19.1 by getting the application to resolve a DNS record with a larger number of responses. This is fixed in 15.2.1, 14.15.1, and 12.19.1.\n\n * CVE-2021-23840: Calls to EVP_CipherUpdate, EVP_EncryptUpdate and EVP_DecryptUpdate may overflow the output length argument in some cases where the input length is close to the maximum permissable length for an integer on the platform. In such cases the return value from the function call will be 1 (indicating success), but the output length value will be negative. This could cause applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and below are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this issue. However OpenSSL 1.0.2 is out of support and no longer receiving public updates. Premium support customers of OpenSSL 1.0.2 should upgrade to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected 1.0.2-1.0.2x).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-26"
+          },
+          "Updated": {
+            "Date": "2020-11-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-01024",
+              "Impact": "High",
+              "Public": "20201118",
+              "CveID": "BDU:2021-01024"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-03742",
+              "Impact": "High",
+              "Public": "20210216",
+              "CveID": "BDU:2021-03742"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8277",
+              "Impact": "High",
+              "Public": "20201119",
+              "CveID": "CVE-2020-8277"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23840",
+              "Impact": "High",
+              "Public": "20210216",
+              "CveID": "CVE-2021-23840"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203423001",
+                "Comment": "node is earlier than 0:14.15.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203423002",
+                "Comment": "node-devel is earlier than 0:14.15.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203423003",
+                "Comment": "node-doc is earlier than 0:14.15.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

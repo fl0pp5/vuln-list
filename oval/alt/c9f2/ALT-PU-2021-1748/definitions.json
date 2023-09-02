@@ -1,0 +1,299 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211748",
+      "Version": "oval:org.altlinux.errata:def:20211748",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1748: package `ceph` update to version 14.2.20-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1748",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1748",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00208",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00208",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-27839",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27839",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20288",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20288",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ceph to version 14.2.20-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00208: Уязвимость программной объектной сети хранения ceph, связанная с недостатками процедуры аутентификации, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-27839: A flaw was found in ceph-dashboard. The JSON Web Token (JWT) used for user authentication is stored by the frontend application in the browser’s localStorage which is potentially vulnerable to attackers via XSS attacks. The highest threat from this vulnerability is to data confidentiality and integrity.\n\n * CVE-2021-20288: An authentication flaw was found in ceph in versions before 14.2.20. When the monitor handles CEPHX_GET_AUTH_SESSION_KEY requests, it doesn't sanitize other_keys, allowing key reuse. An attacker who can request a global_id can exploit the ability of any user to request a global_id previously associated with another user, as ceph does not force the reuse of old keys to generate new ones. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-29"
+          },
+          "Updated": {
+            "Date": "2021-04-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-00208",
+              "Impact": "High",
+              "Public": "20210414",
+              "CveID": "BDU:2022-00208"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27839",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2020-27839"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20288",
+              "Impact": "High",
+              "Public": "20210415",
+              "CveID": "CVE-2021-20288"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748001",
+                "Comment": "ceph is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748002",
+                "Comment": "ceph-base is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748003",
+                "Comment": "ceph-common is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748004",
+                "Comment": "ceph-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748005",
+                "Comment": "ceph-fuse is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748006",
+                "Comment": "ceph-mds is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748007",
+                "Comment": "ceph-mgr is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748008",
+                "Comment": "ceph-mgr-ansible is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748009",
+                "Comment": "ceph-mgr-dashboard is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748010",
+                "Comment": "ceph-mgr-deepsea is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748011",
+                "Comment": "ceph-mgr-diskprediction-cloud is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748012",
+                "Comment": "ceph-mgr-diskprediction-local is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748013",
+                "Comment": "ceph-mgr-influx is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748014",
+                "Comment": "ceph-mgr-insights is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748015",
+                "Comment": "ceph-mgr-k8sevents is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748016",
+                "Comment": "ceph-mgr-prometheus is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748017",
+                "Comment": "ceph-mgr-restful is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748018",
+                "Comment": "ceph-mgr-rook is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748019",
+                "Comment": "ceph-mgr-ssh is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748020",
+                "Comment": "ceph-mgr-telegraf is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748021",
+                "Comment": "ceph-mgr-zabbix is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748022",
+                "Comment": "ceph-mon is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748023",
+                "Comment": "ceph-osd is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748024",
+                "Comment": "ceph-radosgw is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748025",
+                "Comment": "ceph-resource-agents is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748026",
+                "Comment": "cephfs-shell is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748027",
+                "Comment": "grafana-dashboards-ceph is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748028",
+                "Comment": "libcephfs-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748029",
+                "Comment": "libcephfs2 is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748030",
+                "Comment": "librados-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748031",
+                "Comment": "librados2 is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748032",
+                "Comment": "libradosstriper-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748033",
+                "Comment": "libradosstriper1 is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748034",
+                "Comment": "librbd-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748035",
+                "Comment": "librbd1 is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748036",
+                "Comment": "librgw-devel is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748037",
+                "Comment": "librgw2 is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748038",
+                "Comment": "python3-module-ceph is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748039",
+                "Comment": "python3-module-ceph-argparse is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748040",
+                "Comment": "python3-module-ceph_volume is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748041",
+                "Comment": "python3-module-cephfs is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748042",
+                "Comment": "python3-module-rados is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748043",
+                "Comment": "python3-module-rbd is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748044",
+                "Comment": "python3-module-rgw is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748045",
+                "Comment": "rbd-fuse is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748046",
+                "Comment": "rbd-mirror is earlier than 0:14.2.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211748047",
+                "Comment": "rbd-nbd is earlier than 0:14.2.20-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

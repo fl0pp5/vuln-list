@@ -1,0 +1,262 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213468",
+      "Version": "oval:org.altlinux.errata:def:20213468",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3468: package `kernel-image-rpi-def` update to version 5.10.81-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3468",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3468",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05673",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05673",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00681",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00681",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05646",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05646",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01273",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01273",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3760",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3760",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38300",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38300",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4028",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4028",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41073",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41073",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43267",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43267",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-1252",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1252",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-def to version 5.10.81-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05673: Уязвимость реализации функции tipc_crypto_key_rcv() протокола для внутрикластерного взаимодействия Transparent Inter-Process Communication (TIPC) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2022-00681: Уязвимость функции loop_rw_iter (fs/io_uring.c ) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05646: Уязвимость интерфейса контроллера NFC (NCI) ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2023-01273: Уязвимость функции ovl_write_iter() файловой системы overlayfs ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * CVE-2021-3760: A flaw was found in the Linux kernel. A use-after-free vulnerability in the NFC stack can lead to a threat to confidentiality, integrity, and system availability.\n\n * CVE-2021-38300: arch/mips/net/bpf_jit.c in the Linux kernel before 5.4.10 can generate undesirable machine code when transforming unprivileged cBPF programs, allowing execution of arbitrary code within the kernel context. This occurs because conditional branches can exceed the 128 KB limit of the MIPS architecture.\n\n * CVE-2021-4028: A flaw in the Linux kernel's implementation of RDMA communications manager listener code allowed an attacker with local access to setup a socket to listen on a high port allowing for a list element to be used after free. Given the ability to execute code, a local attacker could leverage this use-after-free to crash the system or possibly escalate privileges on the system.\n\n * CVE-2021-41073: loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel buffer, as demonstrated by using /proc/\u003cpid\u003e/maps for exploitation.\n\n * CVE-2021-43267: An issue was discovered in net/tipc/crypto.c in the Linux kernel before 5.14.16. The Transparent Inter-Process Communication (TIPC) functionality allows remote attackers to exploit insufficient validation of user-supplied sizes for the MSG_CRYPTO message type.\n\n * CVE-2023-1252: A use-after-free flaw was found in the Linux kernel’s Ext4 File System in how a user triggers several file operations simultaneously with the overlay FS usage. This flaw allows a local user to crash or potentially escalate their privileges on the system. Only if patch 9a2544037600 (\"ovl: fix use after free in struct ovl_aio_req\") not applied yet, the kernel could be affected.\n\n * #41084: Добавить поддержку nftables",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-03"
+          },
+          "Updated": {
+            "Date": "2021-12-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-1284",
+              "Href": "https://bdu.fstec.ru/vul/2021-05673",
+              "Impact": "Critical",
+              "Public": "20211026",
+              "CveID": "BDU:2021-05673"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-269, CWE-763",
+              "Href": "https://bdu.fstec.ru/vul/2022-00681",
+              "Impact": "High",
+              "Public": "20210919",
+              "CveID": "BDU:2022-00681"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05646",
+              "Impact": "High",
+              "Public": "20220216",
+              "CveID": "BDU:2022-05646"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01273",
+              "Impact": "High",
+              "Public": "20211029",
+              "CveID": "BDU:2023-01273"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3760",
+              "Impact": "High",
+              "Public": "20220216",
+              "CveID": "CVE-2021-3760"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38300",
+              "Impact": "High",
+              "Public": "20210920",
+              "CveID": "CVE-2021-38300"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4028",
+              "Impact": "High",
+              "Public": "20220824",
+              "CveID": "CVE-2021-4028"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41073",
+              "Impact": "High",
+              "Public": "20210919",
+              "CveID": "CVE-2021-41073"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43267",
+              "Impact": "Critical",
+              "Public": "20211102",
+              "CveID": "CVE-2021-43267"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1252",
+              "Impact": "High",
+              "Public": "20230323",
+              "CveID": "CVE-2023-1252"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41084",
+              "Href": "https://bugzilla.altlinux.org/41084",
+              "Data": "Добавить поддержку nftables"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468001",
+                "Comment": "kernel-doc-rpi is earlier than 1:5.10.81-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468002",
+                "Comment": "kernel-headers-modules-rpi-def is earlier than 1:5.10.81-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468003",
+                "Comment": "kernel-headers-rpi-def is earlier than 1:5.10.81-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468004",
+                "Comment": "kernel-image-rpi-def is earlier than 1:5.10.81-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468005",
+                "Comment": "kernel-modules-staging-rpi-def is earlier than 1:5.10.81-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213468006",
+                "Comment": "kernel-modules-v4l-rpi-def is earlier than 1:5.10.81-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

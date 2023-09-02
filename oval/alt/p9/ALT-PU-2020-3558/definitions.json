@@ -1,0 +1,146 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203558",
+      "Version": "oval:org.altlinux.errata:def:20203558",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3558: package `glpi` update to version 9.5.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3558",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3558",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-26212",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26212",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27662",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27662",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27663",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27663",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glpi to version 9.5.3-alt1. \nSecurity Fix(es):\n\n * CVE-2020-26212: GLPI stands for Gestionnaire Libre de Parc Informatique and it is a Free Asset and IT Management Software package, that provides ITIL Service Desk features, licenses tracking and software auditing. In GLPI before version 9.5.3, any authenticated user has read-only permissions to the planning of every other user, even admin ones. Steps to reproduce the behavior: 1. Create a new planning with 'eduardo.mozart' user (from 'IT' group that belongs to 'Super-admin') into it's personal planning at 'Assistance' \u003e 'Planning'. 2. Copy the CalDAV url and use a CalDAV client (e.g. Thunderbird) to sync the planning with the provided URL. 3. Inform the username and password from any valid user (e.g. 'camila' from 'Proativa' group). 4. 'Camila' has read-only access to 'eduardo.mozart' personal planning. The same behavior happens to any group. E.g. 'Camila' has access to 'IT' group planning, even if she doesn't belong to this group and has a 'Self-service' profile permission). This issue is fixed in version 9.5.3. As a workaround, one can remove the `caldav.php` file to block access to CalDAV server.\n\n * CVE-2020-27662: In GLPI before 9.5.3, ajax/comments.php has an Insecure Direct Object Reference (IDOR) vulnerability that allows an attacker to read data from any database table (e.g., glpi_tickets, glpi_users, etc.).\n\n * CVE-2020-27663: In GLPI before 9.5.3, ajax/getDropdownValue.php has an Insecure Direct Object Reference (IDOR) vulnerability that allows an attacker to read data from any itemType (e.g., Ticket, Users, etc.).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-26"
+          },
+          "Updated": {
+            "Date": "2020-12-26"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26212",
+              "Impact": "Low",
+              "Public": "20201125",
+              "CveID": "CVE-2020-26212"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-639",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27662",
+              "Impact": "Low",
+              "Public": "20201126",
+              "CveID": "CVE-2020-27662"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-639",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27663",
+              "Impact": "Low",
+              "Public": "20201126",
+              "CveID": "CVE-2020-27663"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203558001",
+                "Comment": "glpi is earlier than 0:9.5.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203558002",
+                "Comment": "glpi-apache2 is earlier than 0:9.5.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203558003",
+                "Comment": "glpi-php7 is earlier than 0:9.5.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

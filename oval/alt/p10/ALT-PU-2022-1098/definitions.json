@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221098",
+      "Version": "oval:org.altlinux.errata:def:20221098",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1098: package `ansible` update to version 2.9.27-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1098",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1098",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-3620",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3620",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ansible to version 2.9.27-alt1. \nSecurity Fix(es):\n\n * CVE-2021-3620: A flaw was found in Ansible Engine's ansible-connection module, where sensitive information such as the Ansible user credentials is disclosed by default in the traceback error message. The highest threat from this vulnerability is to confidentiality.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-20"
+          },
+          "Updated": {
+            "Date": "2022-01-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-209",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3620",
+              "Impact": "Low",
+              "Public": "20220303",
+              "CveID": "CVE-2021-3620"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221098001",
+                "Comment": "ansible is earlier than 0:2.9.27-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

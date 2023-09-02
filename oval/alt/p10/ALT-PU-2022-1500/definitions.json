@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221500",
+      "Version": "oval:org.altlinux.errata:def:20221500",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1500: package `alterator-net-eth` update to version 5.2.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1500",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1500",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades alterator-net-eth to version 5.2.2-alt1. \nSecurity Fix(es):\n\n * #41708: Не возможно сменить имя пк, через GUI - Центр Управления Системой (acc) в виде FQDN на Альт Сервер 10",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-17"
+          },
+          "Updated": {
+            "Date": "2022-03-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41708",
+              "Href": "https://bugzilla.altlinux.org/41708",
+              "Data": "Не возможно сменить имя пк, через GUI - Центр Управления Системой (acc) в виде FQDN на Альт Сервер 10"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221500001",
+                "Comment": "alterator-net-eth is earlier than 0:5.2.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221500002",
+                "Comment": "hostname-hook-hosts is earlier than 0:5.2.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221177",
+      "Version": "oval:org.altlinux.errata:def:20221177",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1177: package `grafana` update to version 7.5.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1177",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1177",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01019",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01019",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-24303",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24303",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27846",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27846",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-27358",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27358",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-28147",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28147",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-28148",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28148",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39226",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39226",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43813",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43813",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43815",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43815",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26148",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26148",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades grafana to version 7.5.13-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01019: Уязвимость веб-инструмента представления данных Grafana, связанная с недостатками процедуры аутентификации, позволяющая нарушителю доступ к защищаемой информации, вызвать отказ в обслуживании или повысить свои привилегии\n\n * CVE-2020-24303: Grafana before 7.1.0-beta 1 allows XSS via a query alias for the ElasticSearch datasource.\n\n * CVE-2020-27846: A signature verification vulnerability exists in crewjam/saml. This flaw allows an attacker to bypass SAML Authentication. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2021-27358: The snapshot feature in Grafana 6.7.3 through 7.4.1 can allow an unauthenticated remote attackers to trigger a Denial of Service via a remote API call if a commonly used configuration is set.\n\n * CVE-2021-28147: The team sync HTTP API in Grafana Enterprise 6.x before 6.7.6, 7.x before 7.3.10, and 7.4.x before 7.4.5 has an Incorrect Access Control issue. On Grafana instances using an external authentication service and having the EditorsCanAdmin feature enabled, this vulnerability allows any authenticated user to add external groups to any existing team. This can be used to grant a user team permissions that the user isn't supposed to have.\n\n * CVE-2021-28148: One of the usage insights HTTP API endpoints in Grafana Enterprise 6.x before 6.7.6, 7.x before 7.3.10, and 7.4.x before 7.4.5 is accessible without any authentication. This allows any unauthenticated user to send an unlimited number of requests to the endpoint, leading to a denial of service (DoS) attack against a Grafana Enterprise instance.\n\n * CVE-2021-39226: Grafana is an open source data visualization platform. In affected versions unauthenticated and authenticated users are able to view the snapshot with the lowest database key by accessing the literal paths: /dashboard/snapshot/:key, or /api/snapshots/:key. If the snapshot \"public_mode\" configuration setting is set to true (vs default of false), unauthenticated users are able to delete the snapshot with the lowest database key by accessing the literal path: /api/snapshots-delete/:deleteKey. Regardless of the snapshot \"public_mode\" setting, authenticated users are able to delete the snapshot with the lowest database key by accessing the literal paths: /api/snapshots/:key, or /api/snapshots-delete/:deleteKey. The combination of deletion and viewing enables a complete walk through all snapshot data while resulting in complete snapshot data loss. This issue has been resolved in versions 8.1.6 and 7.5.11. If for some reason you cannot upgrade you can use a reverse proxy or similar to block access to the literal paths: /api/snapshots/:key, /api/snapshots-delete/:deleteKey, /dashboard/snapshot/:key, and /api/snapshots/:key. They have no normal function and can be disabled without side effects.\n\n * CVE-2021-43813: Grafana is an open-source platform for monitoring and observability. Grafana prior to versions 8.3.2 and 7.5.12 contains a directory traversal vulnerability for fully lowercase or fully uppercase .md files. The vulnerability is limited in scope, and only allows access to files with the extension .md to authenticated users only. Grafana Cloud instances have not been affected by the vulnerability. Users should upgrade to patched versions 8.3.2 or 7.5.12. For users who cannot upgrade, running a reverse proxy in front of Grafana that normalizes the PATH of the request will mitigate the vulnerability. The proxy will have to also be able to handle url encoded paths. Alternatively, for fully lowercase or fully uppercase .md files, users can block /api/plugins/.*/markdown/.* without losing any functionality beyond inlined plugin help text.\n\n * CVE-2021-43815: Grafana is an open-source platform for monitoring and observability. Grafana prior to versions 8.3.2 and 7.5.12 has a directory traversal for arbitrary .csv files. It only affects instances that have the developer testing tool called TestData DB data source enabled and configured. The vulnerability is limited in scope, and only allows access to files with the extension .csv to authenticated users only. Grafana Cloud instances have not been affected by the vulnerability. Versions 8.3.2 and 7.5.12 contain a patch for this issue. There is a workaround available for users who cannot upgrade. Running a reverse proxy in front of Grafana that normalizes the PATH of the request will mitigate the vulnerability. The proxy will have to also be able to handle url encoded paths.\n\n * CVE-2022-26148: An issue was discovered in Grafana through 7.3.4, when integrated with Zabbix. The Zabbix password can be found in the api_jsonrpc.php HTML source code. When the user logs in and allows the user to register, one can right click to view the source code and use Ctrl-F to search for password in api_jsonrpc.php to discover the Zabbix account password and URL address.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-31"
+          },
+          "Updated": {
+            "Date": "2022-01-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2023-01019",
+              "Impact": "Critical",
+              "Public": "20211005",
+              "CveID": "BDU:2023-01019"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24303",
+              "Impact": "Low",
+              "Public": "20201028",
+              "CveID": "CVE-2020-24303"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-115",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27846",
+              "Impact": "Critical",
+              "Public": "20201221",
+              "CveID": "CVE-2020-27846"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27358",
+              "Impact": "High",
+              "Public": "20210318",
+              "CveID": "CVE-2021-27358"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28147",
+              "Impact": "Low",
+              "Public": "20210322",
+              "CveID": "CVE-2021-28147"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-306",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28148",
+              "Impact": "High",
+              "Public": "20210322",
+              "CveID": "CVE-2021-28148"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39226",
+              "Impact": "High",
+              "Public": "20211005",
+              "CveID": "CVE-2021-39226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43813",
+              "Impact": "Low",
+              "Public": "20211210",
+              "CveID": "CVE-2021-43813"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43815",
+              "Impact": "Low",
+              "Public": "20211210",
+              "CveID": "CVE-2021-43815"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-312",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26148",
+              "Impact": "Critical",
+              "Public": "20220321",
+              "CveID": "CVE-2022-26148"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221177001",
+                "Comment": "grafana is earlier than 0:7.5.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

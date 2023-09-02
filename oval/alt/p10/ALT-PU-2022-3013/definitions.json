@@ -1,0 +1,148 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223013",
+      "Version": "oval:org.altlinux.errata:def:20223013",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3013: package `golang` update to version 1.18.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3013",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3013",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00266",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00266",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41716",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41716",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.18.8-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00266: Уязвимость языка программирования Go, связанная с неверной нейтрализация особых элементов в выходных данных, позволяющая нарушителю установить произвольные переменные среды в Windows\n\n * CVE-2022-41716: Due to unsanitized NUL values, attackers may be able to maliciously set environment variables on Windows. In syscall.StartProcess and os/exec.Cmd, invalid environment variable values containing NUL values are not properly checked for. A malicious environment variable value can exploit this behavior to set a value for a different environment variable. For example, the environment variable string \"A=B\\x00C=D\" sets the variables \"A=B\" and \"C=D\".",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-06"
+          },
+          "Updated": {
+            "Date": "2022-11-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74, CWE-158",
+              "Href": "https://bdu.fstec.ru/vul/2023-00266",
+              "Impact": "High",
+              "Public": "20221018",
+              "CveID": "BDU:2023-00266"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41716",
+              "Impact": "High",
+              "Public": "20221102",
+              "CveID": "CVE-2022-41716"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013001",
+                "Comment": "golang is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013002",
+                "Comment": "golang-docs is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013003",
+                "Comment": "golang-gdb is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013004",
+                "Comment": "golang-misc is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013005",
+                "Comment": "golang-shared is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013006",
+                "Comment": "golang-src is earlier than 0:1.18.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223013007",
+                "Comment": "golang-tests is earlier than 0:1.18.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

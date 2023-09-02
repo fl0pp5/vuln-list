@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20191933",
+      "Version": "oval:org.altlinux.errata:def:20191933",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-1933: package `lighttpd` update to version 1.4.54-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-1933",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-1933",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02905",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02905",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11072",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11072",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades lighttpd to version 1.4.54-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02905: Уязвимость веб-сервера lighttpd, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-11072: ** DISPUTED ** lighttpd before 1.4.54 has a signed integer overflow, which might allow remote attackers to cause a denial of service (application crash) or possibly have unspecified other impact via a malicious HTTP GET request, as demonstrated by mishandling of /%2F? in burl_normalize_2F_to_slash_fix in burl.c. NOTE: The developer states \"The feature which can be abused to cause the crash is a new feature in lighttpd 1.4.50, and is not enabled by default. It must be explicitly configured in the config file (e.g. lighttpd.conf). Certain input will trigger an abort() in lighttpd when that feature is enabled. lighttpd detects the underflow or realloc() will fail (in both 32-bit and 64-bit executables), also detected in lighttpd. Either triggers an explicit abort() by lighttpd. This is not exploitable beyond triggering the explicit abort() with subsequent application exit.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-05-30"
+          },
+          "Updated": {
+            "Date": "2019-05-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-02905",
+              "Impact": "Critical",
+              "Public": "20190410",
+              "CveID": "BDU:2020-02905"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11072",
+              "Impact": "Critical",
+              "Public": "20190410",
+              "CveID": "CVE-2019-11072"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933001",
+                "Comment": "lighttpd is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933002",
+                "Comment": "lighttpd-auth-gssapi is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933003",
+                "Comment": "lighttpd-auth-ldap is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933004",
+                "Comment": "lighttpd-auth-mysql is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933005",
+                "Comment": "lighttpd-cml is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933006",
+                "Comment": "lighttpd-doc is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933007",
+                "Comment": "lighttpd-ldap-vhost is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933008",
+                "Comment": "lighttpd-mysql-vhost is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933009",
+                "Comment": "lighttpd-pgsql-vhost is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933010",
+                "Comment": "lighttpd-rrdtool is earlier than 0:1.4.54-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191933011",
+                "Comment": "lighttpd-trigger_b4_dl is earlier than 0:1.4.54-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

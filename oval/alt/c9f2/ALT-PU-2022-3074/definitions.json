@@ -1,0 +1,155 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223074",
+      "Version": "oval:org.altlinux.errata:def:20223074",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3074: package `gitea` update to version 1.16.9-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3074",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3074",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-45330",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45330",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0905",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0905",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1058",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1058",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1928",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1928",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30781",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30781",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-38183",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-38183",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gitea to version 1.16.9-alt1. \nSecurity Fix(es):\n\n * CVE-2021-45330: An issue exsits in Gitea through 1.15.7, which could let a malicious user gain privileges due to client side cookies not being deleted and the session remains valid on the server side for reuse.\n\n * CVE-2022-0905: Missing Authorization in GitHub repository go-gitea/gitea prior to 1.16.4.\n\n * CVE-2022-1058: Open Redirect on login in GitHub repository go-gitea/gitea prior to 1.16.5.\n\n * CVE-2022-1928: Cross-site Scripting (XSS) - Stored in GitHub repository go-gitea/gitea prior to 1.16.9.\n\n * CVE-2022-30781: Gitea before 1.16.7 does not escape git fetch remote.\n\n * CVE-2022-38183: In Gitea before 1.16.9, it was possible for users to add existing issues to projects. Due to improper access controls, an attacker could assign any issue to any project in Gitea (there was no permission check for fetching the issue). As a result, the attacker would get access to private issue titles.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-14"
+          },
+          "Updated": {
+            "Date": "2022-11-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-459",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45330",
+              "Impact": "Critical",
+              "Public": "20220209",
+              "CveID": "CVE-2021-45330"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0905",
+              "Impact": "High",
+              "Public": "20220310",
+              "CveID": "CVE-2022-0905"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1058",
+              "Impact": "Low",
+              "Public": "20220324",
+              "CveID": "CVE-2022-1058"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1928",
+              "Impact": "Low",
+              "Public": "20220529",
+              "CveID": "CVE-2022-1928"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30781",
+              "Impact": "High",
+              "Public": "20220516",
+              "CveID": "CVE-2022-30781"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-38183",
+              "Impact": "Low",
+              "Public": "20220812",
+              "CveID": "CVE-2022-38183"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223074001",
+                "Comment": "gitea is earlier than 0:1.16.9-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

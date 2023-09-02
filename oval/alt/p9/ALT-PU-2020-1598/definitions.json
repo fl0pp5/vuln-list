@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201598",
+      "Version": "oval:org.altlinux.errata:def:20201598",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1598: package `evms` update to version 2.5.5-alt43",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1598",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1598",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades evms to version 2.5.5-alt43. \nSecurity Fix(es):\n\n * #38150: Ошибка при установке slinux-8.990_rc1-x86_64.iso",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-26"
+          },
+          "Updated": {
+            "Date": "2020-03-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38150",
+              "Href": "https://bugzilla.altlinux.org/38150",
+              "Data": "Ошибка при установке slinux-8.990_rc1-x86_64.iso"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201598001",
+                "Comment": "evms is earlier than 0:2.5.5-alt43"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201598002",
+                "Comment": "evms-cli is earlier than 0:2.5.5-alt43"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201598003",
+                "Comment": "evms-ncurses is earlier than 0:2.5.5-alt43"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201598004",
+                "Comment": "libevms is earlier than 0:2.5.5-alt43"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201598005",
+                "Comment": "libevms-devel is earlier than 0:2.5.5-alt43"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

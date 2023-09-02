@@ -1,0 +1,200 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222089",
+      "Version": "oval:org.altlinux.errata:def:20222089",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2089: package `rsyslog` update to version 8.2204.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2089",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2089",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04363",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04363",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-24903",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24903",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades rsyslog to version 8.2204.1-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04363: Уязвимость TCP-модулей программной утилиты для обработки логов Rsyslog, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-24903: Rsyslog is a rocket-fast system for log processing. Modules for TCP syslog reception have a potential heap buffer overflow when octet-counted framing is used. This can result in a segfault or some other malfunction. As of our understanding, this vulnerability can not be used for remote code execution. But there may still be a slight chance for experts to do that. The bug occurs when the octet count is read. While there is a check for the maximum number of octets, digits are written to a heap buffer even when the octet count is over the maximum, This can be used to overrun the memory buffer. However, once the sequence of digits stop, no additional characters can be added to the buffer. In our opinion, this makes remote exploits impossible or at least highly complex. Octet-counted framing is one of two potential framing modes. It is relatively uncommon, but enabled by default on receivers. Modules `imtcp`, `imptcp`, `imgssapi`, and `imhttp` are used for regular syslog message reception. It is best practice not to directly expose them to the public. When this practice is followed, the risk is considerably lower. Module `imdiag` is a diagnostics module primarily intended for testbench runs. We do not expect it to be present on any production installation. Octet-counted framing is not very common. Usually, it needs to be specifically enabled at senders. If users do not need it, they can turn it off for the most important modules. This will mitigate the vulnerability.\n\n * #37239: Неправильный порядок загрузки конфигурации из /etc/rsyslog.d",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-20"
+          },
+          "Updated": {
+            "Date": "2022-06-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-04363",
+              "Impact": "High",
+              "Public": "20220505",
+              "CveID": "BDU:2022-04363"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24903",
+              "Impact": "High",
+              "Public": "20220506",
+              "CveID": "CVE-2022-24903"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37239",
+              "Href": "https://bugzilla.altlinux.org/37239",
+              "Data": "Неправильный порядок загрузки конфигурации из /etc/rsyslog.d"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089001",
+                "Comment": "rsyslog is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089002",
+                "Comment": "rsyslog-classic is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089003",
+                "Comment": "rsyslog-clickhouse is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089004",
+                "Comment": "rsyslog-crypto is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089005",
+                "Comment": "rsyslog-dbi is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089006",
+                "Comment": "rsyslog-elasticsearch is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089007",
+                "Comment": "rsyslog-extra is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089008",
+                "Comment": "rsyslog-gnutls is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089009",
+                "Comment": "rsyslog-gssapi is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089010",
+                "Comment": "rsyslog-hiredis is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089011",
+                "Comment": "rsyslog-journal is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089012",
+                "Comment": "rsyslog-mmanon is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089013",
+                "Comment": "rsyslog-mmaudit is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089014",
+                "Comment": "rsyslog-mmcount is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089015",
+                "Comment": "rsyslog-mmjsonparse is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089016",
+                "Comment": "rsyslog-mmkubernetes is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089017",
+                "Comment": "rsyslog-mmnormalize is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089018",
+                "Comment": "rsyslog-mongo is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089019",
+                "Comment": "rsyslog-mysql is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089020",
+                "Comment": "rsyslog-openssl is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089021",
+                "Comment": "rsyslog-pgsql is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089022",
+                "Comment": "rsyslog-relp is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089023",
+                "Comment": "rsyslog-snmp is earlier than 0:8.2204.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222089024",
+                "Comment": "rsyslog-udpspoof is earlier than 0:8.2204.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

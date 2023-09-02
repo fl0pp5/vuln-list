@@ -1,0 +1,46 @@
+{
+  "TextFileContent54Objects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:1001",
+      "Version": "1",
+      "comment": "Evaluate `/etc/os-release` file content",
+      "Path": {
+        "dataType": "string",
+        "Text": "/etc"
+      },
+      "Filepath": {
+        "Datatype": "string",
+        "Text": "os-release"
+      },
+      "Pattern": {
+        "Datatype": "string",
+        "Operation": "pattern match",
+        "Text": "cpe:\\/o:alt:(?!sp)[a-z\\-]+:p?(\\d+)(?:\\.\\d)*"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "Text": "1"
+      }
+    }
+  ],
+  "RpmInfoObjects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:20191854001",
+      "Version": "1",
+      "comment": "memcached is installed",
+      "Name": "memcached"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20191854002",
+      "Version": "1",
+      "comment": "memcached-devel is installed",
+      "Name": "memcached-devel"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20191854003",
+      "Version": "1",
+      "comment": "memcached-tool is installed",
+      "Name": "memcached-tool"
+    }
+  ]
+}

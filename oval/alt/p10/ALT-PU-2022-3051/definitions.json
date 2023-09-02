@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223051",
+      "Version": "oval:org.altlinux.errata:def:20223051",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3051: package `pcre2` update to version 10.40-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3051",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3051",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03770",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03770",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02635",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02635",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1586",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1586",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1587",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1587",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pcre2 to version 10.40-alt1. \nSecurity Fix(es):\n\n * BDU:2022-03770: Уязвимость функции compile_xclass_matchingpath() библиотеки PCRE2, позволяющая нарушителю вызвать отказ в обслуживании или раскрыть защищаемую информацию\n\n * BDU:2023-02635: Уязвимость функции pcre2_jit_compile.c библиотеки регулярных выражений PCRE2, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2022-1586: An out-of-bounds read vulnerability was discovered in the PCRE2 library in the compile_xclass_matchingpath() function of the pcre2_jit_compile.c file. This involves a unicode property matching issue in JIT-compiled regular expressions. The issue occurs because the character was not fully read in case-less matching within JIT.\n\n * CVE-2022-1587: An out-of-bounds read vulnerability was discovered in the PCRE2 library in the get_recurse_data_length() function of the pcre2_jit_compile.c file. This issue affects recursions in JIT-compiled regular expressions caused by duplicate data transfers.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-10"
+          },
+          "Updated": {
+            "Date": "2022-11-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-03770",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "BDU:2022-03770"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-02635",
+              "Impact": "Critical",
+              "Public": "20220316",
+              "CveID": "BDU:2023-02635"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1586",
+              "Impact": "Critical",
+              "Public": "20220516",
+              "CveID": "CVE-2022-1586"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1587",
+              "Impact": "Critical",
+              "Public": "20220516",
+              "CveID": "CVE-2022-1587"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223051001",
+                "Comment": "libpcre2 is earlier than 0:10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223051002",
+                "Comment": "libpcre2-devel is earlier than 0:10.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223051003",
+                "Comment": "pcre2-tools is earlier than 0:10.40-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

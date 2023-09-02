@@ -1,0 +1,327 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203289",
+      "Version": "oval:org.altlinux.errata:def:20203289",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3289: package `moodle` update to version 3.10.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3289",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3289",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07408",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07408",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14320",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14320",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14321",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14321",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14322",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14322",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25628",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25628",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25629",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25629",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25630",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25630",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25631",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25631",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25698",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25698",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25699",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25699",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25700",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25700",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25701",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25701",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25703",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25703",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-45152",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-45152",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-35132",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-35132",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-35133",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-35133",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades moodle to version 3.10.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-07408: Уязвимость системы управления курсами Moodle, связанная с недостаточной проверкой введенных пользователем данных в библиотеке поставщика LTI, позволяющая нарушителю выполнять SSRF-атаки\n\n * CVE-2020-14320: In Moodle before 3.9.1, 3.8.4 and 3.7.7, the filter in the admin task log required extra sanitizing to prevent a reflected XSS risk.\n\n * CVE-2020-14321: In Moodle before 3.9.1, 3.8.4, 3.7.7 and 3.5.13, teachers of a course were able to assign themselves the manager role within that course.\n\n * CVE-2020-14322: In Moodle before 3.9.1, 3.8.4, 3.7.7 and 3.5.13, yui_combo needed to limit the amount of files it can load to help mitigate the risk of denial of service.\n\n * CVE-2020-25628: The filter in the tag manager required extra sanitizing to prevent a reflected XSS risk. This affects 3.9 to 3.9.1, 3.8 to 3.8.4, 3.7 to 3.7.7, 3.5 to 3.5.13 and earlier unsupported versions. Fixed in 3.9.2, 3.8.5, 3.7.8 and 3.5.14.\n\n * CVE-2020-25629: A vulnerability was found in Moodle where users with \"Log in as\" capability in a course context (typically, course managers) may gain access to some site administration capabilities by \"logging in as\" a System manager. This affects 3.9 to 3.9.1, 3.8 to 3.8.4, 3.7 to 3.7.7, 3.5 to 3.5.13 and earlier unsupported versions. This is fixed in 3.9.2, 3.8.5, 3.7.8 and 3.5.14.\n\n * CVE-2020-25630: A vulnerability was found in Moodle where the decompressed size of zip files was not checked against available user quota before unzipping them, which could lead to a denial of service risk. This affects versions 3.9 to 3.9.1, 3.8 to 3.8.4, 3.7 to 3.7.7, 3.5 to 3.5.13 and earlier unsupported versions. Fixed in 3.9.2, 3.8.5, 3.7.8 and 3.5.14.\n\n * CVE-2020-25631: A vulnerability was found in Moodle 3.9 to 3.9.1, 3.8 to 3.8.4 and 3.7 to 3.7.7 where it was possible to include JavaScript in a book's chapter title, which was not escaped on the \"Add new chapter\" page. This is fixed in 3.9.2, 3.8.5 and 3.7.8.\n\n * CVE-2020-25698: Users' enrollment capabilities were not being sufficiently checked in Moodle when they are restored into an existing course. This could lead to them unenrolling users without having permission to do so. Versions affected: 3.5 to 3.5.14, 3.7 to 3.7.8, 3.8 to 3.8.5, 3.9 to 3.9.2 and earlier unsupported versions. Fixed in 3.9.3, 3.8.6, 3.7.9, 3.5.15, and 3.10.\n\n * CVE-2020-25699: In moodle, insufficient capability checks could lead to users with the ability to course restore adding additional capabilities to roles within that course. Versions affected: 3.9 to 3.9.2, 3.8 to 3.8.5, 3.7 to 3.7.8, 3.5 to 3.5.14 and earlier unsupported versions. This is fixed in moodle 3.9.3, 3.8.6, 3.7.9, 3.5.15, and 3.10.\n\n * CVE-2020-25700: In moodle, some database module web services allowed students to add entries within groups they did not belong to. Versions affected: 3.9 to 3.9.2, 3.8 to 3.8.5, 3.7 to 3.7.8, 3.5 to 3.5.14 and earlier unsupported versions. This is fixed in moodle 3.8.6, 3.7.9, 3.5.15, and 3.10.\n\n * CVE-2020-25701: If the upload course tool in Moodle was used to delete an enrollment method which did not exist or was not already enabled, the tool would erroneously enable that enrollment method. This could lead to unintended users gaining access to the course. Versions affected: 3.9 to 3.9.2, 3.8 to 3.8.5, 3.7 to 3.7.8, 3.5 to 3.5.14 and earlier unsupported versions. This is fixed in moodle 3.9.3, 3.8.6, 3.7.9, 3.5.15, and 3.10.\n\n * CVE-2020-25703: The participants table download in Moodle always included user emails, but should have only done so when users' emails are not hidden. Versions affected: 3.9 to 3.9.2, 3.8 to 3.8.5 and 3.7 to 3.7.8. This is fixed in moodle 3.9.3, 3.8.6, 3.7.9, and 3.10.\n\n * CVE-2022-45152: A blind Server-Side Request Forgery (SSRF) vulnerability was found in Moodle. This flaw exists due to insufficient validation of user-supplied input in LTI provider library. The library does not utilise Moodle's inbuilt cURL helper, which resulted in a blind SSRF risk. An attacker can send a specially crafted HTTP request and trick the application to initiate requests to arbitrary systems. This vulnerability allows a remote attacker to perform SSRF attacks.\n\n * CVE-2023-35132: A limited SQL injection risk was identified on the Mnet SSO access control page. This flaw affects Moodle versions 4.2, 4.1 to 4.1.3, 4.0 to 4.0.8, 3.11 to 3.11.14, 3.9 to 3.9.21 and earlier unsupported versions.\n\n * CVE-2023-35133: An issue in the logic used to check 0.0.0.0 against the cURL blocked hosts lists resulted in an SSRF risk. This flaw affects Moodle versions 4.2, 4.1 to 4.1.3, 4.0 to 4.0.8, 3.11 to 3.11.14, 3.9 to 3.9.21 and earlier unsupported versions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-13"
+          },
+          "Updated": {
+            "Date": "2020-11-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2022-07408",
+              "Impact": "Critical",
+              "Public": "20221123",
+              "CveID": "BDU:2022-07408"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14320",
+              "Impact": "Low",
+              "Public": "20220816",
+              "CveID": "CVE-2020-14320"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14321",
+              "Impact": "High",
+              "Public": "20220816",
+              "CveID": "CVE-2020-14321"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14322",
+              "Impact": "High",
+              "Public": "20220816",
+              "CveID": "CVE-2020-14322"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25628",
+              "Impact": "Low",
+              "Public": "20201208",
+              "CveID": "CVE-2020-25628"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25629",
+              "Impact": "High",
+              "Public": "20201208",
+              "CveID": "CVE-2020-25629"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25630",
+              "Impact": "High",
+              "Public": "20201208",
+              "CveID": "CVE-2020-25630"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25631",
+              "Impact": "Low",
+              "Public": "20201208",
+              "CveID": "CVE-2020-25631"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25698",
+              "Impact": "High",
+              "Public": "20201119",
+              "CveID": "CVE-2020-25698"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25699",
+              "Impact": "High",
+              "Public": "20201119",
+              "CveID": "CVE-2020-25699"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25700",
+              "Impact": "Low",
+              "Public": "20201119",
+              "CveID": "CVE-2020-25700"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25701",
+              "Impact": "Low",
+              "Public": "20201119",
+              "CveID": "CVE-2020-25701"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25703",
+              "Impact": "Low",
+              "Public": "20201119",
+              "CveID": "CVE-2020-25703"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-45152",
+              "Impact": "Critical",
+              "Public": "20221125",
+              "CveID": "CVE-2022-45152"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-35132",
+              "Impact": "Low",
+              "Public": "20230622",
+              "CveID": "CVE-2023-35132"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-35133",
+              "Impact": "High",
+              "Public": "20230622",
+              "CveID": "CVE-2023-35133"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203289001",
+                "Comment": "moodle is earlier than 0:3.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203289002",
+                "Comment": "moodle-apache2 is earlier than 0:3.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203289003",
+                "Comment": "moodle-base is earlier than 0:3.10.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203289004",
+                "Comment": "moodle-local-mysql is earlier than 0:3.10.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

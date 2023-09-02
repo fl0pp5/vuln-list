@@ -1,0 +1,265 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192771",
+      "Version": "oval:org.altlinux.errata:def:20192771",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2771: package `openssl1.1` update to version 1.1.1d-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2771",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2771",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01289",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01289",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03123",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03123",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04082",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04082",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04083",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04083",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04084",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04084",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-1543",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1543",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1547",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1547",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1549",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1549",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1552",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1552",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1563",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1563",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1d-alt1.1. \nSecurity Fix(es):\n\n * BDU:2019-01289: Уязвимость библиотеки OpenSSL, связанная с ошибками криптографических преобразований, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2019-03123: Уязвимость библиотеки OpenSSL, связанная с ошибками процедуры подтверждения подлинности сертификата, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2019-04082: Уязвимость функций CMS_decrypt и PKCS7_decrypt ( cms_env.c, cms_smime.c и pk7_doit.c) библиотеки OpenSSL,связанная с недостатками механизма шифрования секретных данных, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2019-04083: Уязвимость функции fork() библиотеки OpenSSL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2019-04084: Уязвимость функций ec_err.c и ec_lib.c библиотеки OpenSSL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2019-1543: ChaCha20-Poly1305 is an AEAD cipher, and requires a unique nonce input for every encryption operation. RFC 7539 specifies that the nonce value (IV) should be 96 bits (12 bytes). OpenSSL allows a variable nonce length and front pads the nonce with 0 bytes if it is less than 12 bytes. However it also incorrectly allows a nonce to be set of up to 16 bytes. In this case only the last 12 bytes are significant and any additional leading bytes are ignored. It is a requirement of using this cipher that nonce values are unique. Messages encrypted using a reused nonce value are susceptible to serious confidentiality and integrity attacks. If an application changes the default nonce length to be longer than 12 bytes and then makes a change to the leading bytes of the nonce expecting the new value to be a new unique nonce then such an application could inadvertently encrypt messages with a reused nonce. Additionally the ignored bytes in a long nonce are not covered by the integrity guarantee of this cipher. Any application that relies on the integrity of these ignored leading bytes of a long nonce may be further affected. Any OpenSSL internal use of this cipher, including in SSL/TLS, is safe because no such use sets such a long nonce value. However user applications that use this cipher directly and set a non-default nonce length to be longer than 12 bytes may be vulnerable. OpenSSL versions 1.1.1 and 1.1.0 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1c (Affected 1.1.1-1.1.1b). Fixed in OpenSSL 1.1.0k (Affected 1.1.0-1.1.0j).\n\n * CVE-2019-1547: Normally in OpenSSL EC groups always have a co-factor present and this is used in side channel resistant code paths. However, in some cases, it is possible to construct a group using explicit parameters (instead of using a named curve). In those cases it is possible that such a group does not have the cofactor present. This can occur even where all the parameters match a known named curve. If such a curve is used then OpenSSL falls back to non-side channel resistant code paths which may result in full key recovery during an ECDSA signature operation. In order to be vulnerable an attacker would have to have the ability to time the creation of a large number of signatures where explicit parameters with no co-factor present are in use by an application using libcrypto. For the avoidance of doubt libssl is not vulnerable because explicit parameters are never used. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s).\n\n * CVE-2019-1549: OpenSSL 1.1.1 introduced a rewritten random number generator (RNG). This was intended to include protection in the event of a fork() system call in order to ensure that the parent and child processes did not share the same RNG state. However this protection was not being used in the default case. A partial mitigation for this issue is that the output from a high precision timer is mixed into the RNG state so the likelihood of a parent and child process sharing state is significantly reduced. If an application already calls OPENSSL_init_crypto() explicitly using OPENSSL_INIT_ATFORK then this problem does not occur at all. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c).\n\n * CVE-2019-1552: OpenSSL has internal defaults for a directory tree where it can find a configuration file as well as certificates used for verification in TLS. This directory is most commonly referred to as OPENSSLDIR, and is configurable with the --prefix / --openssldir configuration options. For OpenSSL versions 1.1.0 and 1.1.1, the mingw configuration targets assume that resulting programs and libraries are installed in a Unix-like environment and the default prefix for program installation as well as for OPENSSLDIR should be '/usr/local'. However, mingw programs are Windows programs, and as such, find themselves looking at sub-directories of 'C:/usr/local', which may be world writable, which enables untrusted users to modify OpenSSL's default configuration, insert CA certificates, modify (or even replace) existing engine modules, etc. For OpenSSL 1.0.2, '/usr/local/ssl' is used as default for OPENSSLDIR on all Unix and Windows targets, including Visual C builds. However, some build instructions for the diverse Windows targets on 1.0.2 encourage you to specify your own --prefix. OpenSSL versions 1.1.1, 1.1.0 and 1.0.2 are affected by this issue. Due to the limited scope of affected deployments this has been assessed as low severity and therefore we are not creating new releases at this time. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s).\n\n * CVE-2019-1563: In situations where an attacker receives automated notification of the success or failure of a decryption attempt an attacker, after sending a very large number of messages to be decrypted, can recover a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted message that was encrypted with the public RSA key, using a Bleichenbacher padding oracle attack. Applications are not affected if they use a certificate together with the private RSA key to the CMS_decrypt or PKCS7_decrypt functions to select the correct recipient info to decrypt. Fixed in OpenSSL 1.1.1d (Affected 1.1.1-1.1.1c). Fixed in OpenSSL 1.1.0l (Affected 1.1.0-1.1.0k). Fixed in OpenSSL 1.0.2t (Affected 1.0.2-1.0.2s).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-23"
+          },
+          "Updated": {
+            "Date": "2019-09-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-310",
+              "Href": "https://bdu.fstec.ru/vul/2019-01289",
+              "Impact": "Low",
+              "Public": "20190306",
+              "CveID": "BDU:2019-01289"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2019-03123",
+              "Impact": "Low",
+              "Public": "20190730",
+              "CveID": "BDU:2019-03123"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-311",
+              "Href": "https://bdu.fstec.ru/vul/2019-04082",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "BDU:2019-04082"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-330",
+              "Href": "https://bdu.fstec.ru/vul/2019-04083",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "BDU:2019-04083"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-311",
+              "Href": "https://bdu.fstec.ru/vul/2019-04084",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "BDU:2019-04084"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1543",
+              "Impact": "High",
+              "Public": "20190306",
+              "CveID": "CVE-2019-1543"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1547",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "CVE-2019-1547"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-330",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1549",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "CVE-2019-1549"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1552",
+              "Impact": "Low",
+              "Public": "20190730",
+              "CveID": "CVE-2019-1552"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1563",
+              "Impact": "Low",
+              "Public": "20190910",
+              "CveID": "CVE-2019-1563"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771005",
+                "Comment": "openssl is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1d-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192771008",
+                "Comment": "tsget is earlier than 0:1.1.1d-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

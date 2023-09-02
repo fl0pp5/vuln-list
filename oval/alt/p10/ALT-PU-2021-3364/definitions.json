@@ -1,0 +1,283 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213364",
+      "Version": "oval:org.altlinux.errata:def:20213364",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3364: package `libvirt` update to version 7.7.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3364",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3364",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05841",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05841",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3631",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3631",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3667",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3667",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libvirt to version 7.7.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05841: Уязвимость компонента API virStoragePoolLookupByTargetPath библиотеки управления виртуализацией Libvirt, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3631: A flaw was found in libvirt while it generates SELinux MCS category pairs for VMs' dynamic labels. This flaw allows one exploited guest to access files labeled for another guest, resulting in the breaking out of sVirt confinement. The highest threat from this vulnerability is to confidentiality and integrity.\n\n * CVE-2021-3667: An improper locking issue was found in the virStoragePoolLookupByTargetPath API of libvirt. It occurs in the storagePoolLookupByTargetPath function where a locked virStoragePoolObj object is not properly released on ACL permission failure. Clients connecting to the read-write socket with limited ACL permissions could use this flaw to acquire the lock and prevent other users from accessing storage pool/volume APIs, resulting in a denial of service condition. The highest threat from this vulnerability is to system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-25"
+          },
+          "Updated": {
+            "Date": "2021-11-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://bdu.fstec.ru/vul/2022-05841",
+              "Impact": "Low",
+              "Public": "20210728",
+              "CveID": "BDU:2022-05841"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3631",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3631"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3667",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3667"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364001",
+                "Comment": "libvirt is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364002",
+                "Comment": "libvirt-admin is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364003",
+                "Comment": "libvirt-client is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364004",
+                "Comment": "libvirt-daemon is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364005",
+                "Comment": "libvirt-daemon-config-network is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364006",
+                "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364007",
+                "Comment": "libvirt-daemon-driver-interface is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364008",
+                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364009",
+                "Comment": "libvirt-daemon-driver-network is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364010",
+                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364011",
+                "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364012",
+                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364013",
+                "Comment": "libvirt-daemon-driver-secret is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364014",
+                "Comment": "libvirt-daemon-driver-storage is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364015",
+                "Comment": "libvirt-daemon-driver-storage-core is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364016",
+                "Comment": "libvirt-daemon-driver-storage-disk is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364017",
+                "Comment": "libvirt-daemon-driver-storage-fs is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364018",
+                "Comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364019",
+                "Comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364020",
+                "Comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364021",
+                "Comment": "libvirt-daemon-driver-storage-logical is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364022",
+                "Comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364023",
+                "Comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364024",
+                "Comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364025",
+                "Comment": "libvirt-daemon-driver-storage-zfs is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364026",
+                "Comment": "libvirt-daemon-driver-vbox is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364027",
+                "Comment": "libvirt-devel is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364028",
+                "Comment": "libvirt-docs is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364029",
+                "Comment": "libvirt-kvm is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364030",
+                "Comment": "libvirt-libs is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364031",
+                "Comment": "libvirt-lock-sanlock is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364032",
+                "Comment": "libvirt-login-shell is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364033",
+                "Comment": "libvirt-lxc is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364034",
+                "Comment": "libvirt-qemu is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364035",
+                "Comment": "libvirt-qemu-common is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364036",
+                "Comment": "libvirt-vbox is earlier than 0:7.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213364037",
+                "Comment": "nss-libvirt is earlier than 0:7.7.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

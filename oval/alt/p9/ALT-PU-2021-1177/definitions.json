@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211177",
+      "Version": "oval:org.altlinux.errata:def:20211177",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1177: package `openvswitch` update to version 2.14.1-alt0.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1177",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1177",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01805",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01805",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01890",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01890",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2015-8011",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-8011",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27827",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27827",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openvswitch to version 2.14.1-alt0.p9. \nSecurity Fix(es):\n\n * BDU:2021-01805: Уязвимость реализации протокола LLDP под Unix Lldpd, программного многоуровневого коммутатора Open vSwitch, связанная с ошибкой механизма контроля расходуемых ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01890: Уязвимость функции lldp_decode компонента daemon/protocols/lldp.c реализации протокола LLDP под Unix Lldpd, связанная с переполнением буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2015-8011: Buffer overflow in the lldp_decode function in daemon/protocols/lldp.c in lldpd before 0.8.0 allows remote attackers to cause a denial of service (daemon crash) and possibly execute arbitrary code via vectors involving large management addresses and TLV boundaries.\n\n * CVE-2020-27827: A flaw was found in multiple versions of OpenvSwitch. Specially crafted LLDP packets can cause memory to be lost when allocating data to handle specific optional TLVs, potentially causing a denial of service. The highest threat from this vulnerability is to system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-28"
+          },
+          "Updated": {
+            "Date": "2021-01-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-01805",
+              "Impact": "High",
+              "Public": "20200922",
+              "CveID": "BDU:2021-01805"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-01890",
+              "Impact": "Critical",
+              "Public": "20151001",
+              "CveID": "BDU:2021-01890"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-8011",
+              "Impact": "Critical",
+              "Public": "20200128",
+              "CveID": "CVE-2015-8011"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27827",
+              "Impact": "High",
+              "Public": "20210318",
+              "CveID": "CVE-2020-27827"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177001",
+                "Comment": "libopenvswitch is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177002",
+                "Comment": "libopenvswitch-devel is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177003",
+                "Comment": "openvswitch is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177004",
+                "Comment": "openvswitch-debugtools is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177005",
+                "Comment": "openvswitch-ipsec is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177006",
+                "Comment": "openvswitch-vtep is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177007",
+                "Comment": "python-module-openvswitch is earlier than 0:2.14.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211177008",
+                "Comment": "python3-module-openvswitch is earlier than 0:2.14.1-alt0.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

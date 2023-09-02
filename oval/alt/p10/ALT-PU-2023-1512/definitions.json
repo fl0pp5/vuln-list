@@ -1,0 +1,134 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231512",
+      "Version": "oval:org.altlinux.errata:def:20231512",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1512: package `flatpak` update to version 1.14.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1512",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1512",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-28100",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28100",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28101",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28101",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades flatpak to version 1.14.4-alt1. \nSecurity Fix(es):\n\n * CVE-2023-28100: Flatpak is a system for building, distributing, and running sandboxed desktop applications on Linux. Versions prior to 1.10.8, 1.12.8, 1.14.4, and 1.15.4 contain a vulnerability similar to CVE-2017-5226, but using the `TIOCLINUX` ioctl command instead of `TIOCSTI`. If a Flatpak app is run on a Linux virtual console such as `/dev/tty1`, it can copy text from the virtual console and paste it into the command buffer, from which the command might be run after the Flatpak app has exited. Ordinary graphical terminal emulators like xterm, gnome-terminal and Konsole are unaffected. This vulnerability is specific to the Linux virtual consoles `/dev/tty1`, `/dev/tty2` and so on. A patch is available in versions 1.10.8, 1.12.8, 1.14.4, and 1.15.4. As a workaround, don't run Flatpak on a Linux virtual console. Flatpak is primarily designed to be used in a Wayland or X11 graphical environment.\n\n * CVE-2023-28101: Flatpak is a system for building, distributing, and running sandboxed desktop applications on Linux. In versions prior to 1.10.8, 1.12.8, 1.14.4, and 1.15.4, if an attacker publishes a Flatpak app with elevated permissions, they can hide those permissions from users of the `flatpak(1)` command-line interface by setting other permissions to crafted values that contain non-printable control characters such as `ESC`. A fix is available in versions 1.10.8, 1.12.8, 1.14.4, and 1.15.4. As a workaround, use a GUI like GNOME Software rather than the command-line interface, or only install apps whose maintainers you trust.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-27"
+          },
+          "Updated": {
+            "Date": "2023-03-27"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28100",
+              "Impact": "Low",
+              "Public": "20230316",
+              "CveID": "CVE-2023-28100"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28101",
+              "Impact": "Low",
+              "Public": "20230316",
+              "CveID": "CVE-2023-28101"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231512001",
+                "Comment": "flatpak is earlier than 0:1.14.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231512002",
+                "Comment": "libflatpak is earlier than 0:1.14.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231512003",
+                "Comment": "libflatpak-devel is earlier than 0:1.14.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231512004",
+                "Comment": "libflatpak-devel-doc is earlier than 0:1.14.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

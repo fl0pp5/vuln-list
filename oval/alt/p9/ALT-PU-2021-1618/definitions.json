@@ -1,0 +1,204 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211618",
+      "Version": "oval:org.altlinux.errata:def:20211618",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1618: package `kernel-image-rpi-un` update to version 5.10.27-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1618",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1618",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01688",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01688",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01827",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01827",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04833",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04833",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-28375",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28375",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-28660",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28660",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-29266",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29266",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-un to version 5.10.27-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01688: Уязвимость функции rtw_wx_set_scan()  (drivers/staging/rtl8188eu/os_dep/ioctl_linux.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01827: Уязвимость реализации функции vhost_vdpa_config_put() ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04833: Уязвимость функции fastrpc_internal_invoke (drivers/misc/fastrpc.c) ядра операционной системы Linux, позволяющая нарушителю выполнить произвольную команду управления\n\n * CVE-2021-28375: An issue was discovered in the Linux kernel through 5.11.6. fastrpc_internal_invoke in drivers/misc/fastrpc.c does not prevent user applications from sending kernel RPC messages, aka CID-20c40794eb85. This is a related issue to CVE-2019-2308.\n\n * CVE-2021-28660: rtw_wx_set_scan in drivers/staging/rtl8188eu/os_dep/ioctl_linux.c in the Linux kernel through 5.11.6 allows writing beyond the end of the -\u003essid[] array. NOTE: from the perspective of kernel.org releases, CVE IDs are not normally used for drivers/staging/* (unfinished work); however, system integrators may have situations in which a drivers/staging issue is relevant to their own customer base.\n\n * CVE-2021-29266: An issue was discovered in the Linux kernel before 5.11.9. drivers/vhost/vdpa.c has a use-after-free because v-\u003econfig_ctx has an invalid value upon re-opening a character device, aka CID-f6bbf0010ba0.\n\n * #39767: Собрать с поддержкой PPS",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-08"
+          },
+          "Updated": {
+            "Date": "2021-04-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01688",
+              "Impact": "High",
+              "Public": "20210305",
+              "CveID": "BDU:2021-01688"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01827",
+              "Impact": "High",
+              "Public": "20210311",
+              "CveID": "BDU:2021-01827"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2021-04833",
+              "Impact": "High",
+              "Public": "20210315",
+              "CveID": "BDU:2021-04833"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28375",
+              "Impact": "High",
+              "Public": "20210315",
+              "CveID": "CVE-2021-28375"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28660",
+              "Impact": "High",
+              "Public": "20210317",
+              "CveID": "CVE-2021-28660"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29266",
+              "Impact": "High",
+              "Public": "20210326",
+              "CveID": "CVE-2021-29266"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39767",
+              "Href": "https://bugzilla.altlinux.org/39767",
+              "Data": "Собрать с поддержкой PPS"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211618001",
+                "Comment": "kernel-headers-modules-rpi-un is earlier than 1:5.10.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211618002",
+                "Comment": "kernel-headers-rpi-un is earlier than 1:5.10.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211618003",
+                "Comment": "kernel-image-rpi-un is earlier than 1:5.10.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211618004",
+                "Comment": "kernel-modules-staging-rpi-un is earlier than 1:5.10.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211618005",
+                "Comment": "kernel-modules-v4l-rpi-un is earlier than 1:5.10.27-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

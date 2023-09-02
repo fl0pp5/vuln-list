@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212808",
+      "Version": "oval:org.altlinux.errata:def:20212808",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2808: package `ghostscript` update to version 9.54.0-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2808",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2808",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-3781",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3781",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ghostscript to version 9.54.0-alt3. \nSecurity Fix(es):\n\n * CVE-2021-3781: A trivial sandbox (enabled with the `-dSAFER` option) escape flaw was found in the ghostscript interpreter by injecting a specially crafted pipe command. This flaw allows a specially crafted document to execute arbitrary commands on the system in the context of the ghostscript interpreter. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * #40817: Файл из PFB в PFА не конвертируется",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-16"
+          },
+          "Updated": {
+            "Date": "2021-09-16"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3781",
+              "Impact": "Critical",
+              "Public": "20220216",
+              "CveID": "CVE-2021-3781"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40817",
+              "Href": "https://bugzilla.altlinux.org/40817",
+              "Data": "Файл из PFB в PFА не конвертируется"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808001",
+                "Comment": "ghostscript is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808002",
+                "Comment": "ghostscript-classic is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808003",
+                "Comment": "ghostscript-common is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808004",
+                "Comment": "ghostscript-gtk is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808005",
+                "Comment": "ghostscript-module-X is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808006",
+                "Comment": "ghostscript-utils is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808007",
+                "Comment": "libgs is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808008",
+                "Comment": "libgs-devel is earlier than 0:9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808009",
+                "Comment": "libijs is earlier than 0:0.35_9.54.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212808010",
+                "Comment": "libijs-devel is earlier than 0:9.54.0-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

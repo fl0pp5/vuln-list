@@ -1,0 +1,98 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212331",
+      "Version": "oval:org.altlinux.errata:def:20212331",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2331: package `zstd` update to version 1.5.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2331",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2331",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-24032",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-24032",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zstd to version 1.5.0-alt2. \nSecurity Fix(es):\n\n * CVE-2021-24032: Beginning in v1.4.1 and prior to v1.4.9, due to an incomplete fix for CVE-2021-24031, the Zstandard command-line utility created output files with default permissions and restricted those permissions immediately afterwards. Output files could therefore momentarily be readable or writable to unintended parties.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-26"
+          },
+          "Updated": {
+            "Date": "2021-07-26"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-24032",
+              "Impact": "Low",
+              "Public": "20210304",
+              "CveID": "CVE-2021-24032"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212331001",
+                "Comment": "libzstd is earlier than 0:1.5.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212331002",
+                "Comment": "libzstd-devel is earlier than 0:1.5.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212331003",
+                "Comment": "pzstd is earlier than 0:1.5.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212331004",
+                "Comment": "zstd is earlier than 0:1.5.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

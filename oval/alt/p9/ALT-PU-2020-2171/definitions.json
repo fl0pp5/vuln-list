@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202171",
+      "Version": "oval:org.altlinux.errata:def:20202171",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2171: package `custodia` update to version 0.6.0-alt6",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2171",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2171",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades custodia to version 0.6.0-alt6. \nSecurity Fix(es):\n\n * #36781: conflict with old python-module-custodia due to files",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-11"
+          },
+          "Updated": {
+            "Date": "2020-06-11"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36781",
+              "Href": "https://bugzilla.altlinux.org/36781",
+              "Data": "conflict with old python-module-custodia due to files"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202171001",
+                "Comment": "custodia is earlier than 0:0.6.0-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202171002",
+                "Comment": "python3-module-custodia is earlier than 0:0.6.0-alt6"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

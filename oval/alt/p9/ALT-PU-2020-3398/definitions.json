@@ -1,0 +1,198 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203398",
+      "Version": "oval:org.altlinux.errata:def:20203398",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3398: package `zabbix` update to version 5.0.5-alt2.1.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3398",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3398",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-15803",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15803",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 5.0.5-alt2.1.p9. \nSecurity Fix(es):\n\n * CVE-2020-15803: Zabbix before 3.0.32rc1, 4.x before 4.0.22rc1, 4.1.x through 4.4.x before 4.4.10rc1, and 5.x before 5.0.2rc1 allows stored XSS in the URL Widget.\n\n * #39282: Права доступа к каталогу и миграция параметров с zabbix4\n\n * #39311: Нет double.sql необходимого для обновления баз с 4-й версии до 5-й",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-23"
+          },
+          "Updated": {
+            "Date": "2020-11-23"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15803",
+              "Impact": "Low",
+              "Public": "20200717",
+              "CveID": "CVE-2020-15803"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39282",
+              "Href": "https://bugzilla.altlinux.org/39282",
+              "Data": "Права доступа к каталогу и миграция параметров с zabbix4"
+            },
+            {
+              "Id": "39311",
+              "Href": "https://bugzilla.altlinux.org/39311",
+              "Data": "Нет double.sql необходимого для обновления баз с 4-й версии до 5-й"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398001",
+                "Comment": "zabbix-agent is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398003",
+                "Comment": "zabbix-common is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398004",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398005",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398006",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398007",
+                "Comment": "zabbix-contrib is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398008",
+                "Comment": "zabbix-doc is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398009",
+                "Comment": "zabbix-java-gateway is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398010",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398011",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398012",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398013",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398014",
+                "Comment": "zabbix-proxy is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398015",
+                "Comment": "zabbix-proxy-common is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398016",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398017",
+                "Comment": "zabbix-server-common is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398018",
+                "Comment": "zabbix-server-mysql is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398019",
+                "Comment": "zabbix-server-pgsql is earlier than 1:5.0.5-alt2.1.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203398020",
+                "Comment": "zabbix-source is earlier than 1:5.0.5-alt2.1.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

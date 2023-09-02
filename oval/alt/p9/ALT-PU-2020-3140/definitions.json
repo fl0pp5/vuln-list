@@ -1,0 +1,343 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203140",
+      "Version": "oval:org.altlinux.errata:def:20203140",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3140: package `squid` update to version 4.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3140",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3140",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03226",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03226",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04037",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04037",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04147",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04147",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04148",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04148",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01722",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01722",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01723",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01723",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01724",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01724",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01747",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01747",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12519",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12519",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12521",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12521",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-11945",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11945",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14058",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14058",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14059",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14059",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15049",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15049",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15810",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15810",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15811",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15811",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24606",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24606",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades squid to version 4.13-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03226: Уязвимость функции Ipc::Mem::PageStack::pop прокси-сервера Squid, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-04037: Уязвимость компонента http/ContentLengthInterpreter.cc прокси-сервера Squid, позволяющая нарушителю отравлять содержимое кэша\n\n * BDU:2020-04147: Уязвимость прокси-сервера Squid, связанная с непоследовательной интерпретацией http-запросов, позволяющая нарушителю осуществлять межсайтовые сценарные атаки (XSS)\n\n * BDU:2020-04148: Уязвимость прокси-сервера Squid, связанная с непринятием мер по обработке последовательностей CRLF в HTTP-заголовках, позволяющая нарушителю внедрить произвольные HTTP-заголовки\n\n * BDU:2021-01722: Уязвимость функции peerDigestHandleReply() прокси-сервера Squid, связанная с недостатком механизма проверки вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01723: Уязвимость механизма хранения nonce дайджест-аутентификации прокси-сервера Squid, связанная с целочисленным переполнением значения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01724: Уязвимость механизма обработки элементов ESI прокси-сервера Squid, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01747: Уязвимость функции ESIExpression:: Evaluate прокси-сервера Squid, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-12519: An issue was discovered in Squid through 4.7. When handling the tag esi:when when ESI is enabled, Squid calls ESIExpression::Evaluate. This function uses a fixed stack buffer to hold the expression while it's being evaluated. When processing the expression, it could either evaluate the top of the stack, or add a new member to the stack. When adding a new member, there is no check to ensure that the stack won't overflow.\n\n * CVE-2019-12521: An issue was discovered in Squid through 4.7. When Squid is parsing ESI, it keeps the ESI elements in ESIContext. ESIContext contains a buffer for holding a stack of ESIElements. When a new ESIElement is parsed, it is added via addStackElement. addStackElement has a check for the number of elements in this buffer, but it's off by 1, leading to a Heap Overflow of 1 element. The overflow is within the same structure so it can't affect adjacent memory blocks, and thus just leads to a crash while processing.\n\n * CVE-2020-11945: An issue was discovered in Squid before 5.0.2. A remote attacker can replay a sniffed Digest Authentication nonce to gain access to resources that are otherwise forbidden. This occurs because the attacker can overflow the nonce reference counter (a short integer). Remote code execution may occur if the pooled token credentials are freed (instead of replayed as valid credentials).\n\n * CVE-2020-14058: An issue was discovered in Squid before 4.12 and 5.x before 5.0.3. Due to use of a potentially dangerous function, Squid and the default certificate validation helper are vulnerable to a Denial of Service when opening a TLS connection to an attacker-controlled server for HTTPS. This occurs because unrecognized error values are mapped to NULL, but later code expects that each error value is mapped to a valid error string.\n\n * CVE-2020-14059: An issue was discovered in Squid 5.x before 5.0.3. Due to an Incorrect Synchronization, a Denial of Service can occur when processing objects in an SMP cache because of an Ipc::Mem::PageStack::pop ABA problem during access to the memory page/slot management list.\n\n * CVE-2020-15049: An issue was discovered in http/ContentLengthInterpreter.cc in Squid before 4.12 and 5.x before 5.0.3. A Request Smuggling and Poisoning attack can succeed against the HTTP cache. The client sends an HTTP request with a Content-Length header containing \"+\\ \"-\" or an uncommon shell whitespace character prefix to the length field-value.\n\n * CVE-2020-15810: An issue was discovered in Squid before 4.13 and 5.x before 5.0.4. Due to incorrect data validation, HTTP Request Smuggling attacks may succeed against HTTP and HTTPS traffic. This leads to cache poisoning. This allows any client, including browser scripts, to bypass local security and poison the proxy cache and any downstream caches with content from an arbitrary source. When configured for relaxed header parsing (the default), Squid relays headers containing whitespace characters to upstream servers. When this occurs as a prefix to a Content-Length header, the frame length specified will be ignored by Squid (allowing for a conflicting length to be used from another Content-Length header) but relayed upstream.\n\n * CVE-2020-15811: An issue was discovered in Squid before 4.13 and 5.x before 5.0.4. Due to incorrect data validation, HTTP Request Splitting attacks may succeed against HTTP and HTTPS traffic. This leads to cache poisoning. This allows any client, including browser scripts, to bypass local security and poison the browser cache and any downstream caches with content from an arbitrary source. Squid uses a string search instead of parsing the Transfer-Encoding header to find chunked encoding. This allows an attacker to hide a second request inside Transfer-Encoding: it is interpreted by Squid as chunked and split out into a second request delivered upstream. Squid will then deliver two distinct responses to the client, corrupting any downstream caches.\n\n * CVE-2020-24606: Squid before 4.13 and 5.x before 5.0.4 allows a trusted peer to perform Denial of Service by consuming all available CPU cycles during handling of a crafted Cache Digest response message. This only occurs when cache_peer is used with the cache digests feature. The problem exists because peerDigestHandleReply() livelocking in peer_digest.cc mishandles EOF.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-27"
+          },
+          "Updated": {
+            "Date": "2020-10-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-662",
+              "Href": "https://bdu.fstec.ru/vul/2020-03226",
+              "Impact": "Low",
+              "Public": "20200630",
+              "CveID": "BDU:2020-03226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2020-04037",
+              "Impact": "High",
+              "Public": "20200630",
+              "CveID": "BDU:2020-04037"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2020-04147",
+              "Impact": "Low",
+              "Public": "20200824",
+              "CveID": "BDU:2020-04147"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-113, CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2020-04148",
+              "Impact": "Low",
+              "Public": "20200824",
+              "CveID": "BDU:2020-04148"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01722",
+              "Impact": "High",
+              "Public": "20200824",
+              "CveID": "BDU:2021-01722"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-01723",
+              "Impact": "Critical",
+              "Public": "20200423",
+              "CveID": "BDU:2021-01723"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01724",
+              "Impact": "Low",
+              "Public": "20200415",
+              "CveID": "BDU:2021-01724"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01747",
+              "Impact": "Critical",
+              "Public": "20200415",
+              "CveID": "BDU:2021-01747"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12519",
+              "Impact": "Critical",
+              "Public": "20200415",
+              "CveID": "CVE-2019-12519"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12521",
+              "Impact": "Low",
+              "Public": "20200415",
+              "CveID": "CVE-2019-12521"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11945",
+              "Impact": "Critical",
+              "Public": "20200423",
+              "CveID": "CVE-2020-11945"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14058",
+              "Impact": "High",
+              "Public": "20200630",
+              "CveID": "CVE-2020-14058"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-662",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14059",
+              "Impact": "Low",
+              "Public": "20200630",
+              "CveID": "CVE-2020-14059"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15049",
+              "Impact": "High",
+              "Public": "20200630",
+              "CveID": "CVE-2020-15049"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15810",
+              "Impact": "Low",
+              "Public": "20200902",
+              "CveID": "CVE-2020-15810"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15811",
+              "Impact": "Low",
+              "Public": "20200902",
+              "CveID": "CVE-2020-15811"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24606",
+              "Impact": "High",
+              "Public": "20200824",
+              "CveID": "CVE-2020-24606"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203140001",
+                "Comment": "squid is earlier than 0:4.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203140002",
+                "Comment": "squid-doc is earlier than 0:4.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203140003",
+                "Comment": "squid-helpers is earlier than 0:4.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

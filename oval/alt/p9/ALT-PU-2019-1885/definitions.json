@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20191885",
+      "Version": "oval:org.altlinux.errata:def:20191885",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-1885: package `curl` update to version 7.65.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-1885",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-1885",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02099",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02099",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02100",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02100",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03793",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03793",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03794",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03794",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-5435",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5435",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5436",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5436",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.65.0-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02099: Уязвимость tftp_receive_packet библиотеки libcurl, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2019-02100: Уязвимость в функии curl_url_set() библиотеки libcurl, связанная с целочисленным переполнением, позволяющая нарушителю оказать воздействие на доступность защищаемой информации\n\n * BDU:2019-03793: Уязвимость функции tftp_receive_packet() библиотеки libcurl, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2019-03794: Уязвимость функции curl_url_set() библиотеки libcurl, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-5435: An integer overflow in curl's URL API results in a buffer overflow in libcurl 7.62.0 to and including 7.64.1.\n\n * CVE-2019-5436: A heap buffer overflow in the TFTP receiving code allows for DoS or arbitrary code execution in libcurl versions 7.19.4 through 7.64.1.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-05-22"
+          },
+          "Updated": {
+            "Date": "2019-05-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-02099",
+              "Impact": "Low",
+              "Public": "20190522",
+              "CveID": "BDU:2019-02099"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2019-02100",
+              "Impact": "Low",
+              "Public": "20190522",
+              "CveID": "BDU:2019-02100"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03793",
+              "Impact": "High",
+              "Public": "20190528",
+              "CveID": "BDU:2019-03793"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2019-03794",
+              "Impact": "Low",
+              "Public": "20190528",
+              "CveID": "BDU:2019-03794"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5435",
+              "Impact": "Low",
+              "Public": "20190528",
+              "CveID": "CVE-2019-5435"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5436",
+              "Impact": "High",
+              "Public": "20190528",
+              "CveID": "CVE-2019-5436"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191885001",
+                "Comment": "curl is earlier than 0:7.65.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191885002",
+                "Comment": "libcurl is earlier than 0:7.65.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191885003",
+                "Comment": "libcurl-devel is earlier than 0:7.65.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191885004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.65.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

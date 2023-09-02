@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201963",
+      "Version": "oval:org.altlinux.errata:def:20201963",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1963: package `oddjob` update to version 0.34.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1963",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1963",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-10737",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10737",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades oddjob to version 0.34.6-alt1. \nSecurity Fix(es):\n\n * CVE-2020-10737: A race condition was found in the mkhomedir tool shipped with the oddjob package in versions before 0.34.5 and 0.34.6 wherein, during the home creation, mkhomedir copies the /etc/skel directory into the newly created home and changes its ownership to the home's user without properly checking the homedir path. This flaw allows an attacker to leverage this issue by creating a symlink point to a target folder, which then has its ownership transferred to the new home directory's unprivileged user.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-14"
+          },
+          "Updated": {
+            "Date": "2020-05-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10737",
+              "Impact": "Low",
+              "Public": "20200527",
+              "CveID": "CVE-2020-10737"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201963001",
+                "Comment": "oddjob is earlier than 0:0.34.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201963002",
+                "Comment": "oddjob-mkhomedir is earlier than 0:0.34.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201963003",
+                "Comment": "oddjob-sample is earlier than 0:0.34.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

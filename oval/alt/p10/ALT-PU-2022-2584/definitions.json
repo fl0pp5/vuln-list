@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222584",
+      "Version": "oval:org.altlinux.errata:def:20222584",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2584: package `loki` update to version 2.6.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2584",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2584",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-36156",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36156",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades loki to version 2.6.1-alt2. \nSecurity Fix(es):\n\n * CVE-2021-36156: An issue was discovered in Grafana Loki through 2.2.1. The header value X-Scope-OrgID is used to construct file paths for rules files, and if crafted to conduct directory traversal such as ae ../../sensitive/path/in/deployment pathname, then Loki will attempt to parse a rules file at that location and include some of the contents in the error message.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-08"
+          },
+          "Updated": {
+            "Date": "2022-09-08"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36156",
+              "Impact": "Low",
+              "Public": "20210803",
+              "CveID": "CVE-2021-36156"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222584001",
+                "Comment": "loki is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222584002",
+                "Comment": "loki-docker-driver is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222584003",
+                "Comment": "promtail is earlier than 0:2.6.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221748",
+      "Version": "oval:org.altlinux.errata:def:20221748",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1748: package `open-iscsi` update to version 2.1.4-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1748",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1748",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades open-iscsi to version 2.1.4-alt3. \nSecurity Fix(es):\n\n * #40195: Не запускается сервис iscsid",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-22"
+          },
+          "Updated": {
+            "Date": "2022-04-22"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40195",
+              "Href": "https://bugzilla.altlinux.org/40195",
+              "Data": "Не запускается сервис iscsid"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221748001",
+                "Comment": "libopeniscsiusr is earlier than 0:2.1.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221748002",
+                "Comment": "libopeniscsiusr-devel is earlier than 0:2.1.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221748003",
+                "Comment": "open-iscsi is earlier than 0:2.1.4-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221748004",
+                "Comment": "open-iscsi-iscsiuio is earlier than 0:2.1.4-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

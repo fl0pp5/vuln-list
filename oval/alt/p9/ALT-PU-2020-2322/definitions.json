@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202322",
+      "Version": "oval:org.altlinux.errata:def:20202322",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2322: package `json-c` update to version 0.13.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2322",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2322",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03538",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03538",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12762",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12762",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades json-c to version 0.13.1-alt2. \nSecurity Fix(es):\n\n * BDU:2021-03538: Уязвимость множества компонентов библиотеки для обработки JSON файлов на языке С JSON-C, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-12762: json-c through 0.14 has an integer overflow and out-of-bounds write via a large JSON file, as demonstrated by printbuf_memappend.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-08"
+          },
+          "Updated": {
+            "Date": "2020-07-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03538",
+              "Impact": "High",
+              "Public": "20200511",
+              "CveID": "BDU:2021-03538"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12762",
+              "Impact": "High",
+              "Public": "20200509",
+              "CveID": "CVE-2020-12762"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202322001",
+                "Comment": "libjson-c-devel is earlier than 0:0.13.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202322002",
+                "Comment": "libjson-c4 is earlier than 0:0.13.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

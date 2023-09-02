@@ -1,0 +1,231 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223385",
+      "Version": "oval:org.altlinux.errata:def:20223385",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3385: package `perl-DBI` update to version 1.643-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3385",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3385",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03716",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03716",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03727",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03727",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03728",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03728",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05974",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05974",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2014-10401",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-10401",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2014-10402",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-10402",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20919",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20919",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14392",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14392",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14393",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14393",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades perl-DBI to version 1.643-alt3. \nSecurity Fix(es):\n\n * BDU:2021-03716: Уязвимость модуля DBI языка программирования Perl, связанная с непроверенным возвращаемым значением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03727: Уязвимость функции dbd_db_login6_sv() интерпретатора языка программирования Perl, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03728: Уязвимость компонента DBI интерпретатора языка программирования Perl, связанная с записью за границами буфера, позволяющая нарушителю нарушить целостность данных, а также вызвать отказ в обслуживании\n\n * BDU:2022-05974: Уязвимость модуля DBI интерфейса базы данных Perl DBI, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2014-10401: An issue was discovered in the DBI module before 1.632 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute.\n\n * CVE-2014-10402: An issue was discovered in the DBI module through 1.643 for Perl. DBD::File drivers can open files from folders other than those specifically passed via the f_dir attribute in the data source name (DSN). NOTE: this issue exists because of an incomplete fix for CVE-2014-10401.\n\n * CVE-2019-20919: An issue was discovered in the DBI module before 1.643 for Perl. The hv_fetch() documentation requires checking for NULL and the code does that. But, shortly thereafter, it calls SvOK(profile), causing a NULL pointer dereference.\n\n * CVE-2020-14392: An untrusted pointer dereference flaw was found in Perl-DBI \u003c 1.643. A local attacker who is able to manipulate calls to dbd_db_login6_sv() could cause memory corruption, affecting the service's availability.\n\n * CVE-2020-14393: A buffer overflow was found in perl-DBI \u003c 1.643 in DBI.xs. A local attacker who is able to supply a string longer than 300 characters could cause an out-of-bounds write, affecting the availability of the service or integrity of data.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-21"
+          },
+          "Updated": {
+            "Date": "2022-12-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://bdu.fstec.ru/vul/2021-03716",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "BDU:2021-03716"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-03727",
+              "Impact": "Low",
+              "Public": "20200916",
+              "CveID": "BDU:2021-03727"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03728",
+              "Impact": "High",
+              "Public": "20200916",
+              "CveID": "BDU:2021-03728"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+              "Cwe": "CWE-732",
+              "Href": "https://bdu.fstec.ru/vul/2022-05974",
+              "Impact": "Low",
+              "Public": "20201013",
+              "CveID": "BDU:2022-05974"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-10401",
+              "Impact": "Low",
+              "Public": "20200911",
+              "CveID": "CVE-2014-10401"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:L",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-10402",
+              "Impact": "Low",
+              "Public": "20200916",
+              "CveID": "CVE-2014-10402"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20919",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "CVE-2019-20919"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14392",
+              "Impact": "Low",
+              "Public": "20200916",
+              "CveID": "CVE-2020-14392"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14393",
+              "Impact": "High",
+              "Public": "20200916",
+              "CveID": "CVE-2020-14393"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385001",
+                "Comment": "perl-DBD-DBM is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385002",
+                "Comment": "perl-DBD-File is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385003",
+                "Comment": "perl-DBD-Gofer is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385004",
+                "Comment": "perl-DBD-Proxy is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385005",
+                "Comment": "perl-DBI is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385006",
+                "Comment": "perl-DBI-Gofer is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385007",
+                "Comment": "perl-DBI-Profile is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385008",
+                "Comment": "perl-DBI-ProxyServer is earlier than 0:1.643-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223385009",
+                "Comment": "perl-DBI-devel is earlier than 0:1.643-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231907",
+      "Version": "oval:org.altlinux.errata:def:20231907",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1907: package `fish` update to version 3.6.1-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1907",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1907",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01726",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01726",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-20001",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-20001",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades fish to version 3.6.1-alt1.1. \nSecurity Fix(es):\n\n * BDU:2022-01726: Уязвимость оболочки командной строки fish, связанная с недостатками процедуры нейтрализации особых элементов в выходных данных, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-20001: fish is a command line shell. fish version 3.1.0 through version 3.3.1 is vulnerable to arbitrary code execution. git repositories can contain per-repository configuration that change the behavior of git, including running arbitrary commands. When using the default configuration of fish, changing to a directory automatically runs `git` commands in order to display information about the current repository in the prompt. If an attacker can convince a user to change their current directory into one controlled by the attacker, such as on a shared file system or extracted archive, fish will run arbitrary commands under the attacker's control. This problem has been fixed in fish 3.4.0. Note that running git in these directories, including using the git tab completion, remains a potential trigger for this issue. As a workaround, remove the `fish_git_prompt` function from the prompt.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-30"
+          },
+          "Updated": {
+            "Date": "2023-05-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2022-01726",
+              "Impact": "High",
+              "Public": "20220312",
+              "CveID": "BDU:2022-01726"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-427",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-20001",
+              "Impact": "High",
+              "Public": "20220314",
+              "CveID": "CVE-2022-20001"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231907001",
+                "Comment": "fish is earlier than 0:3.6.1-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

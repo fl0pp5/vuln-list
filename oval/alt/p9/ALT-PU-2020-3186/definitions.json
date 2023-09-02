@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203186",
+      "Version": "oval:org.altlinux.errata:def:20203186",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3186: package `yodl` update to version 4.03.00-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3186",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3186",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-00035",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00035",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2016-10375",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-10375",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades yodl to version 4.03.00-alt2. \nSecurity Fix(es):\n\n * BDU:2018-00035: Уязвимость функции queue_push (queue/queuepush.c) пакета yodl, позволяющая нарушителю нарушить конфиденциальность, целостность и доступность данных\n\n * CVE-2016-10375: Yodl before 3.07.01 has a Buffer Over-read in the queue_push function in queue/queuepush.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-02"
+          },
+          "Updated": {
+            "Date": "2020-11-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2018-00035",
+              "Impact": "Critical",
+              "Public": "20160204",
+              "CveID": "BDU:2018-00035"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-10375",
+              "Impact": "Critical",
+              "Public": "20170526",
+              "CveID": "CVE-2016-10375"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203186001",
+                "Comment": "yodl is earlier than 1:4.03.00-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203186002",
+                "Comment": "yodl-docs is earlier than 1:4.03.00-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

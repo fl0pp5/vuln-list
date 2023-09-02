@@ -1,0 +1,116 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223355",
+      "Version": "oval:org.altlinux.errata:def:20223355",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3355: package `docs-alt-server` update to version 10.1-alt9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3355",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3355",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades docs-alt-server to version 10.1-alt9. \nSecurity Fix(es):\n\n * #43977: docs-alt-server: Неверный путь к файлу в настройке OpenUDS\n\n * #43979: docs-alt-server: Неверный параметр в настройке отказоустойчивого решения OpenUDS\n\n * #44650: Пропущено изображение в главе о развёртывании групповых политик в документации для Alt Server\n\n * #44651: Стилистическое несоответсвие написания названия рабочего окружения MATE в документации для Alt Server",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-16"
+          },
+          "Updated": {
+            "Date": "2022-12-16"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43977",
+              "Href": "https://bugzilla.altlinux.org/43977",
+              "Data": "docs-alt-server: Неверный путь к файлу в настройке OpenUDS"
+            },
+            {
+              "Id": "43979",
+              "Href": "https://bugzilla.altlinux.org/43979",
+              "Data": "docs-alt-server: Неверный параметр в настройке отказоустойчивого решения OpenUDS"
+            },
+            {
+              "Id": "44650",
+              "Href": "https://bugzilla.altlinux.org/44650",
+              "Data": "Пропущено изображение в главе о развёртывании групповых политик в документации для Alt Server"
+            },
+            {
+              "Id": "44651",
+              "Href": "https://bugzilla.altlinux.org/44651",
+              "Data": "Стилистическое несоответсвие написания названия рабочего окружения MATE в документации для Alt Server"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223355001",
+                "Comment": "docs-alt-server is earlier than 0:10.1-alt9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

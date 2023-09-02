@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221774",
+      "Version": "oval:org.altlinux.errata:def:20221774",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1774: package `freerdp` update to version 2.7.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1774",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1774",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04713",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04713",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06851",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06851",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-24882",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24882",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24883",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24883",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades freerdp to version 2.7.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04713: Уязвимость реализации протокола NTLM RDP-клиента FreeRDP, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2022-06851: Уязвимость RDP-сервера FreeRDP, связанная с недостатками процедуры аутентификации, позволяющая нарушителю обойти процесс аутентификации\n\n * CVE-2022-24882: FreeRDP is a free implementation of the Remote Desktop Protocol (RDP). In versions prior to 2.7.0, NT LAN Manager (NTLM) authentication does not properly abort when someone provides and empty password value. This issue affects FreeRDP based RDP Server implementations. RDP clients are not affected. The vulnerability is patched in FreeRDP 2.7.0. There are currently no known workarounds.\n\n * CVE-2022-24883: FreeRDP is a free implementation of the Remote Desktop Protocol (RDP). Prior to version 2.7.0, server side authentication against a `SAM` file might be successful for invalid credentials if the server has configured an invalid `SAM` file path. FreeRDP based clients are not affected. RDP server implementations using FreeRDP to authenticate against a `SAM` file are affected. Version 2.7.0 contains a fix for this issue. As a workaround, use custom authentication via `HashCallback` and/or ensure the `SAM` database path configured is valid and the application has file handles left.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-27"
+          },
+          "Updated": {
+            "Date": "2022-04-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-04713",
+              "Impact": "Critical",
+              "Public": "20220425",
+              "CveID": "BDU:2022-04713"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-06851",
+              "Impact": "Critical",
+              "Public": "20220422",
+              "CveID": "BDU:2022-06851"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24882",
+              "Impact": "High",
+              "Public": "20220426",
+              "CveID": "CVE-2022-24882"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24883",
+              "Impact": "Critical",
+              "Public": "20220426",
+              "CveID": "CVE-2022-24883"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774001",
+                "Comment": "freerdp is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774002",
+                "Comment": "freerdp-plugins-standard is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774003",
+                "Comment": "freerdp-server is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774004",
+                "Comment": "libfreerdp is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774005",
+                "Comment": "libfreerdp-devel is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774006",
+                "Comment": "libfreerdp-server is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774007",
+                "Comment": "libuwac is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774008",
+                "Comment": "libuwac-devel is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774009",
+                "Comment": "libwinpr is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774010",
+                "Comment": "libwinpr-devel is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774011",
+                "Comment": "wlfreerdp is earlier than 0:2.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221774012",
+                "Comment": "xfreerdp is earlier than 0:2.7.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

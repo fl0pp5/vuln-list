@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231334",
+      "Version": "oval:org.altlinux.errata:def:20231334",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1334: package `procps` update to version 3.3.17-alt6.g37f1060",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1334",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1334",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades procps to version 3.3.17-alt6.g37f1060. \nSecurity Fix(es):\n\n * #45106: Параметры без значения",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-23"
+          },
+          "Updated": {
+            "Date": "2023-02-23"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "45106",
+              "Href": "https://bugzilla.altlinux.org/45106",
+              "Data": "Параметры без значения"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231334001",
+                "Comment": "libprocps is earlier than 0:3.3.17-alt6.g37f1060"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231334002",
+                "Comment": "libprocps-devel is earlier than 0:3.3.17-alt6.g37f1060"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231334003",
+                "Comment": "procps is earlier than 0:3.3.17-alt6.g37f1060"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

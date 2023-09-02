@@ -1,0 +1,167 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222926",
+      "Version": "oval:org.altlinux.errata:def:20222926",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2926: package `make-initrd` update to version 2.31.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2926",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2926",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades make-initrd to version 2.31.0-alt2. \nSecurity Fix(es):\n\n * #43188: make-initrd ignores the value of LUKS_ALL_CRYPTTAB in /etc/initrd.mk\n\n * #43929: неверные права на /etc/resolv.conf в initrd при загрузке с ip=dhcp\n\n * #44073: Не работает поддержка /etc/crypttab в luks",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-26"
+          },
+          "Updated": {
+            "Date": "2022-10-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43188",
+              "Href": "https://bugzilla.altlinux.org/43188",
+              "Data": "make-initrd ignores the value of LUKS_ALL_CRYPTTAB in /etc/initrd.mk"
+            },
+            {
+              "Id": "43929",
+              "Href": "https://bugzilla.altlinux.org/43929",
+              "Data": "неверные права на /etc/resolv.conf в initrd при загрузке с ip=dhcp"
+            },
+            {
+              "Id": "44073",
+              "Href": "https://bugzilla.altlinux.org/44073",
+              "Data": "Не работает поддержка /etc/crypttab в luks"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926001",
+                "Comment": "make-initrd is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926002",
+                "Comment": "make-initrd-boot is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926003",
+                "Comment": "make-initrd-bootconfig is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926004",
+                "Comment": "make-initrd-devmapper is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926005",
+                "Comment": "make-initrd-iscsi is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926006",
+                "Comment": "make-initrd-kickstart is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926007",
+                "Comment": "make-initrd-luks is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926008",
+                "Comment": "make-initrd-lvm is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926009",
+                "Comment": "make-initrd-mdadm is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926010",
+                "Comment": "make-initrd-multipath is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926011",
+                "Comment": "make-initrd-nfs is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926012",
+                "Comment": "make-initrd-plymouth is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926013",
+                "Comment": "make-initrd-smartcard is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926014",
+                "Comment": "make-initrd-sshfs is earlier than 0:2.31.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222926015",
+                "Comment": "make-initrd-ucode is earlier than 0:2.31.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

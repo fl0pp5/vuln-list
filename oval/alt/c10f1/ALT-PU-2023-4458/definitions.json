@@ -1,0 +1,150 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234458",
+      "Version": "oval:org.altlinux.errata:def:20234458",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4458: package `kubernetes` update to version 1.26.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4458",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4458",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03213",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-2431",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2431",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2727",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2727",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2728",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2728",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kubernetes to version 1.26.6-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03213: Уязвимость программного средства управления кластерами виртуальных машин Kubernetes, связанная с возможностью обхода политик модуля допуска ImagePolicyWebhook, позволяющая нарушителю обойти существующие ограничения безопасности при запуске контейнеров\n\n * CVE-2023-2431: A security issue was discovered in Kubelet that allows pods to bypass the seccomp profile enforcement. Pods that use localhost type for seccomp profile but specify an empty profile field, are affected by this issue. In this scenario, this vulnerability allows the pod to run in unconfined (seccomp disabled) mode. This bug affects Kubelet.\n\n * CVE-2023-2727: Users may be able to launch containers using images that are restricted by ImagePolicyWebhook when using ephemeral containers. Kubernetes clusters are only affected if the ImagePolicyWebhook admission plugin is used together with ephemeral containers.\n\n\n\n * CVE-2023-2728: Users may be able to launch containers that bypass the mountable secrets policy enforced by the ServiceAccount admission plugin when using ephemeral containers. The policy ensures pods running with a service account may only reference secrets specified in the service account’s secrets field. Kubernetes clusters are only affected if the ServiceAccount admission plugin and the `kubernetes.io/enforce-mountable-secrets` annotation are used together with ephemeral containers.\n\n",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-20"
+          },
+          "Updated": {
+            "Date": "2023-07-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2023-03213",
+              "Impact": "Low",
+              "Public": "20230615",
+              "CveID": "BDU:2023-03213"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2431",
+              "Impact": "Low",
+              "Public": "20230616",
+              "CveID": "CVE-2023-2431"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2727",
+              "Impact": "Low",
+              "Public": "20230703",
+              "CveID": "CVE-2023-2727"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2728",
+              "Impact": "Low",
+              "Public": "20230703",
+              "CveID": "CVE-2023-2728"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458001",
+                "Comment": "kubernetes-client is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458002",
+                "Comment": "kubernetes-common is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458003",
+                "Comment": "kubernetes-crio is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458004",
+                "Comment": "kubernetes-kubeadm is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458005",
+                "Comment": "kubernetes-kubelet is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458006",
+                "Comment": "kubernetes-master is earlier than 0:1.26.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234458007",
+                "Comment": "kubernetes-node is earlier than 0:1.26.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

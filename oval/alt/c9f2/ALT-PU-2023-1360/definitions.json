@@ -1,0 +1,209 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231360",
+      "Version": "oval:org.altlinux.errata:def:20231360",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1360: package `openssl1.1` update to version 1.1.1t-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1360",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1360",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00665",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00665",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00675",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00675",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02237",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02237",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02240",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02240",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-4304",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4304",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4450",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4450",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0215",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0286",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1t-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00665: Уязвимость функции GENERAL_NAME_cmp библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-00675: Уязвимость функции BIO_new_NDEF() библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-02237: Уязвимость алгоритмов шифрования PKCS#1 v1.5, RSA-OEAP и RSASVE криптографической библиотеки OpenSSL, позволяющая нарушителю реализовать атаку Блейхенбахера (Bleichenbacher)\n\n * BDU:2023-02240: Уязвимость функции PEM_read_bio_ex() криптографической библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-4304: A timing based side channel exists in the OpenSSL RSA Decryption implementation which could be sufficient to recover a plaintext across a network in a Bleichenbacher style attack. To achieve a successful decryption an attacker would have to be able to send a very large number of trial messages for decryption. The vulnerability affects all RSA padding modes: PKCS#1 v1.5, RSA-OEAP and RSASVE. For example, in a TLS connection, RSA is commonly used by a client to send an encrypted pre-master secret to the server. An attacker that had observed a genuine connection between a client and a server could use this flaw to send trial messages to the server and record the time taken to process them. After a sufficiently large number of messages the attacker could recover the pre-master secret used for the original connection and thus be able to decrypt the application data sent over that connection.\n\n * CVE-2022-4450: The function PEM_read_bio_ex() reads a PEM file from a BIO and parses and decodes the \"name\" (e.g. \"CERTIFICATE\"), any header data and the payload data. If the function succeeds then the \"name_out\", \"header\" and \"data\" arguments are populated with pointers to buffers containing the relevant decoded data. The caller is responsible for freeing those buffers. It is possible to construct a PEM file that results in 0 bytes of payload data. In this case PEM_read_bio_ex() will return a failure code but will populate the header argument with a pointer to a buffer that has already been freed. If the caller also frees this buffer then a double free will occur. This will most likely lead to a crash. This could be exploited by an attacker who has the ability to supply malicious PEM files for parsing to achieve a denial of service attack. The functions PEM_read_bio() and PEM_read() are simple wrappers around PEM_read_bio_ex() and therefore these functions are also directly affected. These functions are also called indirectly by a number of other OpenSSL functions including PEM_X509_INFO_read_bio_ex() and SSL_CTX_use_serverinfo_file() which are also vulnerable. Some OpenSSL internal uses of these functions are not vulnerable because the caller does not free the header argument if PEM_read_bio_ex() returns a failure code. These locations include the PEM_read_bio_TYPE() functions as well as the decoders introduced in OpenSSL 3.0. The OpenSSL asn1parse command line application is also impacted by this issue.\n\n * CVE-2023-0215: The public API function BIO_new_NDEF is a helper function used for streaming\nASN.1 data via a BIO. It is primarily used internally to OpenSSL to support the\nSMIME, CMS and PKCS7 streaming capabilities, but may also be called directly by\nend user applications.\n\nThe function receives a BIO from the caller, prepends a new BIO_f_asn1 filter\nBIO onto the front of it to form a BIO chain, and then returns the new head of\nthe BIO chain to the caller. Under certain conditions, for example if a CMS\nrecipient public key is invalid, the new filter BIO is freed and the function\nreturns a NULL result indicating a failure. However, in this case, the BIO chain\nis not properly cleaned up and the BIO passed by the caller still retains\ninternal pointers to the previously freed filter BIO. If the caller then goes on\nto call BIO_pop() on the BIO then a use-after-free will occur. This will most\nlikely result in a crash.\n\n\n\nThis scenario occurs directly in the internal function B64_write_ASN1() which\nmay cause BIO_new_NDEF() to be called and will subsequently call BIO_pop() on\nthe BIO. This internal function is in turn called by the public API functions\nPEM_write_bio_ASN1_stream, PEM_write_bio_CMS_stream, PEM_write_bio_PKCS7_stream,\nSMIME_write_ASN1, SMIME_write_CMS and SMIME_write_PKCS7.\n\nOther public API functions that may be impacted by this include\ni2d_ASN1_bio_stream, BIO_new_CMS, BIO_new_PKCS7, i2d_CMS_bio_stream and\ni2d_PKCS7_bio_stream.\n\nThe OpenSSL cms and smime command line applications are similarly affected.\n\n\n\n\n\n * CVE-2023-0286: There is a type confusion vulnerability relating to X.400 address processing inside an X.509 GeneralName. X.400 addresses were parsed as an ASN1_STRING but the public structure definition for GENERAL_NAME incorrectly specified the type of the x400Address field as ASN1_TYPE. This field is subsequently interpreted by the OpenSSL function GENERAL_NAME_cmp as an ASN1_TYPE rather than an ASN1_STRING. When CRL checking is enabled (i.e. the application sets the X509_V_FLAG_CRL_CHECK flag), this vulnerability may allow an attacker to pass arbitrary pointers to a memcmp call, enabling them to read memory contents or enact a denial of service. In most cases, the attack requires the attacker to provide both the certificate chain and CRL, neither of which need to have a valid signature. If the attacker only controls one of these inputs, the other input must already contain an X.400 address as a CRL distribution point, which is uncommon. As such, this vulnerability is most likely to only affect applications which have implemented their own functionality for retrieving CRLs over a network.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-28"
+          },
+          "Updated": {
+            "Date": "2023-02-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-704",
+              "Href": "https://bdu.fstec.ru/vul/2023-00665",
+              "Impact": "High",
+              "Public": "20230207",
+              "CveID": "BDU:2023-00665"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-416, CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-00675",
+              "Impact": "Low",
+              "Public": "20221129",
+              "CveID": "BDU:2023-00675"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-208",
+              "Href": "https://bdu.fstec.ru/vul/2023-02237",
+              "Impact": "Low",
+              "Public": "20200714",
+              "CveID": "BDU:2023-02237"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2023-02240",
+              "Impact": "High",
+              "Public": "20211208",
+              "CveID": "BDU:2023-02240"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4304",
+              "Impact": "Low",
+              "Public": "20230208",
+              "CveID": "CVE-2022-4304"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4450",
+              "Impact": "High",
+              "Public": "20230208",
+              "CveID": "CVE-2022-4450"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0215",
+              "Impact": "High",
+              "Public": "20230208",
+              "CveID": "CVE-2023-0215"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0286",
+              "Impact": "High",
+              "Public": "20230208",
+              "CveID": "CVE-2023-0286"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360005",
+                "Comment": "openssl is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1t-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231360008",
+                "Comment": "tsget is earlier than 0:1.1.1t-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

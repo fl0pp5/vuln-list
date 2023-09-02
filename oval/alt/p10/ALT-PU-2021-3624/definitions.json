@@ -1,0 +1,171 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213624",
+      "Version": "oval:org.altlinux.errata:def:20213624",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3624: package `epiphany` update to version 40.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3624",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3624",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05569",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05569",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-45085",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45085",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45086",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45086",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45087",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45087",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45088",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45088",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades epiphany to version 40.6-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05569: Уязвимость реализации сценария ephy-about:overview веб-браузера Epiphany, позволяющая нарушителю проводить межсайтовые сценарные атаки\n\n * CVE-2021-45085: XSS can occur in GNOME Web (aka Epiphany) before 40.4 and 41.x before 41.1 via an about: page, as demonstrated by ephy-about:overview when a user visits an XSS payload page often enough to place that page on the Most Visited list.\n\n * CVE-2021-45086: XSS can occur in GNOME Web (aka Epiphany) before 40.4 and 41.x before 41.1 because a server's suggested_filename is used as the pdf_name value in PDF.js.\n\n * CVE-2021-45087: XSS can occur in GNOME Web (aka Epiphany) before 40.4 and 41.x before 41.1 when View Source mode or Reader mode is used, as demonstrated by a a page title.\n\n * CVE-2021-45088: XSS can occur in GNOME Web (aka Epiphany) before 40.4 and 41.x before 41.1 via an error page.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-24"
+          },
+          "Updated": {
+            "Date": "2021-12-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-05569",
+              "Impact": "Low",
+              "Public": "20211021",
+              "CveID": "BDU:2022-05569"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45085",
+              "Impact": "Low",
+              "Public": "20211216",
+              "CveID": "CVE-2021-45085"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45086",
+              "Impact": "Low",
+              "Public": "20211216",
+              "CveID": "CVE-2021-45086"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45087",
+              "Impact": "Low",
+              "Public": "20211216",
+              "CveID": "CVE-2021-45087"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45088",
+              "Impact": "Low",
+              "Public": "20211216",
+              "CveID": "CVE-2021-45088"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213624001",
+                "Comment": "epiphany is earlier than 0:40.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213624002",
+                "Comment": "epiphany-data is earlier than 0:40.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

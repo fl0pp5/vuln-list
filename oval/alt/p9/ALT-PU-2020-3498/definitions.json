@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203498",
+      "Version": "oval:org.altlinux.errata:def:20203498",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3498: package `lout` update to version 3.40-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3498",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3498",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-19917",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19917",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19918",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19918",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades lout to version 3.40-alt4. \nSecurity Fix(es):\n\n * CVE-2019-19917: Lout 3.40 has a buffer overflow in the StringQuotedWord() function in z39.c.\n\n * CVE-2019-19918: Lout 3.40 has a heap-based buffer overflow in the srcnext() function in z02.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-11"
+          },
+          "Updated": {
+            "Date": "2020-12-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19917",
+              "Impact": "High",
+              "Public": "20191220",
+              "CveID": "CVE-2019-19917"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19918",
+              "Impact": "High",
+              "Public": "20191220",
+              "CveID": "CVE-2019-19918"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203498001",
+                "Comment": "lout is earlier than 0:3.40-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203498002",
+                "Comment": "lout-doc is earlier than 0:3.40-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

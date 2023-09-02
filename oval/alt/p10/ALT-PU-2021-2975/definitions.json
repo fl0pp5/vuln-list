@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212975",
+      "Version": "oval:org.altlinux.errata:def:20212975",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2975: package `qt5-webengine` update to version 5.15.6-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2975",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2975",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-38593",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38593",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45930",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45930",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33285",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33285",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-webengine to version 5.15.6-alt2. \nSecurity Fix(es):\n\n * CVE-2021-38593: Qt 5.x before 5.15.6 and 6.x through 6.1.2 has an out-of-bounds write in QOutlineMapper::convertPath (called from QRasterPaintEngine::fill and QPaintEngineEx::stroke).\n\n * CVE-2021-45930: Qt SVG in Qt 5.0.0 through 5.15.2 and 6.0.0 through 6.2.1 has an out-of-bounds write in QtPrivate::QCommonArrayOps\u003cQPainterPath::Element\u003e::growAppend (called from QPainterPath::addPath and QPathClipper::intersect).\n\n * CVE-2023-33285: An issue was discovered in Qt 5.x before 5.15.14, 6.x before 6.2.9, and 6.3.x through 6.5.x before 6.5.1. QDnsLookup has a buffer over-read via a crafted reply from a DNS server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-04"
+          },
+          "Updated": {
+            "Date": "2021-10-04"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38593",
+              "Impact": "High",
+              "Public": "20210812",
+              "CveID": "CVE-2021-38593"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45930",
+              "Impact": "Low",
+              "Public": "20220101",
+              "CveID": "CVE-2021-45930"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33285",
+              "Impact": "Low",
+              "Public": "20230522",
+              "CveID": "CVE-2023-33285"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975001",
+                "Comment": "libqt5-pdf is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975002",
+                "Comment": "libqt5-pdfwidgets is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975003",
+                "Comment": "libqt5-webengine is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975004",
+                "Comment": "libqt5-webenginecore is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975005",
+                "Comment": "libqt5-webenginewidgets is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975006",
+                "Comment": "qt5-webengine-common is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975007",
+                "Comment": "qt5-webengine-devel is earlier than 0:5.15.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212975008",
+                "Comment": "qt5-webengine-doc is earlier than 0:5.15.6-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

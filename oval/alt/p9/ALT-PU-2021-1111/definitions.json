@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211111",
+      "Version": "oval:org.altlinux.errata:def:20211111",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1111: package `golang` update to version 1.14.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1111",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1111",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01056",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01056",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01105",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01105",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3115",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3115",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.14.14-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01056: Уязвимость функции языка программирования Go, связанная с неверными вычислениями, позволяющая нарушителю раскрыть защищаемую информацию и оказать воздействие на целостность защищаемой информации\n\n * BDU:2021-01105: Уязвимость реализации команды «go get» языка программирования Go, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-3114: In Go before 1.14.14 and 1.15.x before 1.15.7, crypto/elliptic/p224.go can generate incorrect outputs, related to an underflow of the lowest limb during the final complete reduction in the P-224 field.\n\n * CVE-2021-3115: Go before 1.14.14 and 1.15.x before 1.15.7 on Windows is vulnerable to Command Injection and remote code execution when using the \"go get\" command to fetch modules that make use of cgo (for example, cgo can execute a gcc program from an untrusted download).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-21"
+          },
+          "Updated": {
+            "Date": "2021-01-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://bdu.fstec.ru/vul/2021-01056",
+              "Impact": "Low",
+              "Public": "20210126",
+              "CveID": "BDU:2021-01056"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2021-01105",
+              "Impact": "High",
+              "Public": "20210126",
+              "CveID": "BDU:2021-01105"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3114",
+              "Impact": "Low",
+              "Public": "20210126",
+              "CveID": "CVE-2021-3114"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-427",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3115",
+              "Impact": "High",
+              "Public": "20210126",
+              "CveID": "CVE-2021-3115"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211111001",
+                "Comment": "golang is earlier than 0:1.14.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211111002",
+                "Comment": "golang-docs is earlier than 0:1.14.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211111003",
+                "Comment": "golang-gdb is earlier than 0:1.14.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211111004",
+                "Comment": "golang-shared is earlier than 0:1.14.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

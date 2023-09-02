@@ -1,0 +1,139 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202339",
+      "Version": "oval:org.altlinux.errata:def:20202339",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2339: package `helm` update to version 3.1.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2339",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2339",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04871",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04871",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-1000008",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000008",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18658",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18658",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades helm to version 3.1.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04871: Уязвимость пакетного менеджера Helm, существующая из-за неверного ограничения имени пути к каталогу с ограниченным доступом, позволяющая нарушителю выполнить распаковку файлов архива диаграмм за пределами целевого каталога\n\n * CVE-2019-1000008: All versions of Helm between Helm \u003e=2.0.0 and \u003c 2.12.2 contains a CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in The commands `helm fetch --untar` and `helm lint some.tgz` that can result when chart archive files are unpacked a file may be unpacked outside of the target directory. This attack appears to be exploitable via a victim must run a helm command on a specially crafted chart archive. This vulnerability appears to have been fixed in 2.12.2.\n\n * CVE-2019-18658: In Helm 2.x before 2.15.2, commands that deal with loading a chart as a directory or packaging a chart provide an opportunity for a maliciously designed chart to include sensitive content such as /etc/passwd, or to execute a denial of service (DoS) via a special file such as /dev/urandom, via symlinks. No version of Tiller is known to be impacted. This is a client-only issue.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-09"
+          },
+          "Updated": {
+            "Date": "2020-07-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2020-04871",
+              "Impact": "Low",
+              "Public": "20190114",
+              "CveID": "BDU:2020-04871"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000008",
+              "Impact": "Low",
+              "Public": "20190204",
+              "CveID": "CVE-2019-1000008"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18658",
+              "Impact": "Critical",
+              "Public": "20191112",
+              "CveID": "CVE-2019-18658"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202339001",
+                "Comment": "helm is earlier than 0:3.1.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

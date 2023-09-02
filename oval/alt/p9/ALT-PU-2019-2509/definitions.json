@@ -1,0 +1,459 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192509",
+      "Version": "oval:org.altlinux.errata:def:20192509",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2509: package `vlc` update to version 3.0.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2509",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2509",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02879",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02879",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03342",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03342",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01491",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01491",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12874",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12874",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13602",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13602",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13962",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13962",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5439",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5439",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5459",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5459",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5460",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5460",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vlc to version 3.0.8-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02879: Уязвимость функции MP4_EIA608_Convert() (modules/demux/mp4/mp4.c) медиаплеера VideoLAN Media Player, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03342: Уязвимость функции zlib_decompress_extra программы-медиапроигрывателя VideoLAN VLC, связанная с использованием после освобождения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-01491: Уязвимость функции lavc_CopyPicture программы-медиапроигрывателя VideoLAN VLC, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2019-12874: An issue was discovered in zlib_decompress_extra in modules/demux/mkv/util.cpp in VideoLAN VLC media player 3.x through 3.0.7. The Matroska demuxer, while parsing a malformed MKV file type, has a double free.\n\n * CVE-2019-13602: An Integer Underflow in MP4_EIA608_Convert() in modules/demux/mp4/mp4.c in VideoLAN VLC media player through 3.0.7.1 allows remote attackers to cause a denial of service (heap-based buffer overflow and crash) or possibly have unspecified other impact via a crafted .mp4 file.\n\n * CVE-2019-13962: lavc_CopyPicture in modules/codec/avcodec/video.c in VideoLAN VLC media player through 3.0.7 has a heap-based buffer over-read because it does not properly validate the width and height.\n\n * CVE-2019-5439: A Buffer Overflow in VLC Media Player \u003c 3.0.7 causes a crash which can possibly be further developed into a remote code execution exploit.\n\n * CVE-2019-5459: An Integer underflow in VLC Media Player versions \u003c 3.0.7 leads to an out-of-band read.\n\n * CVE-2019-5460: Double Free in VLC versions \u003c= 3.0.6 leads to a crash.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-20"
+          },
+          "Updated": {
+            "Date": "2019-08-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://bdu.fstec.ru/vul/2019-02879",
+              "Impact": "High",
+              "Public": "20190627",
+              "CveID": "BDU:2019-02879"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2019-03342",
+              "Impact": "Critical",
+              "Public": "20190618",
+              "CveID": "BDU:2019-03342"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-01491",
+              "Impact": "Critical",
+              "Public": "20190429",
+              "CveID": "BDU:2020-01491"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12874",
+              "Impact": "Critical",
+              "Public": "20190618",
+              "CveID": "CVE-2019-12874"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13602",
+              "Impact": "High",
+              "Public": "20190714",
+              "CveID": "CVE-2019-13602"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13962",
+              "Impact": "Critical",
+              "Public": "20190718",
+              "CveID": "CVE-2019-13962"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5439",
+              "Impact": "Low",
+              "Public": "20190613",
+              "CveID": "CVE-2019-5439"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5459",
+              "Impact": "High",
+              "Public": "20190730",
+              "CveID": "CVE-2019-5459"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5460",
+              "Impact": "Low",
+              "Public": "20190730",
+              "CveID": "CVE-2019-5460"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509001",
+                "Comment": "fortunes-vlc is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509002",
+                "Comment": "libvlc is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509003",
+                "Comment": "libvlc-devel is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509004",
+                "Comment": "vim-plugin-vlc-syntax is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509005",
+                "Comment": "vlc is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509006",
+                "Comment": "vlc-interface-lirc is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509007",
+                "Comment": "vlc-interface-ncurses is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509008",
+                "Comment": "vlc-interface-qt is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509009",
+                "Comment": "vlc-interface-skins2 is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509010",
+                "Comment": "vlc-maxi is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509011",
+                "Comment": "vlc-mini is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509012",
+                "Comment": "vlc-plugin-aa is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509013",
+                "Comment": "vlc-plugin-ass is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509014",
+                "Comment": "vlc-plugin-audiocd is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509015",
+                "Comment": "vlc-plugin-bluray is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509016",
+                "Comment": "vlc-plugin-caca is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509017",
+                "Comment": "vlc-plugin-chromaprint is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509018",
+                "Comment": "vlc-plugin-dbus is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509019",
+                "Comment": "vlc-plugin-dv is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509020",
+                "Comment": "vlc-plugin-dvdnav is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509021",
+                "Comment": "vlc-plugin-dvdread is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509022",
+                "Comment": "vlc-plugin-ffmpeg is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509023",
+                "Comment": "vlc-plugin-flac is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509024",
+                "Comment": "vlc-plugin-fluidsynth is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509025",
+                "Comment": "vlc-plugin-framebuffer is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509026",
+                "Comment": "vlc-plugin-freetype is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509027",
+                "Comment": "vlc-plugin-globalhotkeys is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509028",
+                "Comment": "vlc-plugin-gnutls is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509029",
+                "Comment": "vlc-plugin-h264 is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509030",
+                "Comment": "vlc-plugin-h265 is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509031",
+                "Comment": "vlc-plugin-jack is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509032",
+                "Comment": "vlc-plugin-linsys is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509033",
+                "Comment": "vlc-plugin-live555 is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509034",
+                "Comment": "vlc-plugin-matroska is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509035",
+                "Comment": "vlc-plugin-modplug is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509036",
+                "Comment": "vlc-plugin-mpeg2 is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509037",
+                "Comment": "vlc-plugin-mtp is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509038",
+                "Comment": "vlc-plugin-musepack is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509039",
+                "Comment": "vlc-plugin-notify is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509040",
+                "Comment": "vlc-plugin-ogg is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509041",
+                "Comment": "vlc-plugin-opus is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509042",
+                "Comment": "vlc-plugin-png is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509043",
+                "Comment": "vlc-plugin-podcast is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509044",
+                "Comment": "vlc-plugin-projectm is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509045",
+                "Comment": "vlc-plugin-pulseaudio is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509046",
+                "Comment": "vlc-plugin-realrtsp is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509047",
+                "Comment": "vlc-plugin-schroedinger is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509048",
+                "Comment": "vlc-plugin-shout is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509049",
+                "Comment": "vlc-plugin-smb is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509050",
+                "Comment": "vlc-plugin-speex is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509051",
+                "Comment": "vlc-plugin-svg is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509052",
+                "Comment": "vlc-plugin-taglib is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509053",
+                "Comment": "vlc-plugin-theora is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509054",
+                "Comment": "vlc-plugin-twolame is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509055",
+                "Comment": "vlc-plugin-upnp is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509056",
+                "Comment": "vlc-plugin-v4l is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509057",
+                "Comment": "vlc-plugin-videocd is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509058",
+                "Comment": "vlc-plugin-vpx is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509059",
+                "Comment": "vlc-plugin-xcb is earlier than 0:3.0.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192509060",
+                "Comment": "vlc-plugin-xml is earlier than 0:3.0.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

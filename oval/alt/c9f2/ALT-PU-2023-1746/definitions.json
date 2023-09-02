@@ -1,0 +1,102 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231746",
+      "Version": "oval:org.altlinux.errata:def:20231746",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1746: package `propagator` update to version 20211007-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1746",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1746",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades propagator to version 20211007-alt1. \nSecurity Fix(es):\n\n * #40616: propagator: не работает автоматическая загрузка по сети при наличии \u003e= 2 интерфейсов\n\n * #40629: propagator: занудный ramdisk_size\n\n * #40687: udev: тупит при загрузке (init == propagator)\n\n * #40710: propagator: загрузка по http с нераспакованной ISO\n\n * #40803: propagator: load_ramdisk_fd: sloppy error handling\n\n * #41072: propagator: загрузка по http не всегда срабатывает",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-04"
+          },
+          "Updated": {
+            "Date": "2023-05-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40616",
+              "Href": "https://bugzilla.altlinux.org/40616",
+              "Data": "propagator: не работает автоматическая загрузка по сети при наличии \u003e= 2 интерфейсов"
+            },
+            {
+              "Id": "40629",
+              "Href": "https://bugzilla.altlinux.org/40629",
+              "Data": "propagator: занудный ramdisk_size"
+            },
+            {
+              "Id": "40687",
+              "Href": "https://bugzilla.altlinux.org/40687",
+              "Data": "udev: тупит при загрузке (init == propagator)"
+            },
+            {
+              "Id": "40710",
+              "Href": "https://bugzilla.altlinux.org/40710",
+              "Data": "propagator: загрузка по http с нераспакованной ISO"
+            },
+            {
+              "Id": "40803",
+              "Href": "https://bugzilla.altlinux.org/40803",
+              "Data": "propagator: load_ramdisk_fd: sloppy error handling"
+            },
+            {
+              "Id": "41072",
+              "Href": "https://bugzilla.altlinux.org/41072",
+              "Data": "propagator: загрузка по http не всегда срабатывает"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231746001",
+                "Comment": "propagator is earlier than 0:20211007-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

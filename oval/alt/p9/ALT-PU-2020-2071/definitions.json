@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202071",
+      "Version": "oval:org.altlinux.errata:def:20202071",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2071: package `prometheus` update to version 2.18.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2071",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2071",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-10215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10215",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades prometheus to version 2.18.1-alt2. \nSecurity Fix(es):\n\n * CVE-2019-10215: Bootstrap-3-Typeahead after version 4.0.2 is vulnerable to a cross-site scripting flaw in the highlighter() function. An attacker could exploit this via user interaction to execute code in the user's browser.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-02"
+          },
+          "Updated": {
+            "Date": "2020-06-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10215",
+              "Impact": "Low",
+              "Public": "20191008",
+              "CveID": "CVE-2019-10215"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202071001",
+                "Comment": "prometheus is earlier than 0:2.18.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202071002",
+                "Comment": "prometheus-common is earlier than 0:2.18.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

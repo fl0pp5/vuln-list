@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221250",
+      "Version": "oval:org.altlinux.errata:def:20221250",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1250: package `helm` update to version 3.4.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1250",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1250",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-11013",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11013",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15184",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15184",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15185",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15185",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15186",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15186",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15187",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15187",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-4053",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-4053",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades helm to version 3.4.1-alt1. \nSecurity Fix(es):\n\n * CVE-2020-11013: Their is an information disclosure vulnerability in Helm from version 3.1.0 and before version 3.2.0. `lookup` is a Helm template function introduced in Helm v3. It is able to lookup resources in the cluster to check for the existence of specific resources and get details about them. This can be used as part of the process to render templates. The documented behavior of `helm template` states that it does not attach to a remote cluster. However, a the recently added `lookup` template function circumvents this restriction and connects to the cluster even during `helm template` and `helm install|update|delete|rollback --dry-run`. The user is not notified of this behavior. Running `helm template` should not make calls to a cluster. This is different from `install`, which is presumed to have access to a cluster in order to load resources into Kubernetes. Helm 2 is unaffected by this vulnerability. A malicious chart author could inject a `lookup` into a chart that, when rendered through `helm template`, performs unannounced lookups against the cluster a user\u0026#39;s `KUBECONFIG` file points to. This information can then be disclosed via the output of `helm template`. This issue has been fixed in Helm 3.2.0\n\n * CVE-2020-15184: In Helm before versions 2.16.11 and 3.3.2 there is a bug in which the `alias` field on a `Chart.yaml` is not properly sanitized. This could lead to the injection of unwanted information into a chart. This issue has been patched in Helm 3.3.2 and 2.16.11. A possible workaround is to manually review the `dependencies` field of any untrusted chart, verifying that the `alias` field is either not used, or (if used) does not contain newlines or path characters.\n\n * CVE-2020-15185: In Helm before versions 2.16.11 and 3.3.2, a Helm repository can contain duplicates of the same chart, with the last one always used. If a repository is compromised, this lowers the level of access that an attacker needs to inject a bad chart into a repository. To perform this attack, an attacker must have write access to the index file (which can occur during a MITM attack on a non-SSL connection). This issue has been patched in Helm 3.3.2 and 2.16.11. A possible workaround is to manually review the index file in the Helm repository cache before installing software.\n\n * CVE-2020-15186: In Helm before versions 2.16.11 and 3.3.2 plugin names are not sanitized properly. As a result, a malicious plugin author could use characters in a plugin name that would result in unexpected behavior, such as duplicating the name of another plugin or spoofing the output to `helm --help`. This issue has been patched in Helm 3.3.2. A possible workaround is to not install untrusted Helm plugins. Examine the `name` field in the `plugin.yaml` file for a plugin, looking for characters outside of the [a-zA-Z0-9._-] range.\n\n * CVE-2020-15187: In Helm before versions 2.16.11 and 3.3.2, a Helm plugin can contain duplicates of the same entry, with the last one always used. If a plugin is compromised, this lowers the level of access that an attacker needs to modify a plugin's install hooks, causing a local execution attack. To perform this attack, an attacker must have write access to the git repository or plugin archive (.tgz) while being downloaded (which can occur during a MITM attack on a non-SSL connection). This issue has been patched in Helm 2.16.11 and Helm 3.3.2. As a possible workaround make sure to install plugins using a secure connection protocol like SSL.\n\n * CVE-2020-4053: In Helm greater than or equal to 3.0.0 and less than 3.2.4, a path traversal attack is possible when installing Helm plugins from a tar archive over HTTP. It is possible for a malicious plugin author to inject a relative path into a plugin archive, and copy a file outside of the intended directory. This has been fixed in 3.2.4.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11013",
+              "Impact": "Low",
+              "Public": "20200424",
+              "CveID": "CVE-2020-11013"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15184",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "CVE-2020-15184"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15185",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "CVE-2020-15185"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15186",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "CVE-2020-15186"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15187",
+              "Impact": "Low",
+              "Public": "20200917",
+              "CveID": "CVE-2020-15187"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-4053",
+              "Impact": "Low",
+              "Public": "20200616",
+              "CveID": "CVE-2020-4053"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221250001",
+                "Comment": "helm is earlier than 0:3.4.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

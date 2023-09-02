@@ -1,0 +1,265 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202857",
+      "Version": "oval:org.altlinux.errata:def:20202857",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2857: package `samba` update to version 4.11.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2857",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2857",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04016",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04016",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-1472",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1472",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades samba to version 4.11.13-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04016: Уязвимость реализации протокола Netlogon Remote Protocol (MS-NRPC) операционных систем Windows, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2020-1472: An elevation of privilege vulnerability exists when an attacker establishes a vulnerable Netlogon secure channel connection to a domain controller, using the Netlogon Remote Protocol (MS-NRPC), aka 'Netlogon Elevation of Privilege Vulnerability'.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-09-21"
+          },
+          "Updated": {
+            "Date": "2020-09-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2020-04016",
+              "Impact": "Critical",
+              "Public": "20200811",
+              "CveID": "BDU:2020-04016"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-330",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1472",
+              "Impact": "Critical",
+              "Public": "20200817",
+              "CveID": "CVE-2020-1472"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857001",
+                "Comment": "libldb-modules-dc is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857002",
+                "Comment": "libnetapi is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857003",
+                "Comment": "libnetapi-devel is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857004",
+                "Comment": "libsmbclient is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857005",
+                "Comment": "libsmbclient-devel is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857006",
+                "Comment": "libwbclient is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857007",
+                "Comment": "libwbclient-devel is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857008",
+                "Comment": "python3-module-samba is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857009",
+                "Comment": "python3-module-samba-devel is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857010",
+                "Comment": "samba is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857011",
+                "Comment": "samba-client is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857012",
+                "Comment": "samba-common is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857013",
+                "Comment": "samba-common-libs is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857014",
+                "Comment": "samba-common-tools is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857015",
+                "Comment": "samba-ctdb is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857016",
+                "Comment": "samba-ctdb-tests is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857017",
+                "Comment": "samba-dc is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857018",
+                "Comment": "samba-dc-client is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857019",
+                "Comment": "samba-dc-common is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857020",
+                "Comment": "samba-dc-libs is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857021",
+                "Comment": "samba-dc-mitkrb5 is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857022",
+                "Comment": "samba-devel is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857023",
+                "Comment": "samba-doc is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857024",
+                "Comment": "samba-libs is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857025",
+                "Comment": "samba-pidl is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857026",
+                "Comment": "samba-test is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857027",
+                "Comment": "samba-util-private-headers is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857028",
+                "Comment": "samba-vfs-cephfs is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857029",
+                "Comment": "samba-vfs-glusterfs is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857030",
+                "Comment": "samba-winbind is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857031",
+                "Comment": "samba-winbind-clients is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857032",
+                "Comment": "samba-winbind-common is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857033",
+                "Comment": "samba-winbind-krb5-localauth is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857034",
+                "Comment": "samba-winbind-krb5-locator is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857035",
+                "Comment": "task-samba-dc is earlier than 0:4.11.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202857036",
+                "Comment": "task-samba-dc-mitkrb5 is earlier than 0:4.11.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

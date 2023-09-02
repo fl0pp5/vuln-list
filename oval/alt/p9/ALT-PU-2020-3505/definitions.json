@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203505",
+      "Version": "oval:org.altlinux.errata:def:20203505",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3505: package `winetricks` update to version 20201206-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3505",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3505",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades winetricks to version 20201206-alt1. \nSecurity Fix(es):\n\n * #39411: обновите winetricks до версии 20201206",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-14"
+          },
+          "Updated": {
+            "Date": "2020-12-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39411",
+              "Href": "https://bugzilla.altlinux.org/39411",
+              "Data": "обновите winetricks до версии 20201206"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203505001",
+                "Comment": "winetricks is earlier than 0:20201206-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

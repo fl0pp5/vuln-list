@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234334",
+      "Version": "oval:org.altlinux.errata:def:20234334",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4334: package `open-vm-tools` update to version 12.2.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4334",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4334",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03162",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03162",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-31693",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31693",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-20867",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-20867",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades open-vm-tools to version 12.2.5-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03162: Уязвимость модуля vgauth компонента VMware Tools гипервизора VMware ESXi, позволяющая нарушителю оказать влияние на конфиденциальность и целостность защищаемой информации\n\n * CVE-2021-31693: The 10Web Photo Gallery plugin through 1.5.68 for WordPress allows XSS via album_gallery_id_0, bwg_album_search_0, and type_0 for bwg_frontend_data. NOTE: other parameters are covered by CVE-2021-24291, CVE-2021-25041, and CVE-2021-46889. NOTE: VMware information, previously connected to this CVE ID because of a typo, is at CVE-2022-31693.\n\n * CVE-2023-20867: A fully compromised ESXi host can force VMware Tools to fail to authenticate host-to-guest operations, impacting the confidentiality and integrity of the guest virtual machine.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-12"
+          },
+          "Updated": {
+            "Date": "2023-07-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:M/C:P/I:P/A:N",
+              "Cvss3": "AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2023-03162",
+              "Impact": "Low",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03162"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31693",
+              "Impact": "Low",
+              "Public": "20221129",
+              "CveID": "CVE-2021-31693"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-20867",
+              "Impact": "Low",
+              "Public": "20230613",
+              "CveID": "CVE-2023-20867"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234334001",
+                "Comment": "open-vm-tools is earlier than 0:12.2.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234334002",
+                "Comment": "open-vm-tools-desktop is earlier than 0:12.2.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234334003",
+                "Comment": "open-vm-tools-devel is earlier than 0:12.2.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234334004",
+                "Comment": "open-vm-tools-salt-minion is earlier than 0:12.2.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234334005",
+                "Comment": "open-vm-tools-test is earlier than 0:12.2.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

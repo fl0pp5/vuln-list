@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201103",
+      "Version": "oval:org.altlinux.errata:def:20201103",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1103: package `kernel-image-un-def` update to version 5.4.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1103",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1103",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02140",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02140",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12652",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12652",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.4.14-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02140: Уязвимость функции mptctl_ioctl (drivers/message/fusion/mptctl.c) ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2020-12652: The __mptctl_ioctl function in drivers/message/fusion/mptctl.c in the Linux kernel before 5.4.14 allows local users to hold an incorrect lock during the ioctl operation and trigger a race condition, i.e., a \"double fetch\" vulnerability, aka CID-28d76df18f0a. NOTE: the vendor states \"The security impact of this bug is not as bad as it could have been because these operations are all privileged and root already has enormous destructive power.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-01-27"
+          },
+          "Updated": {
+            "Date": "2020-01-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-02140",
+              "Impact": "Low",
+              "Public": "20200506",
+              "CveID": "BDU:2020-02140"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12652",
+              "Impact": "Low",
+              "Public": "20200505",
+              "CveID": "CVE-2020-12652"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103001",
+                "Comment": "kernel-doc-un is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103008",
+                "Comment": "kernel-modules-drm-radeon-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103010",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103011",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.4.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201103012",
+                "Comment": "kernel-modules-v4l-un-def is earlier than 1:5.4.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

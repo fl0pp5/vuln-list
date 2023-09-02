@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201020",
+      "Version": "oval:org.altlinux.errata:def:20201020",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1020: package `cyrus-imapd` update to version 3.0.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1020",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1020",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01976",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01976",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-19783",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19783",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cyrus-imapd to version 3.0.13-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01976: Уязвимость множества элементов сервера электронной почты Cyrus IMAP, связанная с недостатком механизма проверки вводимых данных, позволяющая нарушителю оказать воздействие на целостность информации\n\n * CVE-2019-19783: An issue was discovered in Cyrus IMAP before 2.5.15, 3.0.x before 3.0.13, and 3.1.x through 3.1.8. If sieve script uploading is allowed (3.x) or certain non-default sieve options are enabled (2.x), a user with a mail account on the service can use a sieve script containing a fileinto directive to create any mailbox with administrator privileges, because of folder mishandling in autosieve_createfolder() in imap/lmtp_sieve.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-01-10"
+          },
+          "Updated": {
+            "Date": "2020-01-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-01976",
+              "Impact": "Low",
+              "Public": "20191216",
+              "CveID": "BDU:2020-01976"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19783",
+              "Impact": "Low",
+              "Public": "20191216",
+              "CveID": "CVE-2019-19783"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020001",
+                "Comment": "cyrus-imapd is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020002",
+                "Comment": "cyrus-imapd-devel is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020003",
+                "Comment": "cyrus-imapd-doc is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020004",
+                "Comment": "cyrus-imapd-doc-full is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020005",
+                "Comment": "cyrus-imapd-ldap is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020006",
+                "Comment": "cyrus-imapd-murder is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020007",
+                "Comment": "cyrus-imapd-utils is earlier than 0:3.0.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201020008",
+                "Comment": "perl-Cyrus is earlier than 0:3.0.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

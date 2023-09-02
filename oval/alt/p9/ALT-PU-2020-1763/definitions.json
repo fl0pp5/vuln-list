@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201763",
+      "Version": "oval:org.altlinux.errata:def:20201763",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1763: package `kernel-image-std-def` update to version 5.4.31-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1763",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1763",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05727",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05727",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03144",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03144",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8835",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8835",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3715",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.31-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05727: Уязвимость компонента kernel/bpf/verifier.c ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-03144: Уязвимость функции route4_change() (net/sched/cls_route.c) ядра операционной системы Linux, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2020-8835: In the Linux kernel 5.5.0 and newer, the bpf verifier (kernel/bpf/verifier.c) did not properly restrict the register bounds for 32-bit operations, leading to out-of-bounds reads and writes in kernel memory. The vulnerability also affects the Linux 5.4 stable series, starting with v5.4.7, as the introducing commit was backported to that branch. This vulnerability was fixed in 5.6.1, 5.5.14, and 5.4.29. (issue is aka ZDI-CAN-10780)\n\n * CVE-2021-3715: A flaw was found in the \"Routing decision\" classifier in the Linux kernel's Traffic Control networking subsystem in the way it handled changing of classification filters, leading to a use-after-free condition. This flaw allows unprivileged local users to escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-16"
+          },
+          "Updated": {
+            "Date": "2020-04-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-05727",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "BDU:2020-05727"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-03144",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "BDU:2022-03144"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8835",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "CVE-2020-8835"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3715"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763001",
+                "Comment": "kernel-doc-std is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763003",
+                "Comment": "kernel-headers-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763005",
+                "Comment": "kernel-image-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:5.4.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201763012",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:5.4.31-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

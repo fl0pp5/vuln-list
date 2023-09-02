@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221258",
+      "Version": "oval:org.altlinux.errata:def:20221258",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1258: package `minio` update to version 2021.11.09-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1258",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1258",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03386",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03386",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-21287",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21287",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21362",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21362",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21390",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21390",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades minio to version 2021.11.09-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03386: Уязвимость сервера хранения объектов MinIO, связанная с ошибками авторизации, позволяющая нарушителю обойти политику readOnly и оказать воздействие на целостность защищаемой информации\n\n * CVE-2021-21287: MinIO is a High Performance Object Storage released under Apache License v2.0. In MinIO before version RELEASE.2021-01-30T00-20-58Z there is a server-side request forgery vulnerability. The target application may have functionality for importing data from a URL, publishing data to a URL, or otherwise reading data from a URL that can be tampered with. The attacker modifies the calls to this functionality by supplying a completely different URL or by manipulating how URLs are built (path traversal etc.). In a Server-Side Request Forgery (SSRF) attack, the attacker can abuse functionality on the server to read or update internal resources. The attacker can supply or modify a URL which the code running on the server will read or submit data, and by carefully selecting the URLs, the attacker may be able to read server configuration such as AWS metadata, connect to internal services like HTTP enabled databases, or perform post requests towards internal services which are not intended to be exposed. This is fixed in version RELEASE.2021-01-30T00-20-58Z, all users are advised to upgrade. As a workaround you can disable the browser front-end with \"MINIO_BROWSER=off\" environment variable.\n\n * CVE-2021-21362: MinIO is an open-source high performance object storage service and it is API compatible with Amazon S3 cloud storage service. In MinIO before version RELEASE.2021-03-04T00-53-13Z it is possible to bypass a readOnly policy by creating a temporary 'mc share upload' URL. Everyone is impacted who uses MinIO multi-users. This is fixed in version RELEASE.2021-03-04T00-53-13Z. As a workaround, one can disable uploads with `Content-Type: multipart/form-data` as mentioned in the S3 API RESTObjectPOST docs by using a proxy in front of MinIO.\n\n * CVE-2021-21390: MinIO is an open-source high performance object storage service and it is API compatible with Amazon S3 cloud storage service. In MinIO before version RELEASE.2021-03-17T02-33-02Z, there is a vulnerability which enables MITM modification of request bodies that are meant to have integrity guaranteed by chunk signatures. In a PUT request using aws-chunked encoding, MinIO ordinarily verifies signatures at the end of a chunk. This check can be skipped if the client sends a false chunk size that is much greater than the actual data sent: the server accepts and completes the request without ever reaching the end of the chunk + thereby without ever checking the chunk signature. This is fixed in version RELEASE.2021-03-17T02-33-02Z. As a workaround one can avoid using \"aws-chunked\" encoding-based chunk signature upload requests instead use TLS. MinIO SDKs automatically disable chunked encoding signature when the server endpoint is configured with TLS.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:H/A:N",
+              "Cwe": "CWE-285",
+              "Href": "https://bdu.fstec.ru/vul/2021-03386",
+              "Impact": "High",
+              "Public": "20210308",
+              "CveID": "BDU:2021-03386"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21287",
+              "Impact": "High",
+              "Public": "20210201",
+              "CveID": "CVE-2021-21287"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21362",
+              "Impact": "Low",
+              "Public": "20210308",
+              "CveID": "CVE-2021-21362"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-924",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21390",
+              "Impact": "Low",
+              "Public": "20210319",
+              "CveID": "CVE-2021-21390"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221258001",
+                "Comment": "minio is earlier than 0:2021.11.09-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

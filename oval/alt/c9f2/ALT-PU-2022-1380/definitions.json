@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221380",
+      "Version": "oval:org.altlinux.errata:def:20221380",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1380: package `php7-xsl` update to version 7.4.28-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1380",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1380",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05350",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05350",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-21708",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21708",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-xsl to version 7.4.28-alt1.1. \nSecurity Fix(es):\n\n * BDU:2022-05350: Уязвимость функции php_filter_float() интерпретатора языка программирования PHP, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-21708: In PHP versions 7.4.x below 7.4.28, 8.0.x below 8.0.16, and 8.1.x below 8.1.3, when using filter functions with FILTER_VALIDATE_FLOAT filter and min/max limits, if the filter fails, there is a possibility to trigger use of allocated memory after free, which can result it crashes, and potentially in overwrite of other memory chunks and RCE. This issue affects: code that uses FILTER_VALIDATE_FLOAT with min/max limits.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-25"
+          },
+          "Updated": {
+            "Date": "2022-02-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05350",
+              "Impact": "Critical",
+              "Public": "20220227",
+              "CveID": "BDU:2022-05350"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21708",
+              "Impact": "Critical",
+              "Public": "20220227",
+              "CveID": "CVE-2021-21708"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221380001",
+                "Comment": "php7-xsl is earlier than 0:7.4.28-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

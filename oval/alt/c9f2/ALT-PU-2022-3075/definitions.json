@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223075",
+      "Version": "oval:org.altlinux.errata:def:20223075",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3075: package `libreoffice-online` update to version 6.2.3.2-alt7",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3075",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3075",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades libreoffice-online to version 6.2.3.2-alt7. \nSecurity Fix(es):\n\n * #36344: Ошибка в конфигурации /etc/httpd2/conf/sites-enabled/libreoffice-online.conf",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-14"
+          },
+          "Updated": {
+            "Date": "2022-11-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36344",
+              "Href": "https://bugzilla.altlinux.org/36344",
+              "Data": "Ошибка в конфигурации /etc/httpd2/conf/sites-enabled/libreoffice-online.conf"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223075001",
+                "Comment": "libreoffice-online is earlier than 0:6.2.3.2-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223075002",
+                "Comment": "libreoffice-online-apache2 is earlier than 0:6.2.3.2-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223075003",
+                "Comment": "libreoffice-online-nginx is earlier than 0:6.2.3.2-alt7"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

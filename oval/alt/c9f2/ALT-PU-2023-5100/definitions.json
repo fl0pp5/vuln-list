@@ -1,0 +1,244 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235100",
+      "Version": "oval:org.altlinux.errata:def:20235100",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5100: package `haproxy` update to version 2.8.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5100",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5100",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02035",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02035",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06893",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06893",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00287",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00287",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00758",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00758",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04833",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04833",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11100",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11100",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39241",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39241",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-40346",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-40346",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0836",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0836",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-25725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25725",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-25950",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25950",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-40225",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-40225",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades haproxy to version 2.8.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02035: Уязвимость функции hpack_dht_insert (hpack-tbl.c) библиотеки сетевого программного обеспечения HAProxy, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить несанкционированный доступ к конфиденциальным данным, вызвать отказ в обслуживании или оказать воздействие на целостность данных\n\n * BDU:2022-06893: Уязвимость функции htx_add_header компонента include/haproxy/htx.h серверного программного обеспечения HAProxy, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2023-00287: Уязвимость метода HTTP серверного программного обеспечения HAProxy, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2023-00758: Уязвимость серверного программного обеспечения HAProxy, связанная с недостатками обработки HTTP-запросов, позволяющая нарушителю выполнять атаку «контрабанда HTTP-запросов»\n\n * BDU:2023-04833: Уязвимость серверного программного обеспечения HAProxy, связанная с неполной очисткой временных или вспомогательных ресурсов, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2020-11100: In hpack_dht_insert in hpack-tbl.c in the HPACK decoder in HAProxy 1.8 through 2.x before 2.1.4, a remote attacker can write arbitrary bytes around a certain location on the heap via a crafted HTTP/2 request, possibly causing remote code execution.\n\n * CVE-2021-39241: An issue was discovered in HAProxy 2.0 before 2.0.24, 2.2 before 2.2.16, 2.3 before 2.3.13, and 2.4 before 2.4.3. An HTTP method name may contain a space followed by the name of a protected resource. It is possible that a server would interpret this as a request for that protected resource, such as in the \"GET /admin? HTTP/1.1 /static/images HTTP/1.1\" example.\n\n * CVE-2021-40346: An integer overflow exists in HAProxy 2.0 through 2.5 in htx_add_header that can be exploited to perform an HTTP request smuggling attack, allowing an attacker to bypass all configured http-request HAProxy ACLs and possibly other ACLs.\n\n * CVE-2023-0836: An information leak vulnerability was discovered in HAProxy 2.1, 2.2 before 2.2.27, 2.3, 2.4 before 2.4.21, 2.5 before 2.5.11, 2.6 before 2.6.8, 2.7 before 2.7.1. There are 5 bytes left uninitialized in the connection buffer when encoding the FCGI_BEGIN_REQUEST record. Sensitive data may be disclosed to configured FastCGI backends in an unexpected way.\n\n * CVE-2023-25725: HAProxy before 2.7.3 may allow a bypass of access control because HTTP/1 headers are inadvertently lost in some situations, aka \"request smuggling.\" The HTTP header parsers in HAProxy may accept empty header field names, which could be used to truncate the list of HTTP headers and thus make some headers disappear after being parsed and processed for HTTP/1.0 and HTTP/1.1. For HTTP/2 and HTTP/3, the impact is limited because the headers disappear before being parsed and processed, as if they had not been sent by the client. The fixed versions are 2.7.3, 2.6.9, 2.5.12, 2.4.22, 2.2.29, and 2.0.31.\n\n * CVE-2023-25950: HTTP request/response smuggling vulnerability in HAProxy version 2.7.0, and 2.6.1 to 2.6.7 allows a remote attacker to alter a legitimate user's request. As a result, the attacker may obtain sensitive information or cause a denial-of-service (DoS) condition.\n\n * CVE-2023-40225: HAProxy through 2.0.32, 2.1.x and 2.2.x through 2.2.30, 2.3.x and 2.4.x through 2.4.23, 2.5.x and 2.6.x before 2.6.15, 2.7.x before 2.7.10, and 2.8.x before 2.8.2 forwards empty Content-Length headers, violating RFC 9110 section 8.6. In uncommon cases, an HTTP/1 server behind HAProxy may interpret the payload as an extra request.\n\n * #45005: сервис haproxy не запускается",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-25"
+          },
+          "Updated": {
+            "Date": "2023-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-02035",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "BDU:2020-02035"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-06893",
+              "Impact": "High",
+              "Public": "20210907",
+              "CveID": "BDU:2022-06893"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-00287",
+              "Impact": "Low",
+              "Public": "20210811",
+              "CveID": "BDU:2023-00287"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2023-00758",
+              "Impact": "High",
+              "Public": "20230214",
+              "CveID": "BDU:2023-00758"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-459",
+              "Href": "https://bdu.fstec.ru/vul/2023-04833",
+              "Impact": "High",
+              "Public": "20221209",
+              "CveID": "BDU:2023-04833"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11100",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "CVE-2020-11100"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39241",
+              "Impact": "Low",
+              "Public": "20210817",
+              "CveID": "CVE-2021-39241"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-40346",
+              "Impact": "High",
+              "Public": "20210908",
+              "CveID": "CVE-2021-40346"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-459",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0836",
+              "Impact": "High",
+              "Public": "20230329",
+              "CveID": "CVE-2023-0836"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25725",
+              "Impact": "Critical",
+              "Public": "20230214",
+              "CveID": "CVE-2023-25725"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25950",
+              "Impact": "High",
+              "Public": "20230411",
+              "CveID": "CVE-2023-25950"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-40225",
+              "Impact": "High",
+              "Public": "20230810",
+              "CveID": "CVE-2023-40225"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45005",
+              "Href": "https://bugzilla.altlinux.org/45005",
+              "Data": "сервис haproxy не запускается"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235100001",
+                "Comment": "haproxy is earlier than 0:2.8.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

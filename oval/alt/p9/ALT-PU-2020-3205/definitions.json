@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203205",
+      "Version": "oval:org.altlinux.errata:def:20203205",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3205: package `libsdp` update to version 1.1.108-alt1.0.17.ga6958ef",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3205",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3205",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2010-4173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2010-4173",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libsdp to version 1.1.108-alt1.0.17.ga6958ef. \nSecurity Fix(es):\n\n * CVE-2010-4173: The default configuration of libsdp.conf in libsdp 1.1.104 and earlier creates log files in /tmp, which allows local users to overwrite arbitrary files via a (1) symlink or (2) hard link attack on the libsdp.log.##### temporary file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-05"
+          },
+          "Updated": {
+            "Date": "2020-11-05"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2010-4173",
+              "Impact": "Low",
+              "Public": "20101122",
+              "CveID": "CVE-2010-4173"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203205001",
+                "Comment": "libsdp is earlier than 0:1.1.108-alt1.0.17.ga6958ef"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203205002",
+                "Comment": "libsdp-devel is earlier than 0:1.1.108-alt1.0.17.ga6958ef"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203205003",
+                "Comment": "libsdp-devel-static is earlier than 0:1.1.108-alt1.0.17.ga6958ef"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234572",
+      "Version": "oval:org.altlinux.errata:def:20234572",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4572: package `apt` update to version 0.5.15lorg2-alt86",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4572",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4572",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades apt to version 0.5.15lorg2-alt86. \nSecurity Fix(es):\n\n * #40826: aptitude показывает только первую строчку в описании\n\n * #44941: Проблема с кодировкой в описании предупреждения\n\n * #46105: apt: ошибка сборки с GCC 13\n\n * #46251: packagekit fails to show the description of a package if it is translated",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-08"
+          },
+          "Updated": {
+            "Date": "2023-08-08"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40826",
+              "Href": "https://bugzilla.altlinux.org/40826",
+              "Data": "aptitude показывает только первую строчку в описании"
+            },
+            {
+              "Id": "44941",
+              "Href": "https://bugzilla.altlinux.org/44941",
+              "Data": "Проблема с кодировкой в описании предупреждения"
+            },
+            {
+              "Id": "46105",
+              "Href": "https://bugzilla.altlinux.org/46105",
+              "Data": "apt: ошибка сборки с GCC 13"
+            },
+            {
+              "Id": "46251",
+              "Href": "https://bugzilla.altlinux.org/46251",
+              "Data": "packagekit fails to show the description of a package if it is translated"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572001",
+                "Comment": "apt is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572002",
+                "Comment": "apt-basic-checkinstall is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572003",
+                "Comment": "apt-checkinstall is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572004",
+                "Comment": "apt-https is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572005",
+                "Comment": "apt-rsync is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572006",
+                "Comment": "apt-tests is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572007",
+                "Comment": "apt-under-pkdirect-checkinstall is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572008",
+                "Comment": "apt-xxtra-heavy-load-checkinstall is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572009",
+                "Comment": "libapt is earlier than 0:0.5.15lorg2-alt86"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234572010",
+                "Comment": "libapt-devel is earlier than 0:0.5.15lorg2-alt86"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

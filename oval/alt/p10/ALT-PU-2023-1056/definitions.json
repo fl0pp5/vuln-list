@@ -1,0 +1,195 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231056",
+      "Version": "oval:org.altlinux.errata:def:20231056",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1056: package `nextcloud` update to version 25.0.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1056",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1056",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-39329",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39329",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39330",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39330",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39364",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39364",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41968",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41968",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41969",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41969",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-25162",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25162",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-25817",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25817",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nextcloud to version 25.0.0-alt1. \nSecurity Fix(es):\n\n * CVE-2022-39329: Nextcloud Server is the file server software for Nextcloud, a self-hosted productivity platform. Nextcloud Server and Nextcloud Enterprise Server prior to versions 23.0.9 and 24.0.5 are vulnerable to exposure of information that cannot be controlled by administrators without direct database access. Versions 23.0.9 and 24.0.5 contains patches for this issue. No known workarounds are available.\n\n * CVE-2022-39330: Nextcloud Server is the file server software for Nextcloud, a self-hosted productivity platform. Nextcloud Server prior to versions 23.0.10 and 24.0.6 and Nextcloud Enterprise Server prior to versions 22.2.10, 23.0.10, and 24.0.6 are vulnerable to a logged-in attacker slowing down the system by generating a lot of database/cpu load. Nextcloud Server versions 23.0.10 and 24.0.6 and Nextcloud Enterprise Server versions 22.2.10, 23.0.10, and 24.0.6 contain patches for this issue. As a workaround, disable the Circles app.\n\n * CVE-2022-39364: Nextcloud Server is the file server software for Nextcloud, a self-hosted productivity platform. In Nextcloud Server prior to versions 23.0.9 and 24.0.5 and Nextcloud Enterprise Server prior to versions 22.2.10.5, 23.0.9, and 24.0.5 an attacker reading `nextcloud.log` may gain knowledge of credentials to connect to a SharePoint service. Nextcloud Server versions 23.0.9 and 24.0.5 and Nextcloud Enterprise Server versions 22.2.10.5, 23.0.9, and 24.0.5 contain a patch for this issue. As a workaround, set `zend.exception_ignore_args = On` as an option in `php.ini`.\n\n * CVE-2022-41968: Nextcloud Server is an open source personal cloud server. Prior to versions 23.0.10 and 24.0.5, calendar name lengths are not validated before writing to a database. As a result, an attacker can send unnecessary amounts of data against the database. Version 23.0.10 and 24.0.5 contain patches for the issue. No known workarounds are available.\n\n * CVE-2022-41969: Nextcloud Server is an open source personal cloud server. Prior to versions 23.0.11, 24.0.7, and 25.0.0, there is no password length limit when creating a user as an administrator. An administrator can cause a limited DoS attack against their own server. Versions 23.0.11, 24.0.7, and 25.0.0 contain a fix for the issue. As a workaround, don't create user accounts with long passwords.\n\n * CVE-2023-25162: Nextcloud Server is the file server software for Nextcloud, a self-hosted productivity platform. Nextcloud Server prior to 24.0.8 and 23.0.12 and Nextcloud Enterprise server prior to 24.0.8 and 23.0.12 are vulnerable to server-side request forgery (SSRF). Attackers can leverage enclosed alphanumeric payloads to bypass IP filters and gain SSRF, which would allow an attacker to read crucial metadata if the server is hosted on the AWS platform. Nextcloud Server 24.0.8 and 23.0.2 and Nextcloud Enterprise Server 24.0.8 and 23.0.12 contain a patch for this issue. No known workarounds are available.\n\n * CVE-2023-25817: Nextcloud server is an open source, personal cloud implementation. In versions from 24.0.0 and before 24.0.9 a user could escalate their permissions to delete files they were not supposed to deletable but only viewed or downloaded. This issue has been addressed andit is recommended that the Nextcloud Server is upgraded to 24.0.9. There are no known workarounds for this vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-16"
+          },
+          "Updated": {
+            "Date": "2023-01-16"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39329",
+              "Impact": "Low",
+              "Public": "20221027",
+              "CveID": "CVE-2022-39329"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39330",
+              "Impact": "Low",
+              "Public": "20221027",
+              "CveID": "CVE-2022-39330"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-312",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39364",
+              "Impact": "Low",
+              "Public": "20221027",
+              "CveID": "CVE-2022-39364"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-1284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41968",
+              "Impact": "Low",
+              "Public": "20221201",
+              "CveID": "CVE-2022-41968"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-521",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41969",
+              "Impact": "Low",
+              "Public": "20221201",
+              "CveID": "CVE-2022-41969"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25162",
+              "Impact": "Low",
+              "Public": "20230213",
+              "CveID": "CVE-2023-25162"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25817",
+              "Impact": "High",
+              "Public": "20230327",
+              "CveID": "CVE-2023-25817"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231056001",
+                "Comment": "nextcloud is earlier than 0:25.0.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231056002",
+                "Comment": "nextcloud-apache2 is earlier than 0:25.0.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231056003",
+                "Comment": "nextcloud-nginx is earlier than 0:25.0.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

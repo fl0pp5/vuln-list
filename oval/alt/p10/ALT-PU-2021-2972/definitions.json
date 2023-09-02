@@ -1,0 +1,353 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212972",
+      "Version": "oval:org.altlinux.errata:def:20212972",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2972: package `apache2` update to version 2.4.49-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2972",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2972",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04216",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04216",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04820",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04820",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05873",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05873",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06099",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06099",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00203",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00203",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33193",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33193",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-34798",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34798",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36160",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36160",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39275",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39275",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-40438",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-40438",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades apache2 to version 2.4.49-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04216: Уязвимость модуля mod_proxy httpd-демона веб-сервера Apache HTTP Server, позволяющая нарушителю отправить скрытый HTTP-запрос (атака типа HTTP Request Smuggling)\n\n * BDU:2021-04820: Уязвимость модуля mod_proxy веб-сервера Apache HTTP Server, позволяющая нарушителю осуществить SSRF-атаку\n\n * BDU:2021-05873: Уязвимость веб-сервера Apache HTTP Server, связанная с разыменованием нулевого указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-06099: Уязвимость функции mod_proxy_uwsgi веб-сервера Apache HTTP Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00203: Уязвимость функции ap_escape_quotes() веб-сервера Apache HTTP Server, связанная с записью за границами буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-33193: A crafted method sent through HTTP/2 will bypass validation and be forwarded by mod_proxy, which can lead to request splitting or cache poisoning. This issue affects Apache HTTP Server 2.4.17 to 2.4.48.\n\n * CVE-2021-34798: Malformed requests may cause the server to dereference a NULL pointer. This issue affects Apache HTTP Server 2.4.48 and earlier.\n\n * CVE-2021-36160: A carefully crafted request uri-path can cause mod_proxy_uwsgi to read above the allocated memory and crash (DoS). This issue affects Apache HTTP Server versions 2.4.30 to 2.4.48 (inclusive).\n\n * CVE-2021-39275: ap_escape_quotes() may write beyond the end of a buffer when given malicious input. No included modules pass untrusted data to these functions, but third-party / external modules may. This issue affects Apache HTTP Server 2.4.48 and earlier.\n\n * CVE-2021-40438: A crafted request uri-path can cause mod_proxy to forward the request to an origin server choosen by the remote user. This issue affects Apache HTTP Server 2.4.48 and earlier.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-04"
+          },
+          "Updated": {
+            "Date": "2021-10-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2021-04216",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-04216"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2021-04820",
+              "Impact": "Critical",
+              "Public": "20210923",
+              "CveID": "BDU:2021-04820"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-05873",
+              "Impact": "High",
+              "Public": "20210916",
+              "CveID": "BDU:2021-05873"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-06099",
+              "Impact": "High",
+              "Public": "20210426",
+              "CveID": "BDU:2021-06099"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-00203",
+              "Impact": "Critical",
+              "Public": "20210804",
+              "CveID": "BDU:2022-00203"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33193",
+              "Impact": "High",
+              "Public": "20210816",
+              "CveID": "CVE-2021-33193"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34798",
+              "Impact": "High",
+              "Public": "20210916",
+              "CveID": "CVE-2021-34798"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36160",
+              "Impact": "High",
+              "Public": "20210916",
+              "CveID": "CVE-2021-36160"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39275",
+              "Impact": "Critical",
+              "Public": "20210916",
+              "CveID": "CVE-2021-39275"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-40438",
+              "Impact": "Critical",
+              "Public": "20210916",
+              "CveID": "CVE-2021-40438"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972001",
+                "Comment": "apache2 is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972002",
+                "Comment": "apache2-ab is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972003",
+                "Comment": "apache2-base is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972004",
+                "Comment": "apache2-cgi-bin is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972005",
+                "Comment": "apache2-cgi-bin-printenv is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972006",
+                "Comment": "apache2-cgi-bin-test-cgi is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972007",
+                "Comment": "apache2-compat is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972008",
+                "Comment": "apache2-configs-A1PROXIED is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972009",
+                "Comment": "apache2-datadirs is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972010",
+                "Comment": "apache2-devel is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972011",
+                "Comment": "apache2-docs is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972012",
+                "Comment": "apache2-full is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972013",
+                "Comment": "apache2-htcacheclean is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972014",
+                "Comment": "apache2-htcacheclean-control is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972015",
+                "Comment": "apache2-html is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972016",
+                "Comment": "apache2-htpasswd is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972017",
+                "Comment": "apache2-httpd-event is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972018",
+                "Comment": "apache2-httpd-prefork is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972019",
+                "Comment": "apache2-httpd-worker is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972020",
+                "Comment": "apache2-icons is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972021",
+                "Comment": "apache2-manual is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972022",
+                "Comment": "apache2-manual-addons is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972023",
+                "Comment": "apache2-mod_cache_disk is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972024",
+                "Comment": "apache2-mod_ldap is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972025",
+                "Comment": "apache2-mod_proxy_html is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972026",
+                "Comment": "apache2-mod_ssl is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972027",
+                "Comment": "apache2-mod_ssl-compat is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972028",
+                "Comment": "apache2-mods is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972029",
+                "Comment": "apache2-suexec is earlier than 1:2.4.49-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212972030",
+                "Comment": "rpm-build-apache2 is earlier than 1:2.4.49-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

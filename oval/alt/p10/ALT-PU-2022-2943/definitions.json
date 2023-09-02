@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222943",
+      "Version": "oval:org.altlinux.errata:def:20222943",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2943: package `dovecot` update to version 2.3.19.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2943",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2943",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-30550",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30550",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dovecot to version 2.3.19.1-alt2. \nSecurity Fix(es):\n\n * CVE-2022-30550: An issue was discovered in the auth component in Dovecot 2.2 and 2.3 before 2.3.20. When two passdb configuration entries exist with the same driver and args settings, incorrect username_filter and mechanism settings can be applied to passdb definitions. These incorrectly applied settings can lead to an unintended security configuration and can permit privilege escalation in certain configurations. The documentation does not advise against the use of passdb definitions that have the same driver and args settings. One such configuration would be where an administrator wishes to use the same PAM configuration or passwd file for both normal and master users but use the username_filter setting to restrict which of the users is able to be a master user.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-27"
+          },
+          "Updated": {
+            "Date": "2022-10-27"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30550",
+              "Impact": "High",
+              "Public": "20220717",
+              "CveID": "CVE-2022-30550"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222943001",
+                "Comment": "dovecot is earlier than 0:2.3.19.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222943002",
+                "Comment": "dovecot-devel is earlier than 0:2.3.19.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

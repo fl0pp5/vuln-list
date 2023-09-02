@@ -1,0 +1,519 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213508",
+      "Version": "oval:org.altlinux.errata:def:20213508",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3508: package `ffmpeg` update to version 4.3.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3508",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3508",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01214",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01214",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03446",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03446",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05156",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05156",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05189",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05189",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05242",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05242",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05271",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05271",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00199",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00199",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00241",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00241",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05880",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05880",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05881",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05881",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05971",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05971",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-20446",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-20446",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-20450",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-20450",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-20453",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-20453",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22015",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22015",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22019",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22019",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22021",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22021",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22037",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22037",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22042",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22042",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35964",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35964",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35965",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35965",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3566",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3566",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38171",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38171",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38291",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38291",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ffmpeg to version 4.3.3-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01214: Уязвимость функции track_header() библиотеки libavformat мультимедийной среды Ffmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03446: Уязвимость функции decode_frame компонента libavcodec/exr.c мультимедийной библиотеки FFmpeg, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05156: Уязвимость функции filter_edges библиотеки Ffmpeg, связанная с переполнением буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05189: Уязвимость компонента mov_write_video_tag библиотеки Ffmpeg, связанная с переполнением буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05242: Уязвимость компонента libavcodec/dnxhddec.c мультимедийной библиотеки FFmpeg, связанная с непроверенным возвращаемым значением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05271: Уязвимость демультиплексора tty мультимедийной библиотеки FFmpeg, связанная с раскрытием информации, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-00199: Уязвимость функции adts_decode_extradata компонента libavformat/adtsenc.c мультимедийной библиотеки FFmpeg, связанная с непроверенным возвращаемым значением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-00241: Уязвимость функции convolution_y_10bit мультимедийной библиотеки Ffmpeg, связанная с переполнением буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05880: Уязвимость компонента libavcodec/aaccoder мультимедийной библиотеки FFmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05881: Уязвимость функции avcodec_alloc_context3 компонента options.c мультимедийной библиотеки FFmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05971: Уязвимость компонента src/libavutil/mathematics.c мультимедийной библиотеки FFmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-20446: FFmpeg 4.2 is affected by a Divide By Zero issue via libavcodec/aacpsy.c, which allows a remote malicious user to cause a Denial of Service.\n\n * CVE-2020-20450: FFmpeg 4.2 is affected by null pointer dereference passed as argument to libavformat/aviobuf.c, which could cause a Denial of Service.\n\n * CVE-2020-20453: FFmpeg 4.2 is affected by a Divide By Zero issue via libavcodec/aaccoder, which allows a remote malicious user to cause a Denial of Service\n\n * CVE-2020-22015: Buffer Overflow vulnerability in FFmpeg 4.2 in mov_write_video_tag due to the out of bounds in libavformat/movenc.c, which could let a remote malicious user obtain sensitive information, cause a Denial of Service, or execute arbitrary code.\n\n * CVE-2020-22019: Buffer Overflow vulnerability in FFmpeg 4.2 at convolution_y_10bit in libavfilter/vf_vmafmotion.c, which could let a remote malicious user cause a Denial of Service.\n\n * CVE-2020-22021: Buffer Overflow vulnerability in FFmpeg 4.2 at filter_edges function in libavfilter/vf_yadif.c, which could let a remote malicious user cause a Denial of Service.\n\n * CVE-2020-22037: A Denial of Service vulnerability exists in FFmpeg 4.2 due to a memory leak in avcodec_alloc_context3 at options.c.\n\n * CVE-2020-22042: A Denial of Service vulnerability exists in FFmpeg 4.2 due to a memory leak is affected by: memory leak in the link_filter_inouts function in libavfilter/graphparser.c.\n\n * CVE-2020-35964: track_header in libavformat/vividas.c in FFmpeg 4.3.1 has an out-of-bounds write because of incorrect extradata packing.\n\n * CVE-2020-35965: decode_frame in libavcodec/exr.c in FFmpeg 4.3.1 has an out-of-bounds write because of errors in calculations of when to perform memset zero operations.\n\n * CVE-2021-3566: Prior to ffmpeg version 4.3, the tty demuxer did not have a 'read_probe' function assigned to it. By crafting a legitimate \"ffconcat\" file that references an image, followed by a file the triggers the tty demuxer, the contents of the second file will be copied into the output file verbatim (as long as the `-vcodec copy` option is passed to ffmpeg).\n\n * CVE-2021-38114: libavcodec/dnxhddec.c in FFmpeg 4.4 does not check the return value of the init_vlc function, a similar issue to CVE-2013-0868.\n\n * CVE-2021-38171: adts_decode_extradata in libavformat/adtsenc.c in FFmpeg 4.4 does not check the init_get_bits return value, which is a necessary step because the second argument to init_get_bits can be crafted.\n\n * CVE-2021-38291: FFmpeg version (git commit de8e6e67e7523e48bb27ac224a0b446df05e1640) suffers from a an assertion failure at src/libavutil/mathematics.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-10"
+          },
+          "Updated": {
+            "Date": "2021-12-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01214",
+              "Impact": "Low",
+              "Public": "20201024",
+              "CveID": "BDU:2021-01214"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03446",
+              "Impact": "High",
+              "Public": "20201020",
+              "CveID": "BDU:2021-03446"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05156",
+              "Impact": "Low",
+              "Public": "20210603",
+              "CveID": "BDU:2021-05156"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05189",
+              "Impact": "High",
+              "Public": "20210603",
+              "CveID": "BDU:2021-05189"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-252",
+              "Href": "https://bdu.fstec.ru/vul/2021-05242",
+              "Impact": "Low",
+              "Public": "20210803",
+              "CveID": "BDU:2021-05242"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2021-05271",
+              "Impact": "Low",
+              "Public": "20200129",
+              "CveID": "BDU:2021-05271"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://bdu.fstec.ru/vul/2022-00199",
+              "Impact": "Critical",
+              "Public": "20210806",
+              "CveID": "BDU:2022-00199"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-00241",
+              "Impact": "Low",
+              "Public": "20210603",
+              "CveID": "BDU:2022-00241"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://bdu.fstec.ru/vul/2022-05880",
+              "Impact": "Low",
+              "Public": "20190707",
+              "CveID": "BDU:2022-05880"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-05881",
+              "Impact": "Low",
+              "Public": "20191015",
+              "CveID": "BDU:2022-05881"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2022-05971",
+              "Impact": "High",
+              "Public": "20210630",
+              "CveID": "BDU:2022-05971"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-20446",
+              "Impact": "Low",
+              "Public": "20210525",
+              "CveID": "CVE-2020-20446"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-20450",
+              "Impact": "High",
+              "Public": "20210525",
+              "CveID": "CVE-2020-20450"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-20453",
+              "Impact": "Low",
+              "Public": "20210525",
+              "CveID": "CVE-2020-20453"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22015",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2020-22015"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22019",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2020-22019"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22021",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2020-22021"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22037",
+              "Impact": "Low",
+              "Public": "20210601",
+              "CveID": "CVE-2020-22037"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22042",
+              "Impact": "Low",
+              "Public": "20210601",
+              "CveID": "CVE-2020-22042"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35964",
+              "Impact": "Low",
+              "Public": "20210103",
+              "CveID": "CVE-2020-35964"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35965",
+              "Impact": "High",
+              "Public": "20210104",
+              "CveID": "CVE-2020-35965"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3566",
+              "Impact": "Low",
+              "Public": "20210805",
+              "CveID": "CVE-2021-3566"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38114",
+              "Impact": "Low",
+              "Public": "20210804",
+              "CveID": "CVE-2021-38114"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38171",
+              "Impact": "Critical",
+              "Public": "20210821",
+              "CveID": "CVE-2021-38171"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38291",
+              "Impact": "High",
+              "Public": "20210812",
+              "CveID": "CVE-2021-38291"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508001",
+                "Comment": "ffmpeg is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508002",
+                "Comment": "ffmpeg-doc is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508003",
+                "Comment": "ffplay is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508004",
+                "Comment": "ffplay-doc is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508005",
+                "Comment": "ffprobe is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508006",
+                "Comment": "ffprobe-doc is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508007",
+                "Comment": "ffserver-doc is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508008",
+                "Comment": "libavcodec-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508009",
+                "Comment": "libavcodec58 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508010",
+                "Comment": "libavdevice-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508011",
+                "Comment": "libavdevice58 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508012",
+                "Comment": "libavfilter-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508013",
+                "Comment": "libavfilter7 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508014",
+                "Comment": "libavformat-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508015",
+                "Comment": "libavformat58 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508016",
+                "Comment": "libavresample-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508017",
+                "Comment": "libavresample4 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508018",
+                "Comment": "libavutil-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508019",
+                "Comment": "libavutil56 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508020",
+                "Comment": "libpostproc-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508021",
+                "Comment": "libpostproc55 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508022",
+                "Comment": "libswresample-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508023",
+                "Comment": "libswresample3 is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508024",
+                "Comment": "libswscale-devel is earlier than 2:4.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213508025",
+                "Comment": "libswscale5 is earlier than 2:4.3.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

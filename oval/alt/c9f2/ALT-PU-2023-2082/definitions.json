@@ -1,0 +1,90 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232082",
+      "Version": "oval:org.altlinux.errata:def:20232082",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2082: package `libid3tag` update to version 0.15.1b-alt10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2082",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2082",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2004-2779",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2004-2779",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libid3tag to version 0.15.1b-alt10. \nSecurity Fix(es):\n\n * CVE-2004-2779: id3_utf16_deserialize() in utf16.c in libid3tag through 0.15.1b misparses ID3v2 tags encoded in UTF-16 with an odd number of bytes, triggering an endless loop allocating memory until an OOM condition is reached, leading to denial-of-service (DoS).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-27"
+          },
+          "Updated": {
+            "Date": "2023-06-27"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-399",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2004-2779",
+              "Impact": "High",
+              "Public": "20180220",
+              "CveID": "CVE-2004-2779"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232082001",
+                "Comment": "libid3tag is earlier than 0:0.15.1b-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232082002",
+                "Comment": "libid3tag-devel is earlier than 0:0.15.1b-alt10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

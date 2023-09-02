@@ -1,0 +1,289 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193183",
+      "Version": "oval:org.altlinux.errata:def:20193183",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3183: package `otrs` update to version 6.0.23-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3183",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3183",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2017-16664",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-16664",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-16854",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-16854",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-16921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-16921",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-17476",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-17476",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7567",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7567",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10067",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10067",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12248",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12248",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12497",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12497",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12746",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12746",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13458",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13458",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16375",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16375",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9752",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9752",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9892",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9892",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades otrs to version 6.0.23-alt1. \nSecurity Fix(es):\n\n * CVE-2017-16664: Code injection exists in Kernel/System/Spelling.pm in Open Ticket Request System (OTRS) 5 before 5.0.24, 4 before 4.0.26, and 3.3 before 3.3.20. In the agent interface, an authenticated remote attacker can execute shell commands as the webserver user via URL manipulation.\n\n * CVE-2017-16854: In Open Ticket Request System (OTRS) through 3.3.20, 4 through 4.0.26, 5 through 5.0.24, and 6 through 6.0.1, an attacker who is logged in as a customer can use the ticket search form to disclose internal article information of their customer tickets.\n\n * CVE-2017-16921: In OTRS 6.0.x up to and including 6.0.1, OTRS 5.0.x up to and including 5.0.24, and OTRS 4.0.x up to and including 4.0.26, an attacker who is logged into OTRS as an agent can manipulate form parameters (related to PGP) and execute arbitrary shell commands with the permissions of the OTRS or web server user.\n\n * CVE-2017-17476: Open Ticket Request System (OTRS) 4.0.x before 4.0.28, 5.0.x before 5.0.26, and 6.0.x before 6.0.3, when cookie support is disabled, might allow remote attackers to hijack web sessions and consequently gain privileges via a crafted email.\n\n * CVE-2018-7567: ** DISPUTED ** In the Admin Package Manager in Open Ticket Request System (OTRS) 5.0.0 through 5.0.24 and 6.0.0 through 6.0.1, authenticated admins are able to exploit a Blind Remote Code Execution vulnerability by loading a crafted opm file with an embedded CodeInstall element to execute a command on the server during package installation.  NOTE: the vendor disputes this issue stating \"the behaviour is as designed and needed for different packages to be installed\", \"there is a security warning if the package is not verified by OTRS Group\", and \"there is the possibility and responsibility of an admin to check packages before installation which is possible as they are not binary.\"\n\n * CVE-2019-10067: An issue was discovered in Open Ticket Request System (OTRS) 7.x through 7.0.6 and Community Edition 5.0.x through 5.0.35 and 6.0.x through 6.0.17. An attacker who is logged into OTRS as an agent user with appropriate permissions may manipulate the URL to cause execution of JavaScript in the context of OTRS.\n\n * CVE-2019-12248: An issue was discovered in Open Ticket Request System (OTRS) 7.0.x through 7.0.7, Community Edition 6.0.x through 6.0.19, and Community Edition 5.0.x through 5.0.36. An attacker could send a malicious email to an OTRS system. If a logged-in agent user quotes it, the email could cause the browser to load external image resources.\n\n * CVE-2019-12497: An issue was discovered in Open Ticket Request System (OTRS) 7.0.x through 7.0.8, Community Edition 6.0.x through 6.0.19, and Community Edition 5.0.x through 5.0.36. In the customer or external frontend, personal information of agents (e.g., Name and mail address) can be disclosed in external notes.\n\n * CVE-2019-12746: An issue was discovered in Open Ticket Request System (OTRS) Community Edition 5.0.x through 5.0.36 and 6.0.x through 6.0.19. A user logged into OTRS as an agent might unknowingly disclose their session ID by sharing the link of an embedded ticket article with third parties. This identifier can be then be potentially abused in order to impersonate the agent user.\n\n * CVE-2019-13458: An issue was discovered in Open Ticket Request System (OTRS) 7.0.x through 7.0.8, and Community Edition 5.0.x through 5.0.36 and 6.0.x through 6.0.19. An attacker who is logged into OTRS as an agent user with appropriate permissions can leverage OTRS notification tags in templates in order to disclose hashed user passwords.\n\n * CVE-2019-16375: An issue was discovered in Open Ticket Request System (OTRS) 7.0.x through 7.0.11, and Community Edition 5.0.x through 5.0.37 and 6.0.x through 6.0.22. An attacker who is logged in as an agent or customer user with appropriate permissions can create a carefully crafted string containing malicious JavaScript code as an article body. This malicious code is executed when an agent composes an answer to the original article.\n\n * CVE-2019-9752: An issue was discovered in Open Ticket Request System (OTRS) 5.x before 5.0.34, 6.x before 6.0.16, and 7.x before 7.0.4. An attacker who is logged into OTRS as an agent or a customer user may upload a carefully crafted resource in order to cause execution of JavaScript in the context of OTRS. This is related to Content-type mishandling in Kernel/Modules/PictureUpload.pm.\n\n * CVE-2019-9892: An issue was discovered in Open Ticket Request System (OTRS) 5.x through 5.0.34, 6.x through 6.0.17, and 7.x through 7.0.6. An attacker who is logged into OTRS as an agent user with appropriate permissions may try to import carefully crafted Report Statistics XML that will result in reading of arbitrary files on the OTRS filesystem.\n\n * #37331: Просьба обновить",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-25"
+          },
+          "Updated": {
+            "Date": "2019-11-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-16664",
+              "Impact": "High",
+              "Public": "20171121",
+              "CveID": "CVE-2017-16664"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-16854",
+              "Impact": "Low",
+              "Public": "20171208",
+              "CveID": "CVE-2017-16854"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-16921",
+              "Impact": "High",
+              "Public": "20171208",
+              "CveID": "CVE-2017-16921"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-17476",
+              "Impact": "High",
+              "Public": "20171220",
+              "CveID": "CVE-2017-17476"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-434",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7567",
+              "Impact": "High",
+              "Public": "20180304",
+              "CveID": "CVE-2018-7567"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10067",
+              "Impact": "Low",
+              "Public": "20190522",
+              "CveID": "CVE-2019-10067"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12248",
+              "Impact": "Low",
+              "Public": "20190617",
+              "CveID": "CVE-2019-12248"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12497",
+              "Impact": "Low",
+              "Public": "20190617",
+              "CveID": "CVE-2019-12497"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12746",
+              "Impact": "Low",
+              "Public": "20190821",
+              "CveID": "CVE-2019-12746"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13458",
+              "Impact": "Low",
+              "Public": "20190821",
+              "CveID": "CVE-2019-13458"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16375",
+              "Impact": "Low",
+              "Public": "20200319",
+              "CveID": "CVE-2019-16375"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9752",
+              "Impact": "Low",
+              "Public": "20190313",
+              "CveID": "CVE-2019-9752"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-91",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9892",
+              "Impact": "Low",
+              "Public": "20190522",
+              "CveID": "CVE-2019-9892"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37331",
+              "Href": "https://bugzilla.altlinux.org/37331",
+              "Data": "Просьба обновить"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193183001",
+                "Comment": "otrs is earlier than 0:6.0.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193183002",
+                "Comment": "otrs-apache2 is earlier than 0:6.0.23-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

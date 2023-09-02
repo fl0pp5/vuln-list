@@ -1,0 +1,201 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211786",
+      "Version": "oval:org.altlinux.errata:def:20211786",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1786: package `bind` update to version 9.11.31-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1786",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1786",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02773",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02773",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02777",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02777",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02778",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02778",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-25214",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25214",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25215",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25216",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25216",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades bind to version 9.11.31-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02773: Уязвимость компонента GSS-TSIG сервера BIND, связанная с записью за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-02777: Уязвимость сервера DNS BIND, связанная с недостатком использования функции assert(), позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-02778: Уязвимость компонента named сервера DNS BIND, связанная с недостатком использования функции assert(), позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-25214: In BIND 9.8.5 -\u003e 9.8.8, 9.9.3 -\u003e 9.11.29, 9.12.0 -\u003e 9.16.13, and versions BIND 9.9.3-S1 -\u003e 9.11.29-S1 and 9.16.8-S1 -\u003e 9.16.13-S1 of BIND 9 Supported Preview Edition, as well as release versions 9.17.0 -\u003e 9.17.11 of the BIND 9.17 development branch, when a vulnerable version of named receives a malformed IXFR triggering the flaw described above, the named process will terminate due to a failed assertion the next time the transferred secondary zone is refreshed.\n\n * CVE-2021-25215: In BIND 9.0.0 -\u003e 9.11.29, 9.12.0 -\u003e 9.16.13, and versions BIND 9.9.3-S1 -\u003e 9.11.29-S1 and 9.16.8-S1 -\u003e 9.16.13-S1 of BIND Supported Preview Edition, as well as release versions 9.17.0 -\u003e 9.17.11 of the BIND 9.17 development branch, when a vulnerable version of named receives a query for a record triggering the flaw described above, the named process will terminate due to a failed assertion check. The vulnerability affects all currently maintained BIND 9 branches (9.11, 9.11-S, 9.16, 9.16-S, 9.17) as well as all other versions of BIND 9.\n\n * CVE-2021-25216: In BIND 9.5.0 -\u003e 9.11.29, 9.12.0 -\u003e 9.16.13, and versions BIND 9.11.3-S1 -\u003e 9.11.29-S1 and 9.16.8-S1 -\u003e 9.16.13-S1 of BIND Supported Preview Edition, as well as release versions 9.17.0 -\u003e 9.17.1 of the BIND 9.17 development branch, BIND servers are vulnerable if they are running an affected version and are configured to use GSS-TSIG features. In a configuration which uses BIND's default settings the vulnerable code path is not exposed, but a server can be rendered vulnerable by explicitly setting values for the tkey-gssapi-keytab or tkey-gssapi-credential configuration options. Although the default configuration is not vulnerable, GSS-TSIG is frequently used in networks where BIND is integrated with Samba, as well as in mixed-server environments that combine BIND servers with Active Directory domain controllers. For servers that meet these conditions, the ISC SPNEGO implementation is vulnerable to various attacks, depending on the CPU architecture for which BIND was built: For named binaries compiled for 64-bit platforms, this flaw can be used to trigger a buffer over-read, leading to a server crash. For named binaries compiled for 32-bit platforms, this flaw can be used to trigger a server crash due to a buffer overflow and possibly also to achieve remote code execution. We have determined that standard SPNEGO implementations are available in the MIT and Heimdal Kerberos libraries, which support a broad range of operating systems, rendering the ISC implementation unnecessary and obsolete. Therefore, to reduce the attack surface for BIND users, we will be removing the ISC SPNEGO implementation in the April releases of BIND 9.11 and 9.16 (it had already been dropped from BIND 9.17). We would not normally remove something from a stable ESV (Extended Support Version) of BIND, but since system libraries can replace the ISC SPNEGO implementation, we have made an exception in this case for reasons of stability and security.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-05-12"
+          },
+          "Updated": {
+            "Date": "2021-05-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2021-02773",
+              "Impact": "Critical",
+              "Public": "20210428",
+              "CveID": "BDU:2021-02773"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2021-02777",
+              "Impact": "Low",
+              "Public": "20210428",
+              "CveID": "BDU:2021-02777"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2021-02778",
+              "Impact": "High",
+              "Public": "20210428",
+              "CveID": "BDU:2021-02778"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25214",
+              "Impact": "Low",
+              "Public": "20210429",
+              "CveID": "CVE-2021-25214"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25215",
+              "Impact": "High",
+              "Public": "20210429",
+              "CveID": "CVE-2021-25215"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25216",
+              "Impact": "Critical",
+              "Public": "20210429",
+              "CveID": "CVE-2021-25216"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786001",
+                "Comment": "bind is earlier than 0:9.11.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786002",
+                "Comment": "bind-devel is earlier than 0:9.11.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786003",
+                "Comment": "bind-doc is earlier than 0:9.11.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786004",
+                "Comment": "bind-utils is earlier than 0:9.11.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786005",
+                "Comment": "libbind is earlier than 0:9.11.31-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211786006",
+                "Comment": "lwresd is earlier than 0:9.11.31-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

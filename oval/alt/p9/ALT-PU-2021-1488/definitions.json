@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211488",
+      "Version": "oval:org.altlinux.errata:def:20211488",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1488: package `mkimage-profiles` update to version 1.4.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1488",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1488",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades mkimage-profiles to version 1.4.8-alt1. \nSecurity Fix(es):\n\n * #39611: Использовать META_VOL_ID для @distro@\n\n * #39612: Интернационализация пункта меню \"Устанвить ...\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-16"
+          },
+          "Updated": {
+            "Date": "2021-03-16"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39611",
+              "Href": "https://bugzilla.altlinux.org/39611",
+              "Data": "Использовать META_VOL_ID для @distro@"
+            },
+            {
+              "Id": "39612",
+              "Href": "https://bugzilla.altlinux.org/39612",
+              "Data": "Интернационализация пункта меню \"Устанвить ...\""
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211488001",
+                "Comment": "mkimage-profiles is earlier than 0:1.4.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211488002",
+                "Comment": "mkimage-profiles-doc is earlier than 0:1.4.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

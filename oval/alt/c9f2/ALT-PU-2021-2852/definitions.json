@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212852",
+      "Version": "oval:org.altlinux.errata:def:20212852",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2852: package `xorg-server` update to version 1.20.8-alt9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2852",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2852",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades xorg-server to version 1.20.8-alt9. \nSecurity Fix(es):\n\n * #40868: xorg-server: segfault при запуске на device tree системе с дискретной PCIe видеокартой",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-22"
+          },
+          "Updated": {
+            "Date": "2021-09-22"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40868",
+              "Href": "https://bugzilla.altlinux.org/40868",
+              "Data": "xorg-server: segfault при запуске на device tree системе с дискретной PCIe видеокартой"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852001",
+                "Comment": "xorg-sdk is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852002",
+                "Comment": "xorg-server is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852003",
+                "Comment": "xorg-server-common is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852004",
+                "Comment": "xorg-xdmx is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852005",
+                "Comment": "xorg-xephyr is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852006",
+                "Comment": "xorg-xnest is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852007",
+                "Comment": "xorg-xvfb is earlier than 2:1.20.8-alt9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212852008",
+                "Comment": "xorg-xwayland is earlier than 2:1.20.8-alt9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

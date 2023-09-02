@@ -1,0 +1,295 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193125",
+      "Version": "oval:org.altlinux.errata:def:20193125",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3125: package `libarchive` update to version 3.4.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3125",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3125",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-00927",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00927",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-01251",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01251",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-01257",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01257",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01816",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01816",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01817",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01817",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01818",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01818",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-1000877",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000877",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-1000878",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000878",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-1000879",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000879",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-1000880",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000880",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1000019",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000019",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-1000020",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000020",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-11463",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11463",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libarchive to version 3.4.0-alt1. \nSecurity Fix(es):\n\n * BDU:2019-00927: Уязвимость функции _warc_read библиотеки libarchive, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-01251: Уязвимость библиотеки для работы с архивами Libarchive, связанная с двойным освобождением памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-01257: Уязвимость библиотеки для работы с архивами Libarchive, связанная с использованием памяти после освобождения, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-01816: Уязвимость функции archive_acl_from_text_lins библиотеки libarchive, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-01817: Уязвимость библиотеки libarchive, связанная с чтением за границами буфера памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-01818: Уязвимость библиотеки libarchive, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2018-1000877: libarchive version commit 416694915449219d505531b1096384f3237dd6cc onwards (release v3.1.0 onwards) contains a CWE-415: Double Free vulnerability in RAR decoder - libarchive/archive_read_support_format_rar.c, parse_codes(), realloc(rar-\u003elzss.window, new_size) with new_size = 0 that can result in Crash/DoS. This attack appear to be exploitable via the victim must open a specially crafted RAR archive.\n\n * CVE-2018-1000878: libarchive version commit 416694915449219d505531b1096384f3237dd6cc onwards (release v3.1.0 onwards) contains a CWE-416: Use After Free vulnerability in RAR decoder - libarchive/archive_read_support_format_rar.c that can result in Crash/DoS - it is unknown if RCE is possible. This attack appear to be exploitable via the victim must open a specially crafted RAR archive.\n\n * CVE-2018-1000879: libarchive version commit 379867ecb330b3a952fb7bfa7bffb7bbd5547205 onwards (release v3.3.0 onwards) contains a CWE-476: NULL Pointer Dereference vulnerability in ACL parser - libarchive/archive_acl.c, archive_acl_from_text_l() that can result in Crash/DoS. This attack appear to be exploitable via the victim must open a specially crafted archive file.\n\n * CVE-2018-1000880: libarchive version commit 9693801580c0cf7c70e862d305270a16b52826a7 onwards (release v3.2.0 onwards) contains a CWE-20: Improper Input Validation vulnerability in WARC parser - libarchive/archive_read_support_format_warc.c, _warc_read() that can result in DoS - quasi-infinite run time and disk usage from tiny file. This attack appear to be exploitable via the victim must open a specially crafted WARC file.\n\n * CVE-2019-1000019: libarchive version commit bf9aec176c6748f0ee7a678c5f9f9555b9a757c1 onwards (release v3.0.2 onwards) contains a CWE-125: Out-of-bounds Read vulnerability in 7zip decompression, archive_read_support_format_7zip.c, header_bytes() that can result in a crash (denial of service). This attack appears to be exploitable via the victim opening a specially crafted 7zip file.\n\n * CVE-2019-1000020: libarchive version commit 5a98dcf8a86364b3c2c469c85b93647dfb139961 onwards (version v2.8.0 onwards) contains a CWE-835: Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in ISO9660 parser, archive_read_support_format_iso9660.c, read_CE()/parse_rockridge() that can result in DoS by infinite loop. This attack appears to be exploitable via the victim opening a specially crafted ISO9660 file.\n\n * CVE-2019-11463: A memory leak in archive_read_format_zip_cleanup in archive_read_support_format_zip.c in libarchive 3.3.4-dev allows remote attackers to cause a denial of service via a crafted ZIP file because of a HAVE_LZMA_H typo. NOTE: this only affects users who downloaded the development code from GitHub. Users of the product's official releases are unaffected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-13"
+          },
+          "Updated": {
+            "Date": "2019-11-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-00927",
+              "Impact": "Low",
+              "Public": "20180928",
+              "CveID": "BDU:2019-00927"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2019-01251",
+              "Impact": "High",
+              "Public": "20181220",
+              "CveID": "BDU:2019-01251"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2019-01257",
+              "Impact": "High",
+              "Public": "20181220",
+              "CveID": "BDU:2019-01257"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-01816",
+              "Impact": "Low",
+              "Public": "20181220",
+              "CveID": "BDU:2020-01816"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-01817",
+              "Impact": "Low",
+              "Public": "20190204",
+              "CveID": "BDU:2020-01817"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2020-01818",
+              "Impact": "Low",
+              "Public": "20190204",
+              "CveID": "BDU:2020-01818"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000877",
+              "Impact": "High",
+              "Public": "20181220",
+              "CveID": "CVE-2018-1000877"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000878",
+              "Impact": "High",
+              "Public": "20181220",
+              "CveID": "CVE-2018-1000878"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000879",
+              "Impact": "Low",
+              "Public": "20181220",
+              "CveID": "CVE-2018-1000879"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000880",
+              "Impact": "Low",
+              "Public": "20181220",
+              "CveID": "CVE-2018-1000880"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000019",
+              "Impact": "Low",
+              "Public": "20190204",
+              "CveID": "CVE-2019-1000019"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1000020",
+              "Impact": "Low",
+              "Public": "20190204",
+              "CveID": "CVE-2019-1000020"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11463",
+              "Impact": "Low",
+              "Public": "20190423",
+              "CveID": "CVE-2019-11463"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193125001",
+                "Comment": "bsdcat is earlier than 0:3.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193125002",
+                "Comment": "bsdcpio is earlier than 0:3.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193125003",
+                "Comment": "bsdtar is earlier than 0:3.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193125004",
+                "Comment": "libarchive-devel is earlier than 0:3.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193125005",
+                "Comment": "libarchive13 is earlier than 0:3.4.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235122",
+      "Version": "oval:org.altlinux.errata:def:20235122",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5122: package `glpi` update to version 9.5.13-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5122",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5122",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03380",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03380",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03381",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03381",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03382",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03382",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03385",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03385",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03387",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03387",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03388",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03388",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03389",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03389",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-28632",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28632",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28633",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28633",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28634",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28636",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28636",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28639",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28639",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28838",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28838",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28852",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28852",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glpi to version 9.5.13-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03380: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильной авторизацией, позволяющая нарушителю повышать привилегии внутри приложения\n\n * BDU:2023-03381: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильным управлением привилегиями, позволяющая нарушителю повышать привилегии внутри приложения\n\n * BDU:2023-03382: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с подделкой запроса на стороне сервера, позволяющая нарушителю выполнять SSRF-атаки\n\n * BDU:2023-03385: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильной нейтрализацией ввода во время генерации веб-страницы, позволяющая нарушителю выполнять произвольные SQL-запросы в базе данных.\n\n * BDU:2023-03387: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильной нейтрализацией специальных элементов, используемых в команде SQL, позволяющая нарушителю выполнять произвольные SQL-запросы в базе данных\n\n * BDU:2023-03388: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильной нейтрализацией входных данных во время генерации веб-страницы, позволяющая нарушителю выполнять атаки с использованием межсайтовых сценариев\n\n * BDU:2023-03389: Уязвимость системы работы с заявками и инцидентами GLPI, связанная с неправильной нейтрализацией ввода во время генерации веб-страницы, позволяющая нарушителю выполнять атаки с использованием межсайтовых сценариев\n\n * CVE-2023-28632: GLPI is a free asset and IT management software package. Starting in version 0.83 and prior to versions 9.5.13 and 10.0.7, an authenticated user can modify emails of any user, and can therefore takeover another user account through the \"forgotten password\" feature. By modifying emails, the user can also receive sensitive data through GLPI notifications. Versions 9.5.13 and 10.0.7 contain a patch for this issue. As a workaround, account takeover can be prevented by deactivating all notifications related to `Forgotten password?` event. However, it will not prevent unauthorized modification of any user emails.\n\n * CVE-2023-28633: GLPI is a free asset and IT management software package. Starting in version 0.84 and prior to versions 9.5.13 and 10.0.7, usage of RSS feeds is subject to server-side request forgery (SSRF). In case the remote address is not a valid RSS feed, an RSS autodiscovery feature is triggered. This feature does not check safety or URLs. Versions 9.5.13 and 10.0.7 contain a patch for this issue.\n\n * CVE-2023-28634: GLPI is a free asset and IT management software package. Starting in version 0.83 and prior to versions 9.5.13 and 10.0.7, a user who has the Technician profile could see and generate a Personal token for a Super-Admin. Using such token it is possible to negotiate a GLPI session and hijack the Super-Admin account, resulting in a Privilege Escalation. Versions 9.5.13 and 10.0.7 contain a patch for this issue.\n\n * CVE-2023-28636: GLPI is a free asset and IT management software package. Starting in version 0.60 and prior to versions 9.5.13 and 10.0.7, a vulnerability allows an administrator to create a malicious external link. This issue is fixed in versions 9.5.13 and 10.0.7.\n\n * CVE-2023-28639: GLPI is a free asset and IT management software package. Starting in version 0.85 and prior to versions 9.5.13 and 10.0.7, a malicious link can be crafted by an unauthenticated user. It will be able to exploit a reflected XSS in case any authenticated user opens the crafted link. This issue is fixed in versions 9.5.13 and 10.0.7.\n\n * CVE-2023-28838: GLPI is a free asset and IT management software package. Starting in version 0.50 and prior to versions 9.5.13 and 10.0.7, a SQL Injection vulnerability allow users with access rights to statistics or reports to extract all data from database and, in some cases, write a webshell on the server. Versions 9.5.13 and 10.0.7 contain a patch for this issue. As a workaround, remove `Assistance \u003e Statistics` and `Tools \u003e Reports` read rights from every user.\n\n * CVE-2023-28852: GLPI is a free asset and IT management software package. Starting in version 9.5.0 and prior to versions 9.5.13 and 10.0.7, a user with dashboard administration rights may hack the dashboard form to store malicious code that will be executed when other users will use the related dashboard. Versions 9.5.13 and 10.0.7 contain a patch for this issue.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-25"
+          },
+          "Updated": {
+            "Date": "2023-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-285, CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2023-03380",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03380"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2023-03381",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03381"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2023-03382",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03382"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2023-03385",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03385"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2023-03387",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03387"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2023-03388",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03388"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2023-03389",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03389"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28632",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28632"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28633",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28633"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-285",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28634",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28634"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28636",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28636"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28639",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28639"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28838",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28838"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28852",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "CVE-2023-28852"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235122001",
+                "Comment": "glpi is earlier than 0:9.5.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235122002",
+                "Comment": "glpi-apache2 is earlier than 0:9.5.13-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235122003",
+                "Comment": "glpi-php7 is earlier than 0:9.5.13-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

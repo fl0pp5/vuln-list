@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212585",
+      "Version": "oval:org.altlinux.errata:def:20212585",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2585: package `openldap` update to version 2.4.59-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2585",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2585",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-06394",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06394",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-27212",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27212",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openldap to version 2.4.59-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2021-06394: Уязвимость открытой реализации протокола OpenLDAP, связанная с утверждением о достижимости, позволяющая нарушителю выполнить отказ в обслуживании\n\n * CVE-2021-27212: In OpenLDAP through 2.4.57 and 2.5.x through 2.5.1alpha, an assertion failure in slapd can occur in the issuerAndThisUpdateCheck function via a crafted packet, resulting in a denial of service (daemon exit) via a short timestamp. This is related to schema_init.c and checkTime.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-20"
+          },
+          "Updated": {
+            "Date": "2021-08-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2021-06394",
+              "Impact": "High",
+              "Public": "20210323",
+              "CveID": "BDU:2021-06394"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27212",
+              "Impact": "High",
+              "Public": "20210214",
+              "CveID": "CVE-2021-27212"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585001",
+                "Comment": "libldap is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585002",
+                "Comment": "libldap-devel is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585003",
+                "Comment": "libldap-devel-static is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585004",
+                "Comment": "openldap-clients is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585005",
+                "Comment": "openldap-common is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585006",
+                "Comment": "openldap-doc is earlier than 0:2.4.59-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212585007",
+                "Comment": "openldap-servers is earlier than 0:2.4.59-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

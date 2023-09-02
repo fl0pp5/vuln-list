@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202653",
+      "Version": "oval:org.altlinux.errata:def:20202653",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2653: package `firejail` update to version 0.9.62.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2653",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2653",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01718",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01718",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01721",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01721",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12499",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12499",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12589",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12589",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-17367",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17367",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-17368",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17368",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firejail to version 0.9.62.4-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01718: Уязвимость функции check_output из output.c SUID изолированной программной среды Firejail, связанная с отсутствием мер по нейтрализации специальных элементов, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01721: Уязвимость функции check_output из output.c SUID изолированной программной среды Firejail, связанная с отсутствием мер по нейтрализации специальных элементов, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-12499: Firejail before 0.9.60 allows truncation (resizing to length 0) of the firejail binary on the host by running exploit code inside a firejail sandbox and having the sandbox terminated. To succeed, certain conditions need to be fulfilled: The jail (with the exploit code inside) needs to be started as root, and it also needs to be terminated as root from the host (either by stopping it ungracefully (e.g., SIGKILL), or by using the --shutdown control command). This is similar to CVE-2019-5736.\n\n * CVE-2019-12589: In Firejail before 0.9.60, seccomp filters are writable inside the jail, leading to a lack of intended seccomp restrictions for a process that is joined to the jail after a filter has been modified by an attacker.\n\n * CVE-2020-17367: Firejail through 0.9.62 does not honor the -- end-of-options indicator after the --output option, which may lead to command injection.\n\n * CVE-2020-17368: Firejail through 0.9.62 mishandles shell metacharacters during use of the --output or --output-stderr option, which may lead to command injection.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-21"
+          },
+          "Updated": {
+            "Date": "2020-08-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2021-01718",
+              "Impact": "High",
+              "Public": "20200811",
+              "CveID": "BDU:2021-01718"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2021-01721",
+              "Impact": "Critical",
+              "Public": "20200811",
+              "CveID": "BDU:2021-01721"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12499",
+              "Impact": "High",
+              "Public": "20190531",
+              "CveID": "CVE-2019-12499"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12589",
+              "Impact": "High",
+              "Public": "20190603",
+              "CveID": "CVE-2019-12589"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17367",
+              "Impact": "High",
+              "Public": "20200811",
+              "CveID": "CVE-2020-17367"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17368",
+              "Impact": "Critical",
+              "Public": "20200811",
+              "CveID": "CVE-2020-17368"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202653001",
+                "Comment": "firejail is earlier than 0:0.9.62.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

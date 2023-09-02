@@ -1,0 +1,178 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234931",
+      "Version": "oval:org.altlinux.errata:def:20234931",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4931: package `kernel-modules-virtualbox-un-def` update to version 6.1.46-alt1.393514.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4931",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4931",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03898",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03898",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03925",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03925",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04240",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04240",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-22016",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22016",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22017",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22017",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22018",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22018",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-modules-virtualbox-un-def to version 6.1.46-alt1.393514.1. \nSecurity Fix(es):\n\n * BDU:2023-03898: Уязвимость компонента Core виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03925: Уязвимость компонента Core виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю выполнить произвольный код или получить полный контроль над приложением\n\n * BDU:2023-04240: Уязвимость ядра виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-22016: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Easily exploitable vulnerability allows high privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox.  Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle VM VirtualBox. CVSS 3.1 Base Score 4.2 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H).\n\n * CVE-2023-22017: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox.  Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle VM VirtualBox. Note: This vulnerability applies to Windows VMs only. CVSS 3.1 Base Score 5.5 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2023-22018: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Difficult to exploit vulnerability allows unauthenticated attacker with network access via RDP to compromise Oracle VM VirtualBox.  Successful attacks of this vulnerability can result in takeover of Oracle VM VirtualBox. CVSS 3.1 Base Score 8.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-18"
+          },
+          "Updated": {
+            "Date": "2023-08-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-404",
+              "Href": "https://bdu.fstec.ru/vul/2023-03898",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "BDU:2023-03898"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03925",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "BDU:2023-03925"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:M/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-04240",
+              "Impact": "Low",
+              "Public": "20230719",
+              "CveID": "BDU:2023-04240"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22016",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22016"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22017",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22017"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22018",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22018"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234931001",
+                "Comment": "kernel-modules-virtualbox-un-def is earlier than 0:6.1.46-alt1.393514.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

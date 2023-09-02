@@ -1,0 +1,193 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223214",
+      "Version": "oval:org.altlinux.errata:def:20223214",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3214: package `salt` update to version 3004.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3214",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3214",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03745",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03745",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-22934",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22934",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-22935",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22935",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-22936",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22936",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-22941",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22941",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-22967",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22967",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades salt to version 3004.2-alt2. \nSecurity Fix(es):\n\n * BDU:2022-03745: Уязвимость функции PAM auth системы управления конфигурациями и удалённого выполнения операций Salt, позволяющая нарушителю выполнять произвольные команды\n\n * CVE-2022-22934: An issue was discovered in SaltStack Salt in versions before 3002.8, 3003.4, 3004.1. Salt Masters do not sign pillar data with the minion’s public key, which can result in attackers substituting arbitrary pillar data.\n\n * CVE-2022-22935: An issue was discovered in SaltStack Salt in versions before 3002.8, 3003.4, 3004.1. A minion authentication denial of service can cause a MiTM attacker to force a minion process to stop by impersonating a master.\n\n * CVE-2022-22936: An issue was discovered in SaltStack Salt in versions before 3002.8, 3003.4, 3004.1. Job publishes and file server replies are susceptible to replay attacks, which can result in an attacker replaying job publishes causing minions to run old jobs. File server replies can also be re-played. A sufficient craft attacker could gain root access on minion under certain scenarios.\n\n * CVE-2022-22941: An issue was discovered in SaltStack Salt in versions before 3002.8, 3003.4, 3004.1. When configured as a Master-of-Masters, with a publisher_acl, if a user configured in the publisher_acl targets any minion connected to the Syndic, the Salt Master incorrectly interpreted no valid targets as valid, allowing configured users to target any of the minions connected to the syndic with their configured commands. This requires a syndic master combined with publisher_acl configured on the Master-of-Masters, allowing users specified in the publisher_acl to bypass permissions, publishing authorized commands to any configured minion.\n\n * CVE-2022-22967: An issue was discovered in SaltStack Salt in versions before 3002.9, 3003.5, 3004.2. PAM auth fails to reject locked accounts, which allows a previously authorized user whose account is locked still run Salt commands when their account is locked. This affects both local shell accounts with an active session and salt-api users that authenticate via PAM eauth.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-25"
+          },
+          "Updated": {
+            "Date": "2022-11-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-285",
+              "Href": "https://bdu.fstec.ru/vul/2022-03745",
+              "Impact": "High",
+              "Public": "20220623",
+              "CveID": "BDU:2022-03745"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22934",
+              "Impact": "High",
+              "Public": "20220329",
+              "CveID": "CVE-2022-22934"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22935",
+              "Impact": "Low",
+              "Public": "20220329",
+              "CveID": "CVE-2022-22935"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-294",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22936",
+              "Impact": "High",
+              "Public": "20220329",
+              "CveID": "CVE-2022-22936"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22941",
+              "Impact": "High",
+              "Public": "20220329",
+              "CveID": "CVE-2022-22941"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22967",
+              "Impact": "High",
+              "Public": "20220623",
+              "CveID": "CVE-2022-22967"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223214001",
+                "Comment": "python3-module-salt is earlier than 0:3004.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223214002",
+                "Comment": "salt-api is earlier than 0:3004.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223214003",
+                "Comment": "salt-master is earlier than 0:3004.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223214004",
+                "Comment": "salt-minion is earlier than 0:3004.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

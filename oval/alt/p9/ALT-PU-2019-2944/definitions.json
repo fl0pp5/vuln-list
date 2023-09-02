@@ -1,0 +1,244 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192944",
+      "Version": "oval:org.altlinux.errata:def:20192944",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2944: package `python3` update to version 3.7.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2944",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2944",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-01741",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01741",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02825",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02825",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01057",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01057",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03607",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03607",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10160",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10160",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9740",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9740",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9947",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9947",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9948",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9948",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3 to version 3.7.4-alt1. \nSecurity Fix(es):\n\n * BDU:2019-01741: Уязвимость модуля urllib интерпретатора языка программирования Python, связанная с недостатками ограничения имени пути к каталогу, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * BDU:2019-02825: Уязвимость функций urllib.parse.urlsplit и urllib.parse.urlparse интерпретатора языка программирования Python, позволяющая нарушителю раскрыть защищаемую информацию, читать или записывать произвольные данные, или вызвать отказ в обслуживании\n\n * BDU:2020-01057: Уязвимость модуля urllib2 интерпретатора языка программирования Python, позволяющая нарушителю оказать воздействие на конфиденциальность и целостность защищаемой информации\n\n * BDU:2021-03607: Уязвимость модуля urllib2 интерпретатора языка программирования Python, связанная с непринятием мер по нейтрализации последовательностей crlf, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2019-10160: A security regression of CVE-2019-9636 was discovered in python since commit d537ab0ff9767ef024f26246899728f0116b1ec3 affecting versions 2.7, 3.5, 3.6, 3.7 and from v3.8.0a4 through v3.8.0b1, which still allows an attacker to exploit CVE-2019-9636 by abusing the user and password parts of a URL. When an application parses user-supplied URLs to store cookies, authentication credentials, or other kind of information, it is possible for an attacker to provide specially crafted URLs to make the application locate host-related information (e.g. cookies, authentication data) and send them to a different host than where it should, unlike if the URLs had been correctly parsed. The result of an attack may vary based on the application.\n\n * CVE-2019-9740: An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \\r\\n (specifically in the query string after a ? character) followed by an HTTP header or a Redis command. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9.\n\n * CVE-2019-9947: An issue was discovered in urllib2 in Python 2.x through 2.7.16 and urllib in Python 3.x through 3.7.3. CRLF injection is possible if the attacker controls a url parameter, as demonstrated by the first argument to urllib.request.urlopen with \\r\\n (specifically in the path component of a URL that lacks a ? character) followed by an HTTP header or a Redis command. This is similar to the CVE-2019-9740 query string issue. This is fixed in: v2.7.17, v2.7.17rc1, v2.7.18, v2.7.18rc1; v3.5.10, v3.5.10rc1, v3.5.8, v3.5.8rc1, v3.5.8rc2, v3.5.9; v3.6.10, v3.6.10rc1, v3.6.11, v3.6.11rc1, v3.6.12, v3.6.9, v3.6.9rc1; v3.7.4, v3.7.4rc1, v3.7.4rc2, v3.7.5, v3.7.5rc1, v3.7.6, v3.7.6rc1, v3.7.7, v3.7.7rc1, v3.7.8, v3.7.8rc1, v3.7.9.\n\n * CVE-2019-9948: urllib in Python 2.x through 2.7.16 supports the local_file: scheme, which makes it easier for remote attackers to bypass protection mechanisms that blacklist file: URIs, as demonstrated by triggering a urllib.urlopen('local_file:///etc/passwd') call.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-17"
+          },
+          "Updated": {
+            "Date": "2019-10-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cwe": "CWE-22, CWE-254",
+              "Href": "https://bdu.fstec.ru/vul/2019-01741",
+              "Impact": "Low",
+              "Public": "20190323",
+              "CveID": "BDU:2019-01741"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-172, CWE-255",
+              "Href": "https://bdu.fstec.ru/vul/2019-02825",
+              "Impact": "Critical",
+              "Public": "20190607",
+              "CveID": "BDU:2019-02825"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-93",
+              "Href": "https://bdu.fstec.ru/vul/2020-01057",
+              "Impact": "Low",
+              "Public": "20190323",
+              "CveID": "BDU:2020-01057"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-93",
+              "Href": "https://bdu.fstec.ru/vul/2021-03607",
+              "Impact": "Low",
+              "Public": "20190313",
+              "CveID": "BDU:2021-03607"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-172",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10160",
+              "Impact": "Critical",
+              "Public": "20190607",
+              "CveID": "CVE-2019-10160"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-93",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9740",
+              "Impact": "Low",
+              "Public": "20190313",
+              "CveID": "CVE-2019-9740"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-93",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9947",
+              "Impact": "Low",
+              "Public": "20190323",
+              "CveID": "CVE-2019-9947"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9948",
+              "Impact": "Critical",
+              "Public": "20190323",
+              "CveID": "CVE-2019-9948"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944001",
+                "Comment": "libpython3 is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944002",
+                "Comment": "python3 is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944003",
+                "Comment": "python3-base is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944004",
+                "Comment": "python3-dev is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944005",
+                "Comment": "python3-modules-curses is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944006",
+                "Comment": "python3-modules-nis is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944007",
+                "Comment": "python3-modules-sqlite3 is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944008",
+                "Comment": "python3-modules-tkinter is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944009",
+                "Comment": "python3-test is earlier than 0:3.7.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192944010",
+                "Comment": "python3-tools is earlier than 0:3.7.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231303",
+      "Version": "oval:org.altlinux.errata:def:20231303",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1303: package `postgresql13` update to version 13.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1303",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1303",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02003",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02003",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41862",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41862",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql13 to version 13.10-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02003: Уязвимость системы управления базами данных PostgreSQL, связанная с раскрытием информации, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2022-41862: In PostgreSQL, a modified, unauthenticated server can send an unterminated string during the establishment of Kerberos transport encryption. In certain conditions a server can cause a libpq client to over-read and report an error message containing uninitialized bytes.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-20"
+          },
+          "Updated": {
+            "Date": "2023-02-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-125, CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2023-02003",
+              "Impact": "Low",
+              "Public": "20230209",
+              "CveID": "BDU:2023-02003"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41862",
+              "Impact": "Low",
+              "Public": "20230303",
+              "CveID": "CVE-2022-41862"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303001",
+                "Comment": "postgresql13 is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303002",
+                "Comment": "postgresql13-contrib is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303003",
+                "Comment": "postgresql13-docs is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303004",
+                "Comment": "postgresql13-llvmjit is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303005",
+                "Comment": "postgresql13-perl is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303006",
+                "Comment": "postgresql13-python is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303007",
+                "Comment": "postgresql13-server is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303008",
+                "Comment": "postgresql13-server-devel is earlier than 0:13.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231303009",
+                "Comment": "postgresql13-tcl is earlier than 0:13.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

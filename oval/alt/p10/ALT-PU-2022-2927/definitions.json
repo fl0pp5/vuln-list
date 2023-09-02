@@ -1,0 +1,168 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222927",
+      "Version": "oval:org.altlinux.errata:def:20222927",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2927: package `rust` update to version 1.64.0-alt0.p10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2927",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2927",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05167",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05167",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-21658",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-21658",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades rust to version 1.64.0-alt0.p10.1. \nSecurity Fix(es):\n\n * BDU:2022-05167: Уязвимость функции std::fs::remove_dir_all языка программирования Rust, позволяющая нарушителю удалить произвольные системные файлы и каталоги\n\n * CVE-2022-21658: Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. The Rust Security Response WG was notified that the `std::fs::remove_dir_all` standard library function is vulnerable a race condition enabling symlink following (CWE-363). An attacker could use this security issue to trick a privileged program into deleting files and directories the attacker couldn't otherwise access or delete. Rust 1.0.0 through Rust 1.58.0 is affected by this vulnerability with 1.58.1 containing a patch. Note that the following build targets don't have usable APIs to properly mitigate the attack, and are thus still vulnerable even with a patched toolchain: macOS before version 10.10 (Yosemite) and REDOX. We recommend everyone to update to Rust 1.58.1 as soon as possible, especially people developing programs expected to run in privileged contexts (including system daemons and setuid binaries), as those have the highest risk of being affected by this. Note that adding checks in your codebase before calling remove_dir_all will not mitigate the vulnerability, as they would also be vulnerable to race conditions like remove_dir_all itself. The existing mitigation is working as intended outside of race conditions.\n\n * #41534: cargo vendor is broken",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-26"
+          },
+          "Updated": {
+            "Date": "2022-10-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2022-05167",
+              "Impact": "Critical",
+              "Public": "20220123",
+              "CveID": "BDU:2022-05167"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-363",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-21658",
+              "Impact": "Low",
+              "Public": "20220120",
+              "CveID": "CVE-2022-21658"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41534",
+              "Href": "https://bugzilla.altlinux.org/41534",
+              "Data": "cargo vendor is broken"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927001",
+                "Comment": "clippy is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927002",
+                "Comment": "rls is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927003",
+                "Comment": "rust is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927004",
+                "Comment": "rust-analysis is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927005",
+                "Comment": "rust-cargo is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927006",
+                "Comment": "rust-cargo-doc is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927007",
+                "Comment": "rust-doc is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927008",
+                "Comment": "rust-gdb is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927009",
+                "Comment": "rust-src is earlier than 1:1.64.0-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222927010",
+                "Comment": "rustfmt is earlier than 1:1.64.0-alt0.p10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

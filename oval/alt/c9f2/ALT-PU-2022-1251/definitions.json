@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221251",
+      "Version": "oval:org.altlinux.errata:def:20221251",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1251: package `influxdb` update to version 1.8.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1251",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1251",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-36640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36640",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades influxdb to version 1.8.7-alt1. \nSecurity Fix(es):\n\n * CVE-2022-36640: ** DISPUTED ** influxData influxDB before v1.8.10 contains no authentication mechanism or controls, allowing unauthenticated attackers to execute arbitrary commands. NOTE: the CVE ID assignment is disputed because the vendor's documentation states \"If InfluxDB is being deployed on a publicly accessible endpoint, we strongly recommend authentication be enabled. Otherwise the data will be publicly available to any unauthenticated user. The default settings do NOT enable authentication and authorization.\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36640",
+              "Impact": "Critical",
+              "Public": "20220902",
+              "CveID": "CVE-2022-36640"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221251001",
+                "Comment": "influxdb is earlier than 0:1.8.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

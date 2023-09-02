@@ -1,0 +1,157 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211879",
+      "Version": "oval:org.altlinux.errata:def:20211879",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1879: package `SPICE` update to version 0.15.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1879",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1879",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03500",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03500",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05884",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05884",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14355",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14355",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20201",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20201",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades SPICE to version 0.15.0-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03500: Уязвимость процесса декодирования изображений QUIC системы рендеринга удаленного виртуального рабочего стола SPICE, связанная с копированием буфера без проверки размера входных данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-05884: Уязвимость системы рендеринга удаленного виртуального рабочего стола SPICE, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-14355: Multiple buffer overflow vulnerabilities were found in the QUIC image decoding process of the SPICE remote display system, before spice-0.14.2-1. Both the SPICE client (spice-gtk) and server are affected by these flaws. These flaws allow a malicious client or server to send specially crafted messages that, when processed by the QUIC image compression algorithm, result in a process crash or potential code execution.\n\n * CVE-2021-20201: A flaw was found in spice in versions before 0.14.92. A DoS tool might make it easier for remote attackers to cause a denial of service (CPU consumption) by performing many renegotiations within a single connection.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-05-31"
+          },
+          "Updated": {
+            "Date": "2021-05-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-03500",
+              "Impact": "Low",
+              "Public": "20200429",
+              "CveID": "BDU:2021-03500"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-05884",
+              "Impact": "Low",
+              "Public": "20201201",
+              "CveID": "BDU:2022-05884"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14355",
+              "Impact": "Low",
+              "Public": "20201007",
+              "CveID": "CVE-2020-14355"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20201",
+              "Impact": "Low",
+              "Public": "20210528",
+              "CveID": "CVE-2021-20201"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211879001",
+                "Comment": "libspice-server is earlier than 0:0.15.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211879002",
+                "Comment": "libspice-server-devel is earlier than 0:0.15.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

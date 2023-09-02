@@ -1,0 +1,134 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203497",
+      "Version": "oval:org.altlinux.errata:def:20203497",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3497: package `eiskaltdcpp` update to version 2.4.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3497",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3497",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades eiskaltdcpp to version 2.4.0-alt1. \nSecurity Fix(es):\n\n * #36782: [DEAD BUG] Вылетает\n\n * #37709: прошу обновить с включением коммита 93944747",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-11"
+          },
+          "Updated": {
+            "Date": "2020-12-11"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36782",
+              "Href": "https://bugzilla.altlinux.org/36782",
+              "Data": "[DEAD BUG] Вылетает"
+            },
+            {
+              "Id": "37709",
+              "Href": "https://bugzilla.altlinux.org/37709",
+              "Data": "прошу обновить с включением коммита 93944747"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497001",
+                "Comment": "eiskaltdcpp-cli is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497002",
+                "Comment": "eiskaltdcpp-common is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497003",
+                "Comment": "eiskaltdcpp-daemon is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497004",
+                "Comment": "eiskaltdcpp-gtk is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497005",
+                "Comment": "eiskaltdcpp-gtk-data is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497006",
+                "Comment": "eiskaltdcpp-qt is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497007",
+                "Comment": "eiskaltdcpp-qt-data is earlier than 0:2.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203497008",
+                "Comment": "libeiskaltdcpp is earlier than 0:2.4.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

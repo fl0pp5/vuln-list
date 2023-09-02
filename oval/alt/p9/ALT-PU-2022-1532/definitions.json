@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221532",
+      "Version": "oval:org.altlinux.errata:def:20221532",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1532: package `krb5` update to version 1.17.2-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1532",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1532",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-37750",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37750",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades krb5 to version 1.17.2-alt3. \nSecurity Fix(es):\n\n * CVE-2021-37750: The Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) before 1.18.5 and 1.19.x before 1.19.3 has a NULL pointer dereference in kdc/do_tgs_req.c via a FAST inner body that lacks a server field.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-21"
+          },
+          "Updated": {
+            "Date": "2022-03-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37750",
+              "Impact": "Low",
+              "Public": "20210823",
+              "CveID": "CVE-2021-37750"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532001",
+                "Comment": "krb5-doc is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532002",
+                "Comment": "krb5-kadmin is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532003",
+                "Comment": "krb5-kdc is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532004",
+                "Comment": "krb5-kinit is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532005",
+                "Comment": "krb5-ksu is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532006",
+                "Comment": "libkrb5 is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532007",
+                "Comment": "libkrb5-devel is earlier than 0:1.17.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221532008",
+                "Comment": "libkrb5-ldap is earlier than 0:1.17.2-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

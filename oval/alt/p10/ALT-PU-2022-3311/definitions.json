@@ -1,0 +1,298 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223311",
+      "Version": "oval:org.altlinux.errata:def:20223311",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3311: package `kernel-image-rt` update to version 5.10.158-alt1.rt77",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3311",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3311",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06550",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06550",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07074",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07074",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07505",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07505",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07506",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07506",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07508",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07508",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00061",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00061",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00159",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00159",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3640",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4139",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4139",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42896",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42896",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47518",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47518",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47519",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47519",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47521",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47521",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47946",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47946",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rt to version 5.10.158-alt1.rt77. \nSecurity Fix(es):\n\n * BDU:2022-06550: Уязвимость функции l2cap_conn_del() (net/bluetooth/l2cap_core.c) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07074: Уязвимость функций l2cap_connect и l2cap_le_connect_req (net/bluetooth/l2cap_core.c) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07505: Уязвимость драйвера беспроводной сети WILC1000 ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2022-07506: Уязвимость драйвера беспроводной сети WILC1000 ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2022-07508: Уязвимость драйвера беспроводной сети WILC1000 ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2023-00061: Уязвимость драйвера GPU i915 ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии или вызвать отказ в обслуживании\n\n * BDU:2023-00159: Уязвимость компонента fs/io_uring.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-3640: A vulnerability, which was classified as critical, was found in Linux Kernel. Affected is the function l2cap_conn_del of the file net/bluetooth/l2cap_core.c of the component Bluetooth. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211944.\n\n * CVE-2022-4139: An incorrect TLB flush issue was found in the Linux kernel’s GPU i915 kernel driver, potentially leading to random memory corruption or data leaks. This flaw could allow a local user to crash the system or escalate their privileges on the system.\n\n * CVE-2022-42896: There are use-after-free vulnerabilities in the Linux kernel's net/bluetooth/l2cap_core.c's l2cap_connect and l2cap_le_connect_req functions which may allow code execution and leaking kernel memory (respectively) remotely via Bluetooth. A remote attacker could execute code leaking kernel memory via Bluetooth if within proximity of the victim. We recommend upgrading past commit https://www.google.com/url https://github.com/torvalds/linux/commit/711f8c3fb3db61897080468586b970c87c61d9e4 https://www.google.com/url\n\n * CVE-2022-47518: An issue was discovered in the Linux kernel before 6.0.11. Missing validation of the number of channels in drivers/net/wireless/microchip/wilc1000/cfg80211.c in the WILC1000 wireless driver can trigger a heap-based buffer overflow when copying the list of operating channels from Wi-Fi management frames.\n\n * CVE-2022-47519: An issue was discovered in the Linux kernel before 6.0.11. Missing validation of IEEE80211_P2P_ATTR_OPER_CHANNEL in drivers/net/wireless/microchip/wilc1000/cfg80211.c in the WILC1000 wireless driver can trigger an out-of-bounds write when parsing the channel list attribute from Wi-Fi management frames.\n\n * CVE-2022-47521: An issue was discovered in the Linux kernel before 6.0.11. Missing validation of IEEE80211_P2P_ATTR_CHANNEL_LIST in drivers/net/wireless/microchip/wilc1000/cfg80211.c in the WILC1000 wireless driver can trigger a heap-based buffer overflow when parsing the operating channel attribute from Wi-Fi management frames.\n\n * CVE-2022-47946: An issue was discovered in the Linux kernel 5.10.x before 5.10.155. A use-after-free in io_sqpoll_wait_sq in fs/io_uring.c allows an attacker to crash the kernel, resulting in denial of service. finish_wait can be skipped. An attack can occur in some situations by forking a process and then quickly terminating it. NOTE: later kernel versions, such as the 5.15 longterm series, substantially changed the implementation of io_sqpoll_wait_sq.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-09"
+          },
+          "Updated": {
+            "Date": "2022-12-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06550",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "BDU:2022-06550"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-07074",
+              "Impact": "High",
+              "Public": "20221123",
+              "CveID": "BDU:2022-07074"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07505",
+              "Impact": "High",
+              "Public": "20221124",
+              "CveID": "BDU:2022-07505"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07506",
+              "Impact": "High",
+              "Public": "20221124",
+              "CveID": "BDU:2022-07506"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07508",
+              "Impact": "High",
+              "Public": "20221124",
+              "CveID": "BDU:2022-07508"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-281, CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2023-00061",
+              "Impact": "High",
+              "Public": "20221130",
+              "CveID": "BDU:2023-00061"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00159",
+              "Impact": "Low",
+              "Public": "20210303",
+              "CveID": "BDU:2023-00159"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3640",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "CVE-2022-3640"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4139",
+              "Impact": "High",
+              "Public": "20230127",
+              "CveID": "CVE-2022-4139"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42896",
+              "Impact": "High",
+              "Public": "20221123",
+              "CveID": "CVE-2022-42896"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47518",
+              "Impact": "High",
+              "Public": "20221218",
+              "CveID": "CVE-2022-47518"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47519",
+              "Impact": "High",
+              "Public": "20221218",
+              "CveID": "CVE-2022-47519"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47521",
+              "Impact": "High",
+              "Public": "20221218",
+              "CveID": "CVE-2022-47521"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47946",
+              "Impact": "Low",
+              "Public": "20221223",
+              "CveID": "CVE-2022-47946"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223311001",
+                "Comment": "kernel-headers-modules-rt is earlier than 0:5.10.158-alt1.rt77"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223311002",
+                "Comment": "kernel-headers-rt is earlier than 0:5.10.158-alt1.rt77"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223311003",
+                "Comment": "kernel-image-rt is earlier than 0:5.10.158-alt1.rt77"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223311004",
+                "Comment": "kernel-image-rt-checkinstall is earlier than 0:5.10.158-alt1.rt77"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

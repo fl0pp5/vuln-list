@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211395",
+      "Version": "oval:org.altlinux.errata:def:20211395",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1395: package `ansible` update to version 2.9.18-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1395",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1395",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-20178",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20178",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20180",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20180",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20191",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ansible to version 2.9.18-alt1. \nSecurity Fix(es):\n\n * CVE-2021-20178: A flaw was found in ansible module where credentials are disclosed in the console log by default and not protected by the security feature when using the bitbucket_pipeline_variable module. This flaw allows an attacker to steal bitbucket_pipeline credentials. The highest threat from this vulnerability is to confidentiality.\n\n * CVE-2021-20180: A flaw was found in ansible module where credentials are disclosed in the console log by default and not protected by the security feature when using the bitbucket_pipeline_variable module. This flaw allows an attacker to steal bitbucket_pipeline credentials. The highest threat from this vulnerability is to confidentiality.\n\n * CVE-2021-20191: A flaw was found in ansible. Credentials, such as secrets, are being disclosed in console log by default and not protected by no_log feature when using those modules. An attacker can take advantage of this information to steal those credentials. The highest threat from this vulnerability is to data confidentiality. Versions before ansible 2.9.18 are affected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-24"
+          },
+          "Updated": {
+            "Date": "2021-02-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20178",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-20178"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20180",
+              "Impact": "Low",
+              "Public": "20220316",
+              "CveID": "CVE-2021-20180"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20191",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-20191"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211395001",
+                "Comment": "ansible is earlier than 0:2.9.18-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213625",
+      "Version": "oval:org.altlinux.errata:def:20213625",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3625: package `thunderbird` update to version 91.4.1-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3625",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3625",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06100",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06100",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-4126",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4126",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44538",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44538",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 91.4.1-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2022-06100: Уязвимость почтового клиента Mozilla Thunderbird, связанная с недостаточным предупреждением об опасных действиях, позволяющая нарушителю выполнить спуфинговую атаку\n\n * CVE-2021-4126: When receiving an OpenPGP/MIME signed email message that contains an additional outer MIME message layer, for example a message footer added by a mailing list gateway, Thunderbird only considered the inner signed message for the signature validity. This gave the false impression that the additional contents were also covered by the digital signature. Starting with Thunderbird version 91.4.1, only the signature that belongs to the top level MIME part will be considered for the displayed status. This vulnerability affects Thunderbird \u003c 91.4.1.\n\n * CVE-2021-44538: The olm_session_describe function in Matrix libolm before 3.2.7 is vulnerable to a buffer overflow. The Olm session object represents a cryptographic channel between two parties. Therefore, its state is partially controllable by the remote party of the channel. Attackers can construct a crafted sequence of messages to manipulate the state of the receiver's session in such a way that, for some buffer sizes, a buffer overflow happens on a call to olm_session_describe. Furthermore, safe buffer sizes were undocumented. The overflow content is partially controllable by the attacker and limited to ASCII spaces and digits. The known affected products are Element Web And SchildiChat Web.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-24"
+          },
+          "Updated": {
+            "Date": "2021-12-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-357",
+              "Href": "https://bdu.fstec.ru/vul/2022-06100",
+              "Impact": "Low",
+              "Public": "20211221",
+              "CveID": "BDU:2022-06100"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4126",
+              "Impact": "Low",
+              "Public": "20221222",
+              "CveID": "CVE-2021-4126"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44538",
+              "Impact": "Critical",
+              "Public": "20211214",
+              "CveID": "CVE-2021-44538"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213625001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:91.4.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213625002",
+                "Comment": "thunderbird is earlier than 0:91.4.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213625003",
+                "Comment": "thunderbird-wayland is earlier than 0:91.4.1-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

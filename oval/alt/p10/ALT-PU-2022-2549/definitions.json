@@ -1,0 +1,166 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222549",
+      "Version": "oval:org.altlinux.errata:def:20222549",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2549: package `python3-module-lmdb` update to version 1.3.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2549",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2549",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-16224",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16224",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16225",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16225",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16226",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16226",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16227",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16228",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16228",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-lmdb to version 1.3.0-alt1. \nSecurity Fix(es):\n\n * CVE-2019-16224: An issue was discovered in py-lmdb 0.97. For certain values of md_flags, mdb_node_add does not properly set up a memcpy destination, leading to an invalid write operation. NOTE: this outcome occurs when accessing a data.mdb file supplied by an attacker.\n\n * CVE-2019-16225: An issue was discovered in py-lmdb 0.97. For certain values of mp_flags, mdb_page_touch does not properly set up mc-\u003emc_pg[mc-\u003etop], leading to an invalid write operation. NOTE: this outcome occurs when accessing a data.mdb file supplied by an attacker.\n\n * CVE-2019-16226: An issue was discovered in py-lmdb 0.97. mdb_node_del does not validate a memmove in the case of an unexpected node-\u003emn_hi, leading to an invalid write operation. NOTE: this outcome occurs when accessing a data.mdb file supplied by an attacker.\n\n * CVE-2019-16227: An issue was discovered in py-lmdb 0.97. For certain values of mn_flags, mdb_cursor_set triggers a memcpy with an invalid write operation within mdb_xcursor_init1. NOTE: this outcome occurs when accessing a data.mdb file supplied by an attacker.\n\n * CVE-2019-16228: An issue was discovered in py-lmdb 0.97. There is a divide-by-zero error in the function mdb_env_open2 if mdb_env_read_header obtains a zero value for a certain size field. NOTE: this outcome occurs when accessing a data.mdb file supplied by an attacker.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-02"
+          },
+          "Updated": {
+            "Date": "2022-09-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16224",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "CVE-2019-16224"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16225",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "CVE-2019-16225"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16226",
+              "Impact": "High",
+              "Public": "20190911",
+              "CveID": "CVE-2019-16226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16227",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "CVE-2019-16227"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16228",
+              "Impact": "High",
+              "Public": "20190911",
+              "CveID": "CVE-2019-16228"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222549001",
+                "Comment": "python3-module-lmdb is earlier than 0:1.3.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

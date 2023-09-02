@@ -1,0 +1,234 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222676",
+      "Version": "oval:org.altlinux.errata:def:20222676",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2676: package `kernel-image-std-def` update to version 5.10.144-alt0.c9f.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2676",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2676",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05794",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05794",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06616",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06616",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07365",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07365",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00456",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00456",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3028",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3028",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3176",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3176",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3625",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3625",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3635",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3635",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4095",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4095",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.144-alt0.c9f.2. \nSecurity Fix(es):\n\n * BDU:2022-05794: Уязвимость функций Signalfd_poll() и binder_poll() ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-06616: Уязвимость функции devlink_param_set/devlink_param_get (net/core/devlink.c) компонента IPsec ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07365: Уязвимость подсистемы XFRM ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код, вызвать отказ в обслуживании или оказать другое воздействие на систему\n\n * BDU:2023-00456: Уязвимость функции read_bbreg_hdl() в модуле drivers/staging/rtl8712/rtl8712_cmd.c Wi-Fi драйвера rtl8712 ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-3028: A race condition was found in the Linux kernel's IP framework for transforming packets (XFRM subsystem) when multiple calls to xfrm_probe_algs occurred simultaneously. This flaw could allow a local attacker to potentially trigger an out-of-bounds write or leak kernel heap memory by performing an out-of-bounds read and copying it into a socket.\n\n * CVE-2022-3176: There exists a use-after-free in io_uring in the Linux kernel. Signalfd_poll() and binder_poll() use a waitqueue whose lifetime is the current task. It will send a POLLFREE notification to all waiters before the queue is freed. Unfortunately, the io_uring poll doesn't handle POLLFREE. This allows a use-after-free to occur if a signalfd or binder fd is polled with io_uring poll, and the waitqueue gets freed. We recommend upgrading past commit fc78b2fc21f10c4c9c4d5d659a685710ffa63659\n\n * CVE-2022-3625: A vulnerability was found in Linux Kernel. It has been classified as critical. This affects the function devlink_param_set/devlink_param_get of the file net/core/devlink.c of the component IPsec. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier VDB-211929 was assigned to this vulnerability.\n\n * CVE-2022-3635: A vulnerability, which was classified as critical, has been found in Linux Kernel. Affected by this issue is the function tst_timer of the file drivers/atm/idt77252.c of the component IPsec. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. VDB-211934 is the identifier assigned to this vulnerability.\n\n * CVE-2022-4095: A use-after-free flaw was found in Linux kernel before 5.19.2. This issue occurs in cmd_hdl_filter in drivers/staging/rtl8712/rtl8712_cmd.c, allowing an attacker to launch a local denial of service attack and gain escalation of privileges.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-26"
+          },
+          "Updated": {
+            "Date": "2022-09-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05794",
+              "Impact": "High",
+              "Public": "20220916",
+              "CveID": "BDU:2022-05794"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06616",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "BDU:2022-06616"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125, CWE-362, CWE-667, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07365",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "BDU:2022-07365"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00456",
+              "Impact": "Low",
+              "Public": "20220830",
+              "CveID": "BDU:2023-00456"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3028",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-3028"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3176",
+              "Impact": "High",
+              "Public": "20220916",
+              "CveID": "CVE-2022-3176"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3625",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "CVE-2022-3625"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3635",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "CVE-2022-3635"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4095",
+              "Impact": "High",
+              "Public": "20230322",
+              "CveID": "CVE-2022-4095"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676010",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222676011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.144-alt0.c9f.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

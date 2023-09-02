@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212956",
+      "Version": "oval:org.altlinux.errata:def:20212956",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2956: package `lightdm` update to version 1.30.0-alt19",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2956",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2956",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades lightdm to version 1.30.0-alt19. \nSecurity Fix(es):\n\n * #30329: Не применяется локаль\n\n * #40798: lightdm Экспортирует LC_ALL",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-01"
+          },
+          "Updated": {
+            "Date": "2021-10-01"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "30329",
+              "Href": "https://bugzilla.altlinux.org/30329",
+              "Data": "Не применяется локаль"
+            },
+            {
+              "Id": "40798",
+              "Href": "https://bugzilla.altlinux.org/40798",
+              "Data": "lightdm Экспортирует LC_ALL"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956001",
+                "Comment": "dm-tool is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956002",
+                "Comment": "liblightdm-gobject is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956003",
+                "Comment": "liblightdm-qt is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956004",
+                "Comment": "liblightdm-qt5 is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956005",
+                "Comment": "lightdm is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956006",
+                "Comment": "lightdm-devel is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956007",
+                "Comment": "lightdm-devel-doc is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956008",
+                "Comment": "lightdm-gir is earlier than 0:1.30.0-alt19"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212956009",
+                "Comment": "lightdm-gir-devel is earlier than 0:1.30.0-alt19"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211636",
+      "Version": "oval:org.altlinux.errata:def:20211636",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1636: package `python-module-django` update to version 1.11.29-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1636",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1636",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01459",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01459",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05726",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05726",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03743",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03743",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-19844",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19844",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7471",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7471",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-9402",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-9402",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python-module-django to version 1.11.29-alt2. \nSecurity Fix(es):\n\n * BDU:2020-01459: Уязвимость фреймворка для веб-приложений Django, связанная с ошибкой в работе механизма восстановления паролей, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2020-05726: Уязвимость библиотеки Django для языка программирования Python, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03743: Уязвимость компонента contrib.postgres.aggregates.StringAgg программной платформы для веб-приложений Django, связанная с непринятием мер по защите структуры SQL-запроса, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-19844: Django before 1.11.27, 2.x before 2.2.9, and 3.x before 3.0.1 allows account takeover. A suitably crafted email address (that is equal to an existing user's email address after case transformation of Unicode characters) would allow an attacker to be sent a password reset token for the matched user account. (One mitigation in the new releases is to send password reset tokens only to the registered user email address.)\n\n * CVE-2020-7471: Django 1.11 before 1.11.28, 2.2 before 2.2.10, and 3.0 before 3.0.3 allows SQL Injection if untrusted data is used as a StringAgg delimiter (e.g., in Django applications that offer downloads of data as a series of rows with a user-specified column delimiter). By passing a suitably crafted delimiter to a contrib.postgres.aggregates.StringAgg instance, it was possible to break escaping and inject malicious SQL.\n\n * CVE-2020-9402: Django 1.11 before 1.11.29, 2.2 before 2.2.11, and 3.0 before 3.0.4 allows SQL Injection if untrusted data is used as a tolerance parameter in GIS functions and aggregates on Oracle. By passing a suitably crafted tolerance to GIS functions and aggregates on Oracle, it was possible to break escaping and inject malicious SQL.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-12"
+          },
+          "Updated": {
+            "Date": "2021-04-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-640",
+              "Href": "https://bdu.fstec.ru/vul/2020-01459",
+              "Impact": "High",
+              "Public": "20191215",
+              "CveID": "BDU:2020-01459"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-05726",
+              "Impact": "High",
+              "Public": "20200305",
+              "CveID": "BDU:2020-05726"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2021-03743",
+              "Impact": "Critical",
+              "Public": "20200203",
+              "CveID": "BDU:2021-03743"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-640",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19844",
+              "Impact": "Critical",
+              "Public": "20191218",
+              "CveID": "CVE-2019-19844"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7471",
+              "Impact": "Critical",
+              "Public": "20200203",
+              "CveID": "CVE-2020-7471"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-9402",
+              "Impact": "High",
+              "Public": "20200305",
+              "CveID": "CVE-2020-9402"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211636001",
+                "Comment": "python-module-django is earlier than 0:1.11.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211636002",
+                "Comment": "python-module-django-dbbackend-mysql is earlier than 0:1.11.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211636003",
+                "Comment": "python-module-django-dbbackend-psycopg2 is earlier than 0:1.11.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211636004",
+                "Comment": "python-module-django-dbbackend-sqlite3 is earlier than 0:1.11.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211636005",
+                "Comment": "python-module-django-doc is earlier than 0:1.11.29-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

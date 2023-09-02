@@ -1,0 +1,234 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211032",
+      "Version": "oval:org.altlinux.errata:def:20211032",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1032: package `libblockdev` update to version 2.24-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1032",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1032",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades libblockdev to version 2.24-alt2. \nSecurity Fix(es):\n\n * #39482: libblockdev-fs Requires: multipath-tools\n\n * #39495: Использует fsck.vfat",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-13"
+          },
+          "Updated": {
+            "Date": "2021-01-13"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39482",
+              "Href": "https://bugzilla.altlinux.org/39482",
+              "Data": "libblockdev-fs Requires: multipath-tools"
+            },
+            {
+              "Id": "39495",
+              "Href": "https://bugzilla.altlinux.org/39495",
+              "Data": "Использует fsck.vfat"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032001",
+                "Comment": "libblockdev is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032002",
+                "Comment": "libblockdev-btrfs is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032003",
+                "Comment": "libblockdev-btrfs-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032004",
+                "Comment": "libblockdev-crypto is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032005",
+                "Comment": "libblockdev-crypto-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032006",
+                "Comment": "libblockdev-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032007",
+                "Comment": "libblockdev-dm is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032008",
+                "Comment": "libblockdev-dm-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032009",
+                "Comment": "libblockdev-fs is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032010",
+                "Comment": "libblockdev-fs-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032011",
+                "Comment": "libblockdev-kbd is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032012",
+                "Comment": "libblockdev-kbd-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032013",
+                "Comment": "libblockdev-loop is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032014",
+                "Comment": "libblockdev-loop-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032015",
+                "Comment": "libblockdev-lvm is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032016",
+                "Comment": "libblockdev-lvm-dbus is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032017",
+                "Comment": "libblockdev-lvm-dbus-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032018",
+                "Comment": "libblockdev-lvm-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032019",
+                "Comment": "libblockdev-mdraid is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032020",
+                "Comment": "libblockdev-mdraid-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032021",
+                "Comment": "libblockdev-mpath is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032022",
+                "Comment": "libblockdev-mpath-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032023",
+                "Comment": "libblockdev-nvdimm is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032024",
+                "Comment": "libblockdev-nvdimm-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032025",
+                "Comment": "libblockdev-part is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032026",
+                "Comment": "libblockdev-part-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032027",
+                "Comment": "libblockdev-plugins is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032028",
+                "Comment": "libblockdev-swap is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032029",
+                "Comment": "libblockdev-swap-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032030",
+                "Comment": "libblockdev-tools is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032031",
+                "Comment": "libblockdev-utils is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032032",
+                "Comment": "libblockdev-utils-devel is earlier than 0:2.24-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211032033",
+                "Comment": "python3-module-blockdev is earlier than 0:2.24-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192056",
+      "Version": "oval:org.altlinux.errata:def:20192056",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2056: package `brasero` update to version 3.12.2-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2056",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2056",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades brasero to version 3.12.2-alt5. \nSecurity Fix(es):\n\n * #36887: Не запускается без tracker, хотя не требует его",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-13"
+          },
+          "Updated": {
+            "Date": "2019-06-13"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36887",
+              "Href": "https://bugzilla.altlinux.org/36887",
+              "Data": "Не запускается без tracker, хотя не требует его"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056001",
+                "Comment": "brasero is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056002",
+                "Comment": "brasero-nautilus is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056003",
+                "Comment": "libbrasero is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056004",
+                "Comment": "libbrasero-devel is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056005",
+                "Comment": "libbrasero-devel-doc is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056006",
+                "Comment": "libbrasero-gir is earlier than 0:3.12.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192056007",
+                "Comment": "libbrasero-gir-devel is earlier than 0:3.12.2-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

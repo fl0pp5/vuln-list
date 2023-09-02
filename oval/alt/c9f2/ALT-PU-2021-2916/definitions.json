@@ -1,0 +1,137 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212916",
+      "Version": "oval:org.altlinux.errata:def:20212916",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2916: package `kernel-image-std-def` update to version 5.10.66-alt0.c9f",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2916",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2916",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05536",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05536",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-34866",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34866",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.66-alt0.c9f. \nSecurity Fix(es):\n\n * BDU:2021-05536: Уязвимость реализации функции check_map_func_compatibility() ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-34866: This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel 5.14-rc3. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The specific flaw exists within the handling of eBPF programs. The issue results from the lack of proper validation of user-supplied eBPF programs, which can result in a type confusion condition. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the kernel. Was ZDI-CAN-14689.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-28"
+          },
+          "Updated": {
+            "Date": "2021-09-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-697, CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2021-05536",
+              "Impact": "High",
+              "Public": "20210820",
+              "CveID": "BDU:2021-05536"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34866",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "CVE-2021-34866"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.66-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212916010",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.66-alt0.c9f"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

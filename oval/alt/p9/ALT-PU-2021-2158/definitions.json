@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212158",
+      "Version": "oval:org.altlinux.errata:def:20212158",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2158: package `neomutt` update to version 20210205-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2158",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2158",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04606",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04606",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-32055",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32055",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades neomutt to version 20210205-alt2. \nSecurity Fix(es):\n\n * BDU:2021-04606: Уязвимость компонента imap/util.c почтовых клиентов Mutt и NeoMutt, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2021-32055: Mutt 1.11.0 through 2.0.x before 2.0.7 (and NeoMutt 2019-10-25 through 2021-05-04) has a $imap_qresync issue in which imap/util.c has an out-of-bounds read in situations where an IMAP sequence set ends with a comma. NOTE: the $imap_qresync setting for QRESYNC is not enabled by default.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-06"
+          },
+          "Updated": {
+            "Date": "2021-07-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04606",
+              "Impact": "Critical",
+              "Public": "20210504",
+              "CveID": "BDU:2021-04606"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32055",
+              "Impact": "Critical",
+              "Public": "20210505",
+              "CveID": "CVE-2021-32055"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212158001",
+                "Comment": "neomutt is earlier than 0:20210205-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212688",
+      "Version": "oval:org.altlinux.errata:def:20212688",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2688: package `ntp` update to version 4.2.8p15-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2688",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2688",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades ntp to version 4.2.8p15-alt3. \nSecurity Fix(es):\n\n * #39775: Собрать с поддержкой PPS",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-02"
+          },
+          "Updated": {
+            "Date": "2021-09-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39775",
+              "Href": "https://bugzilla.altlinux.org/39775",
+              "Data": "Собрать с поддержкой PPS"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688001",
+                "Comment": "ntp is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688002",
+                "Comment": "ntp-aux is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688003",
+                "Comment": "ntp-doc is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688004",
+                "Comment": "ntp-utils is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688005",
+                "Comment": "ntpd is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688006",
+                "Comment": "ntpdate is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688007",
+                "Comment": "ntpq is earlier than 0:4.2.8p15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212688008",
+                "Comment": "perl-NTP-Util is earlier than 0:4.2.8p15-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

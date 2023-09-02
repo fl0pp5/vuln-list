@@ -1,0 +1,162 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222684",
+      "Version": "oval:org.altlinux.errata:def:20222684",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2684: package `unbound` update to version 1.16.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2684",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2684",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06188",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06188",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-30698",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30698",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30699",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30699",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3204",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3204",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades unbound to version 1.16.3-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06188: Уязвимость DNS-сервера Unbound, связанная с недостаточной проверкой входных данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-30698: NLnet Labs Unbound, up to and including version 1.16.1 is vulnerable to a novel type of the \"ghost domain names\" attack. The vulnerability works by targeting an Unbound instance. Unbound is queried for a subdomain of a rogue domain name. The rogue nameserver returns delegation information for the subdomain that updates Unbound's delegation cache. This action can be repeated before expiry of the delegation information by querying Unbound for a second level subdomain which the rogue nameserver provides new delegation information. Since Unbound is a child-centric resolver, the ever-updating child delegation information can keep a rogue domain name resolvable long after revocation. From version 1.16.2 on, Unbound checks the validity of parent delegation records before using cached delegation information.\n\n * CVE-2022-30699: NLnet Labs Unbound, up to and including version 1.16.1, is vulnerable to a novel type of the \"ghost domain names\" attack. The vulnerability works by targeting an Unbound instance. Unbound is queried for a rogue domain name when the cached delegation information is about to expire. The rogue nameserver delays the response so that the cached delegation information is expired. Upon receiving the delayed answer containing the delegation information, Unbound overwrites the now expired entries. This action can be repeated when the delegation information is about to expire making the rogue delegation information ever-updating. From version 1.16.2 on, Unbound stores the start time for a query and uses that to decide if the cached delegation information can be overwritten.\n\n * CVE-2022-3204: A vulnerability named 'Non-Responsive Delegation Attack' (NRDelegation Attack) has been discovered in various DNS resolving software. The NRDelegation Attack works by having a malicious delegation with a considerable number of non responsive nameservers. The attack starts by querying a resolver for a record that relies on those unresponsive nameservers. The attack can cause a resolver to spend a lot of time/resources resolving records under a malicious delegation point where a considerable number of unresponsive NS records reside. It can trigger high CPU usage in some resolver implementations that continually look in the cache for resolved NS records in that delegation. This can lead to degraded performance and eventually denial of service in orchestrated attacks. Unbound does not suffer from high CPU usage, but resources are still needed for resolving the malicious delegation. Unbound will keep trying to resolve the record until hard limits are reached. Based on the nature of the attack and the replies, different limits could be reached. From version 1.16.3 on, Unbound introduces fixes for better performance when under load, by cutting opportunistic queries for nameserver discovery and DNSKEY prefetching and limiting the number of times a delegation point can issue a cache lookup for missing records.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-27"
+          },
+          "Updated": {
+            "Date": "2022-09-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-06188",
+              "Impact": "Low",
+              "Public": "20220513",
+              "CveID": "BDU:2022-06188"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-613",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30698",
+              "Impact": "Low",
+              "Public": "20220801",
+              "CveID": "CVE-2022-30698"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-613",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30699",
+              "Impact": "Low",
+              "Public": "20220801",
+              "CveID": "CVE-2022-30699"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3204",
+              "Impact": "High",
+              "Public": "20220926",
+              "CveID": "CVE-2022-3204"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222684001",
+                "Comment": "libunbound is earlier than 0:1.16.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222684002",
+                "Comment": "libunbound-devel is earlier than 0:1.16.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222684003",
+                "Comment": "unbound is earlier than 0:1.16.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222684004",
+                "Comment": "unbound-control is earlier than 0:1.16.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

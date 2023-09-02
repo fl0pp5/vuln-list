@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222460",
+      "Version": "oval:org.altlinux.errata:def:20222460",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2460: package `coturn` update to version 4.5.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2460",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2460",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03979",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03979",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03980",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03980",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03981",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03981",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01906",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01906",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-26262",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26262",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-4067",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-4067",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6061",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6061",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6062",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6062",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades coturn to version 4.5.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03979: Уязвимость веб-сервера Coturn, связанная с разыменованием нулевого указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-03980: Уязвимость веб-сервера Coturn, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-03981: Уязвимость буфера ответа STUN/TURN веб-сервера Coturn, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-01906: Уязвимость веб-сервера Coturn, связанная с некорректной проверкой вводимых данных, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * CVE-2020-26262: Coturn is free open source implementation of TURN and STUN Server. Coturn before version 4.5.2 by default does not allow peers to connect and relay packets to loopback addresses in the range of `127.x.x.x`. However, it was observed that when sending a `CONNECT` request with the `XOR-PEER-ADDRESS` value of `0.0.0.0`, a successful response was received and subsequently, `CONNECTIONBIND` also received a successful response. Coturn then is able to relay packets to the loopback interface. Additionally, when coturn is listening on IPv6, which is default, the loopback interface can also be reached by making use of either `[::1]` or `[::]` as the peer address. By using the address `0.0.0.0` as the peer address, a malicious user will be able to relay packets to the loopback interface, unless `--denied-peer-ip=0.0.0.0` (or similar) has been specified. Since the default configuration implies that loopback peers are not allowed, coturn administrators may choose to not set the `denied-peer-ip` setting. The issue patched in version 4.5.2. As a workaround the addresses in the address block `0.0.0.0/8`, `[::1]` and `[::]` should be denied by default unless `--allow-loopback-peers` has been specified.\n\n * CVE-2020-4067: In coturn before version 4.5.1.3, there is an issue whereby STUN/TURN response buffer is not initialized properly. There is a leak of information between different client connections. One client (an attacker) could use their connection to intelligently query coturn to get interesting bytes in the padding bytes from the connection of another client. This has been fixed in 4.5.1.3.\n\n * CVE-2020-6061: An exploitable heap out-of-bounds read vulnerability exists in the way CoTURN 4.5.1.1 web server parses POST requests. A specially crafted HTTP POST request can lead to information leaks and other misbehavior. An attacker needs to send an HTTPS request to trigger this vulnerability.\n\n * CVE-2020-6062: An exploitable denial-of-service vulnerability exists in the way CoTURN 4.5.1.1 web server parses POST requests. A specially crafted HTTP POST request can lead to server crash and denial of service. An attacker needs to send an HTTP request to trigger this vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-18"
+          },
+          "Updated": {
+            "Date": "2022-08-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-03979",
+              "Impact": "High",
+              "Public": "20200219",
+              "CveID": "BDU:2020-03979"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-03980",
+              "Impact": "Critical",
+              "Public": "20200219",
+              "CveID": "BDU:2020-03980"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-665",
+              "Href": "https://bdu.fstec.ru/vul/2020-03981",
+              "Impact": "High",
+              "Public": "20200629",
+              "CveID": "BDU:2020-03981"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://bdu.fstec.ru/vul/2021-01906",
+              "Impact": "High",
+              "Public": "20201001",
+              "CveID": "BDU:2021-01906"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26262",
+              "Impact": "High",
+              "Public": "20210113",
+              "CveID": "CVE-2020-26262"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-4067",
+              "Impact": "High",
+              "Public": "20200629",
+              "CveID": "CVE-2020-4067"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6061",
+              "Impact": "Critical",
+              "Public": "20200219",
+              "CveID": "CVE-2020-6061"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6062",
+              "Impact": "High",
+              "Public": "20200219",
+              "CveID": "CVE-2020-6062"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222460001",
+                "Comment": "coturn is earlier than 0:4.5.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222460002",
+                "Comment": "coturn-client-devel is earlier than 0:4.5.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222460003",
+                "Comment": "coturn-client-libs is earlier than 0:4.5.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222460004",
+                "Comment": "coturn-utils is earlier than 0:4.5.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212979",
+      "Version": "oval:org.altlinux.errata:def:20212979",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2979: package `ansible` update to version 2.9.26-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2979",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2979",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00285",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00285",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3583",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3583",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ansible to version 2.9.26-alt2. \nSecurity Fix(es):\n\n * BDU:2023-00285: Уязвимость программного пакета Ansible, связанная с непринятием мер по очистке входных данных, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * CVE-2021-3583: A flaw was found in Ansible, where a user's controller is vulnerable to template injection. This issue can occur through facts used in the template if the user is trying to put templates in multi-line YAML strings and the facts being handled do not routinely include special template characters. This flaw allows attackers to perform command injection, which discloses sensitive information. The highest threat from this vulnerability is to confidentiality and integrity.\n\n * #40735: ansible зависит от /usr/bin/pip\n\n * #40957: ansible: явно избыточные зависимости, сломана установка пакетов модулем package",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-05"
+          },
+          "Updated": {
+            "Date": "2021-10-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2023-00285",
+              "Impact": "High",
+              "Public": "20210607",
+              "CveID": "BDU:2023-00285"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3583",
+              "Impact": "High",
+              "Public": "20210922",
+              "CveID": "CVE-2021-3583"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40735",
+              "Href": "https://bugzilla.altlinux.org/40735",
+              "Data": "ansible зависит от /usr/bin/pip"
+            },
+            {
+              "Id": "40957",
+              "Href": "https://bugzilla.altlinux.org/40957",
+              "Data": "ansible: явно избыточные зависимости, сломана установка пакетов модулем package"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212979001",
+                "Comment": "ansible is earlier than 0:2.9.26-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

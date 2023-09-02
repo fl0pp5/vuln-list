@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213488",
+      "Version": "oval:org.altlinux.errata:def:20213488",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3488: package `inkscape` update to version 1.1-alt8",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3488",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3488",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades inkscape to version 1.1-alt8. \nSecurity Fix(es):\n\n * #41503: Error build with poppler 21.11.0",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-07"
+          },
+          "Updated": {
+            "Date": "2021-12-07"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41503",
+              "Href": "https://bugzilla.altlinux.org/41503",
+              "Data": "Error build with poppler 21.11.0"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488001",
+                "Comment": "inkscape is earlier than 0:1.1-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488002",
+                "Comment": "inkscape-checkinstall is earlier than 0:1.1-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488003",
+                "Comment": "inkscape-data is earlier than 0:1.1-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488004",
+                "Comment": "inkscape-tutorial is earlier than 0:1.1-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488005",
+                "Comment": "inkscape-viewer is earlier than 0:1.1-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213488006",
+                "Comment": "libinkscape is earlier than 0:1.1-alt8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

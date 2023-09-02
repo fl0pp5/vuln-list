@@ -1,0 +1,234 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213471",
+      "Version": "oval:org.altlinux.errata:def:20213471",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3471: package `sssd` update to version 2.6.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3471",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3471",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-3621",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3621",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sssd to version 2.6.1-alt2. \nSecurity Fix(es):\n\n * CVE-2021-3621: A flaw was found in SSSD, where the sssctl command was vulnerable to shell command injection via the logs-fetch and cache-expire subcommands. This flaw allows an attacker to trick the root user into running a specially crafted sssctl command, such as via sudo, to gain root access. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-03"
+          },
+          "Updated": {
+            "Date": "2021-12-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3621",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "CVE-2021-3621"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471001",
+                "Comment": "libipa_hbac is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471002",
+                "Comment": "libipa_hbac-devel is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471003",
+                "Comment": "libsss_autofs is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471004",
+                "Comment": "libsss_certmap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471005",
+                "Comment": "libsss_certmap-devel is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471006",
+                "Comment": "libsss_idmap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471007",
+                "Comment": "libsss_idmap-devel is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471008",
+                "Comment": "libsss_nss_idmap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471009",
+                "Comment": "libsss_nss_idmap-devel is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471010",
+                "Comment": "libsss_simpleifp is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471011",
+                "Comment": "libsss_simpleifp-devel is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471012",
+                "Comment": "libsss_sudo is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471013",
+                "Comment": "python3-module-ipa_hbac is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471014",
+                "Comment": "python3-module-sss is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471015",
+                "Comment": "python3-module-sss-murmur is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471016",
+                "Comment": "python3-module-sss_nss_idmap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471017",
+                "Comment": "python3-module-sssd is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471018",
+                "Comment": "python3-module-sssdconfig is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471019",
+                "Comment": "sssd is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471020",
+                "Comment": "sssd-ad is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471021",
+                "Comment": "sssd-client is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471022",
+                "Comment": "sssd-dbus is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471023",
+                "Comment": "sssd-ipa is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471024",
+                "Comment": "sssd-kcm is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471025",
+                "Comment": "sssd-krb5 is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471026",
+                "Comment": "sssd-krb5-common is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471027",
+                "Comment": "sssd-ldap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471028",
+                "Comment": "sssd-nfs-idmap is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471029",
+                "Comment": "sssd-pac is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471030",
+                "Comment": "sssd-proxy is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471031",
+                "Comment": "sssd-tools is earlier than 0:2.6.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213471032",
+                "Comment": "sssd-winbind-idmap is earlier than 0:2.6.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

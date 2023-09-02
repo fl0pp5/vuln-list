@@ -1,0 +1,138 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201988",
+      "Version": "oval:org.altlinux.errata:def:20201988",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1988: package `yarn` update to version 1.22.4-alt0.1.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1988",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1988",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-10773",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10773",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15608",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15608",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8131",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8131",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades yarn to version 1.22.4-alt0.1.p9. \nSecurity Fix(es):\n\n * CVE-2019-10773: In Yarn before 1.21.1, the package install functionality can be abused to generate arbitrary symlinks on the host filesystem by using specially crafted \"bin\" keys. Existing files could be overwritten depending on the current user permission set.\n\n * CVE-2019-15608: The package integrity validation in yarn \u003c 1.19.0 contains a TOCTOU vulnerability where the hash is computed before writing a package to cache. It's not computed again when reading from the cache. This may lead to a cache pollution attack.\n\n * CVE-2020-8131: Arbitrary filesystem write vulnerability in Yarn before 1.22.0 allows attackers to write to any path on the filesystem and potentially lead to arbitrary code execution by forcing the user to install a malicious package.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-21"
+          },
+          "Updated": {
+            "Date": "2020-05-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10773",
+              "Impact": "High",
+              "Public": "20191216",
+              "CveID": "CVE-2019-10773"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15608",
+              "Impact": "Low",
+              "Public": "20200315",
+              "CveID": "CVE-2019-15608"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8131",
+              "Impact": "High",
+              "Public": "20200224",
+              "CveID": "CVE-2020-8131"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201988001",
+                "Comment": "yarn is earlier than 0:1.22.4-alt0.1.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

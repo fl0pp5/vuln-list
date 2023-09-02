@@ -1,0 +1,252 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201673",
+      "Version": "oval:org.altlinux.errata:def:20201673",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1673: package `kernel-image-rpi-un` update to version 5.6.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1673",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1673",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02134",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02134",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02136",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02136",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02416",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02416",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05727",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05727",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04677",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04677",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11608",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11608",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-11609",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11609",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-11668",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11668",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-36557",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-36557",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8835",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8835",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-un to version 5.6.2-alt2. \nSecurity Fix(es):\n\n * BDU:2020-02134: Уязвимость функций ov511_mode_init_regs и ov518_mode_init_regs ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-02136: Уязвимость USB-драйвера камеры Xirlink (drivers/media/usb/gspca/xirlink_cit.c) ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на целостность защищаемой информации и вызвать отказ в обслуживании\n\n * BDU:2020-02416: Уязвимость подсистемы stv06xx ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05727: Уязвимость компонента kernel/bpf/verifier.c ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-04677: Уязвимость реализации вызова VT_DISALLOCATE ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-11608: An issue was discovered in the Linux kernel before 5.6.1. drivers/media/usb/gspca/ov519.c allows NULL pointer dereferences in ov511_mode_init_regs and ov518_mode_init_regs when there are zero endpoints, aka CID-998912346c0d.\n\n * CVE-2020-11609: An issue was discovered in the stv06xx subsystem in the Linux kernel before 5.6.1. drivers/media/usb/gspca/stv06xx/stv06xx.c and drivers/media/usb/gspca/stv06xx/stv06xx_pb0100.c mishandle invalid descriptors, as demonstrated by a NULL pointer dereference, aka CID-485b06aadb93.\n\n * CVE-2020-11668: In the Linux kernel before 5.6.1, drivers/media/usb/gspca/xirlink_cit.c (aka the Xirlink camera USB driver) mishandles invalid descriptors, aka CID-a246b4d54770.\n\n * CVE-2020-36557: A race condition in the Linux kernel before 5.6.2 between the VT_DISALLOCATE ioctl and closing/opening of ttys could lead to a use-after-free.\n\n * CVE-2020-8835: In the Linux kernel 5.5.0 and newer, the bpf verifier (kernel/bpf/verifier.c) did not properly restrict the register bounds for 32-bit operations, leading to out-of-bounds reads and writes in kernel memory. The vulnerability also affects the Linux 5.4 stable series, starting with v5.4.7, as the introducing commit was backported to that branch. This vulnerability was fixed in 5.6.1, 5.5.14, and 5.4.29. (issue is aka ZDI-CAN-10780)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-06"
+          },
+          "Updated": {
+            "Date": "2020-04-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-02134",
+              "Impact": "Low",
+              "Public": "20200401",
+              "CveID": "BDU:2020-02134"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-02136",
+              "Impact": "High",
+              "Public": "20200103",
+              "CveID": "BDU:2020-02136"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:P/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-02416",
+              "Impact": "Low",
+              "Public": "20200407",
+              "CveID": "BDU:2020-02416"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-05727",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "BDU:2020-05727"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-362, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-04677",
+              "Impact": "Critical",
+              "Public": "20200321",
+              "CveID": "BDU:2022-04677"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11608",
+              "Impact": "Low",
+              "Public": "20200407",
+              "CveID": "CVE-2020-11608"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11609",
+              "Impact": "Low",
+              "Public": "20200407",
+              "CveID": "CVE-2020-11609"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11668",
+              "Impact": "High",
+              "Public": "20200409",
+              "CveID": "CVE-2020-11668"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-36557",
+              "Impact": "Low",
+              "Public": "20220721",
+              "CveID": "CVE-2020-36557"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8835",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "CVE-2020-8835"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201673001",
+                "Comment": "kernel-headers-modules-rpi-un is earlier than 1:5.6.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201673002",
+                "Comment": "kernel-headers-rpi-un is earlier than 1:5.6.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201673003",
+                "Comment": "kernel-image-rpi-un is earlier than 1:5.6.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201673004",
+                "Comment": "kernel-modules-staging-rpi-un is earlier than 1:5.6.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201673005",
+                "Comment": "kernel-modules-v4l-rpi-un is earlier than 1:5.6.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

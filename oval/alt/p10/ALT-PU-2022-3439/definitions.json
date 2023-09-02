@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223439",
+      "Version": "oval:org.altlinux.errata:def:20223439",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3439: package `curl` update to version 7.87.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3439",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3439",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02157",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02157",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-43551",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43551",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-43552",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-43552",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.87.0-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02157: Уязвимость механизма HSTS (HTTP Strict Transport Security) утилиты командной строки cURL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2022-43551: A vulnerability exists in curl \u003c7.87.0 HSTS check that could be bypassed to trick it to keep using HTTP. Using its HSTS support, curl can be instructed to use HTTPS instead of using an insecure clear-text HTTP step even when HTTP is provided in the URL. However, the HSTS mechanism could be bypassed if the host name in the given URL first uses IDN characters that get replaced to ASCII counterparts as part of the IDN conversion. Like using the character UTF-8 U+3002 (IDEOGRAPHIC FULL STOP) instead of the common ASCII full stop (U+002E) `.`. Then in a subsequent request, it does not detect the HSTS state and makes a clear text transfer. Because it would store the info IDN encoded but look for it IDN decoded.\n\n * CVE-2022-43552: A use after free vulnerability exists in curl \u003c7.87.0. Curl can be asked to *tunnel* virtually all protocols it supports through an HTTP proxy. HTTP proxies can (and often do) deny such tunnel operations. When getting denied to tunnel the specific protocols SMB or TELNET, curl would use a heap-allocated struct after it had been freed, in its transfer shutdown code path.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-30"
+          },
+          "Updated": {
+            "Date": "2022-12-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://bdu.fstec.ru/vul/2023-02157",
+              "Impact": "High",
+              "Public": "20221029",
+              "CveID": "BDU:2023-02157"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43551",
+              "Impact": "High",
+              "Public": "20221223",
+              "CveID": "CVE-2022-43551"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-43552",
+              "Impact": "Low",
+              "Public": "20230209",
+              "CveID": "CVE-2022-43552"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223439001",
+                "Comment": "curl is earlier than 0:7.87.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223439002",
+                "Comment": "libcurl is earlier than 0:7.87.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223439003",
+                "Comment": "libcurl-devel is earlier than 0:7.87.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223439004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.87.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

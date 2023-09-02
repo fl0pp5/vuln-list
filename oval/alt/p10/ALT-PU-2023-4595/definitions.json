@@ -1,0 +1,418 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234595",
+      "Version": "oval:org.altlinux.errata:def:20234595",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4595: package `dotnet-runtime-6.0` update to version 6.0.20-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4595",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4595",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00850",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00850",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02907",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02907",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03210",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03210",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03308",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03308",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03339",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03339",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03439",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03439",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03440",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03440",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03531",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03531",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03789",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03789",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03790",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03790",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-21538",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-21538",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-21808",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-21808",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24895",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24895",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24897",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24897",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24936",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24936",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28260",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28260",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29331",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29331",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29337",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29337",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33126",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33126",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33127",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33127",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33128",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33128",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33135",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33135",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33170",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33170",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dotnet-runtime-6.0 to version 6.0.20-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00850: Уязвимость программных платформ Microsoft .NET Framework и .NET, связанная с недостаточной защитой служебных данных при реализации кода отладки, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-02907: Уязвимость программной платформы Microsoft .NET, связанная с некорректной обработкой пути поиска к библиотекам DLL,позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03210: Уязвимость программных платформ Microsoft .NET Framework, .NET и средства разработки программного обеспечения Microsoft Visual Studio, связанная с недостаточной проверкой входных данных, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03308: Уязвимость программных платформ Microsoft .NET Framework, .NET и средства разработки программного обеспечения Microsoft Visual Studio, связанная с недостаточной проверкой входных данных, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03339: Уязвимость средства разработки программного обеспечения Microsoft Visual Studio и программной платформы Microsoft.NET, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2023-03439: Уязвимость программных платформ Microsoft .NET Framework, .NET и средства разработки программного обеспечения Microsoft Visual Studio, связанная с недостаточной проверкой входных данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03440: Уязвимость программных платформ Microsoft .NET Framework, .NET и средства разработки программного обеспечения Microsoft Visual Studio, связанная с недостатками разграничения доступа, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2023-03531: Уязвимость средства разработки программного обеспечения Microsoft Visual Studio и программной платформы Microsoft.NET, связанная с недостаточной проверкой входных данных, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03789: Уязвимость программной платформы .NET и средства разработки программного обеспечения Microsoft Visual Studio, вызванная ошибками синхронизации при использовании общего ресурса, позволяющая нарушителю обойти существующие ограничения безопасности\n\n * BDU:2023-03790: Уязвимость программной платформы .NET и средства разработки программного обеспечения Microsoft Visual Studio, вызванная ошибками синхронизации при использовании общего ресурса, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2023-21538: .NET Denial of Service Vulnerability\n\n * CVE-2023-21808: .NET and Visual Studio Remote Code Execution Vulnerability\n\n * CVE-2023-24895: .NET, .NET Framework, and Visual Studio Remote Code Execution Vulnerability\n\n * CVE-2023-24897: .NET, .NET Framework, and Visual Studio Remote Code Execution Vulnerability\n\n * CVE-2023-24936: .NET, .NET Framework, and Visual Studio Elevation of Privilege Vulnerability\n\n * CVE-2023-28260: .NET DLL Hijacking Remote Code Execution Vulnerability\n\n * CVE-2023-29331: .NET, .NET Framework, and Visual Studio Denial of Service Vulnerability\n\n * CVE-2023-29337: NuGet Client Remote Code Execution Vulnerability\n\n * CVE-2023-33126: .NET and Visual Studio Remote Code Execution Vulnerability\n\n * CVE-2023-33127: .NET and Visual Studio Elevation of Privilege Vulnerability\n\n * CVE-2023-33128: .NET and Visual Studio Remote Code Execution Vulnerability\n\n * CVE-2023-33135: .NET and Visual Studio Elevation of Privilege Vulnerability\n\n * CVE-2023-33170: ASP.NET and Visual Studio Security Feature Bypass Vulnerability",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-02"
+          },
+          "Updated": {
+            "Date": "2023-08-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-489",
+              "Href": "https://bdu.fstec.ru/vul/2023-00850",
+              "Impact": "High",
+              "Public": "20230214",
+              "CveID": "BDU:2023-00850"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-427",
+              "Href": "https://bdu.fstec.ru/vul/2023-02907",
+              "Impact": "High",
+              "Public": "20230411",
+              "CveID": "BDU:2023-02907"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03210",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03210"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03308",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03308"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2023-03339",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03339"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03439",
+              "Impact": "Low",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03439"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2023-03440",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03440"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03531",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03531"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2023-03789",
+              "Impact": "High",
+              "Public": "20230711",
+              "CveID": "BDU:2023-03789"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2023-03790",
+              "Impact": "High",
+              "Public": "20230711",
+              "CveID": "BDU:2023-03790"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-21538",
+              "Impact": "High",
+              "Public": "20230110",
+              "CveID": "CVE-2023-21538"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-21808",
+              "Impact": "High",
+              "Public": "20230214",
+              "CveID": "CVE-2023-21808"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24895",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-24895"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24897",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-24897"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24936",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-24936"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28260",
+              "Impact": "High",
+              "Public": "20230411",
+              "CveID": "CVE-2023-28260"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29331",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-29331"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29337",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-29337"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33126",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-33126"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33127",
+              "Impact": "High",
+              "Public": "20230711",
+              "CveID": "CVE-2023-33127"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33128",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-33128"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33135",
+              "Impact": "High",
+              "Public": "20230614",
+              "CveID": "CVE-2023-33135"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33170",
+              "Impact": "High",
+              "Public": "20230711",
+              "CveID": "CVE-2023-33170"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234595001",
+                "Comment": "dotnet-6.0 is earlier than 0:6.0.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234595002",
+                "Comment": "dotnet-apphost-pack-6.0 is earlier than 0:6.0.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234595003",
+                "Comment": "dotnet-hostfxr-6.0 is earlier than 0:6.0.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234595004",
+                "Comment": "dotnet-runtime-6.0 is earlier than 0:6.0.20-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

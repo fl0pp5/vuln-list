@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211601",
+      "Version": "oval:org.altlinux.errata:def:20211601",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1601: package `curl` update to version 7.76.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1601",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1601",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05241",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05241",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00312",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00312",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22876",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22876",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22890",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22890",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.76.0-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05241: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с раскрытием информации, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-00312: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с обходом аутентификации посредством спуфинга, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-22876: curl 7.1.1 to and including 7.75.0 is vulnerable to an \"Exposure of Private Personal Information to an Unauthorized Actor\" by leaking credentials in the HTTP Referer: header. libcurl does not strip off user credentials from the URL when automatically populating the Referer: HTTP request header field in outgoing HTTP requests, and therefore risks leaking sensitive data to the server that is the target of the second HTTP request.\n\n * CVE-2021-22890: curl 7.63.0 to and including 7.75.0 includes vulnerability that allows a malicious HTTPS proxy to MITM a connection due to bad handling of TLS 1.3 session tickets. When using a HTTPS proxy and TLS 1.3, libcurl can confuse session tickets arriving from the HTTPS proxy but work as if they arrived from the remote server and then wrongly \"short-cut\" the host handshake. When confusing the tickets, a HTTPS proxy can trick libcurl to use the wrong session ticket resume for the host and thereby circumvent the server TLS certificate check and make a MITM attack to be possible to perform unnoticed. Note that such a malicious HTTPS proxy needs to provide a certificate that curl will accept for the MITMed server for an attack to work - unless curl has been told to ignore the server certificate check.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-06"
+          },
+          "Updated": {
+            "Date": "2021-04-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2021-05241",
+              "Impact": "Low",
+              "Public": "20210212",
+              "CveID": "BDU:2021-05241"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-290",
+              "Href": "https://bdu.fstec.ru/vul/2022-00312",
+              "Impact": "Low",
+              "Public": "20210317",
+              "CveID": "BDU:2022-00312"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22876",
+              "Impact": "Low",
+              "Public": "20210401",
+              "CveID": "CVE-2021-22876"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-290",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22890",
+              "Impact": "Low",
+              "Public": "20210401",
+              "CveID": "CVE-2021-22890"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211601001",
+                "Comment": "curl is earlier than 0:7.76.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211601002",
+                "Comment": "libcurl is earlier than 0:7.76.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211601003",
+                "Comment": "libcurl-devel is earlier than 0:7.76.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211601004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.76.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

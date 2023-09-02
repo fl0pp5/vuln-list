@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223402",
+      "Version": "oval:org.altlinux.errata:def:20223402",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3402: package `anilibria-winmaclinux` update to version 1.2.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3402",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3402",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades anilibria-winmaclinux to version 1.2.3-alt1. \nSecurity Fix(es):\n\n * #44597: Приложение \"AniLibria\" падает при попытке открыть карточку случайного релиза, если не загружены все релизы",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-23"
+          },
+          "Updated": {
+            "Date": "2022-12-23"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44597",
+              "Href": "https://bugzilla.altlinux.org/44597",
+              "Data": "Приложение \"AniLibria\" падает при попытке открыть карточку случайного релиза, если не загружены все релизы"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223402001",
+                "Comment": "anilibria-winmaclinux is earlier than 0:1.2.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

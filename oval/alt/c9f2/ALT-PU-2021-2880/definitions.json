@@ -1,0 +1,309 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212880",
+      "Version": "oval:org.altlinux.errata:def:20212880",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2880: package `glibc` update to version 2.27-alt14",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2880",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2880",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04683",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04683",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04684",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04684",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03561",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03561",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06406",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06406",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05689",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05689",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2016-10228",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-10228",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10029",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10029",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1751",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1751",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27618",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27618",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-29562",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29562",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-27645",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27645",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-35942",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-35942",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glibc to version 2.27-alt14. \nSecurity Fix(es):\n\n * BDU:2020-04683: Уязвимость утилиты iconv системной библиотеки GNU C Library (glibc), связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-04684: Уязвимость функций cosl, sinl, sincosl и tanl системной библиотеки GNU C Library (glibc), позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03561: Уязвимость функции wordexp() библиотеки, обеспечивающей системные вызовы и основные функции glibc, позволяющая нарушителю читать произвольные файлы\n\n * BDU:2021-06406: Уязвимость  утилиты iconv системной библиотеки GNU C Library (glibc), связанная с переходом программы в бесконечный цикл, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05689: Уязвимость компонента netgroupcache.c демона кэширования сервера имен nscd системной библиотеки GNU C Library, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2016-10228: The iconv program in the GNU C Library (aka glibc or libc6) 2.31 and earlier, when invoked with multiple suffixes in the destination encoding (TRANSLATE or IGNORE) along with the -c option, enters an infinite loop when processing invalid multi-byte input sequences, leading to a denial of service.\n\n * CVE-2020-10029: The GNU C Library (aka glibc or libc6) before 2.32 could overflow an on-stack buffer during range reduction if an input to an 80-bit long double function contains a non-canonical bit pattern, a seen when passing a 0x5d414141414141410000 value to sinl on x86 targets. This is related to sysdeps/ieee754/ldbl-96/e_rem_pio2l.c.\n\n * CVE-2020-1751: An out-of-bounds write vulnerability was found in glibc before 2.31 when handling signal trampolines on PowerPC. Specifically, the backtrace function did not properly check the array bounds when storing the frame address, resulting in a denial of service or potential code execution. The highest threat from this vulnerability is to system availability.\n\n * CVE-2020-27618: The iconv function in the GNU C Library (aka glibc or libc6) 2.32 and earlier, when processing invalid multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390, and IBM1399 encodings, fails to advance the input state, which could lead to an infinite loop in applications, resulting in a denial of service, a different vulnerability from CVE-2016-10228.\n\n * CVE-2020-29562: The iconv function in the GNU C Library (aka glibc or libc6) 2.30 to 2.32, when converting UCS4 text containing an irreversible character, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.\n\n * CVE-2021-27645: The nameserver caching daemon (nscd) in the GNU C Library (aka glibc or libc6) 2.29 through 2.33, when processing a request for netgroup lookup, may crash due to a double-free, potentially resulting in degraded service or Denial of Service on the local system. This is related to netgroupcache.c.\n\n * CVE-2021-35942: The wordexp function in the GNU C Library (aka glibc) through 2.33 may crash or read arbitrary memory in parse_param (in posix/wordexp.c) when called with an untrusted, crafted pattern, potentially resulting in a denial of service or disclosure of information. This occurs because atoi was used but strtoul should have been used to ensure correct calculations.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-24"
+          },
+          "Updated": {
+            "Date": "2021-09-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-04683",
+              "Impact": "Low",
+              "Public": "20200827",
+              "CveID": "BDU:2020-04683"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-04684",
+              "Impact": "Low",
+              "Public": "20200827",
+              "CveID": "BDU:2020-04684"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-03561",
+              "Impact": "Low",
+              "Public": "20210625",
+              "CveID": "BDU:2021-03561"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2021-06406",
+              "Impact": "Low",
+              "Public": "20210226",
+              "CveID": "BDU:2021-06406"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2022-05689",
+              "Impact": "Low",
+              "Public": "20210224",
+              "CveID": "BDU:2022-05689"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-10228",
+              "Impact": "Low",
+              "Public": "20170302",
+              "CveID": "CVE-2016-10228"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10029",
+              "Impact": "Low",
+              "Public": "20200304",
+              "CveID": "CVE-2020-10029"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1751",
+              "Impact": "High",
+              "Public": "20200417",
+              "CveID": "CVE-2020-1751"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27618",
+              "Impact": "Low",
+              "Public": "20210226",
+              "CveID": "CVE-2020-27618"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29562",
+              "Impact": "Low",
+              "Public": "20201204",
+              "CveID": "CVE-2020-29562"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27645",
+              "Impact": "Low",
+              "Public": "20210224",
+              "CveID": "CVE-2021-27645"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-35942",
+              "Impact": "Critical",
+              "Public": "20210722",
+              "CveID": "CVE-2021-35942"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880001",
+                "Comment": "glibc is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880002",
+                "Comment": "glibc-core is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880003",
+                "Comment": "glibc-debug is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880004",
+                "Comment": "glibc-devel is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880005",
+                "Comment": "glibc-devel-static is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880006",
+                "Comment": "glibc-doc is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880007",
+                "Comment": "glibc-gconv-modules is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880008",
+                "Comment": "glibc-i18ndata is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880009",
+                "Comment": "glibc-locales is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880010",
+                "Comment": "glibc-nss is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880011",
+                "Comment": "glibc-preinstall is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880012",
+                "Comment": "glibc-pthread is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880013",
+                "Comment": "glibc-source is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880014",
+                "Comment": "glibc-timezones is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880015",
+                "Comment": "glibc-utils is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880016",
+                "Comment": "iconv is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880017",
+                "Comment": "libnsl1 is earlier than 6:2.27-alt14"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212880018",
+                "Comment": "nscd is earlier than 6:2.27-alt14"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

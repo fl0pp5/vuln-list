@@ -1,0 +1,290 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203212",
+      "Version": "oval:org.altlinux.errata:def:20203212",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3212: package `phpMyAdmin` update to version 5.0.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3212",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3212",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04000",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04000",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03949",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03949",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01804",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01804",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11768",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11768",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12616",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12616",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12922",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12922",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18622",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18622",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19617",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19617",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10802",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10802",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10803",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10803",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10804",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10804",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-22278",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-22278",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-5504",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-5504",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades phpMyAdmin to version 5.0.4-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04000: Уязвимость веб-приложения для администрирования систем управления базами данных phpMyAdmin, связанная с подделкой межсайтовых запросов, позволяющая нарушителю удалить любой сервер на странице установки\n\n * BDU:2020-03949: Уязвимость функции конструктора (designer/move.js file) веб-приложения для администрирования систем управления базами данных phpMyAdmin, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-01804: Уязвимость функции «Export» веб-приложения для администрирования систем управления базами данных phpMyAdmin, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-11768: An issue was discovered in phpMyAdmin before 4.9.0.1. A vulnerability was reported where a specially crafted database name can be used to trigger an SQL injection attack through the designer feature.\n\n * CVE-2019-12616: An issue was discovered in phpMyAdmin before 4.9.0. A vulnerability was found that allows an attacker to trigger a CSRF attack against a phpMyAdmin user. The attacker can trick the user, for instance through a broken \u003cimg\u003e tag pointing at the victim's phpMyAdmin database, and the attacker can potentially deliver a payload (such as a specific INSERT or DELETE statement) to the victim.\n\n * CVE-2019-12922: A CSRF issue in phpMyAdmin 4.9.0.1 allows deletion of any server in the Setup page.\n\n * CVE-2019-18622: An issue was discovered in phpMyAdmin before 4.9.2. A crafted database/table name can be used to trigger a SQL injection attack through the designer feature.\n\n * CVE-2019-19617: phpMyAdmin before 4.9.2 does not escape certain Git information, related to libraries/classes/Display/GitRevision.php and libraries/classes/Footer.php.\n\n * CVE-2020-10802: In phpMyAdmin 4.x before 4.9.5 and 5.x before 5.0.2, a SQL injection vulnerability has been discovered where certain parameters are not properly escaped when generating certain queries for search actions in libraries/classes/Controllers/Table/TableSearchController.php. An attacker can generate a crafted database or table name. The attack can be performed if a user attempts certain search operations on the malicious database or table.\n\n * CVE-2020-10803: In phpMyAdmin 4.x before 4.9.5 and 5.x before 5.0.2, a SQL injection vulnerability was discovered where malicious code could be used to trigger an XSS attack through retrieving and displaying results (in tbl_get_field.php and libraries/classes/Display/Results.php). The attacker must be able to insert crafted data into certain database tables, which when retrieved (for instance, through the Browse tab) can trigger the XSS attack.\n\n * CVE-2020-10804: In phpMyAdmin 4.x before 4.9.5 and 5.x before 5.0.2, a SQL injection vulnerability was found in retrieval of the current username (in libraries/classes/Server/Privileges.php and libraries/classes/UserPassword.php). A malicious user with access to the server could create a crafted username, and then trick the victim into performing specific actions with that user account (such as editing its privileges).\n\n * CVE-2020-22278: ** DISPUTED ** phpMyAdmin through 5.0.2 allows CSV injection via Export Section. NOTE: the vendor disputes this because \"the CSV file is accurately generated based on the database contents.\"\n\n * CVE-2020-5504: In phpMyAdmin 4 before 4.9.4 and 5 before 5.0.1, SQL injection exists in the user accounts page. A malicious user could inject custom SQL in place of their own username when creating queries to this page. An attacker must have a valid MySQL account to access the server.\n\n * #37954: Too short initial value for 'blowfish_secret' parameter",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-05"
+          },
+          "Updated": {
+            "Date": "2020-11-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://bdu.fstec.ru/vul/2019-04000",
+              "Impact": "Low",
+              "Public": "20190518",
+              "CveID": "BDU:2019-04000"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-03949",
+              "Impact": "Critical",
+              "Public": "20190605",
+              "CveID": "BDU:2020-03949"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1236",
+              "Href": "https://bdu.fstec.ru/vul/2021-01804",
+              "Impact": "High",
+              "Public": "20201104",
+              "CveID": "BDU:2021-01804"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11768",
+              "Impact": "Critical",
+              "Public": "20190605",
+              "CveID": "CVE-2019-11768"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12616",
+              "Impact": "Low",
+              "Public": "20190605",
+              "CveID": "CVE-2019-12616"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12922",
+              "Impact": "Low",
+              "Public": "20190913",
+              "CveID": "CVE-2019-12922"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18622",
+              "Impact": "Critical",
+              "Public": "20191122",
+              "CveID": "CVE-2019-18622"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19617",
+              "Impact": "Critical",
+              "Public": "20191206",
+              "CveID": "CVE-2019-19617"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10802",
+              "Impact": "High",
+              "Public": "20200322",
+              "CveID": "CVE-2020-10802"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10803",
+              "Impact": "Low",
+              "Public": "20200322",
+              "CveID": "CVE-2020-10803"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10804",
+              "Impact": "High",
+              "Public": "20200322",
+              "CveID": "CVE-2020-10804"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1236",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-22278",
+              "Impact": "High",
+              "Public": "20201104",
+              "CveID": "CVE-2020-22278"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-5504",
+              "Impact": "High",
+              "Public": "20200109",
+              "CveID": "CVE-2020-5504"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37954",
+              "Href": "https://bugzilla.altlinux.org/37954",
+              "Data": "Too short initial value for 'blowfish_secret' parameter"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203212001",
+                "Comment": "phpMyAdmin is earlier than 0:5.0.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203212002",
+                "Comment": "phpMyAdmin-apache2-php7 is earlier than 0:5.0.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

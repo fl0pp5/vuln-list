@@ -1,0 +1,151 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201687",
+      "Version": "oval:org.altlinux.errata:def:20201687",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1687: package `libgcrypt` update to version 1.8.5-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1687",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1687",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01727",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01727",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12904",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12904",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13627",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13627",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libgcrypt to version 1.8.5-alt3. \nSecurity Fix(es):\n\n * BDU:2020-01727: Уязвимость криптографической библиотеки Python ECDSA, связанная с недостаточной обработкой исключительных состояний, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-12904: ** DISPUTED ** In Libgcrypt 1.8.4, the C implementation of AES is vulnerable to a flush-and-reload side-channel attack because physical addresses are available to other processes. (The C implementation is used on platforms where an assembly-language implementation is unavailable.) NOTE: the vendor's position is that the issue report cannot be validated because there is no description of an attack.\n\n * CVE-2019-13627: It was discovered that there was a ECDSA timing attack in the libgcrypt20 cryptographic library. Version affected: 1.8.4-5, 1.7.6-2+deb9u3, and 1.6.3-2+deb8u4. Versions fixed: 1.8.5-2 and 1.6.3-2+deb8u7.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-08"
+          },
+          "Updated": {
+            "Date": "2020-04-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-01727",
+              "Impact": "Low",
+              "Public": "20200113",
+              "CveID": "BDU:2020-01727"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-668",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12904",
+              "Impact": "Low",
+              "Public": "20190620",
+              "CveID": "CVE-2019-12904"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13627",
+              "Impact": "Low",
+              "Public": "20190925",
+              "CveID": "CVE-2019-13627"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201687001",
+                "Comment": "gcrypt-utils is earlier than 0:1.8.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201687002",
+                "Comment": "libgcrypt-devel is earlier than 0:1.8.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201687003",
+                "Comment": "libgcrypt-devel-static is earlier than 0:1.8.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201687004",
+                "Comment": "libgcrypt20 is earlier than 0:1.8.5-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

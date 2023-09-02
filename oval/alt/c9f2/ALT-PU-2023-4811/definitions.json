@@ -1,0 +1,98 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234811",
+      "Version": "oval:org.altlinux.errata:def:20234811",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4811: package `libwpd10` update to version 0.10.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4811",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4811",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-19208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-19208",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libwpd10 to version 0.10.3-alt2. \nSecurity Fix(es):\n\n * CVE-2018-19208: In libwpd 0.10.2, there is a NULL pointer dereference in the function WP6ContentListener::defineTable in WP6ContentListener.cpp that will lead to a denial of service attack. This is related to WPXTable.h.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-14"
+          },
+          "Updated": {
+            "Date": "2023-08-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-19208",
+              "Impact": "Low",
+              "Public": "20181112",
+              "CveID": "CVE-2018-19208"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234811001",
+                "Comment": "libwpd10 is earlier than 0:0.10.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234811002",
+                "Comment": "libwpd10-devel is earlier than 0:0.10.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234811003",
+                "Comment": "libwpd10-doc is earlier than 0:0.10.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234811004",
+                "Comment": "libwpd10-tools is earlier than 0:0.10.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

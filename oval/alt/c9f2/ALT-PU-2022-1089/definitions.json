@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221089",
+      "Version": "oval:org.altlinux.errata:def:20221089",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1089: package `mc` update to version 4.8.27-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1089",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1089",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00235",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00235",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-36370",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36370",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mc to version 4.8.27-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00235: Уязвимость файлового менеджера Midnight Commander, связанная с недостатками процедуры аутентификации, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-36370: An issue was discovered in Midnight Commander through 4.8.26. When establishing an SFTP connection, the fingerprint of the server is neither checked nor displayed. As a result, a user connects to the server without the ability to verify its authenticity.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-19"
+          },
+          "Updated": {
+            "Date": "2022-01-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-00235",
+              "Impact": "High",
+              "Public": "20210709",
+              "CveID": "BDU:2022-00235"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36370",
+              "Impact": "High",
+              "Public": "20210830",
+              "CveID": "CVE-2021-36370"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221089001",
+                "Comment": "mc is earlier than 0:4.8.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221089002",
+                "Comment": "mc-full is earlier than 0:4.8.27-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222428",
+      "Version": "oval:org.altlinux.errata:def:20222428",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2428: package `mediawiki` update to version 1.37.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2428",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2428",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-28201",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28201",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28202",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28202",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28203",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28203",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28204",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28204",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28205",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28205",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28206",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28206",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28209",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28209",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mediawiki to version 1.37.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-28201: An issue was discovered in MediaWiki before 1.35.6, 1.36.x before 1.36.4, and 1.37.x before 1.37.2. Users with the editinterface permission can trigger infinite recursion, because a bare local interwiki is mishandled for the mainpage message.\n\n * CVE-2022-28202: An XSS issue was discovered in MediaWiki before 1.35.6, 1.36.x before 1.36.4, and 1.37.x before 1.37.2. The widthheight, widthheightpage, and nbytes properties of messages are not escaped when used in galleries or Special:RevisionDelete.\n\n * CVE-2022-28203: A denial-of-service issue was discovered in MediaWiki before 1.35.6, 1.36.x before 1.36.4, and 1.37.x before 1.37.2. When many files exist, requesting Special:NewFiles with actor as a condition can result in a very long running query.\n\n * CVE-2022-28204: A denial-of-service issue was discovered in MediaWiki 1.37.x before 1.37.2. Rendering of w/index.php?title=Special%3AWhatLinksHere\u0026target=Property%3AP31\u0026namespace=1\u0026invert=1 can take more than thirty seconds. There is a DDoS risk.\n\n * CVE-2022-28205: An issue was discovered in MediaWiki through 1.37.1. The CentralAuth extension mishandles a ttl issue for groups expiring in the future.\n\n * CVE-2022-28206: An issue was discovered in MediaWiki through 1.37.1. ImportPlanValidator.php in the FileImporter extension mishandles the check for edit rights.\n\n * CVE-2022-28209: An issue was discovered in Mediawiki through 1.37.1. The check for the override-antispoof permission in the AntiSpoof extension is incorrect.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-12"
+          },
+          "Updated": {
+            "Date": "2022-08-12"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28201",
+              "Impact": "Low",
+              "Public": "20220919",
+              "CveID": "CVE-2022-28201"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28202",
+              "Impact": "Low",
+              "Public": "20220330",
+              "CveID": "CVE-2022-28202"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28203",
+              "Impact": "High",
+              "Public": "20220919",
+              "CveID": "CVE-2022-28203"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28204",
+              "Impact": "High",
+              "Public": "20220919",
+              "CveID": "CVE-2022-28204"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28205",
+              "Impact": "Critical",
+              "Public": "20220330",
+              "CveID": "CVE-2022-28205"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28206",
+              "Impact": "Critical",
+              "Public": "20220330",
+              "CveID": "CVE-2022-28206"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28209",
+              "Impact": "Critical",
+              "Public": "20220330",
+              "CveID": "CVE-2022-28209"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428001",
+                "Comment": "mediawiki is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428002",
+                "Comment": "mediawiki-apache2 is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428003",
+                "Comment": "mediawiki-common is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428004",
+                "Comment": "mediawiki-extensions-PdfHandler is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428005",
+                "Comment": "mediawiki-extensions-Scribunto is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428006",
+                "Comment": "mediawiki-extensions-SyntaxHighlight_GeSHi is earlier than 1:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428007",
+                "Comment": "mediawiki-mysql is earlier than 0:1.37.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222428008",
+                "Comment": "mediawiki-postgresql is earlier than 0:1.37.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

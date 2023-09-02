@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222530",
+      "Version": "oval:org.altlinux.errata:def:20222530",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2530: package `kde5-kio-extras` update to version 22.04.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2530",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2530",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades kde5-kio-extras to version 22.04.3-alt2. \nSecurity Fix(es):\n\n * #43616: не подключиться к smb ресурсу на synology",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-31"
+          },
+          "Updated": {
+            "Date": "2022-08-31"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43616",
+              "Href": "https://bugzilla.altlinux.org/43616",
+              "Data": "не подключиться к smb ресурсу на synology"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222530001",
+                "Comment": "kde5-kio-extras is earlier than 0:22.04.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222530002",
+                "Comment": "kde5-kio-extras-common is earlier than 0:22.04.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222530003",
+                "Comment": "kde5-kio-extras-devel is earlier than 0:22.04.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222530004",
+                "Comment": "libkioarchive5 is earlier than 0:22.04.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

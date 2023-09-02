@@ -1,0 +1,193 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221761",
+      "Version": "oval:org.altlinux.errata:def:20221761",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1761: package `klibc` update to version 2.0.8-alt2.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1761",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1761",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05232",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05232",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05239",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05239",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05247",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05247",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05264",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05264",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-31870",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31870",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31871",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31871",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31872",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31872",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31873",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31873",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades klibc to version 2.0.8-alt2.c9f2.1. \nSecurity Fix(es):\n\n * BDU:2021-05232: Уязвимость функции malloc() библиотеки среды выполнения Klibc, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05239: Уязвимость команды cpio библиотеки среды выполнения Klibc на 64-битных системах, связанная с целочисленным переполнением, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05247: Уязвимость функции calloc() библиотеки среды выполнения Klibc, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-05264: Уязвимость команды cpio библиотеки среды выполнения Klibc на 32-битных системах, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-31870: An issue was discovered in klibc before 2.0.9. Multiplication in the calloc() function may result in an integer overflow and a subsequent heap buffer overflow.\n\n * CVE-2021-31871: An issue was discovered in klibc before 2.0.9. An integer overflow in the cpio command may result in a NULL pointer dereference on 64-bit systems.\n\n * CVE-2021-31872: An issue was discovered in klibc before 2.0.9. Multiple possible integer overflows in the cpio command on 32-bit systems may result in a buffer overflow or other security impact.\n\n * CVE-2021-31873: An issue was discovered in klibc before 2.0.9. Additions in the malloc() function may result in an integer overflow and a subsequent heap buffer overflow.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-26"
+          },
+          "Updated": {
+            "Date": "2022-04-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05232",
+              "Impact": "Critical",
+              "Public": "20210428",
+              "CveID": "BDU:2021-05232"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05239",
+              "Impact": "High",
+              "Public": "20210428",
+              "CveID": "BDU:2021-05239"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05247",
+              "Impact": "Critical",
+              "Public": "20210428",
+              "CveID": "BDU:2021-05247"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05264",
+              "Impact": "Critical",
+              "Public": "20210428",
+              "CveID": "BDU:2021-05264"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31870",
+              "Impact": "Critical",
+              "Public": "20210430",
+              "CveID": "CVE-2021-31870"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31871",
+              "Impact": "High",
+              "Public": "20210430",
+              "CveID": "CVE-2021-31871"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31872",
+              "Impact": "Critical",
+              "Public": "20210430",
+              "CveID": "CVE-2021-31872"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31873",
+              "Impact": "Critical",
+              "Public": "20210430",
+              "CveID": "CVE-2021-31873"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221761001",
+                "Comment": "klibc is earlier than 0:2.0.8-alt2.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221761002",
+                "Comment": "klibc-devel is earlier than 0:2.0.8-alt2.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221761003",
+                "Comment": "klibc-utils is earlier than 0:2.0.8-alt2.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203207",
+      "Version": "oval:org.altlinux.errata:def:20203207",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3207: package `glib-networking` update to version 2.60.3-alt1.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3207",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3207",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01328",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01328",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-13645",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13645",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glib-networking to version 2.60.3-alt1.p9.1. \nSecurity Fix(es):\n\n * BDU:2021-01328: Уязвимость реализации GTlsClientConnection библиотеки glib-networking, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * CVE-2020-13645: In GNOME glib-networking through 2.64.2, the implementation of GTlsClientConnection skips hostname verification of the server's TLS certificate if the application fails to specify the expected server identity. This is in contrast to its intended documented behavior, to fail the certificate verification. Applications that fail to provide the server identity, including Balsa before 2.5.11 and 2.6.x before 2.6.1, accept a TLS certificate if the certificate is valid for any host.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-05"
+          },
+          "Updated": {
+            "Date": "2020-11-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2021-01328",
+              "Impact": "Low",
+              "Public": "20200528",
+              "CveID": "BDU:2021-01328"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13645",
+              "Impact": "Low",
+              "Public": "20200528",
+              "CveID": "CVE-2020-13645"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203207001",
+                "Comment": "glib-networking is earlier than 0:2.60.3-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203207002",
+                "Comment": "glib-networking-tests is earlier than 0:2.60.3-alt1.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

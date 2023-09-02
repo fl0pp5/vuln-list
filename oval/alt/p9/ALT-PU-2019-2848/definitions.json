@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192848",
+      "Version": "oval:org.altlinux.errata:def:20192848",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2848: package `mysql-workbench-community` update to version 8.0.17-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2848",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2848",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-00985",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00985",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-1559",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1559",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mysql-workbench-community to version 8.0.17-alt1. \nSecurity Fix(es):\n\n * BDU:2019-00985: Уязвимость функции SSL_shutdown средства криптографической защиты  OpenSSL, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2019-1559: If an application encounters a fatal protocol error and then calls SSL_shutdown() twice (once to send a close_notify, and once to receive one) then OpenSSL can respond differently to the calling application if a 0 byte record is received with invalid padding compared to if a 0 byte record is received with an invalid MAC. If the application then behaves differently based on that in a way that is detectable to the remote peer, then this amounts to a padding oracle that could be used to decrypt data. In order for this to be exploitable \"non-stitched\" ciphersuites must be in use. Stitched ciphersuites are optimised implementations of certain commonly used ciphersuites. Also the application must call SSL_shutdown() twice even if a protocol error has occurred (applications should not do this but some do anyway). Fixed in OpenSSL 1.0.2r (Affected 1.0.2-1.0.2q).\n\n * #35600: Ошибка миграции базы данных",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-10"
+          },
+          "Updated": {
+            "Date": "2019-10-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2019-00985",
+              "Impact": "Low",
+              "Public": "20190227",
+              "CveID": "BDU:2019-00985"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1559",
+              "Impact": "Low",
+              "Public": "20190227",
+              "CveID": "CVE-2019-1559"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "35600",
+              "Href": "https://bugzilla.altlinux.org/35600",
+              "Data": "Ошибка миграции базы данных"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192848001",
+                "Comment": "mysql-workbench-community is earlier than 0:8.0.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192848002",
+                "Comment": "mysql-workbench-community-data is earlier than 0:8.0.17-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

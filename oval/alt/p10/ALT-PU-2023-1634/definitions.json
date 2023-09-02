@@ -1,0 +1,106 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231634",
+      "Version": "oval:org.altlinux.errata:def:20231634",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1634: package `sbcl` update to version 2.3.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1634",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1634",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades sbcl to version 2.3.3-alt1. \nSecurity Fix(es):\n\n * #38529: Не загружаются модули из contrib\n\n * #44041: update up 2.2.9",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-18"
+          },
+          "Updated": {
+            "Date": "2023-04-18"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38529",
+              "Href": "https://bugzilla.altlinux.org/38529",
+              "Data": "Не загружаются модули из contrib"
+            },
+            {
+              "Id": "44041",
+              "Href": "https://bugzilla.altlinux.org/44041",
+              "Data": "update up 2.2.9"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231634001",
+                "Comment": "sbcl is earlier than 0:2.3.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

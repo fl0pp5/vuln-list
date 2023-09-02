@@ -1,0 +1,214 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222487",
+      "Version": "oval:org.altlinux.errata:def:20222487",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2487: package `kernel-image-un-def` update to version 5.15.62-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2487",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2487",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05997",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05997",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07502",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07502",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07512",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07512",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-40476",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-40476",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47942",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47942",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47943",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47943",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.15.62-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05997: Уязвимость компонента fs/io_uring.c ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-07502: Уязвимость подсистемы SMB ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07512: Уязвимость функции smb2_write (fs/ksmbd/smb2pdu.c) модуля ksmbd ядра операционной системы Linux, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * CVE-2022-40476: A null pointer dereference issue was discovered in fs/io_uring.c in the Linux kernel before 5.15.62. A local user could use this flaw to crash the system or potentially cause a denial of service.\n\n * CVE-2022-47942: An issue was discovered in ksmbd in the Linux kernel 5.15 through 5.19 before 5.19.2. There is a heap-based buffer overflow in set_ntacl_dacl, related to use of SMB2_QUERY_INFO_HE after a malformed SMB2_SET_INFO_HE command.\n\n * CVE-2022-47943: An issue was discovered in ksmbd in the Linux kernel 5.15 through 5.19 before 5.19.2. There is an out-of-bounds read and OOPS for SMB2_WRITE, when there is a large length in the zero DataOffset case.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-24"
+          },
+          "Updated": {
+            "Date": "2022-08-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-05997",
+              "Impact": "Low",
+              "Public": "20220623",
+              "CveID": "BDU:2022-05997"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07502",
+              "Impact": "High",
+              "Public": "20220802",
+              "CveID": "BDU:2022-07502"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-07512",
+              "Impact": "Critical",
+              "Public": "20221223",
+              "CveID": "BDU:2022-07512"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-40476",
+              "Impact": "Low",
+              "Public": "20220914",
+              "CveID": "CVE-2022-40476"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47942",
+              "Impact": "High",
+              "Public": "20221223",
+              "CveID": "CVE-2022-47942"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47943",
+              "Impact": "High",
+              "Public": "20221223",
+              "CveID": "CVE-2022-47943"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487001",
+                "Comment": "kernel-doc-un is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487006",
+                "Comment": "kernel-image-un-def-checkinstall is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487007",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487008",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.15.62-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222487010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.15.62-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213024",
+      "Version": "oval:org.altlinux.errata:def:20213024",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3024: package `chromium` update to version 94.0.4606.81-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3024",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3024",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05433",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05433",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05591",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05591",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-37977",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37977",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-37978",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37978",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-37979",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37979",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-37980",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37980",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades chromium to version 94.0.4606.81-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05433: Уязвимость модуля отображения Blink браузеров Google Chrome и Microsoft Edge, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2021-05591: Уязвимость компонента Garbage Collection браузеров Google Chrome и Microsoft Edge, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2021-37977: Use after free in Garbage Collection in Google Chrome prior to 94.0.4606.81 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.\n\n * CVE-2021-37978: Heap buffer overflow in Blink in Google Chrome prior to 94.0.4606.81 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page.\n\n * CVE-2021-37979: heap buffer overflow in WebRTC in Google Chrome prior to 94.0.4606.81 allowed a remote attacker who convinced a user to browse to a malicious website to potentially exploit heap corruption via a crafted HTML page.\n\n * CVE-2021-37980: Inappropriate implementation in Sandbox in Google Chrome prior to 94.0.4606.81 allowed a remote attacker to potentially bypass site isolation via Windows.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-12"
+          },
+          "Updated": {
+            "Date": "2021-10-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2021-05433",
+              "Impact": "High",
+              "Public": "20210804",
+              "CveID": "BDU:2021-05433"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-05591",
+              "Impact": "High",
+              "Public": "20210914",
+              "CveID": "BDU:2021-05591"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37977",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "CVE-2021-37977"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37978",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "CVE-2021-37978"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37979",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "CVE-2021-37979"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37980",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "CVE-2021-37980"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213024001",
+                "Comment": "chromium is earlier than 0:94.0.4606.81-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

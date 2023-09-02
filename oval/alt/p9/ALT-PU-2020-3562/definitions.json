@@ -1,0 +1,213 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203562",
+      "Version": "oval:org.altlinux.errata:def:20203562",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3562: package `libpcap` update to version 1.9.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3562",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3562",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02115",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02115",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05681",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05681",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-16301",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16301",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15161",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15161",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15162",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15162",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15163",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15163",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15164",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15164",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15165",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15165",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libpcap to version 1.9.1-alt2. \nSecurity Fix(es):\n\n * BDU:2020-02115: Уязвимость компонента rpcapd/daemon.c библиотеки libpcap, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05681: Уязвимость компонента sf-pcapng.c библиотеки захвата сетевого трафика Libpcap, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2018-16301: The command-line argument parser in tcpdump before 4.99.0 has a buffer overflow in tcpdump.c:read_infile(). To trigger this vulnerability the attacker needs to create a 4GB file on the local filesystem and to specify the file name as the value of the -F command-line argument of tcpdump.\n\n * CVE-2019-15161: rpcapd/daemon.c in libpcap before 1.9.1 mishandles certain length values because of reuse of a variable. This may open up an attack vector involving extra data at the end of a request.\n\n * CVE-2019-15162: rpcapd/daemon.c in libpcap before 1.9.1 on non-Windows platforms provides details about why authentication failed, which might make it easier for attackers to enumerate valid usernames.\n\n * CVE-2019-15163: rpcapd/daemon.c in libpcap before 1.9.1 allows attackers to cause a denial of service (NULL pointer dereference and daemon crash) if a crypt() call fails.\n\n * CVE-2019-15164: rpcapd/daemon.c in libpcap before 1.9.1 allows SSRF because a URL may be provided as a capture source.\n\n * CVE-2019-15165: sf-pcapng.c in libpcap before 1.9.1 does not properly validate the PHB header length before allocating memory.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-28"
+          },
+          "Updated": {
+            "Date": "2020-12-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2020-02115",
+              "Impact": "High",
+              "Public": "20191003",
+              "CveID": "BDU:2020-02115"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-770",
+              "Href": "https://bdu.fstec.ru/vul/2022-05681",
+              "Impact": "Low",
+              "Public": "20180801",
+              "CveID": "BDU:2022-05681"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16301",
+              "Impact": "High",
+              "Public": "20191003",
+              "CveID": "CVE-2018-16301"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-131",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15161",
+              "Impact": "Low",
+              "Public": "20191003",
+              "CveID": "CVE-2019-15161"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-345",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15162",
+              "Impact": "Low",
+              "Public": "20191003",
+              "CveID": "CVE-2019-15162"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15163",
+              "Impact": "High",
+              "Public": "20191003",
+              "CveID": "CVE-2019-15163"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15164",
+              "Impact": "Low",
+              "Public": "20191003",
+              "CveID": "CVE-2019-15164"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15165",
+              "Impact": "Low",
+              "Public": "20191003",
+              "CveID": "CVE-2019-15165"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203562001",
+                "Comment": "libpcap-devel is earlier than 2:1.9.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203562002",
+                "Comment": "libpcap0.8 is earlier than 2:1.9.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

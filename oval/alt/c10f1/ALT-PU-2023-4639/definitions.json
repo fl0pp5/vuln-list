@@ -1,0 +1,188 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234639",
+      "Version": "oval:org.altlinux.errata:def:20234639",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4639: package `zabbix` update to version 6.0.19-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4639",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4639",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-29452",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29452",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 6.0.19-alt1. \nSecurity Fix(es):\n\n * CVE-2023-29452: \nCurrently, geomap configuration (Administration -\u003e General -\u003e Geographical maps) allows using HTML in the field “Attribution text” when selected “Other” Tile provider.\n\n\n\n * #46487: отсутствует зависимость на zabbix-phpfrontend-engine",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-09"
+          },
+          "Updated": {
+            "Date": "2023-08-09"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29452",
+              "Impact": "Low",
+              "Public": "20230713",
+              "CveID": "CVE-2023-29452"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "46487",
+              "Href": "https://bugzilla.altlinux.org/46487",
+              "Data": "отсутствует зависимость на zabbix-phpfrontend-engine"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639001",
+                "Comment": "zabbix-agent is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639003",
+                "Comment": "zabbix-agent2 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639004",
+                "Comment": "zabbix-common is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639008",
+                "Comment": "zabbix-contrib is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639009",
+                "Comment": "zabbix-doc is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639010",
+                "Comment": "zabbix-java-gateway is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php8.0 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639013",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php8.1 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639014",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php8.2 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639015",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639016",
+                "Comment": "zabbix-phpfrontend-php8.0 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639017",
+                "Comment": "zabbix-phpfrontend-php8.1 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639018",
+                "Comment": "zabbix-phpfrontend-php8.2 is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639019",
+                "Comment": "zabbix-proxy is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639020",
+                "Comment": "zabbix-proxy-common is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639021",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639022",
+                "Comment": "zabbix-server-common is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639023",
+                "Comment": "zabbix-server-mysql is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639024",
+                "Comment": "zabbix-server-pgsql is earlier than 1:6.0.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234639025",
+                "Comment": "zabbix-source is earlier than 1:6.0.19-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192406",
+      "Version": "oval:org.altlinux.errata:def:20192406",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2406: package `gvfs` update to version 1.40.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2406",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2406",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02514",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02514",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02515",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02515",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02516",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02516",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02517",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02517",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12447",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12447",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12448",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12448",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12449",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12449",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12795",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12795",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gvfs to version 1.40.2-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02514: Уязвимость компонента daemon/gvfsbackendadmin.c подсистемы GVFS среды рабочего стола GNOME операционных систем Linux, позволяющая нарушителю оказать воздействие на целостность, конфиденциальность и доступность защищаемой информации\n\n * BDU:2019-02515: Уязвимость компонента daemon/gvfsbackendadmin.c подсистемы GVFS среды рабочего стола GNOME операционных систем Linux, позволяющая нарушителю оказать воздействие на целостность, конфиденциальность и доступность защищаемой информации\n\n * BDU:2019-02516: Уязвимость компонента daemon/gvfsbackendadmin.c подсистемы GVFS среды рабочего стола GNOME операционных систем Linux, позволяющая нарушителю оказать воздействие на целостность, конфиденциальность и доступность защищаемой информации\n\n * BDU:2019-02517: Уязвимость компонента daemon/gvfsbackendadmin.c подсистемы GVFS среды рабочего стола GNOME операционных систем Linux, позволяющая нарушителю подключиться к D-Bus серверу\n\n * CVE-2019-12447: An issue was discovered in GNOME gvfs 1.29.4 through 1.41.2. daemon/gvfsbackendadmin.c mishandles file ownership because setfsuid is not used.\n\n * CVE-2019-12448: An issue was discovered in GNOME gvfs 1.29.4 through 1.41.2. daemon/gvfsbackendadmin.c has race conditions because the admin backend doesn't implement query_info_on_read/write.\n\n * CVE-2019-12449: An issue was discovered in GNOME gvfs 1.29.4 through 1.41.2. daemon/gvfsbackendadmin.c mishandles a file's user and group ownership during move (and copy with G_FILE_COPY_ALL_METADATA) operations from admin:// to file:// URIs, because root privileges are unavailable.\n\n * CVE-2019-12795: daemon/gvfsdaemon.c in gvfsd from GNOME gvfs before 1.38.3, 1.40.x before 1.40.2, and 1.41.x before 1.41.3 opened a private D-Bus server socket without configuring an authorization rule. A local attacker could connect to this server socket and issue D-Bus method calls. (Note that the server socket only accepts a single connection, so the attacker would have to discover the server and connect to the socket before its owner does.)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-07"
+          },
+          "Updated": {
+            "Date": "2019-08-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-275",
+              "Href": "https://bdu.fstec.ru/vul/2019-02514",
+              "Impact": "Critical",
+              "Public": "20190529",
+              "CveID": "BDU:2019-02514"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2019-02515",
+              "Impact": "High",
+              "Public": "20190529",
+              "CveID": "BDU:2019-02515"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-275",
+              "Href": "https://bdu.fstec.ru/vul/2019-02516",
+              "Impact": "Critical",
+              "Public": "20190529",
+              "CveID": "BDU:2019-02516"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-285",
+              "Href": "https://bdu.fstec.ru/vul/2019-02517",
+              "Impact": "High",
+              "Public": "20190529",
+              "CveID": "BDU:2019-02517"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12447",
+              "Impact": "High",
+              "Public": "20190529",
+              "CveID": "CVE-2019-12447"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12448",
+              "Impact": "High",
+              "Public": "20190529",
+              "CveID": "CVE-2019-12448"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-755",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12449",
+              "Impact": "Low",
+              "Public": "20190529",
+              "CveID": "CVE-2019-12449"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12795",
+              "Impact": "High",
+              "Public": "20190611",
+              "CveID": "CVE-2019-12795"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406001",
+                "Comment": "fuse-gvfs is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406002",
+                "Comment": "gvfs is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406003",
+                "Comment": "gvfs-backend-admin is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406004",
+                "Comment": "gvfs-backend-afc is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406005",
+                "Comment": "gvfs-backend-afp is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406006",
+                "Comment": "gvfs-backend-cdda is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406007",
+                "Comment": "gvfs-backend-dnssd is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406008",
+                "Comment": "gvfs-backend-goa is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406009",
+                "Comment": "gvfs-backend-google is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406010",
+                "Comment": "gvfs-backend-mtp is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406011",
+                "Comment": "gvfs-backend-nfs is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406012",
+                "Comment": "gvfs-backend-recent-files is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406013",
+                "Comment": "gvfs-backend-smb is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406014",
+                "Comment": "gvfs-backends is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406015",
+                "Comment": "gvfs-devel is earlier than 0:1.40.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192406016",
+                "Comment": "gvfs-tests is earlier than 0:1.40.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

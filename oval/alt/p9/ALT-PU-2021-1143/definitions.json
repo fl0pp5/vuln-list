@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211143",
+      "Version": "oval:org.altlinux.errata:def:20211143",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1143: package `shellinabox` update to version 2.20-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1143",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1143",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2018-16789",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-16789",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades shellinabox to version 2.20-alt2. \nSecurity Fix(es):\n\n * CVE-2018-16789: libhttp/url.c in shellinabox through 2.20 has an implementation flaw in the HTTP request parsing logic. By sending a crafted multipart/form-data HTTP request, an attacker could exploit this to force shellinaboxd into an infinite loop, exhausting available CPU resources and taking the service down.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-25"
+          },
+          "Updated": {
+            "Date": "2021-01-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-16789",
+              "Impact": "High",
+              "Public": "20190321",
+              "CveID": "CVE-2018-16789"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211143001",
+                "Comment": "shellinabox is earlier than 0:2.20-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

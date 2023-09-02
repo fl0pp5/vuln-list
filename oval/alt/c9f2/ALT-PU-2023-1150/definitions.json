@@ -1,0 +1,94 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231150",
+      "Version": "oval:org.altlinux.errata:def:20231150",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1150: package `python-module-lxml` update to version 4.4.2-alt1.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1150",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1150",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-2309",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2309",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python-module-lxml to version 4.4.2-alt1.c9.1. \nSecurity Fix(es):\n\n * CVE-2022-2309: NULL Pointer Dereference allows attackers to cause a denial of service (or application crash). This only applies when lxml is used together with libxml2 2.9.10 through 2.9.14. libxml2 2.9.9 and earlier are not affected. It allows triggering crashes through forged input data, given a vulnerable code sequence in the application. The vulnerability is caused by the iterwalk function (also used by the canonicalize function). Such code shouldn't be in wide-spread use, given that parsing + iterwalk would usually be replaced with the more efficient iterparse function. However, an XML converter that serialises to C14N would also be vulnerable, for example, and there are legitimate use cases for this code sequence. If untrusted input is received (also remotely) and processed via iterwalk function, a crash can be triggered.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-30"
+          },
+          "Updated": {
+            "Date": "2023-01-30"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2309",
+              "Impact": "High",
+              "Public": "20220705",
+              "CveID": "CVE-2022-2309"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231150001",
+                "Comment": "python-module-lxml is earlier than 0:4.4.2-alt1.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231150002",
+                "Comment": "python-module-lxml-doc is earlier than 0:4.4.2-alt1.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231150003",
+                "Comment": "python3-module-lxml is earlier than 0:4.4.2-alt1.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

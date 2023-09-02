@@ -1,0 +1,249 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211351",
+      "Version": "oval:org.altlinux.errata:def:20211351",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1351: package `ffmpeg` update to version 4.3.1-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1351",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1351",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01214",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01214",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03446",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03446",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-35964",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35964",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35965",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35965",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ffmpeg to version 4.3.1-alt4. \nSecurity Fix(es):\n\n * BDU:2021-01214: Уязвимость функции track_header() библиотеки libavformat мультимедийной среды Ffmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03446: Уязвимость функции decode_frame компонента libavcodec/exr.c мультимедийной библиотеки FFmpeg, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-35964: track_header in libavformat/vividas.c in FFmpeg 4.3.1 has an out-of-bounds write because of incorrect extradata packing.\n\n * CVE-2020-35965: decode_frame in libavcodec/exr.c in FFmpeg 4.3.1 has an out-of-bounds write because of errors in calculations of when to perform memset zero operations.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-16"
+          },
+          "Updated": {
+            "Date": "2021-02-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-01214",
+              "Impact": "Low",
+              "Public": "20201024",
+              "CveID": "BDU:2021-01214"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03446",
+              "Impact": "High",
+              "Public": "20201020",
+              "CveID": "BDU:2021-03446"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35964",
+              "Impact": "Low",
+              "Public": "20210103",
+              "CveID": "CVE-2020-35964"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35965",
+              "Impact": "High",
+              "Public": "20210104",
+              "CveID": "CVE-2020-35965"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351001",
+                "Comment": "ffmpeg is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351002",
+                "Comment": "ffmpeg-doc is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351003",
+                "Comment": "ffplay is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351004",
+                "Comment": "ffplay-doc is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351005",
+                "Comment": "ffprobe is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351006",
+                "Comment": "ffprobe-doc is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351007",
+                "Comment": "ffserver-doc is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351008",
+                "Comment": "libavcodec-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351009",
+                "Comment": "libavcodec58 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351010",
+                "Comment": "libavdevice-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351011",
+                "Comment": "libavdevice58 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351012",
+                "Comment": "libavfilter-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351013",
+                "Comment": "libavfilter7 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351014",
+                "Comment": "libavformat-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351015",
+                "Comment": "libavformat58 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351016",
+                "Comment": "libavresample-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351017",
+                "Comment": "libavresample4 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351018",
+                "Comment": "libavutil-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351019",
+                "Comment": "libavutil56 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351020",
+                "Comment": "libpostproc-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351021",
+                "Comment": "libpostproc55 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351022",
+                "Comment": "libswresample-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351023",
+                "Comment": "libswresample3 is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351024",
+                "Comment": "libswscale-devel is earlier than 2:4.3.1-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211351025",
+                "Comment": "libswscale5 is earlier than 2:4.3.1-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

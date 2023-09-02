@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234803",
+      "Version": "oval:org.altlinux.errata:def:20234803",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4803: package `libebml` update to version 1.4.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4803",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4803",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05267",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05267",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3405",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3405",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libebml to version 1.4.4-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05267: Уязвимость реализации EbmlString::ReadData и EbmlUnicodeString::ReadData библиотеки для анализа файлов EBML Libebml, связанная с записью за границами буфера, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3405: A flaw was found in libebml before 1.4.2. A heap overflow bug exists in the implementation of EbmlString::ReadData and EbmlUnicodeString::ReadData in libebml.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-15"
+          },
+          "Updated": {
+            "Date": "2023-08-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-05267",
+              "Impact": "Low",
+              "Public": "20210207",
+              "CveID": "BDU:2021-05267"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3405",
+              "Impact": "Low",
+              "Public": "20210223",
+              "CveID": "CVE-2021-3405"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234803001",
+                "Comment": "libebml is earlier than 0:1.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234803002",
+                "Comment": "libebml-devel is earlier than 0:1.4.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

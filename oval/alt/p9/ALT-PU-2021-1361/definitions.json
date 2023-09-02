@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211361",
+      "Version": "oval:org.altlinux.errata:def:20211361",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1361: package `xforms` update to version 1.0.93-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1361",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1361",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades xforms to version 1.0.93-alt5. \nSecurity Fix(es):\n\n * #39670: Файловые конфликты с пакетом libxforms-demos",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-17"
+          },
+          "Updated": {
+            "Date": "2021-02-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39670",
+              "Href": "https://bugzilla.altlinux.org/39670",
+              "Data": "Файловые конфликты с пакетом libxforms-demos"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211361001",
+                "Comment": "libxforms is earlier than 0:1.0.93-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211361002",
+                "Comment": "libxforms-demos is earlier than 0:1.0.93-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211361003",
+                "Comment": "libxforms-devel is earlier than 0:1.0.93-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

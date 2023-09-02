@@ -1,0 +1,115 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212144",
+      "Version": "oval:org.altlinux.errata:def:20212144",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2144: package `ipmitool` update to version 1.8.18-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2144",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2144",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03947",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03947",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04640",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04640",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-5208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-5208",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ipmitool to version 1.8.18-alt4. \nSecurity Fix(es):\n\n * BDU:2020-03947: Уязвимость реализации функций read_fru_area(), read_fru_area_section(), ipmi_spd_print_fru(), ipmi_get_session_info(), ipmi_get_channel_cipher_suites() и get_lan_param_select() утилиты для управления и настройки устройств с поддержкой IPMI ipmitool, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2020-04640: Уязвимость функции read_fru_area_section (lib/ipmi_fru.c) утилиты для управления и настройки устройств с поддержкой IPMI ipmitool, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2020-5208: It's been found that multiple functions in ipmitool before 1.8.19 neglect proper checking of the data received from a remote LAN party, which may lead to buffer overflows and potentially to remote code execution on the ipmitool side. This is especially dangerous if ipmitool is run as a privileged user. This problem is fixed in version 1.8.19.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-05"
+          },
+          "Updated": {
+            "Date": "2021-07-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2020-03947",
+              "Impact": "High",
+              "Public": "20200204",
+              "CveID": "BDU:2020-03947"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-04640",
+              "Impact": "High",
+              "Public": "20200205",
+              "CveID": "BDU:2020-04640"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-5208",
+              "Impact": "High",
+              "Public": "20200205",
+              "CveID": "CVE-2020-5208"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212144001",
+                "Comment": "ipmitool is earlier than 0:1.8.18-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

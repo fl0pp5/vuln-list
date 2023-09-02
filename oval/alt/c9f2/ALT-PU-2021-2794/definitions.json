@@ -1,0 +1,130 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212794",
+      "Version": "oval:org.altlinux.errata:def:20212794",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2794: package `thunderbird` update to version 78.14.0-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2794",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2794",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04558",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04558",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-38492",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38492",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38493",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38493",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 78.14.0-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2021-04558: Уязвимость браузера Mozilla Firefox, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-38492: When delegating navigations to the operating system, Firefox would accept the `mk` scheme which might allow attackers to launch pages and execute scripts in Internet Explorer in unprivileged mode. *This bug only affects Firefox for Windows. Other operating systems are unaffected.*. This vulnerability affects Firefox \u003c 92, Thunderbird \u003c 91.1, Thunderbird \u003c 78.14, Firefox ESR \u003c 78.14, and Firefox ESR \u003c 91.1.\n\n * CVE-2021-38493: Mozilla developers reported memory safety bugs present in Firefox 91 and Firefox ESR 78.13. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Firefox ESR \u003c 78.14, Thunderbird \u003c 78.14, and Firefox \u003c 92.\n\n * #40907: В системе отсутствует пакет libotr5, из-за чего переписка в чате thunderbird выглядит нечитаемо. Нет возможности выставить статус шифрования",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-14"
+          },
+          "Updated": {
+            "Date": "2021-09-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-04558",
+              "Impact": "High",
+              "Public": "20210908",
+              "CveID": "BDU:2021-04558"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38492",
+              "Impact": "Low",
+              "Public": "20211103",
+              "CveID": "CVE-2021-38492"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38493",
+              "Impact": "High",
+              "Public": "20211103",
+              "CveID": "CVE-2021-38493"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40907",
+              "Href": "https://bugzilla.altlinux.org/40907",
+              "Data": "В системе отсутствует пакет libotr5, из-за чего переписка в чате thunderbird выглядит нечитаемо. Нет возможности выставить статус шифрования"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212794001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:78.14.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212794002",
+                "Comment": "thunderbird is earlier than 0:78.14.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212794003",
+                "Comment": "thunderbird-wayland is earlier than 0:78.14.0-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

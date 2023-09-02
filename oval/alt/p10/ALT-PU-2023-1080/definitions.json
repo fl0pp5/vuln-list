@@ -1,0 +1,143 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231080",
+      "Version": "oval:org.altlinux.errata:def:20231080",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1080: package `libexif` update to version 0.6.24-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1080",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1080",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02074",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02074",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-0181",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0181",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-0198",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0198",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libexif to version 0.6.24-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02074: Уязвимость фунции exif_data_load_data_content (exif-data.c) операционной системы Android, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-0181: In exif_data_load_data_thumbnail of exif-data.c, there is a possible denial of service due to an integer overflow. This could lead to remote denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-145075076\n\n * CVE-2020-0198: In exif_data_load_data_content of exif-data.c, there is a possible UBSAN abort due to an integer overflow. This could lead to remote denial of service with no additional execution privileges needed. User interaction is needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-146428941",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-18"
+          },
+          "Updated": {
+            "Date": "2023-01-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-02074",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "BDU:2021-02074"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0181",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "CVE-2020-0181"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0198",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "CVE-2020-0198"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231080001",
+                "Comment": "libexif is earlier than 0:0.6.24-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231080002",
+                "Comment": "libexif-devel is earlier than 0:0.6.24-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

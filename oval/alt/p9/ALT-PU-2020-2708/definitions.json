@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202708",
+      "Version": "oval:org.altlinux.errata:def:20202708",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2708: package `kernel-image-rpi-def` update to version 5.4.59-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2708",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2708",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03189",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03189",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14356",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14356",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-def to version 5.4.59-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03189: Уязвимость подсистемы cgroupv2 ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * CVE-2020-14356: A flaw null pointer dereference in the Linux kernel cgroupv2 subsystem in versions before 5.7.10 was found in the way when reboot the system. A local user could use this flaw to crash the system or escalate their privileges on the system.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-31"
+          },
+          "Updated": {
+            "Date": "2020-08-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-03189",
+              "Impact": "High",
+              "Public": "20200819",
+              "CveID": "BDU:2021-03189"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14356",
+              "Impact": "High",
+              "Public": "20200819",
+              "CveID": "CVE-2020-14356"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708001",
+                "Comment": "kernel-doc-rpi is earlier than 1:5.4.59-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708002",
+                "Comment": "kernel-headers-modules-rpi-def is earlier than 1:5.4.59-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708003",
+                "Comment": "kernel-headers-rpi-def is earlier than 1:5.4.59-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708004",
+                "Comment": "kernel-image-rpi-def is earlier than 1:5.4.59-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708005",
+                "Comment": "kernel-modules-staging-rpi-def is earlier than 1:5.4.59-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202708006",
+                "Comment": "kernel-modules-v4l-rpi-def is earlier than 1:5.4.59-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

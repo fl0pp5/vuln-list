@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203187",
+      "Version": "oval:org.altlinux.errata:def:20203187",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3187: package `nbd` update to version 3.20-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3187",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3187",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2015-01947",
+            "RefURL": "https://bdu.fstec.ru/vul/2015-01947",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2013-6410",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-6410",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2013-7441",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-7441",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-0847",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-0847",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nbd to version 3.20-alt1. \nSecurity Fix(es):\n\n * BDU:2015-01947: Уязвимости операционной системы Debian GNU/Linux, позволяющие удаленному злоумышленнику нарушить конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2013-6410: nbd-server in Network Block Device (nbd) before 3.5 does not properly check IP addresses, which might allow remote attackers to bypass intended access restrictions via an IP address that has a partial match in the authfile configuration file.\n\n * CVE-2013-7441: The modern style negotiation in Network Block Device (nbd-server) 2.9.22 through 3.3 allows remote attackers to cause a denial of service (root process termination) by (1) closing the connection during negotiation or (2) specifying a name for a non-existent export.\n\n * CVE-2015-0847: nbd-server.c in Network Block Device (nbd-server) before 3.11 does not properly handle signals, which allows remote attackers to cause a denial of service (deadlock) via unspecified vectors.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-02"
+          },
+          "Updated": {
+            "Date": "2020-11-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Href": "https://bdu.fstec.ru/vul/2015-01947",
+              "Impact": "High",
+              "Public": "19700101",
+              "CveID": "BDU:2015-01947"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-264",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-6410",
+              "Impact": "High",
+              "Public": "20131207",
+              "CveID": "CVE-2013-6410"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cwe": "CWE-399",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-7441",
+              "Impact": "High",
+              "Public": "20150529",
+              "CveID": "CVE-2013-7441"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cwe": "CWE-17",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-0847",
+              "Impact": "High",
+              "Public": "20150529",
+              "CveID": "CVE-2015-0847"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203187001",
+                "Comment": "nbd-client is earlier than 0:3.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203187002",
+                "Comment": "nbd-doc is earlier than 0:3.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203187003",
+                "Comment": "nbd-server is earlier than 0:3.20-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

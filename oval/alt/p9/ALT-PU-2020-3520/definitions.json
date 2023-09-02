@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203520",
+      "Version": "oval:org.altlinux.errata:def:20203520",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3520: package `mono` update to version 5.20.1.19-alt8",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3520",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3520",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades mono to version 5.20.1.19-alt8. \nSecurity Fix(es):\n\n * #39254: mono-core предоставляет все метапакеты mono",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-16"
+          },
+          "Updated": {
+            "Date": "2020-12-16"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39254",
+              "Href": "https://bugzilla.altlinux.org/39254",
+              "Data": "mono-core предоставляет все метапакеты mono"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520001",
+                "Comment": "mono-core is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520002",
+                "Comment": "mono-data is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520003",
+                "Comment": "mono-data-oracle is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520004",
+                "Comment": "mono-data-sqlite is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520005",
+                "Comment": "mono-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520006",
+                "Comment": "mono-devel-full is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520007",
+                "Comment": "mono-dyndata is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520008",
+                "Comment": "mono-extras is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520009",
+                "Comment": "mono-full is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520010",
+                "Comment": "mono-locale-extras is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520011",
+                "Comment": "mono-mono2-compat is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520012",
+                "Comment": "mono-mono2-compat-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520013",
+                "Comment": "mono-monodoc is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520014",
+                "Comment": "mono-monodoc-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520015",
+                "Comment": "mono-mvc is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520016",
+                "Comment": "mono-mvc-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520017",
+                "Comment": "mono-nunit is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520018",
+                "Comment": "mono-reactive is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520019",
+                "Comment": "mono-reactive-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520020",
+                "Comment": "mono-reactive-winforms is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520021",
+                "Comment": "mono-wcf is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520022",
+                "Comment": "mono-web is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520023",
+                "Comment": "mono-web-devel is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520024",
+                "Comment": "mono-winforms is earlier than 0:5.20.1.19-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203520025",
+                "Comment": "mono-winfx is earlier than 0:5.20.1.19-alt8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

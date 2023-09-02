@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201519",
+      "Version": "oval:org.altlinux.errata:def:20201519",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1519: package `kde5-okular` update to version 19.12.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1519",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1519",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01695",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01695",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-9359",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-9359",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kde5-okular to version 19.12.3-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01695: Уязвимость программного обеспечения для просмотра PDF-документов Okular, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-9359: KDE Okular before 1.10.0 allows code execution via an action link in a PDF document.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-19"
+          },
+          "Updated": {
+            "Date": "2020-03-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01695",
+              "Impact": "Low",
+              "Public": "20200324",
+              "CveID": "BDU:2021-01695"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-9359",
+              "Impact": "Low",
+              "Public": "20200324",
+              "CveID": "CVE-2020-9359"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519001",
+                "Comment": "kde5-okular is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519002",
+                "Comment": "kde5-okular-common is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519003",
+                "Comment": "kde5-okular-core is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519004",
+                "Comment": "kde5-okular-devel is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519005",
+                "Comment": "kde5-okular-mobile is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201519006",
+                "Comment": "libokular5core9 is earlier than 0:19.12.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

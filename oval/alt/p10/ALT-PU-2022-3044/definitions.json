@@ -1,0 +1,368 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223044",
+      "Version": "oval:org.altlinux.errata:def:20223044",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3044: package `python` update to version 2.7.18-alt10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3044",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3044",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02302",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02302",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02303",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02303",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03962",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03962",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05830",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05830",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05838",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05838",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2015-20107",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-20107",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3733",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3733",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3737",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3737",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4189",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4189",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0391",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0391",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python to version 2.7.18-alt10. \nSecurity Fix(es):\n\n * BDU:2022-02302: Уязвимость модуля urllib.parse интерпретатора языка программирования Python, позволяющая нарушителю внедрить произвольные данные в ответ сервера\n\n * BDU:2022-02303: Уязвимость клиентской библиотеки FTP (File Transfer Protocol) интерпретатора языка программирования Python, позволяющая нарушителю выполнять SSRF-атаки\n\n * BDU:2022-03962: Уязвимость модуля mailcap интерпретатора языка программирования Python, позволяющая нарушителю выполнить произвольную команду\n\n * BDU:2022-05830: Уязвимость компонента urllib интерпретатора языка программирования Python, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05838: Уязвимость класса AbstractBasicAuthHandler компонента urllib.request интерпретатора языка программирования Python, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2015-20107: In Python (aka CPython) up to 3.10.8, the mailcap module does not add escape characters into commands discovered in the system mailcap file. This may allow attackers to inject shell commands into applications that call mailcap.findmatch with untrusted input (if they lack validation of user-provided filenames or arguments). The fix is also back-ported to 3.7, 3.8, 3.9\n\n * CVE-2021-3733: There's a flaw in urllib's AbstractBasicAuthHandler class. An attacker who controls a malicious HTTP server that an HTTP client (such as web browser) connects to, could trigger a Regular Expression Denial of Service (ReDOS) during an authentication request with a specially crafted payload that is sent by the server to the client. The greatest threat that this flaw poses is to application availability.\n\n * CVE-2021-3737: A flaw was found in python. An improperly handled HTTP response in the HTTP client code of python may allow a remote attacker, who controls the HTTP server, to make the client script enter an infinite loop, consuming CPU time. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-4189: A flaw was found in Python, specifically in the FTP (File Transfer Protocol) client library in PASV (passive) mode. The issue is how the FTP client trusts the host from the PASV response by default. This flaw allows an attacker to set up a malicious FTP server that can trick FTP clients into connecting back to a given IP address and port. This vulnerability could lead to FTP client scanning ports, which otherwise would not have been possible.\n\n * CVE-2022-0391: A flaw was found in Python, specifically within the urllib.parse module. This module helps break Uniform Resource Locator (URL) strings into components. The issue involves how the urlparse method does not sanitize input and allows characters like '\\r' and '\\n' in the URL path. This flaw allows an attacker to input a crafted URL, leading to injection attacks. This flaw affects Python versions prior to 3.10.0b1, 3.9.5, 3.8.11, 3.7.11 and 3.6.14.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-09"
+          },
+          "Updated": {
+            "Date": "2022-11-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74, CWE-93",
+              "Href": "https://bdu.fstec.ru/vul/2022-02302",
+              "Impact": "High",
+              "Public": "20220209",
+              "CveID": "BDU:2022-02302"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2022-02303",
+              "Impact": "Low",
+              "Public": "20220209",
+              "CveID": "BDU:2022-02303"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2022-03962",
+              "Impact": "Critical",
+              "Public": "20220413",
+              "CveID": "BDU:2022-03962"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-05830",
+              "Impact": "High",
+              "Public": "20210503",
+              "CveID": "BDU:2022-05830"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-05838",
+              "Impact": "Low",
+              "Public": "20210130",
+              "CveID": "BDU:2022-05838"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:C/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-20107",
+              "Impact": "High",
+              "Public": "20220413",
+              "CveID": "CVE-2015-20107"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3733",
+              "Impact": "Low",
+              "Public": "20220310",
+              "CveID": "CVE-2021-3733"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3737",
+              "Impact": "High",
+              "Public": "20220304",
+              "CveID": "CVE-2021-3737"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4189",
+              "Impact": "Low",
+              "Public": "20220824",
+              "CveID": "CVE-2021-4189"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0391",
+              "Impact": "High",
+              "Public": "20220209",
+              "CveID": "CVE-2022-0391"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044001",
+                "Comment": "libpython is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044002",
+                "Comment": "python is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044003",
+                "Comment": "python-dev is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044004",
+                "Comment": "python-devel-static is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044005",
+                "Comment": "python-modules is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044006",
+                "Comment": "python-modules-bsddb is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044007",
+                "Comment": "python-modules-compiler is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044008",
+                "Comment": "python-modules-ctypes is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044009",
+                "Comment": "python-modules-curses is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044010",
+                "Comment": "python-modules-distutils is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044011",
+                "Comment": "python-modules-email is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044012",
+                "Comment": "python-modules-encodings is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044013",
+                "Comment": "python-modules-ensurepip is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044014",
+                "Comment": "python-modules-hotshot is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044015",
+                "Comment": "python-modules-json is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044016",
+                "Comment": "python-modules-logging is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044017",
+                "Comment": "python-modules-multiprocessing is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044018",
+                "Comment": "python-modules-sqlite3 is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044019",
+                "Comment": "python-modules-tkinter is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044020",
+                "Comment": "python-modules-unittest is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044021",
+                "Comment": "python-modules-wsgiref is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044022",
+                "Comment": "python-modules-xml is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044023",
+                "Comment": "python-relaxed is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044024",
+                "Comment": "python-strict is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044025",
+                "Comment": "python-test is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044026",
+                "Comment": "python-tools-2to3 is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044027",
+                "Comment": "python-tools-i18n is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044028",
+                "Comment": "python-tools-idle is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044029",
+                "Comment": "python-tools-pynche is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044030",
+                "Comment": "python-tools-scripts is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044031",
+                "Comment": "python-tools-smtpd is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044032",
+                "Comment": "python-tools-webchecker is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044033",
+                "Comment": "python-user-scripts is earlier than 0:2.7.18-alt10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223044034",
+                "Comment": "python2-base is earlier than 0:2.7.18-alt10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

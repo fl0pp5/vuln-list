@@ -1,0 +1,144 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213120",
+      "Version": "oval:org.altlinux.errata:def:20213120",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3120: package `mini_httpd` update to version 1.30-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3120",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3120",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2009-4490",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-1548",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-17663",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mini_httpd to version 1.30-alt1. \nSecurity Fix(es):\n\n * CVE-2009-4490: mini_httpd 1.19 writes data to a log file without sanitizing non-printable characters, which might allow remote attackers to modify a window's title, or possibly execute arbitrary commands or overwrite files, via an HTTP request containing an escape sequence for a terminal emulator.\n\n * CVE-2015-1548: mini_httpd 1.21 and earlier allows remote attackers to obtain sensitive information from process memory via an HTTP request with a long protocol string, which triggers an incorrect response size calculation and an out-of-bounds read.\n\n * CVE-2017-17663: The htpasswd implementation of mini_httpd before v1.28 and of thttpd before v2.28 is affected by a buffer overflow that can be exploited remotely to perform code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-26"
+          },
+          "Updated": {
+            "Date": "2021-10-26"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2009-4490",
+              "Impact": "Low",
+              "Public": "20100113",
+              "CveID": "CVE-2009-4490"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-1548",
+              "Impact": "Low",
+              "Public": "20150210",
+              "CveID": "CVE-2015-1548"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-17663",
+              "Impact": "Critical",
+              "Public": "20180206",
+              "CveID": "CVE-2017-17663"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213120001",
+                "Comment": "mini_httpd is earlier than 0:1.30-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213120002",
+                "Comment": "mini_httpd-htpasswd is earlier than 0:1.30-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213120003",
+                "Comment": "mini_httpd-single is earlier than 0:1.30-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

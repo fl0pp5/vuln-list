@@ -1,0 +1,177 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234099",
+      "Version": "oval:org.altlinux.errata:def:20234099",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4099: package `golang` update to version 1.19.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4099",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4099",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03200",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03200",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03201",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03201",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-29402",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29402",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29403",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29403",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29404",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29404",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29405",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29405",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.19.10-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03200: Уязвимость языка программирования Go, связанная с небезопасным внешним контролем за критическими данными состояния, позволяющая нарушителю повысить свои привилегии и получить доступ на чтение, изменение или удаление данных\n\n * BDU:2023-03201: Уязвимость модуля Cgo языка программирования Go, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2023-29402: The go command may generate unexpected code at build time when using cgo. This may result in unexpected behavior when running a go program which uses cgo. This may occur when running an untrusted module which contains directories with newline characters in their names. Modules which are retrieved using the go command, i.e. via \"go get\", are not affected (modules retrieved using GOPATH-mode, i.e. GO111MODULE=off, may be affected).\n\n * CVE-2023-29403: On Unix platforms, the Go runtime does not behave differently when a binary is run with the setuid/setgid bits. This can be dangerous in certain cases, such as when dumping memory state, or assuming the status of standard i/o file descriptors. If a setuid/setgid binary is executed with standard I/O file descriptors closed, opening any files can result in unexpected content being read or written with elevated privileges. Similarly, if a setuid/setgid program is terminated, either via panic or signal, it may leak the contents of its registers.\n\n * CVE-2023-29404: The go command may execute arbitrary code at build time when using cgo. This may occur when running \"go get\" on a malicious module, or when running any other command which builds untrusted code. This is can by triggered by linker flags, specified via a \"#cgo LDFLAGS\" directive. The arguments for a number of flags which are non-optional are incorrectly considered optional, allowing disallowed flags to be smuggled through the LDFLAGS sanitization. This affects usage of both the gc and gccgo compilers.\n\n * CVE-2023-29405: The go command may execute arbitrary code at build time when using cgo. This may occur when running \"go get\" on a malicious module, or when running any other command which builds untrusted code. This is can by triggered by linker flags, specified via a \"#cgo LDFLAGS\" directive. Flags containing embedded spaces are mishandled, allowing disallowed flags to be smuggled through the LDFLAGS sanitization by including them in the argument of another flag. This only affects usage of the gccgo compiler.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-30"
+          },
+          "Updated": {
+            "Date": "2023-06-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-642",
+              "Href": "https://bdu.fstec.ru/vul/2023-03200",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03200"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2023-03201",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03201"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29402",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29402"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-668",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29403",
+              "Impact": "High",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29403"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29404",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29404"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29405",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29405"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099001",
+                "Comment": "golang is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099002",
+                "Comment": "golang-docs is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099003",
+                "Comment": "golang-gdb is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099004",
+                "Comment": "golang-misc is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099005",
+                "Comment": "golang-shared is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099006",
+                "Comment": "golang-src is earlier than 0:1.19.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234099007",
+                "Comment": "golang-tests is earlier than 0:1.19.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231886",
+      "Version": "oval:org.altlinux.errata:def:20231886",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1886: package `liferea` update to version 1.14.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1886",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1886",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-1350",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1350",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades liferea to version 1.14.5-alt1. \nSecurity Fix(es):\n\n * CVE-2023-1350: A vulnerability was found in liferea. It has been rated as critical. Affected by this issue is the function update_job_run of the file src/update.c of the component Feed Enrichment. The manipulation of the argument source with the input |date \u0026gt;/tmp/bad-item-link.txt leads to os command injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The name of the patch is 8d8b5b963fa64c7a2122d1bbfbb0bed46e813e59. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-222848.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-26"
+          },
+          "Updated": {
+            "Date": "2023-05-26"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1350",
+              "Impact": "Critical",
+              "Public": "20230311",
+              "CveID": "CVE-2023-1350"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231886001",
+                "Comment": "liferea is earlier than 0:1.14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231886002",
+                "Comment": "liferea-plugins-gnome-keyring is earlier than 0:1.14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231886003",
+                "Comment": "liferea-plugins-media-player is earlier than 0:1.14.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

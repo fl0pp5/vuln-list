@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231677",
+      "Version": "oval:org.altlinux.errata:def:20231677",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1677: package `mate-file-manager-extensions` update to version 1.26.1-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1677",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1677",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades mate-file-manager-extensions to version 1.26.1-alt3. \nSecurity Fix(es):\n\n * #44272: Функция \"Отправить\" не работает при попытке передачи файла на подключенный сервер.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-26"
+          },
+          "Updated": {
+            "Date": "2023-04-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44272",
+              "Href": "https://bugzilla.altlinux.org/44272",
+              "Data": "Функция \"Отправить\" не работает при попытке передачи файла на подключенный сервер."
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677001",
+                "Comment": "mate-file-manager-beesu is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677002",
+                "Comment": "mate-file-manager-extensions-common is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677003",
+                "Comment": "mate-file-manager-image-converter is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677004",
+                "Comment": "mate-file-manager-open-terminal is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677005",
+                "Comment": "mate-file-manager-sendto is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677006",
+                "Comment": "mate-file-manager-sendto-devel is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677007",
+                "Comment": "mate-file-manager-share is earlier than 1:1.26.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231677008",
+                "Comment": "mate-file-manager-wallpaper is earlier than 1:1.26.1-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

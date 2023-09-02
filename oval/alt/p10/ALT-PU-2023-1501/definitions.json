@@ -1,0 +1,271 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231501",
+      "Version": "oval:org.altlinux.errata:def:20231501",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1501: package `curl` update to version 8.0.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1501",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1501",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02084",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02084",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02103",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02103",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02105",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02105",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02106",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02106",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02107",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02107",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02109",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02109",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-27533",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27533",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27534",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27534",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27535",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27535",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27536",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27536",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27537",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27537",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-27538",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-27538",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 8.0.1-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02084: Уязвимость утилиты программной строки curl, связанная  неправильной заменой символа тильды (~) при использовании в качестве префикса в первом элементе path, позволяющая нарушителю обойти фильтрацию или выполнить произвольный код\n\n * BDU:2023-02103: Уязвимость библиотеки libcurl, связанная с обходом процедуры аутентификации, позволяющая нарушителю повторно использовать неподходящее соединение\n\n * BDU:2023-02105: Уязвимость библиотеки libcurl, связанная с отсутствием мьютексов или блокировок потоков, позволяющая нарушителю использовать память после освобождения\n\n * BDU:2023-02106: Уязвимость библиотеки libcurl, связанная с повторным использованием FTP-соединения, позволяющая нарушителю использовать неправильные учетные данные при выполнении передачи, что потенциально может привести к раскрытию защищаемой информации\n\n * BDU:2023-02107: Уязвимость утилиты программной строки curl, связанная с неспособностью очищать специальные элементы в другой плоскости, позволяющая нарушителю выполнять произвольный код в системе.\n\n * BDU:2023-02109: Уязвимость функции повторного использования соединения библиотеки libcurl, позволяющая нарушителю повлиять на передачу данных krb5/kerberos / negotiate /GSSAPI и потенциально привести к несанкционированному доступу к конфиденциальной информации\n\n * CVE-2023-27533: A vulnerability in input validation exists in curl \u003c8.0 during communication using the TELNET protocol may allow an attacker to pass on maliciously crafted user name and \"telnet options\" during server negotiation. The lack of proper input scrubbing allows an attacker to send content or perform option negotiation without the application's intent. This vulnerability could be exploited if an application allows user input, thereby enabling attackers to execute arbitrary code on the system.\n\n * CVE-2023-27534: A path traversal vulnerability exists in curl \u003c8.0.0 SFTP implementation causes the tilde (~) character to be wrongly replaced when used as a prefix in the first path element, in addition to its intended use as the first element to indicate a path relative to the user's home directory. Attackers can exploit this flaw to bypass filtering or execute arbitrary code by crafting a path like /~2/foo while accessing a server with a specific user.\n\n * CVE-2023-27535: An authentication bypass vulnerability exists in libcurl \u003c8.0.0 in the FTP connection reuse feature that can result in wrong credentials being used during subsequent transfers. Previously created connections are kept in a connection pool for reuse if they match the current setup. However, certain FTP settings such as CURLOPT_FTP_ACCOUNT, CURLOPT_FTP_ALTERNATIVE_TO_USER, CURLOPT_FTP_SSL_CCC, and CURLOPT_USE_SSL were not included in the configuration match checks, causing them to match too easily. This could lead to libcurl using the wrong credentials when performing a transfer, potentially allowing unauthorized access to sensitive information.\n\n * CVE-2023-27536: An authentication bypass vulnerability exists libcurl \u003c8.0.0 in the connection reuse feature which can reuse previously established connections with incorrect user permissions due to a failure to check for changes in the CURLOPT_GSSAPI_DELEGATION option. This vulnerability affects krb5/kerberos/negotiate/GSSAPI transfers and could potentially result in unauthorized access to sensitive information. The safest option is to not reuse connections if the CURLOPT_GSSAPI_DELEGATION option has been changed.\n\n * CVE-2023-27537: A double free vulnerability exists in libcurl \u003c8.0.0 when sharing HSTS data between separate \"handles\". This sharing was introduced without considerations for do this sharing across separate threads but there was no indication of this fact in the documentation. Due to missing mutexes or thread locks, two threads sharing the same HSTS data could end up doing a double-free or use-after-free.\n\n * CVE-2023-27538: An authentication bypass vulnerability exists in libcurl prior to v8.0.0 where it reuses a previously established SSH connection despite the fact that an SSH option was modified, which should have prevented reuse. libcurl maintains a pool of previously used connections to reuse them for subsequent transfers if the configurations match. However, two SSH settings were omitted from the configuration check, allowing them to match easily, potentially leading to the reuse of an inappropriate connection.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-23"
+          },
+          "Updated": {
+            "Date": "2023-03-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2023-02084",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02084"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-287, CWE-305",
+              "Href": "https://bdu.fstec.ru/vul/2023-02103",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02103"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2023-02105",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02105"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-305",
+              "Href": "https://bdu.fstec.ru/vul/2023-02106",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02106"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-75",
+              "Href": "https://bdu.fstec.ru/vul/2023-02107",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02107"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-305",
+              "Href": "https://bdu.fstec.ru/vul/2023-02109",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "BDU:2023-02109"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27533",
+              "Impact": "High",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27533"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27534",
+              "Impact": "High",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27534"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27535",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27535"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27536",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27536"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27537",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27537"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-27538",
+              "Impact": "Low",
+              "Public": "20230330",
+              "CveID": "CVE-2023-27538"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231501001",
+                "Comment": "curl is earlier than 0:8.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231501002",
+                "Comment": "libcurl is earlier than 0:8.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231501003",
+                "Comment": "libcurl-devel is earlier than 0:8.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231501004",
+                "Comment": "libcurl-devel-static is earlier than 0:8.0.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

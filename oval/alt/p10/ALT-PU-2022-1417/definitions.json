@@ -1,0 +1,172 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221417",
+      "Version": "oval:org.altlinux.errata:def:20221417",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1417: package `ImageMagick` update to version 6.9.12.40-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1417",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1417",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-3610",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3610",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39212",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39212",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3195",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3195",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ImageMagick to version 6.9.12.40-alt1. \nSecurity Fix(es):\n\n * CVE-2021-3610: A heap-based buffer overflow vulnerability was found in ImageMagick in versions prior to 7.0.11-14 in ReadTIFFImage() in coders/tiff.c. This issue is due to an incorrect setting of the pixel array size, which can lead to a crash and segmentation fault.\n\n * CVE-2021-39212: ImageMagick is free software delivered as a ready-to-run binary distribution or as source code that you may use, copy, modify, and distribute in both open and proprietary applications. In affected versions and in certain cases, Postscript files could be read and written when specifically excluded by a `module` policy in `policy.xml`. ex. \u003cpolicy domain=\"module\" rights=\"none\" pattern=\"PS\" /\u003e. The issue has been resolved in ImageMagick 7.1.0-7 and in 6.9.12-22. Fortunately, in the wild, few users utilize the `module` policy and instead use the `coder` policy that is also our workaround recommendation: \u003cpolicy domain=\"coder\" rights=\"none\" pattern=\"{PS,EPI,EPS,EPSF,EPSI}\" /\u003e.\n\n * CVE-2023-3195: A stack-based buffer overflow issue was found in ImageMagick's coders/tiff.c. This flaw allows an attacker to trick the user into opening a specially crafted malicious tiff file, causing an application to crash, resulting in a denial of service.\n\n * #31789: Лишний пункт меню",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-02"
+          },
+          "Updated": {
+            "Date": "2022-03-02"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3610",
+              "Impact": "High",
+              "Public": "20220224",
+              "CveID": "CVE-2021-3610"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-668",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39212",
+              "Impact": "Low",
+              "Public": "20210913",
+              "CveID": "CVE-2021-39212"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3195",
+              "Impact": "Low",
+              "Public": "20230616",
+              "CveID": "CVE-2023-3195"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "31789",
+              "Href": "https://bugzilla.altlinux.org/31789",
+              "Data": "Лишний пункт меню"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417001",
+                "Comment": "ImageMagick is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417002",
+                "Comment": "ImageMagick-doc is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417003",
+                "Comment": "ImageMagick-tools is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417004",
+                "Comment": "libImageMagick++6.9 is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417005",
+                "Comment": "libImageMagick-devel is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417006",
+                "Comment": "libImageMagick6-common is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417007",
+                "Comment": "libImageMagick6.7 is earlier than 0:6.9.12.40-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221417008",
+                "Comment": "perl-Magick is earlier than 0:6.9.12.40-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

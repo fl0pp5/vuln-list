@@ -1,0 +1,220 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213520",
+      "Version": "oval:org.altlinux.errata:def:20213520",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3520: package `claws-mail` update to version 3.18.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3520",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3520",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-16094",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16094",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-37746",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-37746",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades claws-mail to version 3.18.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-16094: In imap_scan_tree_recursive in Claws Mail through 3.17.6, a malicious IMAP server can trigger stack consumption because of unlimited recursion into subdirectories during a rebuild of the folder tree.\n\n * CVE-2021-37746: textview_uri_security_check in textview.c in Claws Mail before 3.18.0, and Sylpheed through 3.7.0, does not have sufficient link checks before accepting a click.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-10"
+          },
+          "Updated": {
+            "Date": "2021-12-10"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16094",
+              "Impact": "High",
+              "Public": "20200728",
+              "CveID": "CVE-2020-16094"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-37746",
+              "Impact": "Low",
+              "Public": "20210730",
+              "CveID": "CVE-2021-37746"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520001",
+                "Comment": "claws-mail is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520002",
+                "Comment": "claws-mail-devel is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520003",
+                "Comment": "claws-mail-plugin-acpinotifier is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520004",
+                "Comment": "claws-mail-plugin-addresskeeper is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520005",
+                "Comment": "claws-mail-plugin-archive is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520006",
+                "Comment": "claws-mail-plugin-attachwarner is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520007",
+                "Comment": "claws-mail-plugin-attremover is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520008",
+                "Comment": "claws-mail-plugin-bogofilter is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520009",
+                "Comment": "claws-mail-plugin-clamd is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520010",
+                "Comment": "claws-mail-plugin-fancy is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520011",
+                "Comment": "claws-mail-plugin-fetchinfo is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520012",
+                "Comment": "claws-mail-plugin-gdata is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520013",
+                "Comment": "claws-mail-plugin-libravatar is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520014",
+                "Comment": "claws-mail-plugin-litehtmlviewer is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520015",
+                "Comment": "claws-mail-plugin-mailmbox is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520016",
+                "Comment": "claws-mail-plugin-managesieve is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520017",
+                "Comment": "claws-mail-plugin-newmail is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520018",
+                "Comment": "claws-mail-plugin-notification is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520019",
+                "Comment": "claws-mail-plugin-pdfviewer is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520020",
+                "Comment": "claws-mail-plugin-perl is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520021",
+                "Comment": "claws-mail-plugin-pgpcore is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520022",
+                "Comment": "claws-mail-plugin-pgpinline is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520023",
+                "Comment": "claws-mail-plugin-pgpmime is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520024",
+                "Comment": "claws-mail-plugin-rssyl is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520025",
+                "Comment": "claws-mail-plugin-smime is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520026",
+                "Comment": "claws-mail-plugin-spamassassin is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520027",
+                "Comment": "claws-mail-plugin-spamreport is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520028",
+                "Comment": "claws-mail-plugin-tnef is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520029",
+                "Comment": "claws-mail-plugin-vcalendar is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520030",
+                "Comment": "claws-mail-plugins is earlier than 0:3.18.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213520031",
+                "Comment": "claws-mail-tools is earlier than 0:3.18.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

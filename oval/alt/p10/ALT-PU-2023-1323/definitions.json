@@ -1,0 +1,240 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231323",
+      "Version": "oval:org.altlinux.errata:def:20231323",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1323: package `golang` update to version 1.19.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1323",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1323",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00266",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00266",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01943",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01943",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41716",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41716",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41717",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41720",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41720",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41722",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41722",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41723",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41724",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41724",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41725",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.19.6-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00266: Уязвимость языка программирования Go, связанная с неверной нейтрализация особых элементов в выходных данных, позволяющая нарушителю установить произвольные переменные среды в Windows\n\n * BDU:2023-01943: Уязвимость библиотек net/http и mime/multipart средства разработки GoLang, используемых в прикладном программном обеспечении ППО \u0026quot;Аврора Центр\u0026quot;, позволяющая нарушителю выполнить атаку типа \u0026quot;отказ в обслуживании\n\n * CVE-2022-41716: Due to unsanitized NUL values, attackers may be able to maliciously set environment variables on Windows. In syscall.StartProcess and os/exec.Cmd, invalid environment variable values containing NUL values are not properly checked for. A malicious environment variable value can exploit this behavior to set a value for a different environment variable. For example, the environment variable string \"A=B\\x00C=D\" sets the variables \"A=B\" and \"C=D\".\n\n * CVE-2022-41717: An attacker can cause excessive memory growth in a Go server accepting HTTP/2 requests. HTTP/2 server connections contain a cache of HTTP header keys sent by the client. While the total number of entries in this cache is capped, an attacker sending very large keys can cause the server to allocate approximately 64 MiB per open connection.\n\n * CVE-2022-41720: On Windows, restricted files can be accessed via os.DirFS and http.Dir. The os.DirFS function and http.Dir type provide access to a tree of files rooted at a given directory. These functions permit access to Windows device files under that root. For example, os.DirFS(\"C:/tmp\").Open(\"COM1\") opens the COM1 device. Both os.DirFS and http.Dir only provide read-only filesystem access. In addition, on Windows, an os.DirFS for the directory (the root of the current drive) can permit a maliciously crafted path to escape from the drive and access any path on the system. With fix applied, the behavior of os.DirFS(\"\") has changed. Previously, an empty root was treated equivalently to \"/\", so os.DirFS(\"\").Open(\"tmp\") would open the path \"/tmp\". This now returns an error.\n\n * CVE-2022-41722: A path traversal vulnerability exists in filepath.Clean on Windows. On Windows, the filepath.Clean function could transform an invalid path such as \"a/../c:/b\" into the valid path \"c:\\b\". This transformation of a relative (if invalid) path into an absolute path could enable a directory traversal attack. After fix, the filepath.Clean function transforms this path into the relative (but still invalid) path \".\\c:\\b\".\n\n * CVE-2022-41723: A maliciously crafted HTTP/2 stream could cause excessive CPU consumption in the HPACK decoder, sufficient to cause a denial of service from a small number of small requests.\n\n * CVE-2022-41724: Large handshake records may cause panics in crypto/tls. Both clients and servers may send large TLS handshake records which cause servers and clients, respectively, to panic when attempting to construct responses. This affects all TLS 1.3 clients, TLS 1.2 clients which explicitly enable session resumption (by setting Config.ClientSessionCache to a non-nil value), and TLS 1.3 servers which request client certificates (by setting Config.ClientAuth \u003e= RequestClientCert).\n\n * CVE-2022-41725: A denial of service is possible from excessive resource consumption in net/http and mime/multipart. Multipart form parsing with mime/multipart.Reader.ReadForm can consume largely unlimited amounts of memory and disk files. This also affects form parsing in the net/http package with the Request methods FormFile, FormValue, ParseMultipartForm, and PostFormValue. ReadForm takes a maxMemory parameter, and is documented as storing \"up to maxMemory bytes +10MB (reserved for non-file parts) in memory\". File parts which cannot be stored in memory are stored on disk in temporary files. The unconfigurable 10MB reserved for non-file parts is excessively large and can potentially open a denial of service vector on its own. However, ReadForm did not properly account for all memory consumed by a parsed form, such as map entry overhead, part names, and MIME headers, permitting a maliciously crafted form to consume well over 10MB. In addition, ReadForm contained no limit on the number of disk files created, permitting a relatively small request body to create a large number of disk temporary files. With fix, ReadForm now properly accounts for various forms of memory overhead, and should now stay within its documented limit of 10MB + maxMemory bytes of memory consumption. Users should still be aware that this limit is high and may still be hazardous. In addition, ReadForm now creates at most one on-disk temporary file, combining multiple form parts into a single temporary file. The mime/multipart.File interface type's documentation states, \"If stored on disk, the File's underlying concrete type will be an *os.File.\". This is no longer the case when a form contains more than one file part, due to this coalescing of parts into a single file. The previous behavior of using distinct files for each form part may be reenabled with the environment variable GODEBUG=multipartfiles=distinct. Users should be aware that multipart.ReadForm and the http.Request methods that call it do not limit the amount of disk consumed by temporary files. Callers can limit the size of form data with http.MaxBytesReader.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-22"
+          },
+          "Updated": {
+            "Date": "2023-02-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74, CWE-158",
+              "Href": "https://bdu.fstec.ru/vul/2023-00266",
+              "Impact": "High",
+              "Public": "20221018",
+              "CveID": "BDU:2023-00266"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2023-01943",
+              "Impact": "High",
+              "Public": "20230410",
+              "CveID": "BDU:2023-01943"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41716",
+              "Impact": "High",
+              "Public": "20221102",
+              "CveID": "CVE-2022-41716"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41717",
+              "Impact": "Low",
+              "Public": "20221208",
+              "CveID": "CVE-2022-41717"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41720",
+              "Impact": "High",
+              "Public": "20221207",
+              "CveID": "CVE-2022-41720"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41722",
+              "Impact": "High",
+              "Public": "20230228",
+              "CveID": "CVE-2022-41722"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41723",
+              "Impact": "High",
+              "Public": "20230228",
+              "CveID": "CVE-2022-41723"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41724",
+              "Impact": "High",
+              "Public": "20230228",
+              "CveID": "CVE-2022-41724"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41725",
+              "Impact": "High",
+              "Public": "20230228",
+              "CveID": "CVE-2022-41725"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323001",
+                "Comment": "golang is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323002",
+                "Comment": "golang-docs is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323003",
+                "Comment": "golang-gdb is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323004",
+                "Comment": "golang-misc is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323005",
+                "Comment": "golang-shared is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323006",
+                "Comment": "golang-src is earlier than 0:1.19.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231323007",
+                "Comment": "golang-tests is earlier than 0:1.19.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

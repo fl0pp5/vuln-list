@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212344",
+      "Version": "oval:org.altlinux.errata:def:20212344",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2344: package `libX11` update to version 1.7.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2344",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2344",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03916",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03916",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02599",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02599",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02747",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02747",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14344",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14344",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14363",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14363",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31535",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31535",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libX11 to version 1.7.2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03916: Уязвимость библиотеки предоставления клиентского API для X Window System libX11, вызванная целочисленным переполнением, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-02599: Уязвимость библиотеки предоставления клиентского API для X Window System libX11, связанная с использованием памяти после ее освобождения, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2021-02747: Уязвимость функции XLookupColor () библиотеки libX11, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю выполнить отказ в обслуживании\n\n * CVE-2020-14344: An integer overflow leading to a heap-buffer overflow was found in The X Input Method (XIM) client was implemented in libX11 before version 1.6.10. As per upstream this is security relevant when setuid programs call XIM client functions while running with elevated privileges. No such programs are shipped with Red Hat Enterprise Linux.\n\n * CVE-2020-14363: An integer overflow vulnerability leading to a double-free was found in libX11. This flaw allows a local privileged attacker to cause an application compiled with libX11 to crash, or in some cases, result in arbitrary code execution. The highest threat from this flaw is to confidentiality, integrity as well as system availability.\n\n * CVE-2021-31535: LookupCol.c in X.Org X through X11R7.7 and libX11 before 1.7.1 might allow remote attackers to execute arbitrary code. The libX11 XLookupColor request (intended for server-side color lookup) contains a flaw allowing a client to send color-name requests with a name longer than the maximum size allowed by the protocol (and also longer than the maximum packet size for normal-sized packets). The user-controlled data exceeding the maximum size is then interpreted by the server as additional X protocol requests and executed, e.g., to disable X server authorization completely. For example, if the victim encounters malicious terminal control sequences for color codes, then the attacker may be able to take full control of the running graphical session.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-27"
+          },
+          "Updated": {
+            "Date": "2021-07-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-119, CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2020-03916",
+              "Impact": "Low",
+              "Public": "20200805",
+              "CveID": "BDU:2020-03916"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-02599",
+              "Impact": "High",
+              "Public": "20200911",
+              "CveID": "BDU:2021-02599"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-02747",
+              "Impact": "Low",
+              "Public": "20210509",
+              "CveID": "BDU:2021-02747"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14344",
+              "Impact": "Low",
+              "Public": "20200805",
+              "CveID": "CVE-2020-14344"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14363",
+              "Impact": "High",
+              "Public": "20200911",
+              "CveID": "CVE-2020-14363"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31535",
+              "Impact": "Critical",
+              "Public": "20210527",
+              "CveID": "CVE-2021-31535"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212344001",
+                "Comment": "libX11 is earlier than 3:1.7.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212344002",
+                "Comment": "libX11-devel is earlier than 3:1.7.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212344003",
+                "Comment": "libX11-locales is earlier than 3:1.7.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

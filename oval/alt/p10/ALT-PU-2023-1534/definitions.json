@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231534",
+      "Version": "oval:org.altlinux.errata:def:20231534",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1534: package `python3-module-pysaml2` update to version 7.4.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1534",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1534",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05775",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05775",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-5390",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-5390",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21238",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21238",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21239",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21239",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-pysaml2 to version 7.4.1-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05775: Уязвимость библиотеки для обмена идентификационными данными по стандарту SAML2 PySAML2, связанная с некорректным подтверждением криптографической подписи данных, позволяющая нарушителю обойти проверку подписи и получить доступ к защищаемой информации\n\n * CVE-2020-5390: PySAML2 before 5.0.0 does not check that the signature in a SAML document is enveloped and thus signature wrapping is effective, i.e., it is affected by XML Signature Wrapping (XSW). The signature information and the node/object that is signed can be in different places and thus the signature verification will succeed, but the wrong data will be used. This specifically affects the verification of assertion that have been signed.\n\n * CVE-2021-21238: PySAML2 is a pure python implementation of SAML Version 2 Standard. PySAML2 before 6.5.0 has an improper verification of cryptographic signature vulnerability. All users of pysaml2 that need to validate signed SAML documents are impacted. The vulnerability is a variant of XML Signature wrapping because it did not validate the SAML document against an XML schema. This allowed invalid XML documents to be processed and such a document can trick pysaml2 with a wrapped signature. This is fixed in PySAML2 6.5.0.\n\n * CVE-2021-21239: PySAML2 is a pure python implementation of SAML Version 2 Standard. PySAML2 before 6.5.0 has an improper verification of cryptographic signature vulnerability. Users of pysaml2 that use the default CryptoBackendXmlSec1 backend and need to verify signed SAML documents are impacted. PySAML2 does not ensure that a signed SAML document is correctly signed. The default CryptoBackendXmlSec1 backend is using the xmlsec1 binary to verify the signature of signed SAML documents, but by default xmlsec1 accepts any type of key found within the given document. xmlsec1 needs to be configured explicitly to only use only _x509 certificates_ for the verification process of the SAML document signature. This is fixed in PySAML2 6.5.0.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-29"
+          },
+          "Updated": {
+            "Date": "2023-03-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2020-05775",
+              "Impact": "High",
+              "Public": "20200109",
+              "CveID": "BDU:2020-05775"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-5390",
+              "Impact": "High",
+              "Public": "20200113",
+              "CveID": "CVE-2020-5390"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21238",
+              "Impact": "Low",
+              "Public": "20210121",
+              "CveID": "CVE-2021-21238"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21239",
+              "Impact": "Low",
+              "Public": "20210121",
+              "CveID": "CVE-2021-21239"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231534001",
+                "Comment": "python3-module-pysaml2 is earlier than 0:7.4.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231166",
+      "Version": "oval:org.altlinux.errata:def:20231166",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1166: package `fwupd` update to version 1.8.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1166",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1166",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-3287",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3287",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades fwupd to version 1.8.10-alt1. \nSecurity Fix(es):\n\n * CVE-2022-3287: When creating an OPERATOR user account on the BMC, the redfish plugin saved the auto-generated password to /etc/fwupd/redfish.conf without proper restriction, allowing any user on the system to read the same configuration file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-01"
+          },
+          "Updated": {
+            "Date": "2023-02-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-552",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3287",
+              "Impact": "Low",
+              "Public": "20220928",
+              "CveID": "CVE-2022-3287"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231166001",
+                "Comment": "fwupd is earlier than 0:1.8.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231166002",
+                "Comment": "fwupd-devel is earlier than 0:1.8.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231166003",
+                "Comment": "fwupd-plugin-modem-manager is earlier than 0:1.8.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231166004",
+                "Comment": "fwupd-tests is earlier than 0:1.8.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

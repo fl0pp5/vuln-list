@@ -1,0 +1,173 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202469",
+      "Version": "oval:org.altlinux.errata:def:20202469",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2469: package `clamav` update to version 0.102.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2469",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2469",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03143",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03143",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-3327",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-3327",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-3350",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-3350",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-3481",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-3481",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades clamav to version 0.102.4-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03143: Уязвимость средства защиты от вредоносного программного обеспечения Cisco AMP и средства антивирусной защиты Clam Antivirus, вызванная ошибками синхронизации при использовании общего ресурса, позволяющая нарушителю удалить произвольные файлы\n\n * CVE-2020-3327: A vulnerability in the ARJ archive parsing module in Clam AntiVirus (ClamAV) Software versions 0.102.2 could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to a heap buffer overflow read. An attacker could exploit this vulnerability by sending a crafted ARJ file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process crash, resulting in a denial of service condition.\n\n * CVE-2020-3350: A vulnerability in the endpoint software of Cisco AMP for Endpoints and Clam AntiVirus could allow an authenticated, local attacker to cause the running software to delete arbitrary files on the system. The vulnerability is due to a race condition that could occur when scanning malicious files. An attacker with local shell access could exploit this vulnerability by executing a script that could trigger the race condition. A successful exploit could allow the attacker to delete arbitrary files on the system that the attacker would not normally have privileges to delete, producing system instability or causing the endpoint software to stop working.\n\n * CVE-2020-3481: A vulnerability in the EGG archive parsing module in Clam AntiVirus (ClamAV) Software versions 0.102.0 - 0.102.3 could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to a null pointer dereference. An attacker could exploit this vulnerability by sending a crafted EGG file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process crash, resulting in a denial of service condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-29"
+          },
+          "Updated": {
+            "Date": "2020-07-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-03143",
+              "Impact": "Low",
+              "Public": "20200617",
+              "CveID": "BDU:2020-03143"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-3327",
+              "Impact": "High",
+              "Public": "20200513",
+              "CveID": "CVE-2020-3327"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-3350",
+              "Impact": "Low",
+              "Public": "20200618",
+              "CveID": "CVE-2020-3350"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-3481",
+              "Impact": "High",
+              "Public": "20200720",
+              "CveID": "CVE-2020-3481"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469001",
+                "Comment": "clamav is earlier than 0:0.102.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469002",
+                "Comment": "clamav-freshclam is earlier than 0:0.102.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469003",
+                "Comment": "clamav-manual is earlier than 0:0.102.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469004",
+                "Comment": "clamav-milter is earlier than 0:0.102.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469005",
+                "Comment": "libclamav-devel is earlier than 0:0.102.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202469006",
+                "Comment": "libclamav9 is earlier than 0:0.102.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

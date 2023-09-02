@@ -1,0 +1,199 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222449",
+      "Version": "oval:org.altlinux.errata:def:20222449",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2449: package `xpdf` update to version 4.04-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2449",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2449",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05087",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05087",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-27548",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27548",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30860",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30860",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36493",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36493",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24106",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24106",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27135",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27135",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xpdf to version 4.04-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05087: Уязвимость операционных систем iPadOS, watchOS, iOS, Mac OS, вызванная целочисленным переполнением, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-27548: There is a Null Pointer Dereference vulnerability in the XFAScanner::scanNode() function in XFAScanner.cc in xpdf 4.03.\n\n * CVE-2021-30860: An integer overflow was addressed with improved input validation. This issue is fixed in Security Update 2021-005 Catalina, iOS 14.8 and iPadOS 14.8, macOS Big Sur 11.6, watchOS 7.6.2. Processing a maliciously crafted PDF may lead to arbitrary code execution. Apple is aware of a report that this issue may have been actively exploited.\n\n * CVE-2021-36493: Buffer Overflow vulnerability in pdfimages in xpdf 4.03 allows attackers to crash the application via crafted command.\n\n * CVE-2022-24106: In Xpdf prior to 4.04, the DCT (JPEG) decoder was incorrectly allowing the 'interleaved' flag to be changed after the first scan of the image, leading to an unknown integer-related vulnerability in Stream.cc.\n\n * CVE-2022-27135: xpdf 4.03 has heap buffer overflow in the function readXRefTable located in XRef.cc. An attacker can exploit this bug to cause a Denial of Service (Segmentation fault) or other unspecified effects by sending a crafted PDF file to the pdftoppm binary.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-17"
+          },
+          "Updated": {
+            "Date": "2022-08-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-05087",
+              "Impact": "High",
+              "Public": "20210824",
+              "CveID": "BDU:2021-05087"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27548",
+              "Impact": "Low",
+              "Public": "20220518",
+              "CveID": "CVE-2021-27548"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30860",
+              "Impact": "High",
+              "Public": "20210824",
+              "CveID": "CVE-2021-30860"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36493",
+              "Impact": "High",
+              "Public": "20230203",
+              "CveID": "CVE-2021-36493"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24106",
+              "Impact": "High",
+              "Public": "20220830",
+              "CveID": "CVE-2022-24106"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27135",
+              "Impact": "Low",
+              "Public": "20220425",
+              "CveID": "CVE-2022-27135"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449001",
+                "Comment": "xpdf is earlier than 0:4.04-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449002",
+                "Comment": "xpdf-common is earlier than 0:4.04-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449003",
+                "Comment": "xpdf-desktop is earlier than 0:4.04-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449004",
+                "Comment": "xpdf-i18n is earlier than 0:4.04-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449005",
+                "Comment": "xpdf-utils is earlier than 0:4.04-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222449006",
+                "Comment": "xpdf-viewer is earlier than 0:4.04-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

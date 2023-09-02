@@ -1,0 +1,148 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231405",
+      "Version": "oval:org.altlinux.errata:def:20231405",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1405: package `golang` update to version 1.19.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1405",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1405",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02657",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02657",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-24532",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24532",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.19.7-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02657: Уязвимость методов ScalarMult и ScalarBaseMult языка программирования Go, позволяющая нарушителю оказать воздействие на целостность защищаемой информации\n\n * CVE-2023-24532: The ScalarMult and ScalarBaseMult methods of the P256 Curve may return an incorrect result if called with some specific unreduced scalars (a scalar larger than the order of the curve). This does not impact usages of crypto/ecdsa or crypto/ecdh.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-10"
+          },
+          "Updated": {
+            "Date": "2023-03-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://bdu.fstec.ru/vul/2023-02657",
+              "Impact": "Low",
+              "Public": "20230307",
+              "CveID": "BDU:2023-02657"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24532",
+              "Impact": "Low",
+              "Public": "20230308",
+              "CveID": "CVE-2023-24532"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405001",
+                "Comment": "golang is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405002",
+                "Comment": "golang-docs is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405003",
+                "Comment": "golang-gdb is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405004",
+                "Comment": "golang-misc is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405005",
+                "Comment": "golang-shared is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405006",
+                "Comment": "golang-src is earlier than 0:1.19.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231405007",
+                "Comment": "golang-tests is earlier than 0:1.19.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

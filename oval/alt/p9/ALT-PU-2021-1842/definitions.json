@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211842",
+      "Version": "oval:org.altlinux.errata:def:20211842",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1842: package `slapi-nis` update to version 0.56.7-alt0.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1842",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1842",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01691",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01691",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3480",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3480",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades slapi-nis to version 0.56.7-alt0.M90P.1. \nSecurity Fix(es):\n\n * BDU:2023-01691: Уязвимость пакета Slapi-nis для 389 Directory Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3480: A flaw was found in slapi-nis in versions before 0.56.7. A NULL pointer dereference during the parsing of the Binding DN could allow an unauthenticated attacker to crash the 389-ds-base directory server. The highest threat from this vulnerability is to system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-05-21"
+          },
+          "Updated": {
+            "Date": "2021-05-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-01691",
+              "Impact": "High",
+              "Public": "20210330",
+              "CveID": "BDU:2023-01691"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3480",
+              "Impact": "High",
+              "Public": "20210520",
+              "CveID": "CVE-2021-3480"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211842001",
+                "Comment": "slapi-nis is earlier than 0:0.56.7-alt0.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

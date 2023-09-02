@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202199",
+      "Version": "oval:org.altlinux.errata:def:20202199",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2199: package `pcs` update to version 0.10.5-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2199",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2199",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades pcs to version 0.10.5-alt2. \nSecurity Fix(es):\n\n * #36898: pcs: New version 0.10.2\n\n * #37837: Не запускается сервис pcsd",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-18"
+          },
+          "Updated": {
+            "Date": "2020-06-18"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36898",
+              "Href": "https://bugzilla.altlinux.org/36898",
+              "Data": "pcs: New version 0.10.2"
+            },
+            {
+              "Id": "37837",
+              "Href": "https://bugzilla.altlinux.org/37837",
+              "Data": "Не запускается сервис pcsd"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202199001",
+                "Comment": "pcs is earlier than 1:0.10.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202199002",
+                "Comment": "python3-module-pcs is earlier than 1:0.10.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202199003",
+                "Comment": "python3-module-snmp is earlier than 1:0.10.5-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

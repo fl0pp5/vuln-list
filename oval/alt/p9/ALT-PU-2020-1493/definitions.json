@@ -1,0 +1,241 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201493",
+      "Version": "oval:org.altlinux.errata:def:20201493",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1493: package `firefox-esr` update to version 68.6.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1493",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1493",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01115",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01115",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01910",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01910",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03817",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03817",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20503",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20503",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6805",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6805",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6806",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6806",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6807",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6807",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6811",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6811",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6812",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6812",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6814",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6814",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 68.6.0-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01115: Уязвимость веб-браузеров Firefox ESR и Firefox, связанная с использованием памяти после ее освобождения, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2020-01910: Уязвимость функции sctp_load_addresses_from_init реализации протокола передачи сообщений с поддержкой множественной адресации usrsctp, связанная с чтением за границами буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03817: Уязвимость компонент BodyStream::OnInputStreamReady браузеров Mozilla Firefox, Firefox ESR и почтового клиента Thunderbird, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-20503: usrsctp before 2019-12-20 has out-of-bounds reads in sctp_load_addresses_from_init.\n\n * CVE-2020-6805: When removing data about an origin whose tab was recently closed, a use-after-free could occur in the Quota manager, resulting in a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.\n\n * CVE-2020-6806: By carefully crafting promise resolutions, it was possible to cause an out-of-bounds read off the end of an array resized during script execution. This could have led to memory corruption and a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.\n\n * CVE-2020-6807: When a device was changed while a stream was about to be destroyed, the \u003ccode\u003estream-reinit\u003c/code\u003e task may have been executed after the stream was destroyed, causing a use-after-free and a potentially exploitable crash. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.\n\n * CVE-2020-6811: The 'Copy as cURL' feature of Devtools' network tab did not properly escape the HTTP method of a request, which can be controlled by the website. If a user used the 'Copy as Curl' feature and pasted the command into a terminal, it could have resulted in command injection and arbitrary command execution. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.\n\n * CVE-2020-6812: The first time AirPods are connected to an iPhone, they become named after the user's name by default (e.g. Jane Doe's AirPods.) Websites with camera or microphone permission are able to enumerate device names, disclosing the user's name. To resolve this issue, Firefox added a special case that renames devices containing the substring 'AirPods' to simply 'AirPods'. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.\n\n * CVE-2020-6814: Mozilla developers reported memory safety bugs present in Firefox and Thunderbird 68.5. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Thunderbird \u003c 68.6, Firefox \u003c 74, Firefox \u003c ESR68.6, and Firefox ESR \u003c 68.6.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-16"
+          },
+          "Updated": {
+            "Date": "2020-03-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-01115",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "BDU:2020-01115"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-01910",
+              "Impact": "Low",
+              "Public": "20200306",
+              "CveID": "BDU:2020-01910"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03817",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "BDU:2021-03817"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20503",
+              "Impact": "Low",
+              "Public": "20200306",
+              "CveID": "CVE-2019-20503"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6805",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6805"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6806",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6806"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6807",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6807"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6811",
+              "Impact": "High",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6811"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6812",
+              "Impact": "Low",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6812"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6814",
+              "Impact": "Critical",
+              "Public": "20200325",
+              "CveID": "CVE-2020-6814"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201493001",
+                "Comment": "firefox-esr is earlier than 0:68.6.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201493002",
+                "Comment": "firefox-esr-wayland is earlier than 0:68.6.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

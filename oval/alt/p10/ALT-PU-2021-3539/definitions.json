@@ -1,0 +1,139 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213539",
+      "Version": "oval:org.altlinux.errata:def:20213539",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3539: package `containerd` update to version 1.4.12-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3539",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3539",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00757",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00757",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-41103",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41103",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41190",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41190",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades containerd to version 1.4.12-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00757: Уязвимость среды выполнения контейнеров Containerd, связанная с недостатками разграничения доступа к корневым каталогам и плагинам, позволяющая нарушителю получить доступ на чтение и изменение файлов\n\n * CVE-2021-41103: containerd is an open source container runtime with an emphasis on simplicity, robustness and portability. A bug was found in containerd where container root directories and some plugins had insufficiently restricted permissions, allowing otherwise unprivileged Linux users to traverse directory contents and execute programs. When containers included executable programs with extended permission bits (such as setuid), unprivileged Linux users could discover and execute those programs. When the UID of an unprivileged Linux user on the host collided with the file owner or group inside a container, the unprivileged Linux user on the host could discover, read, and modify those files. This vulnerability has been fixed in containerd 1.4.11 and containerd 1.5.7. Users should update to these version when they are released and may restart containers or update directory permissions to mitigate the vulnerability. Users unable to update should limit access to the host to trusted users. Update directory permission on container bundles directories.\n\n * CVE-2021-41190: The OCI Distribution Spec project defines an API protocol to facilitate and standardize the distribution of content. In the OCI Distribution Specification version 1.0.0 and prior, the Content-Type header alone was used to determine the type of document during push and pull operations. Documents that contain both “manifests” and “layers” fields could be interpreted as either a manifest or an index in the absence of an accompanying Content-Type header. If a Content-Type header changed between two pulls of the same digest, a client may interpret the resulting content differently. The OCI Distribution Specification has been updated to require that a mediaType value present in a manifest or index match the Content-Type header used during the push and pull operations. Clients pulling from a registry may distrust the Content-Type header and reject an ambiguous document that contains both “manifests” and “layers” fields or “manifests” and “config” fields if they are unable to update to version 1.0.1 of the spec.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-15"
+          },
+          "Updated": {
+            "Date": "2021-12-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-22, CWE-276",
+              "Href": "https://bdu.fstec.ru/vul/2022-00757",
+              "Impact": "Low",
+              "Public": "20211004",
+              "CveID": "BDU:2022-00757"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41103",
+              "Impact": "High",
+              "Public": "20211004",
+              "CveID": "CVE-2021-41103"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41190",
+              "Impact": "Low",
+              "Public": "20211117",
+              "CveID": "CVE-2021-41190"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213539001",
+                "Comment": "containerd is earlier than 0:1.4.12-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

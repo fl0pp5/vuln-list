@@ -1,0 +1,985 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213481",
+      "Version": "oval:org.altlinux.errata:def:20213481",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3481: package `kernel-image-mp` update to version 5.12.16-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3481",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3481",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02938",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02938",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03220",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03220",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03232",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03232",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03237",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03237",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03938",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03938",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04152",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04152",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04244",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04244",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04260",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04260",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04607",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04607",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04712",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04712",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04825",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04825",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04826",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04826",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04829",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04829",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04837",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04837",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04838",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04838",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04839",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04839",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04841",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04841",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04842",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04842",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04843",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04843",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04844",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04844",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04850",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04850",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04855",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04855",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04856",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04856",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04859",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04859",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04867",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04867",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00513",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00513",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00613",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00613",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03703",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03703",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04604",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04604",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00158",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00158",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01194",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01194",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-35508",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35508",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22555",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22555",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23133",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23133",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23134",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23134",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-28691",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28691",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31829",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31829",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-31916",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31916",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32078",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32078",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32399",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32399",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32606",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32606",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33034",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33034",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33624",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33624",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-34693",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34693",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3483",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3483",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3489",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3489",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3490",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3490",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3491",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3491",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3501",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3501",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-35039",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-35039",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3506",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3506",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3659",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3659",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38198",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38198",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38200",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38200",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38206",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38206",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38207",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38207",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38208",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38209",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38209",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4157",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4157",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45486",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45486",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-46283",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-46283",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1786",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1786",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4696",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4696",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-mp to version 5.12.16-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02938: Уязвимость ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2021-03220: Уязвимость подсистемы BPF ядра операционных систем Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-03232: Уязвимость подсистемы еBPF ядра операционной системы Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-03237: Уязвимость компонента arch/arm/mach-footbridge/personal-pci.c ядра операционной системы Linux, озволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * BDU:2021-03938: Уязвимость компонента kernel/module.c ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-04152: Уязвимость компонента net/nfc/llcp_sock.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04244: Уязвимость компонента drivers/net/ethernet/xilinx/ll_temac_main.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04260: Уязвимость функции xt_compat_target_from_user() (net/netfilter/x_tables.c) подсистемы netfilter операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2021-04607: Уязвимость функции isotp_setsockopt компонента net/can/isotp.c ядра операционной системы Linux, связанная с использованием памяти после её освобождения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-04712: Уязвимость компонента arch/powerpc/perf/core-book3s.c ядра операционной системы Linux, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04825: Уязвимость функции bpf_ringbuf_reserve() ядра операционной системы Linux , связанная с записью за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код в контексте ядра\n\n * BDU:2021-04826: Уязвимость компонента net/can/bcm.c ядра операционной системы Linux, позволяющая нарушителю прочитать часть памяти ядра\n\n * BDU:2021-04829: Уязвимость ядра операционной системы Linux , связанная с записью за границами буфера в памяти, позволяющая нарушителю прочитать часть памяти ядра\n\n * BDU:2021-04837: Уязвимость параметров NF_SYSCTL_CT_MAX, NF_SYSCTL_CT_EXPECT_MAX, и NF_SYSCTL_CT_BUCKETS компонента net/netfilter/nf_conntrack_standalone.c ядра операционной системы Linux, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2021-04838: Уязвимость компонента net/bluetooth/hci_request.c операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-04839: Уязвимость структуры hci_chan компонента net/bluetooth/hci_event.c ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-04841: Уязвимость драйвера Nosy драйвера ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2021-04842: Уязвимость подсистемы eBPF ядра операционной системы Linux , связанная с чтением за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код в контексте ядра\n\n * BDU:2021-04843: Уязвимость подсистемы io_uring ядра операционной системы Linux, связанная с записью за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-04844: Уязвимость модуля f2fs ядра операционной системы Linux, связанная с чтением за границами буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04850: Уязвимость ядра операционной системы Linux , связанная с недостаточной проверкой присвоения разрешений для критичного ресурса, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04855: Уязвимость компонента net/sctp/socket.c ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2021-04856: Уязвимость сокетов nfc операционной системы Linux , связанная с использованием памяти после её освобождения, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2021-04859: Уязвимость синтаксического анализатора radiotap подсистемы mac80211 ядра операционной системы Linux, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04867: Уязвимость KVM API операционной системы Linux, позволяющая нарушителю вызвать повреждение стека\n\n * BDU:2022-00513: Уязвимость функции nf_tables_newset (net/netfilter/nf_tables_api.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00613: Уязвимость реализации протокола IPv4 ядра операционных систем Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-03703: Уязвимость интерфейса асинхронного ввода/вывода io_uring ядра операционной системы Linux, позволяющая нарушителю аварийно завершить работу или повысить свои привилегии\n\n * BDU:2022-04604: Уязвимость функции decode_nfs_fh() ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии и вызвать аварийное завершение системы\n\n * BDU:2023-00158: Уязвимость подсистемы io_uring ядра операционной системы Linux, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2023-01194: Уязвимость подсистемы беспроводной связи в модуле net/mac802154/llsec.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-35508: A flaw possibility of race condition and incorrect initialization of the process id was found in the Linux kernel child/parent process identification handling while filtering signal handlers. A local attacker is able to abuse this flaw to bypass checks to send any signal to a privileged process.\n\n * CVE-2021-22555: A heap out-of-bounds write affecting Linux since v2.6.19-rc1 was discovered in net/netfilter/x_tables.c. This allows an attacker to gain privileges or cause a DoS (via heap memory corruption) through user name space\n\n * CVE-2021-23133: A race condition in Linux kernel SCTP sockets (net/sctp/socket.c) before 5.12-rc8 can lead to kernel privilege escalation from the context of a network service or an unprivileged process. If sctp_destroy_sock is called without sock_net(sk)-\u003esctp.addr_wq_lock then an element is removed from the auto_asconf_splist list without any proper locking. This can be exploited by an attacker with network service privileges to escalate to root or from the context of an unprivileged user directly if a BPF_CGROUP_INET_SOCK_CREATE is attached which denies creation of some SCTP socket.\n\n * CVE-2021-23134: Use After Free vulnerability in nfc sockets in the Linux Kernel before 5.12.4 allows local attackers to elevate their privileges. In typical configurations, the issue can only be triggered by a privileged local user with the CAP_NET_RAW capability.\n\n * CVE-2021-28691: Guest triggered use-after-free in Linux xen-netback A malicious or buggy network PV frontend can force Linux netback to disable the interface and terminate the receive kernel thread associated with queue 0 in response to the frontend sending a malformed packet. Such kernel thread termination will lead to a use-after-free in Linux netback when the backend is destroyed, as the kernel thread associated with queue 0 will have already exited and thus the call to kthread_stop will be performed against a stale pointer.\n\n * CVE-2021-31829: kernel/bpf/verifier.c in the Linux kernel through 5.12.1 performs undesirable speculative loads, leading to disclosure of stack content via side-channel attacks, aka CID-801c6058d14a. The specific concern is not protecting the BPF stack area against speculative loads. Also, the BPF stack can contain uninitialized data that might represent sensitive information previously operated on by the kernel.\n\n * CVE-2021-31916: An out-of-bounds (OOB) memory write flaw was found in list_devices in drivers/md/dm-ioctl.c in the Multi-device driver module in the Linux kernel before 5.12. A bound check failure allows an attacker with special user (CAP_SYS_ADMIN) privilege to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-32078: An Out-of-Bounds Read was discovered in arch/arm/mach-footbridge/personal-pci.c in the Linux kernel through 5.12.11 because of the lack of a check for a value that shouldn't be negative, e.g., access to element -2 of an array, aka CID-298a58e165e4.\n\n * CVE-2021-32399: net/bluetooth/hci_request.c in the Linux kernel through 5.12.2 has a race condition for removal of the HCI controller.\n\n * CVE-2021-32606: In the Linux kernel 5.11 through 5.12.2, isotp_setsockopt in net/can/isotp.c allows privilege escalation to root by leveraging a use-after-free. (This does not affect earlier versions that lack CAN ISOTP SF_BROADCAST support.)\n\n * CVE-2021-33034: In the Linux kernel before 5.12.4, net/bluetooth/hci_event.c has a use-after-free when destroying an hci_chan, aka CID-5c4c8c954409. This leads to writing an arbitrary value.\n\n * CVE-2021-33624: In kernel/bpf/verifier.c in the Linux kernel before 5.12.13, a branch can be mispredicted (e.g., because of type confusion) and consequently an unprivileged BPF program can read arbitrary memory locations via a side-channel attack, aka CID-9183671af6db.\n\n * CVE-2021-34693: net/can/bcm.c in the Linux kernel through 5.12.10 allows local users to obtain sensitive information from kernel stack memory because parts of a data structure are uninitialized.\n\n * CVE-2021-3483: A flaw was found in the Nosy driver in the Linux kernel. This issue allows a device to be inserted twice into a doubly-linked list, leading to a use-after-free when one of these devices is removed. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability. Versions before kernel 5.12-rc6 are affected\n\n * CVE-2021-3489: The eBPF RINGBUF bpf_ringbuf_reserve() function in the Linux kernel did not check that the allocated size was smaller than the ringbuf size, allowing an attacker to perform out-of-bounds writes within the kernel and therefore, arbitrary code execution. This issue was fixed via commit 4b81ccebaeee (\"bpf, ringbuf: Deny reserve of buffers larger than ringbuf\") (v5.13-rc4) and backported to the stable kernels in v5.12.4, v5.11.21, and v5.10.37. It was introduced via 457f44363a88 (\"bpf: Implement BPF ring buffer and verifier support for it\") (v5.8-rc1).\n\n * CVE-2021-3490: The eBPF ALU32 bounds tracking for bitwise ops (AND, OR and XOR) in the Linux kernel did not properly update 32-bit bounds, which could be turned into out of bounds reads and writes in the Linux kernel and therefore, arbitrary code execution. This issue was fixed via commit 049c4e13714e (\"bpf: Fix alu32 const subreg bound tracking on bitwise operations\") (v5.13-rc4) and backported to the stable kernels in v5.12.4, v5.11.21, and v5.10.37. The AND/OR issues were introduced by commit 3f50f132d840 (\"bpf: Verifier, do explicit ALU32 bounds tracking\") (5.7-rc1) and the XOR variant was introduced by 2921c90d4718 (\"bpf:Fix a verifier failure with xor\") ( 5.10-rc1).\n\n * CVE-2021-3491: The io_uring subsystem in the Linux kernel allowed the MAX_RW_COUNT limit to be bypassed in the PROVIDE_BUFFERS operation, which led to negative values being usedin mem_rw when reading /proc/\u003cPID\u003e/mem. This could be used to create a heap overflow leading to arbitrary code execution in the kernel. It was addressed via commit d1f82808877b (\"io_uring: truncate lengths larger than MAX_RW_COUNT on provide buffers\") (v5.13-rc1) and backported to the stable kernels in v5.12.4, v5.11.21, and v5.10.37. It was introduced in ddf0322db79c (\"io_uring: add IORING_OP_PROVIDE_BUFFERS\") (v5.7-rc1).\n\n * CVE-2021-3501: A flaw was found in the Linux kernel in versions before 5.12. The value of internal.ndata, in the KVM API, is mapped to an array index, which can be updated by a user process at anytime which could lead to an out-of-bounds write. The highest threat from this vulnerability is to data integrity and system availability.\n\n * CVE-2021-35039: kernel/module.c in the Linux kernel before 5.12.14 mishandles Signature Verification, aka CID-0c18f29aae7c. Without CONFIG_MODULE_SIG, verification that a kernel module is signed, for loading via init_module, does not occur for a module.sig_enforce=1 command-line argument.\n\n * CVE-2021-3506: An out-of-bounds (OOB) memory access flaw was found in fs/f2fs/node.c in the f2fs module in the Linux kernel in versions before 5.12.0-rc4. A bounds check failure allows a local attacker to gain access to out-of-bounds memory leading to a system crash or a leak of internal kernel information. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-3659: A NULL pointer dereference flaw was found in the Linux kernel’s IEEE 802.15.4 wireless networking subsystem in the way the user closes the LR-WPAN connection. This flaw allows a local user to crash the system. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-38198: arch/x86/kvm/mmu/paging_tmpl.h in the Linux kernel before 5.12.11 incorrectly computes the access permissions of a shadow page, leading to a missing guest protection page fault.\n\n * CVE-2021-38200: arch/powerpc/perf/core-book3s.c in the Linux kernel before 5.12.13, on systems with perf_event_paranoid=-1 and no specific PMU driver support registered, allows local users to cause a denial of service (perf_instruction_pointer NULL pointer dereference and OOPS) via a \"perf record\" command.\n\n * CVE-2021-38206: The mac80211 subsystem in the Linux kernel before 5.12.13, when a device supporting only 5 GHz is used, allows attackers to cause a denial of service (NULL pointer dereference in the radiotap parser) by injecting a frame with 802.11a rates.\n\n * CVE-2021-38207: drivers/net/ethernet/xilinx/ll_temac_main.c in the Linux kernel before 5.12.13 allows remote attackers to cause a denial of service (buffer overflow and lockup) by sending heavy network traffic for about ten minutes.\n\n * CVE-2021-38208: net/nfc/llcp_sock.c in the Linux kernel before 5.12.10 allows local unprivileged users to cause a denial of service (NULL pointer dereference and BUG) by making a getsockname call after a certain type of failure of a bind call.\n\n * CVE-2021-38209: net/netfilter/nf_conntrack_standalone.c in the Linux kernel before 5.12.2 allows observation of changes in any net namespace because these changes are leaked into all other net namespaces. This is related to the NF_SYSCTL_CT_MAX, NF_SYSCTL_CT_EXPECT_MAX, and NF_SYSCTL_CT_BUCKETS sysctls.\n\n * CVE-2021-4157: An out of memory bounds write flaw (1 or 2 bytes of memory) in the Linux kernel NFS subsystem was found in the way users use mirroring (replication of files with NFS). A user, having access to the NFS mount, could potentially use this flaw to crash the system or escalate privileges on the system.\n\n * CVE-2021-45486: In the IPv4 implementation in the Linux kernel before 5.12.4, net/ipv4/route.c has an information leak because the hash table is very small.\n\n * CVE-2021-46283: nf_tables_newset in net/netfilter/nf_tables_api.c in the Linux kernel before 5.12.13 allows local users to cause a denial of service (NULL pointer dereference and general protection fault) because of the missing initialization for nft_set_elem_expr_alloc. A local user can set a netfilter table expression in their own namespace.\n\n * CVE-2022-1786: A use-after-free flaw was found in the Linux kernel’s io_uring subsystem in the way a user sets up a ring with IORING_SETUP_IOPOLL with more than one task completing submissions on this ring. This flaw allows a local user to crash or escalate their privileges on the system.\n\n * CVE-2022-4696: There exists a use-after-free vulnerability in the Linux kernel through io_uring and the IORING_OP_SPLICE operation. If IORING_OP_SPLICE is missing the IO_WQ_WORK_FILES flag, which signals that the operation won't use current-\u003ensproxy, so its reference counter is not increased. This assumption is not always true as calling io_splice on specific files will call the get_uts function which will use current-\u003ensproxy leading to invalidly decreasing its reference counter later causing the use-after-free vulnerability. We recommend upgrading to version 5.10.160 or above",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-06"
+          },
+          "Updated": {
+            "Date": "2021-12-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-367, CWE-665",
+              "Href": "https://bdu.fstec.ru/vul/2021-02938",
+              "Impact": "Low",
+              "Public": "20210326",
+              "CveID": "BDU:2021-02938"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200, CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2021-03220",
+              "Impact": "Low",
+              "Public": "20210430",
+              "CveID": "BDU:2021-03220"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2021-03232",
+              "Impact": "High",
+              "Public": "20210623",
+              "CveID": "BDU:2021-03232"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03237",
+              "Impact": "High",
+              "Public": "20210617",
+              "CveID": "BDU:2021-03237"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2021-03938",
+              "Impact": "High",
+              "Public": "20210622",
+              "CveID": "BDU:2021-03938"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-04152",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "BDU:2021-04152"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-04244",
+              "Impact": "High",
+              "Public": "20210808",
+              "CveID": "BDU:2021-04244"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04260",
+              "Impact": "High",
+              "Public": "20210406",
+              "CveID": "BDU:2021-04260"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-04607",
+              "Impact": "High",
+              "Public": "20210511",
+              "CveID": "BDU:2021-04607"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-04712",
+              "Impact": "Low",
+              "Public": "20210617",
+              "CveID": "BDU:2021-04712"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04825",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "BDU:2021-04825"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-909",
+              "Href": "https://bdu.fstec.ru/vul/2021-04826",
+              "Impact": "Low",
+              "Public": "20210614",
+              "CveID": "BDU:2021-04826"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04829",
+              "Impact": "Low",
+              "Public": "20210506",
+              "CveID": "BDU:2021-04829"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://bdu.fstec.ru/vul/2021-04837",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "BDU:2021-04837"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125, CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2021-04838",
+              "Impact": "High",
+              "Public": "20210510",
+              "CveID": "BDU:2021-04838"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-04839",
+              "Impact": "High",
+              "Public": "20210514",
+              "CveID": "BDU:2021-04839"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-04841",
+              "Impact": "High",
+              "Public": "20210517",
+              "CveID": "BDU:2021-04841"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04842",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "BDU:2021-04842"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04843",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "BDU:2021-04843"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04844",
+              "Impact": "High",
+              "Public": "20210419",
+              "CveID": "BDU:2021-04844"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-732",
+              "Href": "https://bdu.fstec.ru/vul/2021-04850",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "BDU:2021-04850"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2021-04855",
+              "Impact": "High",
+              "Public": "20210422",
+              "CveID": "BDU:2021-04855"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-04856",
+              "Impact": "High",
+              "Public": "20210512",
+              "CveID": "BDU:2021-04856"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-04859",
+              "Impact": "Low",
+              "Public": "20210530",
+              "CveID": "BDU:2021-04859"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-04867",
+              "Impact": "High",
+              "Public": "20210506",
+              "CveID": "BDU:2021-04867"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://bdu.fstec.ru/vul/2022-00513",
+              "Impact": "Low",
+              "Public": "20210604",
+              "CveID": "BDU:2022-00513"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200, CWE-327, CWE-330",
+              "Href": "https://bdu.fstec.ru/vul/2022-00613",
+              "Impact": "Low",
+              "Public": "20210324",
+              "CveID": "BDU:2022-00613"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2022-03703",
+              "Impact": "High",
+              "Public": "20220518",
+              "CveID": "BDU:2022-03703"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-04604",
+              "Impact": "High",
+              "Public": "20211220",
+              "CveID": "BDU:2022-04604"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://bdu.fstec.ru/vul/2023-00158",
+              "Impact": "High",
+              "Public": "20210221",
+              "CveID": "BDU:2023-00158"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-252, CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-01194",
+              "Impact": "Low",
+              "Public": "20210407",
+              "CveID": "BDU:2023-01194"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35508",
+              "Impact": "Low",
+              "Public": "20210326",
+              "CveID": "CVE-2020-35508"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22555",
+              "Impact": "High",
+              "Public": "20210707",
+              "CveID": "CVE-2021-22555"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23133",
+              "Impact": "High",
+              "Public": "20210422",
+              "CveID": "CVE-2021-23133"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23134",
+              "Impact": "High",
+              "Public": "20210512",
+              "CveID": "CVE-2021-23134"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28691",
+              "Impact": "High",
+              "Public": "20210629",
+              "CveID": "CVE-2021-28691"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31829",
+              "Impact": "Low",
+              "Public": "20210506",
+              "CveID": "CVE-2021-31829"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31916",
+              "Impact": "Low",
+              "Public": "20210506",
+              "CveID": "CVE-2021-31916"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32078",
+              "Impact": "High",
+              "Public": "20210617",
+              "CveID": "CVE-2021-32078"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32399",
+              "Impact": "High",
+              "Public": "20210510",
+              "CveID": "CVE-2021-32399"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32606",
+              "Impact": "High",
+              "Public": "20210511",
+              "CveID": "CVE-2021-32606"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33034",
+              "Impact": "High",
+              "Public": "20210514",
+              "CveID": "CVE-2021-33034"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33624",
+              "Impact": "Low",
+              "Public": "20210623",
+              "CveID": "CVE-2021-33624"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-909",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34693",
+              "Impact": "Low",
+              "Public": "20210614",
+              "CveID": "CVE-2021-34693"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3483",
+              "Impact": "High",
+              "Public": "20210517",
+              "CveID": "CVE-2021-3483"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3489",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "CVE-2021-3489"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3490",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "CVE-2021-3490"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3491",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "CVE-2021-3491"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3501",
+              "Impact": "High",
+              "Public": "20210506",
+              "CveID": "CVE-2021-3501"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-35039",
+              "Impact": "High",
+              "Public": "20210707",
+              "CveID": "CVE-2021-35039"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3506",
+              "Impact": "High",
+              "Public": "20210419",
+              "CveID": "CVE-2021-3506"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3659",
+              "Impact": "Low",
+              "Public": "20220822",
+              "CveID": "CVE-2021-3659"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38198",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38198"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38200",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38200"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38206",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38206"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38207",
+              "Impact": "High",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38207"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38208",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38208"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38209",
+              "Impact": "Low",
+              "Public": "20210808",
+              "CveID": "CVE-2021-38209"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4157",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2021-4157"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45486",
+              "Impact": "Low",
+              "Public": "20211225",
+              "CveID": "CVE-2021-45486"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-46283",
+              "Impact": "Low",
+              "Public": "20220111",
+              "CveID": "CVE-2021-46283"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1786",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "CVE-2022-1786"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4696",
+              "Impact": "High",
+              "Public": "20230111",
+              "CveID": "CVE-2022-4696"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213481001",
+                "Comment": "kernel-headers-modules-mp is earlier than 0:5.12.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213481002",
+                "Comment": "kernel-headers-mp is earlier than 0:5.12.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213481003",
+                "Comment": "kernel-image-mp is earlier than 0:5.12.16-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

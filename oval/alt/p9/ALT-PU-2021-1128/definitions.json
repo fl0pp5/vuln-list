@@ -1,0 +1,270 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211128",
+      "Version": "oval:org.altlinux.errata:def:20211128",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1128: package `kernel-image-rpi-def` update to version 5.4.83-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1128",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1128",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04797",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04797",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05454",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05454",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00005",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00005",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00106",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00106",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03394",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03394",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12351",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12351",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14386",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14386",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25643",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25643",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25669",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25669",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-27784",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27784",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-29661",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29661",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-def to version 5.4.83-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04797: Уязвимость компонента net/bluetooth/l2cap_core.c ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2020-05454: Уязвимость функции sunkbd_reinit() (drivers/input/keyboard/sunkbd.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-00005: Уязвимость компонента drivers/tty/tty_jobctrl.c ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-00106: Уязвимость модуля HDLC_PPP ядра операционной системы Linux, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03394: Уязвимость компонента net/packet/af_packet.c ядра операционной системы Linux, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2020-12351: Improper input validation in BlueZ may allow an unauthenticated user to potentially enable escalation of privilege via adjacent access.\n\n * CVE-2020-14386: A flaw was found in the Linux kernel before 5.9-rc4. Memory corruption can be exploited to gain root privileges from unprivileged processes. The highest threat from this vulnerability is to data confidentiality and integrity.\n\n * CVE-2020-25643: A flaw was found in the HDLC_PPP module of the Linux kernel in versions before 5.9-rc7. Memory corruption and a read overflow is caused by improper input validation in the ppp_cp_parse_cr function which can cause the system to crash or cause a denial of service. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-25669: A vulnerability was found in the Linux Kernel where the function sunkbd_reinit having been scheduled by sunkbd_interrupt before sunkbd being freed. Though the dangling pointer is set to NULL in sunkbd_disconnect, there is still an alias in sunkbd_reinit causing Use After Free.\n\n * CVE-2020-27784: A vulnerability was found in the Linux kernel, where accessing a deallocated instance in printer_ioctl() printer_ioctl() tries to access of a printer_dev instance. However, use-after-free arises because it had been freed by gprinter_free().\n\n * CVE-2020-29661: A locking issue was discovered in the tty subsystem of the Linux kernel through 5.9.13. drivers/tty/tty_jobctrl.c allows a use-after-free attack against TIOCSPGRP, aka CID-54ffccbf053b.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-22"
+          },
+          "Updated": {
+            "Date": "2021-01-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-20, CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2020-04797",
+              "Impact": "High",
+              "Public": "20201123",
+              "CveID": "BDU:2020-04797"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:P/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-05454",
+              "Impact": "Low",
+              "Public": "20201026",
+              "CveID": "BDU:2020-05454"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416, CWE-667",
+              "Href": "https://bdu.fstec.ru/vul/2021-00005",
+              "Impact": "High",
+              "Public": "20201203",
+              "CveID": "BDU:2021-00005"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-00106",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00106"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03394",
+              "Impact": "High",
+              "Public": "20200903",
+              "CveID": "BDU:2021-03394"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12351",
+              "Impact": "High",
+              "Public": "20201123",
+              "CveID": "CVE-2020-12351"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14386",
+              "Impact": "High",
+              "Public": "20200916",
+              "CveID": "CVE-2020-14386"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25643",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25643"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25669",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2020-25669"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27784",
+              "Impact": "Low",
+              "Public": "20220901",
+              "CveID": "CVE-2020-27784"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29661",
+              "Impact": "High",
+              "Public": "20201209",
+              "CveID": "CVE-2020-29661"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128001",
+                "Comment": "kernel-doc-rpi is earlier than 1:5.4.83-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128002",
+                "Comment": "kernel-headers-modules-rpi-def is earlier than 1:5.4.83-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128003",
+                "Comment": "kernel-headers-rpi-def is earlier than 1:5.4.83-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128004",
+                "Comment": "kernel-image-rpi-def is earlier than 1:5.4.83-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128005",
+                "Comment": "kernel-modules-staging-rpi-def is earlier than 1:5.4.83-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211128006",
+                "Comment": "kernel-modules-v4l-rpi-def is earlier than 1:5.4.83-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

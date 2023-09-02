@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223207",
+      "Version": "oval:org.altlinux.errata:def:20223207",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3207: package `sogo` update to version 5.7.1-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3207",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3207",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades sogo to version 5.7.1-alt3. \nSecurity Fix(es):\n\n * #44407: Не отображаются контакты расшаренные через sogo",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-24"
+          },
+          "Updated": {
+            "Date": "2022-11-24"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44407",
+              "Href": "https://bugzilla.altlinux.org/44407",
+              "Data": "Не отображаются контакты расшаренные через sogo"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207001",
+                "Comment": "sogo is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207002",
+                "Comment": "sogo-activesync is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207003",
+                "Comment": "sogo-apache2 is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207004",
+                "Comment": "sogo-devel is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207005",
+                "Comment": "sogo-ealarms-notify is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207006",
+                "Comment": "sogo-slapd-sockd is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207007",
+                "Comment": "sogo-tool is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207008",
+                "Comment": "sope-cards is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207009",
+                "Comment": "sope-cards-devel is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207010",
+                "Comment": "sope-gdl1-contentstore is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207011",
+                "Comment": "sope-gdl1-contentstore-devel is earlier than 0:5.7.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223207012",
+                "Comment": "task-sogo is earlier than 0:5.7.1-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

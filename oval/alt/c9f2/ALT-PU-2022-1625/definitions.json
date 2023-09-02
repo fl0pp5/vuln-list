@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221625",
+      "Version": "oval:org.altlinux.errata:def:20221625",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1625: package `openssl1.1` update to version 1.1.1n-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1625",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1625",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1n-alt2. \nSecurity Fix(es):\n\n * #42274: openssl engine pkcs11 не работает в версии 1.1.1n",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-04"
+          },
+          "Updated": {
+            "Date": "2022-04-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "42274",
+              "Href": "https://bugzilla.altlinux.org/42274",
+              "Data": "openssl engine pkcs11 не работает в версии 1.1.1n"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625005",
+                "Comment": "openssl is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1n-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221625008",
+                "Comment": "tsget is earlier than 0:1.1.1n-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201676",
+      "Version": "oval:org.altlinux.errata:def:20201676",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1676: package `virtualbox` update to version 6.1.4-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1676",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1676",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades virtualbox to version 6.1.4-alt5. \nSecurity Fix(es):\n\n * #38316: Не открывается справка для Virtualbox - Ошибка выполнения команды",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-07"
+          },
+          "Updated": {
+            "Date": "2020-04-07"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38316",
+              "Href": "https://bugzilla.altlinux.org/38316",
+              "Data": "Не открывается справка для Virtualbox - Ошибка выполнения команды"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676001",
+                "Comment": "kernel-source-vboxdrv is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676002",
+                "Comment": "kernel-source-vboxguest is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676003",
+                "Comment": "kernel-source-vboxnetadp is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676004",
+                "Comment": "kernel-source-vboxnetflt is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676005",
+                "Comment": "kernel-source-vboxsf is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676006",
+                "Comment": "kernel-source-vboxvideo is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676007",
+                "Comment": "python-module-vboxapi is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676008",
+                "Comment": "virtualbox is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676009",
+                "Comment": "virtualbox-common is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676010",
+                "Comment": "virtualbox-doc is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676011",
+                "Comment": "virtualbox-guest-additions is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676012",
+                "Comment": "virtualbox-guest-common is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676013",
+                "Comment": "virtualbox-guest-common-vboxguest is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676014",
+                "Comment": "virtualbox-guest-common-vboxvideo is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676015",
+                "Comment": "virtualbox-guest-utils is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676016",
+                "Comment": "virtualbox-sdk is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676017",
+                "Comment": "virtualbox-sdk-xpcom is earlier than 0:6.1.4-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201676018",
+                "Comment": "virtualbox-webservice is earlier than 0:6.1.4-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

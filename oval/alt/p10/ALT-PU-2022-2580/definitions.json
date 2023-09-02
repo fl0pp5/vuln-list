@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222580",
+      "Version": "oval:org.altlinux.errata:def:20222580",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2580: package `zabbix` update to version 6.0.8-alt0.rc2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2580",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2580",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 6.0.8-alt0.rc2.1. \nSecurity Fix(es):\n\n * #43640: Проблема запуска после обновления на версию 6.0.7",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-08"
+          },
+          "Updated": {
+            "Date": "2022-09-08"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43640",
+              "Href": "https://bugzilla.altlinux.org/43640",
+              "Data": "Проблема запуска после обновления на версию 6.0.7"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580001",
+                "Comment": "zabbix-agent is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580003",
+                "Comment": "zabbix-agent2 is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580004",
+                "Comment": "zabbix-common is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580008",
+                "Comment": "zabbix-contrib is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580009",
+                "Comment": "zabbix-doc is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580010",
+                "Comment": "zabbix-java-gateway is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580013",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580014",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580015",
+                "Comment": "zabbix-proxy is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580016",
+                "Comment": "zabbix-proxy-common is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580017",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580018",
+                "Comment": "zabbix-server-common is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580019",
+                "Comment": "zabbix-server-mysql is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580020",
+                "Comment": "zabbix-server-pgsql is earlier than 1:6.0.8-alt0.rc2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222580021",
+                "Comment": "zabbix-source is earlier than 1:6.0.8-alt0.rc2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

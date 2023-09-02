@@ -1,0 +1,98 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222766",
+      "Version": "oval:org.altlinux.errata:def:20222766",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2766: package `php7-tidy` update to version 7.4.32-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2766",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2766",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-31628",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31628",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-31629",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31629",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-tidy to version 7.4.32-alt1. \nSecurity Fix(es):\n\n * CVE-2022-31628: In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the phar uncompressor code would recursively uncompress \"quines\" gzip files, resulting in an infinite loop.\n\n * CVE-2022-31629: In PHP versions before 7.4.31, 8.0.24 and 8.1.11, the vulnerability enables network and same-site attackers to set a standard insecure cookie in the victim's browser which is treated as a `__Host-` or `__Secure-` cookie by PHP applications.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-11"
+          },
+          "Updated": {
+            "Date": "2022-10-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31628",
+              "Impact": "Low",
+              "Public": "20220928",
+              "CveID": "CVE-2022-31628"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31629",
+              "Impact": "Low",
+              "Public": "20220928",
+              "CveID": "CVE-2022-31629"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222766001",
+                "Comment": "php7-tidy is earlier than 0:7.4.32-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

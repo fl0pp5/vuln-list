@@ -1,0 +1,226 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235232",
+      "Version": "oval:org.altlinux.errata:def:20235232",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5232: package `virtualbox` update to version 6.1.46-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5232",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5232",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03898",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03898",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03925",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03925",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04240",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04240",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-22016",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22016",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22017",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22017",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22018",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22018",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades virtualbox to version 6.1.46-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03898: Уязвимость компонента Core виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03925: Уязвимость компонента Core виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю выполнить произвольный код или получить полный контроль над приложением\n\n * BDU:2023-04240: Уязвимость ядра виртуальной машины Oracle VM VirtualBox, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-22016: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Easily exploitable vulnerability allows high privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox.  Successful attacks require human interaction from a person other than the attacker. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle VM VirtualBox. CVSS 3.1 Base Score 4.2 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H).\n\n * CVE-2023-22017: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Easily exploitable vulnerability allows low privileged attacker with logon to the infrastructure where Oracle VM VirtualBox executes to compromise Oracle VM VirtualBox.  Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of Oracle VM VirtualBox. Note: This vulnerability applies to Windows VMs only. CVSS 3.1 Base Score 5.5 (Availability impacts).  CVSS Vector: (CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2023-22018: Vulnerability in the Oracle VM VirtualBox product of Oracle Virtualization (component: Core).  Supported versions that are affected are Prior to 6.1.46 and  Prior to 7.0.10. Difficult to exploit vulnerability allows unauthenticated attacker with network access via RDP to compromise Oracle VM VirtualBox.  Successful attacks of this vulnerability can result in takeover of Oracle VM VirtualBox. CVSS 3.1 Base Score 8.1 (Confidentiality, Integrity and Availability impacts).  CVSS Vector: (CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-01"
+          },
+          "Updated": {
+            "Date": "2023-09-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-404",
+              "Href": "https://bdu.fstec.ru/vul/2023-03898",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "BDU:2023-03898"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-03925",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "BDU:2023-03925"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:M/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-04240",
+              "Impact": "Low",
+              "Public": "20230719",
+              "CveID": "BDU:2023-04240"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22016",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22016"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22017",
+              "Impact": "Low",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22017"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22018",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "CVE-2023-22018"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232001",
+                "Comment": "kernel-source-vboxdrv is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232002",
+                "Comment": "kernel-source-vboxguest is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232003",
+                "Comment": "kernel-source-vboxnetadp is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232004",
+                "Comment": "kernel-source-vboxnetflt is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232005",
+                "Comment": "kernel-source-vboxsf is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232006",
+                "Comment": "kernel-source-vboxvideo is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232007",
+                "Comment": "python3-module-vboxapi is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232008",
+                "Comment": "virtualbox is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232009",
+                "Comment": "virtualbox-common is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232010",
+                "Comment": "virtualbox-doc is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232011",
+                "Comment": "virtualbox-guest-additions is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232012",
+                "Comment": "virtualbox-guest-common is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232013",
+                "Comment": "virtualbox-guest-common-vboxguest is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232014",
+                "Comment": "virtualbox-guest-common-vboxsf is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232015",
+                "Comment": "virtualbox-guest-common-vboxvideo is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232016",
+                "Comment": "virtualbox-guest-utils is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232017",
+                "Comment": "virtualbox-sdk is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232018",
+                "Comment": "virtualbox-sdk-xpcom is earlier than 0:6.1.46-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235232019",
+                "Comment": "virtualbox-webservice is earlier than 0:6.1.46-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

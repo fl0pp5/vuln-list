@@ -1,0 +1,356 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234356",
+      "Version": "oval:org.altlinux.errata:def:20234356",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4356: package `vlc` update to version 3.0.18-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4356",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4356",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07176",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07176",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41325",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41325",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vlc to version 3.0.18-alt3. \nSecurity Fix(es):\n\n * BDU:2022-07176: Уязвимость модуля VNC медиаплеера VLC, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * CVE-2022-41325: An integer overflow in the VNC module in VideoLAN VLC Media Player through 3.0.17.4 allows attackers, by tricking a user into opening a crafted playlist or connecting to a rogue VNC server, to crash VLC or execute code under some conditions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-15"
+          },
+          "Updated": {
+            "Date": "2023-07-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-07176",
+              "Impact": "High",
+              "Public": "20221206",
+              "CveID": "BDU:2022-07176"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41325",
+              "Impact": "High",
+              "Public": "20221206",
+              "CveID": "CVE-2022-41325"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356001",
+                "Comment": "fortunes-vlc is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356002",
+                "Comment": "libvlc is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356003",
+                "Comment": "libvlc-devel is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356004",
+                "Comment": "vim-plugin-vlc-syntax is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356005",
+                "Comment": "vlc is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356006",
+                "Comment": "vlc-interface-lirc is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356007",
+                "Comment": "vlc-interface-ncurses is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356008",
+                "Comment": "vlc-interface-qt is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356009",
+                "Comment": "vlc-interface-skins2 is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356010",
+                "Comment": "vlc-maxi is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356011",
+                "Comment": "vlc-mini is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356012",
+                "Comment": "vlc-plugin-aa is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356013",
+                "Comment": "vlc-plugin-ass is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356014",
+                "Comment": "vlc-plugin-audiocd is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356015",
+                "Comment": "vlc-plugin-bluray is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356016",
+                "Comment": "vlc-plugin-chromaprint is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356017",
+                "Comment": "vlc-plugin-dbus is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356018",
+                "Comment": "vlc-plugin-dv is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356019",
+                "Comment": "vlc-plugin-dvdnav is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356020",
+                "Comment": "vlc-plugin-dvdread is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356021",
+                "Comment": "vlc-plugin-ffmpeg is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356022",
+                "Comment": "vlc-plugin-flac is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356023",
+                "Comment": "vlc-plugin-fluidsynth is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356024",
+                "Comment": "vlc-plugin-framebuffer is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356025",
+                "Comment": "vlc-plugin-freetype is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356026",
+                "Comment": "vlc-plugin-globalhotkeys is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356027",
+                "Comment": "vlc-plugin-gnutls is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356028",
+                "Comment": "vlc-plugin-h264 is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356029",
+                "Comment": "vlc-plugin-h265 is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356030",
+                "Comment": "vlc-plugin-jack is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356031",
+                "Comment": "vlc-plugin-linsys is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356032",
+                "Comment": "vlc-plugin-live555 is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356033",
+                "Comment": "vlc-plugin-matroska is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356034",
+                "Comment": "vlc-plugin-modplug is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356035",
+                "Comment": "vlc-plugin-mpeg2 is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356036",
+                "Comment": "vlc-plugin-mtp is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356037",
+                "Comment": "vlc-plugin-musepack is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356038",
+                "Comment": "vlc-plugin-notify is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356039",
+                "Comment": "vlc-plugin-ogg is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356040",
+                "Comment": "vlc-plugin-opus is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356041",
+                "Comment": "vlc-plugin-png is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356042",
+                "Comment": "vlc-plugin-podcast is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356043",
+                "Comment": "vlc-plugin-projectm is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356044",
+                "Comment": "vlc-plugin-pulseaudio is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356045",
+                "Comment": "vlc-plugin-realrtsp is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356046",
+                "Comment": "vlc-plugin-schroedinger is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356047",
+                "Comment": "vlc-plugin-shout is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356048",
+                "Comment": "vlc-plugin-smb is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356049",
+                "Comment": "vlc-plugin-speex is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356050",
+                "Comment": "vlc-plugin-svg is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356051",
+                "Comment": "vlc-plugin-taglib is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356052",
+                "Comment": "vlc-plugin-theora is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356053",
+                "Comment": "vlc-plugin-twolame is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356054",
+                "Comment": "vlc-plugin-upnp is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356055",
+                "Comment": "vlc-plugin-v4l is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356056",
+                "Comment": "vlc-plugin-videocd is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356057",
+                "Comment": "vlc-plugin-vpx is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356058",
+                "Comment": "vlc-plugin-xcb is earlier than 0:3.0.18-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234356059",
+                "Comment": "vlc-plugin-xml is earlier than 0:3.0.18-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

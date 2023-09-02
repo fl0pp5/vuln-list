@@ -1,0 +1,268 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202748",
+      "Version": "oval:org.altlinux.errata:def:20202748",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2748: package `otrs` update to version 6.0.29-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2748",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2748",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-18179",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18179",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18180",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18180",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1765",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1765",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1766",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1766",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1767",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1767",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1769",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1769",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1770",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1770",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1771",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1771",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1772",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1772",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1773",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1773",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1774",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1774",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1776",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1776",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades otrs to version 6.0.29-alt1. \nSecurity Fix(es):\n\n * CVE-2019-18179: An issue was discovered in Open Ticket Request System (OTRS) 7.0.x through 7.0.12, and Community Edition 5.0.x through 5.0.38 and 6.0.x through 6.0.23. An attacker who is logged into OTRS as an agent is able to list tickets assigned to other agents, even tickets in a queue where the attacker doesn't have permissions.\n\n * CVE-2019-18180: Improper Check for filenames with overly long extensions in PostMaster (sending in email) or uploading files (e.g. attaching files to mails) of ((OTRS)) Community Edition and OTRS allows an remote attacker to cause an endless loop. This issue affects: OTRS AG: ((OTRS)) Community Edition 5.0.x version 5.0.38 and prior versions; 6.0.x version 6.0.23 and prior versions. OTRS AG: OTRS 7.0.x version 7.0.12 and prior versions.\n\n * CVE-2020-1765: An improper control of parameters allows the spoofing of the from fields of the following screens: AgentTicketCompose, AgentTicketForward, AgentTicketBounce and AgentTicketEmailOutbound. This issue affects: ((OTRS)) Community Edition 5.0.x version 5.0.39 and prior versions; 6.0.x version 6.0.24 and prior versions. OTRS 7.0.x version 7.0.13 and prior versions.\n\n * CVE-2020-1766: Due to improper handling of uploaded images it is possible in very unlikely and rare conditions to force the agents browser to execute malicious javascript from a special crafted SVG file rendered as inline jpg file. This issue affects: ((OTRS)) Community Edition 5.0.x version 5.0.39 and prior versions; 6.0.x version 6.0.24 and prior versions. OTRS 7.0.x version 7.0.13 and prior versions.\n\n * CVE-2020-1767: Agent A is able to save a draft (i.e. for customer reply). Then Agent B can open the draft, change the text completely and send it in the name of Agent A. For the customer it will not be visible that the message was sent by another agent. This issue affects: ((OTRS)) Community Edition 6.0.x version 6.0.24 and prior versions. OTRS 7.0.x version 7.0.13 and prior versions.\n\n * CVE-2020-1769: In the login screens (in agent and customer interface), Username and Password fields use autocomplete, which might be considered as security issue. This issue affects: ((OTRS)) Community Edition: 5.0.41 and prior versions, 6.0.26 and prior versions. OTRS: 7.0.15 and prior versions.\n\n * CVE-2020-1770: Support bundle generated files could contain sensitive information that might be unwanted to be disclosed. This issue affects: ((OTRS)) Community Edition: 5.0.41 and prior versions, 6.0.26 and prior versions. OTRS: 7.0.15 and prior versions.\n\n * CVE-2020-1771: Attacker is able craft an article with a link to the customer address book with malicious content (JavaScript). When agent opens the link, JavaScript code is executed due to the missing parameter encoding. This issue affects: ((OTRS)) Community Edition: 6.0.26 and prior versions. OTRS: 7.0.15 and prior versions.\n\n * CVE-2020-1772: It's possible to craft Lost Password requests with wildcards in the Token value, which allows attacker to retrieve valid Token(s), generated by users which already requested new passwords. This issue affects: ((OTRS)) Community Edition 5.0.41 and prior versions, 6.0.26 and prior versions. OTRS: 7.0.15 and prior versions.\n\n * CVE-2020-1773: An attacker with the ability to generate session IDs or password reset tokens, either by being able to authenticate or by exploiting OSA-2020-09, may be able to predict other users session IDs, password reset tokens and automatically generated passwords. This issue affects ((OTRS)) Community Edition: 5.0.41 and prior versions, 6.0.26 and prior versions. OTRS; 7.0.15 and prior versions.\n\n * CVE-2020-1774: When user downloads PGP or S/MIME keys/certificates, exported file has same name for private and public keys. Therefore it's possible to mix them and to send private key to the third-party instead of public key. This issue affects ((OTRS)) Community Edition: 5.0.42 and prior versions, 6.0.27 and prior versions. OTRS: 7.0.16 and prior versions.\n\n * CVE-2020-1776: When an agent user is renamed or set to invalid the session belonging to the user is keept active. The session can not be used to access ticket data in the case the agent is invalid. This issue affects ((OTRS)) Community Edition: 6.0.28 and prior versions. OTRS: 7.0.18 and prior versions, 8.0.4. and prior versions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-09-09"
+          },
+          "Updated": {
+            "Date": "2020-09-09"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18179",
+              "Impact": "Low",
+              "Public": "20200106",
+              "CveID": "CVE-2019-18179"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18180",
+              "Impact": "High",
+              "Public": "20191205",
+              "CveID": "CVE-2019-18180"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1765",
+              "Impact": "Low",
+              "Public": "20200110",
+              "CveID": "CVE-2020-1765"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1766",
+              "Impact": "Low",
+              "Public": "20200110",
+              "CveID": "CVE-2020-1766"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1767",
+              "Impact": "Low",
+              "Public": "20200110",
+              "CveID": "CVE-2020-1767"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1769",
+              "Impact": "Low",
+              "Public": "20200327",
+              "CveID": "CVE-2020-1769"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1770",
+              "Impact": "Low",
+              "Public": "20200327",
+              "CveID": "CVE-2020-1770"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1771",
+              "Impact": "Low",
+              "Public": "20200327",
+              "CveID": "CVE-2020-1771"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1772",
+              "Impact": "High",
+              "Public": "20200327",
+              "CveID": "CVE-2020-1772"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-331",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1773",
+              "Impact": "High",
+              "Public": "20200327",
+              "CveID": "CVE-2020-1773"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1774",
+              "Impact": "Low",
+              "Public": "20200428",
+              "CveID": "CVE-2020-1774"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-613",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1776",
+              "Impact": "Low",
+              "Public": "20200720",
+              "CveID": "CVE-2020-1776"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202748001",
+                "Comment": "otrs is earlier than 0:6.0.29-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202748002",
+                "Comment": "otrs-apache2 is earlier than 0:6.0.29-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

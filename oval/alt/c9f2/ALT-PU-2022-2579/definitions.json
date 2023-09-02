@@ -1,0 +1,144 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222579",
+      "Version": "oval:org.altlinux.errata:def:20222579",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2579: package `open-vm-tools` update to version 12.1.0-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2579",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2579",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02316",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02316",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05274",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05274",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-22943",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22943",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-31676",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31676",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades open-vm-tools to version 12.1.0-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2022-02316: Уязвимость набора утилит VMware Tools для операционных систем Windows, связанная с использованием ненадёжного пути поиска, позволяющая нарушителю выполнить произвольный код с системными привилегиями\n\n * BDU:2022-05274: Уязвимость набора утилит VMware Tools, связанная с недостатками контроля доступа, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2022-22943: VMware Tools for Windows (11.x.y and 10.x.y prior to 12.0.0) contains an uncontrolled search path vulnerability. A malicious actor with local administrative privileges in the Windows guest OS, where VMware Tools is installed, may be able to execute code with system privileges in the Windows guest OS due to an uncontrolled search path element.\n\n * CVE-2022-31676: VMware Tools (12.0.0, 11.x.y and 10.x.y) contains a local privilege escalation vulnerability. A malicious actor with local non-administrative access to the Guest OS can escalate privileges as a root user in the virtual machine.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-07"
+          },
+          "Updated": {
+            "Date": "2022-09-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://bdu.fstec.ru/vul/2022-02316",
+              "Impact": "High",
+              "Public": "20220301",
+              "CveID": "BDU:2022-02316"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2022-05274",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "BDU:2022-05274"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-427",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22943",
+              "Impact": "Low",
+              "Public": "20220303",
+              "CveID": "CVE-2022-22943"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31676",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "CVE-2022-31676"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222579001",
+                "Comment": "open-vm-tools is earlier than 0:12.1.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222579002",
+                "Comment": "open-vm-tools-desktop is earlier than 0:12.1.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222579003",
+                "Comment": "open-vm-tools-devel is earlier than 0:12.1.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222579004",
+                "Comment": "open-vm-tools-salt-minion is earlier than 0:12.1.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222579005",
+                "Comment": "open-vm-tools-test is earlier than 0:12.1.0-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201759",
+      "Version": "oval:org.altlinux.errata:def:20201759",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1759: package `git` update to version 2.25.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1759",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1759",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01903",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01903",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-5260",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-5260",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades git to version 2.25.3-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01903: Уязвимость компонента «credential.helper» распределенной системы управления версиями Git, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2020-5260: Affected versions of Git have a vulnerability whereby Git can be tricked into sending private credentials to a host controlled by an attacker. Git uses external \"credential helper\" programs to store and retrieve passwords or other credentials from secure storage provided by the operating system. Specially-crafted URLs that contain an encoded newline can inject unintended values into the credential helper protocol stream, causing the credential helper to retrieve the password for one server (e.g., good.example.com) for an HTTP request being made to another server (e.g., evil.example.com), resulting in credentials for the former being sent to the latter. There are no restrictions on the relationship between the two, meaning that an attacker can craft a URL that will present stored credentials for any host to a host of their choosing. The vulnerability can be triggered by feeding a malicious URL to git clone. However, the affected URLs look rather suspicious; the likely vector would be through systems which automatically clone URLs not visible to the user, such as Git submodules, or package systems built around Git. The problem has been patched in the versions published on April 14th, 2020, going back to v2.17.x. Anyone wishing to backport the change further can do so by applying commit 9a6bbee (the full release includes extra checks for git fsck, but that commit is sufficient to protect clients against the vulnerability). The patched versions are: 2.17.4, 2.18.3, 2.19.4, 2.20.3, 2.21.2, 2.22.3, 2.23.2, 2.24.2, 2.25.3, 2.26.1.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-15"
+          },
+          "Updated": {
+            "Date": "2020-04-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-20, CWE-522",
+              "Href": "https://bdu.fstec.ru/vul/2020-01903",
+              "Impact": "Low",
+              "Public": "20200414",
+              "CveID": "BDU:2020-01903"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-5260",
+              "Impact": "High",
+              "Public": "20200414",
+              "CveID": "CVE-2020-5260"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759001",
+                "Comment": "git is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759002",
+                "Comment": "git-arch is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759003",
+                "Comment": "git-contrib is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759004",
+                "Comment": "git-core is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759005",
+                "Comment": "git-cvs is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759006",
+                "Comment": "git-diff-highlight is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759007",
+                "Comment": "git-doc is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759008",
+                "Comment": "git-email is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759009",
+                "Comment": "git-full is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759010",
+                "Comment": "git-gui is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759011",
+                "Comment": "git-server is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759012",
+                "Comment": "git-subtree is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759013",
+                "Comment": "git-svn is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759014",
+                "Comment": "gitk is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759015",
+                "Comment": "gitweb is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759016",
+                "Comment": "libgit-devel is earlier than 0:2.25.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201759017",
+                "Comment": "perl-Git is earlier than 0:2.25.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20191854",
+      "Version": "oval:org.altlinux.errata:def:20191854",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-1854: package `memcached` update to version 1.5.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-1854",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-1854",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-11596",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11596",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades memcached to version 1.5.14-alt1. \nSecurity Fix(es):\n\n * CVE-2019-11596: In memcached before 1.5.14, a NULL pointer dereference was found in the \"lru mode\" and \"lru temp_ttl\" commands. This causes a denial of service when parsing crafted lru command messages in process_lru_command in memcached.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-05-16"
+          },
+          "Updated": {
+            "Date": "2019-05-16"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11596",
+              "Impact": "High",
+              "Public": "20190429",
+              "CveID": "CVE-2019-11596"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191854001",
+                "Comment": "memcached is earlier than 0:1.5.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191854002",
+                "Comment": "memcached-devel is earlier than 0:1.5.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191854003",
+                "Comment": "memcached-tool is earlier than 0:1.5.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

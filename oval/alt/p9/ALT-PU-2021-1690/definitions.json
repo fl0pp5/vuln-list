@@ -1,0 +1,367 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211690",
+      "Version": "oval:org.altlinux.errata:def:20211690",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1690: package `libvirt` update to version 6.6.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1690",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1690",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03736",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03736",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04130",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04130",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04592",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04592",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05833",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05833",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20485",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20485",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10701",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10701",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10703",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10703",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12430",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12430",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25637",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25637",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libvirt to version 6.6.0-alt2. \nSecurity Fix(es):\n\n * BDU:2021-03736: Уязвимость демона для управления виртуализацией Libvirt, связанная с повторным освобождением памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-04130: Уязвимость демона и набора инструментов для управления виртуализацией libvirt, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-04592: Уязвимость библиотеки управления виртуализацией Libvirt, связанная с ошибками авторизации, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-05833: Уязвимость функции qemuDomainGetStatsIOThread компонента qemu_driver.c библиотеки управления виртуализацией Libvirt, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-20485: qemu/qemu_driver.c in libvirt before 6.0.0 mishandles the holding of a monitor job during a query to a guest agent, which allows attackers to cause a denial of service (API blockage).\n\n * CVE-2020-10701: A missing authorization flaw was found in the libvirt API responsible for changing the QEMU agent response timeout. This flaw allows read-only connections to adjust the time that libvirt waits for the QEMU guest agent to respond to agent commands. Depending on the timeout value that is set, this flaw can make guest agent commands fail because the agent cannot respond in time. Unprivileged users with a read-only connection could abuse this flaw to set the response timeout for all guest agent messages to zero, potentially leading to a denial of service. This flaw affects libvirt versions before 6.2.0.\n\n * CVE-2020-10703: A NULL pointer dereference was found in the libvirt API responsible introduced in upstream version 3.10.0, and fixed in libvirt 6.0.0, for fetching a storage pool based on its target path. In more detail, this flaw affects storage pools created without a target path such as network-based pools like gluster and RBD. Unprivileged users with a read-only connection could abuse this flaw to crash the libvirt daemon, resulting in a potential denial of service.\n\n * CVE-2020-12430: An issue was discovered in qemuDomainGetStatsIOThread in qemu/qemu_driver.c in libvirt 4.10.0 though 6.x before 6.1.0. A memory leak was found in the virDomainListGetStats libvirt API that is responsible for retrieving domain statistics when managing QEMU guests. This flaw allows unprivileged users with a read-only connection to cause a memory leak in the domstats command, resulting in a potential denial of service.\n\n * CVE-2020-25637: A double free memory issue was found to occur in the libvirt API, in versions before 6.8.0, responsible for requesting information about network interfaces of a running QEMU domain. This flaw affects the polkit access control driver. Specifically, clients connecting to the read-write socket with limited ACL permissions could use this flaw to crash the libvirt daemon, resulting in a denial of service, or potentially escalate their privileges on the system. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-21"
+          },
+          "Updated": {
+            "Date": "2021-04-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2021-03736",
+              "Impact": "Low",
+              "Public": "20201001",
+              "CveID": "BDU:2021-03736"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-04130",
+              "Impact": "Low",
+              "Public": "20200602",
+              "CveID": "BDU:2021-04130"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://bdu.fstec.ru/vul/2021-04592",
+              "Impact": "Low",
+              "Public": "20200320",
+              "CveID": "BDU:2021-04592"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-05833",
+              "Impact": "Low",
+              "Public": "20200502",
+              "CveID": "BDU:2022-05833"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20485",
+              "Impact": "Low",
+              "Public": "20200319",
+              "CveID": "CVE-2019-20485"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10701",
+              "Impact": "Low",
+              "Public": "20210527",
+              "CveID": "CVE-2020-10701"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10703",
+              "Impact": "Low",
+              "Public": "20200602",
+              "CveID": "CVE-2020-10703"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12430",
+              "Impact": "Low",
+              "Public": "20200428",
+              "CveID": "CVE-2020-12430"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25637",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25637"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690001",
+                "Comment": "libvirt is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690002",
+                "Comment": "libvirt-admin is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690003",
+                "Comment": "libvirt-client is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690004",
+                "Comment": "libvirt-daemon is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690005",
+                "Comment": "libvirt-daemon-config-network is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690006",
+                "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690007",
+                "Comment": "libvirt-daemon-driver-interface is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690008",
+                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690009",
+                "Comment": "libvirt-daemon-driver-network is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690010",
+                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690011",
+                "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690012",
+                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690013",
+                "Comment": "libvirt-daemon-driver-secret is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690014",
+                "Comment": "libvirt-daemon-driver-storage is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690015",
+                "Comment": "libvirt-daemon-driver-storage-core is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690016",
+                "Comment": "libvirt-daemon-driver-storage-disk is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690017",
+                "Comment": "libvirt-daemon-driver-storage-fs is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690018",
+                "Comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690019",
+                "Comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690020",
+                "Comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690021",
+                "Comment": "libvirt-daemon-driver-storage-logical is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690022",
+                "Comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690023",
+                "Comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690024",
+                "Comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690025",
+                "Comment": "libvirt-daemon-driver-storage-zfs is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690026",
+                "Comment": "libvirt-daemon-driver-vbox is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690027",
+                "Comment": "libvirt-devel is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690028",
+                "Comment": "libvirt-docs is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690029",
+                "Comment": "libvirt-kvm is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690030",
+                "Comment": "libvirt-libs is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690031",
+                "Comment": "libvirt-lock-sanlock is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690032",
+                "Comment": "libvirt-login-shell is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690033",
+                "Comment": "libvirt-lxc is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690034",
+                "Comment": "libvirt-qemu is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690035",
+                "Comment": "libvirt-qemu-common is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690036",
+                "Comment": "libvirt-vbox is earlier than 0:6.6.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211690037",
+                "Comment": "nss-libvirt is earlier than 0:6.6.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

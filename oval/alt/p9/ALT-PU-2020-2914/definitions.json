@@ -1,0 +1,310 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202914",
+      "Version": "oval:org.altlinux.errata:def:20202914",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2914: package `subversion` update to version 1.14.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2914",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2914",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2016-01127",
+            "RefURL": "https://bdu.fstec.ru/vul/2016-01127",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2017-02070",
+            "RefURL": "https://bdu.fstec.ru/vul/2017-02070",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02929",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02929",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02960",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02960",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2015-5259",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-5259",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-5343",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-5343",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-2167",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-2167",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-2168",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-2168",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-8734",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-8734",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9800",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9800",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-11782",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-11782",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-0203",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-0203",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades subversion to version 1.14.0-alt1. \nSecurity Fix(es):\n\n * BDU:2016-01127: Уязвимость централизованной системы управления версиями Subversion, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2017-02070: Уязвимость служб svn:externals и svn:sync-from-url централизованной системы управления версиями Subversion, позволяющая нарушителю выполнить произвольную shell-команду\n\n * BDU:2019-02929: Уязвимость серверного процесса svnserve централизованной системы управления версиями Subversion, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-02960: Уязвимость серверного процесса svnserve централизованной системы управления версиями Subversion, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2015-5259: Integer overflow in the read_string function in libsvn_ra_svn/marshal.c in Apache Subversion 1.9.x before 1.9.3 allows remote attackers to execute arbitrary code via an svn:// protocol string, which triggers a heap-based buffer overflow and an out-of-bounds read.\n\n * CVE-2015-5343: Integer overflow in util.c in mod_dav_svn in Apache Subversion 1.7.x, 1.8.x before 1.8.15, and 1.9.x before 1.9.3 allows remote authenticated users to cause a denial of service (subversion server crash or memory consumption) and possibly execute arbitrary code via a skel-encoded request body, which triggers an out-of-bounds read and heap-based buffer overflow.\n\n * CVE-2016-2167: The canonicalize_username function in svnserve/cyrus_auth.c in Apache Subversion before 1.8.16 and 1.9.x before 1.9.4, when Cyrus SASL authentication is used, allows remote attackers to authenticate and bypass intended access restrictions via a realm string that is a prefix of an expected repository realm string.\n\n * CVE-2016-2168: The req_check_access function in the mod_authz_svn module in the httpd server in Apache Subversion before 1.8.16 and 1.9.x before 1.9.4 allows remote authenticated users to cause a denial of service (NULL pointer dereference and crash) via a crafted header in a (1) MOVE or (2) COPY request, involving an authorization check.\n\n * CVE-2016-8734: Apache Subversion's mod_dontdothat module and HTTP clients 1.4.0 through 1.8.16, and 1.9.0 through 1.9.4 are vulnerable to a denial-of-service attack caused by exponential XML entity expansion. The attack can cause the targeted process to consume an excessive amount of CPU resources or memory.\n\n * CVE-2017-9800: A maliciously constructed svn+ssh:// URL would cause Subversion clients before 1.8.19, 1.9.x before 1.9.7, and 1.10.0.x through 1.10.0-alpha3 to run an arbitrary shell command. Such a URL could be generated by a malicious server, by a malicious user committing to a honest server (to attack another user of that server's repositories), or by a proxy server. The vulnerability affects all clients, including those that use file://, http://, and plain (untunneled) svn://.\n\n * CVE-2018-11782: In Apache Subversion versions up to and including 1.9.10, 1.10.4, 1.12.0, Subversion's svnserve server process may exit when a well-formed read-only request produces a particular answer. This can lead to disruption for users of the server.\n\n * CVE-2019-0203: In Apache Subversion versions up to and including 1.9.10, 1.10.4, 1.12.0, Subversion's svnserve server process may exit when a client sends certain sequences of protocol commands. This can lead to disruption for users of the server.\n\n * #36518: Обновить subversion",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-01"
+          },
+          "Updated": {
+            "Date": "2020-10-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:C",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2016-01127",
+              "Impact": "High",
+              "Public": "20160414",
+              "CveID": "BDU:2016-01127"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2017-02070",
+              "Impact": "High",
+              "Public": "20170810",
+              "CveID": "BDU:2017-02070"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2019-02929",
+              "Impact": "High",
+              "Public": "20190801",
+              "CveID": "BDU:2019-02929"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-02960",
+              "Impact": "Low",
+              "Public": "20190807",
+              "CveID": "BDU:2019-02960"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-5259",
+              "Impact": "High",
+              "Public": "20160108",
+              "CveID": "CVE-2015-5259"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-5343",
+              "Impact": "High",
+              "Public": "20160414",
+              "CveID": "CVE-2015-5343"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-2167",
+              "Impact": "Low",
+              "Public": "20160505",
+              "CveID": "CVE-2016-2167"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-2168",
+              "Impact": "Low",
+              "Public": "20160505",
+              "CveID": "CVE-2016-2168"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-8734",
+              "Impact": "Low",
+              "Public": "20171016",
+              "CveID": "CVE-2016-8734"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9800",
+              "Impact": "Critical",
+              "Public": "20170811",
+              "CveID": "CVE-2017-9800"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-11782",
+              "Impact": "Low",
+              "Public": "20190926",
+              "CveID": "CVE-2018-11782"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-0203",
+              "Impact": "High",
+              "Public": "20190926",
+              "CveID": "CVE-2019-0203"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "36518",
+              "Href": "https://bugzilla.altlinux.org/36518",
+              "Data": "Обновить subversion"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914001",
+                "Comment": "libsubversion is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914002",
+                "Comment": "libsubversion-auth-gnome-keyring is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914003",
+                "Comment": "libsubversion-auth-kwallet is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914004",
+                "Comment": "libsubversion-devel is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914005",
+                "Comment": "subversion is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914006",
+                "Comment": "subversion-javahl is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914007",
+                "Comment": "subversion-perl is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914008",
+                "Comment": "subversion-python3 is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914009",
+                "Comment": "subversion-server-common is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914010",
+                "Comment": "subversion-server-dav is earlier than 0:1.14.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202914011",
+                "Comment": "subversion-server-standalone is earlier than 0:1.14.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

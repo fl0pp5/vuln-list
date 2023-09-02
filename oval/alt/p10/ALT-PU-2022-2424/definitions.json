@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222424",
+      "Version": "oval:org.altlinux.errata:def:20222424",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2424: package `unrar` update to version 6.1.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2424",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2424",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02992",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02992",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-30333",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30333",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades unrar to version 6.1.7-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02992: Уязвимость средства разархивирования файлов UnRAR, связанная с неверным ограничением имени пути к каталогу с ограниченным доступом, позволяющая нарушителю перезаписать произвольные файлы\n\n * CVE-2022-30333: RARLAB UnRAR before 6.12 on Linux and UNIX allows directory traversal to write to files during an extract (aka unpack) operation, as demonstrated by creating a ~/.ssh/authorized_keys file. NOTE: WinRAR and Android RAR are unaffected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-11"
+          },
+          "Updated": {
+            "Date": "2022-08-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2022-02992",
+              "Impact": "Low",
+              "Public": "20220507",
+              "CveID": "BDU:2022-02992"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30333",
+              "Impact": "High",
+              "Public": "20220509",
+              "CveID": "CVE-2022-30333"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222424001",
+                "Comment": "libunrar is earlier than 0:6.1.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222424002",
+                "Comment": "libunrar-devel is earlier than 0:6.1.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222424003",
+                "Comment": "unrar is earlier than 0:6.1.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

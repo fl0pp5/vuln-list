@@ -1,0 +1,81 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231242",
+      "Version": "oval:org.altlinux.errata:def:20231242",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1242: package `cloud-init` update to version 20.4-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1242",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1242",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades cloud-init to version 20.4-alt0.c9.1. \nSecurity Fix(es):\n\n * #38848: Устаревший атрибут в скрипте etcnet.py для cloud-init",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-14"
+          },
+          "Updated": {
+            "Date": "2023-02-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38848",
+              "Href": "https://bugzilla.altlinux.org/38848",
+              "Data": "Устаревший атрибут в скрипте etcnet.py для cloud-init"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231242001",
+                "Comment": "cloud-init is earlier than 0:20.4-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231242002",
+                "Comment": "cloud-init-config-netplan is earlier than 0:20.4-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

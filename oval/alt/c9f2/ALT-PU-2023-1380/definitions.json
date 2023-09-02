@@ -1,0 +1,282 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231380",
+      "Version": "oval:org.altlinux.errata:def:20231380",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1380: package `apache2` update to version 2.4.55-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1380",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1380",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00495",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00495",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00496",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00496",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01105",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01105",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2006-20001",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2006-20001",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-36760",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36760",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-37436",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37436",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades apache2 to version 2.4.55-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00495: Уязвимость модуля mod_proxy_ajp веб-сервера Apache HTTP Server, позволяющая нарушителю отправить скрытый HTTP-запрос (атака типа HTTP Request Smuggling)\n\n * BDU:2023-00496: Уязвимость модуля mod_proxy веб-сервера Apache HTTP Server, позволяющая нарушителю выполнять атаки с разделением ответов HTTP\n\n * BDU:2023-01105: Уязвимость модуля mod_dav веб-сервера Apache HTTP Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2006-20001: A carefully crafted If: request header can cause a memory read, or write of a single zero byte, in a pool (heap) memory location beyond the header value sent. This could cause the process to crash. This issue affects Apache HTTP Server 2.4.54 and earlier.\n\n * CVE-2022-36760: Inconsistent Interpretation of HTTP Requests ('HTTP Request Smuggling') vulnerability in mod_proxy_ajp of Apache HTTP Server allows an attacker to smuggle requests to the AJP server it forwards requests to. This issue affects Apache HTTP Server Apache HTTP Server 2.4 version 2.4.54 and prior versions.\n\n * CVE-2022-37436: Prior to Apache HTTP Server 2.4.55, a malicious backend can cause the response headers to be truncated early, resulting in some headers being incorporated into the response body. If the later headers have any security purpose, they will not be interpreted by the client.\n\n * #44044: Отключённый a2dismod модуль отключается даже после a2enmod\n\n * #44078: Заменить /var/lock на /run/lock в tmpfiles.conf",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-02"
+          },
+          "Updated": {
+            "Date": "2023-03-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2023-00495",
+              "Impact": "Critical",
+              "Public": "20220712",
+              "CveID": "BDU:2023-00495"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-113",
+              "Href": "https://bdu.fstec.ru/vul/2023-00496",
+              "Impact": "Low",
+              "Public": "20220117",
+              "CveID": "BDU:2023-00496"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2023-01105",
+              "Impact": "High",
+              "Public": "20061031",
+              "CveID": "BDU:2023-01105"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2006-20001",
+              "Impact": "High",
+              "Public": "20230117",
+              "CveID": "CVE-2006-20001"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36760",
+              "Impact": "Critical",
+              "Public": "20230117",
+              "CveID": "CVE-2022-36760"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-436",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37436",
+              "Impact": "Low",
+              "Public": "20230117",
+              "CveID": "CVE-2022-37436"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44044",
+              "Href": "https://bugzilla.altlinux.org/44044",
+              "Data": "Отключённый a2dismod модуль отключается даже после a2enmod"
+            },
+            {
+              "Id": "44078",
+              "Href": "https://bugzilla.altlinux.org/44078",
+              "Data": "Заменить /var/lock на /run/lock в tmpfiles.conf"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380001",
+                "Comment": "apache2 is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380002",
+                "Comment": "apache2-ab is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380003",
+                "Comment": "apache2-base is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380004",
+                "Comment": "apache2-cgi-bin is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380005",
+                "Comment": "apache2-cgi-bin-printenv is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380006",
+                "Comment": "apache2-cgi-bin-test-cgi is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380007",
+                "Comment": "apache2-compat is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380008",
+                "Comment": "apache2-configs-A1PROXIED is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380009",
+                "Comment": "apache2-datadirs is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380010",
+                "Comment": "apache2-devel is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380011",
+                "Comment": "apache2-docs is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380012",
+                "Comment": "apache2-full is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380013",
+                "Comment": "apache2-htcacheclean is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380014",
+                "Comment": "apache2-htcacheclean-control is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380015",
+                "Comment": "apache2-html is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380016",
+                "Comment": "apache2-htpasswd is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380017",
+                "Comment": "apache2-httpd-event is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380018",
+                "Comment": "apache2-httpd-prefork is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380019",
+                "Comment": "apache2-httpd-worker is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380020",
+                "Comment": "apache2-icons is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380021",
+                "Comment": "apache2-manual is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380022",
+                "Comment": "apache2-manual-addons is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380023",
+                "Comment": "apache2-mod_cache_disk is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380024",
+                "Comment": "apache2-mod_ldap is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380025",
+                "Comment": "apache2-mod_proxy_html is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380026",
+                "Comment": "apache2-mod_ssl is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380027",
+                "Comment": "apache2-mod_ssl-compat is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380028",
+                "Comment": "apache2-mods is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380029",
+                "Comment": "apache2-suexec is earlier than 1:2.4.55-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231380030",
+                "Comment": "rpm-build-apache2 is earlier than 1:2.4.55-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

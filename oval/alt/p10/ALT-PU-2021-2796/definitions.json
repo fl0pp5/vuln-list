@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212796",
+      "Version": "oval:org.altlinux.errata:def:20212796",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2796: package `zabbix` update to version 5.4.4-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2796",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2796",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 5.4.4-alt2. \nSecurity Fix(es):\n\n * #40841: Недостающая зависимость",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-14"
+          },
+          "Updated": {
+            "Date": "2021-09-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40841",
+              "Href": "https://bugzilla.altlinux.org/40841",
+              "Data": "Недостающая зависимость"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796001",
+                "Comment": "zabbix-agent is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796003",
+                "Comment": "zabbix-agent2 is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796004",
+                "Comment": "zabbix-common is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796008",
+                "Comment": "zabbix-contrib is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796009",
+                "Comment": "zabbix-doc is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796010",
+                "Comment": "zabbix-java-gateway is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796013",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796014",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796015",
+                "Comment": "zabbix-proxy is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796016",
+                "Comment": "zabbix-proxy-common is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796017",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796018",
+                "Comment": "zabbix-server-common is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796019",
+                "Comment": "zabbix-server-mysql is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796020",
+                "Comment": "zabbix-server-pgsql is earlier than 1:5.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212796021",
+                "Comment": "zabbix-source is earlier than 1:5.4.4-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

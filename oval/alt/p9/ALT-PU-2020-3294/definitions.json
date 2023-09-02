@@ -1,0 +1,290 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203294",
+      "Version": "oval:org.altlinux.errata:def:20203294",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3294: package `unzip` update to version 6.0-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3294",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3294",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-00031",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00031",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2018-00032",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00032",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2018-01516",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-01516",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03340",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03340",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2014-8139",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-8139",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2014-8140",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-8140",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2014-8141",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-8141",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2014-9636",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-9636",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2014-9913",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-9913",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-7696",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-7696",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-7697",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-7697",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-9844",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-9844",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-1000035",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000035",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-18384",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-18384",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades unzip to version 6.0-alt4. \nSecurity Fix(es):\n\n * BDU:2018-00031: Уязвимость функции list_files (list.c) файлового архиватора Info-ZIP Unzip, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2018-00032: Уязвимость функции zi_short в (zipinfo.c) файлового архиватора Info-ZIP Unzip, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2018-01516: Уязвимость файла list.c архиватора Info-ZIP UnZip, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2019-03340: Уязвимость файлового архиватора Info-ZIP Unzip, связанная с переполнением буфера на основе кучи, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2014-8139: Heap-based buffer overflow in the CRC32 verification in Info-ZIP UnZip 6.0 and earlier allows remote attackers to execute arbitrary code via a crafted zip file in the -t command argument to the unzip command.\n\n * CVE-2014-8140: Heap-based buffer overflow in the test_compr_eb function in Info-ZIP UnZip 6.0 and earlier allows remote attackers to execute arbitrary code via a crafted zip file in the -t command argument to the unzip command.\n\n * CVE-2014-8141: Heap-based buffer overflow in the getZip64Data function in Info-ZIP UnZip 6.0 and earlier allows remote attackers to execute arbitrary code via a crafted zip file in the -t command argument to the unzip command.\n\n * CVE-2014-9636: unzip 6.0 allows remote attackers to cause a denial of service (out-of-bounds read or write and crash) via an extra field with an uncompressed size smaller than the compressed field size in a zip archive that advertises STORED method compression.\n\n * CVE-2014-9913: Buffer overflow in the list_files function in list.c in Info-Zip UnZip 6.0 allows remote attackers to cause a denial of service (crash) via vectors related to the compression method.\n\n * CVE-2015-7696: Info-ZIP UnZip 6.0 allows remote attackers to cause a denial of service (heap-based buffer over-read and application crash) or possibly execute arbitrary code via a crafted password-protected ZIP archive, possibly related to an Extra-Field size value.\n\n * CVE-2015-7697: Info-ZIP UnZip 6.0 allows remote attackers to cause a denial of service (infinite loop) via empty bzip2 data in a ZIP archive.\n\n * CVE-2016-9844: Buffer overflow in the zi_short function in zipinfo.c in Info-Zip UnZip 6.0 allows remote attackers to cause a denial of service (crash) via a large compression method value in the central directory file header.\n\n * CVE-2018-1000035: A heap-based buffer overflow exists in Info-Zip UnZip version \u003c= 6.00 in the processing of password-protected archives that allows an attacker to perform a denial of service or to possibly achieve code execution.\n\n * CVE-2018-18384: Info-ZIP UnZip 6.0 has a buffer overflow in list.c, when a ZIP archive has a crafted relationship between the compressed-size value and the uncompressed-size value, because a buffer size is 10 and is supposed to be 12.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-13"
+          },
+          "Updated": {
+            "Date": "2020-11-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2018-00031",
+              "Impact": "Low",
+              "Public": "20161103",
+              "CveID": "BDU:2018-00031"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2018-00032",
+              "Impact": "Low",
+              "Public": "20161122",
+              "CveID": "BDU:2018-00032"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:A/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2018-01516",
+              "Impact": "Low",
+              "Public": "20180928",
+              "CveID": "BDU:2018-01516"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03340",
+              "Impact": "High",
+              "Public": "20180209",
+              "CveID": "BDU:2019-03340"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-8139",
+              "Impact": "High",
+              "Public": "20200131",
+              "CveID": "CVE-2014-8139"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-8140",
+              "Impact": "High",
+              "Public": "20200131",
+              "CveID": "CVE-2014-8140"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-8141",
+              "Impact": "High",
+              "Public": "20200131",
+              "CveID": "CVE-2014-8141"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-9636",
+              "Impact": "Low",
+              "Public": "20150206",
+              "CveID": "CVE-2014-9636"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-9913",
+              "Impact": "Low",
+              "Public": "20170118",
+              "CveID": "CVE-2014-9913"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-7696",
+              "Impact": "Low",
+              "Public": "20151106",
+              "CveID": "CVE-2015-7696"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cwe": "CWE-399",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-7697",
+              "Impact": "Low",
+              "Public": "20151106",
+              "CveID": "CVE-2015-7697"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-9844",
+              "Impact": "Low",
+              "Public": "20170118",
+              "CveID": "CVE-2016-9844"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-1000035",
+              "Impact": "High",
+              "Public": "20180209",
+              "CveID": "CVE-2018-1000035"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-18384",
+              "Impact": "Low",
+              "Public": "20181016",
+              "CveID": "CVE-2018-18384"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203294001",
+                "Comment": "unzip is earlier than 0:6.0-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

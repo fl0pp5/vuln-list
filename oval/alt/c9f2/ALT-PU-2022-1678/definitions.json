@@ -1,0 +1,250 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221678",
+      "Version": "oval:org.altlinux.errata:def:20221678",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1678: package `kernel-image-std-def` update to version 5.10.110-alt0.c9f.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1678",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1678",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00488",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00488",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03004",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03004",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03034",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03034",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05852",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05852",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05855",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05855",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-4034",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4034",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1158",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1158",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2977",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2977",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30594",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30594",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3239",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3239",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.110-alt0.c9f.2. \nSecurity Fix(es):\n\n * BDU:2022-00488: Уязвимость библиотеки Polkit и инструмента песочницы Bubblewrap, вызванная переполнением буфера на стеке, позволяющая нарушителю повысить свои привилегии до уровня суперпользователя\n\n * BDU:2022-03004: Уязвимость системного вызова PTRACE_SEIZE безопасного режима вычислений seccomp ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-03034: Уязвимость реализации функции get_user_pages_fast() подсистемы виртуализации Kernel-based Virtual Machine (KVM) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2022-05852: Уязвимость реализации прокси-виртуализированных TPM-устройств ядра операционной системы Linux, позволяющая нарушителю повысить привилегии в системе\n\n * BDU:2022-05855: Уязвимость функции em28xx_usb_probe драйвера video4linux ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-4034: A local privilege escalation vulnerability was found on polkit's pkexec utility. The pkexec application is a setuid tool designed to allow unprivileged users to run commands as privileged users according predefined policies. The current version of pkexec doesn't handle the calling parameters count correctly and ends trying to execute environment variables as commands. An attacker can leverage this by crafting environment variables in such a way it'll induce pkexec to execute arbitrary code. When successfully executed the attack can cause a local privilege escalation given unprivileged users administrative rights on the target machine.\n\n * CVE-2022-1158: A flaw was found in KVM. When updating a guest's page table entry, vm_pgoff was improperly used as the offset to get the page's pfn. As vaddr and vm_pgoff are controllable by user-mode processes, this flaw allows unprivileged local users on the host to write outside the userspace region and potentially corrupt the kernel, resulting in a denial of service condition.\n\n * CVE-2022-2977: A flaw was found in the Linux kernel implementation of proxied virtualized TPM devices. On a system where virtualized TPM devices are configured (this is not the default) a local attacker can create a use-after-free and create a situation where it may be possible to escalate privileges on the system.\n\n * CVE-2022-30594: The Linux kernel before 5.17.2 mishandles seccomp permissions. The PTRACE_SEIZE code path allows attackers to bypass intended restrictions on setting the PT_SUSPEND_SECCOMP flag.\n\n * CVE-2022-3239: A flaw use after free in the Linux kernel video4linux driver was found in the way user triggers em28xx_usb_probe() for the Empia 28xx based TV cards. A local user could use this flaw to crash the system or potentially escalate their privileges on the system.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-12"
+          },
+          "Updated": {
+            "Date": "2022-04-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-00488",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "BDU:2022-00488"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-275, CWE-862, CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2022-03004",
+              "Impact": "High",
+              "Public": "20220512",
+              "CveID": "BDU:2022-03004"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-03034",
+              "Impact": "High",
+              "Public": "20220329",
+              "CveID": "BDU:2022-03034"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05852",
+              "Impact": "High",
+              "Public": "20220914",
+              "CveID": "BDU:2022-05852"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05855",
+              "Impact": "High",
+              "Public": "20220919",
+              "CveID": "BDU:2022-05855"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4034",
+              "Impact": "High",
+              "Public": "20220128",
+              "CveID": "CVE-2021-4034"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1158",
+              "Impact": "High",
+              "Public": "20220805",
+              "CveID": "CVE-2022-1158"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2977",
+              "Impact": "High",
+              "Public": "20220914",
+              "CveID": "CVE-2022-2977"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30594",
+              "Impact": "High",
+              "Public": "20220512",
+              "CveID": "CVE-2022-30594"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3239",
+              "Impact": "High",
+              "Public": "20220919",
+              "CveID": "CVE-2022-3239"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678010",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221678011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.110-alt0.c9f.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

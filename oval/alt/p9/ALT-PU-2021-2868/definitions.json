@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212868",
+      "Version": "oval:org.altlinux.errata:def:20212868",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2868: package `dhcp` update to version 4.4.2.P1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2868",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2868",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03707",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03707",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-25217",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25217",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dhcp to version 4.4.2.P1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03707: Уязвимость программного обеспечения, предоставляющая в сеть службу протокола динамической конфигурации хоста DHCP, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-25217: In ISC DHCP 4.1-ESV-R1 -\u003e 4.1-ESV-R16, ISC DHCP 4.4.0 -\u003e 4.4.2 (Other branches of ISC DHCP (i.e., releases in the 4.0.x series or lower and releases in the 4.3.x series) are beyond their End-of-Life (EOL) and no longer supported by ISC. From inspection it is clear that the defect is also present in releases from those series, but they have not been officially tested for the vulnerability), The outcome of encountering the defect while reading a lease that will trigger it varies, according to: the component being affected (i.e., dhclient or dhcpd) whether the package was built as a 32-bit or 64-bit binary whether the compiler flag -fstack-protection-strong was used when compiling In dhclient, ISC has not successfully reproduced the error on a 64-bit system. However, on a 32-bit system it is possible to cause dhclient to crash when reading an improper lease, which could cause network connectivity problems for an affected system due to the absence of a running DHCP client process. In dhcpd, when run in DHCPv4 or DHCPv6 mode: if the dhcpd server binary was built for a 32-bit architecture AND the -fstack-protection-strong flag was specified to the compiler, dhcpd may exit while parsing a lease file containing an objectionable lease, resulting in lack of service to clients. Additionally, the offending lease and the lease immediately following it in the lease database may be improperly deleted. if the dhcpd server binary was built for a 64-bit architecture OR if the -fstack-protection-strong compiler flag was NOT specified, the crash will not occur, but it is possible for the offending lease and the lease which immediately followed it to be improperly deleted.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-23"
+          },
+          "Updated": {
+            "Date": "2021-09-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-03707",
+              "Impact": "High",
+              "Public": "20210527",
+              "CveID": "BDU:2021-03707"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25217",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2021-25217"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868001",
+                "Comment": "dhcp-client is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868002",
+                "Comment": "dhcp-common is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868003",
+                "Comment": "dhcp-devel is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868004",
+                "Comment": "dhcp-libs is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868005",
+                "Comment": "dhcp-omshell is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868006",
+                "Comment": "dhcp-relay is earlier than 1:4.4.2.P1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212868007",
+                "Comment": "dhcp-server is earlier than 1:4.4.2.P1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234522",
+      "Version": "oval:org.altlinux.errata:def:20234522",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4522: package `samba` update to version 4.16.11-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4522",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4522",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03963",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03963",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-2127",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2127",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-34966",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-34966",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-34967",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-34967",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-34968",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-34968",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades samba to version 4.16.11-alt2. \nSecurity Fix(es):\n\n * BDU:2023-03963: Уязвимость компонента winbindd_pam_auth_crap.c пакета программ сетевого взаимодействия Samba, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-2127: An out-of-bounds read vulnerability was found in Samba due to insufficient length checks in winbindd_pam_auth_crap.c. When performing NTLM authentication, the client replies to cryptographic challenges back to the server. These replies have variable lengths, and Winbind fails to check the lan manager response length. When Winbind is used for NTLM authentication, a maliciously crafted request can trigger an out-of-bounds read in Winbind, possibly resulting in a crash.\n\n * CVE-2023-34966: An infinite loop vulnerability was found in Samba's mdssvc RPC service for Spotlight. When parsing Spotlight mdssvc RPC packets sent by the client, the core unmarshalling function sl_unpack_loop() did not validate a field in the network packet that contains the count of elements in an array-like structure. By passing 0 as the count value, the attacked function will run in an endless loop consuming 100% CPU. This flaw allows an attacker to issue a malformed RPC request, triggering an infinite loop, resulting in a denial of service condition.\n\n * CVE-2023-34967: A Type Confusion vulnerability was found in Samba's mdssvc RPC service for Spotlight. When parsing Spotlight mdssvc RPC packets, one encoded data structure is a key-value style dictionary where the keys are character strings, and the values can be any of the supported types in the mdssvc protocol. Due to a lack of type checking in callers of the dalloc_value_for_key() function, which returns the object associated with a key, a caller may trigger a crash in talloc_get_size() when talloc detects that the passed-in pointer is not a valid talloc pointer. With an RPC worker process shared among multiple client connections, a malicious client or attacker can trigger a process crash in a shared RPC mdssvc worker process, affecting all other clients this worker serves.\n\n * CVE-2023-34968: A path disclosure vulnerability was found in Samba. As part of the Spotlight protocol, Samba discloses the server-side absolute path of shares, files, and directories in the results for search queries. This flaw allows a malicious client or an attacker with a targeted RPC request to view the information that is part of the disclosed path.\n\n * #46966: Secure channel faulty since Windows 10/11 update 07/2023",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-28"
+          },
+          "Updated": {
+            "Date": "2023-07-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-03963",
+              "Impact": "High",
+              "Public": "20230720",
+              "CveID": "BDU:2023-03963"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2127",
+              "Impact": "Low",
+              "Public": "20230720",
+              "CveID": "CVE-2022-2127"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-34966",
+              "Impact": "High",
+              "Public": "20230720",
+              "CveID": "CVE-2023-34966"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-34967",
+              "Impact": "Low",
+              "Public": "20230720",
+              "CveID": "CVE-2023-34967"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-34968",
+              "Impact": "Low",
+              "Public": "20230720",
+              "CveID": "CVE-2023-34968"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "46966",
+              "Href": "https://bugzilla.altlinux.org/46966",
+              "Data": "Secure channel faulty since Windows 10/11 update 07/2023"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522001",
+                "Comment": "admx-samba is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522002",
+                "Comment": "libldb-modules-dc is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522003",
+                "Comment": "libsmbclient is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522004",
+                "Comment": "libsmbclient-devel is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522005",
+                "Comment": "libwbclient is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522006",
+                "Comment": "libwbclient-devel is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522007",
+                "Comment": "python3-module-samba is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522008",
+                "Comment": "python3-module-samba-devel is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522009",
+                "Comment": "samba is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522010",
+                "Comment": "samba-client is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522011",
+                "Comment": "samba-common is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522012",
+                "Comment": "samba-common-client is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522013",
+                "Comment": "samba-common-libs is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522014",
+                "Comment": "samba-common-tools is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522015",
+                "Comment": "samba-ctdb is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522016",
+                "Comment": "samba-dc is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522017",
+                "Comment": "samba-dc-client is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522018",
+                "Comment": "samba-dc-common is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522019",
+                "Comment": "samba-dc-libs is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522020",
+                "Comment": "samba-dc-mitkrb5 is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522021",
+                "Comment": "samba-devel is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522022",
+                "Comment": "samba-doc is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522023",
+                "Comment": "samba-krb5-printing is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522024",
+                "Comment": "samba-libs is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522025",
+                "Comment": "samba-pidl is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522026",
+                "Comment": "samba-test is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522027",
+                "Comment": "samba-usershares is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522028",
+                "Comment": "samba-util-private-headers is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522029",
+                "Comment": "samba-vfs-cephfs is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522030",
+                "Comment": "samba-vfs-glusterfs is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522031",
+                "Comment": "samba-vfs-snapper is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522032",
+                "Comment": "samba-winbind is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522033",
+                "Comment": "samba-winbind-clients is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522034",
+                "Comment": "samba-winbind-common is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522035",
+                "Comment": "samba-winbind-krb5-localauth is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522036",
+                "Comment": "samba-winbind-krb5-locator is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522037",
+                "Comment": "task-samba-dc is earlier than 0:4.16.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234522038",
+                "Comment": "task-samba-dc-mitkrb5 is earlier than 0:4.16.11-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

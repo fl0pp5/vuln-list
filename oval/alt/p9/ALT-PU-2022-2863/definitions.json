@@ -1,0 +1,170 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222863",
+      "Version": "oval:org.altlinux.errata:def:20222863",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2863: package `lighttpd` update to version 1.4.67-alt0.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2863",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2863",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06197",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06197",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-22707",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22707",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41556",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41556",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades lighttpd to version 1.4.67-alt0.p9.1. \nSecurity Fix(es):\n\n * BDU:2022-06197: Уязвимость модулей mod_fastcgi и mod_scgi веб-сервера lighttpd, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-22707: In lighttpd 1.4.46 through 1.4.63, the mod_extforward_Forwarded function of the mod_extforward plugin has a stack-based buffer overflow (4 bytes representing -1), as demonstrated by remote denial of service (daemon crash) in a non-default configuration. The non-default configuration requires handling of the Forwarded header in a somewhat unusual manner. Also, a 32-bit system is much more likely to be affected than a 64-bit system.\n\n * CVE-2022-41556: A resource leak in gw_backend.c in lighttpd 1.4.56 through 1.4.66 could lead to a denial of service (connection-slot exhaustion) after a large amount of anomalous TCP behavior by clients. It is related to RDHUP mishandling in certain HTTP/1.1 chunked situations. Use of mod_fastcgi is, for example, affected. This is fixed in 1.4.67.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-17"
+          },
+          "Updated": {
+            "Date": "2022-10-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-06197",
+              "Impact": "High",
+              "Public": "20220902",
+              "CveID": "BDU:2022-06197"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22707",
+              "Impact": "Low",
+              "Public": "20220106",
+              "CveID": "CVE-2022-22707"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41556",
+              "Impact": "High",
+              "Public": "20221006",
+              "CveID": "CVE-2022-41556"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863001",
+                "Comment": "lighttpd is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863002",
+                "Comment": "lighttpd-auth-gssapi is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863003",
+                "Comment": "lighttpd-auth-ldap is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863004",
+                "Comment": "lighttpd-doc is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863005",
+                "Comment": "lighttpd-ldap-vhost is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863006",
+                "Comment": "lighttpd-maxminddb is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863007",
+                "Comment": "lighttpd-mysql-vhost is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863008",
+                "Comment": "lighttpd-pgsql-vhost is earlier than 0:1.4.67-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222863009",
+                "Comment": "lighttpd-rrdtool is earlier than 0:1.4.67-alt0.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

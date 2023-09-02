@@ -1,0 +1,315 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223039",
+      "Version": "oval:org.altlinux.errata:def:20223039",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3039: package `mongo` update to version 4.0.28-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3039",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3039",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03363",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03363",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03388",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03388",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01838",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01838",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-20804",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-20804",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20925",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20925",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-2386",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-2386",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-2389",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-2389",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-2392",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-2392",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-2393",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-2393",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7921",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7923",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7923",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7928",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7928",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7929",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7929",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20330",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20330",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20333",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20333",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mongo to version 4.0.28-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03363: Уязвимость документоориентированной системы управления базами данных MongoDB, связанная с ошибками авторизации, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-03388: Уязвимость системы управления базами данных MongoDB, связанная с недостаточной обработкой регулярных выражений, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2022-01838: Уязвимость системы управления базами данных MongoDB, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2018-20804: A user authorized to perform database queries may trigger denial of service by issuing specially crafted applyOps invocations. This issue affects: MongoDB Inc. MongoDB Server v4.0 versions prior to 4.0.10; v3.6 versions prior to 3.6.13.\n\n * CVE-2019-20925: An unauthenticated client can trigger denial of service by issuing specially crafted wire protocol messages, which cause the message decompressor to incorrectly allocate memory. This issue affects: MongoDB Inc. MongoDB Server v4.2 versions prior to 4.2.1; v4.0 versions prior to 4.0.13; v3.6 versions prior to 3.6.15; v3.4 versions prior to 3.4.24.\n\n * CVE-2019-2386: After user deletion in MongoDB Server the improper invalidation of authorization sessions allows an authenticated user's session to persist and become conflated with new accounts, if those accounts reuse the names of deleted ones. This issue affects: MongoDB Inc. MongoDB Server v4.0 versions prior to 4.0.9; v3.6 versions prior to 3.6.13; v3.4 versions prior to 3.4.22.\n\n\n\n * CVE-2019-2389: Incorrect scoping of kill operations in MongoDB Server's packaged SysV init scripts allow users with write access to the PID file to insert arbitrary PIDs to be killed when the root user stops the MongoDB process via SysV init. This issue affects: MongoDB Inc. MongoDB Server v4.0 versions prior to 4.0.11; v3.6 versions prior to 3.6.14; v3.4 versions prior to 3.4.22.\n\n\n\n * CVE-2019-2392: A user authorized to perform database queries may trigger denial of service by issuing specially crafted queries, which use the $mod operator to overflow negative values. This issue affects: MongoDB Inc. MongoDB Server v4.4 versions prior to 4.4.1; v4.2 versions prior to 4.2.9; v4.0 versions prior to 4.0.20; v3.6 versions prior to 3.6.20.\n\n * CVE-2019-2393: A user authorized to perform database queries may trigger denial of service by issuing specially crafted queries, which use $lookup and collations. This issue affects: MongoDB Inc. MongoDB Server v4.2 versions prior to 4.2.1; v4.0 versions prior to 4.0.13; v3.6 versions prior to 3.6.15.\n\n * CVE-2020-7921: Improper serialization of internal state in the authorization subsystem in MongoDB Server's authorization subsystem permits a user with valid credentials to bypass IP whitelisting protection mechanisms following administrative action. This issue affects: MongoDB Inc. MongoDB Server 4.2 versions prior to 4.2.3; 4.0 versions prior to 4.0.15; 4.3 versions prior to 4.3.3; 3.6 versions prior to 3.6.18.\n\n\n\n * CVE-2020-7923: A user authorized to perform database queries may cause denial of service by issuing specially crafted queries, which violate an invariant in the query subsystem's support for geoNear. This issue affects: MongoDB Inc. MongoDB Server v4.4 versions prior to 4.4.0-rc7; v4.2 versions prior to 4.2.8; v4.0 versions prior to 4.0.19.\n\n * CVE-2020-7928: A user authorized to perform database queries may trigger a read overrun and access arbitrary memory by issuing specially crafted queries. This issue affects: MongoDB Inc. MongoDB Server v4.4 versions prior to 4.4.1; v4.2 versions prior to 4.2.9; v4.0 versions prior to 4.0.20; v3.6 versions prior to 3.6.20.\n\n * CVE-2020-7929: A user authorized to perform database queries may trigger denial of service by issuing specially crafted query contain a type of regex. This issue affects: MongoDB Inc. MongoDB Server v3.6 versions prior to 3.6.21 and MongoDB Server v4.0 versions prior to 4.0.20.\n\n * CVE-2021-20330: An attacker with basic CRUD permissions on a replicated collection can run the applyOps command with specially malformed oplog entries, resulting in a potential denial of service on secondaries. This issue affects MongoDB Server v4.0 versions prior to 4.0.25; MongoDB Server v4.2 versions prior to 4.2.14; MongoDB Server v4.4 versions prior to 4.4.6.\n\n * CVE-2021-20333: Sending specially crafted commands to a MongoDB Server may result in artificial log entries being generated or for log entries to be split. This issue affects MongoDB Server v3.6 versions prior to 3.6.20; MongoDB Server v4.0 versions prior to 4.0.21; MongoDB Server v4.2 versions prior to 4.2.10;",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-08"
+          },
+          "Updated": {
+            "Date": "2022-11-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-182, CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2020-03363",
+              "Impact": "Low",
+              "Public": "20190127",
+              "CveID": "BDU:2020-03363"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-185",
+              "Href": "https://bdu.fstec.ru/vul/2021-03388",
+              "Impact": "Low",
+              "Public": "20200521",
+              "CveID": "BDU:2021-03388"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://bdu.fstec.ru/vul/2022-01838",
+              "Impact": "Low",
+              "Public": "20210723",
+              "CveID": "BDU:2022-01838"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-20804",
+              "Impact": "Low",
+              "Public": "20201123",
+              "CveID": "CVE-2018-20804"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-697",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20925",
+              "Impact": "High",
+              "Public": "20201124",
+              "CveID": "CVE-2019-20925"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-613",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-2386",
+              "Impact": "High",
+              "Public": "20190806",
+              "CveID": "CVE-2019-2386"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-2389",
+              "Impact": "Low",
+              "Public": "20190830",
+              "CveID": "CVE-2019-2389"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-2392",
+              "Impact": "Low",
+              "Public": "20201123",
+              "CveID": "CVE-2019-2392"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-2393",
+              "Impact": "Low",
+              "Public": "20201123",
+              "CveID": "CVE-2019-2393"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7921",
+              "Impact": "Low",
+              "Public": "20200506",
+              "CveID": "CVE-2020-7921"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-755",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7923",
+              "Impact": "Low",
+              "Public": "20200821",
+              "CveID": "CVE-2020-7923"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7928",
+              "Impact": "Low",
+              "Public": "20201123",
+              "CveID": "CVE-2020-7928"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7929",
+              "Impact": "Low",
+              "Public": "20210301",
+              "CveID": "CVE-2020-7929"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20330",
+              "Impact": "Low",
+              "Public": "20211215",
+              "CveID": "CVE-2021-20330"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20333",
+              "Impact": "Low",
+              "Public": "20210723",
+              "CveID": "CVE-2021-20333"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223039001",
+                "Comment": "mongo is earlier than 0:4.0.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223039002",
+                "Comment": "mongo-server-mongod is earlier than 0:4.0.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223039003",
+                "Comment": "mongo-server-mongos is earlier than 0:4.0.28-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

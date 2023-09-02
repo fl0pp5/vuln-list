@@ -1,0 +1,252 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213635",
+      "Version": "oval:org.altlinux.errata:def:20213635",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3635: package `apache2` update to version 2.4.52-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3635",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3635",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-06392",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06392",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06393",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06393",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-44224",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44224",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44790",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44790",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades apache2 to version 2.4.52-alt1. \nSecurity Fix(es):\n\n * BDU:2021-06392: Уязвимость HTTP-сервера Apache, связанная с выходом операции за границу буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-06393: Уязвимость HTTP-сервера Apache, связанная с подделкой запросов на стороне сервера, позволяющая нарушителю провести SSRF-атаку\n\n * CVE-2021-44224: A crafted URI sent to httpd configured as a forward proxy (ProxyRequests on) can cause a crash (NULL pointer dereference) or, for configurations mixing forward and reverse proxy declarations, can allow for requests to be directed to a declared Unix Domain Socket endpoint (Server Side Request Forgery). This issue affects Apache HTTP Server 2.4.7 up to 2.4.51 (included).\n\n * CVE-2021-44790: A carefully crafted request body can cause a buffer overflow in the mod_lua multipart parser (r:parsebody() called from Lua scripts). The Apache httpd team is not aware of an exploit for the vulnerabilty though it might be possible to craft one. This issue affects Apache HTTP Server 2.4.51 and earlier.\n\n * #41456: Зависит от systemd",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-27"
+          },
+          "Updated": {
+            "Date": "2021-12-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-06392",
+              "Impact": "Critical",
+              "Public": "20211220",
+              "CveID": "BDU:2021-06392"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2021-06393",
+              "Impact": "High",
+              "Public": "20211220",
+              "CveID": "BDU:2021-06393"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44224",
+              "Impact": "High",
+              "Public": "20211220",
+              "CveID": "CVE-2021-44224"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44790",
+              "Impact": "Critical",
+              "Public": "20211220",
+              "CveID": "CVE-2021-44790"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41456",
+              "Href": "https://bugzilla.altlinux.org/41456",
+              "Data": "Зависит от systemd"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635001",
+                "Comment": "apache2 is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635002",
+                "Comment": "apache2-ab is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635003",
+                "Comment": "apache2-base is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635004",
+                "Comment": "apache2-cgi-bin is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635005",
+                "Comment": "apache2-cgi-bin-printenv is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635006",
+                "Comment": "apache2-cgi-bin-test-cgi is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635007",
+                "Comment": "apache2-compat is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635008",
+                "Comment": "apache2-configs-A1PROXIED is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635009",
+                "Comment": "apache2-datadirs is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635010",
+                "Comment": "apache2-devel is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635011",
+                "Comment": "apache2-docs is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635012",
+                "Comment": "apache2-full is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635013",
+                "Comment": "apache2-htcacheclean is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635014",
+                "Comment": "apache2-htcacheclean-control is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635015",
+                "Comment": "apache2-html is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635016",
+                "Comment": "apache2-htpasswd is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635017",
+                "Comment": "apache2-httpd-event is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635018",
+                "Comment": "apache2-httpd-prefork is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635019",
+                "Comment": "apache2-httpd-worker is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635020",
+                "Comment": "apache2-icons is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635021",
+                "Comment": "apache2-manual is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635022",
+                "Comment": "apache2-manual-addons is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635023",
+                "Comment": "apache2-mod_cache_disk is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635024",
+                "Comment": "apache2-mod_ldap is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635025",
+                "Comment": "apache2-mod_proxy_html is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635026",
+                "Comment": "apache2-mod_ssl is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635027",
+                "Comment": "apache2-mod_ssl-compat is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635028",
+                "Comment": "apache2-mods is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635029",
+                "Comment": "apache2-suexec is earlier than 1:2.4.52-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213635030",
+                "Comment": "rpm-build-apache2 is earlier than 1:2.4.52-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

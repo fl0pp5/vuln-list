@@ -1,0 +1,137 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223071",
+      "Version": "oval:org.altlinux.errata:def:20223071",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3071: package `c-ares` update to version 1.18.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3071",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3071",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01024",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01024",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00342",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00342",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8277",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8277",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3672",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3672",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades c-ares to version 1.18.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01024: Уязвимость программной платформы Node.js, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00342: Уязвимость библиотеки СИ для асинхронных запросов DNS c-ares, связанная с непринятием мер по защите структуры веб-страницы, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-8277: A Node.js application that allows an attacker to trigger a DNS request for a host of their choice could trigger a Denial of Service in versions \u003c 15.2.1, \u003c 14.15.1, and \u003c 12.19.1 by getting the application to resolve a DNS record with a larger number of responses. This is fixed in 15.2.1, 14.15.1, and 12.19.1.\n\n * CVE-2021-3672: A flaw was found in c-ares library, where a missing input validation check of host names returned by DNS (Domain Name Servers) can lead to output of wrong hostnames which might potentially lead to Domain Hijacking. The highest threat from this vulnerability is to confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-14"
+          },
+          "Updated": {
+            "Date": "2022-11-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-01024",
+              "Impact": "High",
+              "Public": "20201118",
+              "CveID": "BDU:2021-01024"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-00342",
+              "Impact": "Low",
+              "Public": "20210810",
+              "CveID": "BDU:2022-00342"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8277",
+              "Impact": "High",
+              "Public": "20201119",
+              "CveID": "CVE-2020-8277"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3672",
+              "Impact": "Low",
+              "Public": "20211123",
+              "CveID": "CVE-2021-3672"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223071001",
+                "Comment": "c-ares is earlier than 0:1.18.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223071002",
+                "Comment": "libcares is earlier than 0:1.18.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223071003",
+                "Comment": "libcares-devel is earlier than 0:1.18.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

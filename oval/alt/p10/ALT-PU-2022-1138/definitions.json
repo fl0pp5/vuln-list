@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221138",
+      "Version": "oval:org.altlinux.errata:def:20221138",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1138: package `kernel-image-std-def` update to version 5.10.93-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1138",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1138",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01472",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01472",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0185",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0185",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.93-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01472: Уязвимость функции legacy_parse_param ядра операционной системы Linux, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2022-0185: A heap-based buffer overflow flaw was found in the way the legacy_parse_param function in the Filesystem Context functionality of the Linux kernel verified the supplied parameters length. An unprivileged (in case of unprivileged user namespaces enabled, otherwise needs namespaced CAP_SYS_ADMIN privilege) local user able to open a filesystem that does not support the Filesystem Context API (and thus fallbacks to legacy handling) could use this flaw to escalate their privileges on the system.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-26"
+          },
+          "Updated": {
+            "Date": "2022-01-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-01472",
+              "Impact": "High",
+              "Public": "20220211",
+              "CveID": "BDU:2022-01472"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0185",
+              "Impact": "High",
+              "Public": "20220211",
+              "CveID": "CVE-2022-0185"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138006",
+                "Comment": "kernel-image-std-def-checkinstall is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138007",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138008",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.93-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221138012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.93-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

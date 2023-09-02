@@ -1,0 +1,188 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211729",
+      "Version": "oval:org.altlinux.errata:def:20211729",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1729: package `gdal` update to version 3.0.4-alt1.1.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1729",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1729",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03591",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03591",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03342",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03342",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-17545",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17545",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17546",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17546",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gdal to version 3.0.4-alt1.1.M90P.1. \nSecurity Fix(es):\n\n * BDU:2021-03591: Уязвимость компонента tif_getimage.c библиотеки LibTIFF, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-03342: Уязвимость функции OGRExpatRealloc файла ogr/ogr_expat.cpp. библиотеки-транслятора для геопространственных данных GDAL, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-17545: GDAL through 3.0.1 has a poolDestroy double free in OGRExpatRealloc in ogr/ogr_expat.cpp when the 10MB threshold is exceeded.\n\n * CVE-2019-17546: tif_getimage.c in LibTIFF through 4.0.10, as used in GDAL through 3.0.1 and other products, has an integer overflow that potentially causes a heap-based buffer overflow via a crafted RGBA image, related to a \"Negative-size-param\" condition.\n\n * #39819: При запуске показывает белый шар без карты",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-27"
+          },
+          "Updated": {
+            "Date": "2021-04-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03591",
+              "Impact": "High",
+              "Public": "20191014",
+              "CveID": "BDU:2021-03591"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2022-03342",
+              "Impact": "Critical",
+              "Public": "20191013",
+              "CveID": "BDU:2022-03342"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17545",
+              "Impact": "Critical",
+              "Public": "20191014",
+              "CveID": "CVE-2019-17545"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17546",
+              "Impact": "High",
+              "Public": "20191014",
+              "CveID": "CVE-2019-17546"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39819",
+              "Href": "https://bugzilla.altlinux.org/39819",
+              "Data": "При запуске показывает белый шар без карты"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729001",
+                "Comment": "gdal is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729002",
+                "Comment": "gdal-doc is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729003",
+                "Comment": "gdal-scripts is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729004",
+                "Comment": "libgdal is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729005",
+                "Comment": "libgdal-devel is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729006",
+                "Comment": "perl-Geo-GDAL is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729007",
+                "Comment": "python-module-gdal is earlier than 0:3.0.4-alt1.1.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211729008",
+                "Comment": "python3-module-gdal is earlier than 0:3.0.4-alt1.1.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

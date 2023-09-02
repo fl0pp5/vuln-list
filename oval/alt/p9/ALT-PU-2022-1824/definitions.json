@@ -1,0 +1,200 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221824",
+      "Version": "oval:org.altlinux.errata:def:20221824",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1824: package `kernel-image-std-def` update to version 5.4.191-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1824",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1824",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03059",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03059",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04995",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04995",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-2639",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2639",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-29581",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-29581",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.191-alt1. \nSecurity Fix(es):\n\n * BDU:2022-03059: Уязвимость функции u32_change() счетчика ссылок в компоненте net/sched ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии до уровня root\n\n * BDU:2022-04995: Уязвимость функции reserve_sfa_size() модуля openvswitch ядра операционной системы Linux, похзволяющая нарушителю повысить свои привилегии или вызвать октаз в обслуживании\n\n * CVE-2022-2639: An integer coercion error was found in the openvswitch kernel module. Given a sufficiently large number of actions, while copying and reserving memory for a new action of a new flow, the reserve_sfa_size() function does not return -EMSGSIZE as expected, potentially leading to an out-of-bounds write access. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n\n * CVE-2022-29581: Improper Update of Reference Count vulnerability in net/sched of Linux Kernel allows local attacker to cause privilege escalation to root. This issue affects: Linux Kernel versions prior to 5.18; version 4.14 and later versions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-05"
+          },
+          "Updated": {
+            "Date": "2022-05-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-911",
+              "Href": "https://bdu.fstec.ru/vul/2022-03059",
+              "Impact": "High",
+              "Public": "20220415",
+              "CveID": "BDU:2022-03059"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-04995",
+              "Impact": "High",
+              "Public": "20220805",
+              "CveID": "BDU:2022-04995"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-681",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2639",
+              "Impact": "High",
+              "Public": "20220901",
+              "CveID": "CVE-2022-2639"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-29581",
+              "Impact": "High",
+              "Public": "20220517",
+              "CveID": "CVE-2022-29581"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824001",
+                "Comment": "kernel-doc-std is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.4.191-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221824013",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 2:5.4.191-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

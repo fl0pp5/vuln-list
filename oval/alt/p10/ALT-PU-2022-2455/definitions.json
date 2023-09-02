@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222455",
+      "Version": "oval:org.altlinux.errata:def:20222455",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2455: package `ocrfeeder` update to version 0.8.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2455",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2455",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-27811",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27811",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ocrfeeder to version 0.8.5-alt1. \nSecurity Fix(es):\n\n * CVE-2022-27811: GNOME OCRFeeder before 0.8.4 allows OS command injection via shell metacharacters in a PDF or image filename.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-18"
+          },
+          "Updated": {
+            "Date": "2022-08-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27811",
+              "Impact": "Critical",
+              "Public": "20220324",
+              "CveID": "CVE-2022-27811"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222455001",
+                "Comment": "ocrfeeder is earlier than 0:0.8.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222455002",
+                "Comment": "python3-module-ocrfeeder is earlier than 0:0.8.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

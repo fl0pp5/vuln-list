@@ -1,0 +1,263 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222917",
+      "Version": "oval:org.altlinux.errata:def:20222917",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2917: package `glibc` update to version 2.32-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2917",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2917",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04132",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04132",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01632",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01632",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01633",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01633",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-29562",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29562",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38604",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38604",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23218",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23218",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23219",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23219",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glibc to version 2.32-alt5. \nSecurity Fix(es):\n\n * BDU:2021-04132: Уязвимость компонента sysdeps/unix/sysv/linux/mq_notify.c библиотеки glibc, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01632: Уязвимость модуля sunrpc ib glibc системной библиотеки glibc, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-01633: Уязвимость модуля sunrpc системной библиотеки glibc, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2020-29562: The iconv function in the GNU C Library (aka glibc or libc6) 2.30 to 2.32, when converting UCS4 text containing an irreversible character, fails an assertion in the code path and aborts the program, potentially resulting in a denial of service.\n\n * CVE-2021-38604: In librt in the GNU C Library (aka glibc) through 2.34, sysdeps/unix/sysv/linux/mq_notify.c mishandles certain NOTIFY_REMOVED data, leading to a NULL pointer dereference. NOTE: this vulnerability was introduced as a side effect of the CVE-2021-33574 fix.\n\n * CVE-2022-23218: The deprecated compatibility function svcunix_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its path argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.\n\n * CVE-2022-23219: The deprecated compatibility function clnt_create in the sunrpc module of the GNU C Library (aka glibc) through 2.34 copies its hostname argument on the stack without validating its length, which may result in a buffer overflow, potentially resulting in a denial of service or (if an application is not built with a stack protector enabled) arbitrary code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-25"
+          },
+          "Updated": {
+            "Date": "2022-10-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-04132",
+              "Impact": "Low",
+              "Public": "20210809",
+              "CveID": "BDU:2021-04132"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-01632",
+              "Impact": "Critical",
+              "Public": "20220314",
+              "CveID": "BDU:2022-01632"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-01633",
+              "Impact": "Critical",
+              "Public": "20220314",
+              "CveID": "BDU:2022-01633"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29562",
+              "Impact": "Low",
+              "Public": "20201204",
+              "CveID": "CVE-2020-29562"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38604",
+              "Impact": "High",
+              "Public": "20210812",
+              "CveID": "CVE-2021-38604"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23218",
+              "Impact": "Critical",
+              "Public": "20220114",
+              "CveID": "CVE-2022-23218"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23219",
+              "Impact": "Critical",
+              "Public": "20220114",
+              "CveID": "CVE-2022-23219"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917001",
+                "Comment": "glibc is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917002",
+                "Comment": "glibc-core is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917003",
+                "Comment": "glibc-debug is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917004",
+                "Comment": "glibc-devel is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917005",
+                "Comment": "glibc-devel-static is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917006",
+                "Comment": "glibc-doc is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917007",
+                "Comment": "glibc-gconv-modules is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917008",
+                "Comment": "glibc-i18ndata is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917009",
+                "Comment": "glibc-locales is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917010",
+                "Comment": "glibc-nss is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917011",
+                "Comment": "glibc-preinstall is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917012",
+                "Comment": "glibc-pthread is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917013",
+                "Comment": "glibc-source is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917014",
+                "Comment": "glibc-timezones is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917015",
+                "Comment": "glibc-utils is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917016",
+                "Comment": "iconv is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917017",
+                "Comment": "libnsl1 is earlier than 6:2.32-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222917018",
+                "Comment": "nscd is earlier than 6:2.32-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

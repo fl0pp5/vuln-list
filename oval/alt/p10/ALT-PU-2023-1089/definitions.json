@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231089",
+      "Version": "oval:org.altlinux.errata:def:20231089",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1089: package `qt5-declarative` update to version 5.15.7-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1089",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1089",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades qt5-declarative to version 5.15.7-alt5. \nSecurity Fix(es):\n\n * #44642: Optimize /usr/lib/rpm/qml.prov.files",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-19"
+          },
+          "Updated": {
+            "Date": "2023-01-19"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44642",
+              "Href": "https://bugzilla.altlinux.org/44642",
+              "Data": "Optimize /usr/lib/rpm/qml.prov.files"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089001",
+                "Comment": "libqt5-qml is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089002",
+                "Comment": "libqt5-qmlmodels is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089003",
+                "Comment": "libqt5-qmlworkerscript is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089004",
+                "Comment": "libqt5-quick is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089005",
+                "Comment": "libqt5-quickparticles is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089006",
+                "Comment": "libqt5-quickshapes is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089007",
+                "Comment": "libqt5-quicktest is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089008",
+                "Comment": "libqt5-quickwidgets is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089009",
+                "Comment": "qt5-declarative-common is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089010",
+                "Comment": "qt5-declarative-devel is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089011",
+                "Comment": "qt5-declarative-devel-static is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089012",
+                "Comment": "qt5-declarative-doc is earlier than 0:5.15.7-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231089013",
+                "Comment": "rpm-build-qml is earlier than 0:5.15.7-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

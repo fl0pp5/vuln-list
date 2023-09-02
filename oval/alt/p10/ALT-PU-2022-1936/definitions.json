@@ -1,0 +1,144 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221936",
+      "Version": "oval:org.altlinux.errata:def:20221936",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1936: package `openvpn` update to version 2.5.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1936",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1936",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01642",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01642",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0547",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0547",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openvpn to version 2.5.6-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01642: Уязвимость программного обеспечения OpenVPN, связанная с недостатками процедуры аутентификации, позволяющая нарушителю обойти процесс аутентификации и получить доступ к конфиденциальной информации\n\n * CVE-2022-0547: OpenVPN 2.1 until v2.4.12 and v2.5.6 may enable authentication bypass in external authentication plug-ins when more than one of them makes use of deferred authentication replies, which allows an external user to be granted access with only partially correct credentials.\n\n * #42217: обновление до версии 2.5.6",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-24"
+          },
+          "Updated": {
+            "Date": "2022-05-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-01642",
+              "Impact": "Low",
+              "Public": "20220324",
+              "CveID": "BDU:2022-01642"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0547",
+              "Impact": "Critical",
+              "Public": "20220318",
+              "CveID": "CVE-2022-0547"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "42217",
+              "Href": "https://bugzilla.altlinux.org/42217",
+              "Data": "обновление до версии 2.5.6"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221936001",
+                "Comment": "openvpn is earlier than 0:2.5.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221936002",
+                "Comment": "openvpn-devel is earlier than 0:2.5.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221936003",
+                "Comment": "openvpn-docs is earlier than 0:2.5.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221936004",
+                "Comment": "openvpn-plugins is earlier than 0:2.5.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

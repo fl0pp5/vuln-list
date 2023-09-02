@@ -1,0 +1,351 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192225",
+      "Version": "oval:org.altlinux.errata:def:20192225",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2225: package `libvirt` update to version 5.5.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2225",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2225",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02445",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02445",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02852",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02852",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02853",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02853",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02854",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02854",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10161",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10161",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10166",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10166",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10167",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10167",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10168",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10168",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libvirt to version 5.5.0-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02445: Уязвимость функции virDomainManagedSaveDefineXML библиотеки libvirtd, позволяющая нарушителю изменять произвольные файлы\n\n * BDU:2019-02852: Уязвимость функции virDomainSaveImageGetXMLDesc() библиотеки управления виртуализацией Libvirt, позволяющая нарушителю вызвать отказ в обслуживании, выполнить произвольный код или определить наличие и размер произвольных файлов\n\n * BDU:2019-02853: Уязвимость функции virConnectGetDomainCapabilities() библиотеки управления виртуализацией Libvirt, позволяющая нарушителю выполнить произвольный код или повысить свои привилегии\n\n * BDU:2019-02854: Уязвимость функций virConnectBaselineHypervisorCPU() и virConnectCompareHypervisorCPU() библиотеки управления виртуализацией Libvirt, позволяющая нарушителю выполнить произвольный код или повысить свои привилегии\n\n * CVE-2019-10161: It was discovered that libvirtd before versions 4.10.1 and 5.4.1 would permit read-only clients to use the virDomainSaveImageGetXMLDesc() API, specifying an arbitrary path which would be accessed with the permissions of the libvirtd process. An attacker with access to the libvirtd socket could use this to probe the existence of arbitrary files, cause denial of service or cause libvirtd to execute arbitrary programs.\n\n * CVE-2019-10166: It was discovered that libvirtd, versions 4.x.x before 4.10.1 and 5.x.x before 5.4.1, would permit readonly clients to use the virDomainManagedSaveDefineXML() API, which would permit them to modify managed save state files. If a managed save had already been created by a privileged user, a local attacker could modify this file such that libvirtd would execute an arbitrary program when the domain was resumed.\n\n * CVE-2019-10167: The virConnectGetDomainCapabilities() libvirt API, versions 4.x.x before 4.10.1 and 5.x.x before 5.4.1, accepts an \"emulatorbin\" argument to specify the program providing emulation for a domain. Since v1.2.19, libvirt will execute that program to probe the domain's capabilities. Read-only clients could specify an arbitrary path for this argument, causing libvirtd to execute a crafted executable with its own privileges.\n\n * CVE-2019-10168: The virConnectBaselineHypervisorCPU() and virConnectCompareHypervisorCPU() libvirt APIs, 4.x.x before 4.10.1 and 5.x.x before 5.4.1, accept an \"emulator\" argument to specify the program providing emulation for a domain. Since v1.2.19, libvirt will execute that program to probe the domain's capabilities. Read-only clients could specify an arbitrary path for this argument, causing libvirtd to execute a crafted executable with its own privileges.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-07-09"
+          },
+          "Updated": {
+            "Date": "2019-07-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-02445",
+              "Impact": "Low",
+              "Public": "20190613",
+              "CveID": "BDU:2019-02445"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22, CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-02852",
+              "Impact": "High",
+              "Public": "20190730",
+              "CveID": "BDU:2019-02852"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-22, CWE-250, CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-02853",
+              "Impact": "Low",
+              "Public": "20190802",
+              "CveID": "BDU:2019-02853"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-22, CWE-250, CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-02854",
+              "Impact": "Low",
+              "Public": "20190613",
+              "CveID": "BDU:2019-02854"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10161",
+              "Impact": "High",
+              "Public": "20190730",
+              "CveID": "CVE-2019-10161"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10166",
+              "Impact": "High",
+              "Public": "20190802",
+              "CveID": "CVE-2019-10166"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10167",
+              "Impact": "High",
+              "Public": "20190802",
+              "CveID": "CVE-2019-10167"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10168",
+              "Impact": "High",
+              "Public": "20190802",
+              "CveID": "CVE-2019-10168"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225001",
+                "Comment": "libvirt is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225002",
+                "Comment": "libvirt-admin is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225003",
+                "Comment": "libvirt-client is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225004",
+                "Comment": "libvirt-daemon is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225005",
+                "Comment": "libvirt-daemon-config-network is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225006",
+                "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225007",
+                "Comment": "libvirt-daemon-driver-interface is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225008",
+                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225009",
+                "Comment": "libvirt-daemon-driver-network is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225010",
+                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225011",
+                "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225012",
+                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225013",
+                "Comment": "libvirt-daemon-driver-secret is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225014",
+                "Comment": "libvirt-daemon-driver-storage is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225015",
+                "Comment": "libvirt-daemon-driver-storage-core is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225016",
+                "Comment": "libvirt-daemon-driver-storage-disk is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225017",
+                "Comment": "libvirt-daemon-driver-storage-fs is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225018",
+                "Comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225019",
+                "Comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225020",
+                "Comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225021",
+                "Comment": "libvirt-daemon-driver-storage-logical is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225022",
+                "Comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225023",
+                "Comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225024",
+                "Comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225025",
+                "Comment": "libvirt-daemon-driver-storage-zfs is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225026",
+                "Comment": "libvirt-daemon-driver-vbox is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225027",
+                "Comment": "libvirt-devel is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225028",
+                "Comment": "libvirt-docs is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225029",
+                "Comment": "libvirt-kvm is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225030",
+                "Comment": "libvirt-libs is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225031",
+                "Comment": "libvirt-lock-sanlock is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225032",
+                "Comment": "libvirt-login-shell is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225033",
+                "Comment": "libvirt-lxc is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225034",
+                "Comment": "libvirt-qemu is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225035",
+                "Comment": "libvirt-qemu-common is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225036",
+                "Comment": "libvirt-vbox is earlier than 0:5.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192225037",
+                "Comment": "nss-libvirt is earlier than 0:5.5.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

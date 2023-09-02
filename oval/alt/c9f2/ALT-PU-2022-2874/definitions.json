@@ -1,0 +1,210 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222874",
+      "Version": "oval:org.altlinux.errata:def:20222874",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2874: package `curl` update to version 7.85.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2874",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2874",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06193",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06193",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06911",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06911",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06918",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06918",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07361",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07361",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-32205",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32205",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32206",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32206",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32207",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32207",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32208",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-35252",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-35252",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.85.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06193: Уязвимость утилиты командной строки cURL, связанная с недостаточной проверкой входных данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06911: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-06918: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с выделением неограниченной памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-07361: Уязвимость программного средства для взаимодействия с серверами CURL, связанная с ошибками при сохранении разрешений, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * CVE-2022-32205: A malicious server can serve excessive amounts of `Set-Cookie:` headers in a HTTP response to curl and curl \u003c 7.84.0 stores all of them. A sufficiently large amount of (big) cookies make subsequent HTTP requests to this, or other servers to which the cookies match, create requests that become larger than the threshold that curl uses internally to avoid sending crazy large requests (1048576 bytes) and instead returns an error.This denial state might remain for as long as the same cookies are kept, match and haven't expired. Due to cookie matching rules, a server on `foo.example.com` can set cookies that also would match for `bar.example.com`, making it it possible for a \"sister server\" to effectively cause a denial of service for a sibling site on the same second level domain using this method.\n\n * CVE-2022-32206: curl \u003c 7.84.0 supports \"chained\" HTTP compression algorithms, meaning that a serverresponse can be compressed multiple times and potentially with different algorithms. The number of acceptable \"links\" in this \"decompression chain\" was unbounded, allowing a malicious server to insert a virtually unlimited number of compression steps.The use of such a decompression chain could result in a \"malloc bomb\", makingcurl end up spending enormous amounts of allocated heap memory, or trying toand returning out of memory errors.\n\n * CVE-2022-32207: When curl \u003c 7.84.0 saves cookies, alt-svc and hsts data to local files, it makes the operation atomic by finalizing the operation with a rename from a temporary name to the final target file name.In that rename operation, it might accidentally *widen* the permissions for the target file, leaving the updated file accessible to more users than intended.\n\n * CVE-2022-32208: When curl \u003c 7.84.0 does FTP transfers secured by krb5, it handles message verification failures wrongly. This flaw makes it possible for a Man-In-The-Middle attack to go unnoticed and even allows it to inject data to the client.\n\n * CVE-2022-35252: When curl is used to retrieve and parse cookies from a HTTP(S) server, itaccepts cookies using control codes that when later are sent back to a HTTPserver might make the server return 400 responses. Effectively allowing a\"sister site\" to deny service to all siblings.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-18"
+          },
+          "Updated": {
+            "Date": "2022-10-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-20, CWE-1286",
+              "Href": "https://bdu.fstec.ru/vul/2022-06193",
+              "Impact": "Low",
+              "Public": "20220626",
+              "CveID": "BDU:2022-06193"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06911",
+              "Impact": "Low",
+              "Public": "20220602",
+              "CveID": "BDU:2022-06911"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://bdu.fstec.ru/vul/2022-06918",
+              "Impact": "Low",
+              "Public": "20220515",
+              "CveID": "BDU:2022-06918"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-276, CWE-840",
+              "Href": "https://bdu.fstec.ru/vul/2022-07361",
+              "Impact": "Critical",
+              "Public": "20220707",
+              "CveID": "BDU:2022-07361"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32205",
+              "Impact": "Low",
+              "Public": "20220707",
+              "CveID": "CVE-2022-32205"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32206",
+              "Impact": "Low",
+              "Public": "20220707",
+              "CveID": "CVE-2022-32206"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32207",
+              "Impact": "Critical",
+              "Public": "20220707",
+              "CveID": "CVE-2022-32207"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32208",
+              "Impact": "Low",
+              "Public": "20220707",
+              "CveID": "CVE-2022-32208"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-35252",
+              "Impact": "Low",
+              "Public": "20220923",
+              "CveID": "CVE-2022-35252"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222874001",
+                "Comment": "curl is earlier than 0:7.85.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222874002",
+                "Comment": "libcurl is earlier than 0:7.85.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222874003",
+                "Comment": "libcurl-devel is earlier than 0:7.85.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222874004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.85.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

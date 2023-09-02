@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223198",
+      "Version": "oval:org.altlinux.errata:def:20223198",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3198: package `docker-engine` update to version 20.10.21-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3198",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3198",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05641",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05641",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-36109",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-36109",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39253",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39253",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades docker-engine to version 20.10.21-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05641: Уязвимость программного средства для создания систем контейнерной изоляции Moby (Docker Engine), связанная с недостатками механизма авторизации, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-36109: Moby is an open-source project created by Docker to enable software containerization. A bug was found in Moby (Docker Engine) where supplementary groups are not set up properly. If an attacker has direct access to a container and manipulates their supplementary group access, they may be able to use supplementary group access to bypass primary group restrictions in some cases, potentially gaining access to sensitive information or gaining the ability to execute code in that container. This bug is fixed in Moby (Docker Engine) 20.10.18. Running containers should be stopped and restarted for the permissions to be fixed. For users unable to upgrade, this problem can be worked around by not using the `\"USER $USERNAME\"` Dockerfile instruction. Instead by calling `ENTRYPOINT [\"su\", \"-\", \"user\"]` the supplementary groups will be set up properly.\n\n * CVE-2022-39253: Git is an open source, scalable, distributed revision control system. Versions prior to 2.30.6, 2.31.5, 2.32.4, 2.33.5, 2.34.5, 2.35.5, 2.36.3, and 2.37.4 are subject to exposure of sensitive information to a malicious actor. When performing a local clone (where the source and target of the clone are on the same volume), Git copies the contents of the source's `$GIT_DIR/objects` directory into the destination by either creating hardlinks to the source contents, or copying them (if hardlinks are disabled via `--no-hardlinks`). A malicious actor could convince a victim to clone a repository with a symbolic link pointing at sensitive information on the victim's machine. This can be done either by having the victim clone a malicious repository on the same machine, or having them clone a malicious repository embedded as a bare repository via a submodule from any source, provided they clone with the `--recurse-submodules` option. Git does not create symbolic links in the `$GIT_DIR/objects` directory. The problem has been patched in the versions published on 2022-10-18, and backported to v2.30.x. Potential workarounds: Avoid cloning untrusted repositories using the `--local` optimization when on a shared machine, either by passing the `--no-local` option to `git clone` or cloning from a URL that uses the `file://` scheme. Alternatively, avoid cloning repositories from untrusted sources with `--recurse-submodules` or run `git config --global protocol.file.allow user`.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-23"
+          },
+          "Updated": {
+            "Date": "2022-11-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2022-05641",
+              "Impact": "Low",
+              "Public": "20220909",
+              "CveID": "BDU:2022-05641"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-36109",
+              "Impact": "Low",
+              "Public": "20220909",
+              "CveID": "CVE-2022-36109"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39253",
+              "Impact": "Low",
+              "Public": "20221019",
+              "CveID": "CVE-2022-39253"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223198001",
+                "Comment": "docker-engine is earlier than 0:20.10.21-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223198002",
+                "Comment": "docker-engine-rootless is earlier than 0:20.10.21-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

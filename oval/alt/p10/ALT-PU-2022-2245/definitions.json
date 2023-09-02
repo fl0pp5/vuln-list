@@ -1,0 +1,111 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222245",
+      "Version": "oval:org.altlinux.errata:def:20222245",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2245: package `docs-alt-kworkstation` update to version 10.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2245",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2245",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades docs-alt-kworkstation to version 10.1-alt2. \nSecurity Fix(es):\n\n * #43143: Опечатка в примечании о создании подтомов в документации для Workstation K 10.1\n\n * #43144: Ошибка в примечании о установке загрузчика в документации для Workstation K 10.1\n\n * #43151: Некорректный синтаксис команды для установки пакетов для работы сканеров в документации для Workstation K 10.1",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-14"
+          },
+          "Updated": {
+            "Date": "2022-07-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43143",
+              "Href": "https://bugzilla.altlinux.org/43143",
+              "Data": "Опечатка в примечании о создании подтомов в документации для Workstation K 10.1"
+            },
+            {
+              "Id": "43144",
+              "Href": "https://bugzilla.altlinux.org/43144",
+              "Data": "Ошибка в примечании о установке загрузчика в документации для Workstation K 10.1"
+            },
+            {
+              "Id": "43151",
+              "Href": "https://bugzilla.altlinux.org/43151",
+              "Data": "Некорректный синтаксис команды для установки пакетов для работы сканеров в документации для Workstation K 10.1"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222245001",
+                "Comment": "docs-alt-kworkstation is earlier than 0:10.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

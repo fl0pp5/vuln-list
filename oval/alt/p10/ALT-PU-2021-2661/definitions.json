@@ -1,0 +1,224 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212661",
+      "Version": "oval:org.altlinux.errata:def:20212661",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2661: package `kernel-image-std-def` update to version 5.10.61-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2661",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2661",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00682",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00682",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05781",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05781",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3653",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3653",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3656",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3656",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42008",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42008",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1043",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1043",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.61-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00682: Уязвимость подсистемы виртуализации KVM ядра операционной системы Linux, связанная с недостатками разграничения доступа, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-05781: Уязвимость функции decode_data компонента drivers/net/hamradio/6pack.c ядра операционной системы Linux, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-3653: A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw occurs when processing the VMCB (virtual machine control block) provided by the L1 guest to spawn/handle a nested guest (L2). Due to improper validation of the \"int_ctl\" field, this issue could allow a malicious L1 to enable AVIC support (Advanced Virtual Interrupt Controller) for the L2 guest. As a result, the L2 guest would be allowed to read/write physical pages of the host, resulting in a crash of the entire system, leak of sensitive data or potential guest-to-host escape. This flaw affects Linux kernel versions prior to 5.14-rc7.\n\n * CVE-2021-3656: A flaw was found in the KVM's AMD code for supporting SVM nested virtualization. The flaw occurs when processing the VMCB (virtual machine control block) provided by the L1 guest to spawn/handle a nested guest (L2). Due to improper validation of the \"virt_ext\" field, this issue could allow a malicious L1 to disable both VMLOAD/VMSAVE intercepts and VLS (Virtual VMLOAD/VMSAVE) for the L2 guest. As a result, the L2 guest would be allowed to read/write physical pages of the host, resulting in a crash of the entire system, leak of sensitive data or potential guest-to-host escape.\n\n * CVE-2021-42008: The decode_data function in drivers/net/hamradio/6pack.c in the Linux kernel before 5.13.13 has a slab out-of-bounds write. Input from a process that has the CAP_NET_ADMIN capability can lead to root access.\n\n * CVE-2022-1043: A flaw was found in the Linux kernel’s io_uring implementation. This flaw allows an attacker with a local account to corrupt system memory, crash the system or escalate privileges.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-31"
+          },
+          "Updated": {
+            "Date": "2021-08-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2022-00682",
+              "Impact": "High",
+              "Public": "20210928",
+              "CveID": "BDU:2022-00682"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05781",
+              "Impact": "High",
+              "Public": "20210813",
+              "CveID": "BDU:2022-05781"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3653",
+              "Impact": "High",
+              "Public": "20210929",
+              "CveID": "CVE-2021-3653"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3656",
+              "Impact": "High",
+              "Public": "20220304",
+              "CveID": "CVE-2021-3656"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42008",
+              "Impact": "High",
+              "Public": "20211005",
+              "CveID": "CVE-2021-42008"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1043",
+              "Impact": "High",
+              "Public": "20220829",
+              "CveID": "CVE-2022-1043"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661006",
+                "Comment": "kernel-image-std-def-checkinstall is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661007",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661008",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.61-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212661012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.61-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

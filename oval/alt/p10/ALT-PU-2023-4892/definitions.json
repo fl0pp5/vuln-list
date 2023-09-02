@@ -1,0 +1,151 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234892",
+      "Version": "oval:org.altlinux.errata:def:20234892",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4892: package `u-boot-tools` update to version 2023.07-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4892",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4892",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-2347",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2347",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30767",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30767",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-33103",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-33103",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-34835",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-34835",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades u-boot-tools to version 2023.07-alt1. \nSecurity Fix(es):\n\n * CVE-2022-2347: There exists an unchecked length field in UBoot. The U-Boot DFU implementation does not bound the length field in USB DFU download setup packets, and it does not verify that the transfer direction corresponds to the specified command. Consequently, if a physical attacker crafts a USB DFU download setup packet with a `wLength` greater than 4096 bytes, they can write beyond the heap-allocated request buffer.\n\n * CVE-2022-30767: nfs_lookup_reply in net/nfs.c in Das U-Boot through 2022.04 (and through 2022.07-rc2) has an unbounded memcpy with a failed length check, leading to a buffer overflow. NOTE: this issue exists because of an incorrect fix for CVE-2019-14196.\n\n * CVE-2022-33103: Das U-Boot from v2020.10 to v2022.07-rc3 was discovered to contain an out-of-bounds write via the function sqfs_readdir().\n\n * CVE-2022-34835: In Das U-Boot through 2022.07-rc5, an integer signedness error and resultant stack-based buffer overflow in the \"i2c md\" command enables the corruption of the return address pointer of the do_i2c_md function.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-21"
+          },
+          "Updated": {
+            "Date": "2023-08-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:P/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2347",
+              "Impact": "High",
+              "Public": "20220923",
+              "CveID": "CVE-2022-2347"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30767",
+              "Impact": "Critical",
+              "Public": "20220516",
+              "CveID": "CVE-2022-30767"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-33103",
+              "Impact": "High",
+              "Public": "20220701",
+              "CveID": "CVE-2022-33103"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-34835",
+              "Impact": "Critical",
+              "Public": "20220630",
+              "CveID": "CVE-2022-34835"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234892001",
+                "Comment": "u-boot-tools is earlier than 0:2023.07-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

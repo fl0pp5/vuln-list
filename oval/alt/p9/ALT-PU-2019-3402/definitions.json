@@ -1,0 +1,377 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193402",
+      "Version": "oval:org.altlinux.errata:def:20193402",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3402: package `apache2` update to version 2.4.41-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3402",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3402",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03632",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03632",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03647",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03647",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03652",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03652",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03780",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03780",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04286",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04286",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04287",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04287",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01010",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01010",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-10081",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10081",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10082",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10082",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10092",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10092",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-10098",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-10098",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9517",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9517",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades apache2 to version 2.4.41-alt1. \nSecurity Fix(es):\n\n * BDU:2019-03632: Уязвимость реализации сетевого протокола HTTP/2 веб-сервера Apache HTTP Server, связанная с чтением за границами буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03647: Уязвимость сетевого протокола HTTP/2 веб-сервера Apache Traffic Server, программной платформы Node.js, связанная с недостатком механизма контроля расхода ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2019-03652: Уязвимость функции mod_rewrite веб-сервера Apache HTTP Server, позволяющая нарушителю получить несанкционированный доступ к конфиденциальной информации или оказать воздействие на доступность информации\n\n * BDU:2019-03780: Уязвимость реализации сетевого протокола HTTP/2 веб-сервера Apache HTTP Server, связанная с неконтролируемым расходом ресурса, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2019-04286: Уязвимость модуля mod_proxy веб-сервера Apache HTTP Server, позволяющая нарушителю перенаправить пользователя на вредоносный сайт с помощью специально сформированной веб-страницы\n\n * BDU:2019-04287: Уязвимость реализации сетевого протокола HTTP/2 веб-сервера Apache HTTP Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-01010: Уязвимость функции mod_rewrite веб-сервера Apache HTTP Server, позволяющая нарушителю получить несанкционированный доступ к конфиденциальной информации или оказать воздействие на целостность информации\n\n * CVE-2019-10081: HTTP/2 (2.4.20 through 2.4.39) very early pushes, for example configured with \"H2PushResource\", could lead to an overwrite of memory in the pushing request's pool, leading to crashes. The memory copied is that of the configured push link header values, not data supplied by the client.\n\n * CVE-2019-10082: In Apache HTTP Server 2.4.18-2.4.39, using fuzzed network input, the http/2 session handling could be made to read memory after being freed, during connection shutdown.\n\n * CVE-2019-10092: In Apache HTTP Server 2.4.0-2.4.39, a limited cross-site scripting issue was reported affecting the mod_proxy error page. An attacker could cause the link on the error page to be malformed and instead point to a page of their choice. This would only be exploitable where a server was set up with proxying enabled but was misconfigured in such a way that the Proxy Error page was displayed.\n\n * CVE-2019-10098: In Apache HTTP server 2.4.0 to 2.4.39, Redirects configured with mod_rewrite that were intended to be self-referential might be fooled by encoded newlines and redirect instead to an unexpected URL within the request URL.\n\n * CVE-2019-9517: Some HTTP/2 implementations are vulnerable to unconstrained interal data buffering, potentially leading to a denial of service. The attacker opens the HTTP/2 window so the peer can send without constraint; however, they leave the TCP window closed so the peer cannot actually write (many of) the bytes on the wire. The attacker then sends a stream of requests for a large response object. Depending on how the servers queue the responses, this can consume excess memory, CPU, or both.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-27"
+          },
+          "Updated": {
+            "Date": "2019-12-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2019-03632",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "BDU:2019-03632"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03647",
+              "Impact": "High",
+              "Public": "20190410",
+              "CveID": "BDU:2019-03647"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://bdu.fstec.ru/vul/2019-03652",
+              "Impact": "Low",
+              "Public": "20190326",
+              "CveID": "BDU:2019-03652"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2019-03780",
+              "Impact": "High",
+              "Public": "20190320",
+              "CveID": "BDU:2019-03780"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2019-04286",
+              "Impact": "Low",
+              "Public": "20190709",
+              "CveID": "BDU:2019-04286"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2019-04287",
+              "Impact": "Critical",
+              "Public": "20190412",
+              "CveID": "BDU:2019-04287"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://bdu.fstec.ru/vul/2020-01010",
+              "Impact": "Low",
+              "Public": "20190925",
+              "CveID": "BDU:2020-01010"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10081",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "CVE-2019-10081"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10082",
+              "Impact": "Critical",
+              "Public": "20190926",
+              "CveID": "CVE-2019-10082"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10092",
+              "Impact": "Low",
+              "Public": "20190926",
+              "CveID": "CVE-2019-10092"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-10098",
+              "Impact": "Low",
+              "Public": "20190925",
+              "CveID": "CVE-2019-10098"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9517",
+              "Impact": "High",
+              "Public": "20190813",
+              "CveID": "CVE-2019-9517"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402001",
+                "Comment": "apache2 is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402002",
+                "Comment": "apache2-ab is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402003",
+                "Comment": "apache2-base is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402004",
+                "Comment": "apache2-cgi-bin is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402005",
+                "Comment": "apache2-cgi-bin-printenv is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402006",
+                "Comment": "apache2-cgi-bin-test-cgi is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402007",
+                "Comment": "apache2-compat is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402008",
+                "Comment": "apache2-configs-A1PROXIED is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402009",
+                "Comment": "apache2-datadirs is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402010",
+                "Comment": "apache2-devel is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402011",
+                "Comment": "apache2-docs is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402012",
+                "Comment": "apache2-full is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402013",
+                "Comment": "apache2-htcacheclean is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402014",
+                "Comment": "apache2-htcacheclean-control is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402015",
+                "Comment": "apache2-html is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402016",
+                "Comment": "apache2-htpasswd is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402017",
+                "Comment": "apache2-httpd-event is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402018",
+                "Comment": "apache2-httpd-prefork is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402019",
+                "Comment": "apache2-httpd-worker is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402020",
+                "Comment": "apache2-icons is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402021",
+                "Comment": "apache2-manual is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402022",
+                "Comment": "apache2-manual-addons is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402023",
+                "Comment": "apache2-mod_cache_disk is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402024",
+                "Comment": "apache2-mod_ldap is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402025",
+                "Comment": "apache2-mod_ssl is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402026",
+                "Comment": "apache2-mod_ssl-compat is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402027",
+                "Comment": "apache2-mods is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402028",
+                "Comment": "apache2-suexec is earlier than 1:2.4.41-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193402029",
+                "Comment": "rpm-build-apache2 is earlier than 1:2.4.41-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

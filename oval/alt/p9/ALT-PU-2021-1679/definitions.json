@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211679",
+      "Version": "oval:org.altlinux.errata:def:20211679",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1679: package `alterator-multiseat` update to version 0.0.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1679",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1679",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades alterator-multiseat to version 0.0.3-alt1. \nSecurity Fix(es):\n\n * #39910: alterator-multiseat: отсутствует информация про основное рабочее место (seat0)\n\n * #39911: Не работает тестовая активация в alterator-multiseat\n\n * #39912: alterator-multiseat: не очищается поле \"Устройства рабочего места\" после нажатия на кнопку \"Освободить все устройства\"\n\n * #39913: После удаления доп. рабочего места (seat1) устройства не возвращаются основному рабочему месту (seat0)\n\n * #39914: alterator-multiseat: исправить в Справке информацию про sddm\n\n * #39915: alterator-multiseat: мультивыбор при добавлении устройств\n\n * #39916: alterator-multiseat: для применения изменений необходима перезагрузка (добавить предупреждение)\n\n * #39918: alterator-multiseat: ненужная функциональность кнопок Применить и Сброс",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-20"
+          },
+          "Updated": {
+            "Date": "2021-04-20"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39910",
+              "Href": "https://bugzilla.altlinux.org/39910",
+              "Data": "alterator-multiseat: отсутствует информация про основное рабочее место (seat0)"
+            },
+            {
+              "Id": "39911",
+              "Href": "https://bugzilla.altlinux.org/39911",
+              "Data": "Не работает тестовая активация в alterator-multiseat"
+            },
+            {
+              "Id": "39912",
+              "Href": "https://bugzilla.altlinux.org/39912",
+              "Data": "alterator-multiseat: не очищается поле \"Устройства рабочего места\" после нажатия на кнопку \"Освободить все устройства\""
+            },
+            {
+              "Id": "39913",
+              "Href": "https://bugzilla.altlinux.org/39913",
+              "Data": "После удаления доп. рабочего места (seat1) устройства не возвращаются основному рабочему месту (seat0)"
+            },
+            {
+              "Id": "39914",
+              "Href": "https://bugzilla.altlinux.org/39914",
+              "Data": "alterator-multiseat: исправить в Справке информацию про sddm"
+            },
+            {
+              "Id": "39915",
+              "Href": "https://bugzilla.altlinux.org/39915",
+              "Data": "alterator-multiseat: мультивыбор при добавлении устройств"
+            },
+            {
+              "Id": "39916",
+              "Href": "https://bugzilla.altlinux.org/39916",
+              "Data": "alterator-multiseat: для применения изменений необходима перезагрузка (добавить предупреждение)"
+            },
+            {
+              "Id": "39918",
+              "Href": "https://bugzilla.altlinux.org/39918",
+              "Data": "alterator-multiseat: ненужная функциональность кнопок Применить и Сброс"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211679001",
+                "Comment": "alterator-multiseat is earlier than 0:0.0.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,813 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221368",
+      "Version": "oval:org.altlinux.errata:def:20221368",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1368: package `wireshark` update to version 3.6.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1368",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1368",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00874",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00874",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00875",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00875",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00876",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00876",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00884",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00884",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05776",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05776",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05777",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05777",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05801",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05801",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05836",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05836",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05837",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05837",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05936",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05936",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05943",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05943",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00029",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00029",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00213",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00214",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00214",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00251",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00251",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01849",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01849",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02437",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02437",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02438",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02438",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02439",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02439",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-25862",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25862",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25863",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25863",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25866",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25866",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26418",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26418",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26420",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26420",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26421",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26421",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26575",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26575",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-28030",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-28030",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22173",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22174",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22174",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22191",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22207",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22207",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22222",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22222",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22235",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22235",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39920",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39920",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39921",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39922",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39922",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39923",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39923",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39924",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39924",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39925",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39925",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39926",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39926",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39928",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39928",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-39929",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39929",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4181",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4181",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4182",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4182",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4183",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4183",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4184",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4184",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4185",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4185",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0581",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0581",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0582",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0582",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0583",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0583",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0585",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0585",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0586",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0586",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 3.6.2-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00874: Уязвимость анализатора протокола BLIP программного обеспечения Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-00875: Уязвимость программного обеспечения Wireshark, существующая из-за недостаточной проверки входных данных, позволяющая нарушителю вызвать аварийное завершение работы приложения\n\n * BDU:2021-00876: Уязвимость функции в epan/dissectors/packet-fbzero.c программного обеспечения Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-00884: Уязвимость функции в epan/dissectors/packet-tcp.c программного обеспечения Wireshark, позволяющая нарушителю вызвать аварийное завершение работы приложения\n\n * BDU:2021-05776: Уязвимость компонента Modbus анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05777: Уязвимость службы Bluetooth SDP анализатора трафика компьютерных сетей Wireshark , позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05801: Уязвимость службы Bluetooth DHT анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05836: Уязвимость компонента C12.22 анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05837: Уязвимость службы Bluetooth HCI_ISO анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05936: Уязвимость набора стандартов связи для коммуникации IEEE 802.11 анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05943: Уязвимость диссектора IPPUSB анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00029: Уязвимость службы Bluetooth DHT анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00213: Уязвимость программы для анализа трафика wireshark, связанная с неправильным освобождением памяти перед удалением последний ссылки, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00214: Уязвимость программы для анализа трафика wireshark, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00251: Уязвимость программы для анализа трафика wireshark, связанная с неверными вычислениями, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01849: Уязвимость диссектора DNP анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02437: Уязвимость диссектора RTMPT анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02438: Уязвимость диссектора BitTorrent DHT анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02439: Уязвимость диссектора Sysdig Event анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-25862: In Wireshark 3.2.0 to 3.2.6, 3.0.0 to 3.0.13, and 2.6.0 to 2.6.20, the TCP dissector could crash. This was addressed in epan/dissectors/packet-tcp.c by changing the handling of the invalid 0xFFFF checksum.\n\n * CVE-2020-25863: In Wireshark 3.2.0 to 3.2.6, 3.0.0 to 3.0.13, and 2.6.0 to 2.6.20, the MIME Multipart dissector could crash. This was addressed in epan/dissectors/packet-multipart.c by correcting the deallocation of invalid MIME parts.\n\n * CVE-2020-25866: In Wireshark 3.2.0 to 3.2.6 and 3.0.0 to 3.0.13, the BLIP protocol dissector has a NULL pointer dereference because a buffer was sized for compressed (not uncompressed) messages. This was addressed in epan/dissectors/packet-blip.c by allowing reasonable compression ratios and rejecting ZIP bombs.\n\n * CVE-2020-26418: Memory leak in Kafka protocol dissector in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.\n\n * CVE-2020-26420: Memory leak in RTPS protocol dissector in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.\n\n * CVE-2020-26421: Crash in USB HID protocol dissector and possibly other dissectors in Wireshark 3.4.0 and 3.2.0 to 3.2.8 allows denial of service via packet injection or crafted capture file.\n\n * CVE-2020-26575: In Wireshark through 3.2.7, the Facebook Zero Protocol (aka FBZERO) dissector could enter an infinite loop. This was addressed in epan/dissectors/packet-fbzero.c by correcting the implementation of offset advancement.\n\n * CVE-2020-28030: In Wireshark 3.2.0 to 3.2.7, the GQUIC dissector could crash. This was addressed in epan/dissectors/packet-gquic.c by correcting the implementation of offset advancement.\n\n * CVE-2021-22173: Memory leak in USB HID dissector in Wireshark 3.4.0 to 3.4.2 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-22174: Crash in USB HID dissector in Wireshark 3.4.0 to 3.4.2 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-22191: Improper URL handling in Wireshark 3.4.0 to 3.4.3 and 3.2.0 to 3.2.11 could allow remote code execution via via packet injection or crafted capture file.\n\n * CVE-2021-22207: Excessive memory consumption in MS-WSP dissector in Wireshark 3.4.0 to 3.4.4 and 3.2.0 to 3.2.12 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-22222: Infinite loop in DVB-S2-BB dissector in Wireshark 3.4.0 to 3.4.5 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-22235: Crash in DNP dissector in Wireshark 3.4.0 to 3.4.6 and 3.2.0 to 3.2.14 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39920: NULL pointer exception in the IPPUSB dissector in Wireshark 3.4.0 to 3.4.9 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39921: NULL pointer exception in the Modbus dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39922: Buffer overflow in the C12.22 dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39923: Large loop in the PNRP dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39924: Large loop in the Bluetooth DHT dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39925: Buffer overflow in the Bluetooth SDP dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39926: Buffer overflow in the Bluetooth HCI_ISO dissector in Wireshark 3.4.0 to 3.4.9 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39928: NULL pointer exception in the IEEE 802.11 dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-39929: Uncontrolled Recursion in the Bluetooth DHT dissector in Wireshark 3.4.0 to 3.4.9 and 3.2.0 to 3.2.17 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-4181: Crash in the Sysdig Event dissector in Wireshark 3.6.0 and 3.4.0 to 3.4.10 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-4182: Crash in the RFC 7468 dissector in Wireshark 3.6.0 and 3.4.0 to 3.4.10 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-4183: Crash in the pcapng file parser in Wireshark 3.6.0 allows denial of service via crafted capture file\n\n * CVE-2021-4184: Infinite loop in the BitTorrent DHT dissector in Wireshark 3.6.0 and 3.4.0 to 3.4.10 allows denial of service via packet injection or crafted capture file\n\n * CVE-2021-4185: Infinite loop in the RTMPT dissector in Wireshark 3.6.0 and 3.4.0 to 3.4.10 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-0581: Crash in the CMS protocol dissector in Wireshark 3.6.0 to 3.6.1 and 3.4.0 to 3.4.11 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-0582: Unaligned access in the CSN.1 protocol dissector in Wireshark 3.6.0 to 3.6.1 and 3.4.0 to 3.4.11 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-0583: Crash in the PVFS protocol dissector in Wireshark 3.6.0 to 3.6.1 and 3.4.0 to 3.4.11 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-0585: Large loops in multiple protocol dissectors in Wireshark 3.6.0 to 3.6.1 and 3.4.0 to 3.4.11 allow denial of service via packet injection or crafted capture file\n\n * CVE-2022-0586: Infinite loop in RTMPT protocol dissector in Wireshark 3.6.0 to 3.6.1 and 3.4.0 to 3.4.11 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-24"
+          },
+          "Updated": {
+            "Date": "2022-02-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-00874",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00874"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-00875",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00875"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2021-00876",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00876"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-354",
+              "Href": "https://bdu.fstec.ru/vul/2021-00884",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "BDU:2021-00884"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-05776",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05776"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05777",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05777"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-834",
+              "Href": "https://bdu.fstec.ru/vul/2021-05801",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05801"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05836",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05836"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05837",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05837"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-05936",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05936"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-05943",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2021-05943"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2022-00029",
+              "Impact": "High",
+              "Public": "20211117",
+              "CveID": "BDU:2022-00029"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-00213",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "BDU:2022-00213"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-00214",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "BDU:2022-00214"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://bdu.fstec.ru/vul/2022-00251",
+              "Impact": "High",
+              "Public": "20201113",
+              "CveID": "BDU:2022-00251"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2022-01849",
+              "Impact": "High",
+              "Public": "20210720",
+              "CveID": "BDU:2022-01849"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2022-02437",
+              "Impact": "High",
+              "Public": "20211123",
+              "CveID": "BDU:2022-02437"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2022-02438",
+              "Impact": "High",
+              "Public": "20211129",
+              "CveID": "BDU:2022-02438"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2022-02439",
+              "Impact": "High",
+              "Public": "20211213",
+              "CveID": "BDU:2022-02439"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-354",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25862",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25862"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25863",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25863"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25866",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-25866"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26418",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26418"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26420",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26420"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26421",
+              "Impact": "Low",
+              "Public": "20201211",
+              "CveID": "CVE-2020-26421"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26575",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26575"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-682",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-28030",
+              "Impact": "High",
+              "Public": "20201102",
+              "CveID": "CVE-2020-28030"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22173",
+              "Impact": "High",
+              "Public": "20210217",
+              "CveID": "CVE-2021-22173"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22174",
+              "Impact": "High",
+              "Public": "20210217",
+              "CveID": "CVE-2021-22174"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22191",
+              "Impact": "High",
+              "Public": "20210315",
+              "CveID": "CVE-2021-22191"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22207",
+              "Impact": "Low",
+              "Public": "20210423",
+              "CveID": "CVE-2021-22207"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22222",
+              "Impact": "High",
+              "Public": "20210607",
+              "CveID": "CVE-2021-22222"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22235",
+              "Impact": "High",
+              "Public": "20210720",
+              "CveID": "CVE-2021-22235"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39920",
+              "Impact": "High",
+              "Public": "20211118",
+              "CveID": "CVE-2021-39920"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39921",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39921"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39922",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39922"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-834",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39923",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39923"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-834",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39924",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39924"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39925",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39925"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39926",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39926"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39928",
+              "Impact": "High",
+              "Public": "20211118",
+              "CveID": "CVE-2021-39928"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39929",
+              "Impact": "High",
+              "Public": "20211119",
+              "CveID": "CVE-2021-39929"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4181",
+              "Impact": "High",
+              "Public": "20211230",
+              "CveID": "CVE-2021-4181"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4182",
+              "Impact": "High",
+              "Public": "20211230",
+              "CveID": "CVE-2021-4182"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4183",
+              "Impact": "Low",
+              "Public": "20211230",
+              "CveID": "CVE-2021-4183"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4184",
+              "Impact": "High",
+              "Public": "20211230",
+              "CveID": "CVE-2021-4184"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4185",
+              "Impact": "High",
+              "Public": "20211230",
+              "CveID": "CVE-2021-4185"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0581",
+              "Impact": "High",
+              "Public": "20220214",
+              "CveID": "CVE-2022-0581"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0582",
+              "Impact": "Critical",
+              "Public": "20220214",
+              "CveID": "CVE-2022-0582"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0583",
+              "Impact": "High",
+              "Public": "20220214",
+              "CveID": "CVE-2022-0583"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-834",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0585",
+              "Impact": "Low",
+              "Public": "20220218",
+              "CveID": "CVE-2022-0585"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0586",
+              "Impact": "High",
+              "Public": "20220214",
+              "CveID": "CVE-2022-0586"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221368001",
+                "Comment": "tshark is earlier than 0:3.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221368002",
+                "Comment": "wireshark-base is earlier than 0:3.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221368003",
+                "Comment": "wireshark-devel is earlier than 0:3.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221368004",
+                "Comment": "wireshark-qt5 is earlier than 0:3.6.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232064",
+      "Version": "oval:org.altlinux.errata:def:20232064",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2064: package `cups-filters` update to version 1.28.11-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2064",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2064",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02781",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02781",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-24805",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24805",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cups-filters to version 1.28.11-alt2. \nSecurity Fix(es):\n\n * BDU:2023-02781: Уязвимость компонента beh (Backend Error Handler) пакета для печати cups-filters, позволяющая нарушителю выполнить произвольные команды на сервере печати\n\n * CVE-2023-24805: cups-filters contains backends, filters, and other software required to get the cups printing service working on operating systems other than macos. If you use the Backend Error Handler (beh) to create an accessible network printer, this security vulnerability can cause remote code execution. `beh.c` contains the line `retval = system(cmdline) \u003e\u003e 8;` which calls the `system` command with the operand `cmdline`. `cmdline` contains multiple user controlled, unsanitized values. As a result an attacker with network access to the hosted print server can exploit this vulnerability to inject system commands which are executed in the context of the running server. This issue has been addressed in commit `8f2740357` and is expected to be bundled in the next release. Users are advised to upgrade when possible and to restrict access to network printers in the meantime.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-24"
+          },
+          "Updated": {
+            "Date": "2023-06-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2023-02781",
+              "Impact": "High",
+              "Public": "20230517",
+              "CveID": "BDU:2023-02781"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24805",
+              "Impact": "High",
+              "Public": "20230517",
+              "CveID": "CVE-2023-24805"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232064001",
+                "Comment": "cups-backend-serial is earlier than 1:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232064002",
+                "Comment": "cups-filters is earlier than 0:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232064003",
+                "Comment": "cups-filters-devel is earlier than 0:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232064004",
+                "Comment": "cups-filters-libs is earlier than 0:1.28.11-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

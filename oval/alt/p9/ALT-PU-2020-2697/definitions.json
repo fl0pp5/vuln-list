@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202697",
+      "Version": "oval:org.altlinux.errata:def:20202697",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2697: package `salt` update to version 3001.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2697",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2697",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01900",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01900",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01902",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01902",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01903",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01903",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01766",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01766",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-16846",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16846",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-17490",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17490",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25592",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25592",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21996",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21996",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades salt to version 3001.1-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01900: Уязвимость компонента salt-netapi системы управления конфигурациями и удалённого выполнения операций Salt, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01902: Уязвимость модуля TLS системы управления конфигурациями и удалённого выполнения операций Salt, связанная с неправильным присвоением разрешений для критичного ресурса, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2021-01903: Уязвимость системы управления конфигурациями и удалённого выполнения операций Salt, связанная с отсутствием мер по нейтрализации специальных элементов, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-01766: Уязвимость системы управления конфигурациями и удалённого выполнения операций Salt, связанная с раскрытием информации в ошибочной области данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-16846: An issue was discovered in SaltStack Salt through 3002. Sending crafted web requests to the Salt API, with the SSH client enabled, can result in shell injection.\n\n * CVE-2020-17490: The TLS module within SaltStack Salt through 3002 creates certificates with weak file permissions.\n\n * CVE-2020-25592: In SaltStack Salt through 3002, salt-netapi improperly validates eauth credentials and tokens. A user can bypass authentication and invoke Salt SSH.\n\n * CVE-2021-21996: An issue was discovered in SaltStack Salt before 3003.3. A user who has control of the source, and source_hash URLs can gain full file system access as root on a salt minion.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-27"
+          },
+          "Updated": {
+            "Date": "2020-08-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01900",
+              "Impact": "Critical",
+              "Public": "20200915",
+              "CveID": "BDU:2021-01900"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://bdu.fstec.ru/vul/2021-01902",
+              "Impact": "Low",
+              "Public": "20200811",
+              "CveID": "BDU:2021-01902"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2021-01903",
+              "Impact": "Critical",
+              "Public": "20201102",
+              "CveID": "BDU:2021-01903"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-668",
+              "Href": "https://bdu.fstec.ru/vul/2022-01766",
+              "Impact": "High",
+              "Public": "20210908",
+              "CveID": "BDU:2022-01766"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16846",
+              "Impact": "Critical",
+              "Public": "20201106",
+              "CveID": "CVE-2020-16846"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17490",
+              "Impact": "Low",
+              "Public": "20201106",
+              "CveID": "CVE-2020-17490"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25592",
+              "Impact": "Critical",
+              "Public": "20201106",
+              "CveID": "CVE-2020-25592"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21996",
+              "Impact": "High",
+              "Public": "20210908",
+              "CveID": "CVE-2021-21996"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202697001",
+                "Comment": "python3-module-salt is earlier than 0:3001.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202697002",
+                "Comment": "salt-api is earlier than 0:3001.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202697003",
+                "Comment": "salt-master is earlier than 0:3001.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202697004",
+                "Comment": "salt-minion is earlier than 0:3001.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

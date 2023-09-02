@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212269",
+      "Version": "oval:org.altlinux.errata:def:20212269",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2269: package `firefox-esr` update to version 78.12.0-alt0.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2269",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2269",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03659",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03659",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03660",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03660",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03661",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03661",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-29970",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29970",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-29976",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29976",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30547",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30547",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 78.12.0-alt0.p9.1. \nSecurity Fix(es):\n\n * BDU:2021-03659: Уязвимость браузера Mozilla Firefox и почтового клиента Thunderbird, связанная с использованием памяти после ее освобождения, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03660: Уязвимость почтового клиента Mozilla Thunderbird, связанная с записью за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03661: Уязвимость веб-браузеров Firefox, Firefox ESR, почтового клиента Thunderbird, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-29970: A malicious webpage could have triggered a use-after-free, memory corruption, and a potentially exploitable crash. *This bug could only be triggered when accessibility was enabled.*. This vulnerability affects Thunderbird \u003c 78.12, Firefox ESR \u003c 78.12, and Firefox \u003c 90.\n\n * CVE-2021-29976: Mozilla developers reported memory safety bugs present in code shared between Firefox and Thunderbird. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Thunderbird \u003c 78.12, Firefox ESR \u003c 78.12, and Firefox \u003c 90.\n\n * CVE-2021-30547: Out of bounds write in ANGLE in Google Chrome prior to 91.0.4472.101 allowed a remote attacker to potentially perform out of bounds memory access via a crafted HTML page.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-19"
+          },
+          "Updated": {
+            "Date": "2021-07-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-03659",
+              "Impact": "High",
+              "Public": "20210713",
+              "CveID": "BDU:2021-03659"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03660",
+              "Impact": "High",
+              "Public": "20210713",
+              "CveID": "BDU:2021-03660"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-03661",
+              "Impact": "High",
+              "Public": "20210713",
+              "CveID": "BDU:2021-03661"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29970",
+              "Impact": "High",
+              "Public": "20210805",
+              "CveID": "CVE-2021-29970"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29976",
+              "Impact": "High",
+              "Public": "20210805",
+              "CveID": "CVE-2021-29976"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30547",
+              "Impact": "High",
+              "Public": "20210615",
+              "CveID": "CVE-2021-30547"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212269001",
+                "Comment": "firefox-esr is earlier than 0:78.12.0-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212269002",
+                "Comment": "firefox-esr-config-privacy is earlier than 0:78.12.0-alt0.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212269003",
+                "Comment": "firefox-esr-wayland is earlier than 0:78.12.0-alt0.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212162",
+      "Version": "oval:org.altlinux.errata:def:20212162",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2162: package `freeipa` update to version 4.8.9-alt0.M90P.3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2162",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2162",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades freeipa to version 4.8.9-alt0.M90P.3. \nSecurity Fix(es):\n\n * #40343: Не работает без ntp-server",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-07"
+          },
+          "Updated": {
+            "Date": "2021-07-07"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40343",
+              "Href": "https://bugzilla.altlinux.org/40343",
+              "Data": "Не работает без ntp-server"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162001",
+                "Comment": "freeipa-client is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162002",
+                "Comment": "freeipa-client-automount is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162003",
+                "Comment": "freeipa-client-common is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162004",
+                "Comment": "freeipa-client-epn is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162005",
+                "Comment": "freeipa-client-samba is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162006",
+                "Comment": "freeipa-common is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162007",
+                "Comment": "freeipa-server is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162008",
+                "Comment": "freeipa-server-common is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162009",
+                "Comment": "freeipa-server-dns is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162010",
+                "Comment": "freeipa-server-trust-ad is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162011",
+                "Comment": "python3-module-freeipa is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162012",
+                "Comment": "python3-module-ipaclient is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162013",
+                "Comment": "python3-module-ipaserver is earlier than 0:4.8.9-alt0.M90P.3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212162014",
+                "Comment": "python3-module-ipatests is earlier than 0:4.8.9-alt0.M90P.3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

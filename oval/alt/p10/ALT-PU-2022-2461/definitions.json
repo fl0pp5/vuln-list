@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222461",
+      "Version": "oval:org.altlinux.errata:def:20222461",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2461: package `postgresql14` update to version 14.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2461",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2461",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04971",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04971",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-2625",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2625",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql14 to version 14.5-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04971: Уязвимость системы управления базами данных PostgreSQL, связанная с ошибками при использовании команд OR расширениями, позволяющая нарушителю повысить свои привилегии и заменить произвольные объекты в базе данных\n\n * CVE-2022-2625: A vulnerability was found in PostgreSQL. This attack requires permission to create non-temporary objects in at least one schema, the ability to lure or wait for an administrator to create or update an affected extension in that schema, and the ability to lure or wait for a victim to use the object targeted in CREATE OR REPLACE or CREATE IF NOT EXISTS. Given all three prerequisites, this flaw allows an attacker to run arbitrary code as the victim role, which may be a superuser.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-18"
+          },
+          "Updated": {
+            "Date": "2022-08-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2022-04971",
+              "Impact": "High",
+              "Public": "20220811",
+              "CveID": "BDU:2022-04971"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1321",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2625",
+              "Impact": "High",
+              "Public": "20220818",
+              "CveID": "CVE-2022-2625"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461001",
+                "Comment": "libecpg6 is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461002",
+                "Comment": "libecpg6-devel is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461003",
+                "Comment": "libecpg6-devel-static is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461004",
+                "Comment": "libpq5 is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461005",
+                "Comment": "libpq5-devel is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461006",
+                "Comment": "libpq5-devel-static is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461007",
+                "Comment": "postgresql-devel is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461008",
+                "Comment": "postgresql-devel-static is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461009",
+                "Comment": "postgresql14 is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461010",
+                "Comment": "postgresql14-contrib is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461011",
+                "Comment": "postgresql14-docs is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461012",
+                "Comment": "postgresql14-llvmjit is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461013",
+                "Comment": "postgresql14-perl is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461014",
+                "Comment": "postgresql14-python is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461015",
+                "Comment": "postgresql14-server is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461016",
+                "Comment": "postgresql14-server-devel is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461017",
+                "Comment": "postgresql14-tcl is earlier than 0:14.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222461018",
+                "Comment": "rpm-macros-postgresql is earlier than 0:14.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

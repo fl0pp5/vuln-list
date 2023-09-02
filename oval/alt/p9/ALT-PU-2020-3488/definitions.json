@@ -1,0 +1,445 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203488",
+      "Version": "oval:org.altlinux.errata:def:20203488",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3488: package `irssi` update to version 1.2.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3488",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3488",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02520",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02520",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02521",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02521",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03213",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-10965",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-10965",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-10966",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-10966",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-15227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15227",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-15228",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15228",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-15721",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15721",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-15722",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15722",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-15723",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-15723",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-7191",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-7191",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9468",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9468",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9469",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9469",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-5205",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-5205",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-5206",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-5206",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-5207",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-5207",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-5208",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-5208",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7050",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7050",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7051",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7051",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7052",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7052",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7053",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7053",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7054",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7054",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-13045",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13045",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-15717",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15717",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades irssi to version 1.2.2-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02520: Уязвимость IRC-клиента Irssi для операционных систем Debian GNU/Linux и Ubuntu, связанная с использованием памяти после её освобождения, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2019-02521: Уязвимость IRC-клиента Irssi для операционной системы Ubuntu, связанная с использованием памяти после её освобождения при отправке SASL логина на сервер, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2019-03213: Уязвимость IRC-клиента Irssi операционных систем Ubuntu, связанная с использованием памяти после ее освобождения, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2017-10965: An issue was discovered in Irssi before 1.0.4. When receiving messages with invalid time stamps, Irssi would try to dereference a NULL pointer.\n\n * CVE-2017-10966: An issue was discovered in Irssi before 1.0.4. While updating the internal nick list, Irssi could incorrectly use the GHashTable interface and free the nick while updating it. This would then result in use-after-free conditions on each access of the hash table.\n\n * CVE-2017-15227: Irssi before 1.0.5, while waiting for the channel synchronisation, may incorrectly fail to remove destroyed channels from the query list, resulting in use-after-free conditions when updating the state later on.\n\n * CVE-2017-15228: Irssi before 1.0.5, when installing themes with unterminated colour formatting sequences, may access data beyond the end of the string.\n\n * CVE-2017-15721: In Irssi before 1.0.5, certain incorrectly formatted DCC CTCP messages could cause a NULL pointer dereference. This is a separate, but similar, issue relative to CVE-2017-9468.\n\n * CVE-2017-15722: In certain cases, Irssi before 1.0.5 may fail to verify that a Safe channel ID is long enough, causing reads beyond the end of the string.\n\n * CVE-2017-15723: In Irssi before 1.0.5, overlong nicks or targets may result in a NULL pointer dereference while splitting the message.\n\n * CVE-2017-7191: The netjoin processing in Irssi 1.x before 1.0.2 allows attackers to cause a denial of service (use-after-free) and possibly execute arbitrary code via unspecified vectors.\n\n * CVE-2017-9468: In Irssi before 1.0.3, when receiving a DCC message without source nick/host, it attempts to dereference a NULL pointer. Thus, remote IRC servers can cause a crash.\n\n * CVE-2017-9469: In Irssi before 1.0.3, when receiving certain incorrectly quoted DCC files, it tries to find the terminating quote one byte before the allocated memory. Thus, remote attackers might be able to cause a crash.\n\n * CVE-2018-5205: When using incomplete escape codes, Irssi before 1.0.6 may access data beyond the end of the string.\n\n * CVE-2018-5206: When the channel topic is set without specifying a sender, Irssi before 1.0.6 may dereference a NULL pointer.\n\n * CVE-2018-5207: When using an incomplete variable argument, Irssi before 1.0.6 may access data beyond the end of the string.\n\n * CVE-2018-5208: In Irssi before 1.0.6, a calculation error in the completion code could cause a heap buffer overflow when completing certain strings.\n\n * CVE-2018-7050: An issue was discovered in Irssi before 1.0.7 and 1.1.x before 1.1.1. A NULL pointer dereference occurs for an \"empty\" nick.\n\n * CVE-2018-7051: An issue was discovered in Irssi before 1.0.7 and 1.1.x before 1.1.1. Certain nick names could result in out-of-bounds access when printing theme strings.\n\n * CVE-2018-7052: An issue was discovered in Irssi before 1.0.7 and 1.1.x before 1.1.1. When the number of windows exceeds the available space, a crash due to a NULL pointer dereference would occur.\n\n * CVE-2018-7053: An issue was discovered in Irssi before 1.0.7 and 1.1.x before 1.1.1. There is a use-after-free when SASL messages are received in an unexpected order.\n\n * CVE-2018-7054: An issue was discovered in Irssi before 1.0.7 and 1.1.x before 1.1.1. There is a use-after-free when a server is disconnected during netsplits. NOTE: this issue exists because of an incomplete fix for CVE-2017-7191.\n\n * CVE-2019-13045: Irssi before 1.0.8, 1.1.x before 1.1.3, and 1.2.x before 1.2.1, when SASL is enabled, has a use after free when sending SASL login to the server.\n\n * CVE-2019-15717: Irssi 1.2.x before 1.2.2 has a use-after-free if the IRC server sends a double CAP.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-10"
+          },
+          "Updated": {
+            "Date": "2020-12-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2019-02520",
+              "Impact": "Critical",
+              "Public": "20180215",
+              "CveID": "BDU:2019-02520"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2019-02521",
+              "Impact": "High",
+              "Public": "20190129",
+              "CveID": "BDU:2019-02521"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2019-03213",
+              "Impact": "Critical",
+              "Public": "20190829",
+              "CveID": "BDU:2019-03213"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-10965",
+              "Impact": "Critical",
+              "Public": "20170707",
+              "CveID": "CVE-2017-10965"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-10966",
+              "Impact": "Critical",
+              "Public": "20170707",
+              "CveID": "CVE-2017-10966"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15227",
+              "Impact": "High",
+              "Public": "20171022",
+              "CveID": "CVE-2017-15227"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15228",
+              "Impact": "High",
+              "Public": "20171022",
+              "CveID": "CVE-2017-15228"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15721",
+              "Impact": "High",
+              "Public": "20171022",
+              "CveID": "CVE-2017-15721"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15722",
+              "Impact": "Low",
+              "Public": "20171022",
+              "CveID": "CVE-2017-15722"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-15723",
+              "Impact": "High",
+              "Public": "20171022",
+              "CveID": "CVE-2017-15723"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-7191",
+              "Impact": "Critical",
+              "Public": "20170327",
+              "CveID": "CVE-2017-7191"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9468",
+              "Impact": "High",
+              "Public": "20170607",
+              "CveID": "CVE-2017-9468"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9469",
+              "Impact": "High",
+              "Public": "20170607",
+              "CveID": "CVE-2017-9469"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-134",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-5205",
+              "Impact": "High",
+              "Public": "20180106",
+              "CveID": "CVE-2018-5205"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-5206",
+              "Impact": "Critical",
+              "Public": "20180106",
+              "CveID": "CVE-2018-5206"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-134",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-5207",
+              "Impact": "High",
+              "Public": "20180106",
+              "CveID": "CVE-2018-5207"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-5208",
+              "Impact": "Critical",
+              "Public": "20180106",
+              "CveID": "CVE-2018-5208"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7050",
+              "Impact": "High",
+              "Public": "20180215",
+              "CveID": "CVE-2018-7050"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7051",
+              "Impact": "High",
+              "Public": "20180215",
+              "CveID": "CVE-2018-7051"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7052",
+              "Impact": "High",
+              "Public": "20180215",
+              "CveID": "CVE-2018-7052"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7053",
+              "Impact": "Critical",
+              "Public": "20180215",
+              "CveID": "CVE-2018-7053"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7054",
+              "Impact": "Critical",
+              "Public": "20180215",
+              "CveID": "CVE-2018-7054"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13045",
+              "Impact": "High",
+              "Public": "20190629",
+              "CveID": "CVE-2019-13045"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15717",
+              "Impact": "Critical",
+              "Public": "20190829",
+              "CveID": "CVE-2019-15717"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203488001",
+                "Comment": "irssi is earlier than 0:1.2.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203488002",
+                "Comment": "irssi-devel is earlier than 0:1.2.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203488003",
+                "Comment": "irssi-otr is earlier than 0:1.2.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203488004",
+                "Comment": "irssi-perl is earlier than 0:1.2.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

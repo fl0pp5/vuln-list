@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231171",
+      "Version": "oval:org.altlinux.errata:def:20231171",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1171: package `octave` update to version 7.3.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1171",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1171",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades octave to version 7.3.0-alt2. \nSecurity Fix(es):\n\n * #38242: исправить octave.filetrigger, чтобы он не пытался использовать window system\n\n * #43252: Пакет octave должен зависеть от makeinfo",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-02"
+          },
+          "Updated": {
+            "Date": "2023-02-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38242",
+              "Href": "https://bugzilla.altlinux.org/38242",
+              "Data": "исправить octave.filetrigger, чтобы он не пытался использовать window system"
+            },
+            {
+              "Id": "43252",
+              "Href": "https://bugzilla.altlinux.org/43252",
+              "Data": "Пакет octave должен зависеть от makeinfo"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231171001",
+                "Comment": "octave is earlier than 0:7.3.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231171002",
+                "Comment": "octave-devel is earlier than 0:7.3.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231171003",
+                "Comment": "octave-doc is earlier than 0:7.3.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

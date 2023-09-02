@@ -1,0 +1,96 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231595",
+      "Version": "oval:org.altlinux.errata:def:20231595",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1595: package `gzip` update to version 1.10-alt1.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1595",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1595",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-1271",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1271",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gzip to version 1.10-alt1.p9.1. \nSecurity Fix(es):\n\n * CVE-2022-1271: An arbitrary file write vulnerability was found in GNU gzip's zgrep utility. When zgrep is applied on the attacker's chosen file name (for example, a crafted file name), this can overwrite an attacker's content to an arbitrary attacker-selected file. This flaw occurs due to insufficient validation when processing filenames with two or more newlines where selected content and the target file names are embedded in crafted multi-line file names. This flaw allows a remote, low privileged attacker to force zgrep to write arbitrary files on the system.\n\n * #44053: Уязвимость BDU:2022-02113",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-04-08"
+          },
+          "Updated": {
+            "Date": "2023-04-08"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1271",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-1271"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44053",
+              "Href": "https://bugzilla.altlinux.org/44053",
+              "Data": "Уязвимость BDU:2022-02113"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231595001",
+                "Comment": "gzip is earlier than 0:1.10-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231595002",
+                "Comment": "gzip-utils is earlier than 0:1.10-alt1.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

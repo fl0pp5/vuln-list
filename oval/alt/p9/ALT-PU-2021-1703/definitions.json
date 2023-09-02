@@ -1,0 +1,195 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211703",
+      "Version": "oval:org.altlinux.errata:def:20211703",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1703: package `freeswitch` update to version 1.10.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1703",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1703",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-36513",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36513",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41157",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41157",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades freeswitch to version 1.10.6-alt1. \nSecurity Fix(es):\n\n * CVE-2021-36513: An issue was discovered in function sofia_handle_sip_i_notify in sofia.c in SignalWire freeswitch before 1.10.6, may allow attackers to view sensitive information due to an uninitialized value.\n\n * CVE-2021-41157: FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. By default, SIP requests of the type SUBSCRIBE are not authenticated in the affected versions of FreeSWITCH. Abuse of this security issue allows attackers to subscribe to user agent event notifications without the need to authenticate. This abuse poses privacy concerns and might lead to social engineering or similar attacks. For example, attackers may be able to monitor the status of target SIP extensions. Although this issue was fixed in version v1.10.6, installations upgraded to the fixed version of FreeSWITCH from an older version, may still be vulnerable if the configuration is not updated accordingly. Software upgrades do not update the configuration by default. SIP SUBSCRIBE messages should be authenticated by default so that FreeSWITCH administrators do not need to explicitly set the `auth-subscriptions` parameter. When following such a recommendation, a new parameter can be introduced to explicitly disable authentication.\n\n * #39215: freeswitch имеет лишнюю сборочную зависимость на libImageMagick-devel",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-22"
+          },
+          "Updated": {
+            "Date": "2021-04-22"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-909",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36513",
+              "Impact": "High",
+              "Public": "20211018",
+              "CveID": "CVE-2021-36513"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-306",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41157",
+              "Impact": "Low",
+              "Public": "20211026",
+              "CveID": "CVE-2021-41157"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39215",
+              "Href": "https://bugzilla.altlinux.org/39215",
+              "Data": "freeswitch имеет лишнюю сборочную зависимость на libImageMagick-devel"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703001",
+                "Comment": "freeswitch-av is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703002",
+                "Comment": "freeswitch-daemon is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703003",
+                "Comment": "freeswitch-imagick is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703004",
+                "Comment": "freeswitch-java is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703005",
+                "Comment": "freeswitch-lang-de is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703006",
+                "Comment": "freeswitch-lang-en is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703007",
+                "Comment": "freeswitch-lang-es is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703008",
+                "Comment": "freeswitch-lang-fr is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703009",
+                "Comment": "freeswitch-lang-he is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703010",
+                "Comment": "freeswitch-lang-pt is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703011",
+                "Comment": "freeswitch-lang-ru is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703012",
+                "Comment": "freeswitch-lua is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703013",
+                "Comment": "freeswitch-perl is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703014",
+                "Comment": "freeswitch-vlc is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703015",
+                "Comment": "freeswitch-webui is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703016",
+                "Comment": "libfreeswitch is earlier than 1:1.10.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211703017",
+                "Comment": "libfreeswitch-devel is earlier than 1:1.10.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

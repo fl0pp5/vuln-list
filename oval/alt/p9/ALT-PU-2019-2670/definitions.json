@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192670",
+      "Version": "oval:org.altlinux.errata:def:20192670",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2670: package `docker-ce` update to version 19.03.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2670",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2670",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03640",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03640",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-14271",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14271",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades docker-ce to version 19.03.1-alt2. \nSecurity Fix(es):\n\n * BDU:2019-03640: Уязвимость средства автоматизации развёртывания и управления приложениями в средах с поддержкой контейнеризации Docker, связанная с ошибками управления генерацией кода, позволяющая нарушителю оказать воздействие на целостность данных, получить несанкционированный доступ к защищаемой информации, а также вызвать отказ в обслуживании\n\n * CVE-2019-14271: In Docker 19.03.x before 19.03.1 linked against the GNU C Library (aka glibc), code injection can occur when the nsswitch facility dynamically loads a library inside a chroot that contains the contents of the container.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-10"
+          },
+          "Updated": {
+            "Date": "2019-09-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2019-03640",
+              "Impact": "Critical",
+              "Public": "20190903",
+              "CveID": "BDU:2019-03640"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14271",
+              "Impact": "Critical",
+              "Public": "20190729",
+              "CveID": "CVE-2019-14271"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192670001",
+                "Comment": "docker-ce is earlier than 0:19.03.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

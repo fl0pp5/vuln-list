@@ -1,0 +1,223 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221455",
+      "Version": "oval:org.altlinux.errata:def:20221455",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1455: package `tcpreplay` update to version 4.4.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1455",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1455",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01796",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01796",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01817",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01817",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-12740",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12740",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-18976",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-18976",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-23273",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-23273",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24265",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24265",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24266",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24266",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45386",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45386",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45387",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45387",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades tcpreplay to version 4.4.1-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01796: Уязвимость функции do_checksum компонента checksum.c утилиты редактирования и воспроизведения Pcap Tcpreplay, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01817: Уязвимость функции randomize_iparp компонента edit_packet.c утилиты редактирования и воспроизведения Pcap Tcpreplay, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-12740: tcprewrite in Tcpreplay through 4.3.2 has a heap-based buffer over-read during a get_c operation. The issue is being triggered in the function get_ipv6_next() at common/get.c.\n\n * CVE-2020-18976: Buffer Overflow in Tcpreplay v4.3.2 allows attackers to cause a Denial of Service via the 'do_checksum' function in 'checksum.c'. It can be triggered by sending a crafted pcap file to the 'tcpreplay-edit' binary. This issue is different than CVE-2019-8381.\n\n * CVE-2020-23273: Heap-buffer overflow in the randomize_iparp function in edit_packet.c. of Tcpreplay v4.3.2 allows attackers to cause a denial of service (DOS) via a crafted pcap.\n\n * CVE-2020-24265: An issue was discovered in tcpreplay tcpprep v4.3.3. There is a heap buffer overflow vulnerability in MemcmpInterceptorCommon() that can make tcpprep crash and cause a denial of service.\n\n * CVE-2020-24266: An issue was discovered in tcpreplay tcpprep v4.3.3. There is a heap buffer overflow vulnerability in get_l2len() that can make tcpprep crash and cause a denial of service.\n\n * CVE-2021-45386: tcpreplay 4.3.4 has a Reachable Assertion in add_tree_ipv6() at tree.c\n\n * CVE-2021-45387: tcpreplay 4.3.4 has a Reachable Assertion in add_tree_ipv4() at tree.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-09"
+          },
+          "Updated": {
+            "Date": "2022-03-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-01796",
+              "Impact": "Low",
+              "Public": "20210825",
+              "CveID": "BDU:2022-01796"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-01817",
+              "Impact": "Low",
+              "Public": "20210921",
+              "CveID": "BDU:2022-01817"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12740",
+              "Impact": "Critical",
+              "Public": "20200508",
+              "CveID": "CVE-2020-12740"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-18976",
+              "Impact": "Low",
+              "Public": "20210825",
+              "CveID": "CVE-2020-18976"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-23273",
+              "Impact": "Low",
+              "Public": "20210922",
+              "CveID": "CVE-2020-23273"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24265",
+              "Impact": "High",
+              "Public": "20201019",
+              "CveID": "CVE-2020-24265"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24266",
+              "Impact": "High",
+              "Public": "20201019",
+              "CveID": "CVE-2020-24266"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45386",
+              "Impact": "Low",
+              "Public": "20220211",
+              "CveID": "CVE-2021-45386"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45387",
+              "Impact": "Low",
+              "Public": "20220211",
+              "CveID": "CVE-2021-45387"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221455001",
+                "Comment": "tcpreplay is earlier than 0:4.4.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

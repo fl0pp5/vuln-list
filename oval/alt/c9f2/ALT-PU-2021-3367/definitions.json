@@ -1,0 +1,93 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213367",
+      "Version": "oval:org.altlinux.errata:def:20213367",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3367: package `libaom` update to version 2.0.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3367",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3367",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades libaom to version 2.0.1-alt1. \nSecurity Fix(es):\n\n * #37096: в pkg-config версия не соответствует версии библиотеки",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-26"
+          },
+          "Updated": {
+            "Date": "2021-11-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37096",
+              "Href": "https://bugzilla.altlinux.org/37096",
+              "Data": "в pkg-config версия не соответствует версии библиотеки"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213367001",
+                "Comment": "libaom-devel is earlier than 0:2.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213367002",
+                "Comment": "libaom-devel-static is earlier than 0:2.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213367003",
+                "Comment": "libaom-docs is earlier than 0:2.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213367004",
+                "Comment": "libaom-tools is earlier than 0:2.0.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213367005",
+                "Comment": "libaom2 is earlier than 0:2.0.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

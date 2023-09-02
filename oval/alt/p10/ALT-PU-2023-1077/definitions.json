@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231077",
+      "Version": "oval:org.altlinux.errata:def:20231077",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1077: package `guacamole` update to version 1.4.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1077",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1077",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04085",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04085",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-19603",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19603",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41767",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41767",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43999",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43999",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades guacamole to version 1.4.0-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04085: Уязвимость программного обеспечения для СУБД SQLite, связанная с ошибками при обработке чисел, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-19603: SQLite 3.30.1 mishandles certain SELECT statements with a nonexistent VIEW, leading to an application crash.\n\n * CVE-2021-41767: Apache Guacamole 1.3.0 and older may incorrectly include a private tunnel identifier in the non-private details of some REST responses. This may allow an authenticated user who already has permission to access a particular connection to read from or interact with another user's active use of that same connection.\n\n * CVE-2021-43999: Apache Guacamole 1.2.0 and 1.3.0 do not properly validate responses received from a SAML identity provider. If SAML support is enabled, this may allow a malicious user to assume the identity of another Guacamole user.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-18"
+          },
+          "Updated": {
+            "Date": "2023-01-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-189",
+              "Href": "https://bdu.fstec.ru/vul/2020-04085",
+              "Impact": "High",
+              "Public": "20190912",
+              "CveID": "BDU:2020-04085"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19603",
+              "Impact": "High",
+              "Public": "20191209",
+              "CveID": "CVE-2019-19603"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41767",
+              "Impact": "Low",
+              "Public": "20220111",
+              "CveID": "CVE-2021-41767"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43999",
+              "Impact": "High",
+              "Public": "20220111",
+              "CveID": "CVE-2021-43999"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077001",
+                "Comment": "guacamole-auth-duo is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077002",
+                "Comment": "guacamole-auth-header is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077003",
+                "Comment": "guacamole-auth-jdbc-mysql is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077004",
+                "Comment": "guacamole-auth-jdbc-postgresql is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077005",
+                "Comment": "guacamole-auth-jdbc-sqlserver is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077006",
+                "Comment": "guacamole-auth-ldap is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077007",
+                "Comment": "guacamole-auth-quickconnect is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077008",
+                "Comment": "guacamole-auth-sso is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077009",
+                "Comment": "guacamole-auth-totp is earlier than 0:1.4.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231077010",
+                "Comment": "guacamole-client is earlier than 0:1.4.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

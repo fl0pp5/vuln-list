@@ -1,0 +1,130 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193203",
+      "Version": "oval:org.altlinux.errata:def:20193203",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3203: package `clamav` update to version 0.101.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3203",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3203",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-15961",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15961",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades clamav to version 0.101.5-alt1. \nSecurity Fix(es):\n\n * CVE-2019-15961: A vulnerability in the email parsing module Clam AntiVirus (ClamAV) Software versions 0.102.0, 0.101.4 and prior could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to inefficient MIME parsing routines that result in extremely long scan times of specially formatted email files. An attacker could exploit this vulnerability by sending a crafted email file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process to scan the crafted email file indefinitely, resulting in a denial of service condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-28"
+          },
+          "Updated": {
+            "Date": "2019-11-28"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15961",
+              "Impact": "Low",
+              "Public": "20200115",
+              "CveID": "CVE-2019-15961"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203001",
+                "Comment": "clamav is earlier than 0:0.101.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203002",
+                "Comment": "clamav-freshclam is earlier than 0:0.101.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203003",
+                "Comment": "clamav-manual is earlier than 0:0.101.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203004",
+                "Comment": "clamav-milter is earlier than 0:0.101.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203005",
+                "Comment": "libclamav-devel is earlier than 0:0.101.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193203006",
+                "Comment": "libclamav9 is earlier than 0:0.101.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

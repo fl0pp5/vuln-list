@@ -1,0 +1,175 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212407",
+      "Version": "oval:org.altlinux.errata:def:20212407",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2407: package `node` update to version 14.17.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2407",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2407",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01844",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01844",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03700",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03700",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04210",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04210",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-22918",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22918",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3449",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3449",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades node to version 14.17.2-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01844: Уязвимость реализации протокола TLS библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03700: Уязвимость функции uv__idna_toascii() программной платформы Node.js, позволяющая нарушителю вызвать отказ в обслуживании или получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-04210: Уязвимость функции uv__idna_toascii() программной платформы Node.js, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2021-22918: Node.js before 16.4.1, 14.17.2, 12.22.2 is vulnerable to an out-of-bounds read when uv__idna_toascii() is used to convert strings to ASCII. The pointer p is read and increased without checking whether it is beyond pe, with the latter holding a pointer to the end of the buffer. This can lead to information disclosures or crashes. This function can be triggered via uv_getaddrinfo().\n\n * CVE-2021-3449: An OpenSSL TLS server may crash if sent a maliciously crafted renegotiation ClientHello message from a client. If a TLSv1.2 renegotiation ClientHello omits the signature_algorithms extension (where it was present in the initial ClientHello), but includes a signature_algorithms_cert extension then a NULL pointer dereference will result, leading to a crash and a denial of service attack. A server is only vulnerable if it has TLSv1.2 and renegotiation enabled (which is the default configuration). OpenSSL TLS clients are not impacted by this issue. All OpenSSL 1.1.1 versions are affected by this issue. Users of these versions should upgrade to OpenSSL 1.1.1k. OpenSSL 1.0.2 is not impacted by this issue. Fixed in OpenSSL 1.1.1k (Affected 1.1.1-1.1.1j).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-03"
+          },
+          "Updated": {
+            "Date": "2021-08-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-01844",
+              "Impact": "Low",
+              "Public": "20180111",
+              "CveID": "BDU:2021-01844"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03700",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "BDU:2021-03700"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-04210",
+              "Impact": "Low",
+              "Public": "20210625",
+              "CveID": "BDU:2021-04210"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22918",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "CVE-2021-22918"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3449",
+              "Impact": "Low",
+              "Public": "20210325",
+              "CveID": "CVE-2021-3449"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212407001",
+                "Comment": "node is earlier than 0:14.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212407002",
+                "Comment": "node-devel is earlier than 0:14.17.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212407003",
+                "Comment": "node-doc is earlier than 0:14.17.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

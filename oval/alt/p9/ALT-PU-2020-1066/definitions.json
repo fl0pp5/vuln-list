@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201066",
+      "Version": "oval:org.altlinux.errata:def:20201066",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1066: package `rrd` update to version 1.7.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1066",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1066",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades rrd to version 1.7.2-alt2. \nSecurity Fix(es):\n\n * #37648: Некорректный запуск collectd.service",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-01-17"
+          },
+          "Updated": {
+            "Date": "2020-01-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37648",
+              "Href": "https://bugzilla.altlinux.org/37648",
+              "Data": "Некорректный запуск collectd.service"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066001",
+                "Comment": "librrd-devel is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066002",
+                "Comment": "librrd8 is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066003",
+                "Comment": "perl-RRD is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066004",
+                "Comment": "python3-module-rrdtool is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066005",
+                "Comment": "rrd-cached is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066006",
+                "Comment": "rrd-doc is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066007",
+                "Comment": "rrd-man is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066008",
+                "Comment": "rrd-tcl is earlier than 0:1.7.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201066009",
+                "Comment": "rrd-utils is earlier than 0:1.7.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

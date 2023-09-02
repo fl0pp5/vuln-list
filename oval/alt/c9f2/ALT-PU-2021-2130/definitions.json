@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212130",
+      "Version": "oval:org.altlinux.errata:def:20212130",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2130: package `haproxy` update to version 2.0.20-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2130",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2130",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02035",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02035",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11100",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11100",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades haproxy to version 2.0.20-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02035: Уязвимость функции hpack_dht_insert (hpack-tbl.c) библиотеки сетевого программного обеспечения HAProxy, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить несанкционированный доступ к конфиденциальным данным, вызвать отказ в обслуживании или оказать воздействие на целостность данных\n\n * CVE-2020-11100: In hpack_dht_insert in hpack-tbl.c in the HPACK decoder in HAProxy 1.8 through 2.x before 2.1.4, a remote attacker can write arbitrary bytes around a certain location on the heap via a crafted HTTP/2 request, possibly causing remote code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-02"
+          },
+          "Updated": {
+            "Date": "2021-07-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-02035",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "BDU:2020-02035"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11100",
+              "Impact": "High",
+              "Public": "20200402",
+              "CveID": "CVE-2020-11100"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212130001",
+                "Comment": "haproxy is earlier than 0:2.0.20-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

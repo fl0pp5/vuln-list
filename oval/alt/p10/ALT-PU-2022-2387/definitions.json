@@ -1,0 +1,135 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222387",
+      "Version": "oval:org.altlinux.errata:def:20222387",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2387: package `qt5-svg` update to version 5.15.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2387",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2387",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-45930",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45930",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-33285",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-33285",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-svg to version 5.15.4-alt1. \nSecurity Fix(es):\n\n * CVE-2021-45930: Qt SVG in Qt 5.0.0 through 5.15.2 and 6.0.0 through 6.2.1 has an out-of-bounds write in QtPrivate::QCommonArrayOps\u003cQPainterPath::Element\u003e::growAppend (called from QPainterPath::addPath and QPathClipper::intersect).\n\n * CVE-2023-33285: An issue was discovered in Qt 5.x before 5.15.14, 6.x before 6.2.9, and 6.3.x through 6.5.x before 6.5.1. QDnsLookup has a buffer over-read via a crafted reply from a DNS server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-09"
+          },
+          "Updated": {
+            "Date": "2022-08-09"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45930",
+              "Impact": "Low",
+              "Public": "20220101",
+              "CveID": "CVE-2021-45930"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-33285",
+              "Impact": "Low",
+              "Public": "20230522",
+              "CveID": "CVE-2023-33285"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222387001",
+                "Comment": "libqt5-svg is earlier than 0:5.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222387002",
+                "Comment": "qt5-svg-common is earlier than 0:5.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222387003",
+                "Comment": "qt5-svg-devel is earlier than 0:5.15.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222387004",
+                "Comment": "qt5-svg-doc is earlier than 0:5.15.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

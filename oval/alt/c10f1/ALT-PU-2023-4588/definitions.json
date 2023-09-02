@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234588",
+      "Version": "oval:org.altlinux.errata:def:20234588",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4588: package `gitea` update to version 1.19.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4588",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4588",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-3515",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3515",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gitea to version 1.19.4-alt1. \nSecurity Fix(es):\n\n * CVE-2023-3515: Open Redirect in GitHub repository go-gitea/gitea prior to 1.19.4.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-03"
+          },
+          "Updated": {
+            "Date": "2023-08-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3515",
+              "Impact": "Low",
+              "Public": "20230705",
+              "CveID": "CVE-2023-3515"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234588001",
+                "Comment": "gitea is earlier than 0:1.19.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

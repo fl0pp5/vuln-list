@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231366",
+      "Version": "oval:org.altlinux.errata:def:20231366",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1366: package `gnutls30` update to version 3.6.16-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1366",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1366",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-0361",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0361",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gnutls30 to version 3.6.16-alt3. \nSecurity Fix(es):\n\n * CVE-2023-0361: A timing side-channel in the handling of RSA ClientKeyExchange messages was discovered in GnuTLS. This side-channel can be sufficient to recover the key encrypted in the RSA ciphertext across a network in a Bleichenbacher style attack. To achieve a successful decryption the attacker would need to send a large amount of specially crafted messages to the vulnerable server. By recovering the secret from the ClientKeyExchange message, the attacker would be able to decrypt the application data exchanged over that connection.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-01"
+          },
+          "Updated": {
+            "Date": "2023-03-01"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0361",
+              "Impact": "High",
+              "Public": "20230215",
+              "CveID": "CVE-2023-0361"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366001",
+                "Comment": "gnutls-utils is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366002",
+                "Comment": "gnutls30-devel-doc is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366003",
+                "Comment": "libgnutls-devel is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366004",
+                "Comment": "libgnutls-guile is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366005",
+                "Comment": "libgnutls-openssl-devel is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366006",
+                "Comment": "libgnutls27-openssl is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366007",
+                "Comment": "libgnutls30 is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366008",
+                "Comment": "libgnutlsxx-devel is earlier than 0:3.6.16-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231366009",
+                "Comment": "libgnutlsxx28 is earlier than 0:3.6.16-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

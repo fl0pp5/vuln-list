@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221952",
+      "Version": "oval:org.altlinux.errata:def:20221952",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1952: package `sogo` update to version 5.0.0-alt1.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1952",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1952",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04894",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04894",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33054",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33054",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sogo to version 5.0.0-alt1.c9f2.1. \nSecurity Fix(es):\n\n * BDU:2021-04894: Уязвимость метода аутентификации программного обеспечения для совместной работы SOGo, связанная с некорректным подтверждением криптографической подписи данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-33054: SOGo 2.x before 2.4.1 and 3.x through 5.x before 5.1.1 does not validate the signatures of any SAML assertions it receives. Any actor with network access to the deployment could impersonate users when SAML is the authentication method. (Only versions after 2.0.5a are affected.)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-27"
+          },
+          "Updated": {
+            "Date": "2022-05-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2021-04894",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "BDU:2021-04894"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33054",
+              "Impact": "High",
+              "Public": "20210604",
+              "CveID": "CVE-2021-33054"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952001",
+                "Comment": "sogo is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952002",
+                "Comment": "sogo-activesync is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952003",
+                "Comment": "sogo-apache2 is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952004",
+                "Comment": "sogo-devel is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952005",
+                "Comment": "sogo-ealarms-notify is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952006",
+                "Comment": "sogo-slapd-sockd is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952007",
+                "Comment": "sogo-tool is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952008",
+                "Comment": "sope-cards is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952009",
+                "Comment": "sope-cards-devel is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952010",
+                "Comment": "sope-gdl1-contentstore is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952011",
+                "Comment": "sope-gdl1-contentstore-devel is earlier than 0:5.0.0-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221952012",
+                "Comment": "task-sogo is earlier than 0:5.0.0-alt1.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

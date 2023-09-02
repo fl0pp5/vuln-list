@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234094",
+      "Version": "oval:org.altlinux.errata:def:20234094",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4094: package `libssh` update to version 0.9.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4094",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4094",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-1667",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1667",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2283",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2283",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libssh to version 0.9.7-alt1. \nSecurity Fix(es):\n\n * CVE-2023-1667: A NULL pointer dereference was found In libssh during re-keying with algorithm guessing. This issue may allow an authenticated client to cause a denial of service.\n\n * CVE-2023-2283: A vulnerability was found in libssh, where the authentication check of the connecting client can be bypassed in the`pki_verify_data_signature` function in memory allocation problems. This issue may happen if there is insufficient memory or the memory usage is limited. The problem is caused by the return value `rc,` which is initialized to SSH_ERROR and later rewritten to save the return value of the function call `pki_key_check_hash_compatible.` The value of the variable is not changed between this point and the cryptographic verification. Therefore any error between them calls `goto error` returning SSH_OK.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-13"
+          },
+          "Updated": {
+            "Date": "2023-07-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1667",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-1667"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2283",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2283"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234094001",
+                "Comment": "libssh is earlier than 0:0.9.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234094002",
+                "Comment": "libssh-devel is earlier than 0:0.9.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

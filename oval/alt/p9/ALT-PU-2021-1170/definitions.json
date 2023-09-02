@@ -1,0 +1,196 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211170",
+      "Version": "oval:org.altlinux.errata:def:20211170",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1170: package `kernel-image-un-def` update to version 5.10.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1170",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1170",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01616",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01616",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01284",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01284",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20268",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20268",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-1390",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1390",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.10-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01616: Уязвимость реализации функций dev_map_init_map и sock_map_alloc ядра операционной системы Linux, позволяющая нарушителю вызвать аварийное завершение системы или повысить свои привилегии\n\n * BDU:2023-01284: Уязвимость реализации протокола TIPC (Transparent Inter Process Communication) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-20268: An out-of-bounds access flaw was found in the Linux kernel's implementation of the eBPF code verifier in the way a user running the eBPF script calls dev_map_init_map or sock_map_alloc. This flaw allows a local user to crash the system or possibly escalate their privileges. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2023-1390: A remote denial of service vulnerability was found in the Linux kernel’s TIPC kernel module. The while loop in tipc_link_xmit() hits an unknown state while attempting to parse SKBs, which are not in the queue. Sending two small UDP packets to a system with a UDP bearer results in the CPU utilization for the system to instantly spike to 100%, causing a denial of service condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-28"
+          },
+          "Updated": {
+            "Date": "2021-01-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01616",
+              "Impact": "High",
+              "Public": "20210129",
+              "CveID": "BDU:2021-01616"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476, CWE-1050",
+              "Href": "https://bdu.fstec.ru/vul/2023-01284",
+              "Impact": "High",
+              "Public": "20210109",
+              "CveID": "BDU:2023-01284"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20268",
+              "Impact": "High",
+              "Public": "20210309",
+              "CveID": "CVE-2021-20268"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1390",
+              "Impact": "High",
+              "Public": "20230316",
+              "CveID": "CVE-2023-1390"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170008",
+                "Comment": "kernel-modules-drm-radeon-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170010",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170011",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.10-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211170012",
+                "Comment": "kernel-modules-v4l-un-def is earlier than 1:5.10.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

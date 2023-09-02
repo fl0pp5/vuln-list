@@ -1,0 +1,91 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231112",
+      "Version": "oval:org.altlinux.errata:def:20231112",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1112: package `php8.1` update to version 8.1.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1112",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1112",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-31631",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31631",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php8.1 to version 8.1.14-alt1. \nSecurity Fix(es):\n\n * CVE-2022-31631: description unavailable",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-23"
+          },
+          "Updated": {
+            "Date": "2023-01-23"
+          },
+          "bdu": null,
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231112001",
+                "Comment": "php8.1 is earlier than 0:8.1.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231112002",
+                "Comment": "php8.1-devel is earlier than 0:8.1.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231112003",
+                "Comment": "php8.1-libs is earlier than 0:8.1.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231112004",
+                "Comment": "php8.1-mysqlnd is earlier than 0:8.1.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231112005",
+                "Comment": "rpm-build-php8.1-version is earlier than 0:8.1.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

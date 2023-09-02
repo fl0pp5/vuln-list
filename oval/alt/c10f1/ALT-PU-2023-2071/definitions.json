@@ -1,0 +1,105 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232071",
+      "Version": "oval:org.altlinux.errata:def:20232071",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2071: package `python3-module-django` update to version 3.2.19-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2071",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2071",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-31047",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-31047",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-django to version 3.2.19-alt1. \nSecurity Fix(es):\n\n * CVE-2023-31047: In Django 3.2 before 3.2.19, 4.x before 4.1.9, and 4.2 before 4.2.1, it was possible to bypass validation when using one form field to upload multiple files. This multiple upload has never been supported by forms.FileField or forms.ImageField (only the last uploaded file was validated). However, Django's \"Uploading multiple files\" documentation suggested otherwise.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-26"
+          },
+          "Updated": {
+            "Date": "2023-06-26"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-31047",
+              "Impact": "Critical",
+              "Public": "20230507",
+              "CveID": "CVE-2023-31047"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071001",
+                "Comment": "python3-module-django is earlier than 0:3.2.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071002",
+                "Comment": "python3-module-django-dbbackend-mysql is earlier than 0:3.2.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071003",
+                "Comment": "python3-module-django-dbbackend-oracle is earlier than 0:3.2.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071004",
+                "Comment": "python3-module-django-dbbackend-postgresql is earlier than 0:3.2.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071005",
+                "Comment": "python3-module-django-dbbackend-sqlite3 is earlier than 0:3.2.19-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232071006",
+                "Comment": "python3-module-django-doc is earlier than 0:3.2.19-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

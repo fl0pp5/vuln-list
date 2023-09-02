@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213669",
+      "Version": "oval:org.altlinux.errata:def:20213669",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3669: package `libssh` update to version 0.9.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3669",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3669",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02135",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02135",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03730",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03730",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01073",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01073",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-16135",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16135",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1730",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1730",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3634",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libssh to version 0.9.6-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02135: Уязвимость библиотеки libssh, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03730: Уязвимость компонента tftpserver.c библиотеки для аутентификации клиента libssh, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01073: Уязвимость библиотеки libssh, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-16135: libssh 0.9.4 has a NULL pointer dereference in tftpserver.c if ssh_buffer_new returns NULL.\n\n * CVE-2020-1730: A flaw was found in libssh versions before 0.8.9 and before 0.9.4 in the way it handled AES-CTR (or DES ciphers if enabled) ciphers. The server or client could crash when the connection hasn't been fully initialized and the system tries to cleanup the ciphers when closing the connection. The biggest threat from this vulnerability is system availability.\n\n * CVE-2021-3634: A flaw has been found in libssh in versions prior to 0.9.6. The SSH protocol keeps track of two shared secrets during the lifetime of the session. One of them is called secret_hash and the other session_id. Initially, both of them are the same, but after key re-exchange, previous session_id is kept and used as an input to new secret_hash. Historically, both of these buffers had shared length variable, which worked as long as these buffers were same. But the key re-exchange operation can also change the key exchange method, which can be based on hash of different size, eventually creating \"secret_hash\" of different size than the session_id has. This becomes an issue when the session_id memory is zeroed or when it is used again during second key re-exchange.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-31"
+          },
+          "Updated": {
+            "Date": "2021-12-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2020-02135",
+              "Impact": "High",
+              "Public": "20200212",
+              "CveID": "BDU:2020-02135"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-03730",
+              "Impact": "Low",
+              "Public": "20200730",
+              "CveID": "BDU:2021-03730"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-01073",
+              "Impact": "Low",
+              "Public": "20210831",
+              "CveID": "BDU:2022-01073"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16135",
+              "Impact": "Low",
+              "Public": "20200729",
+              "CveID": "CVE-2020-16135"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1730",
+              "Impact": "Low",
+              "Public": "20200413",
+              "CveID": "CVE-2020-1730"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3634",
+              "Impact": "Low",
+              "Public": "20210831",
+              "CveID": "CVE-2021-3634"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213669001",
+                "Comment": "libssh is earlier than 0:0.9.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213669002",
+                "Comment": "libssh-devel is earlier than 0:0.9.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

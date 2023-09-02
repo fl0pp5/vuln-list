@@ -1,0 +1,223 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221152",
+      "Version": "oval:org.altlinux.errata:def:20221152",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1152: package `clamav` update to version 0.103.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1152",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1152",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02217",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02217",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02218",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02218",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02219",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02219",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00587",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00587",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-1252",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-1252",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-1404",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-1404",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-1405",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-1405",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-27506",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27506",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-20698",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-20698",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades clamav to version 0.103.5-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02217: Уязвимость модуля синтаксического анализа электронной почты пакета антивирусных программ ClamAV, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-02218: Уязвимость модуля синтаксического анализа PDF-файлов пакета антивирусных программ ClamAV, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-02219: Уязвимость модуля анализа макросов Excel XLM пакета антивирусных программ ClamAV, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-00587: Уязвимость пакета антивирусного ПО Clam AntiVirus, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю выполнить отказ в обслуживании\n\n * CVE-2021-1252: A vulnerability in the Excel XLM macro parsing module in Clam AntiVirus (ClamAV) Software versions 0.103.0 and 0.103.1 could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to improper error handling that may result in an infinite loop. An attacker could exploit this vulnerability by sending a crafted Excel file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process hang, resulting in a denial of service condition.\n\n * CVE-2021-1404: A vulnerability in the PDF parsing module in Clam AntiVirus (ClamAV) Software versions 0.103.0 and 0.103.1 could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to improper buffer size tracking that may result in a heap buffer over-read. An attacker could exploit this vulnerability by sending a crafted PDF file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process to crash, resulting in a denial of service condition.\n\n * CVE-2021-1405: A vulnerability in the email parsing module in Clam AntiVirus (ClamAV) Software version 0.103.1 and all prior versions could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to improper variable initialization that may result in an NULL pointer read. An attacker could exploit this vulnerability by sending a crafted email to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process crash, resulting in a denial of service condition.\n\n * CVE-2021-27506: The ClamAV Engine (version 0.103.1 and below) component embedded in Storsmshield Network Security (SNS) is subject to DoS in case of parsing of malformed png files. This affect Netasq versions 9.1.0 to 9.1.11 and SNS versions 1.0.0 to 4.2.0. This issue is fixed in SNS 3.7.19, 3.11.7 and 4.2.1.\n\n * CVE-2022-20698: A vulnerability in the OOXML parsing module in Clam AntiVirus (ClamAV) Software version 0.104.1 and LTS version 0.103.4 and prior versions could allow an unauthenticated, remote attacker to cause a denial of service condition on an affected device. The vulnerability is due to improper checks that may result in an invalid pointer read. An attacker could exploit this vulnerability by sending a crafted OOXML file to an affected device. An exploit could allow the attacker to cause the ClamAV scanning process to crash, resulting in a denial of service condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-26"
+          },
+          "Updated": {
+            "Date": "2022-01-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-02217",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-02217"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-02218",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-02218"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-02219",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-02219"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-00587",
+              "Impact": "Low",
+              "Public": "20220119",
+              "CveID": "BDU:2022-00587"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-1252",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "CVE-2021-1252"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-1404",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "CVE-2021-1404"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-909",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-1405",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "CVE-2021-1405"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27506",
+              "Impact": "Low",
+              "Public": "20210319",
+              "CveID": "CVE-2021-27506"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-20698",
+              "Impact": "High",
+              "Public": "20220114",
+              "CveID": "CVE-2022-20698"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152001",
+                "Comment": "clamav is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152002",
+                "Comment": "clamav-clamonacc is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152003",
+                "Comment": "clamav-freshclam is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152004",
+                "Comment": "clamav-manual is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152005",
+                "Comment": "clamav-milter is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152006",
+                "Comment": "libclamav-devel is earlier than 0:0.103.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221152007",
+                "Comment": "libclamav9 is earlier than 0:0.103.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

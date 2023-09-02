@@ -1,0 +1,224 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213600",
+      "Version": "oval:org.altlinux.errata:def:20213600",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3600: package `postgresql12` update to version 12.9-alt0.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3600",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3600",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04174",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04174",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05535",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05535",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05857",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05857",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05996",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05996",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-23214",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23214",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23222",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23222",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3677",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3677",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43767",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43767",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql12 to version 12.9-alt0.M90P.1. \nSecurity Fix(es):\n\n * BDU:2021-04174: Уязвимость системы управления базами данных PostgreSQL, связанная с непринятием мер по защите структуры запроса SQL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * BDU:2021-05535: Уязвимость библиотеки libpq системы управления базами данных PostgreSQL, позволяющая нарушителю реализовать атаку типа «человек посередине»\n\n * BDU:2021-05857: Уязвимость системы управления базами данных PostgreSQL, связанная с непринятием мер по шифрованию защищаемых данных, позволяющая нарушителю реализовать атаку типа «человек посередине»\n\n * BDU:2021-05996: Уязвимость системы управления базами данных PostgreSQL, связанная с непринятием мер по защите структуры запроса SQL, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-23214: When the server is configured to use trust authentication with a clientcert requirement or to use cert authentication, a man-in-the-middle attacker can inject arbitrary SQL queries when a connection is first established, despite the use of SSL certificate verification and encryption.\n\n * CVE-2021-23222: A man-in-the-middle attacker can inject false responses to the client's first few queries, despite the use of SSL certificate verification and encryption.\n\n * CVE-2021-3677: A flaw was found in postgresql. A purpose-crafted query can read arbitrary bytes of server memory. In the default configuration, any authenticated database user can complete this attack at will. The attack does not require the ability to create objects. If server settings include max_worker_processes=0, the known versions of this attack are infeasible. However, undiscovered variants of the attack may be independent of that setting.\n\n * CVE-2021-43767: Odyssey passes to client unencrypted bytes from man-in-the-middle When Odyssey storage is configured to use the PostgreSQL server using 'trust' authentication with a 'clientcert' requirement or to use 'cert' authentication, a man-in-the-middle attacker can inject false responses to the client's first few queries. Despite the use of SSL certificate verification and encryption, Odyssey will pass these results to client as if they originated from valid server. This is similar to CVE-2021-23222 for PostgreSQL.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-22"
+          },
+          "Updated": {
+            "Date": "2021-12-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2021-04174",
+              "Impact": "Critical",
+              "Public": "20210812",
+              "CveID": "BDU:2021-04174"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://bdu.fstec.ru/vul/2021-05535",
+              "Impact": "Low",
+              "Public": "20211111",
+              "CveID": "BDU:2021-05535"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-311",
+              "Href": "https://bdu.fstec.ru/vul/2021-05857",
+              "Impact": "High",
+              "Public": "20211111",
+              "CveID": "BDU:2021-05857"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2021-05996",
+              "Impact": "High",
+              "Public": "20211111",
+              "CveID": "BDU:2021-05996"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23214",
+              "Impact": "High",
+              "Public": "20220304",
+              "CveID": "CVE-2021-23214"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-522",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23222",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-23222"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3677",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3677"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43767",
+              "Impact": "Low",
+              "Public": "20220825",
+              "CveID": "CVE-2021-43767"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600001",
+                "Comment": "libecpg6 is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600002",
+                "Comment": "libpq5 is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600003",
+                "Comment": "postgresql-devel is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600004",
+                "Comment": "postgresql-devel-static is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600005",
+                "Comment": "postgresql12 is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600006",
+                "Comment": "postgresql12-contrib is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600007",
+                "Comment": "postgresql12-docs is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600008",
+                "Comment": "postgresql12-perl is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600009",
+                "Comment": "postgresql12-python is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600010",
+                "Comment": "postgresql12-server is earlier than 0:12.9-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213600011",
+                "Comment": "postgresql12-tcl is earlier than 0:12.9-alt0.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

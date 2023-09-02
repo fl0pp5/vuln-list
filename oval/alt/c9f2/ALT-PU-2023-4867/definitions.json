@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234867",
+      "Version": "oval:org.altlinux.errata:def:20234867",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4867: package `putty` update to version 0.76-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4867",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4867",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04545",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04545",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-04891",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04891",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-17067",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17067",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17068",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17068",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17069",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17069",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14002",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14002",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33500",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33500",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36367",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36367",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades putty to version 0.76-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04545: Уязвимость реализации протокола SSH средства криптографической защиты PuTTY, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-04891: Уязвимость клиентского программного обеспечения для различных протоколов удалённого доступа Putty, связанная с выходом операции за границы буфера в памяти , позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-17067: PuTTY before 0.73 on Windows improperly opens port-forwarding listening sockets, which allows attackers to listen on the same port to steal an incoming connection.\n\n * CVE-2019-17068: PuTTY before 0.73 mishandles the \"bracketed paste mode\" protection mechanism, which may allow a session to be affected by malicious clipboard content.\n\n * CVE-2019-17069: PuTTY before 0.73 might allow remote SSH-1 servers to cause a denial of service by accessing freed memory locations via an SSH1_MSG_DISCONNECT message.\n\n * CVE-2020-14002: PuTTY 0.68 through 0.73 has an Observable Discrepancy leading to an information leak in the algorithm negotiation. This allows man-in-the-middle attackers to target initial connection attempts (where no host key for the server has been cached by the client).\n\n * CVE-2021-33500: PuTTY before 0.75 on Windows allows remote servers to cause a denial of service (Windows GUI hang) by telling the PuTTY window to change its title repeatedly at high speed, which results in many SetWindowTextA or SetWindowTextW calls. NOTE: the same attack methodology may affect some OS-level GUIs on Linux or other platforms for similar reasons.\n\n * CVE-2021-36367: PuTTY through 0.75 proceeds with establishing an SSH session even if it has never sent a substantive authentication response. This makes it easier for an attacker-controlled SSH server to present a later spoofed authentication prompt (that the attacker can use to capture credential data, and use that data for purposes that are undesired by the client user).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-15"
+          },
+          "Updated": {
+            "Date": "2023-08-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-345",
+              "Href": "https://bdu.fstec.ru/vul/2021-04545",
+              "Impact": "High",
+              "Public": "20210619",
+              "CveID": "BDU:2021-04545"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-04891",
+              "Impact": "High",
+              "Public": "20210521",
+              "CveID": "BDU:2021-04891"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17067",
+              "Impact": "Critical",
+              "Public": "20191001",
+              "CveID": "CVE-2019-17067"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17068",
+              "Impact": "High",
+              "Public": "20191001",
+              "CveID": "CVE-2019-17068"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17069",
+              "Impact": "High",
+              "Public": "20191001",
+              "CveID": "CVE-2019-17069"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14002",
+              "Impact": "Low",
+              "Public": "20200629",
+              "CveID": "CVE-2020-14002"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33500",
+              "Impact": "High",
+              "Public": "20210521",
+              "CveID": "CVE-2021-33500"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-345",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36367",
+              "Impact": "High",
+              "Public": "20210709",
+              "CveID": "CVE-2021-36367"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234867001",
+                "Comment": "putty is earlier than 0:0.76-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

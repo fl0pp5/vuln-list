@@ -1,0 +1,248 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221147",
+      "Version": "oval:org.altlinux.errata:def:20221147",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1147: package `libleptonica` update to version 1.82.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1147",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1147",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-00492",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00492",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2018-00494",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00494",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05686",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05686",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-7186",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7186",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7247",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7247",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7440",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7440",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7441",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7441",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-7442",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-7442",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-36280",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-36280",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-38266",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-38266",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libleptonica to version 1.82.0-alt1. \nSecurity Fix(es):\n\n * BDU:2018-00492: Уязвимость функции gplotMakeOutput библиотеки для работы с изображениями Leptonica, позволяющая нарушителю выполнить произвольную команду\n\n * BDU:2018-00494: Уязвимость функций gplotRead и ptaReadStream библиотеки для работы с изображениями Leptonica, позволяющая нарушителю вызвать отказ в обслуживании или оказать другое воздействие\n\n * BDU:2022-05686: Уязвимость компонента tiffio.c библиотеки обработки изображений Leptonica, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2018-7186: Leptonica before 1.75.3 does not limit the number of characters in a %s format argument to fscanf or sscanf, which allows remote attackers to cause a denial of service (stack-based buffer overflow) or possibly have unspecified other impact via a long string, as demonstrated by the gplotRead and ptaReadStream functions.\n\n * CVE-2018-7247: An issue was discovered in pixHtmlViewer in prog/htmlviewer.c in Leptonica before 1.75.3. Unsanitized input (rootname) can overflow a buffer, leading potentially to arbitrary code execution or possibly unspecified other impact.\n\n * CVE-2018-7440: An issue was discovered in Leptonica through 1.75.3. The gplotMakeOutput function allows command injection via a $(command) approach in the gplot rootname argument. This issue exists because of an incomplete fix for CVE-2018-3836.\n\n * CVE-2018-7441: Leptonica through 1.75.3 uses hardcoded /tmp pathnames, which might allow local users to overwrite arbitrary files or have unspecified other impact by creating files in advance or winning a race condition, as demonstrated by /tmp/junk_split_image.ps in prog/splitimage2pdf.c.\n\n * CVE-2018-7442: An issue was discovered in Leptonica through 1.75.3. The gplotMakeOutput function does not block '/' characters in the gplot rootname argument, potentially leading to path traversal and arbitrary file overwrite.\n\n * CVE-2020-36280: Leptonica before 1.80.0 allows a heap-based buffer over-read in pixReadFromTiffStream, related to tiffio.c.\n\n * CVE-2022-38266: An issue in the Leptonica linked library (v1.79.0) allows attackers to cause an arithmetic exception leading to a Denial of Service (DoS) via a crafted JPEG file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-26"
+          },
+          "Updated": {
+            "Date": "2022-01-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2018-00492",
+              "Impact": "Critical",
+              "Public": "20180215",
+              "CveID": "BDU:2018-00492"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2018-00494",
+              "Impact": "Critical",
+              "Public": "20180214",
+              "CveID": "BDU:2018-00494"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-05686",
+              "Impact": "High",
+              "Public": "20200312",
+              "CveID": "BDU:2022-05686"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7186",
+              "Impact": "Critical",
+              "Public": "20180216",
+              "CveID": "CVE-2018-7186"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7247",
+              "Impact": "Critical",
+              "Public": "20180219",
+              "CveID": "CVE-2018-7247"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7440",
+              "Impact": "Critical",
+              "Public": "20180223",
+              "CveID": "CVE-2018-7440"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7441",
+              "Impact": "High",
+              "Public": "20180223",
+              "CveID": "CVE-2018-7441"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-7442",
+              "Impact": "Critical",
+              "Public": "20180223",
+              "CveID": "CVE-2018-7442"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-36280",
+              "Impact": "High",
+              "Public": "20210312",
+              "CveID": "CVE-2020-36280"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-38266",
+              "Impact": "Low",
+              "Public": "20220909",
+              "CveID": "CVE-2022-38266"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221147001",
+                "Comment": "libleptonica is earlier than 0:1.82.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221147002",
+                "Comment": "libleptonica-devel is earlier than 0:1.82.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221147003",
+                "Comment": "libleptonica-devel-static is earlier than 0:1.82.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221147004",
+                "Comment": "libleptonica-doc is earlier than 0:1.82.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

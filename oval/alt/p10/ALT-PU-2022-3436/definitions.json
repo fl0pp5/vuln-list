@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223436",
+      "Version": "oval:org.altlinux.errata:def:20223436",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3436: package `thunderbird` update to version 102.6.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3436",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3436",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-46874",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-46874",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 102.6.1-alt1. \nSecurity Fix(es):\n\n * CVE-2022-46874: A file with a long filename could have had its filename truncated to remove the valid extension, leaving a malicious extension in its place. This could potentially led to user confusion and the execution of malicious code.\u003cbr/\u003e*Note*: This issue was originally included in the advisories for Thunderbird 102.6, but a patch (specific to Thunderbird) was omitted, resulting in it actually being fixed in Thunderbird 102.6.1. This vulnerability affects Firefox \u003c 108, Thunderbird \u003c 102.6.1, Thunderbird \u003c 102.6, and Firefox ESR \u003c 102.6.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-29"
+          },
+          "Updated": {
+            "Date": "2022-12-29"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-46874",
+              "Impact": "High",
+              "Public": "20221222",
+              "CveID": "CVE-2022-46874"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223436001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:102.6.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223436002",
+                "Comment": "thunderbird is earlier than 0:102.6.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223436003",
+                "Comment": "thunderbird-wayland is earlier than 0:102.6.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

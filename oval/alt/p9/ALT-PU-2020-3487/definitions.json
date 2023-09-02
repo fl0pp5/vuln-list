@@ -1,0 +1,202 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203487",
+      "Version": "oval:org.altlinux.errata:def:20203487",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3487: package `libiec61850` update to version 1.4.2.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3487",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3487",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-1010300",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010300",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16510",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16510",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6135",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6135",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6136",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6136",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6138",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6138",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6719",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6719",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7054",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7054",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libiec61850 to version 1.4.2.1-alt1. \nSecurity Fix(es):\n\n * CVE-2019-1010300: mz-automation libiec61850 1.3.2 1.3.1 1.3.0 is affected by: Buffer Overflow. The impact is: Software crash. The component is: server_example_complex_array. The attack vector is: Send a specific MMS protocol packet.\n\n * CVE-2019-16510: libIEC61850 through 1.3.3 has a use-after-free in MmsServer_waitReady in mms/iso_mms/server/mms_server.c, as demonstrated by server_example_goose.\n\n * CVE-2019-6135: An issue has been found in libIEC61850 v1.3.1. Memory_malloc in hal/memory/lib_memory.c has a memory leak when called from Asn1PrimitiveValue_create in mms/asn1/asn1_ber_primitive_value.c, as demonstrated by goose_publisher_example.c and iec61850_9_2_LE_example.c.\n\n * CVE-2019-6136: An issue has been found in libIEC61850 v1.3.1. Ethernet_setProtocolFilter in hal/ethernet/linux/ethernet_linux.c has a SEGV, as demonstrated by sv_subscriber_example.c and sv_subscriber.c.\n\n * CVE-2019-6138: An issue has been found in libIEC61850 v1.3.1. Memory_malloc and Memory_calloc in hal/memory/lib_memory.c have memory leaks when called from mms/iso_mms/common/mms_value.c, server/mms_mapping/mms_mapping.c, and server/mms_mapping/mms_sv.c (via common/string_utilities.c), as demonstrated by iec61850_9_2_LE_example.c.\n\n * CVE-2019-6719: An issue has been found in libIEC61850 v1.3.1. There is a use-after-free in the getState function in mms/iso_server/iso_server.c, as demonstrated by examples/server_example_goose/server_example_goose.c and examples/server_example_61400_25/server_example_61400_25.c.\n\n * CVE-2020-7054: MmsValue_decodeMmsData in mms/iso_mms/server/mms_access_result.c in libIEC61850 through 1.4.0 has a heap-based buffer overflow when parsing the MMS_BIT_STRING data type.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-10"
+          },
+          "Updated": {
+            "Date": "2020-12-10"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-1010300",
+              "Impact": "High",
+              "Public": "20190715",
+              "CveID": "CVE-2019-1010300"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16510",
+              "Impact": "High",
+              "Public": "20190919",
+              "CveID": "CVE-2019-16510"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6135",
+              "Impact": "High",
+              "Public": "20190111",
+              "CveID": "CVE-2019-6135"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6136",
+              "Impact": "High",
+              "Public": "20190111",
+              "CveID": "CVE-2019-6136"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6138",
+              "Impact": "High",
+              "Public": "20190111",
+              "CveID": "CVE-2019-6138"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6719",
+              "Impact": "High",
+              "Public": "20190123",
+              "CveID": "CVE-2019-6719"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7054",
+              "Impact": "High",
+              "Public": "20200114",
+              "CveID": "CVE-2020-7054"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203487001",
+                "Comment": "libiec61850 is earlier than 0:1.4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203487002",
+                "Comment": "libiec61850-devel is earlier than 0:1.4.2.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203487003",
+                "Comment": "libiec61850-devel-static is earlier than 0:1.4.2.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

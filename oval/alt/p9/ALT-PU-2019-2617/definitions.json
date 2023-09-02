@@ -1,0 +1,158 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192617",
+      "Version": "oval:org.altlinux.errata:def:20192617",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2617: package `kernel-image-std-def` update to version 4.19.69-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2617",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2617",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-15538",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15538",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 4.19.69-alt1. \nSecurity Fix(es):\n\n * CVE-2019-15538: An issue was discovered in xfs_setattr_nonsize in fs/xfs/xfs_iops.c in the Linux kernel through 5.2.9. XFS partially wedges when a chgrp fails on account of being out of disk quota. xfs_setattr_nonsize is failing to unlock the ILOCK after the xfs_qm_vop_chown_reserve call fails. This is primarily a local DoS attack vector, but it might result as well in remote DoS if the XFS filesystem is exported for instance via NFS.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-03"
+          },
+          "Updated": {
+            "Date": "2019-09-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15538",
+              "Impact": "High",
+              "Public": "20190825",
+              "CveID": "CVE-2019-15538"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617001",
+                "Comment": "kernel-doc-std is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617003",
+                "Comment": "kernel-headers-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617005",
+                "Comment": "kernel-image-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617011",
+                "Comment": "kernel-modules-kvm-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:4.19.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192617013",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:4.19.69-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

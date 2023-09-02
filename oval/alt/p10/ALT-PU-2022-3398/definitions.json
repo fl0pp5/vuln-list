@@ -1,0 +1,186 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223398",
+      "Version": "oval:org.altlinux.errata:def:20223398",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3398: package `Mesa` update to version 22.3.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3398",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3398",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades Mesa to version 22.3.1-alt1. \nSecurity Fix(es):\n\n * #42849: нет zink\n\n * #44249: не собран opencl",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-22"
+          },
+          "Updated": {
+            "Date": "2022-12-22"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "42849",
+              "Href": "https://bugzilla.altlinux.org/42849",
+              "Data": "нет zink"
+            },
+            {
+              "Id": "44249",
+              "Href": "https://bugzilla.altlinux.org/44249",
+              "Data": "не собран opencl"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398001",
+                "Comment": "libEGL-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398002",
+                "Comment": "libEGL-mesa is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398003",
+                "Comment": "libGL-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398004",
+                "Comment": "libGLX-mesa is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398005",
+                "Comment": "libMesaOpenCL is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398006",
+                "Comment": "libOSMesa is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398007",
+                "Comment": "libOSMesa-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398008",
+                "Comment": "libd3d is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398009",
+                "Comment": "libd3d-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398010",
+                "Comment": "libgbm is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398011",
+                "Comment": "libgbm-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398012",
+                "Comment": "libxatracker is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398013",
+                "Comment": "libxatracker-devel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398014",
+                "Comment": "mesa-dri-drivers is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398015",
+                "Comment": "xorg-dri-armsoc is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398016",
+                "Comment": "xorg-dri-intel is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398017",
+                "Comment": "xorg-dri-nouveau is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398018",
+                "Comment": "xorg-dri-radeon is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398019",
+                "Comment": "xorg-dri-swrast is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398020",
+                "Comment": "xorg-dri-virtio is earlier than 4:22.3.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223398021",
+                "Comment": "xorg-dri-vmwgfx is earlier than 4:22.3.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

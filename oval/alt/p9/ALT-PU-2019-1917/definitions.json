@@ -1,0 +1,273 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20191917",
+      "Version": "oval:org.altlinux.errata:def:20191917",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-1917: package `ghostscript` update to version 9.27-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-1917",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-1917",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-00687",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00687",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-01299",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01299",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-01300",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-01300",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02467",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02467",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05874",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05874",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-25059",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-25059",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3835",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3835",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3838",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3838",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-3839",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-3839",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6116",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6116",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ghostscript to version 9.27-alt1. \nSecurity Fix(es):\n\n * BDU:2019-00687: Уязвимость набора программного обеспечения для обработки, преобразования и генерации документов Ghostscript, связанная с ошибками в коде, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2019-01299: Уязвимость программы конвертирования файлов Ghostscript, связанная с небезопасным управлением привилегиями, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2019-01300: Уязвимость метода DefineResource программы конвертирования файлов Ghostscript, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2019-02467: Уязвимость программы конвертирования файлов формата PostScript Ghostscript, связанная с неправильным использованием привилегированных API, позволяющая нарушителю получить доступ к файловой системе в обход ограничений\n\n * BDU:2022-05874: Уязвимость набора программного обеспечения обработки документов Ghostscript, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-25059: Artifex Ghostscript through 9.26 mishandles .completefont. NOTE: this issue exists because of an incomplete fix for CVE-2019-3839.\n\n * CVE-2019-3835: It was found that the superexec operator was available in the internal dictionary in ghostscript before 9.27. A specially crafted PostScript file could use this flaw in order to, for example, have access to the file system outside of the constrains imposed by -dSAFER.\n\n * CVE-2019-3838: It was found that the forceput operator could be extracted from the DefineResource method in ghostscript before 9.27. A specially crafted PostScript file could use this flaw in order to, for example, have access to the file system outside of the constrains imposed by -dSAFER.\n\n * CVE-2019-3839: It was found that in ghostscript some privileged operators remained accessible from various places after the CVE-2019-6116 fix. A specially crafted PostScript file could use this flaw in order to, for example, have access to the file system outside of the constrains imposed by -dSAFER. Ghostscript versions before 9.27 are vulnerable.\n\n * CVE-2019-6116: In Artifex Ghostscript through 9.26, ephemeral or transient procedures can allow access to system operators, leading to remote code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-05-27"
+          },
+          "Updated": {
+            "Date": "2019-05-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-17",
+              "Href": "https://bdu.fstec.ru/vul/2019-00687",
+              "Impact": "High",
+              "Public": "20190123",
+              "CveID": "BDU:2019-00687"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2019-01299",
+              "Impact": "High",
+              "Public": "20190214",
+              "CveID": "BDU:2019-01299"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2019-01300",
+              "Impact": "High",
+              "Public": "20190220",
+              "CveID": "BDU:2019-01300"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-648",
+              "Href": "https://bdu.fstec.ru/vul/2019-02467",
+              "Impact": "High",
+              "Public": "20190207",
+              "CveID": "BDU:2019-02467"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-05874",
+              "Impact": "High",
+              "Public": "20190130",
+              "CveID": "BDU:2022-05874"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-25059",
+              "Impact": "High",
+              "Public": "20220425",
+              "CveID": "CVE-2019-25059"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3835",
+              "Impact": "Low",
+              "Public": "20190325",
+              "CveID": "CVE-2019-3835"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3838",
+              "Impact": "Low",
+              "Public": "20190325",
+              "CveID": "CVE-2019-3838"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-3839",
+              "Impact": "High",
+              "Public": "20190516",
+              "CveID": "CVE-2019-3839"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6116",
+              "Impact": "High",
+              "Public": "20190321",
+              "CveID": "CVE-2019-6116"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917001",
+                "Comment": "ghostscript is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917002",
+                "Comment": "ghostscript-classic is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917003",
+                "Comment": "ghostscript-common is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917004",
+                "Comment": "ghostscript-gtk is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917005",
+                "Comment": "ghostscript-module-X is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917006",
+                "Comment": "ghostscript-utils is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917007",
+                "Comment": "libgs is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917008",
+                "Comment": "libgs-devel is earlier than 0:9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917009",
+                "Comment": "libijs is earlier than 0:0.35_9.27-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20191917010",
+                "Comment": "libijs-devel is earlier than 0:9.27-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

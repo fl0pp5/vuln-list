@@ -1,0 +1,193 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212749",
+      "Version": "oval:org.altlinux.errata:def:20212749",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2749: package `kernel-image-un-def` update to version 5.13.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2749",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2749",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04853",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04853",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05536",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05536",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-34866",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-34866",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-40490",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-40490",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.13.14-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04853: Уязвимость функции ext4_write_inline_data_end (fs/ext4/inline.c) ядра операционной системы Linux, позволяющая нарушителю оказать влияние на целостность, доступность и конфиденциальность данных\n\n * BDU:2021-05536: Уязвимость реализации функции check_map_func_compatibility() ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-34866: This vulnerability allows local attackers to escalate privileges on affected installations of Linux Kernel 5.14-rc3. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. The specific flaw exists within the handling of eBPF programs. The issue results from the lack of proper validation of user-supplied eBPF programs, which can result in a type confusion condition. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of the kernel. Was ZDI-CAN-14689.\n\n * CVE-2021-40490: A race condition was discovered in ext4_write_inline_data_end in fs/ext4/inline.c in the ext4 subsystem in the Linux kernel through 5.13.13.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-08"
+          },
+          "Updated": {
+            "Date": "2021-09-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2021-04853",
+              "Impact": "High",
+              "Public": "20210903",
+              "CveID": "BDU:2021-04853"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-697, CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2021-05536",
+              "Impact": "High",
+              "Public": "20210820",
+              "CveID": "BDU:2021-05536"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-34866",
+              "Impact": "High",
+              "Public": "20220125",
+              "CveID": "CVE-2021-34866"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-40490",
+              "Impact": "High",
+              "Public": "20210903",
+              "CveID": "CVE-2021-40490"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749001",
+                "Comment": "kernel-doc-un is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749006",
+                "Comment": "kernel-image-un-def-checkinstall is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749007",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749008",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749010",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.13.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212749011",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.13.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

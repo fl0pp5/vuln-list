@@ -1,0 +1,301 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213243",
+      "Version": "oval:org.altlinux.errata:def:20213243",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3243: package `firefox-esr` update to version 91.3.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3243",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3243",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05696",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05696",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05703",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05703",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05704",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05704",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05705",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05705",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05706",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05706",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05708",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05708",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-38503",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38503",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38504",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38504",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38505",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38505",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38506",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38506",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38507",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38507",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38508",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38508",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38509",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38509",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-38510",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38510",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 91.3.0-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05696: Уязвимость веб-браузера Firefox и почтового клиента Thunderbird, связанная с использованием памяти после её освобождения, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05703: Уязвимость браузера Mozilla Firefox, связанная с некорректным ограничением визуализированных слоев пользовательского интерфейса, позволяющая нарушителю проводить атаки с использованием спуфинга\n\n * BDU:2021-05704: Уязвимость браузера Mozilla Firefox, связанная с ошибками в настройках безопасности, позволяющая нарушителю обойти введенные ограничения безопасности\n\n * BDU:2021-05705: Уязвимость браузера Mozilla Firefox, связанная с недостаточным предупреждением об опасных действиях, позволяющая нарушителю провести атаку с использованием спуфинга\n\n * BDU:2021-05706: Уязвимость браузера Mozilla Firefox, связанная с ошибками в настройках безопасности, позволяющая нарушителю обойти существующие ограничения безопасности\n\n * BDU:2021-05708: Уязвимость браузера Mozilla Firefox, связанная с некорректным ограничением визуализированных слоев пользовательского интерфейса, позволяющая нарушителю проводить атаки с использованием спуфинга\n\n * CVE-2021-38503: The iframe sandbox rules were not correctly applied to XSLT stylesheets, allowing an iframe to bypass restrictions such as executing scripts or navigating the top-level frame. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38504: When interacting with an HTML input element's file picker dialog with webkitdirectory set, a use-after-free could have resulted, leading to memory corruption and a potentially exploitable crash. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38505: Microsoft introduced a new feature in Windows 10 known as Cloud Clipboard which, if enabled, will record data copied to the clipboard to the cloud, and make it available on other computers in certain scenarios. Applications that wish to prevent copied data from being recorded in Cloud History must use specific clipboard formats; and Firefox before versions 94 and ESR 91.3 did not implement them. This could have caused sensitive data to be recorded to a user's Microsoft account. *This bug only affects Firefox for Windows 10+ with Cloud Clipboard enabled. Other operating systems are unaffected.*. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38506: Through a series of navigations, Firefox could have entered fullscreen mode without notification or warning to the user. This could lead to spoofing attacks on the browser UI including phishing. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38507: The Opportunistic Encryption feature of HTTP2 (RFC 8164) allows a connection to be transparently upgraded to TLS while retaining the visual properties of an HTTP connection, including being same-origin with unencrypted connections on port 80. However, if a second encrypted port on the same IP address (e.g. port 8443) did not opt-in to opportunistic encryption; a network attacker could forward a connection from the browser to port 443 to port 8443, causing the browser to treat the content of port 8443 as same-origin with HTTP. This was resolved by disabling the Opportunistic Encryption feature, which had low usage. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38508: By displaying a form validity message in the correct location at the same time as a permission prompt (such as for geolocation), the validity message could have obscured the prompt, resulting in the user potentially being tricked into granting the permission. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38509: Due to an unusual sequence of attacker-controlled events, a Javascript alert() dialog with arbitrary (although unstyled) contents could be displayed over top an uncontrolled webpage of the attacker's choosing. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.\n\n * CVE-2021-38510: The executable file warning was not presented when downloading .inetloc files, which, due to a flaw in Mac OS, can run commands on a user's computer.*Note: This issue only affected Mac OS operating systems. Other operating systems are unaffected.*. This vulnerability affects Firefox \u003c 94, Thunderbird \u003c 91.3, and Firefox ESR \u003c 91.3.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-09"
+          },
+          "Updated": {
+            "Date": "2021-11-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-05696",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05696"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://bdu.fstec.ru/vul/2021-05703",
+              "Impact": "Low",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05703"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-254",
+              "Href": "https://bdu.fstec.ru/vul/2021-05704",
+              "Impact": "Low",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05704"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-357",
+              "Href": "https://bdu.fstec.ru/vul/2021-05705",
+              "Impact": "Low",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05705"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-254",
+              "Href": "https://bdu.fstec.ru/vul/2021-05706",
+              "Impact": "High",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05706"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://bdu.fstec.ru/vul/2021-05708",
+              "Impact": "Low",
+              "Public": "20211102",
+              "CveID": "BDU:2021-05708"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38503",
+              "Impact": "Critical",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38503"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38504",
+              "Impact": "High",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38504"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-668",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38505",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38505"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38506",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38506"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-346",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38507",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38507"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38508",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38508"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-1021",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38509",
+              "Impact": "Low",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38509"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38510",
+              "Impact": "High",
+              "Public": "20211208",
+              "CveID": "CVE-2021-38510"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213243001",
+                "Comment": "firefox-esr is earlier than 0:91.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213243002",
+                "Comment": "firefox-esr-config-privacy is earlier than 0:91.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213243003",
+                "Comment": "firefox-esr-wayland is earlier than 0:91.3.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

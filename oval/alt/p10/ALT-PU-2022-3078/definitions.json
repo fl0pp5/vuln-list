@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223078",
+      "Version": "oval:org.altlinux.errata:def:20223078",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3078: package `glpi` update to version 9.5.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3078",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3078",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-39234",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39234",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39262",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39262",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39276",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39276",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39277",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39277",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39323",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39323",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39370",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39370",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39372",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39372",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39375",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39375",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39376",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39376",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glpi to version 9.5.11-alt1. \nSecurity Fix(es):\n\n * CVE-2022-39234: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Deleted/deactivated user could continue to use their account as long as its cookie is valid. This issue has been patched, please upgrade to version 10.0.4. There are currently no known workarounds.\n\n * CVE-2022-39262: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package, GLPI administrator can define rich-text content to be displayed on login page. The displayed content is can contains malicious code that can be used to steal credentials. This issue has been patched, please upgrade to version 10.0.4.\n\n * CVE-2022-39276: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Usage of RSS feeds or an external calendar in planning is subject to SSRF exploit. In case a remote script returns a redirect response, the redirect target URL is not checked against the URL allow list defined by administrator. This issue has been patched, please upgrade to 10.0.4. There are currently no known workarounds.\n\n * CVE-2022-39277: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. External links are not properly sanitized and can therefore be used for a Cross-Site Scripting (XSS) attack. This issue has been patched, please upgrade to GLPI 10.0.4. There are currently no known workarounds.\n\n * CVE-2022-39323: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Time based attack using a SQL injection in api REST user_token. This issue has been patched, please upgrade to version 10.0.4. As a workaround, disable login with user_token on API Rest.\n\n * CVE-2022-39370: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Connected users may gain access to debug panel through the GLPI update script. This issue has been patched, please upgrade to 10.0.4. As a workaround, delete the `install/update.php` script.\n\n * CVE-2022-39372: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Authenticated users may store malicious code in their account information. This issue has been patched, please upgrade to version 10.0.4. There are currently no known workarounds.\n\n * CVE-2022-39375: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Users may be able to create a public RSS feed to inject malicious code in dashboards of other users. This issue has been patched, please upgrade to version 10.0.4. There are currently no known workarounds.\n\n * CVE-2022-39376: GLPI stands for Gestionnaire Libre de Parc Informatique. GLPI is a Free Asset and IT Management Software package that provides ITIL Service Desk features, licenses tracking and software auditing. Users may be able to inject custom fields values in `mailto` links. This issue has been patched, please upgrade to version 10.0.4. There are currently no known workarounds.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-14"
+          },
+          "Updated": {
+            "Date": "2022-11-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-613",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39234",
+              "Impact": "High",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39234"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39262",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39262"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39276",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39276"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39277",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39277"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39323",
+              "Impact": "Critical",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39323"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39370",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39370"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39372",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39372"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39375",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39375"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39376",
+              "Impact": "Low",
+              "Public": "20221103",
+              "CveID": "CVE-2022-39376"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223078001",
+                "Comment": "glpi is earlier than 0:9.5.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223078002",
+                "Comment": "glpi-apache2 is earlier than 0:9.5.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223078003",
+                "Comment": "glpi-php7 is earlier than 0:9.5.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222088",
+      "Version": "oval:org.altlinux.errata:def:20222088",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2088: package `lazarus` update to version 2.2.2.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2088",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2088",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades lazarus to version 2.2.2.0-alt2. \nSecurity Fix(es):\n\n * #42054: Отсутствует справка в Lazarus\n\n * #42077: Не хватает зависимости на основной пакет",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-20"
+          },
+          "Updated": {
+            "Date": "2022-06-20"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "42054",
+              "Href": "https://bugzilla.altlinux.org/42054",
+              "Data": "Отсутствует справка в Lazarus"
+            },
+            {
+              "Id": "42077",
+              "Href": "https://bugzilla.altlinux.org/42077",
+              "Data": "Не хватает зависимости на основной пакет"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222088001",
+                "Comment": "lazarus is earlier than 1:2.2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222088002",
+                "Comment": "lazarus-gtk is earlier than 1:2.2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222088003",
+                "Comment": "lazarus-qt5 is earlier than 1:2.2.2.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222088004",
+                "Comment": "qt5pas is earlier than 1:2.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222088005",
+                "Comment": "qt5pas-devel is earlier than 1:2.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

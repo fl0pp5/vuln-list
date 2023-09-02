@@ -1,0 +1,201 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232028",
+      "Version": "oval:org.altlinux.errata:def:20232028",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2028: package `dbus` update to version 1.14.6-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2028",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2028",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06389",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06389",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06391",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06391",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06394",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06394",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-42010",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42010",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42011",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42011",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42012",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42012",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dbus to version 1.14.6-alt2. \nSecurity Fix(es):\n\n * BDU:2022-06389: Уязвимость системы межпроцессного взаимодействия D-Bus, связанная с достижимостью утверждения в отладочных сборках, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06391: Уязвимость системы межпроцессного взаимодействия D-Bus, связанная с ошибкой использования памяти после освобождения, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06394: Уязвимость системы межпроцессного взаимодействия D-Bus, связанная с граничной ошибкой, вызванной недопустимым массивом элементов фиксированной длины, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-42010: An issue was discovered in D-Bus before 1.12.24, 1.13.x and 1.14.x before 1.14.4, and 1.15.x before 1.15.2. An authenticated attacker can cause dbus-daemon and other programs that use libdbus to crash when receiving a message with certain invalid type signatures.\n\n * CVE-2022-42011: An issue was discovered in D-Bus before 1.12.24, 1.13.x and 1.14.x before 1.14.4, and 1.15.x before 1.15.2. An authenticated attacker can cause dbus-daemon and other programs that use libdbus to crash when receiving a message where an array length is inconsistent with the size of the element type.\n\n * CVE-2022-42012: An issue was discovered in D-Bus before 1.12.24, 1.13.x and 1.14.x before 1.14.4, and 1.15.x before 1.15.2. An authenticated attacker can cause dbus-daemon and other programs that use libdbus to crash by sending a message with attached file descriptors in an unexpected format.\n\n * #45542: зависимость на /proc",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-19"
+          },
+          "Updated": {
+            "Date": "2023-06-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-617",
+              "Href": "https://bdu.fstec.ru/vul/2022-06389",
+              "Impact": "Low",
+              "Public": "20221009",
+              "CveID": "BDU:2022-06389"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06391",
+              "Impact": "Low",
+              "Public": "20221009",
+              "CveID": "BDU:2022-06391"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-129",
+              "Href": "https://bdu.fstec.ru/vul/2022-06394",
+              "Impact": "Low",
+              "Public": "20221009",
+              "CveID": "BDU:2022-06394"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-347",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42010",
+              "Impact": "Low",
+              "Public": "20221010",
+              "CveID": "CVE-2022-42010"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-129",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42011",
+              "Impact": "Low",
+              "Public": "20221010",
+              "CveID": "CVE-2022-42011"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42012",
+              "Impact": "Low",
+              "Public": "20221010",
+              "CveID": "CVE-2022-42012"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45542",
+              "Href": "https://bugzilla.altlinux.org/45542",
+              "Data": "зависимость на /proc"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232028001",
+                "Comment": "dbus is earlier than 0:1.14.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232028002",
+                "Comment": "dbus-tools is earlier than 0:1.14.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232028003",
+                "Comment": "dbus-tools-gui is earlier than 0:1.14.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232028004",
+                "Comment": "libdbus is earlier than 0:1.14.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232028005",
+                "Comment": "libdbus-devel is earlier than 0:1.14.6-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

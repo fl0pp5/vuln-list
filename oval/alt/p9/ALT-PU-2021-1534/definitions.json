@@ -1,0 +1,171 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211534",
+      "Version": "oval:org.altlinux.errata:def:20211534",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1534: package `python-module-yaml` update to version 5.4.1-alt0.p9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1534",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1534",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02851",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02851",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03488",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03488",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20477",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20477",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14343",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-1747",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1747",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python-module-yaml to version 5.4.1-alt0.p9. \nSecurity Fix(es):\n\n * BDU:2020-02851: Уязвимость метода full_load и загрузчика FullLoader библиотеки PyYAML, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03488: Уязвимость синтаксического анализатора PyYAML, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-20477: PyYAML 5.1 through 5.1.2 has insufficient restrictions on the load and load_all functions because of a class deserialization issue, e.g., Popen is a class in the subprocess module. NOTE: this issue exists because of an incomplete fix for CVE-2017-18342.\n\n * CVE-2020-14343: A vulnerability was discovered in the PyYAML library in versions before 5.4, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. This flaw allows an attacker to execute arbitrary code on the system by abusing the python/object/new constructor. This flaw is due to an incomplete fix for CVE-2020-1747.\n\n * CVE-2020-1747: A vulnerability was discovered in the PyYAML library in versions before 5.3.1, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method or with the FullLoader loader. Applications that use the library to process untrusted input may be vulnerable to this flaw. An attacker could use this flaw to execute arbitrary code on the system by abusing the python/object/new constructor.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-22"
+          },
+          "Updated": {
+            "Date": "2021-03-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-02851",
+              "Impact": "Critical",
+              "Public": "20200324",
+              "CveID": "BDU:2020-02851"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03488",
+              "Impact": "Critical",
+              "Public": "20210704",
+              "CveID": "BDU:2021-03488"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-502",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20477",
+              "Impact": "Critical",
+              "Public": "20200219",
+              "CveID": "CVE-2019-20477"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14343",
+              "Impact": "Critical",
+              "Public": "20210209",
+              "CveID": "CVE-2020-14343"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1747",
+              "Impact": "Critical",
+              "Public": "20200324",
+              "CveID": "CVE-2020-1747"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211534001",
+                "Comment": "python-module-yaml is earlier than 0:5.4.1-alt0.p9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211534002",
+                "Comment": "python3-module-yaml is earlier than 0:5.4.1-alt0.p9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

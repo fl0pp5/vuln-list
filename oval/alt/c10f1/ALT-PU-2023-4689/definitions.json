@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234689",
+      "Version": "oval:org.altlinux.errata:def:20234689",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4689: package `golang` update to version 1.19.12-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4689",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4689",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-29409",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29409",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.19.12-alt1. \nSecurity Fix(es):\n\n * CVE-2023-29409: Extremely large RSA keys in certificate chains can cause a client/server to expend significant CPU time verifying signatures. With fix, the size of RSA keys transmitted during handshakes is restricted to \u003c= 8192 bits. Based on a survey of publicly trusted RSA keys, there are currently only three certificates in circulation with keys larger than this, and all three appear to be test certificates that are not actively deployed. It is possible there are larger keys in use in private PKIs, but we target the web PKI, so causing breakage here in the interests of increasing the default safety of users of crypto/tls seems reasonable.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-03"
+          },
+          "Updated": {
+            "Date": "2023-08-03"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29409",
+              "Impact": "Low",
+              "Public": "20230802",
+              "CveID": "CVE-2023-29409"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689001",
+                "Comment": "golang is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689002",
+                "Comment": "golang-docs is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689003",
+                "Comment": "golang-gdb is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689004",
+                "Comment": "golang-misc is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689005",
+                "Comment": "golang-shared is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689006",
+                "Comment": "golang-src is earlier than 0:1.19.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234689007",
+                "Comment": "golang-tests is earlier than 0:1.19.12-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

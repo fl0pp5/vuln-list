@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201532",
+      "Version": "oval:org.altlinux.errata:def:20201532",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1532: package `kde5-kmail` update to version 19.12.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1532",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1532",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-11880",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11880",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kde5-kmail to version 19.12.3-alt1. \nSecurity Fix(es):\n\n * CVE-2020-11880: An issue was discovered in KDE KMail before 19.12.3. By using the proprietary (non-RFC6068) \"mailto?attach=...\" parameter, a website (or other source of mailto links) can make KMail attach local files to a composed email message without showing a warning to the user, as demonstrated by an attach=.bash_history value.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-20"
+          },
+          "Updated": {
+            "Date": "2020-03-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11880",
+              "Impact": "Low",
+              "Public": "20200417",
+              "CveID": "CVE-2020-11880"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201532001",
+                "Comment": "kde5-kmail is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201532002",
+                "Comment": "kde5-kmail-common is earlier than 0:19.12.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201532003",
+                "Comment": "libkmailprivate5 is earlier than 0:19.12.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

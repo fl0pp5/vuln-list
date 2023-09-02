@@ -1,0 +1,214 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231070",
+      "Version": "oval:org.altlinux.errata:def:20231070",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1070: package `kernel-image-un-def` update to version 5.10.163-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1070",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1070",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07336",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07336",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00361",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00361",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01200",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01200",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3424",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3424",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4378",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4378",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0461",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0461",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.163-alt1. \nSecurity Fix(es):\n\n * BDU:2022-07336: Уязвимость функции __do_proc_dointvec ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2023-00361: Уязвимость функций gru_set_context_option(), gru_fault() и gru_handle_user_call_os() драйвера SGI GRU ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2023-01200: Уязвимость реализации протокола Upper Level Protocol (ULP) ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии, выполнить произвольный код или вызвать отказ в обслуживании\n\n * CVE-2022-3424: A use-after-free flaw was found in the Linux kernel’s SGI GRU driver in the way the first gru_file_unlocked_ioctl function is called by the user, where a fail pass occurs in the gru_check_chiplet_assignment function. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n\n * CVE-2022-4378: A stack overflow flaw was found in the Linux kernel's SYSCTL subsystem in how a user changes certain kernel parameters and variables. This flaw allows a local user to crash or potentially escalate their privileges on the system.\n\n * CVE-2023-0461: There is a use-after-free vulnerability in the Linux Kernel which can be exploited to achieve local privilege escalation. To reach the vulnerability kernel configuration flag CONFIG_TLS or CONFIG_XFRM_ESPINTCP has to be configured, but the operation does not require any privilege.\n\nThere is a use-after-free bug of icsk_ulp_data of a struct inet_connection_sock.\n\nWhen CONFIG_TLS is enabled, user can install a tls context (struct tls_context) on a connected tcp socket. The context is not cleared if this socket is disconnected and reused as a listener. If a new socket is created from the listener, the context is inherited and vulnerable.\n\nThe setsockopt TCP_ULP operation does not require any privilege.\n\nWe recommend upgrading past commit 2c02d41d71f90a5168391b6a5f2954112ba2307c",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-18"
+          },
+          "Updated": {
+            "Date": "2023-01-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-474",
+              "Href": "https://bdu.fstec.ru/vul/2022-07336",
+              "Impact": "High",
+              "Public": "20221116",
+              "CveID": "BDU:2022-07336"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00361",
+              "Impact": "High",
+              "Public": "20221123",
+              "CveID": "BDU:2023-00361"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01200",
+              "Impact": "High",
+              "Public": "20230104",
+              "CveID": "BDU:2023-01200"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3424",
+              "Impact": "High",
+              "Public": "20230306",
+              "CveID": "CVE-2022-3424"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4378",
+              "Impact": "High",
+              "Public": "20230105",
+              "CveID": "CVE-2022-4378"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0461",
+              "Impact": "High",
+              "Public": "20230228",
+              "CveID": "CVE-2023-0461"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.163-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231070010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.163-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

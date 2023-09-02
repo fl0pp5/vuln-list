@@ -1,0 +1,167 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221435",
+      "Version": "oval:org.altlinux.errata:def:20221435",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1435: package `golang` update to version 1.16.15-alt1.c9",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1435",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1435",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03899",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03899",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-23772",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23772",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23773",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23773",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23806",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23806",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24921",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24921",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.16.15-alt1.c9. \nSecurity Fix(es):\n\n * BDU:2022-03899: Уязвимость реализации функции SetString() класса Rat пакета math/big языка программирования Go, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-23772: Rat.SetString in math/big in Go before 1.16.14 and 1.17.x before 1.17.7 has an overflow that can lead to Uncontrolled Memory Consumption.\n\n * CVE-2022-23773: cmd/go in Go before 1.16.14 and 1.17.x before 1.17.7 can misinterpret branch names that falsely appear to be version tags. This can lead to incorrect access control if an actor is supposed to be able to create branches but not tags.\n\n * CVE-2022-23806: Curve.IsOnCurve in crypto/elliptic in Go before 1.16.14 and 1.17.x before 1.17.7 can incorrectly return true in situations with a big.Int value that is not a valid field element.\n\n * CVE-2022-24921: regexp.Compile in Go before 1.16.15 and 1.17.x before 1.17.8 allows stack exhaustion via a deeply nested expression.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-05"
+          },
+          "Updated": {
+            "Date": "2022-03-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190, CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-03899",
+              "Impact": "High",
+              "Public": "20220120",
+              "CveID": "BDU:2022-03899"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23772",
+              "Impact": "High",
+              "Public": "20220211",
+              "CveID": "CVE-2022-23772"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-436",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23773",
+              "Impact": "High",
+              "Public": "20220211",
+              "CveID": "CVE-2022-23773"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-252",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23806",
+              "Impact": "Critical",
+              "Public": "20220211",
+              "CveID": "CVE-2022-23806"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24921",
+              "Impact": "High",
+              "Public": "20220305",
+              "CveID": "CVE-2022-24921"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435001",
+                "Comment": "golang is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435002",
+                "Comment": "golang-docs is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435003",
+                "Comment": "golang-gdb is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435004",
+                "Comment": "golang-misc is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435005",
+                "Comment": "golang-shared is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435006",
+                "Comment": "golang-src is earlier than 0:1.16.15-alt1.c9"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221435007",
+                "Comment": "golang-tests is earlier than 0:1.16.15-alt1.c9"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

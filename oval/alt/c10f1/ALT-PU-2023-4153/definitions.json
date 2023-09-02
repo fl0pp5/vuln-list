@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234153",
+      "Version": "oval:org.altlinux.errata:def:20234153",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4153: package `redis` update to version 6.2.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4153",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4153",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02940",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02940",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02945",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02945",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-24735",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24735",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-24736",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-24736",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades redis to version 6.2.8-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02940: Уязвимость системы управления базами данных Redis, связанная с ошибками разыменования указателей, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02945: Уязвимость системы управления базами данных Redis, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-24735: Redis is an in-memory database that persists on disk. By exploiting weaknesses in the Lua script execution environment, an attacker with access to Redis prior to version 7.0.0 or 6.2.7 can inject Lua code that will execute with the (potentially higher) privileges of another Redis user. The Lua script execution environment in Redis provides some measures that prevent a script from creating side effects that persist and can affect the execution of the same, or different script, at a later time. Several weaknesses of these measures have been publicly known for a long time, but they had no security impact as the Redis security model did not endorse the concept of users or privileges. With the introduction of ACLs in Redis 6.0, these weaknesses can be exploited by a less privileged users to inject Lua code that will execute at a later time, when a privileged user executes a Lua script. The problem is fixed in Redis versions 7.0.0 and 6.2.7. An additional workaround to mitigate this problem without patching the redis-server executable, if Lua scripting is not being used, is to block access to `SCRIPT LOAD` and `EVAL` commands using ACL rules.\n\n * CVE-2022-24736: Redis is an in-memory database that persists on disk. Prior to versions 6.2.7 and 7.0.0, an attacker attempting to load a specially crafted Lua script can cause NULL pointer dereference which will result with a crash of the redis-server process. The problem is fixed in Redis versions 7.0.0 and 6.2.7. An additional workaround to mitigate this problem without patching the redis-server executable, if Lua scripting is not being used, is to block access to `SCRIPT LOAD` and `EVAL` commands using ACL rules.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-07"
+          },
+          "Updated": {
+            "Date": "2023-07-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-02940",
+              "Impact": "Low",
+              "Public": "20220427",
+              "CveID": "BDU:2022-02940"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-74, CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2022-02945",
+              "Impact": "Low",
+              "Public": "20220210",
+              "CveID": "BDU:2022-02945"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24735",
+              "Impact": "High",
+              "Public": "20220427",
+              "CveID": "CVE-2022-24735"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-24736",
+              "Impact": "Low",
+              "Public": "20220427",
+              "CveID": "CVE-2022-24736"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234153001",
+                "Comment": "redis is earlier than 0:6.2.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

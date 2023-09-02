@@ -1,0 +1,381 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192438",
+      "Version": "oval:org.altlinux.errata:def:20192438",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2438: package `qemu` update to version 4.0.0-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2438",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2438",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades qemu to version 4.0.0-alt4. \nSecurity Fix(es):\n\n * #37083: Неверные имена эмуляторов в конфигурационных файлах",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-12"
+          },
+          "Updated": {
+            "Date": "2019-08-12"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37083",
+              "Href": "https://bugzilla.altlinux.org/37083",
+              "Data": "Неверные имена эмуляторов в конфигурационных файлах"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438001",
+                "Comment": "ivshmem-tools is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438002",
+                "Comment": "qemu is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438003",
+                "Comment": "qemu-audio-alsa is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438004",
+                "Comment": "qemu-audio-oss is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438005",
+                "Comment": "qemu-audio-pa is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438006",
+                "Comment": "qemu-audio-sdl is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438007",
+                "Comment": "qemu-aux is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438008",
+                "Comment": "qemu-block-curl is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438009",
+                "Comment": "qemu-block-dmg is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438010",
+                "Comment": "qemu-block-gluster is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438011",
+                "Comment": "qemu-block-iscsi is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438012",
+                "Comment": "qemu-block-nfs is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438013",
+                "Comment": "qemu-block-rbd is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438014",
+                "Comment": "qemu-block-ssh is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438015",
+                "Comment": "qemu-common is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438016",
+                "Comment": "qemu-doc is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438017",
+                "Comment": "qemu-guest-agent is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438018",
+                "Comment": "qemu-img is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438019",
+                "Comment": "qemu-kvm is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438020",
+                "Comment": "qemu-kvm-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438021",
+                "Comment": "qemu-system is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438022",
+                "Comment": "qemu-system-aarch64 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438023",
+                "Comment": "qemu-system-aarch64-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438024",
+                "Comment": "qemu-system-alpha is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438025",
+                "Comment": "qemu-system-alpha-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438026",
+                "Comment": "qemu-system-arm is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438027",
+                "Comment": "qemu-system-arm-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438028",
+                "Comment": "qemu-system-cris is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438029",
+                "Comment": "qemu-system-cris-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438030",
+                "Comment": "qemu-system-hppa is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438031",
+                "Comment": "qemu-system-hppa-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438032",
+                "Comment": "qemu-system-lm32 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438033",
+                "Comment": "qemu-system-lm32-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438034",
+                "Comment": "qemu-system-m68k is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438035",
+                "Comment": "qemu-system-m68k-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438036",
+                "Comment": "qemu-system-microblaze is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438037",
+                "Comment": "qemu-system-microblaze-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438038",
+                "Comment": "qemu-system-mips is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438039",
+                "Comment": "qemu-system-mips-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438040",
+                "Comment": "qemu-system-moxie is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438041",
+                "Comment": "qemu-system-moxie-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438042",
+                "Comment": "qemu-system-nios2 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438043",
+                "Comment": "qemu-system-nios2-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438044",
+                "Comment": "qemu-system-or1k is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438045",
+                "Comment": "qemu-system-or1k-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438046",
+                "Comment": "qemu-system-ppc is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438047",
+                "Comment": "qemu-system-ppc-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438048",
+                "Comment": "qemu-system-riscv is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438049",
+                "Comment": "qemu-system-riscv-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438050",
+                "Comment": "qemu-system-s390x is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438051",
+                "Comment": "qemu-system-s390x-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438052",
+                "Comment": "qemu-system-sh4 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438053",
+                "Comment": "qemu-system-sh4-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438054",
+                "Comment": "qemu-system-sparc is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438055",
+                "Comment": "qemu-system-sparc-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438056",
+                "Comment": "qemu-system-tricore is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438057",
+                "Comment": "qemu-system-tricore-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438058",
+                "Comment": "qemu-system-unicore32 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438059",
+                "Comment": "qemu-system-unicore32-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438060",
+                "Comment": "qemu-system-x86 is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438061",
+                "Comment": "qemu-system-x86-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438062",
+                "Comment": "qemu-system-xtensa is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438063",
+                "Comment": "qemu-system-xtensa-core is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438064",
+                "Comment": "qemu-tools is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438065",
+                "Comment": "qemu-ui-curses is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438066",
+                "Comment": "qemu-ui-gtk is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438067",
+                "Comment": "qemu-ui-sdl is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438068",
+                "Comment": "qemu-user is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438069",
+                "Comment": "qemu-user-binfmt is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438070",
+                "Comment": "qemu-user-static is earlier than 0:4.0.0-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192438071",
+                "Comment": "qemu-user-static-binfmt is earlier than 0:4.0.0-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

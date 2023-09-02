@@ -1,0 +1,238 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231971",
+      "Version": "oval:org.altlinux.errata:def:20231971",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1971: package `wireshark` update to version 4.0.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1971",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1971",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-0666",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0666",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0667",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0667",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0668",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0668",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2854",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2854",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2855",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2855",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2856",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2856",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2857",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2857",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2858",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2858",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2879",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2879",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2952",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2952",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 4.0.6-alt1. \nSecurity Fix(es):\n\n * CVE-2023-0666: Due to failure in validating the length provided by an attacker-crafted RTPS packet, Wireshark version 4.0.5 and prior, by default, is susceptible to a heap-based buffer overflow, and possibly code execution in the context of the process running Wireshark.\n\n * CVE-2023-0667: Due to failure in validating the length provided by an attacker-crafted MSMMS packet, Wireshark version 4.0.5 and prior, in an unusual configuration, is susceptible to a heap-based buffer overflow, and possibly code execution in the context of the process running Wireshark\n\n * CVE-2023-0668: Due to failure in validating the length provided by an attacker-crafted IEEE-C37.118 packet, Wireshark version 4.0.5 and prior, by default, is susceptible to a heap-based buffer overflow, and possibly code execution in the context of the process running Wireshark.\n\n * CVE-2023-2854: BLF file parser crash in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via crafted capture file\n\n * CVE-2023-2855: Candump log parser crash in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via crafted capture file\n\n * CVE-2023-2856: VMS TCPIPtrace file parser crash in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via crafted capture file\n\n * CVE-2023-2857: BLF file parser crash in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via crafted capture file\n\n * CVE-2023-2858: NetScaler file parser crash in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via crafted capture file\n\n * CVE-2023-2879: GDSDB infinite loop in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via packet injection or crafted capture file\n\n * CVE-2023-2952: XRA dissector infinite loop in Wireshark 4.0.0 to 4.0.5 and 3.6.0 to 3.6.13 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-10"
+          },
+          "Updated": {
+            "Date": "2023-06-10"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0666",
+              "Impact": "Low",
+              "Public": "20230607",
+              "CveID": "CVE-2023-0666"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0667",
+              "Impact": "Critical",
+              "Public": "20230607",
+              "CveID": "CVE-2023-0667"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0668",
+              "Impact": "Low",
+              "Public": "20230607",
+              "CveID": "CVE-2023-0668"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2854",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2854"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2855",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2855"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2856",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2856"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2857",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2857"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2858",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2858"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2879",
+              "Impact": "High",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2879"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2952",
+              "Impact": "Low",
+              "Public": "20230530",
+              "CveID": "CVE-2023-2952"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231971001",
+                "Comment": "tshark is earlier than 0:4.0.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231971002",
+                "Comment": "wireshark-base is earlier than 0:4.0.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231971003",
+                "Comment": "wireshark-devel is earlier than 0:4.0.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231971004",
+                "Comment": "wireshark-qt5 is earlier than 0:4.0.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234393",
+      "Version": "oval:org.altlinux.errata:def:20234393",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4393: package `qt5-webengine` update to version 5.15.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4393",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4393",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03803",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03803",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-32573",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-32573",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-32762",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-32762",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-webengine to version 5.15.14-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03803: Уязвимость кроссплатформенного фреймворка для разработки программного обеспечения Qt, связанная с передачей защищаемой информации в незашифрованном виде, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2023-32573: In Qt before 5.15.14, 6.0.x through 6.2.x before 6.2.9, and 6.3.x through 6.5.x before 6.5.1, QtSvg QSvgFont m_unitsPerEm initialization is mishandled.\n\n * CVE-2023-32762: An issue was discovered in Qt before 5.15.14, 6.x before 6.2.9, and 6.3.x through 6.5.x before 6.5.1. Qt Network incorrectly parses the strict-transport-security (HSTS) header, allowing unencrypted connections to be established, even when explicitly prohibited by the server. This happens if the case used for this header does not exactly match.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-19"
+          },
+          "Updated": {
+            "Date": "2023-08-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://bdu.fstec.ru/vul/2023-03803",
+              "Impact": "Low",
+              "Public": "20230508",
+              "CveID": "BDU:2023-03803"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-32573",
+              "Impact": "Low",
+              "Public": "20230510",
+              "CveID": "CVE-2023-32573"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-32762",
+              "Impact": "Low",
+              "Public": "20230528",
+              "CveID": "CVE-2023-32762"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393001",
+                "Comment": "libqt5-pdf is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393002",
+                "Comment": "libqt5-pdfwidgets is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393003",
+                "Comment": "libqt5-webengine is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393004",
+                "Comment": "libqt5-webenginecore is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393005",
+                "Comment": "libqt5-webenginewidgets is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393006",
+                "Comment": "qt5-webengine-common is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393007",
+                "Comment": "qt5-webengine-devel is earlier than 0:5.15.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234393008",
+                "Comment": "qt5-webengine-doc is earlier than 0:5.15.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

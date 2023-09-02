@@ -1,0 +1,269 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221426",
+      "Version": "oval:org.altlinux.errata:def:20221426",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1426: package `libvirt` update to version 8.0.0-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1426",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1426",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05679",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05679",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-4147",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4147",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libvirt to version 8.0.0-alt3. \nSecurity Fix(es):\n\n * BDU:2022-05679: Уязвимость библиотеки управления виртуализацией Libvirt, связанная с недостаточной блокировкой, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-4147: A flaw was found in the libvirt libxl driver. A malicious guest could continuously reboot itself and cause libvirtd on the host to deadlock or crash, resulting in a denial of service condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-04"
+          },
+          "Updated": {
+            "Date": "2022-03-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://bdu.fstec.ru/vul/2022-05679",
+              "Impact": "Low",
+              "Public": "20211129",
+              "CveID": "BDU:2022-05679"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-667",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4147",
+              "Impact": "Low",
+              "Public": "20220325",
+              "CveID": "CVE-2021-4147"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426001",
+                "Comment": "libvirt is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426002",
+                "Comment": "libvirt-admin is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426003",
+                "Comment": "libvirt-client is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426004",
+                "Comment": "libvirt-daemon is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426005",
+                "Comment": "libvirt-daemon-config-network is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426006",
+                "Comment": "libvirt-daemon-config-nwfilter is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426007",
+                "Comment": "libvirt-daemon-driver-interface is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426008",
+                "Comment": "libvirt-daemon-driver-lxc is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426009",
+                "Comment": "libvirt-daemon-driver-network is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426010",
+                "Comment": "libvirt-daemon-driver-nodedev is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426011",
+                "Comment": "libvirt-daemon-driver-nwfilter is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426012",
+                "Comment": "libvirt-daemon-driver-qemu is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426013",
+                "Comment": "libvirt-daemon-driver-secret is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426014",
+                "Comment": "libvirt-daemon-driver-storage is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426015",
+                "Comment": "libvirt-daemon-driver-storage-core is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426016",
+                "Comment": "libvirt-daemon-driver-storage-disk is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426017",
+                "Comment": "libvirt-daemon-driver-storage-fs is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426018",
+                "Comment": "libvirt-daemon-driver-storage-gluster is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426019",
+                "Comment": "libvirt-daemon-driver-storage-iscsi is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426020",
+                "Comment": "libvirt-daemon-driver-storage-iscsi-direct is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426021",
+                "Comment": "libvirt-daemon-driver-storage-logical is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426022",
+                "Comment": "libvirt-daemon-driver-storage-mpath is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426023",
+                "Comment": "libvirt-daemon-driver-storage-rbd is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426024",
+                "Comment": "libvirt-daemon-driver-storage-scsi is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426025",
+                "Comment": "libvirt-daemon-driver-storage-zfs is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426026",
+                "Comment": "libvirt-daemon-driver-vbox is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426027",
+                "Comment": "libvirt-devel is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426028",
+                "Comment": "libvirt-docs is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426029",
+                "Comment": "libvirt-kvm is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426030",
+                "Comment": "libvirt-libs is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426031",
+                "Comment": "libvirt-lock-sanlock is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426032",
+                "Comment": "libvirt-login-shell is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426033",
+                "Comment": "libvirt-lxc is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426034",
+                "Comment": "libvirt-qemu is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426035",
+                "Comment": "libvirt-qemu-common is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426036",
+                "Comment": "libvirt-vbox is earlier than 0:8.0.0-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221426037",
+                "Comment": "nss-libvirt is earlier than 0:8.0.0-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

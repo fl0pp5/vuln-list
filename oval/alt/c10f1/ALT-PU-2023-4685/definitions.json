@@ -1,0 +1,117 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234685",
+      "Version": "oval:org.altlinux.errata:def:20234685",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4685: package `libssh` update to version 0.10.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4685",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4685",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03857",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03857",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-1667",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1667",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2283",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2283",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libssh to version 0.10.5-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03857: Уязвимость библиотеки для аутентификации клиента LibSSH, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-1667: A NULL pointer dereference was found In libssh during re-keying with algorithm guessing. This issue may allow an authenticated client to cause a denial of service.\n\n * CVE-2023-2283: A vulnerability was found in libssh, where the authentication check of the connecting client can be bypassed in the`pki_verify_data_signature` function in memory allocation problems. This issue may happen if there is insufficient memory or the memory usage is limited. The problem is caused by the return value `rc,` which is initialized to SSH_ERROR and later rewritten to save the return value of the function call `pki_key_check_hash_compatible.` The value of the variable is not changed between this point and the cryptographic verification. Therefore any error between them calls `goto error` returning SSH_OK.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-07"
+          },
+          "Updated": {
+            "Date": "2023-08-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-03857",
+              "Impact": "Low",
+              "Public": "20230327",
+              "CveID": "BDU:2023-03857"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1667",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-1667"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2283",
+              "Impact": "Low",
+              "Public": "20230526",
+              "CveID": "CVE-2023-2283"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234685001",
+                "Comment": "libssh is earlier than 0:0.10.5-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234685002",
+                "Comment": "libssh-devel is earlier than 0:0.10.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

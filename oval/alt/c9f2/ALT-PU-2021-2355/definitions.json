@@ -1,0 +1,192 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212355",
+      "Version": "oval:org.altlinux.errata:def:20212355",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2355: package `kernel-image-std-def` update to version 5.10.53-alt0.c9f",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2355",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2355",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03848",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03848",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05676",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05676",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01796",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01796",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33909",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33909",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4154",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4154",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-28772",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-28772",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.53-alt0.c9f. \nSecurity Fix(es):\n\n * BDU:2021-03848: Уязвимость компонента fs/seq_file.c ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-05676: Уязвимость функции cgroup1_parse_param компонента kernel/cgroup/cgroup-v1.c ядра операционной системы Linux, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2023-01796: Уязвимость функции seq_buf_putmem_hex() ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-33909: fs/seq_file.c in the Linux kernel 3.16 through 5.13.x before 5.13.4 does not properly restrict seq buffer allocations, leading to an integer overflow, an Out-of-bounds Write, and escalation to root by an unprivileged user, aka CID-8cae8cd89f05.\n\n * CVE-2021-4154: A use-after-free flaw was found in cgroup1_parse_param in kernel/cgroup/cgroup-v1.c in the Linux kernel's cgroup v1 parser. A local attacker with a user privilege could cause a privilege escalation by exploiting the fsconfig syscall parameter leading to a container breakout and a denial of service on the system.\n\n * CVE-2023-28772: An issue was discovered in the Linux kernel before 5.13.3. lib/seq_buf.c has a seq_buf_putmem_hex buffer overflow.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-28"
+          },
+          "Updated": {
+            "Date": "2021-07-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03848",
+              "Impact": "High",
+              "Public": "20210720",
+              "CveID": "BDU:2021-03848"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-05676",
+              "Impact": "High",
+              "Public": "20210714",
+              "CveID": "BDU:2022-05676"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:M/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2023-01796",
+              "Impact": "Low",
+              "Public": "20230323",
+              "CveID": "BDU:2023-01796"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33909",
+              "Impact": "High",
+              "Public": "20210720",
+              "CveID": "CVE-2021-33909"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4154",
+              "Impact": "High",
+              "Public": "20220204",
+              "CveID": "CVE-2021-4154"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-28772",
+              "Impact": "Low",
+              "Public": "20230323",
+              "CveID": "CVE-2023-28772"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.53-alt0.c9f"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212355010",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.53-alt0.c9f"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

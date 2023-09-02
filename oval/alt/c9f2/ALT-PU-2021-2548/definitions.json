@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212548",
+      "Version": "oval:org.altlinux.errata:def:20212548",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2548: package `dovecot` update to version 2.3.16-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2548",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2548",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03234",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03234",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03235",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03235",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03236",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03236",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-28200",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-28200",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-29157",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29157",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33515",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33515",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dovecot to version 2.3.16-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03234: Уязвимость почтового сервера Dovecot, связанная с ошибками экранирования полей kid и azp в токенах JWT, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-03235: Уязвимость почтового сервера Dovecot, связанная с ошибками управления ресурсами, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03236: Уязвимость почтового сервера Dovecot, связанная с неверной нейтрализация особых элементов в выходных данных, используемых входящим компонентом, позволяющая нарушителю раскрыть учетные данные пользователей\n\n * CVE-2020-28200: The Sieve engine in Dovecot before 2.3.15 allows Uncontrolled Resource Consumption, as demonstrated by a situation with a complex regular expression for the regex extension.\n\n * CVE-2021-29157: Dovecot before 2.3.15 allows ../ Path Traversal. An attacker with access to the local filesystem can trick OAuth2 authentication into using an HS256 validation key from an attacker-controlled location. This occurs during use of local JWT validation with the posix fs driver.\n\n * CVE-2021-33515: The submission service in Dovecot before 2.3.15 allows STARTTLS command injection in lib-smtp. Sensitive information can be redirected to an attacker-controlled address.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-17"
+          },
+          "Updated": {
+            "Date": "2021-08-17"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03234",
+              "Impact": "Low",
+              "Public": "20210621",
+              "CveID": "BDU:2021-03234"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-399",
+              "Href": "https://bdu.fstec.ru/vul/2021-03235",
+              "Impact": "Low",
+              "Public": "20210621",
+              "CveID": "BDU:2021-03235"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2021-03236",
+              "Impact": "Low",
+              "Public": "20210621",
+              "CveID": "BDU:2021-03236"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-28200",
+              "Impact": "Low",
+              "Public": "20210628",
+              "CveID": "CVE-2020-28200"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29157",
+              "Impact": "Low",
+              "Public": "20210628",
+              "CveID": "CVE-2021-29157"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33515",
+              "Impact": "Low",
+              "Public": "20210628",
+              "CveID": "CVE-2021-33515"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212548001",
+                "Comment": "dovecot is earlier than 0:2.3.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212548002",
+                "Comment": "dovecot-devel is earlier than 0:2.3.16-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213125",
+      "Version": "oval:org.altlinux.errata:def:20213125",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3125: package `samba` update to version 4.14.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3125",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3125",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06245",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06245",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3671",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3671",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades samba to version 4.14.8-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06245: Уязвимость пакета программ сетевого взаимодействия Samba, связанная с ошибками разыменования указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3671: A null pointer de-reference was found in the way samba kerberos server handled missing sname in TGS-REQ (Ticket Granting Server - Request). An authenticated user could use this flaw to crash the samba server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-28"
+          },
+          "Updated": {
+            "Date": "2021-10-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-06245",
+              "Impact": "Low",
+              "Public": "20210729",
+              "CveID": "BDU:2022-06245"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3671",
+              "Impact": "Low",
+              "Public": "20211012",
+              "CveID": "CVE-2021-3671"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125001",
+                "Comment": "admx-samba is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125002",
+                "Comment": "libldb-modules-dc is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125003",
+                "Comment": "libsmbclient is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125004",
+                "Comment": "libsmbclient-devel is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125005",
+                "Comment": "libwbclient is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125006",
+                "Comment": "libwbclient-devel is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125007",
+                "Comment": "python3-module-samba is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125008",
+                "Comment": "python3-module-samba-devel is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125009",
+                "Comment": "samba is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125010",
+                "Comment": "samba-client is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125011",
+                "Comment": "samba-common is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125012",
+                "Comment": "samba-common-client is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125013",
+                "Comment": "samba-common-libs is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125014",
+                "Comment": "samba-common-tools is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125015",
+                "Comment": "samba-ctdb is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125016",
+                "Comment": "samba-dc is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125017",
+                "Comment": "samba-dc-client is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125018",
+                "Comment": "samba-dc-common is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125019",
+                "Comment": "samba-dc-libs is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125020",
+                "Comment": "samba-dc-mitkrb5 is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125021",
+                "Comment": "samba-devel is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125022",
+                "Comment": "samba-doc is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125023",
+                "Comment": "samba-libs is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125024",
+                "Comment": "samba-pidl is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125025",
+                "Comment": "samba-test is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125026",
+                "Comment": "samba-util-private-headers is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125027",
+                "Comment": "samba-vfs-cephfs is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125028",
+                "Comment": "samba-vfs-glusterfs is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125029",
+                "Comment": "samba-vfs-snapper is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125030",
+                "Comment": "samba-winbind is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125031",
+                "Comment": "samba-winbind-clients is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125032",
+                "Comment": "samba-winbind-common is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125033",
+                "Comment": "samba-winbind-krb5-localauth is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125034",
+                "Comment": "samba-winbind-krb5-locator is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125035",
+                "Comment": "task-samba-dc is earlier than 0:4.14.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213125036",
+                "Comment": "task-samba-dc-mitkrb5 is earlier than 0:4.14.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

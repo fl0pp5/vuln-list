@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212148",
+      "Version": "oval:org.altlinux.errata:def:20212148",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2148: package `libproxy` update to version 0.4.15-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2148",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2148",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00328",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00328",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00336",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00336",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-25219",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25219",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26154",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26154",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libproxy to version 0.4.15-alt5. \nSecurity Fix(es):\n\n * BDU:2022-00328: Уязвимость компонента url.cpp библиотеки для управления конфигурацией прокси Libproxy, связанная с недостатком механизма проверки размера копируемых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-00336: Уязвимость функции url::recvline компонента url.cpp библиотеки для управления конфигурацией прокси Libproxy, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-25219: url::recvline in url.cpp in libproxy 0.4.x through 0.4.15 allows a remote HTTP server to trigger uncontrolled recursion via a response composed of an infinite stream that lacks a newline character. This leads to stack exhaustion.\n\n * CVE-2020-26154: url.cpp in libproxy through 0.4.15 is prone to a buffer overflow when PAC is enabled, as demonstrated by a large PAC file that is delivered without a Content-length header.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-05"
+          },
+          "Updated": {
+            "Date": "2021-07-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-00328",
+              "Impact": "Critical",
+              "Public": "20200716",
+              "CveID": "BDU:2022-00328"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-00336",
+              "Impact": "High",
+              "Public": "20200907",
+              "CveID": "BDU:2022-00336"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25219",
+              "Impact": "High",
+              "Public": "20200909",
+              "CveID": "CVE-2020-25219"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26154",
+              "Impact": "Critical",
+              "Public": "20200930",
+              "CveID": "CVE-2020-26154"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148001",
+                "Comment": "libproxy is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148002",
+                "Comment": "libproxy-devel is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148003",
+                "Comment": "libproxy-gnome3 is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148004",
+                "Comment": "libproxy-kde is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148005",
+                "Comment": "libproxy-mozjs is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148006",
+                "Comment": "libproxy-networkmanager is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148007",
+                "Comment": "libproxy-tools is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148008",
+                "Comment": "libproxy-webkit is earlier than 0:0.4.15-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212148009",
+                "Comment": "python3-module-libproxy is earlier than 0:0.4.15-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

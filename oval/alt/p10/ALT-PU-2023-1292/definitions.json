@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231292",
+      "Version": "oval:org.altlinux.errata:def:20231292",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1292: package `curl` update to version 7.88.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1292",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1292",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02154",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02154",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-23914",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23914",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-23915",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23915",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-23916",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-23916",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.88.0-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02154: Уязвимость механизма HSTS (HTTP Strict Transport Security) утилиты командной строки cURL, позволяющая нарушителю изменить функциональность HSTS при последовательном запросе нескольких URL-адресов\n\n * CVE-2023-23914: A cleartext transmission of sensitive information vulnerability exists in curl \u003cv7.88.0 that could cause HSTS functionality fail when multiple URLs are requested serially. Using its HSTS support, curl can be instructed to use HTTPS instead of usingan insecure clear-text HTTP step even when HTTP is provided in the URL. ThisHSTS mechanism would however surprisingly be ignored by subsequent transferswhen done on the same command line because the state would not be properlycarried on.\n\n * CVE-2023-23915: A cleartext transmission of sensitive information vulnerability exists in curl \u003cv7.88.0 that could cause HSTS functionality to behave incorrectly when multiple URLs are requested in parallel. Using its HSTS support, curl can be instructed to use HTTPS instead of using an insecure clear-text HTTP step even when HTTP is provided in the URL. This HSTS mechanism would however surprisingly fail when multiple transfers are done in parallel as the HSTS cache file gets overwritten by the most recentlycompleted transfer. A later HTTP-only transfer to the earlier host name would then *not* get upgraded properly to HSTS.\n\n * CVE-2023-23916: An allocation of resources without limits or throttling vulnerability exists in curl \u003cv7.88.0 based on the \"chained\" HTTP compression algorithms, meaning that a server response can be compressed multiple times and potentially with differentalgorithms. The number of acceptable \"links\" in this \"decompression chain\" wascapped, but the cap was implemented on a per-header basis allowing a maliciousserver to insert a virtually unlimited number of compression steps simply byusing many headers. The use of such a decompression chain could result in a \"malloc bomb\", making curl end up spending enormous amounts of allocated heap memory, or trying to and returning out of memory errors.\n\n * #45281: Просьба обновить до 7.88.0",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-20"
+          },
+          "Updated": {
+            "Date": "2023-02-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://bdu.fstec.ru/vul/2023-02154",
+              "Impact": "Critical",
+              "Public": "20221221",
+              "CveID": "BDU:2023-02154"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23914",
+              "Impact": "Critical",
+              "Public": "20230223",
+              "CveID": "CVE-2023-23914"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-319",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23915",
+              "Impact": "Low",
+              "Public": "20230223",
+              "CveID": "CVE-2023-23915"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-23916",
+              "Impact": "Low",
+              "Public": "20230223",
+              "CveID": "CVE-2023-23916"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45281",
+              "Href": "https://bugzilla.altlinux.org/45281",
+              "Data": "Просьба обновить до 7.88.0"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231292001",
+                "Comment": "curl is earlier than 0:7.88.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231292002",
+                "Comment": "libcurl is earlier than 0:7.88.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231292003",
+                "Comment": "libcurl-devel is earlier than 0:7.88.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231292004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.88.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

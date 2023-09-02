@@ -1,0 +1,301 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211946",
+      "Version": "oval:org.altlinux.errata:def:20211946",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1946: package `kernel-image-un-def` update to version 5.10.42-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1946",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1946",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02663",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02663",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02665",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02665",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03088",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03088",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03095",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03095",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03175",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03175",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03177",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03177",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-24586",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24586",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24587",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24587",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24588",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24588",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26141",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26141",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26145",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26145",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26147",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26147",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.42-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02663: Уязвимость набора стандартов связи для коммуникации IEEE 802.11 операционной системы Windows, позволяющая нарушителю внедрить произвольные сетевые пакеты\n\n * BDU:2021-02665: Уязвимость реализации алгоритмов WPA и WPA2 драйвера 6.1316.1209 Wi-Fi адаптера ALFA, позволяющая нарушителю внедрить и расшифровать пакеты в сетях WPA или WPA2\n\n * BDU:2021-03088: Уязвимость реализации алгоритмов WPA, WPA2 и WPA3 набора стандартов связи для коммуникации IEEE 802.11, позволяющая нарушителю оказать воздействие на целостность защищаемой информации\n\n * BDU:2021-03095: Уязвимость реализации алгоритмов WEP, WPA, WPA2 и WPA3 набора стандартов связи для коммуникации IEEE 802.11, позволяющая нарушителю внедрить произвольные сетевые пакеты и/или оказать воздействие на целостность защищаемой информации\n\n * BDU:2021-03175: Уязвимость реализации алгоритмов WEP, WPA, WPA2 и WPA3 ядра операционной системы Linux, позволяющая нарушителю внедрить произвольные сетевые пакеты независимо от конфигурации сети\n\n * BDU:2021-03177: Уязвимость реализации алгоритмов WEP, WPA, WPA2 и WPA3 ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на целостность защищаемой информации\n\n * CVE-2020-24586: The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that received fragments be cleared from memory after (re)connecting to a network. Under the right circumstances, when another device sends fragmented frames encrypted using WEP, CCMP, or GCMP, this can be abused to inject arbitrary network packets and/or exfiltrate user data.\n\n * CVE-2020-24587: The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that all fragments of a frame are encrypted under the same key. An adversary can abuse this to decrypt selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP encryption key is periodically renewed.\n\n * CVE-2020-24588: The 802.11 standard that underpins Wi-Fi Protected Access (WPA, WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require that the A-MSDU flag in the plaintext QoS header field is authenticated. Against devices that support receiving non-SSP A-MSDU frames (which is mandatory as part of 802.11n), an adversary can abuse this to inject arbitrary network packets.\n\n * CVE-2020-26141: An issue was discovered in the ALFA Windows 10 driver 6.1316.1209 for AWUS036H. The Wi-Fi implementation does not verify the Message Integrity Check (authenticity) of fragmented TKIP frames. An adversary can abuse this to inject and possibly decrypt packets in WPA or WPA2 networks that support the TKIP data-confidentiality protocol.\n\n * CVE-2020-26145: An issue was discovered on Samsung Galaxy S3 i9305 4.4.4 devices. The WEP, WPA, WPA2, and WPA3 implementations accept second (or subsequent) broadcast fragments even when sent in plaintext and process them as full unfragmented frames. An adversary can abuse this to inject arbitrary network packets independent of the network configuration.\n\n * CVE-2020-26147: An issue was discovered in the Linux kernel 5.8.9. The WEP, WPA, WPA2, and WPA3 implementations reassemble fragments even though some of them were sent in plaintext. This vulnerability can be abused to inject packets and/or exfiltrate selected fragments when another device sends fragmented frames and the WEP, CCMP, or GCMP data-confidentiality protocol is used.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-08"
+          },
+          "Updated": {
+            "Date": "2021-06-08"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-306",
+              "Href": "https://bdu.fstec.ru/vul/2021-02663",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-02663"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-354",
+              "Href": "https://bdu.fstec.ru/vul/2021-02665",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-02665"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://bdu.fstec.ru/vul/2021-03088",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-03088"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03095",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-03095"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03175",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-03175"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:A/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03177",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "BDU:2021-03177"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24586",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-24586"
+            },
+            {
+              "Cvss": "AV:A/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24587",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-24587"
+            },
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24588",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-24588"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-354",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26141",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-26141"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26145",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-26145"
+            },
+            {
+              "Cvss": "AV:A/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:R/S:U/C:L/I:H/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26147",
+              "Impact": "Low",
+              "Public": "20210511",
+              "CveID": "CVE-2020-26147"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211946010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.42-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223181",
+      "Version": "oval:org.altlinux.errata:def:20223181",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3181: package `colord` update to version 1.4.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3181",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3181",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-42523",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42523",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades colord to version 1.4.6-alt1. \nSecurity Fix(es):\n\n * CVE-2021-42523: There are two Information Disclosure vulnerabilities in colord, and they lie in colord/src/cd-device-db.c and colord/src/cd-profile-db.c separately. They exist because the 'err_msg' of 'sqlite3_exec' is not releasing after use, while libxml2 emphasizes that the caller needs to release it.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-21"
+          },
+          "Updated": {
+            "Date": "2022-11-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42523",
+              "Impact": "High",
+              "Public": "20220825",
+              "CveID": "CVE-2021-42523"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181001",
+                "Comment": "colord is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181002",
+                "Comment": "colord-devel-doc is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181003",
+                "Comment": "colord-extra-profiles is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181004",
+                "Comment": "colord-tests is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181005",
+                "Comment": "libcolord is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181006",
+                "Comment": "libcolord-devel is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181007",
+                "Comment": "libcolord-gir is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181008",
+                "Comment": "libcolord-gir-devel is earlier than 0:1.4.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223181009",
+                "Comment": "libcolord-vala is earlier than 0:1.4.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

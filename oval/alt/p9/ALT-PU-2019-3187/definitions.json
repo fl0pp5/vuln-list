@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193187",
+      "Version": "oval:org.altlinux.errata:def:20193187",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3187: package `jss` update to version 4.6.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3187",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3187",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-14823",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14823",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades jss to version 4.6.2-alt2. \nSecurity Fix(es):\n\n * CVE-2019-14823: A flaw was found in the \"Leaf and Chain\" OCSP policy implementation in JSS' CryptoManager versions after 4.4.6, 4.5.3, 4.6.0, where it implicitly trusted the root certificate of a certificate chain. Applications using this policy may not properly verify the chain and could be vulnerable to attacks such as Man in the Middle.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-25"
+          },
+          "Updated": {
+            "Date": "2019-11-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-358",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14823",
+              "Impact": "High",
+              "Public": "20191014",
+              "CveID": "CVE-2019-14823"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193187001",
+                "Comment": "jss is earlier than 0:4.6.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193187002",
+                "Comment": "jss-javadoc is earlier than 0:4.6.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

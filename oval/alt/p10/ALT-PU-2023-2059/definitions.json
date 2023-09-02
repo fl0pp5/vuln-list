@@ -1,0 +1,111 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232059",
+      "Version": "oval:org.altlinux.errata:def:20232059",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2059: package `python3-module-keyring` update to version 23.14.0-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2059",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2059",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades python3-module-keyring to version 23.14.0-alt3. \nSecurity Fix(es):\n\n * #45056: Обновление до версии whatsapp-for-linux 1.5.2\n\n * #45387: Please update to 23.14.0\n\n * #46305: Не работает утилита keyring",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-24"
+          },
+          "Updated": {
+            "Date": "2023-06-24"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "45056",
+              "Href": "https://bugzilla.altlinux.org/45056",
+              "Data": "Обновление до версии whatsapp-for-linux 1.5.2"
+            },
+            {
+              "Id": "45387",
+              "Href": "https://bugzilla.altlinux.org/45387",
+              "Data": "Please update to 23.14.0"
+            },
+            {
+              "Id": "46305",
+              "Href": "https://bugzilla.altlinux.org/46305",
+              "Data": "Не работает утилита keyring"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232059001",
+                "Comment": "python3-module-keyring is earlier than 0:23.14.0-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

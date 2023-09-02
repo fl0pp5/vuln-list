@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203170",
+      "Version": "oval:org.altlinux.errata:def:20203170",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3170: package `libhtp` update to version 0.5.35-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3170",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3170",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-17420",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17420",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libhtp to version 0.5.35-alt1. \nSecurity Fix(es):\n\n * CVE-2019-17420: In OISF LibHTP before 0.5.31, as used in Suricata 4.1.4 and other products, an HTTP protocol parsing error causes the http_header signature to not alert on a response with a single \\r\\n ending.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-30"
+          },
+          "Updated": {
+            "Date": "2020-10-30"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-459",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17420",
+              "Impact": "Low",
+              "Public": "20191010",
+              "CveID": "CVE-2019-17420"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203170001",
+                "Comment": "libhtp is earlier than 1:0.5.35-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203170002",
+                "Comment": "libhtp-devel is earlier than 1:0.5.35-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203170003",
+                "Comment": "libhtp-devel-static is earlier than 1:0.5.35-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

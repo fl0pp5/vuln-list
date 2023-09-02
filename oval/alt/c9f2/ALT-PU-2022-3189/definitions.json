@@ -1,0 +1,306 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223189",
+      "Version": "oval:org.altlinux.errata:def:20223189",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3189: package `freerdp` update to version 2.9.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3189",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3189",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06969",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06969",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06970",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06970",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06971",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06971",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06972",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06972",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06973",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06973",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06975",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06975",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06976",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06976",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-39316",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39316",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39317",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39317",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39318",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39318",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39319",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39319",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39320",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39320",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39347",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39347",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41877",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41877",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades freerdp to version 2.9.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06969: Уязвимость функции zgfx_decompress_segment() декодера ZGFX реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06970: Уязвимость канала перенаправления USB (urbdrc) реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06971: Уязвимость канала перенаправления USB (urbdrc) реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю считать связанные данные и отправить их обратно на сервер\n\n * BDU:2022-06972: Уязвимость декодера ZGFX реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-06973: Уязвимость канала перенаправления USB (urbdrc) реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * BDU:2022-06975: Уязвимость канала перенаправления диска реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2022-06976: Уязвимость канала перенаправления диска реализации протокола удалённого рабочего стола FreeRDP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2022-39316: FreeRDP is a free remote desktop protocol library and clients. In affected versions there is an out of bound read in ZGFX decoder component of FreeRDP. A malicious server can trick a FreeRDP based client to read out of bound data and try to decode it likely resulting in a crash. This issue has been addressed in the 2.9.0 release. Users are advised to upgrade.\n\n * CVE-2022-39317: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP are missing a range check for input offset index in ZGFX decoder. A malicious server can trick a FreeRDP based client to read out of bound data and try to decode it. This issue has been addressed in version 2.9.0. There are no known workarounds for this issue.\n\n * CVE-2022-39318: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP are missing input validation in `urbdrc` channel. A malicious server can trick a FreeRDP based client to crash with division by zero. This issue has been addressed in version 2.9.0. All users are advised to upgrade. Users unable to upgrade should not use the `/usb` redirection switch.\n\n * CVE-2022-39319: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP are missing input length validation in the `urbdrc` channel. A malicious server can trick a FreeRDP based client to read out of bound data and send it back to the server. This issue has been addressed in version 2.9.0 and all users are advised to upgrade. Users unable to upgrade should not use the `/usb` redirection switch.\n\n * CVE-2022-39320: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP may attempt integer addition on too narrow types leads to allocation of a buffer too small holding the data written. A malicious server can trick a FreeRDP based client to read out of bound data and send it back to the server. This issue has been addressed in version 2.9.0 and all users are advised to upgrade. Users unable to upgrade should not use the `/usb` redirection switch.\n\n * CVE-2022-39347: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP are missing path canonicalization and base path check for `drive` channel. A malicious server can trick a FreeRDP based client to read files outside the shared directory. This issue has been addressed in version 2.9.0 and all users are advised to upgrade. Users unable to upgrade should not use the `/drive`, `/drives` or `+home-drive` redirection switch.\n\n * CVE-2022-41877: FreeRDP is a free remote desktop protocol library and clients. Affected versions of FreeRDP are missing input length validation in `drive` channel. A malicious server can trick a FreeRDP based client to read out of bound data and send it back to the server. This issue has been addressed in version 2.9.0 and all users are advised to upgrade. Users unable to upgrade should not use the drive redirection channel - command line options `/drive`, `+drives` or `+home-drive`.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-22"
+          },
+          "Updated": {
+            "Date": "2022-11-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06969",
+              "Impact": "High",
+              "Public": "20221114",
+              "CveID": "BDU:2022-06969"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20, CWE-369",
+              "Href": "https://bdu.fstec.ru/vul/2022-06970",
+              "Impact": "High",
+              "Public": "20221114",
+              "CveID": "BDU:2022-06970"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06971",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "BDU:2022-06971"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06972",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "BDU:2022-06972"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06973",
+              "Impact": "Critical",
+              "Public": "20221114",
+              "CveID": "BDU:2022-06973"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2022-06975",
+              "Impact": "High",
+              "Public": "20221114",
+              "CveID": "BDU:2022-06975"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-119, CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2022-06976",
+              "Impact": "Critical",
+              "Public": "20221114",
+              "CveID": "BDU:2022-06976"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39316",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39316"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39317",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39317"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39318",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39318"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39319",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39319"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39320",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39320"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39347",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-39347"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-1284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41877",
+              "Impact": "Low",
+              "Public": "20221116",
+              "CveID": "CVE-2022-41877"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189001",
+                "Comment": "freerdp is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189002",
+                "Comment": "freerdp-plugins-standard is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189003",
+                "Comment": "freerdp-server is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189004",
+                "Comment": "libfreerdp is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189005",
+                "Comment": "libfreerdp-devel is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189006",
+                "Comment": "libfreerdp-server is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189007",
+                "Comment": "libuwac is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189008",
+                "Comment": "libuwac-devel is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189009",
+                "Comment": "libwinpr is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189010",
+                "Comment": "libwinpr-devel is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189011",
+                "Comment": "wlfreerdp is earlier than 0:2.9.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223189012",
+                "Comment": "xfreerdp is earlier than 0:2.9.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

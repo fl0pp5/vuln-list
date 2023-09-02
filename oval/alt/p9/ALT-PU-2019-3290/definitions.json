@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193290",
+      "Version": "oval:org.altlinux.errata:def:20193290",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3290: package `libssh` update to version 0.9.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3290",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3290",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02642",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02642",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-14889",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14889",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libssh to version 0.9.3-alt1. \nSecurity Fix(es):\n\n * BDU:2020-02642: Уязвимость функции ssh_scp_new()  библиотеки libssh, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2019-14889: A flaw was found with the libssh API function ssh_scp_new() in versions before 0.9.3 and before 0.8.8. When the libssh SCP client connects to a server, the scp command, which includes a user-provided path, is executed on the server-side. In case the library is used in a way where users can influence the third parameter of the function, it would become possible for an attacker to inject arbitrary commands, leading to a compromise of the remote target.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-14"
+          },
+          "Updated": {
+            "Date": "2019-12-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2020-02642",
+              "Impact": "High",
+              "Public": "20200415",
+              "CveID": "BDU:2020-02642"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14889",
+              "Impact": "High",
+              "Public": "20191210",
+              "CveID": "CVE-2019-14889"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193290001",
+                "Comment": "libssh is earlier than 0:0.9.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193290002",
+                "Comment": "libssh-devel is earlier than 0:0.9.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221263",
+      "Version": "oval:org.altlinux.errata:def:20221263",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1263: package `plasma5-workspace` update to version 5.23.5-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1263",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1263",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades plasma5-workspace to version 5.23.5-alt3. \nSecurity Fix(es):\n\n * #40944: sddm: некорретное поведение виртуальной клавиатуры при входе в систему",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40944",
+              "Href": "https://bugzilla.altlinux.org/40944",
+              "Data": "sddm: некорретное поведение виртуальной клавиатуры при входе в систему"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263001",
+                "Comment": "libcolorcorrect5 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263002",
+                "Comment": "libkfontinst5 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263003",
+                "Comment": "libkfontinstui5 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263004",
+                "Comment": "libkrdb5 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263005",
+                "Comment": "libkworkspace55 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263006",
+                "Comment": "libnotificationmanager1 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263007",
+                "Comment": "libplasma-geolocation-interface5 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263008",
+                "Comment": "libtaskmanager6 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263009",
+                "Comment": "libweather_ion7 is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263010",
+                "Comment": "plasma5-workspace is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263011",
+                "Comment": "plasma5-workspace-common is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263012",
+                "Comment": "plasma5-workspace-devel is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263013",
+                "Comment": "plasma5-workspace-qml is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263014",
+                "Comment": "polkit-kde-plasma-workspace is earlier than 1:5.23.5-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221263015",
+                "Comment": "sddm-theme-breeze is earlier than 1:5.23.5-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

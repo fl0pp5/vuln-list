@@ -1,0 +1,184 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222414",
+      "Version": "oval:org.altlinux.errata:def:20222414",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2414: package `cups` update to version 2.4.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2414",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2414",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00124",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00124",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03401",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03401",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03501",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03501",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-8842",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-8842",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10001",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10001",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-3898",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-3898",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cups to version 2.4.2-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00124: Уязвимость системы печати CUPS, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-03401: Уязвимость функции ippReadIO компонента cups/ipp.c сервера печати CUPS, связанная с недостатком механизма проверки вводимых данных, позволяющая нарушителю получить доступ к конфиденциальной информации\n\n * BDU:2021-03501: Уязвимость системы печати CUPS, связанная с копированием буфера без проверки размера входных данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2019-8842: A buffer overflow was addressed with improved bounds checking. This issue is fixed in macOS Catalina 10.15.2, Security Update 2019-002 Mojave, and Security Update 2019-007 High Sierra. In certain configurations, a remote attacker may be able to submit arbitrary print jobs.\n\n * CVE-2020-10001: An input validation issue was addressed with improved memory handling. This issue is fixed in macOS Big Sur 11.1, Security Update 2020-001 Catalina, Security Update 2020-007 Mojave. A malicious application may be able to read restricted memory.\n\n * CVE-2020-3898: A memory corruption issue was addressed with improved validation. This issue is fixed in macOS Catalina 10.15.4. An application may be able to gain elevated privileges.\n\n * #40107: Переименование файла service отключает службу\n\n * #41319: Не работает печать у принтера Samsung ML-2015",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-10"
+          },
+          "Updated": {
+            "Date": "2022-08-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-00124",
+              "Impact": "Low",
+              "Public": "20201022",
+              "CveID": "BDU:2021-00124"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03401",
+              "Impact": "Low",
+              "Public": "20210104",
+              "CveID": "BDU:2021-03401"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-03501",
+              "Impact": "Low",
+              "Public": "20201022",
+              "CveID": "BDU:2021-03501"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-8842",
+              "Impact": "Low",
+              "Public": "20201027",
+              "CveID": "CVE-2019-8842"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10001",
+              "Impact": "Low",
+              "Public": "20210402",
+              "CveID": "CVE-2020-10001"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-3898",
+              "Impact": "High",
+              "Public": "20201022",
+              "CveID": "CVE-2020-3898"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40107",
+              "Href": "https://bugzilla.altlinux.org/40107",
+              "Data": "Переименование файла service отключает службу"
+            },
+            {
+              "Id": "41319",
+              "Href": "https://bugzilla.altlinux.org/41319",
+              "Data": "Не работает печать у принтера Samsung ML-2015"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222414001",
+                "Comment": "cups is earlier than 0:2.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222414002",
+                "Comment": "cups-ipptool is earlier than 0:2.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222414003",
+                "Comment": "cups-xinetd is earlier than 0:2.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222414004",
+                "Comment": "libcups is earlier than 0:2.4.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222414005",
+                "Comment": "libcups-devel is earlier than 0:2.4.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

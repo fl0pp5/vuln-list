@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222349",
+      "Version": "oval:org.altlinux.errata:def:20222349",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2349: package `golang` update to version 1.17.13-alt1.p10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2349",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2349",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-32189",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32189",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.17.13-alt1.p10. \nSecurity Fix(es):\n\n * CVE-2022-32189: A too-short encoded message can cause a panic in Float.GobDecode and Rat GobDecode in math/big in Go before 1.17.13 and 1.18.5, potentially allowing a denial of service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-04"
+          },
+          "Updated": {
+            "Date": "2022-08-04"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32189",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-32189"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349001",
+                "Comment": "golang is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349002",
+                "Comment": "golang-docs is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349003",
+                "Comment": "golang-gdb is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349004",
+                "Comment": "golang-misc is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349005",
+                "Comment": "golang-shared is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349006",
+                "Comment": "golang-src is earlier than 0:1.17.13-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222349007",
+                "Comment": "golang-tests is earlier than 0:1.17.13-alt1.p10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

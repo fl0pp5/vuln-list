@@ -1,0 +1,175 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231259",
+      "Version": "oval:org.altlinux.errata:def:20231259",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1259: package `vim` update to version 9.0.1294-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1259",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1259",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00578",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00578",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-0512",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0512",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vim to version 9.0.1294-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00578: Уязвимость функции smoothscroll текстового редактора Vim, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2023-0512: Divide By Zero in GitHub repository vim/vim prior to 9.0.1247.\n\n * #45246: Подсветка синтаксиса bash в vim работает неправильно",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-15"
+          },
+          "Updated": {
+            "Date": "2023-02-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://bdu.fstec.ru/vul/2023-00578",
+              "Impact": "High",
+              "Public": "20230130",
+              "CveID": "BDU:2023-00578"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0512",
+              "Impact": "High",
+              "Public": "20230130",
+              "CveID": "CVE-2023-0512"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45246",
+              "Href": "https://bugzilla.altlinux.org/45246",
+              "Data": "Подсветка синтаксиса bash в vim работает неправильно"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259001",
+                "Comment": "rpm-build-vim is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259002",
+                "Comment": "vim-X11 is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259003",
+                "Comment": "vim-X11-gnome2 is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259004",
+                "Comment": "vim-X11-gtk2 is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259005",
+                "Comment": "vim-X11-gtk3 is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259006",
+                "Comment": "vim-common is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259007",
+                "Comment": "vim-console is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259008",
+                "Comment": "vim-enhanced is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259009",
+                "Comment": "vim-minimal is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259010",
+                "Comment": "vim-spell-source is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259011",
+                "Comment": "vimtutor is earlier than 4:9.0.1294-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231259012",
+                "Comment": "xxd is earlier than 4:9.0.1294-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

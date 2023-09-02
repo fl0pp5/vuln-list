@@ -1,0 +1,90 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222172",
+      "Version": "oval:org.altlinux.errata:def:20222172",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2172: package `python3-module-clickhouse-driver` update to version 0.2.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2172",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2172",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-26759",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26759",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3-module-clickhouse-driver to version 0.2.3-alt1. \nSecurity Fix(es):\n\n * CVE-2020-26759: clickhouse-driver before 0.1.5 allows a malicious clickhouse server to trigger a crash or execute arbitrary code (on a database client) via a crafted server response, due to a buffer overflow.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-05"
+          },
+          "Updated": {
+            "Date": "2022-07-05"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26759",
+              "Impact": "Critical",
+              "Public": "20210106",
+              "CveID": "CVE-2020-26759"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222172001",
+                "Comment": "python3-module-clickhouse-driver is earlier than 0:0.2.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222172002",
+                "Comment": "python3-module-clickhouse-driver-tests is earlier than 0:0.2.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

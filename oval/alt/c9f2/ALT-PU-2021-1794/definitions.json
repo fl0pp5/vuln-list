@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211794",
+      "Version": "oval:org.altlinux.errata:def:20211794",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1794: package `firefox-esr` update to version 78.10.1-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1794",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1794",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06101",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06101",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-29951",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29951",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 78.10.1-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2022-06101: Уязвимость браузеров Mozilla Firefox, Firefox ESR и почтового клиента Thunderbird, связанная с небезопасным управлением привилегиями, позволяющая нарушителю, действующему удаленно, повысить свои привилегии\n\n * CVE-2021-29951: The Mozilla Maintenance Service granted SERVICE_START access to BUILTIN|Users which, in a domain network, grants normal remote users access to start or stop the service. This could be used to prevent the browser update service from operating (if an attacker spammed the 'Stop' command); but also exposed attack surface in the maintenance service. *Note: This issue only affected Windows operating systems older than Win 10 build 1709. Other operating systems are unaffected.*. This vulnerability affects Thunderbird \u003c 78.10.1, Firefox \u003c 87, and Firefox ESR \u003c 78.10.1.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-05-13"
+          },
+          "Updated": {
+            "Date": "2021-05-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2022-06101",
+              "Impact": "Low",
+              "Public": "20210504",
+              "CveID": "BDU:2022-06101"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29951",
+              "Impact": "Low",
+              "Public": "20210624",
+              "CveID": "CVE-2021-29951"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211794001",
+                "Comment": "firefox-esr is earlier than 0:78.10.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211794002",
+                "Comment": "firefox-esr-config-privacy is earlier than 0:78.10.1-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211794003",
+                "Comment": "firefox-esr-wayland is earlier than 0:78.10.1-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

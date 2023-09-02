@@ -1,0 +1,182 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231191",
+      "Version": "oval:org.altlinux.errata:def:20231191",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1191: package `libXpm` update to version 3.5.15-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1191",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1191",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00388",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00388",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00389",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00389",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00390",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00390",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-44617",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-44617",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-46285",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-46285",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4883",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4883",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libXpm to version 3.5.15-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00388: Уязвимость библиотеки для работы с файлами изображений X Pixmap (XPM) libXpm, связанная с недоверенными путями поиска, позволяющая нарушителю выполнять произвольный код с повышенными привилегиями\n\n * BDU:2023-00389: Уязвимость функции ParsePixels () библиотеки для работы с файлами изображений X Pixmap (XPM) libXpm, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-00390: Уязвимость функции ParseComment() библиотеки для работы с файлами изображений X Pixmap (XPM) libXpm, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-44617: A flaw was found in libXpm. When processing a file with width of 0 and a very large height, some parser functions will be called repeatedly and can lead to an infinite loop, resulting in a Denial of Service in the application linked to the library.\n\n * CVE-2022-46285: A flaw was found in libXpm. This issue occurs when parsing a file with a comment not closed; the end-of-file condition will not be detected, leading to an infinite loop and resulting in a Denial of Service in the application linked to the library.\n\n * CVE-2022-4883: A flaw was found in libXpm. When processing files with .Z or .gz extensions, the library calls external programs to compress and uncompress files, relying on the PATH environment variable to find these programs, which could allow a malicious user to execute other programs by manipulating the PATH environment variable.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-02-07"
+          },
+          "Updated": {
+            "Date": "2023-02-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-426",
+              "Href": "https://bdu.fstec.ru/vul/2023-00388",
+              "Impact": "High",
+              "Public": "20230117",
+              "CveID": "BDU:2023-00388"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2023-00389",
+              "Impact": "High",
+              "Public": "20230117",
+              "CveID": "BDU:2023-00389"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2023-00390",
+              "Impact": "High",
+              "Public": "20230117",
+              "CveID": "BDU:2023-00390"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-44617",
+              "Impact": "High",
+              "Public": "20230206",
+              "CveID": "CVE-2022-44617"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-46285",
+              "Impact": "High",
+              "Public": "20230207",
+              "CveID": "CVE-2022-46285"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4883",
+              "Impact": "High",
+              "Public": "20230207",
+              "CveID": "CVE-2022-4883"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231191001",
+                "Comment": "libXpm is earlier than 0:3.5.15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231191002",
+                "Comment": "libXpm-devel is earlier than 0:3.5.15-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

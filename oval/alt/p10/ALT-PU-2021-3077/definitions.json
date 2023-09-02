@@ -1,0 +1,252 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213077",
+      "Version": "oval:org.altlinux.errata:def:20213077",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3077: package `LibreOffice-still` update to version 7.1.6.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3077",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3077",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04999",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04999",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05337",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05337",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05923",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05923",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-25633",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25633",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25634",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25635",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25635",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades LibreOffice-still to version 7.1.6.2-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04999: Уязвимость пакета офисных программ LibreOffice, связанная с ошибками проверки криптографической подписи, позволяющая нарушителю проводить спуфинг атаки\n\n * BDU:2021-05337: Уязвимость пакета офисных программ LibreOffice, связанная с ошибками при формировании документов documentsignatures.xml, macrosignatures.xml, позволяющая нарушителю манипулировать подписанными документами\n\n * BDU:2022-05923: Уязвимость пакета офисных программ LibreOffice, связанная с ошибками процедуры подтверждения подлинности сертификата, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-25633: LibreOffice supports digital signatures of ODF documents and macros within documents, presenting visual aids that no alteration of the document occurred since the last signing and that the signature is valid. An Improper Certificate Validation vulnerability in LibreOffice allowed an attacker to create a digitally signed ODF document, by manipulating the documentsignatures.xml or macrosignatures.xml stream within the document to combine multiple certificate data, which when opened caused LibreOffice to display a validly signed indicator but whose content was unrelated to the signature shown. This issue affects: The Document Foundation LibreOffice 7-0 versions prior to 7.0.6; 7-1 versions prior to 7.1.2.\n\n * CVE-2021-25634: LibreOffice supports digital signatures of ODF documents and macros within documents, presenting visual aids that no alteration of the document occurred since the last signing and that the signature is valid. An Improper Certificate Validation vulnerability in LibreOffice allowed an attacker to modify a digitally signed ODF document to insert an additional signing time timestamp which LibreOffice would incorrectly present as a valid signature signed at the bogus signing time. This issue affects: The Document Foundation LibreOffice 7-0 versions prior to 7.0.6; 7-1 versions prior to 7.1.2.\n\n * CVE-2021-25635: description unavailable",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-20"
+          },
+          "Updated": {
+            "Date": "2021-10-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-347",
+              "Href": "https://bdu.fstec.ru/vul/2021-04999",
+              "Impact": "Low",
+              "Public": "20211011",
+              "CveID": "BDU:2021-04999"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2021-05337",
+              "Impact": "High",
+              "Public": "20211011",
+              "CveID": "BDU:2021-05337"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2022-05923",
+              "Impact": "High",
+              "Public": "20211012",
+              "CveID": "BDU:2022-05923"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25633",
+              "Impact": "High",
+              "Public": "20211011",
+              "CveID": "CVE-2021-25633"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25634",
+              "Impact": "High",
+              "Public": "20211012",
+              "CveID": "CVE-2021-25634"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077001",
+                "Comment": "LibreOffice-still is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077002",
+                "Comment": "LibreOffice-still-common is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077003",
+                "Comment": "LibreOffice-still-extensions is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077004",
+                "Comment": "LibreOffice-still-gtk3 is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077005",
+                "Comment": "LibreOffice-still-integrated is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077006",
+                "Comment": "LibreOffice-still-kde5 is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077007",
+                "Comment": "LibreOffice-still-langpack-be is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077008",
+                "Comment": "LibreOffice-still-langpack-de is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077009",
+                "Comment": "LibreOffice-still-langpack-el is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077010",
+                "Comment": "LibreOffice-still-langpack-es is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077011",
+                "Comment": "LibreOffice-still-langpack-fr is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077012",
+                "Comment": "LibreOffice-still-langpack-kk is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077013",
+                "Comment": "LibreOffice-still-langpack-pt-BR is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077014",
+                "Comment": "LibreOffice-still-langpack-ru is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077015",
+                "Comment": "LibreOffice-still-langpack-tt is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077016",
+                "Comment": "LibreOffice-still-langpack-uk is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077017",
+                "Comment": "LibreOffice-still-mimetypes is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077018",
+                "Comment": "LibreOffice-still-qt5 is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077019",
+                "Comment": "LibreOffice-still-sdk is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077020",
+                "Comment": "libreofficekit-still is earlier than 0:7.1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213077021",
+                "Comment": "libreofficekit-still-devel is earlier than 0:7.1.6.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

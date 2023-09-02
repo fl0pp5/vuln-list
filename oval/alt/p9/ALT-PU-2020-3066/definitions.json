@@ -1,0 +1,124 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203066",
+      "Version": "oval:org.altlinux.errata:def:20203066",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3066: package `electron9` update to version 9.3.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3066",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3066",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-15174",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15174",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15215",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades electron9 to version 9.3.2-alt1. \nSecurity Fix(es):\n\n * CVE-2020-15174: In Electron before versions 11.0.0-beta.1, 10.0.1, 9.3.0 or 8.5.1 the `will-navigate` event that apps use to prevent navigations to unexpected destinations as per our security recommendations can be bypassed when a sub-frame performs a top-frame navigation across sites. The issue is patched in versions 11.0.0-beta.1, 10.0.1, 9.3.0 or 8.5.1 As a workaround sandbox all your iframes using the sandbox attribute. This will prevent them creating top-frame navigations and is good practice anyway.\n\n * CVE-2020-15215: Electron before versions 11.0.0-beta.6, 10.1.2, 9.3.1 or 8.5.2 is vulnerable to a context isolation bypass. Apps using both `contextIsolation` and `sandbox: true` are affected. Apps using both `contextIsolation` and `nodeIntegrationInSubFrames: true` are affected. This is a context isolation bypass, meaning that code running in the main world context in the renderer can reach into the isolated Electron context and perform privileged actions.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-17"
+          },
+          "Updated": {
+            "Date": "2020-10-17"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:N/I:H/A:L",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15174",
+              "Impact": "High",
+              "Public": "20201006",
+              "CveID": "CVE-2020-15174"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-693",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15215",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-15215"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203066001",
+                "Comment": "electron9 is earlier than 0:9.3.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223187",
+      "Version": "oval:org.altlinux.errata:def:20223187",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3187: package `erlang` update to version 25.1.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3187",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3187",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-37026",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37026",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades erlang to version 25.1.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-37026: In Erlang/OTP before 23.3.4.15, 24.x before 24.3.4.2, and 25.x before 25.0.2, there is a Client Authentication Bypass in certain client-certification situations for SSL, TLS, and DTLS.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-22"
+          },
+          "Updated": {
+            "Date": "2022-11-22"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37026",
+              "Impact": "Critical",
+              "Public": "20220921",
+              "CveID": "CVE-2022-37026"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187001",
+                "Comment": "erlang is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187002",
+                "Comment": "erlang-common_test is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187003",
+                "Comment": "erlang-common_test-bin is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187004",
+                "Comment": "erlang-common_test-common is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187005",
+                "Comment": "erlang-common_test-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187006",
+                "Comment": "erlang-common_test-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187007",
+                "Comment": "erlang-common_test-native is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187008",
+                "Comment": "erlang-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187009",
+                "Comment": "erlang-doc is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187010",
+                "Comment": "erlang-doc-chunks is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187011",
+                "Comment": "erlang-doc-html is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187012",
+                "Comment": "erlang-doc-pdf is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187013",
+                "Comment": "erlang-emacs is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187014",
+                "Comment": "erlang-examples is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187015",
+                "Comment": "erlang-full is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187016",
+                "Comment": "erlang-jinterface is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187017",
+                "Comment": "erlang-jinterface-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187018",
+                "Comment": "erlang-jinterface-native is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187019",
+                "Comment": "erlang-man is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187020",
+                "Comment": "erlang-megaco is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187021",
+                "Comment": "erlang-megaco-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187022",
+                "Comment": "erlang-megaco-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187023",
+                "Comment": "erlang-megaco-drivers is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187024",
+                "Comment": "erlang-megaco-native is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187025",
+                "Comment": "erlang-odbc is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187026",
+                "Comment": "erlang-odbc-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187027",
+                "Comment": "erlang-odbc-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187028",
+                "Comment": "erlang-odbc-native is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187029",
+                "Comment": "erlang-odbc-server is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187030",
+                "Comment": "erlang-otp is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187031",
+                "Comment": "erlang-otp-bin is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187032",
+                "Comment": "erlang-otp-common is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187033",
+                "Comment": "erlang-otp-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187034",
+                "Comment": "erlang-otp-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187035",
+                "Comment": "erlang-otp-full is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187036",
+                "Comment": "erlang-otp-native is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187037",
+                "Comment": "erlang-visual is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187038",
+                "Comment": "erlang-visual-common is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187039",
+                "Comment": "erlang-visual-debug is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187040",
+                "Comment": "erlang-visual-devel is earlier than 1:25.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223187041",
+                "Comment": "erlang-visual-native is earlier than 1:25.1.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

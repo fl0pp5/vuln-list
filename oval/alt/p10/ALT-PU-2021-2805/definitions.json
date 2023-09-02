@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212805",
+      "Version": "oval:org.altlinux.errata:def:20212805",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2805: package `apt-updatecache` update to version 1.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2805",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2805",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades apt-updatecache to version 1.2-alt1. \nSecurity Fix(es):\n\n * #40423: apt-updatecache.service не отрабатывает при старте системы на Education и Kworkstation",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-15"
+          },
+          "Updated": {
+            "Date": "2021-09-15"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40423",
+              "Href": "https://bugzilla.altlinux.org/40423",
+              "Data": "apt-updatecache.service не отрабатывает при старте системы на Education и Kworkstation"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212805001",
+                "Comment": "apt-updatecache is earlier than 0:1.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

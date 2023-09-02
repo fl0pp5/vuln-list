@@ -1,0 +1,111 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201635",
+      "Version": "oval:org.altlinux.errata:def:20201635",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1635: package `common-licenses` update to version 1.10-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1635",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1635",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades common-licenses to version 1.10-alt1. \nSecurity Fix(es):\n\n * #20245: Update Open Publication License\n\n * #38133: radvd license\n\n * #38223: ALT-CyrusIMAP переименовать без IMAP и обновить",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-27"
+          },
+          "Updated": {
+            "Date": "2020-03-27"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "20245",
+              "Href": "https://bugzilla.altlinux.org/20245",
+              "Data": "Update Open Publication License"
+            },
+            {
+              "Id": "38133",
+              "Href": "https://bugzilla.altlinux.org/38133",
+              "Data": "radvd license"
+            },
+            {
+              "Id": "38223",
+              "Href": "https://bugzilla.altlinux.org/38223",
+              "Data": "ALT-CyrusIMAP переименовать без IMAP и обновить"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201635001",
+                "Comment": "common-licenses is earlier than 0:1.10-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

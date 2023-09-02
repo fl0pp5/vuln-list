@@ -1,0 +1,175 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223194",
+      "Version": "oval:org.altlinux.errata:def:20223194",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3194: package `libslirp` update to version 4.7.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3194",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3194",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05822",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05822",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-29129",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29129",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-29130",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29130",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3592",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3592",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3593",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3593",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3594",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3594",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3595",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3595",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libslirp to version 4.7.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05822: Уязвимость функции udp6_input() библиотеки TCP-IP эмулятора Libslirp, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2020-29129: ncsi.c in libslirp through 4.3.1 has a buffer over-read because it tries to read a certain amount of header data even if that exceeds the total packet length.\n\n * CVE-2020-29130: slirp.c in libslirp through 4.3.1 has a buffer over-read because it tries to read a certain amount of header data even if that exceeds the total packet length.\n\n * CVE-2021-3592: An invalid pointer initialization issue was found in the SLiRP networking implementation of QEMU. The flaw exists in the bootp_input() function and could occur while processing a udp packet that is smaller than the size of the 'bootp_t' structure. A malicious guest could use this flaw to leak 10 bytes of uninitialized heap memory from the host. The highest threat from this vulnerability is to data confidentiality. This flaw affects libslirp versions prior to 4.6.0.\n\n * CVE-2021-3593: An invalid pointer initialization issue was found in the SLiRP networking implementation of QEMU. The flaw exists in the udp6_input() function and could occur while processing a udp packet that is smaller than the size of the 'udphdr' structure. This issue may lead to out-of-bounds read access or indirect host memory disclosure to the guest. The highest threat from this vulnerability is to data confidentiality. This flaw affects libslirp versions prior to 4.6.0.\n\n * CVE-2021-3594: An invalid pointer initialization issue was found in the SLiRP networking implementation of QEMU. The flaw exists in the udp_input() function and could occur while processing a udp packet that is smaller than the size of the 'udphdr' structure. This issue may lead to out-of-bounds read access or indirect host memory disclosure to the guest. The highest threat from this vulnerability is to data confidentiality. This flaw affects libslirp versions prior to 4.6.0.\n\n * CVE-2021-3595: An invalid pointer initialization issue was found in the SLiRP networking implementation of QEMU. The flaw exists in the tftp_input() function and could occur while processing a udp packet that is smaller than the size of the 'tftp_t' structure. This issue may lead to out-of-bounds read access or indirect host memory disclosure to the guest. The highest threat from this vulnerability is to data confidentiality. This flaw affects libslirp versions prior to 4.6.0.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-23"
+          },
+          "Updated": {
+            "Date": "2022-11-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-824",
+              "Href": "https://bdu.fstec.ru/vul/2022-05822",
+              "Impact": "Low",
+              "Public": "20210604",
+              "CveID": "BDU:2022-05822"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29129",
+              "Impact": "Low",
+              "Public": "20201126",
+              "CveID": "CVE-2020-29129"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29130",
+              "Impact": "Low",
+              "Public": "20201126",
+              "CveID": "CVE-2020-29130"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-824",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3592",
+              "Impact": "Low",
+              "Public": "20210615",
+              "CveID": "CVE-2021-3592"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-824",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3593",
+              "Impact": "Low",
+              "Public": "20210615",
+              "CveID": "CVE-2021-3593"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-824",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3594",
+              "Impact": "Low",
+              "Public": "20210615",
+              "CveID": "CVE-2021-3594"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-824",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3595",
+              "Impact": "Low",
+              "Public": "20210615",
+              "CveID": "CVE-2021-3595"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223194001",
+                "Comment": "libslirp is earlier than 0:4.7.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223194002",
+                "Comment": "libslirp-devel is earlier than 0:4.7.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

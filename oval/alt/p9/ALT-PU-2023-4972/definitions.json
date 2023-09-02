@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234972",
+      "Version": "oval:org.altlinux.errata:def:20234972",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4972: package `postgresql12-1C` update to version 12.14-alt0.M90P.4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4972",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4972",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-39417",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39417",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql12-1C to version 12.14-alt0.M90P.4. \nSecurity Fix(es):\n\n * CVE-2023-39417: IN THE EXTENSION SCRIPT, a SQL Injection vulnerability was found in PostgreSQL if it uses @extowner@, @extschema@, or @extschema:...@ inside a quoting construct (dollar quoting, '', or \"\"). If an administrator has installed files of a vulnerable, trusted, non-bundled extension, an attacker with database-level CREATE privilege can execute arbitrary code as the bootstrap superuser.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-21"
+          },
+          "Updated": {
+            "Date": "2023-08-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39417",
+              "Impact": "High",
+              "Public": "20230811",
+              "CveID": "CVE-2023-39417"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972001",
+                "Comment": "postgresql12-1C is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972002",
+                "Comment": "postgresql12-1C-contrib is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972003",
+                "Comment": "postgresql12-1C-docs is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972004",
+                "Comment": "postgresql12-1C-perl is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972005",
+                "Comment": "postgresql12-1C-python is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972006",
+                "Comment": "postgresql12-1C-server is earlier than 0:12.14-alt0.M90P.4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234972007",
+                "Comment": "postgresql12-1C-tcl is earlier than 0:12.14-alt0.M90P.4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

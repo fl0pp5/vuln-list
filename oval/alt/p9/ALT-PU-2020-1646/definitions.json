@@ -1,0 +1,434 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201646",
+      "Version": "oval:org.altlinux.errata:def:20201646",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1646: package `kernel-image-rpi-un` update to version 5.6.0.rc2-alt0.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1646",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1646",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01075",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01075",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01076",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01076",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02425",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02425",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02430",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02430",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02707",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02707",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03027",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03027",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05548",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05548",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05551",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05551",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05792",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05792",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03144",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03144",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04742",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04742",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-20810",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20810",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10942",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10942",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12465",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12465",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12768",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12768",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14381",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14381",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-29370",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29370",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-29373",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-29373",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-36558",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-36558",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-9383",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-9383",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-9391",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-9391",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3715",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1419",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1419",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-un to version 5.6.0.rc2-alt0.2. \nSecurity Fix(es):\n\n * BDU:2020-01075: Уязвимость функции rwsem_down_write_slowpath (kernel/locking/rwsem.c) ядра операционной системы Linux, позволяющая нарушителю раскрыть защищаемую информацию или вызвать отказ в обслуживании\n\n * BDU:2020-01076: Уязвимость архитектуры AArch64 ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-02425: Уязвимость функции mt76_add_fragment (drivers/net/wireless/mediatek/mt76/dma.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании и раскрыть защищаемую информацию\n\n * BDU:2020-02430: Уязвимость функции svm_cpu_uninit (arch/x86/kvm/svm.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-02707: Уязвимость функции get_raw_socket (drivers/vhost/net.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-03027: Уязвимость функции go7007_snd_init() (drivers/media/usb/go7007/snd-go7007.c) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05548: Уязвимость функции kmem_cache_alloc_bulk (mm/slub.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05551: Уязвимость компонента Filesystem Handler ядра операционных систем Linux, позволяющая нарушителю оказать влияние на целостность и конфиденциальность данных\n\n * BDU:2020-05792: Уязвимость реализации futex ядра операционной системы Linux, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-03144: Уязвимость функции route4_change() (net/sched/cls_route.c) ядра операционной системы Linux, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * BDU:2022-04742: Уязвимость реализации вызова VT_RESIZEX ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-20810: go7007_snd_init in drivers/media/usb/go7007/snd-go7007.c in the Linux kernel before 5.6 does not call snd_card_free for a failure path, which causes a memory leak, aka CID-9453264ef586.\n\n * CVE-2020-10942: In the Linux kernel before 5.5.8, get_raw_socket in drivers/vhost/net.c lacks validation of an sk_family field, which might allow attackers to trigger kernel stack corruption via crafted system calls.\n\n * CVE-2020-12465: An array overflow was discovered in mt76_add_fragment in drivers/net/wireless/mediatek/mt76/dma.c in the Linux kernel before 5.5.10, aka CID-b102f0c522cf. An oversized packet with too many rx fragments can corrupt memory of adjacent pages.\n\n * CVE-2020-12768: ** DISPUTED ** An issue was discovered in the Linux kernel before 5.6. svm_cpu_uninit in arch/x86/kvm/svm.c has a memory leak, aka CID-d80b64ff297e. NOTE: third parties dispute this issue because it's a one-time leak at the boot, the size is negligible, and it can't be triggered at will.\n\n * CVE-2020-14381: A flaw was found in the Linux kernel’s futex implementation. This flaw allows a local attacker to corrupt system memory or escalate their privileges when creating a futex on a filesystem that is about to be unmounted. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2020-29370: An issue was discovered in kmem_cache_alloc_bulk in mm/slub.c in the Linux kernel before 5.5.11. The slowpath lacks the required TID increment, aka CID-fd4d9c7d0c71.\n\n * CVE-2020-29373: An issue was discovered in fs/io_uring.c in the Linux kernel before 5.6. It unsafely handles the root directory during path lookups, and thus a process inside a mount namespace can escape to unintended filesystem locations, aka CID-ff002b30181d.\n\n * CVE-2020-36558: A race condition in the Linux kernel before 5.5.7 involving VT_RESIZEX could lead to a NULL pointer dereference and general protection fault.\n\n * CVE-2020-9383: An issue was discovered in the Linux kernel 3.16 through 5.5.6. set_fdc in drivers/block/floppy.c leads to a wait_til_ready out-of-bounds read because the FDC index is not checked for errors before assigning it, aka CID-2e90ca68b0d2.\n\n * CVE-2020-9391: An issue was discovered in the Linux kernel 5.4 and 5.5 through 5.5.6 on the AArch64 architecture. It ignores the top byte in the address passed to the brk system call, potentially moving the memory break downwards when the application expects it to move upwards, aka CID-dcde237319e6. This has been observed to cause heap corruption with the GNU C Library malloc implementation.\n\n * CVE-2021-3715: A flaw was found in the \"Routing decision\" classifier in the Linux kernel's Traffic Control networking subsystem in the way it handled changing of classification filters, leading to a use-after-free condition. This flaw allows unprivileged local users to escalate their privileges on the system. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2022-1419: The root cause of this vulnerability is that the ioctl$DRM_IOCTL_MODE_DESTROY_DUMB can decrease refcount of *drm_vgem_gem_object *(created in *vgem_gem_dumb_create*) concurrently, and *vgem_gem_dumb_create *will access the freed drm_vgem_gem_object.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-31"
+          },
+          "Updated": {
+            "Date": "2020-03-31"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-01075",
+              "Impact": "High",
+              "Public": "20200225",
+              "CveID": "BDU:2020-01075"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-01076",
+              "Impact": "Low",
+              "Public": "20200225",
+              "CveID": "BDU:2020-01076"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2020-02425",
+              "Impact": "Low",
+              "Public": "20200429",
+              "CveID": "BDU:2020-02425"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://bdu.fstec.ru/vul/2020-02430",
+              "Impact": "Low",
+              "Public": "20200509",
+              "CveID": "BDU:2020-02430"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:N/I:P/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2020-02707",
+              "Impact": "Low",
+              "Public": "20200324",
+              "CveID": "BDU:2020-02707"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://bdu.fstec.ru/vul/2020-03027",
+              "Impact": "Low",
+              "Public": "20200602",
+              "CveID": "BDU:2020-03027"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2020-05548",
+              "Impact": "High",
+              "Public": "20200317",
+              "CveID": "BDU:2020-05548"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2020-05551",
+              "Impact": "High",
+              "Public": "20200207",
+              "CveID": "BDU:2020-05551"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-05792",
+              "Impact": "High",
+              "Public": "20200304",
+              "CveID": "BDU:2020-05792"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-03144",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "BDU:2022-03144"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-362, CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-04742",
+              "Impact": "Critical",
+              "Public": "20200210",
+              "CveID": "BDU:2022-04742"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20810",
+              "Impact": "Low",
+              "Public": "20200603",
+              "CveID": "CVE-2019-20810"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10942",
+              "Impact": "Low",
+              "Public": "20200324",
+              "CveID": "CVE-2020-10942"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12465",
+              "Impact": "Low",
+              "Public": "20200429",
+              "CveID": "CVE-2020-12465"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12768",
+              "Impact": "Low",
+              "Public": "20200509",
+              "CveID": "CVE-2020-12768"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14381",
+              "Impact": "High",
+              "Public": "20201203",
+              "CveID": "CVE-2020-14381"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29370",
+              "Impact": "High",
+              "Public": "20201128",
+              "CveID": "CVE-2020-29370"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-29373",
+              "Impact": "Low",
+              "Public": "20201128",
+              "CveID": "CVE-2020-29373"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-36558",
+              "Impact": "Low",
+              "Public": "20220721",
+              "CveID": "CVE-2020-36558"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-9383",
+              "Impact": "High",
+              "Public": "20200225",
+              "CveID": "CVE-2020-9383"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-9391",
+              "Impact": "Low",
+              "Public": "20200225",
+              "CveID": "CVE-2020-9391"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3715",
+              "Impact": "High",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3715"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1419",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "CVE-2022-1419"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201646001",
+                "Comment": "kernel-headers-modules-rpi-un is earlier than 1:5.6.0.rc2-alt0.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201646002",
+                "Comment": "kernel-headers-rpi-un is earlier than 1:5.6.0.rc2-alt0.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201646003",
+                "Comment": "kernel-image-rpi-un is earlier than 1:5.6.0.rc2-alt0.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201646004",
+                "Comment": "kernel-modules-staging-rpi-un is earlier than 1:5.6.0.rc2-alt0.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201646005",
+                "Comment": "kernel-modules-v4l-rpi-un is earlier than 1:5.6.0.rc2-alt0.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

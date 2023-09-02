@@ -1,0 +1,324 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192402",
+      "Version": "oval:org.altlinux.errata:def:20192402",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2402: package `LibreOffice` update to version 6.3.0.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2402",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2402",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02759",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02759",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02924",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02924",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03147",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03147",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03148",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03148",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03149",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03149",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-9848",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9848",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9849",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9849",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9850",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9850",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9851",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9851",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9852",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9852",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades LibreOffice to version 6.3.0.3-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02759: Уязвимость программного модуля LibreLogo пакета офисных программ LibreOffice, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * BDU:2019-02924: Уязвимость режима stealth mode пакета офисных программ LibreOffice, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации, выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2019-03147: Уязвимость программного модуля LibreLogo пакета офисных программ LibreOffice, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * BDU:2019-03148: Уязвимость программного модуля LibreLogo пакета офисных программ LibreOffice, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * BDU:2019-03149: Уязвимость программного модуля LibreLogo пакета офисных программ LibreOffice, позволяющая нарушителю выполнить произвольный код в целевой системе\n\n * CVE-2019-9848: LibreOffice has a feature where documents can specify that pre-installed scripts can be executed on various document events such as mouse-over, etc. LibreOffice is typically also bundled with LibreLogo, a programmable turtle vector graphics script, which can be manipulated into executing arbitrary python commands. By using the document event feature to trigger LibreLogo to execute python contained within a document a malicious document could be constructed which would execute arbitrary python commands silently without warning. In the fixed versions, LibreLogo cannot be called from a document event handler. This issue affects: Document Foundation LibreOffice versions prior to 6.2.5.\n\n * CVE-2019-9849: LibreOffice has a 'stealth mode' in which only documents from locations deemed 'trusted' are allowed to retrieve remote resources. This mode is not the default mode, but can be enabled by users who want to disable LibreOffice's ability to include remote resources within a document. A flaw existed where bullet graphics were omitted from this protection prior to version 6.2.5. This issue affects: Document Foundation LibreOffice versions prior to 6.2.5.\n\n * CVE-2019-9850: LibreOffice is typically bundled with LibreLogo, a programmable turtle vector graphics script, which can execute arbitrary python commands contained with the document it is launched from. LibreOffice also has a feature where documents can specify that pre-installed scripts can be executed on various document script events such as mouse-over, etc. Protection was added, to address CVE-2019-9848, to block calling LibreLogo from script event handers. However an insufficient url validation vulnerability in LibreOffice allowed malicious to bypass that protection and again trigger calling LibreLogo from script event handlers. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\n * CVE-2019-9851: LibreOffice is typically bundled with LibreLogo, a programmable turtle vector graphics script, which can execute arbitrary python commands contained with the document it is launched from. Protection was added, to address CVE-2019-9848, to block calling LibreLogo from document event script handers, e.g. mouse over. However LibreOffice also has a separate feature where documents can specify that pre-installed scripts can be executed on various global script events such as document-open, etc. In the fixed versions, global script event handlers are validated equivalently to document script event handlers. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\n * CVE-2019-9852: LibreOffice has a feature where documents can specify that pre-installed macros can be executed on various script events such as mouse-over, document-open etc. Access is intended to be restricted to scripts under the share/Scripts/python, user/Scripts/python sub-directories of the LibreOffice install. Protection was added, to address CVE-2018-16858, to avoid a directory traversal attack where scripts in arbitrary locations on the file system could be executed. However this new protection could be bypassed by a URL encoding attack. In the fixed versions, the parsed url describing the script location is correctly encoded before further processing. This issue affects: Document Foundation LibreOffice versions prior to 6.2.6.\n\n * #36900: Включить pentaho-reporting-flow-engine",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-07"
+          },
+          "Updated": {
+            "Date": "2019-08-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-02759",
+              "Impact": "Critical",
+              "Public": "20190716",
+              "CveID": "BDU:2019-02759"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2019-02924",
+              "Impact": "Critical",
+              "Public": "20190716",
+              "CveID": "BDU:2019-02924"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03147",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "BDU:2019-03147"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03148",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "BDU:2019-03148"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03149",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "BDU:2019-03149"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9848",
+              "Impact": "Critical",
+              "Public": "20190717",
+              "CveID": "CVE-2019-9848"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9849",
+              "Impact": "Low",
+              "Public": "20190717",
+              "CveID": "CVE-2019-9849"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9850",
+              "Impact": "Critical",
+              "Public": "20190815",
+              "CveID": "CVE-2019-9850"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9851",
+              "Impact": "Critical",
+              "Public": "20190815",
+              "CveID": "CVE-2019-9851"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9852",
+              "Impact": "High",
+              "Public": "20190815",
+              "CveID": "CVE-2019-9852"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "36900",
+              "Href": "https://bugzilla.altlinux.org/36900",
+              "Data": "Включить pentaho-reporting-flow-engine"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402001",
+                "Comment": "LibreOffice is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402002",
+                "Comment": "LibreOffice-common is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402003",
+                "Comment": "LibreOffice-extensions is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402004",
+                "Comment": "LibreOffice-gtk2 is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402005",
+                "Comment": "LibreOffice-gtk3 is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402006",
+                "Comment": "LibreOffice-integrated is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402007",
+                "Comment": "LibreOffice-kde5 is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402008",
+                "Comment": "LibreOffice-langpack-be is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402009",
+                "Comment": "LibreOffice-langpack-de is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402010",
+                "Comment": "LibreOffice-langpack-es is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402011",
+                "Comment": "LibreOffice-langpack-fr is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402012",
+                "Comment": "LibreOffice-langpack-kk is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402013",
+                "Comment": "LibreOffice-langpack-pt-BR is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402014",
+                "Comment": "LibreOffice-langpack-ru is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402015",
+                "Comment": "LibreOffice-langpack-tt is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402016",
+                "Comment": "LibreOffice-langpack-uk is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402017",
+                "Comment": "LibreOffice-mimetypes is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402018",
+                "Comment": "LibreOffice-qt5 is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402019",
+                "Comment": "LibreOffice-sdk is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402020",
+                "Comment": "libreofficekit is earlier than 0:6.3.0.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192402021",
+                "Comment": "libreofficekit-devel is earlier than 0:6.3.0.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213088",
+      "Version": "oval:org.altlinux.errata:def:20213088",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3088: package `php7-intl` update to version 7.3.31-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3088",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3088",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01912",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01912",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01913",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01913",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01914",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01914",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03159",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03159",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03559",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03559",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03703",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03703",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-7069",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7069",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7070",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7070",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7071",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7071",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21702",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21702",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21704",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21704",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21705",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21705",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-intl to version 7.3.31-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01912: Уязвимость функции openssl_encrypt() языка программирования php, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * BDU:2021-01913: Уязвимость механизма обработки файлов cookie языка программирования php, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-01914: Уязвимость функции URL языка программирования php, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю оказать воздействие на целостность данных\n\n * BDU:2021-03159: Уязвимость расширения SOAP интерпретатора PHP, позволяющая нарушителю вызвать аварийное завершение работы приложения\n\n * BDU:2021-03559: Уязвимость модуля pdo_firebase интерпретатора языка программирования PHP, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03703: Уязвимость функции php_url_parse_ex() интерпретатора языка программирования PHP, позволяющая нарушителю осуществить SSRF-атаку\n\n * CVE-2020-7069: In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when AES-CCM mode is used with openssl_encrypt() function with 12 bytes IV, only first 7 bytes of the IV is actually used. This can lead to both decreased security and incorrect encryption data.\n\n * CVE-2020-7070: In PHP versions 7.2.x below 7.2.34, 7.3.x below 7.3.23 and 7.4.x below 7.4.11, when PHP is processing incoming HTTP cookie values, the cookie names are url-decoded. This may lead to cookies with prefixes like __Host confused with cookies that decode to such prefix, thus leading to an attacker being able to forge cookie which is supposed to be secure. See also CVE-2020-8184 for more information.\n\n * CVE-2020-7071: In PHP versions 7.3.x below 7.3.26, 7.4.x below 7.4.14 and 8.0.0, when validating URL with functions like filter_var($url, FILTER_VALIDATE_URL), PHP will accept an URL with invalid password as valid URL. This may lead to functions that rely on URL being valid to mis-parse the URL and produce wrong data as components of the URL.\n\n * CVE-2021-21702: In PHP versions 7.3.x below 7.3.27, 7.4.x below 7.4.15 and 8.0.x below 8.0.2, when using SOAP extension to connect to a SOAP server, a malicious SOAP server could return malformed XML data as a response that would cause PHP to access a null pointer and thus cause a crash.\n\n * CVE-2021-21704: In PHP versions 7.3.x below 7.3.29, 7.4.x below 7.4.21 and 8.0.x below 8.0.8, when using Firebird PDO driver extension, a malicious database server could cause crashes in various database functions, such as getAttribute(), execute(), fetch() and others by returning invalid response data that is not parsed correctly by the driver. This can result in crashes, denial of service or potentially memory corruption.\n\n * CVE-2021-21705: In PHP versions 7.3.x below 7.3.29, 7.4.x below 7.4.21 and 8.0.x below 8.0.8, when using URL validation functionality via filter_var() function with FILTER_VALIDATE_URL parameter, an URL with invalid password field can be accepted as valid. This can lead to the code incorrectly parsing the URL and potentially leading to other security implications - like contacting a wrong server or making a wrong access decision.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-21"
+          },
+          "Updated": {
+            "Date": "2021-10-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://bdu.fstec.ru/vul/2021-01912",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01912"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-565",
+              "Href": "https://bdu.fstec.ru/vul/2021-01913",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01913"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-01914",
+              "Impact": "Low",
+              "Public": "20200706",
+              "CveID": "BDU:2021-01914"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-03159",
+              "Impact": "High",
+              "Public": "20210214",
+              "CveID": "BDU:2021-03159"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03559",
+              "Impact": "Low",
+              "Public": "20210629",
+              "CveID": "BDU:2021-03559"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20, CWE-918",
+              "Href": "https://bdu.fstec.ru/vul/2021-03703",
+              "Impact": "Low",
+              "Public": "20210702",
+              "CveID": "BDU:2021-03703"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7069",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-7069"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-565",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7070",
+              "Impact": "Low",
+              "Public": "20201002",
+              "CveID": "CVE-2020-7070"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7071",
+              "Impact": "Low",
+              "Public": "20210215",
+              "CveID": "CVE-2020-7071"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21702",
+              "Impact": "High",
+              "Public": "20210215",
+              "CveID": "CVE-2021-21702"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21704",
+              "Impact": "Low",
+              "Public": "20211004",
+              "CveID": "CVE-2021-21704"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21705",
+              "Impact": "Low",
+              "Public": "20211004",
+              "CveID": "CVE-2021-21705"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213088001",
+                "Comment": "php7-intl is earlier than 0:7.3.31-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

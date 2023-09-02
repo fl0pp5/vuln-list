@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231805",
+      "Version": "oval:org.altlinux.errata:def:20231805",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1805: package `dpdk` update to version 21.11.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1805",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1805",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05391",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05391",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-2132",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2132",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28199",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28199",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades dpdk to version 21.11.3-alt1. \nSecurity Fix(es):\n\n * BDU:2022-05391: Уязвимость драйвера mlx5 набора библиотек и драйверов для быстрой обработки пакетов dpdk, позволяющая науршителю вызвать отказ в обслуживании\n\n * CVE-2022-2132: A permissive list of allowed inputs flaw was found in DPDK. This issue allows a remote attacker to cause a denial of service triggered by sending a crafted Vhost header to DPDK.\n\n * CVE-2022-28199: NVIDIA’s distribution of the Data Plane Development Kit (MLNX_DPDK) contains a vulnerability in the network stack, where error recovery is not handled properly, which can allow a remote attacker to cause denial of service and some impact to data integrity and confidentiality.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-15"
+          },
+          "Updated": {
+            "Date": "2023-05-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://bdu.fstec.ru/vul/2022-05391",
+              "Impact": "Low",
+              "Public": "20220829",
+              "CveID": "BDU:2022-05391"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2132",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-2132"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28199",
+              "Impact": "Low",
+              "Public": "20220901",
+              "CveID": "CVE-2022-28199"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231805001",
+                "Comment": "dpdk is earlier than 0:21.11.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231805002",
+                "Comment": "dpdk-devel is earlier than 0:21.11.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231805003",
+                "Comment": "dpdk-tools is earlier than 0:21.11.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231805004",
+                "Comment": "libdpdk is earlier than 0:21.11.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

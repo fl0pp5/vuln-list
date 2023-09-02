@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221787",
+      "Version": "oval:org.altlinux.errata:def:20221787",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1787: package `phpMyAdmin` update to version 5.1.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1787",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1787",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01640",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01640",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0813",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0813",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23807",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23807",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23808",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23808",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades phpMyAdmin to version 5.1.3-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01640: Уязвимость веб-интерфейса веб-приложения для администрирования cистем управления базами данных phpMyAdmin, позволяющая нарушителю получить доступ к конфиденциальной информации\n\n * CVE-2022-0813: PhpMyAdmin 5.1.1 and before allows an attacker to retrieve potentially sensitive information by creating invalid requests. This affects the lang parameter, the pma_parameter, and the cookie section.\n\n * CVE-2022-23807: An issue was discovered in phpMyAdmin 4.9 before 4.9.8 and 5.1 before 5.1.2. A valid user who is already authenticated to phpMyAdmin can manipulate their account to bypass two-factor authentication for future login instances.\n\n * CVE-2022-23808: An issue was discovered in phpMyAdmin 5.1 before 5.1.2. An attacker can inject malicious code into aspects of the setup script, which can allow XSS or HTML injection.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-28"
+          },
+          "Updated": {
+            "Date": "2022-04-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2022-01640",
+              "Impact": "Low",
+              "Public": "20220314",
+              "CveID": "BDU:2022-01640"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0813",
+              "Impact": "High",
+              "Public": "20220310",
+              "CveID": "CVE-2022-0813"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23807",
+              "Impact": "Low",
+              "Public": "20220122",
+              "CveID": "CVE-2022-23807"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23808",
+              "Impact": "Low",
+              "Public": "20220122",
+              "CveID": "CVE-2022-23808"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221787001",
+                "Comment": "phpMyAdmin is earlier than 0:5.1.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221787002",
+                "Comment": "phpMyAdmin-apache2-php7 is earlier than 0:5.1.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221787003",
+                "Comment": "phpMyAdmin-apache2-php8.1 is earlier than 0:5.1.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234130",
+      "Version": "oval:org.altlinux.errata:def:20234130",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4130: package `yandex-browser-stable` update to version 23.5.1.793-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4130",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4130",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03159",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03159",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-3214",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3214",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3215",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3215",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3216",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3216",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3217",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3217",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades yandex-browser-stable to version 23.5.1.793-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03159: Уязвимость функции автозаполнения Autofill Payments браузера Google Chrome, повыполнить произвольный код\n\n * CVE-2023-3214: Use after free in Autofill payments in Google Chrome prior to 114.0.5735.133 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Critical)\n\n * CVE-2023-3215: Use after free in WebRTC in Google Chrome prior to 114.0.5735.133 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)\n\n * CVE-2023-3216: Type confusion in V8 in Google Chrome prior to 114.0.5735.133 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)\n\n * CVE-2023-3217: Use after free in WebXR in Google Chrome prior to 114.0.5735.133 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: High)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-30"
+          },
+          "Updated": {
+            "Date": "2023-06-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-03159",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03159"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3214",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "CVE-2023-3214"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3215",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "CVE-2023-3215"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3216",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "CVE-2023-3216"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3217",
+              "Impact": "High",
+              "Public": "20230613",
+              "CveID": "CVE-2023-3217"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234130001",
+                "Comment": "yandex-browser-stable is earlier than 0:23.5.1.793-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

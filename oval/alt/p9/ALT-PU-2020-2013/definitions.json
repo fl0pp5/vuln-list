@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202013",
+      "Version": "oval:org.altlinux.errata:def:20202013",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2013: package `postgresql11` update to version 11.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2013",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2013",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00612",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00612",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-10733",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10733",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql11 to version 11.8-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00612: Уязвимость установщика Windows installer системы управления базами данных PostgreSQL, позволяющая нарушителю повысить свои привилегии и выполнить произвольный код\n\n * CVE-2020-10733: The Windows installer for PostgreSQL 9.5 - 12 invokes system-provided executables that do not have fully-qualified paths. Executables in the directory where the installer loads or the current working directory take precedence over the intended executables. An attacker having permission to add files into one of those directories can use this to execute arbitrary code with the installer's administrative rights.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-25"
+          },
+          "Updated": {
+            "Date": "2020-05-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://bdu.fstec.ru/vul/2023-00612",
+              "Impact": "Low",
+              "Public": "20200514",
+              "CveID": "BDU:2023-00612"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10733",
+              "Impact": "High",
+              "Public": "20200916",
+              "CveID": "CVE-2020-10733"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013001",
+                "Comment": "postgresql11 is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013002",
+                "Comment": "postgresql11-contrib is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013003",
+                "Comment": "postgresql11-docs is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013004",
+                "Comment": "postgresql11-perl is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013005",
+                "Comment": "postgresql11-python is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013006",
+                "Comment": "postgresql11-server is earlier than 0:11.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202013007",
+                "Comment": "postgresql11-tcl is earlier than 0:11.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

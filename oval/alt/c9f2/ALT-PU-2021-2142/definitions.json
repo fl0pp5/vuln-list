@@ -1,0 +1,86 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212142",
+      "Version": "oval:org.altlinux.errata:def:20212142",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2142: package `screen` update to version 4.6.2-alt3.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2142",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2142",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-9366",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-9366",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades screen to version 4.6.2-alt3.p9.1. \nSecurity Fix(es):\n\n * CVE-2020-9366: A buffer overflow was found in the way GNU Screen before 4.8.0 treated the special escape OSC 49. Specially crafted output, or a special program, could corrupt memory and crash Screen or possibly have unspecified other impact.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-05"
+          },
+          "Updated": {
+            "Date": "2021-07-05"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-9366",
+              "Impact": "Critical",
+              "Public": "20200224",
+              "CveID": "CVE-2020-9366"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212142001",
+                "Comment": "screen is earlier than 0:4.6.2-alt3.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

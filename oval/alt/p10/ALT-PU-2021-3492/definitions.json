@@ -1,0 +1,206 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213492",
+      "Version": "oval:org.altlinux.errata:def:20213492",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3492: package `bluez` update to version 5.62-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3492",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3492",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05703",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05703",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06043",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06043",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3658",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3658",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41229",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41229",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39176",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39176",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39177",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades bluez to version 5.62-alt2. \nSecurity Fix(es):\n\n * BDU:2022-05703: Уязвимость стека технологии Bluetooth для Linux BlueZ, связанная с неправильной авторизацией, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-06043: Уязвимость функции sdp_cstate_alloc_buf стека технологии Bluetooth для Linux BlueZ, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3658: bluetoothd from bluez incorrectly saves adapters' Discoverable status when a device is powered down, and restores it when powered up. If a device is powered down while discoverable, it will be discoverable when powered on again. This could lead to inadvertent exposure of the bluetooth stack to physically nearby attackers.\n\n * CVE-2021-41229: BlueZ is a Bluetooth protocol stack for Linux. In affected versions a vulnerability exists in sdp_cstate_alloc_buf which allocates memory which will always be hung in the singly linked list of cstates and will not be freed. This will cause a memory leak over time. The data can be a very large object, which can be caused by an attacker continuously sending sdp packets and this may cause the service of the target device to crash.\n\n * CVE-2022-39176: BlueZ before 5.59 allows physically proximate attackers to obtain sensitive information because profiles/audio/avrcp.c does not validate params_len.\n\n * CVE-2022-39177: BlueZ before 5.59 allows physically proximate attackers to cause a denial of service because malformed and invalid capabilities can be processed in profiles/audio/avdtp.c.\n\n * #41458: Требует /bin/systemctl",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-07"
+          },
+          "Updated": {
+            "Date": "2021-12-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2022-05703",
+              "Impact": "Low",
+              "Public": "20210624",
+              "CveID": "BDU:2022-05703"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2022-06043",
+              "Impact": "Low",
+              "Public": "20211113",
+              "CveID": "BDU:2022-06043"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3658",
+              "Impact": "Low",
+              "Public": "20220302",
+              "CveID": "CVE-2021-3658"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41229",
+              "Impact": "Low",
+              "Public": "20211112",
+              "CveID": "CVE-2021-41229"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39176",
+              "Impact": "High",
+              "Public": "20220902",
+              "CveID": "CVE-2022-39176"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39177",
+              "Impact": "High",
+              "Public": "20220902",
+              "CveID": "CVE-2022-39177"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41458",
+              "Href": "https://bugzilla.altlinux.org/41458",
+              "Data": "Требует /bin/systemctl"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492001",
+                "Comment": "bluez is earlier than 0:5.62-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492002",
+                "Comment": "bluez-btpclient is earlier than 0:5.62-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492003",
+                "Comment": "bluez-cups is earlier than 0:5.62-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492004",
+                "Comment": "libbluez is earlier than 0:5.62-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492005",
+                "Comment": "libbluez-devel is earlier than 0:5.62-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213492006",
+                "Comment": "zsh-completion-bluez is earlier than 0:5.62-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

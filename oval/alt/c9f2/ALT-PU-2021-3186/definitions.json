@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213186",
+      "Version": "oval:org.altlinux.errata:def:20213186",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3186: package `php7-xsl` update to version 7.3.32-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3186",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3186",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05228",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05228",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-21703",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21703",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-xsl to version 7.3.32-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05228: Уязвимость компонента SAPI расширения PHP-FPM интерпретатора языка программирования PHP, позволяющая нарушителю повысить свои привилегии до root\n\n * CVE-2021-21703: In PHP versions 7.3.x up to and including 7.3.31, 7.4.x below 7.4.25 and 8.0.x below 8.0.12, when running PHP FPM SAPI with main FPM daemon process running as root and child worker processes running as lower-privileged users, it is possible for the child processes to access memory shared with the main process and write to it, modifying it in a way that would cause the root process to conduct invalid memory reads and writes, which can be used to escalate privileges from local unprivileged user to the root user.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-01"
+          },
+          "Updated": {
+            "Date": "2021-11-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-284, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-05228",
+              "Impact": "High",
+              "Public": "20211025",
+              "CveID": "BDU:2021-05228"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21703",
+              "Impact": "High",
+              "Public": "20211025",
+              "CveID": "CVE-2021-21703"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213186001",
+                "Comment": "php7-xsl is earlier than 0:7.3.32-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

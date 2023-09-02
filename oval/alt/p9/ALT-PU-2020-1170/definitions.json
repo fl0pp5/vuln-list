@@ -1,0 +1,224 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201170",
+      "Version": "oval:org.altlinux.errata:def:20201170",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1170: package `qt5-base` update to version 5.12.6-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1170",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1170",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-0569",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0569",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-0570",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0570",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-base to version 5.12.6-alt3. \nSecurity Fix(es):\n\n * CVE-2020-0569: Out of bounds write in Intel(R) PROSet/Wireless WiFi products on Windows 10 may allow an authenticated user to potentially enable denial of service via local access.\n\n * CVE-2020-0570: Uncontrolled search path in the QT Library before 5.14.0, 5.12.7 and 5.9.10 may allow an authenticated user to potentially enable elevation of privilege via local access.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-10"
+          },
+          "Updated": {
+            "Date": "2020-02-10"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0569",
+              "Impact": "Low",
+              "Public": "20201123",
+              "CveID": "CVE-2020-0569"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0570",
+              "Impact": "High",
+              "Public": "20200914",
+              "CveID": "CVE-2020-0570"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170001",
+                "Comment": "libqt5-concurrent is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170002",
+                "Comment": "libqt5-core is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170003",
+                "Comment": "libqt5-dbus is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170004",
+                "Comment": "libqt5-eglfsdeviceintegration is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170005",
+                "Comment": "libqt5-eglfskmssupport is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170006",
+                "Comment": "libqt5-gui is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170007",
+                "Comment": "libqt5-network is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170008",
+                "Comment": "libqt5-opengl is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170009",
+                "Comment": "libqt5-printsupport is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170010",
+                "Comment": "libqt5-sql is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170011",
+                "Comment": "libqt5-test is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170012",
+                "Comment": "libqt5-widgets is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170013",
+                "Comment": "libqt5-xcbqpa is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170014",
+                "Comment": "libqt5-xml is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170015",
+                "Comment": "qt5-base-common is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170016",
+                "Comment": "qt5-base-devel is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170017",
+                "Comment": "qt5-base-devel-static is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170018",
+                "Comment": "qt5-base-doc is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170019",
+                "Comment": "qt5-qtbase is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170020",
+                "Comment": "qt5-qtbase-gui is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170021",
+                "Comment": "qt5-sql is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170022",
+                "Comment": "qt5-sql-interbase is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170023",
+                "Comment": "qt5-sql-mysql is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170024",
+                "Comment": "qt5-sql-odbc is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170025",
+                "Comment": "qt5-sql-postgresql is earlier than 0:5.12.6-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201170026",
+                "Comment": "rpm-macros-qt5 is earlier than 0:5.12.6-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

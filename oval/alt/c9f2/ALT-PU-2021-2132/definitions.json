@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212132",
+      "Version": "oval:org.altlinux.errata:def:20212132",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2132: package `sysstat` update to version 12.5.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2132",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2132",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-02852",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02852",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06244",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06244",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16167",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16167",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19725",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sysstat to version 12.5.1-alt2. \nSecurity Fix(es):\n\n * BDU:2020-02852: Уязвимость функции check_file_actlst (sa_common.c) утилиты измерения и анализа производительности системы sysstat, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2022-06244: Уязвимость функции remap_struct() компонента sa_common.c утилиты для измерения и анализа производительности системы Sysstat, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-16167: sysstat before 12.1.6 has memory corruption due to an Integer Overflow in remap_struct() in sa_common.c.\n\n * CVE-2019-19725: sysstat through 12.2.0 has a double free in check_file_actlst in sa_common.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-02"
+          },
+          "Updated": {
+            "Date": "2021-07-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415, CWE-672",
+              "Href": "https://bdu.fstec.ru/vul/2020-02852",
+              "Impact": "Critical",
+              "Public": "20191211",
+              "CveID": "BDU:2020-02852"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-06244",
+              "Impact": "Low",
+              "Public": "20190803",
+              "CveID": "BDU:2022-06244"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16167",
+              "Impact": "Low",
+              "Public": "20190909",
+              "CveID": "CVE-2019-16167"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19725",
+              "Impact": "Critical",
+              "Public": "20191211",
+              "CveID": "CVE-2019-19725"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212132001",
+                "Comment": "sysstat is earlier than 0:12.5.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212132002",
+                "Comment": "sysstat-isag is earlier than 0:12.5.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

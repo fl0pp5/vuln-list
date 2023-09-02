@@ -1,0 +1,242 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211184",
+      "Version": "oval:org.altlinux.errata:def:20211184",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1184: package `sudo` update to version 1.9.5p2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1184",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1184",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00856",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00856",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00857",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00857",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-00364",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00364",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05782",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05782",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-19232",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19232",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19234",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19234",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23239",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23239",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23240",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23240",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3156",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3156",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sudo to version 1.9.5p2-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00856: Уязвимость учетной записи sudoer в файле Runas ALL программы системного администрирования Sudo, позволяющая нарушителю отключить аутентификацию пользователя по локальному паролю\n\n * BDU:2020-00857: Уязвимость учетной записи sudoer в файле Runas ALL программы системного администрирования Sudo, позволяющая нарушителю выдать себя за несуществующего пользователя\n\n * BDU:2021-00364: Уязвимость функции parse_args() программы системного администрирования Sudo, позволяющая нарушителю повысить свои привилегии до уровня root\n\n * BDU:2022-05782: Уязвимость команды sudoedit программы системного администрирования Sudo, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2019-19232: ** DISPUTED ** In Sudo through 1.8.29, an attacker with access to a Runas ALL sudoer account can impersonate a nonexistent user by invoking sudo with a numeric uid that is not associated with any user. NOTE: The software maintainer believes that this is not a vulnerability because running a command via sudo as a user not present in the local password database is an intentional feature. Because this behavior surprised some users, sudo 1.8.30 introduced an option to enable/disable this behavior with the default being disabled. However, this does not change the fact that sudo was behaving as intended, and as documented, in earlier versions.\n\n * CVE-2019-19234: ** DISPUTED ** In Sudo through 1.8.29, the fact that a user has been blocked (e.g., by using the ! character in the shadow file instead of a password hash) is not considered, allowing an attacker (who has access to a Runas ALL sudoer account) to impersonate any blocked user. NOTE: The software maintainer believes that this CVE is not valid. Disabling local password authentication for a user is not the same as disabling all access to that user--the user may still be able to login via other means (ssh key, kerberos, etc). Both the Linux shadow(5) and passwd(1) manuals are clear on this. Indeed it is a valid use case to have local accounts that are _only_ accessible via sudo and that cannot be logged into with a password. Sudo 1.8.30 added an optional setting to check the _shell_ of the target user (not the encrypted password!) against the contents of /etc/shells but that is not the same thing as preventing access to users with an invalid password hash.\n\n * CVE-2021-23239: The sudoedit personality of Sudo before 1.9.5 may allow a local unprivileged user to perform arbitrary directory-existence tests by winning a sudo_edit.c race condition in replacing a user-controlled directory by a symlink to an arbitrary path.\n\n * CVE-2021-23240: selinux_edit_copy_tfiles in sudoedit in Sudo before 1.9.5 allows a local unprivileged user to gain file ownership and escalate privileges by replacing a temporary file with a symlink to an arbitrary file target. This affects SELinux RBAC support in permissive mode. Machines without SELinux are not vulnerable.\n\n * CVE-2021-3156: Sudo before 1.9.5p2 contains an off-by-one error that can result in a heap-based buffer overflow, which allows privilege escalation to root via \"sudoedit -s\" and a command-line argument that ends with a single backslash character.\n\n * #39615: CVE-2021-3156",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-29"
+          },
+          "Updated": {
+            "Date": "2021-01-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2020-00856",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "BDU:2020-00856"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2020-00857",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "BDU:2020-00857"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122, CWE-193",
+              "Href": "https://bdu.fstec.ru/vul/2021-00364",
+              "Impact": "High",
+              "Public": "20210126",
+              "CveID": "BDU:2021-00364"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-59",
+              "Href": "https://bdu.fstec.ru/vul/2022-05782",
+              "Impact": "Low",
+              "Public": "20210106",
+              "CveID": "BDU:2022-05782"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19232",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "CVE-2019-19232"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19234",
+              "Impact": "High",
+              "Public": "20191219",
+              "CveID": "CVE-2019-19234"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23239",
+              "Impact": "Low",
+              "Public": "20210112",
+              "CveID": "CVE-2021-23239"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23240",
+              "Impact": "High",
+              "Public": "20210112",
+              "CveID": "CVE-2021-23240"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-193",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3156",
+              "Impact": "High",
+              "Public": "20210126",
+              "CveID": "CVE-2021-3156"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39615",
+              "Href": "https://bugzilla.altlinux.org/39615",
+              "Data": "CVE-2021-3156"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211184001",
+                "Comment": "sudo is earlier than 1:1.9.5p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211184002",
+                "Comment": "sudo-devel is earlier than 1:1.9.5p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211184003",
+                "Comment": "sudo-logsrvd is earlier than 1:1.9.5p2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211184004",
+                "Comment": "sudo-python is earlier than 1:1.9.5p2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

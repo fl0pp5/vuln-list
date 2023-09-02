@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212593",
+      "Version": "oval:org.altlinux.errata:def:20212593",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2593: package `passivedns` update to version 1.2.1-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2593",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2593",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades passivedns to version 1.2.1-alt3. \nSecurity Fix(es):\n\n * #40533: Не запускается passivedns.service",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-21"
+          },
+          "Updated": {
+            "Date": "2021-08-21"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40533",
+              "Href": "https://bugzilla.altlinux.org/40533",
+              "Data": "Не запускается passivedns.service"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212593001",
+                "Comment": "passivedns is earlier than 0:1.2.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212593002",
+                "Comment": "passivedns-daemon is earlier than 0:1.2.1-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212593003",
+                "Comment": "passivedns-tools is earlier than 0:1.2.1-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

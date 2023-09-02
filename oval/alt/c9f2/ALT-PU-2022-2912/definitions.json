@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222912",
+      "Version": "oval:org.altlinux.errata:def:20222912",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2912: package `unzip` update to version 6.0-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2912",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2912",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-4217",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4217",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades unzip to version 6.0-alt5. \nSecurity Fix(es):\n\n * CVE-2021-4217: A flaw was found in unzip. The vulnerability occurs due to improper handling of Unicode strings, which can lead to a null pointer dereference. This flaw allows an attacker to input a specially crafted zip file, leading to a crash or code execution.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-24"
+          },
+          "Updated": {
+            "Date": "2022-10-24"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4217",
+              "Impact": "Low",
+              "Public": "20220824",
+              "CveID": "CVE-2021-4217"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222912001",
+                "Comment": "unzip is earlier than 0:6.0-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

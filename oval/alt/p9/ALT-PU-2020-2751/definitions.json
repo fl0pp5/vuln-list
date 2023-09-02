@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202751",
+      "Version": "oval:org.altlinux.errata:def:20202751",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2751: package `psi-plus` update to version 1.4.912-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2751",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2751",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades psi-plus to version 1.4.912-alt1. \nSecurity Fix(es):\n\n * #37381: Собран с QtWebKit",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-09-10"
+          },
+          "Updated": {
+            "Date": "2020-09-10"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37381",
+              "Href": "https://bugzilla.altlinux.org/37381",
+              "Data": "Собран с QtWebKit"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751001",
+                "Comment": "psi-plus is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751002",
+                "Comment": "psi-plus-plugin-attention is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751003",
+                "Comment": "psi-plus-plugin-autoreply is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751004",
+                "Comment": "psi-plus-plugin-birthdayreminder is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751005",
+                "Comment": "psi-plus-plugin-chess is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751006",
+                "Comment": "psi-plus-plugin-cleaner is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751007",
+                "Comment": "psi-plus-plugin-clientswitcher is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751008",
+                "Comment": "psi-plus-plugin-conferencelogger is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751009",
+                "Comment": "psi-plus-plugin-contentdownloader is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751010",
+                "Comment": "psi-plus-plugin-enummessages is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751011",
+                "Comment": "psi-plus-plugin-extendedmenu is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751012",
+                "Comment": "psi-plus-plugin-extendedoptions is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751013",
+                "Comment": "psi-plus-plugin-gomokugame is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751014",
+                "Comment": "psi-plus-plugin-historykeeper is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751015",
+                "Comment": "psi-plus-plugin-icqdie is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751016",
+                "Comment": "psi-plus-plugin-image is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751017",
+                "Comment": "psi-plus-plugin-imagepreview is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751018",
+                "Comment": "psi-plus-plugin-jabberdisk is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751019",
+                "Comment": "psi-plus-plugin-juick is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751020",
+                "Comment": "psi-plus-plugin-messagefilter is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751021",
+                "Comment": "psi-plus-plugin-otr is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751022",
+                "Comment": "psi-plus-plugin-pepchangenotify is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751023",
+                "Comment": "psi-plus-plugin-qipxstatuses is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751024",
+                "Comment": "psi-plus-plugin-redirector is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751025",
+                "Comment": "psi-plus-plugin-screenshot is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751026",
+                "Comment": "psi-plus-plugin-skins is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751027",
+                "Comment": "psi-plus-plugin-stopspam is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751028",
+                "Comment": "psi-plus-plugin-storagenotes is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751029",
+                "Comment": "psi-plus-plugin-translate is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751030",
+                "Comment": "psi-plus-plugin-videostatus is earlier than 0:1.4.912-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202751031",
+                "Comment": "psi-plus-plugin-watcher is earlier than 0:1.4.912-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

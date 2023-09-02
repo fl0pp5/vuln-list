@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211956",
+      "Version": "oval:org.altlinux.errata:def:20211956",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1956: package `xorg-server` update to version 1.20.8-alt8",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1956",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1956",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01784",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01784",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03541",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03541",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03760",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03760",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14360",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14360",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25712",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25712",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3472",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3472",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades xorg-server to version 1.20.8-alt8. \nSecurity Fix(es):\n\n * BDU:2021-01784: Уязвимость компонента XkbSetDeviceInfo пакета xorg-x11-server, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2021-03541: Уязвимость функции XkbSetMap реализации сервера X Window System X.Org Server, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-03760: Уязвимость X.org сервера, связанная с целочисленной потерей значимости, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2020-14360: A flaw was found in the X.Org Server before version 1.20.10. An out-of-bounds access in the XkbSetMap function may lead to a privilege escalation vulnerability. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-25712: A flaw was found in xorg-x11-server before 1.20.10. A heap-buffer overflow in XkbSetDeviceInfo may lead to a privilege escalation vulnerability. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2021-3472: A flaw was found in xorg-x11-server in versions before 1.20.11. An integer underflow can occur in xserver which can lead to a local privilege escalation. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-09"
+          },
+          "Updated": {
+            "Date": "2021-06-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2021-01784",
+              "Impact": "Low",
+              "Public": "20201201",
+              "CveID": "BDU:2021-01784"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-03541",
+              "Impact": "High",
+              "Public": "20201201",
+              "CveID": "BDU:2021-03541"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://bdu.fstec.ru/vul/2021-03760",
+              "Impact": "High",
+              "Public": "20210426",
+              "CveID": "BDU:2021-03760"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14360",
+              "Impact": "High",
+              "Public": "20210120",
+              "CveID": "CVE-2020-14360"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25712",
+              "Impact": "High",
+              "Public": "20201215",
+              "CveID": "CVE-2020-25712"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-191",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3472",
+              "Impact": "High",
+              "Public": "20210426",
+              "CveID": "CVE-2021-3472"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956001",
+                "Comment": "xorg-sdk is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956002",
+                "Comment": "xorg-server is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956003",
+                "Comment": "xorg-server-common is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956004",
+                "Comment": "xorg-xdmx is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956005",
+                "Comment": "xorg-xephyr is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956006",
+                "Comment": "xorg-xnest is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956007",
+                "Comment": "xorg-xvfb is earlier than 2:1.20.8-alt8"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211956008",
+                "Comment": "xorg-xwayland is earlier than 2:1.20.8-alt8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

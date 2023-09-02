@@ -1,0 +1,199 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234121",
+      "Version": "oval:org.altlinux.errata:def:20234121",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4121: package `zoneminder` update to version 1.36.33-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4121",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4121",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01079",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01079",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-25825",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-25825",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26032",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26032",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26034",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26034",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26035",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26035",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26036",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26036",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26037",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26037",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26038",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26038",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-26039",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-26039",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zoneminder to version 1.36.33-alt1.1. \nSecurity Fix(es):\n\n * BDU:2023-01079: Уязвимость функции shell_exec() программного обеспечения для организации видеонаблюдения ZoneMinder, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2023-25825: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 are vulnerable to Cross-site Scripting. Log entries can be injected into the database logs, containing a malicious referrer field. This is unescaped when viewing the logs in the web ui. This issue is patched in version 1.36.33.\n\n * CVE-2023-26032: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 contain SQL Injection via malicious jason web token. The Username field of the JWT token was trusted when performing an SQL query to load the user. If an attacker could determine the HASH key used by ZoneMinder, they could generate a malicious JWT token and use it to execute arbitrary SQL. This issue is fixed in versions 1.36.33 and 1.37.33.\n\n * CVE-2023-26034: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 are affected by a SQL Injection vulnerability. The (blind) SQL Injection vulnerability is present within the `filter[Query][terms][0][attr]` query string parameter of the `/zm/index.php` endpoint. A user with the View or Edit permissions of Events may execute arbitrary SQL. The resulting impact can include unauthorized data access (and modification), authentication and/or authorization bypass, and remote code execution.\n\n * CVE-2023-26035: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 are vulnerable to Unauthenticated Remote Code Execution via Missing Authorization. There are no permissions check on the snapshot action, which expects an id to fetch an existing monitor but can be passed an object to create a new one instead. TriggerOn ends up calling shell_exec using the supplied Id. This issue is fixed in This issue is fixed in versions 1.36.33 and 1.37.33.\n\n * CVE-2023-26036: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 contain a Local File Inclusion (Untrusted Search Path) vulnerability via /web/index.php. By controlling $view, any local file ending in .php can be executed. This is supposed to be mitigated by calling detaintPath, however dentaintPath does not properly sandbox the path. This can be exploited by constructing paths like \"..././\", which get replaced by \"../\". This issue is patched in versions 1.36.33 and 1.37.33.\n\n * CVE-2023-26037: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 contain an SQL Injection. The minTime and maxTime request parameters are not properly validated and could be used execute arbitrary SQL. This issue is fixed in versions 1.36.33 and 1.37.33.\n\n * CVE-2023-26038: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 contain a Local File Inclusion (Untrusted Search Path) vulnerability via web/ajax/modal.php, where an arbitrary php file path can be passed in the request and loaded. This issue is patched in versions 1.36.33 and 1.37.33.\n\n * CVE-2023-26039: ZoneMinder is a free, open source Closed-circuit television software application for Linux which supports IP, USB and Analog cameras. Versions prior to 1.36.33 and 1.37.33 contain an OS Command Injection via daemonControl() in (/web/api/app/Controller/HostController.php). Any authenticated user can construct an api command to execute any shell command as the web user. This issue is patched in versions 1.36.33 and 1.37.33.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-05"
+          },
+          "Updated": {
+            "Date": "2023-07-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://bdu.fstec.ru/vul/2023-01079",
+              "Impact": "High",
+              "Public": "20230217",
+              "CveID": "BDU:2023-01079"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-25825",
+              "Impact": "Low",
+              "Public": "20230225",
+              "CveID": "CVE-2023-25825"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26032",
+              "Impact": "High",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26032"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26034",
+              "Impact": "High",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26034"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26035",
+              "Impact": "Critical",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26035"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26036",
+              "Impact": "Critical",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26036"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26037",
+              "Impact": "Critical",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26037"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26038",
+              "Impact": "Low",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26038"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-26039",
+              "Impact": "High",
+              "Public": "20230225",
+              "CveID": "CVE-2023-26039"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234121001",
+                "Comment": "zoneminder is earlier than 0:1.36.33-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234121002",
+                "Comment": "zoneminder-api is earlier than 0:1.36.33-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234121003",
+                "Comment": "zoneminder-nginx is earlier than 0:1.36.33-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

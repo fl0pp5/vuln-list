@@ -1,0 +1,156 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213336",
+      "Version": "oval:org.altlinux.errata:def:20213336",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3336: package `sqlite3` update to version 3.36.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3336",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3336",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01135",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01135",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05231",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05231",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20227",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20227",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-36690",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-36690",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sqlite3 to version 3.36.0-alt2. \nSecurity Fix(es):\n\n * BDU:2021-01135: Уязвимость функции SELECT системы управления базами данных SQLite, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2021-05231: Уязвимость функции idxGetTableInfo компонента командной строки встраиваемой СУБД SQLite, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-20227: A flaw was found in SQLite's SELECT query functionality (src/select.c). This flaw allows an attacker who is capable of running SQL queries locally on the SQLite database to cause a denial of service or possible code execution by triggering a use-after-free. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-36690: ** DISPUTED ** A segmentation fault can occur in the sqlite3.exe command-line component of SQLite 3.36.0 via the idxGetTableInfo function when there is a crafted SQL query. NOTE: the vendor disputes the relevance of this report because a sqlite3.exe user already has full privileges (e.g., is intentionally allowed to execute commands). This report does NOT imply any problem in the SQLite library.\n\n * OVE-20211020-0001: description unavailable\n\n * #39823: sqlite3: обновить до 3.35.2",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-22"
+          },
+          "Updated": {
+            "Date": "2021-11-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01135",
+              "Impact": "Low",
+              "Public": "20210205",
+              "CveID": "BDU:2021-01135"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-05231",
+              "Impact": "High",
+              "Public": "20210707",
+              "CveID": "BDU:2021-05231"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20227",
+              "Impact": "Low",
+              "Public": "20210323",
+              "CveID": "CVE-2021-20227"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-36690",
+              "Impact": "High",
+              "Public": "20210824",
+              "CveID": "CVE-2021-36690"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39823",
+              "Href": "https://bugzilla.altlinux.org/39823",
+              "Data": "sqlite3: обновить до 3.35.2"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336001",
+                "Comment": "lemon is earlier than 0:3.36.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336002",
+                "Comment": "libsqlite3 is earlier than 0:3.36.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336003",
+                "Comment": "libsqlite3-devel is earlier than 0:3.36.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336004",
+                "Comment": "sqlite3 is earlier than 0:3.36.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336005",
+                "Comment": "sqlite3-doc is earlier than 0:3.36.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213336006",
+                "Comment": "tcl-sqlite3 is earlier than 0:3.36.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

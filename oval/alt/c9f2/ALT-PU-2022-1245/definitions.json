@@ -1,0 +1,251 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221245",
+      "Version": "oval:org.altlinux.errata:def:20221245",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1245: package `kubernetes` update to version 1.22.5-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1245",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1245",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-06196",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06196",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01684",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01684",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02241",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02241",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8562",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8562",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8563",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8563",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8564",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8564",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8565",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8565",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8566",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8566",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25735",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25735",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25737",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25737",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25741",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25741",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kubernetes to version 1.22.5-alt2. \nSecurity Fix(es):\n\n * BDU:2021-06196: Уязвимость программы для оркестровки контейнеризированных приложений Kubernetes, связанная с недостатками разграничения доступа, позволяющая нарушителю обойти введенные ограничения безопасности\n\n * BDU:2022-01684: Уязвимость компонента kube-apiserver программного средства управления кластерами виртуальных машин Kubernetes, позволяющая нарушителю нарушить целостность данных, а также вызвать отказ в обслуживании\n\n * BDU:2022-02241: Уязвимость программного средства управления кластерами виртуальных машин Kubernetes, связанная с использованием открытой переадресации, позволяющая нарушителю получить доступ к конфиденциальным данным и нарушить их целостность\n\n * CVE-2020-8562: As mitigations to a report from 2019 and CVE-2020-8555, Kubernetes attempts to prevent proxied connections from accessing link-local or localhost networks when making user-driven connections to Services, Pods, Nodes, or StorageClass service providers. As part of this mitigation Kubernetes does a DNS name resolution check and validates that response IPs are not in the link-local (169.254.0.0/16) or localhost (127.0.0.0/8) range. Kubernetes then performs a second DNS resolution without validation for the actual connection. If a non-standard DNS server returns different non-cached responses, a user may be able to bypass the proxy IP restriction and access private networks on the control plane.\n\n * CVE-2020-8563: In Kubernetes clusters using VSphere as a cloud provider, with a logging level set to 4 or above, VSphere cloud credentials will be leaked in the cloud controller manager's log. This affects \u003c v1.19.3.\n\n * CVE-2020-8564: In Kubernetes clusters using a logging level of at least 4, processing a malformed docker config file will result in the contents of the docker config file being leaked, which can include pull secrets or other registry credentials. This affects \u003c v1.19.3, \u003c v1.18.10, \u003c v1.17.13.\n\n * CVE-2020-8565: In Kubernetes, if the logging level is set to at least 9, authorization and bearer tokens will be written to log files. This can occur both in API server logs and client tool output like kubectl. This affects \u003c= v1.19.3, \u003c= v1.18.10, \u003c= v1.17.13, \u003c v1.20.0-alpha2.\n\n * CVE-2020-8566: In Kubernetes clusters using Ceph RBD as a storage provisioner, with logging level of at least 4, Ceph RBD admin secrets can be written to logs. This occurs in kube-controller-manager's logs during provisioning of Ceph RBD persistent claims. This affects \u003c v1.19.3, \u003c v1.18.10, \u003c v1.17.13.\n\n * CVE-2021-25735: A security issue was discovered in kube-apiserver that could allow node updates to bypass a Validating Admission Webhook. Clusters are only affected by this vulnerability if they run a Validating Admission Webhook for Nodes that denies admission based at least partially on the old state of the Node object. Validating Admission Webhook does not observe some previous fields.\n\n * CVE-2021-25737: A security issue was discovered in Kubernetes where a user may be able to redirect pod traffic to private networks on a Node. Kubernetes already prevents creation of Endpoint IPs in the localhost or link-local range, but the same validation was not performed on EndpointSlice IPs.\n\n * CVE-2021-25741: A security issue was discovered in Kubernetes where a user may be able to create a container with subpath volume mounts to access files \u0026 directories outside of the volume, including on the host filesystem.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2021-06196",
+              "Impact": "High",
+              "Public": "20210928",
+              "CveID": "BDU:2021-06196"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2022-01684",
+              "Impact": "Low",
+              "Public": "20210310",
+              "CveID": "BDU:2022-01684"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://bdu.fstec.ru/vul/2022-02241",
+              "Impact": "Low",
+              "Public": "20210906",
+              "CveID": "BDU:2022-02241"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8562",
+              "Impact": "Low",
+              "Public": "20220201",
+              "CveID": "CVE-2020-8562"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8563",
+              "Impact": "Low",
+              "Public": "20201207",
+              "CveID": "CVE-2020-8563"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8564",
+              "Impact": "Low",
+              "Public": "20201207",
+              "CveID": "CVE-2020-8564"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8565",
+              "Impact": "Low",
+              "Public": "20201207",
+              "CveID": "CVE-2020-8565"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-532",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8566",
+              "Impact": "Low",
+              "Public": "20201207",
+              "CveID": "CVE-2020-8566"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25735",
+              "Impact": "Low",
+              "Public": "20210906",
+              "CveID": "CVE-2021-25735"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25737",
+              "Impact": "Low",
+              "Public": "20210906",
+              "CveID": "CVE-2021-25737"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-552",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25741",
+              "Impact": "High",
+              "Public": "20210920",
+              "CveID": "CVE-2021-25741"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245001",
+                "Comment": "kubernetes-client is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245002",
+                "Comment": "kubernetes-common is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245003",
+                "Comment": "kubernetes-crio is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245004",
+                "Comment": "kubernetes-kubeadm is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245005",
+                "Comment": "kubernetes-kubelet is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245006",
+                "Comment": "kubernetes-master is earlier than 0:1.22.5-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221245007",
+                "Comment": "kubernetes-node is earlier than 0:1.22.5-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

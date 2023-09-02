@@ -1,0 +1,206 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221765",
+      "Version": "oval:org.altlinux.errata:def:20221765",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1765: package `snapd` update to version 2.54.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1765",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1765",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01444",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01444",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01445",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01445",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01460",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01460",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3155",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3155",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4120",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4120",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44730",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44730",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44731",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44731",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades snapd to version 2.54.3-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01444: Уязвимость утилиты для управления самодостаточными пакетами snapd, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю повысить свои привилегии в системе и выполнить произвольный код\n\n * BDU:2022-01445: Уязвимость утилиты для управления самодостаточными пакетами snapd, связанная с ошибками выполнения многопоточных задач, позволяющая нарушителю выполнить произвольный код с привилегиями root\n\n * BDU:2022-01460: Уязвимость утилиты для управления самодостаточными пакетами snapd, связанная с ошибками жестких ссылок, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-3155: snapd 2.54.2 and earlier created ~/snap directories in user home directories without specifying owner-only permissions. This could allow a local attacker to read information that should have been private. Fixed in snapd versions 2.54.3+18.04, 2.54.3+20.04 and 2.54.3+21.10.1\n\n * CVE-2021-4120: snapd 2.54.2 fails to perform sufficient validation of snap content interface and layout paths, resulting in the ability for snaps to inject arbitrary AppArmor policy rules via malformed content interface and layout declarations and hence escape strict snap confinement. Fixed in snapd versions 2.54.3+18.04, 2.54.3+20.04 and 2.54.3+21.10.1\n\n * CVE-2021-44730: snapd 2.54.2 did not properly validate the location of the snap-confine binary. A local attacker who can hardlink this binary to another location to cause snap-confine to execute other arbitrary binaries and hence gain privilege escalation. Fixed in snapd versions 2.54.3+18.04, 2.54.3+20.04 and 2.54.3+21.10.1\n\n * CVE-2021-44731: A race condition existed in the snapd 2.54.2 snap-confine binary when preparing a private mount namespace for a snap. This could allow a local attacker to gain root privileges by bind-mounting their own contents inside the snap's private mount namespace and causing snap-confine to execute arbitrary code and hence gain privilege escalation. Fixed in snapd versions 2.54.3+18.04, 2.54.3+20.04 and 2.54.3+21.10.1\n\n * #41625: Не появляются приложения в меню",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-26"
+          },
+          "Updated": {
+            "Date": "2022-04-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-01444",
+              "Impact": "High",
+              "Public": "20220221",
+              "CveID": "BDU:2022-01444"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2022-01445",
+              "Impact": "High",
+              "Public": "20220221",
+              "CveID": "BDU:2022-01445"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-62",
+              "Href": "https://bdu.fstec.ru/vul/2022-01460",
+              "Impact": "High",
+              "Public": "20220221",
+              "CveID": "BDU:2022-01460"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3155",
+              "Impact": "Low",
+              "Public": "20220217",
+              "CveID": "CVE-2021-3155"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4120",
+              "Impact": "High",
+              "Public": "20220217",
+              "CveID": "CVE-2021-4120"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44730",
+              "Impact": "High",
+              "Public": "20220217",
+              "CveID": "CVE-2021-44730"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44731",
+              "Impact": "High",
+              "Public": "20220217",
+              "CveID": "CVE-2021-44731"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41625",
+              "Href": "https://bugzilla.altlinux.org/41625",
+              "Data": "Не появляются приложения в меню"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221765001",
+                "Comment": "snap-confine is earlier than 0:2.54.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221765002",
+                "Comment": "snapd is earlier than 0:2.54.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

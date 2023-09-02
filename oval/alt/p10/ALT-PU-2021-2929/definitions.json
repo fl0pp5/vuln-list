@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212929",
+      "Version": "oval:org.altlinux.errata:def:20212929",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2929: package `qt5-tools` update to version 5.15.2-alt5",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2929",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2929",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades qt5-tools to version 5.15.2-alt5. \nSecurity Fix(es):\n\n * #40884: Не паковать необходимую для сборки библиотеку в devel-static",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-29"
+          },
+          "Updated": {
+            "Date": "2021-09-29"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "40884",
+              "Href": "https://bugzilla.altlinux.org/40884",
+              "Data": "Не паковать необходимую для сборки библиотеку в devel-static"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929001",
+                "Comment": "libqt5-designer is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929002",
+                "Comment": "libqt5-designercomponents is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929003",
+                "Comment": "libqt5-help is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929004",
+                "Comment": "qt5-assistant is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929005",
+                "Comment": "qt5-dbus is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929006",
+                "Comment": "qt5-designer is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929007",
+                "Comment": "qt5-tools is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929008",
+                "Comment": "qt5-tools-common is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929009",
+                "Comment": "qt5-tools-devel is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929010",
+                "Comment": "qt5-tools-devel-static is earlier than 0:5.15.2-alt5"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212929011",
+                "Comment": "qt5-tools-doc is earlier than 0:5.15.2-alt5"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

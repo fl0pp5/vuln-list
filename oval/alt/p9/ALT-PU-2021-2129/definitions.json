@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212129",
+      "Version": "oval:org.altlinux.errata:def:20212129",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2129: package `NetworkManager` update to version 1.18.11-alt1.gite2fdbc2b7482",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2129",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2129",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06889",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06889",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-13529",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13529",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades NetworkManager to version 1.18.11-alt1.gite2fdbc2b7482. \nSecurity Fix(es):\n\n * BDU:2022-06889: Уязвимость подсистемы инициализации и управления службами Systemd, связанная с обходом аутентификации посредством спуфинга, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-13529: An exploitable denial-of-service vulnerability exists in Systemd 245. A specially crafted DHCP FORCERENEW packet can cause a server running the DHCP client to be vulnerable to a DHCP ACK spoofing attack. An attacker can forge a pair of FORCERENEW and DCHP ACK packets to reconfigure the server.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-02"
+          },
+          "Updated": {
+            "Date": "2021-07-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-290",
+              "Href": "https://bdu.fstec.ru/vul/2022-06889",
+              "Impact": "Low",
+              "Public": "20200818",
+              "CveID": "BDU:2022-06889"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-290",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13529",
+              "Impact": "Low",
+              "Public": "20210510",
+              "CveID": "CVE-2020-13529"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129001",
+                "Comment": "NetworkManager is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129002",
+                "Comment": "NetworkManager-adsl is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129003",
+                "Comment": "NetworkManager-bluetooth is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129004",
+                "Comment": "NetworkManager-daemon is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129005",
+                "Comment": "NetworkManager-ovs is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129006",
+                "Comment": "NetworkManager-ppp is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129007",
+                "Comment": "NetworkManager-team is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129008",
+                "Comment": "NetworkManager-tui is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129009",
+                "Comment": "NetworkManager-wifi is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129010",
+                "Comment": "NetworkManager-wwan is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129011",
+                "Comment": "libnm is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129012",
+                "Comment": "libnm-devel is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129013",
+                "Comment": "libnm-devel-doc is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129014",
+                "Comment": "libnm-gir is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212129015",
+                "Comment": "libnm-gir-devel is earlier than 0:1.18.11-alt1.gite2fdbc2b7482"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

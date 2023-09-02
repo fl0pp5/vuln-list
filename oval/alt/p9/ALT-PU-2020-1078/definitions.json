@@ -1,0 +1,251 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201078",
+      "Version": "oval:org.altlinux.errata:def:20201078",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1078: package `kernel-image-std-def` update to version 4.19.97-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1078",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1078",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04799",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04799",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00156",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00156",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00361",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00361",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00884",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00884",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-14615",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14615",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-14895",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-14895",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19078",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19078",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7053",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7053",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 4.19.97-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04799: Уязвимость функции mwifiex_process_country_ie() (drivers/net/wireless/marvell/mwifiex/sta_ioctl.c) драйвера Marvell WiFi ядра операционной системы Linux, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-00156: Уязвимость функции ath10k_usb_hif_tx_sg из drivers/net/wireless/ath/ath10k/usb.c ядра операционной системы Linux, связанная с неправильным освобождением памяти перед удалением последний ссылки, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00361: Уязвимость функции i915_ppgtt_close (drivers/gpu/drm/i915/i915_gem_gtt.c) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00884: Уязвимость микропрограммного обеспечения процессоров Intel c Intel Processor Graphics, связанная с отсутствием защиты служебных данных, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2019-14615: Insufficient control flow in certain data structures for some Intel(R) Processors with Intel(R) Processor Graphics may allow an unauthenticated user to potentially enable information disclosure via local access.\n\n * CVE-2019-14895: A heap-based buffer overflow was discovered in the Linux kernel, all versions 3.x.x and 4.x.x before 4.18.0, in Marvell WiFi chip driver. The flaw could occur when the station attempts a connection negotiation during the handling of the remote devices country settings. This could allow the remote device to cause a denial of service (system crash) or possibly execute arbitrary code.\n\n * CVE-2019-19078: A memory leak in the ath10k_usb_hif_tx_sg() function in drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.3.11 allows attackers to cause a denial of service (memory consumption) by triggering usb_submit_urb() failures, aka CID-b8d17e7d93d2.\n\n * CVE-2020-7053: In the Linux kernel 4.14 longterm through 4.14.165 and 4.19 longterm through 4.19.96 (and 5.x before 5.2), there is a use-after-free (write) in the i915_ppgtt_close function in drivers/gpu/drm/i915/i915_gem_gtt.c, aka CID-7dc40713618c. This is related to i915_gem_context_destroy_ioctl in drivers/gpu/drm/i915/i915_gem_context.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-01-21"
+          },
+          "Updated": {
+            "Date": "2020-01-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-122, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-04799",
+              "Impact": "High",
+              "Public": "20191129",
+              "CveID": "BDU:2019-04799"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cwe": "CWE-400, CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2020-00156",
+              "Impact": "High",
+              "Public": "20191118",
+              "CveID": "BDU:2020-00156"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-00361",
+              "Impact": "High",
+              "Public": "20190321",
+              "CveID": "BDU:2020-00361"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-00884",
+              "Impact": "Low",
+              "Public": "20200114",
+              "CveID": "BDU:2020-00884"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14615",
+              "Impact": "Low",
+              "Public": "20200117",
+              "CveID": "CVE-2019-14615"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-14895",
+              "Impact": "Critical",
+              "Public": "20191129",
+              "CveID": "CVE-2019-14895"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19078",
+              "Impact": "High",
+              "Public": "20191118",
+              "CveID": "CVE-2019-19078"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7053",
+              "Impact": "High",
+              "Public": "20200114",
+              "CveID": "CVE-2020-7053"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078001",
+                "Comment": "kernel-doc-std is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078003",
+                "Comment": "kernel-headers-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078005",
+                "Comment": "kernel-image-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:4.19.97-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201078012",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:4.19.97-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231102",
+      "Version": "oval:org.altlinux.errata:def:20231102",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1102: package `multipath-tools` update to version 0.9.3-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1102",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1102",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06669",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06669",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41973",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41973",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-41974",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41974",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades multipath-tools to version 0.9.3-alt2. \nSecurity Fix(es):\n\n * BDU:2022-06669: Уязвимость программного обеспечения управления драйверами для организации многопутевого доступа multipath-tools, связанная с ошибками при управлении привилегиями, позволяющая нарушителю повысить свои привилегии до root-пользователя\n\n * CVE-2022-41973: multipath-tools 0.7.7 through 0.9.x before 0.9.2 allows local users to obtain root access, as exploited in conjunction with CVE-2022-41974. Local users able to access /dev/shm can change symlinks in multipathd due to incorrect symlink handling, which could lead to controlled file writes outside of the /dev/shm directory. This could be used indirectly for local privilege escalation to root.\n\n * CVE-2022-41974: multipath-tools 0.7.0 through 0.9.x before 0.9.2 allows local users to obtain root access, as exploited alone or in conjunction with CVE-2022-41973. Local users able to write to UNIX domain sockets can bypass access controls and manipulate the multipath setup. This can lead to local privilege escalation to root. This occurs because an attacker can repeat a keyword, which is mishandled because arithmetic ADD is used instead of bitwise OR.\n\n * #44440: Обновление multipath-tools 0.9.3\n\n * #44524: Checker 'tur' not found in /usr/lib64/multipath",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-20"
+          },
+          "Updated": {
+            "Date": "2023-01-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://bdu.fstec.ru/vul/2022-06669",
+              "Impact": "High",
+              "Public": "20221029",
+              "CveID": "BDU:2022-06669"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41973",
+              "Impact": "High",
+              "Public": "20221029",
+              "CveID": "CVE-2022-41973"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41974",
+              "Impact": "High",
+              "Public": "20221029",
+              "CveID": "CVE-2022-41974"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44440",
+              "Href": "https://bugzilla.altlinux.org/44440",
+              "Data": "Обновление multipath-tools 0.9.3"
+            },
+            {
+              "Id": "44524",
+              "Href": "https://bugzilla.altlinux.org/44524",
+              "Data": "Checker 'tur' not found in /usr/lib64/multipath"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102001",
+                "Comment": "kpartx is earlier than 0:0.9.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102002",
+                "Comment": "libdmmp is earlier than 0:0.9.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102003",
+                "Comment": "libdmmp-devel is earlier than 0:0.9.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102004",
+                "Comment": "libmultipath is earlier than 0:0.9.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102005",
+                "Comment": "libmultipath-devel is earlier than 0:0.9.3-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231102006",
+                "Comment": "multipath-tools is earlier than 0:0.9.3-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

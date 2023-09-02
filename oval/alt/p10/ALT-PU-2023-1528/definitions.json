@@ -1,0 +1,157 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231528",
+      "Version": "oval:org.altlinux.errata:def:20231528",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1528: package `cri-o` update to version 1.26.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1528",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1528",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-03768",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03768",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1708",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1708",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27652",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27652",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2995",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2995",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4318",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4318",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cri-o to version 1.26.2-alt1. \nSecurity Fix(es):\n\n * BDU:2022-03768: Уязвимость программы мониторинга связи между менеджером контейнеров и средой выполнения conmon, связанная с неконтролируемым потреблением ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-1708: A vulnerability was found in CRI-O that causes memory or disk space exhaustion on the node for anyone with access to the Kube API. The ExecSync request runs commands in a container and logs the output of the command. This output is then read by CRI-O after command execution, and it is read in a manner where the entire file corresponding to the output of the command is read in. Thus, if the output of the command is large it is possible to exhaust the memory or the disk space of the node when CRI-O reads the output of the command. The highest threat from this vulnerability is system availability.\n\n * CVE-2022-27652: A flaw was found in cri-o, where containers were incorrectly started with non-empty default permissions. A vulnerability was found in Moby (Docker Engine) where containers started incorrectly with non-empty inheritable Linux process capabilities. This flaw allows an attacker with access to programs with inheritable file capabilities to elevate those capabilities to the permitted set when execve(2) runs.\n\n * CVE-2022-2995: Incorrect handling of the supplementary groups in the CRI-O container engine might lead to sensitive information disclosure or possible data modification if an attacker has direct access to the affected container where supplementary groups are used to set access permissions and is able to execute a binary code in that container.\n\n * CVE-2022-4318: description unavailable",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-29"
+          },
+          "Updated": {
+            "Date": "2023-03-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-03768",
+              "Impact": "High",
+              "Public": "20220607",
+              "CveID": "BDU:2022-03768"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1708",
+              "Impact": "High",
+              "Public": "20220607",
+              "CveID": "CVE-2022-1708"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-276",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27652",
+              "Impact": "Low",
+              "Public": "20220418",
+              "CveID": "CVE-2022-27652"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-732",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2995",
+              "Impact": "High",
+              "Public": "20220919",
+              "CveID": "CVE-2022-2995"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231528001",
+                "Comment": "cri-o is earlier than 0:1.26.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

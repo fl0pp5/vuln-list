@@ -1,0 +1,183 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235120",
+      "Version": "oval:org.altlinux.errata:def:20235120",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5120: package `exim` update to version 4.96-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5120",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5120",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04829",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04829",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04830",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04830",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01672",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01672",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-38371",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-38371",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-37451",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37451",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-37452",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37452",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades exim to version 4.96-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04829: Уязвимость функции host_name_lookup (host.c) почтового сервера Exim, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-04830: Уязвимость функции pam_converse (auths/call_pam.c) почтового сервера Exim, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2023-01672: Уязвимость функционала STARTTLS почтового сервера Exim, связанная с недостаточной нейтрализацией специальных элементов в запросе, позволяющая нарушителю оказать воздействие на целостность данных\n\n * CVE-2021-38371: The STARTTLS feature in Exim through 4.94.2 allows response injection (buffering) during MTA SMTP sending.\n\n * CVE-2022-37451: Exim before 4.96 has an invalid free in pam_converse in auths/call_pam.c because store_free is not used after store_malloc.\n\n * CVE-2022-37452: Exim before 4.95 has a heap-based buffer overflow for the alias list in host_name_lookup in host.c when sender_host_name is set.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-25"
+          },
+          "Updated": {
+            "Date": "2023-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-04829",
+              "Impact": "Critical",
+              "Public": "20220807",
+              "CveID": "BDU:2022-04829"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-04830",
+              "Impact": "Critical",
+              "Public": "20220807",
+              "CveID": "BDU:2022-04830"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2023-01672",
+              "Impact": "High",
+              "Public": "20210810",
+              "CveID": "BDU:2023-01672"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-38371",
+              "Impact": "High",
+              "Public": "20210810",
+              "CveID": "CVE-2021-38371"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37451",
+              "Impact": "High",
+              "Public": "20220806",
+              "CveID": "CVE-2022-37451"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37452",
+              "Impact": "Critical",
+              "Public": "20220807",
+              "CveID": "CVE-2022-37452"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120001",
+                "Comment": "exim is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120002",
+                "Comment": "exim-config is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120003",
+                "Comment": "exim-doc is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120004",
+                "Comment": "exim-ldap is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120005",
+                "Comment": "exim-mysql is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120006",
+                "Comment": "exim-pgsql is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120007",
+                "Comment": "exim-sqlite is earlier than 0:4.96-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235120008",
+                "Comment": "exim-tools is earlier than 0:4.96-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

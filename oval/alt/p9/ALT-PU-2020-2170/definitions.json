@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202170",
+      "Version": "oval:org.altlinux.errata:def:20202170",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2170: package `nagstamon` update to version 3.4.1-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2170",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2170",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades nagstamon to version 3.4.1-alt3. \nSecurity Fix(es):\n\n * #38577: Не запускается nagstamon -\u003e ModuleNotFoundError: No module named 'requests_gssapi'",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-11"
+          },
+          "Updated": {
+            "Date": "2020-06-11"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38577",
+              "Href": "https://bugzilla.altlinux.org/38577",
+              "Data": "Не запускается nagstamon -\u003e ModuleNotFoundError: No module named 'requests_gssapi'"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202170001",
+                "Comment": "nagstamon is earlier than 0:3.4.1-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

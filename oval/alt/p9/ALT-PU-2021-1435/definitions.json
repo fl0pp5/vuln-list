@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211435",
+      "Version": "oval:org.altlinux.errata:def:20211435",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1435: package `rpm-build` update to version 4.0.4-alt164",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1435",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1435",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades rpm-build to version 4.0.4-alt164. \nSecurity Fix(es):\n\n * #39175: debugedit: invalid path for source file (for elfutils/eu-stack)\n\n * #39184: debugedit: canonicalization unexpectedly shrank by one character",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-04"
+          },
+          "Updated": {
+            "Date": "2021-03-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39175",
+              "Href": "https://bugzilla.altlinux.org/39175",
+              "Data": "debugedit: invalid path for source file (for elfutils/eu-stack)"
+            },
+            {
+              "Id": "39184",
+              "Href": "https://bugzilla.altlinux.org/39184",
+              "Data": "debugedit: canonicalization unexpectedly shrank by one character"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211435001",
+                "Comment": "librpm is earlier than 0:4.0.4-alt164"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211435002",
+                "Comment": "librpmbuild is earlier than 0:4.0.4-alt164"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211435003",
+                "Comment": "rpm-build is earlier than 0:4.0.4-alt164"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211435004",
+                "Comment": "rpm-build-checkinstall is earlier than 0:4.0.4-alt164"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

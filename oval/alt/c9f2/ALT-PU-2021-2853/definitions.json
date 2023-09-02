@@ -1,0 +1,261 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212853",
+      "Version": "oval:org.altlinux.errata:def:20212853",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2853: package `libtiff` update to version 4.3.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2853",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2853",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03213",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01525",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01525",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01526",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01526",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01527",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01527",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01529",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01529",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03591",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03591",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-12900",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-12900",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17546",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17546",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35521",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35521",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35522",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35522",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35523",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35523",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-35524",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-35524",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libtiff to version 4.3.0-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03213: Уязвимость функции cpSeparateBufToContigBuf программного обеспечения для просмотра, редактирования и конвертирования TIFF-файлов, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2021-01525: Уязвимость модуля конвертации изображения TIFF в RGBA tiff2rgba библиотеки LibTIFF, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01526: Уязвимость файла tif_getimage.c библиотеки LibTIFF, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-01527: Уязвимость модуля конвертации изображения TIFF в PDF TIFF2PDF библиотеки LibTIFF, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2021-01529: Уязвимость файла tif_read.c библиотеки LibTIFF, позволяющая нарушителю выполнить произвольный код или вызвать отказ в обслуживании\n\n * BDU:2021-03591: Уязвимость компонента tif_getimage.c библиотеки LibTIFF, связанная с записью за границами буфера, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2018-12900: Heap-based buffer overflow in the cpSeparateBufToContigBuf function in tiffcp.c in LibTIFF 3.9.3, 3.9.4, 3.9.5, 3.9.6, 3.9.7, 4.0.0beta7, 4.0.0alpha4, 4.0.0alpha5, 4.0.0alpha6, 4.0.0, 4.0.1, 4.0.2, 4.0.3, 4.0.4, 4.0.4beta, 4.0.5, 4.0.6, 4.0.7, 4.0.8 and 4.0.9 allows remote attackers to cause a denial of service (crash) or possibly have unspecified other impact via a crafted TIFF file.\n\n * CVE-2019-17546: tif_getimage.c in LibTIFF through 4.0.10, as used in GDAL through 3.0.1 and other products, has an integer overflow that potentially causes a heap-based buffer overflow via a crafted RGBA image, related to a \"Negative-size-param\" condition.\n\n * CVE-2020-35521: A flaw was found in libtiff. Due to a memory allocation failure in tif_read.c, a crafted TIFF file can lead to an abort, resulting in denial of service.\n\n * CVE-2020-35522: In LibTIFF, there is a memory malloc failure in tif_pixarlog.c. A crafted TIFF document can lead to an abort, resulting in a remote denial of service attack.\n\n * CVE-2020-35523: An integer overflow flaw was found in libtiff that exists in the tif_getimage.c file. This flaw allows an attacker to inject and execute arbitrary code when a user opens a crafted TIFF file. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.\n\n * CVE-2020-35524: A heap-based buffer overflow flaw was found in libtiff in the handling of TIFF images in libtiff's TIFF2PDF tool. A specially crafted TIFF file can lead to arbitrary code execution. The highest threat from this vulnerability is to confidentiality, integrity, as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-22"
+          },
+          "Updated": {
+            "Date": "2021-09-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-03213",
+              "Impact": "High",
+              "Public": "20180629",
+              "CveID": "BDU:2020-03213"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-01525",
+              "Impact": "Low",
+              "Public": "20201115",
+              "CveID": "BDU:2021-01525"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-01526",
+              "Impact": "High",
+              "Public": "20201110",
+              "CveID": "BDU:2021-01526"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-01527",
+              "Impact": "High",
+              "Public": "20201110",
+              "CveID": "BDU:2021-01527"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2021-01529",
+              "Impact": "High",
+              "Public": "20201115",
+              "CveID": "BDU:2021-01529"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03591",
+              "Impact": "High",
+              "Public": "20191014",
+              "CveID": "BDU:2021-03591"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-12900",
+              "Impact": "High",
+              "Public": "20180626",
+              "CveID": "CVE-2018-12900"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17546",
+              "Impact": "High",
+              "Public": "20191014",
+              "CveID": "CVE-2019-17546"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35521",
+              "Impact": "Low",
+              "Public": "20210309",
+              "CveID": "CVE-2020-35521"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35522",
+              "Impact": "Low",
+              "Public": "20210309",
+              "CveID": "CVE-2020-35522"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35523",
+              "Impact": "High",
+              "Public": "20210309",
+              "CveID": "CVE-2020-35523"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-35524",
+              "Impact": "High",
+              "Public": "20210309",
+              "CveID": "CVE-2020-35524"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853001",
+                "Comment": "libtiff-devel is earlier than 0:4.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853002",
+                "Comment": "libtiff-utils is earlier than 0:4.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853003",
+                "Comment": "libtiff5 is earlier than 0:4.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853004",
+                "Comment": "libtiffxx-devel is earlier than 0:4.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853005",
+                "Comment": "libtiffxx5 is earlier than 0:4.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212853006",
+                "Comment": "tiffgt is earlier than 0:4.3.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

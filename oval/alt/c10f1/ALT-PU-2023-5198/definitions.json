@@ -1,0 +1,186 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235198",
+      "Version": "oval:org.altlinux.errata:def:20235198",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5198: package `postgresql11` update to version 11.21-alt0.p10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5198",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5198",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03024",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03024",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03247",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03247",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04767",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04767",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-2454",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2454",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2455",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2455",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39417",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39417",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql11 to version 11.21-alt0.p10.1. \nSecurity Fix(es):\n\n * BDU:2023-03024: Уязвимость компонента Schema Handler системы управления базами данных PostgreSQL, позволяющая нарушителю обойти ограничения безопасности\n\n * BDU:2023-03247: Уязвимость системы управления базами данных PostgreSQL, связанная с недостатками разграничения доступа, позволяющая нарушителю повысить свои привилегии и выполнить произвольный код\n\n * BDU:2023-04767: Уязвимость системы управления базами данных PostgreSQL, связанная с возможностью SQL-инъекций в расширениях, позволяющая нарушителю выполнять произвольный SQL-запрос к базе данных\n\n * CVE-2023-2454: schema_element defeats protective search_path changes; It was found that certain database calls in PostgreSQL could permit an authed attacker with elevated database-level privileges to execute arbitrary code.\n\n * CVE-2023-2455: Row security policies disregard user ID changes after inlining; PostgreSQL could permit incorrect policies to be applied in certain cases where role-specific policies are used and a given query is planned under one role and then executed under other roles. This scenario can happen under security definer functions or when a common user and query is planned initially and then re-used across multiple SET ROLEs. Applying an incorrect policy may permit a user to complete otherwise-forbidden reads and modifications. This affects only databases that have used CREATE POLICY to define a row security policy.\n\n * CVE-2023-39417: IN THE EXTENSION SCRIPT, a SQL Injection vulnerability was found in PostgreSQL if it uses @extowner@, @extschema@, or @extschema:...@ inside a quoting construct (dollar quoting, '', or \"\"). If an administrator has installed files of a vulnerable, trusted, non-bundled extension, an attacker with database-level CREATE privilege can execute arbitrary code as the bootstrap superuser.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-29"
+          },
+          "Updated": {
+            "Date": "2023-08-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-254",
+              "Href": "https://bdu.fstec.ru/vul/2023-03024",
+              "Impact": "Low",
+              "Public": "20230511",
+              "CveID": "BDU:2023-03024"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://bdu.fstec.ru/vul/2023-03247",
+              "Impact": "High",
+              "Public": "20230511",
+              "CveID": "BDU:2023-03247"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2023-04767",
+              "Impact": "High",
+              "Public": "20230801",
+              "CveID": "BDU:2023-04767"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2454",
+              "Impact": "High",
+              "Public": "20230609",
+              "CveID": "CVE-2023-2454"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2455",
+              "Impact": "Low",
+              "Public": "20230609",
+              "CveID": "CVE-2023-2455"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39417",
+              "Impact": "High",
+              "Public": "20230811",
+              "CveID": "CVE-2023-39417"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198001",
+                "Comment": "postgresql11 is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198002",
+                "Comment": "postgresql11-contrib is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198003",
+                "Comment": "postgresql11-docs is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198004",
+                "Comment": "postgresql11-llvmjit is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198005",
+                "Comment": "postgresql11-perl is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198006",
+                "Comment": "postgresql11-python is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198007",
+                "Comment": "postgresql11-server is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198008",
+                "Comment": "postgresql11-server-devel is earlier than 0:11.21-alt0.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235198009",
+                "Comment": "postgresql11-tcl is earlier than 0:11.21-alt0.p10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235164",
+      "Version": "oval:org.altlinux.errata:def:20235164",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5164: package `wireshark` update to version 4.0.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5164",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5164",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-3648",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3648",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3649",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3649",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 4.0.7-alt1. \nSecurity Fix(es):\n\n * CVE-2023-3648: Kafka dissector crash in Wireshark 4.0.0 to 4.0.6 and 3.6.0 to 3.6.14 allows denial of service via packet injection or crafted capture file\n\n * CVE-2023-3649: iSCSI dissector crash in Wireshark 4.0.0 to 4.0.6 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-25"
+          },
+          "Updated": {
+            "Date": "2023-08-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3648",
+              "Impact": "Low",
+              "Public": "20230714",
+              "CveID": "CVE-2023-3648"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3649",
+              "Impact": "Low",
+              "Public": "20230714",
+              "CveID": "CVE-2023-3649"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235164001",
+                "Comment": "tshark is earlier than 0:4.0.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235164002",
+                "Comment": "wireshark-base is earlier than 0:4.0.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235164003",
+                "Comment": "wireshark-devel is earlier than 0:4.0.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235164004",
+                "Comment": "wireshark-qt5 is earlier than 0:4.0.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

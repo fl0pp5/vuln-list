@@ -1,0 +1,126 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222242",
+      "Version": "oval:org.altlinux.errata:def:20222242",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2242: package `docs-alt-server` update to version 10.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2242",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2242",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades docs-alt-server to version 10.1-alt2. \nSecurity Fix(es):\n\n * #43073: Опечатка в пункте 45.1. \"Настройка smb.conf\" в документации docs-alt-server\n\n * #43079: Опечатки в пункте 25.4. \"MATE: Меню Система\" в документации docs-alt-server\n\n * #43131: Ошибка в синтаксисе команды proxmox-backup-client в разделе 53.6.3. Восстановление данных\n\n * #43132: Некорректное отображение команды и результата её выполнения в разделе 53.7. Интеграция с PVE\n\n * #43133: Ошибки при выполнении команд из раздела 53.7. Интеграция с PVE\n\n * #43146: Несоответствие текста и скриншота в разделе Глава 16. Администратор системы",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-14"
+          },
+          "Updated": {
+            "Date": "2022-07-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43073",
+              "Href": "https://bugzilla.altlinux.org/43073",
+              "Data": "Опечатка в пункте 45.1. \"Настройка smb.conf\" в документации docs-alt-server"
+            },
+            {
+              "Id": "43079",
+              "Href": "https://bugzilla.altlinux.org/43079",
+              "Data": "Опечатки в пункте 25.4. \"MATE: Меню Система\" в документации docs-alt-server"
+            },
+            {
+              "Id": "43131",
+              "Href": "https://bugzilla.altlinux.org/43131",
+              "Data": "Ошибка в синтаксисе команды proxmox-backup-client в разделе 53.6.3. Восстановление данных"
+            },
+            {
+              "Id": "43132",
+              "Href": "https://bugzilla.altlinux.org/43132",
+              "Data": "Некорректное отображение команды и результата её выполнения в разделе 53.7. Интеграция с PVE"
+            },
+            {
+              "Id": "43133",
+              "Href": "https://bugzilla.altlinux.org/43133",
+              "Data": "Ошибки при выполнении команд из раздела 53.7. Интеграция с PVE"
+            },
+            {
+              "Id": "43146",
+              "Href": "https://bugzilla.altlinux.org/43146",
+              "Data": "Несоответствие текста и скриншота в разделе Глава 16. Администратор системы"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222242001",
+                "Comment": "docs-alt-server is earlier than 0:10.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

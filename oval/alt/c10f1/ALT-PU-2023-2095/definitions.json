@@ -1,0 +1,222 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232095",
+      "Version": "oval:org.altlinux.errata:def:20232095",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2095: package `ffmpeg` update to version 4.4.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2095",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2095",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03348",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03348",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3109",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3109",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3341",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3341",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3964",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3964",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ffmpeg to version 4.4.4-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03348: Уязвимость функции decode_main_header() (libavformat/nutdec.c) мультимедийной библиотеки FFmpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-3109: An issue was discovered in the FFmpeg package, where vp3_decode_frame in libavcodec/vp3.c lacks check of the return value of av_malloc() and will cause a null pointer dereference, impacting availability.\n\n * CVE-2022-3341: A null pointer dereference issue was discovered in 'FFmpeg' in decode_main_header() function of libavformat/nutdec.c file. The flaw occurs because the function lacks check of the return value of avformat_new_stream() and triggers the null pointer dereference error, causing an application to crash.\n\n * CVE-2022-3964: A vulnerability classified as problematic has been found in ffmpeg. This affects an unknown part of the file libavcodec/rpzaenc.c of the component QuickTime RPZA Video Encoder. The manipulation of the argument y_size leads to out-of-bounds read. It is possible to initiate the attack remotely. The name of the patch is 92f9b28ed84a77138105475beba16c146bdaf984. It is recommended to apply a patch to fix this issue. The associated identifier of this vulnerability is VDB-213543.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-28"
+          },
+          "Updated": {
+            "Date": "2023-06-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-03348",
+              "Impact": "Low",
+              "Public": "20220722",
+              "CveID": "BDU:2023-03348"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3109",
+              "Impact": "High",
+              "Public": "20221216",
+              "CveID": "CVE-2022-3109"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3341",
+              "Impact": "Low",
+              "Public": "20230112",
+              "CveID": "CVE-2022-3341"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3964",
+              "Impact": "High",
+              "Public": "20221113",
+              "CveID": "CVE-2022-3964"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095001",
+                "Comment": "ffmpeg is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095002",
+                "Comment": "ffmpeg-doc is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095003",
+                "Comment": "ffplay is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095004",
+                "Comment": "ffplay-doc is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095005",
+                "Comment": "ffprobe is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095006",
+                "Comment": "ffprobe-doc is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095007",
+                "Comment": "ffserver-doc is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095008",
+                "Comment": "libavcodec-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095009",
+                "Comment": "libavcodec58 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095010",
+                "Comment": "libavdevice-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095011",
+                "Comment": "libavdevice58 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095012",
+                "Comment": "libavfilter-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095013",
+                "Comment": "libavfilter7 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095014",
+                "Comment": "libavformat-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095015",
+                "Comment": "libavformat58 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095016",
+                "Comment": "libavresample-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095017",
+                "Comment": "libavresample4 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095018",
+                "Comment": "libavutil-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095019",
+                "Comment": "libavutil56 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095020",
+                "Comment": "libpostproc-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095021",
+                "Comment": "libpostproc55 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095022",
+                "Comment": "libswresample-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095023",
+                "Comment": "libswresample3 is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095024",
+                "Comment": "libswscale-devel is earlier than 2:4.4.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232095025",
+                "Comment": "libswscale5 is earlier than 2:4.4.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

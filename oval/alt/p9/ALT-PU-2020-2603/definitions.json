@@ -1,0 +1,149 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202603",
+      "Version": "oval:org.altlinux.errata:def:20202603",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2603: package `postgresql9.5` update to version 9.5.23-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2603",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2603",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00079",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00079",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14350",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14350",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql9.5 to version 9.5.23-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00079: Уязвимость системы управления базами данных PostgreSQL, связанная с ненадежным путем поиска, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-14350: It was found that some PostgreSQL extensions did not use search_path safely in their installation script. An attacker with sufficient privileges could use this flaw to trick an administrator into executing a specially crafted script, during the installation or update of such extension. This affects PostgreSQL versions before 12.4, before 11.9, before 10.14, before 9.6.19, and before 9.5.23.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-18"
+          },
+          "Updated": {
+            "Date": "2020-08-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://bdu.fstec.ru/vul/2021-00079",
+              "Impact": "High",
+              "Public": "20200824",
+              "CveID": "BDU:2021-00079"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14350",
+              "Impact": "High",
+              "Public": "20200824",
+              "CveID": "CVE-2020-14350"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603001",
+                "Comment": "postgresql9.5 is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603002",
+                "Comment": "postgresql9.5-contrib is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603003",
+                "Comment": "postgresql9.5-docs is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603004",
+                "Comment": "postgresql9.5-perl is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603005",
+                "Comment": "postgresql9.5-python is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603006",
+                "Comment": "postgresql9.5-server is earlier than 0:9.5.23-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202603007",
+                "Comment": "postgresql9.5-tcl is earlier than 0:9.5.23-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

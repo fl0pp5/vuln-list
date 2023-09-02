@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234358",
+      "Version": "oval:org.altlinux.errata:def:20234358",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4358: package `golang` update to version 1.19.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4358",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4358",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-29406",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29406",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.19.11-alt1. \nSecurity Fix(es):\n\n * CVE-2023-29406: The HTTP/1 client does not fully validate the contents of the Host header. A maliciously crafted Host header can inject additional headers or entire requests. With fix, the HTTP/1 client now refuses to send requests containing an invalid Request.Host or Request.URL.Host value.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-13"
+          },
+          "Updated": {
+            "Date": "2023-07-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-436",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29406",
+              "Impact": "Low",
+              "Public": "20230711",
+              "CveID": "CVE-2023-29406"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358001",
+                "Comment": "golang is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358002",
+                "Comment": "golang-docs is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358003",
+                "Comment": "golang-gdb is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358004",
+                "Comment": "golang-misc is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358005",
+                "Comment": "golang-shared is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358006",
+                "Comment": "golang-src is earlier than 0:1.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234358007",
+                "Comment": "golang-tests is earlier than 0:1.19.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

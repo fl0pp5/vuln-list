@@ -1,0 +1,313 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222137",
+      "Version": "oval:org.altlinux.errata:def:20222137",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2137: package `kernel-image-rpi-def` update to version 5.15.48-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2137",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2137",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00622",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00622",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02112",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02112",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02362",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02362",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03283",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03283",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04244",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04244",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07352",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07352",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07353",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07353",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0500",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0500",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1652",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1652",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1943",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1943",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23222",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23222",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28893",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28893",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-2959",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-2959",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32250",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32250",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3577",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3577",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-rpi-def to version 5.15.48-alt1. \nSecurity Fix(es):\n\n * BDU:2022-00622: Уязвимость подсистемы eBPF ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии\n\n * BDU:2022-02112: Уязвимость реализации функции xs_xprt_free() системы удаленного вызова процедур Sun RPC (Open Network Computing Remote Procedure Call) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02362: Уязвимость функции BPF_BTF_LOAD() подсистемы eBPF ядра операционных систем Linux, позволяющая нарушителю повысить свои привилегии или вызвать отказ в обслуживании\n\n * BDU:2022-03283: Уязвимость функции nft_expr_init программного обеспечения фильтрации пакетов Netfilter ядра операционной системы Linux, позволяющая нарушителю повысить свои привилегии до уровня root\n\n * BDU:2022-04244: Уязвимость функции bad_flp_intr ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07352: Уязвимость функциональности файловой системы UDF ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07353: Уязвимость функции pipe_resize_ring ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-0500: A flaw was found in unrestricted eBPF usage by the BPF_BTF_LOAD, leading to a possible out-of-bounds memory write in the Linux kernel’s BPF subsystem due to the way a user loads BTF. This flaw allows a local user to crash or escalate their privileges on the system.\n\n * CVE-2022-1652: Linux Kernel could allow a local attacker to execute arbitrary code on the system, caused by a concurrency use-after-free flaw in the bad_flp_intr function. By executing a specially-crafted program, an attacker could exploit this vulnerability to execute arbitrary code or cause a denial of service condition on the system.\n\n * CVE-2022-1943: A flaw out of bounds memory write in the Linux kernel UDF file system functionality was found in the way user triggers some file operation which triggers udf_write_fi(). A local user could use this flaw to crash the system or potentially\n\n * CVE-2022-23222: kernel/bpf/verifier.c in the Linux kernel through 5.15.14 allows local users to gain privileges because of the availability of pointer arithmetic via certain *_OR_NULL pointer types.\n\n * CVE-2022-28893: The SUNRPC subsystem in the Linux kernel through 5.17.2 can call xs_xprt_free before ensuring that sockets are in the intended state.\n\n * CVE-2022-2959: A race condition was found in the Linux kernel's watch queue due to a missing lock in pipe_resize_ring(). The specific flaw exists within the handling of pipe buffers. The issue results from the lack of proper locking when performing operations on an object. This flaw allows a local user to crash the system or escalate their privileges on the system.\n\n * CVE-2022-32250: net/netfilter/nf_tables_api.c in the Linux kernel through 5.18.1 allows a local user (able to create user/net namespaces) to escalate privileges to root because an incorrect NFT_STATEFUL_EXPR check leads to a use-after-free.\n\n * CVE-2022-3577: An out-of-bounds memory write flaw was found in the Linux kernel’s Kid-friendly Wired Controller driver. This flaw allows a local user to crash or potentially escalate their privileges on the system. It is in bigben_probe of drivers/hid/hid-bigbenff.c. The reason is incorrect assumption - bigben devices all have inputs. However, malicious devices can break this assumption, leaking to out-of-bound write.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-24"
+          },
+          "Updated": {
+            "Date": "2022-06-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476, CWE-763",
+              "Href": "https://bdu.fstec.ru/vul/2022-00622",
+              "Impact": "High",
+              "Public": "20220113",
+              "CveID": "BDU:2022-00622"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-371, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-02112",
+              "Impact": "High",
+              "Public": "20220408",
+              "CveID": "BDU:2022-02112"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2022-02362",
+              "Impact": "High",
+              "Public": "20220124",
+              "CveID": "BDU:2022-02362"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-03283",
+              "Impact": "High",
+              "Public": "20220526",
+              "CveID": "BDU:2022-03283"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-04244",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "BDU:2022-04244"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-07352",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "BDU:2022-07352"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362, CWE-667",
+              "Href": "https://bdu.fstec.ru/vul/2022-07353",
+              "Impact": "High",
+              "Public": "20220825",
+              "CveID": "BDU:2022-07353"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0500",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2022-0500"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1652",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "CVE-2022-1652"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1943",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "CVE-2022-1943"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23222",
+              "Impact": "High",
+              "Public": "20220114",
+              "CveID": "CVE-2022-23222"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28893",
+              "Impact": "High",
+              "Public": "20220411",
+              "CveID": "CVE-2022-28893"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-2959",
+              "Impact": "High",
+              "Public": "20220825",
+              "CveID": "CVE-2022-2959"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32250",
+              "Impact": "High",
+              "Public": "20220602",
+              "CveID": "CVE-2022-32250"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3577",
+              "Impact": "High",
+              "Public": "20221020",
+              "CveID": "CVE-2022-3577"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222137001",
+                "Comment": "kernel-headers-modules-rpi-def is earlier than 1:5.15.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222137002",
+                "Comment": "kernel-headers-rpi-def is earlier than 1:5.15.48-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222137003",
+                "Comment": "kernel-image-rpi-def is earlier than 1:5.15.48-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

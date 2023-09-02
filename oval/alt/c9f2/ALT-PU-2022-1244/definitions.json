@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221244",
+      "Version": "oval:org.altlinux.errata:def:20221244",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1244: package `runc` update to version 1.0.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1244",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1244",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03670",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03670",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-30465",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30465",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades runc to version 1.0.2-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03670: Уязвимость конфигурации инструмента для запуска изолированных контейнеров runc, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2021-30465: runc before 1.0.0-rc95 allows a Container Filesystem Breakout via Directory Traversal. To exploit the vulnerability, an attacker must be able to create multiple containers with a fairly specific mount configuration. The problem occurs via a symlink-exchange attack that relies on a race condition.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-22, CWE-59, CWE-367",
+              "Href": "https://bdu.fstec.ru/vul/2021-03670",
+              "Impact": "High",
+              "Public": "20210519",
+              "CveID": "BDU:2021-03670"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30465",
+              "Impact": "High",
+              "Public": "20210527",
+              "CveID": "CVE-2021-30465"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221244001",
+                "Comment": "runc is earlier than 0:1.0.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

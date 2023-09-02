@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201675",
+      "Version": "oval:org.altlinux.errata:def:20201675",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1675: package `kubernetes` update to version 1.16.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1675",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1675",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00025",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00025",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-11253",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-11253",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kubernetes to version 1.16.4-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00025: Уязвимость библиотеки синтаксического анализатора YAML программного средства управления кластерами виртуальных машин Kubernetes, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-11253: Improper input validation in the Kubernetes API server in versions v1.0-1.12 and versions prior to v1.13.12, v1.14.8, v1.15.5, and v1.16.2 allows authorized users to send malicious YAML or JSON payloads, causing the API server to consume excessive CPU or memory, potentially crashing and becoming unavailable. Prior to v1.14.0, default RBAC policy authorized anonymous users to submit requests that could trigger this vulnerability. Clusters upgraded from a version prior to v1.14.0 keep the more permissive policy by default for backwards compatibility.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-06"
+          },
+          "Updated": {
+            "Date": "2020-04-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-00025",
+              "Impact": "High",
+              "Public": "20191017",
+              "CveID": "BDU:2020-00025"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-776",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-11253",
+              "Impact": "High",
+              "Public": "20191017",
+              "CveID": "CVE-2019-11253"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675001",
+                "Comment": "kubernetes-client is earlier than 0:1.16.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675002",
+                "Comment": "kubernetes-common is earlier than 0:1.16.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675003",
+                "Comment": "kubernetes-kubeadm is earlier than 0:1.16.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675004",
+                "Comment": "kubernetes-kubelet is earlier than 0:1.16.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675005",
+                "Comment": "kubernetes-master is earlier than 0:1.16.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201675006",
+                "Comment": "kubernetes-node is earlier than 0:1.16.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

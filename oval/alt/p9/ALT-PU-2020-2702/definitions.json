@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202702",
+      "Version": "oval:org.altlinux.errata:def:20202702",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2702: package `tor` update to version 0.4.3.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2702",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2702",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01963",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01963",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-10592",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10592",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15572",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15572",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8516",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8516",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades tor to version 0.4.3.6-alt1. \nSecurity Fix(es):\n\n * BDU:2020-01963: Уязвимость браузера Tor, связанная с неконтролируемым расходом ресурса, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-10592: Tor before 0.3.5.10, 0.4.x before 0.4.1.9, and 0.4.2.x before 0.4.2.7 allows remote attackers to cause a Denial of Service (CPU consumption), aka TROVE-2020-002.\n\n * CVE-2020-15572: Tor before 0.4.3.6 has an out-of-bounds memory access that allows a remote denial-of-service (crash) attack against Tor instances built to use Mozilla Network Security Services (NSS), aka TROVE-2020-001.\n\n * CVE-2020-8516: ** DISPUTED ** The daemon in Tor through 0.4.1.8 and 0.4.2.x through 0.4.2.6 does not verify that a rendezvous node is known before attempting to connect to it, which might make it easier for remote attackers to discover circuit information. NOTE: The network team of Tor claims this is an intended behavior and not a vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-28"
+          },
+          "Updated": {
+            "Date": "2020-08-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2020-01963",
+              "Impact": "High",
+              "Public": "20200323",
+              "CveID": "BDU:2020-01963"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10592",
+              "Impact": "High",
+              "Public": "20200323",
+              "CveID": "CVE-2020-10592"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15572",
+              "Impact": "High",
+              "Public": "20200715",
+              "CveID": "CVE-2020-15572"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8516",
+              "Impact": "Low",
+              "Public": "20200202",
+              "CveID": "CVE-2020-8516"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202702001",
+                "Comment": "tor is earlier than 0:0.4.3.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

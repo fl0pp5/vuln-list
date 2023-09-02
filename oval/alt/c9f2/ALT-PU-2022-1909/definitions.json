@@ -1,0 +1,86 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221909",
+      "Version": "oval:org.altlinux.errata:def:20221909",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1909: package `rzip` update to version 2.1-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1909",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1909",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2017-8364",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-8364",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades rzip to version 2.1-alt3. \nSecurity Fix(es):\n\n * CVE-2017-8364: The read_buf function in stream.c in rzip 2.1 allows remote attackers to cause a denial of service (heap-based buffer overflow and application crash) or possibly have unspecified other impact via a crafted archive.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-20"
+          },
+          "Updated": {
+            "Date": "2022-05-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-8364",
+              "Impact": "High",
+              "Public": "20170430",
+              "CveID": "CVE-2017-8364"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221909001",
+                "Comment": "rzip is earlier than 0:2.1-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

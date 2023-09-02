@@ -1,0 +1,259 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203162",
+      "Version": "oval:org.altlinux.errata:def:20203162",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3162: package `glpi` update to version 9.5.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3162",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3162",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04793",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04793",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04794",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04794",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-04845",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04845",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11031",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11031",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15108",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15108",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15175",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15175",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15176",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15176",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15177",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15217",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15217",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15226",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15226",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44617",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44617",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades glpi to version 9.5.2-alt2. \nSecurity Fix(es):\n\n * BDU:2020-04793: Уязвимость системы заявок, инцидентов и инвентаризации компьютерного оборудования GLPI, связанная с некорректной нейтрализацией специальных элементов, используемых в SQL-командах, позволяющая нарушителю выполнить произвольные SQL-запросы к базе данных в целевой системе\n\n * BDU:2020-04794: Уязвимость системы заявок, инцидентов и инвентаризации компьютерного оборудования GLPI, связанная с некорректной нейтрализацией специальных элементов, используемых в SQL-командах, позволяющая нарушителю выполнить произвольные SQL-запросы к базе данных в целевой системе\n\n * BDU:2020-04845: Уязвимость функции «Clone» системы заявок, инцидентов и инвентаризации компьютерного оборудования GLPI, позволяющая нарушителю выполнить произвольные SQL команды\n\n * CVE-2020-11031: In GLPI before version 9.5.0, the encryption algorithm used is insecure. The security of the data encrypted relies on the password used, if a user sets a weak/predictable password, an attacker could decrypt data. This is fixed in version 9.5.0 by using a more secure encryption library. The library chosen is sodium.\n\n * CVE-2020-15108: In glpi before 9.5.1, there is a SQL injection for all usages of \"Clone\" feature. This has been fixed in 9.5.1.\n\n * CVE-2020-15175: In GLPI before version 9.5.2, the `?pluginimage.send.php?` endpoint allows a user to specify an image from a plugin. The parameters can be maliciously crafted to instead delete the .htaccess file for the files directory. Any user becomes able to read all the files and folders contained in “/files/”. Some of the sensitive information that is compromised are the user sessions, logs, and more. An attacker would be able to get the Administrators session token and use that to authenticate. The issue is patched in version 9.5.2.\n\n * CVE-2020-15176: In GLPI before version 9.5.2, when supplying a back tick in input that gets put into a SQL query,the application does not escape or sanitize allowing for SQL Injection to occur. Leveraging this vulnerability an attacker is able to exfiltrate sensitive information like passwords, reset tokens, personal details, and more. The issue is patched in version 9.5.2\n\n * CVE-2020-15177: In GLPI before version 9.5.2, the `install/install.php` endpoint insecurely stores user input into the database as `url_base` and `url_base_api`. These settings are referenced throughout the application and allow for vulnerabilities like Cross-Site Scripting and Insecure Redirection Since authentication is not required to perform these changes,anyone could point these fields at malicious websites or form input in a way to trigger XSS. Leveraging JavaScript it's possible to steal cookies, perform actions as the user, etc. The issue is patched in version 9.5.2.\n\n * CVE-2020-15217: In GLPI before version 9.5.2, there is a leakage of user information through the public FAQ. The issue was introduced in version 9.5.0 and patched in 9.5.2. As a workaround, disable public access to the FAQ.\n\n * CVE-2020-15226: In GLPI before version 9.5.2, there is a SQL Injection in the API's search function. Not only is it possible to break the SQL syntax, but it is also possible to utilise a UNION SELECT query to reflect sensitive information such as the current database version, or database user. The most likely scenario for this vulnerability is with someone who has an API account to the system. The issue is patched in version 9.5.2. A proof-of-concept with technical details is available in the linked advisory.\n\n * CVE-2021-44617: A SQL Injection vulnerability exits in the Ramo plugin for GLPI 9.4.6 via the idu parameter in plugins/ramo/ramoapirest.php/getOutdated.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-29"
+          },
+          "Updated": {
+            "Date": "2020-10-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-04793",
+              "Impact": "High",
+              "Public": "20201007",
+              "CveID": "BDU:2020-04793"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-04794",
+              "Impact": "Low",
+              "Public": "20201007",
+              "CveID": "BDU:2020-04794"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-04845",
+              "Impact": "High",
+              "Public": "20200717",
+              "CveID": "BDU:2020-04845"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11031",
+              "Impact": "High",
+              "Public": "20200923",
+              "CveID": "CVE-2020-11031"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15108",
+              "Impact": "High",
+              "Public": "20200717",
+              "CveID": "CVE-2020-15108"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-552",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15175",
+              "Impact": "Critical",
+              "Public": "20201007",
+              "CveID": "CVE-2020-15175"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15176",
+              "Impact": "High",
+              "Public": "20201007",
+              "CveID": "CVE-2020-15176"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15177",
+              "Impact": "Low",
+              "Public": "20201007",
+              "CveID": "CVE-2020-15177"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15217",
+              "Impact": "Low",
+              "Public": "20201007",
+              "CveID": "CVE-2020-15217"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15226",
+              "Impact": "Low",
+              "Public": "20201007",
+              "CveID": "CVE-2020-15226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44617",
+              "Impact": "Critical",
+              "Public": "20220328",
+              "CveID": "CVE-2021-44617"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203162001",
+                "Comment": "glpi is earlier than 0:9.5.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203162002",
+                "Comment": "glpi-apache2 is earlier than 0:9.5.2-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203162003",
+                "Comment": "glpi-php7 is earlier than 0:9.5.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

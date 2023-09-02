@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232022",
+      "Version": "oval:org.altlinux.errata:def:20232022",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2022: package `openldap` update to version 2.4.59-alt0.c9.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2022",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2022",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03338",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03338",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-5544",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5544",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openldap to version 2.4.59-alt0.c9.2. \nSecurity Fix(es):\n\n * BDU:2020-03338: Уязвимость пакета openslp гипервизора VMware ESXi платформы виртуальных компьютеров Horizon DaaS, позволяющая нарушителю оказать воздействие на конфиенциальность, целостность и доступность защищаемой информации\n\n * CVE-2019-5544: OpenSLP as used in ESXi and the Horizon DaaS appliances has a heap overwrite issue. VMware has evaluated the severity of this issue to be in the Critical severity range with a maximum CVSSv3 base score of 9.8.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-19"
+          },
+          "Updated": {
+            "Date": "2023-06-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-03338",
+              "Impact": "Critical",
+              "Public": "20191205",
+              "CveID": "BDU:2020-03338"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5544",
+              "Impact": "Critical",
+              "Public": "20191206",
+              "CveID": "CVE-2019-5544"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022001",
+                "Comment": "libldap is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022002",
+                "Comment": "libldap-devel is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022003",
+                "Comment": "libldap-devel-static is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022004",
+                "Comment": "openldap-clients is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022005",
+                "Comment": "openldap-common is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022006",
+                "Comment": "openldap-doc is earlier than 0:2.4.59-alt0.c9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232022007",
+                "Comment": "openldap-servers is earlier than 0:2.4.59-alt0.c9.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

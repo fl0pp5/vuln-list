@@ -1,0 +1,173 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202772",
+      "Version": "oval:org.altlinux.errata:def:20202772",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2772: package `python-module-matplotlib` update to version 2.2.3-alt6",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2772",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2772",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades python-module-matplotlib to version 2.2.3-alt6. \nSecurity Fix(es):\n\n * #38030: Зависимость на python3-module-matplotlib-qt4",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-09-12"
+          },
+          "Updated": {
+            "Date": "2020-09-12"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38030",
+              "Href": "https://bugzilla.altlinux.org/38030",
+              "Data": "Зависимость на python3-module-matplotlib-qt4"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772001",
+                "Comment": "python-module-matplotlib is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772002",
+                "Comment": "python-module-matplotlib-cairo is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772003",
+                "Comment": "python-module-matplotlib-gtk3 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772004",
+                "Comment": "python-module-matplotlib-nbagg is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772005",
+                "Comment": "python-module-matplotlib-qt4 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772006",
+                "Comment": "python-module-matplotlib-qt5 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772007",
+                "Comment": "python-module-matplotlib-sphinxext is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772008",
+                "Comment": "python-module-matplotlib-tk is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772009",
+                "Comment": "python-module-matplotlib-wx is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772010",
+                "Comment": "python-module-mpl_toolkits is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772011",
+                "Comment": "python3-module-matplotlib is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772012",
+                "Comment": "python3-module-matplotlib-cairo is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772013",
+                "Comment": "python3-module-matplotlib-gtk3 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772014",
+                "Comment": "python3-module-matplotlib-nbagg is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772015",
+                "Comment": "python3-module-matplotlib-qt4 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772016",
+                "Comment": "python3-module-matplotlib-qt5 is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772017",
+                "Comment": "python3-module-matplotlib-sphinxext is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772018",
+                "Comment": "python3-module-matplotlib-tk is earlier than 0:2.2.3-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202772019",
+                "Comment": "python3-module-mpl_toolkits is earlier than 0:2.2.3-alt6"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

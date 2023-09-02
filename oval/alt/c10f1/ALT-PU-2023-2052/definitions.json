@@ -1,0 +1,112 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232052",
+      "Version": "oval:org.altlinux.errata:def:20232052",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2052: package `cups-filters` update to version 1.28.11-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2052",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2052",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02781",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02781",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-24805",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24805",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cups-filters to version 1.28.11-alt2. \nSecurity Fix(es):\n\n * BDU:2023-02781: Уязвимость компонента beh (Backend Error Handler) пакета для печати cups-filters, позволяющая нарушителю выполнить произвольные команды на сервере печати\n\n * CVE-2023-24805: cups-filters contains backends, filters, and other software required to get the cups printing service working on operating systems other than macos. If you use the Backend Error Handler (beh) to create an accessible network printer, this security vulnerability can cause remote code execution. `beh.c` contains the line `retval = system(cmdline) \u003e\u003e 8;` which calls the `system` command with the operand `cmdline`. `cmdline` contains multiple user controlled, unsanitized values. As a result an attacker with network access to the hosted print server can exploit this vulnerability to inject system commands which are executed in the context of the running server. This issue has been addressed in commit `8f2740357` and is expected to be bundled in the next release. Users are advised to upgrade when possible and to restrict access to network printers in the meantime.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-23"
+          },
+          "Updated": {
+            "Date": "2023-06-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2023-02781",
+              "Impact": "High",
+              "Public": "20230517",
+              "CveID": "BDU:2023-02781"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24805",
+              "Impact": "High",
+              "Public": "20230517",
+              "CveID": "CVE-2023-24805"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232052001",
+                "Comment": "cups-backend-serial is earlier than 1:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232052002",
+                "Comment": "cups-filters is earlier than 0:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232052003",
+                "Comment": "cups-filters-devel is earlier than 0:1.28.11-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232052004",
+                "Comment": "cups-filters-libs is earlier than 0:1.28.11-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201237",
+      "Version": "oval:org.altlinux.errata:def:20201237",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1237: package `firefox-esr` update to version 68.5.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1237",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1237",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-6796",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6796",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6797",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6797",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6798",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6798",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6799",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6799",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6800",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6800",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades firefox-esr to version 68.5.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-6796: A content process could have modified shared memory relating to crash reporting information, crash itself, and cause an out-of-bound write. This could have caused memory corruption and a potentially exploitable crash. This vulnerability affects Firefox \u003c 73 and Firefox \u003c ESR68.5.\n\n * CVE-2020-6797: By downloading a file with the .fileloc extension, a semi-privileged extension could launch an arbitrary application on the user's computer. The attacker is restricted as they are unable to download non-quarantined files or supply command line arguments to the application, limiting the impact. Note: this issue only occurs on Mac OSX. Other operating systems are unaffected. This vulnerability affects Thunderbird \u003c 68.5, Firefox \u003c 73, and Firefox \u003c ESR68.5.\n\n * CVE-2020-6798: If a template tag was used in a select tag, the parser could be confused and allow JavaScript parsing and execution when it should not be allowed. A site that relied on the browser behaving correctly could suffer a cross-site scripting vulnerability as a result. In general, this flaw cannot be exploited through email in the Thunderbird product because scripting is disabled when reading mail, but is potentially a risk in browser or browser-like contexts. This vulnerability affects Thunderbird \u003c 68.5, Firefox \u003c 73, and Firefox \u003c ESR68.5.\n\n * CVE-2020-6799: Command line arguments could have been injected during Firefox invocation as a shell handler for certain unsupported file types. This required Firefox to be configured as the default handler for a given file type and for a file downloaded to be opened in a third party application that insufficiently sanitized URL data. In that situation, clicking a link in the third party application could have been used to retrieve and execute files whose location was supplied through command line arguments. Note: This issue only affects Windows operating systems and when Firefox is configured as the default handler for non-default filetypes. Other operating systems are unaffected. This vulnerability affects Firefox \u003c 73 and Firefox \u003c ESR68.5.\n\n * CVE-2020-6800: Mozilla developers and community members reported memory safety bugs present in Firefox 72 and Firefox ESR 68.4. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. In general, these flaws cannot be exploited through email in the Thunderbird product because scripting is disabled when reading mail, but are potentially risks in browser or browser-like contexts. This vulnerability affects Thunderbird \u003c 68.5, Firefox \u003c 73, and Firefox \u003c ESR68.5.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-14"
+          },
+          "Updated": {
+            "Date": "2020-02-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6796",
+              "Impact": "High",
+              "Public": "20200302",
+              "CveID": "CVE-2020-6796"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6797",
+              "Impact": "Low",
+              "Public": "20200302",
+              "CveID": "CVE-2020-6797"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6798",
+              "Impact": "Low",
+              "Public": "20200302",
+              "CveID": "CVE-2020-6798"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6799",
+              "Impact": "High",
+              "Public": "20200302",
+              "CveID": "CVE-2020-6799"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6800",
+              "Impact": "High",
+              "Public": "20200302",
+              "CveID": "CVE-2020-6800"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201237001",
+                "Comment": "firefox-esr is earlier than 0:68.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201237002",
+                "Comment": "firefox-esr-wayland is earlier than 0:68.5.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211903",
+      "Version": "oval:org.altlinux.errata:def:20211903",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1903: package `postgresql10` update to version 10.17-alt0.M90P.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1903",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1903",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05465",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05465",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05466",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05466",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05467",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05467",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02775",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02775",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02776",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02776",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-25694",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25694",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25695",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25695",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-25696",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25696",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32027",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32027",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-32028",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-32028",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades postgresql10 to version 10.17-alt0.M90P.1. \nSecurity Fix(es):\n\n * BDU:2020-05465: Уязвимость компонента core server системы управления базами данных PostgreSQL, позволяющая нарушителю оказать влияние на целостность, доступность и конфиденциальность данных\n\n * BDU:2020-05466: Уязвимость реализации мета-команды «gset» системы управления базами данных PostgreSQL, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2020-05467: Уязвимость компонента client системы управления базами данных PostgreSQL, позволяющая нарушителю реализовать атаку типа «человек посередине»\n\n * BDU:2021-02775: Уязвимость реализации команд INSERT ... ON CONFLICT ... DO UPDATE системы управления базами данных PostgreSQL, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-02776: Уязвимость системы управления базами данных PostgreSQL , связанная с выходом операции за границы буфера при обработке массива, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2020-25694: A flaw was found in PostgreSQL versions before 13.1, before 12.5, before 11.10, before 10.15, before 9.6.20 and before 9.5.24. If a client application that creates additional database connections only reuses the basic connection parameters while dropping security-relevant parameters, an opportunity for a man-in-the-middle attack, or the ability to observe clear-text transmissions, could exist. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-25695: A flaw was found in PostgreSQL versions before 13.1, before 12.5, before 11.10, before 10.15, before 9.6.20 and before 9.5.24. An attacker having permission to create non-temporary objects in at least one schema can execute arbitrary SQL functions under the identity of a superuser. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2020-25696: A flaw was found in the psql interactive terminal of PostgreSQL in versions before 13.1, before 12.5, before 11.10, before 10.15, before 9.6.20 and before 9.5.24. If an interactive psql session uses \\gset when querying a compromised server, the attacker can execute arbitrary code as the operating system account running psql. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2021-32027: A flaw was found in postgresql in versions before 13.3, before 12.7, before 11.12, before 10.17 and before 9.6.22. While modifying certain SQL array values, missing bounds checks let authenticated database users write arbitrary bytes to a wide area of server memory. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.\n\n * CVE-2021-32028: A flaw was found in postgresql. Using an INSERT ... ON CONFLICT ... DO UPDATE command on a purpose-crafted table, an authenticated database user could read arbitrary bytes of server memory. The highest threat from this vulnerability is to data confidentiality.\n\n * #39313: Файловые конфликты с пакетом postgresql12",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-01"
+          },
+          "Updated": {
+            "Date": "2021-06-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-05465",
+              "Impact": "Critical",
+              "Public": "20201112",
+              "CveID": "BDU:2020-05465"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-183, CWE-270",
+              "Href": "https://bdu.fstec.ru/vul/2020-05466",
+              "Impact": "High",
+              "Public": "20201112",
+              "CveID": "BDU:2020-05466"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-327, CWE-757",
+              "Href": "https://bdu.fstec.ru/vul/2020-05467",
+              "Impact": "Critical",
+              "Public": "20201112",
+              "CveID": "BDU:2020-05467"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2021-02775",
+              "Impact": "High",
+              "Public": "20210513",
+              "CveID": "BDU:2021-02775"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-02776",
+              "Impact": "High",
+              "Public": "20210513",
+              "CveID": "BDU:2021-02776"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-327",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25694",
+              "Impact": "High",
+              "Public": "20201116",
+              "CveID": "CVE-2020-25694"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25695",
+              "Impact": "High",
+              "Public": "20201116",
+              "CveID": "CVE-2020-25695"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-183",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25696",
+              "Impact": "High",
+              "Public": "20201123",
+              "CveID": "CVE-2020-25696"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32027",
+              "Impact": "High",
+              "Public": "20210601",
+              "CveID": "CVE-2021-32027"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-32028",
+              "Impact": "Low",
+              "Public": "20211011",
+              "CveID": "CVE-2021-32028"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39313",
+              "Href": "https://bugzilla.altlinux.org/39313",
+              "Data": "Файловые конфликты с пакетом postgresql12"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903001",
+                "Comment": "postgresql10 is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903002",
+                "Comment": "postgresql10-contrib is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903003",
+                "Comment": "postgresql10-docs is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903004",
+                "Comment": "postgresql10-perl is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903005",
+                "Comment": "postgresql10-python is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903006",
+                "Comment": "postgresql10-server is earlier than 0:10.17-alt0.M90P.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211903007",
+                "Comment": "postgresql10-tcl is earlier than 0:10.17-alt0.M90P.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

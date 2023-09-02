@@ -1,0 +1,210 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234100",
+      "Version": "oval:org.altlinux.errata:def:20234100",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4100: package `ffmpeg` update to version 4.3.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4100",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4100",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05190",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05190",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-21041",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-21041",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3109",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3109",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ffmpeg to version 4.3.6-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05190: Уязвимость компонента apng_do_inverse_blend библиотеки Ffmpeg, связанная с переполнением буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-21041: Buffer Overflow vulnerability exists in FFmpeg 4.1 via apng_do_inverse_blend in libavcodec/pngenc.c, which could let a remote malicious user cause a Denial of Service\n\n * CVE-2022-3109: An issue was discovered in the FFmpeg package, where vp3_decode_frame in libavcodec/vp3.c lacks check of the return value of av_malloc() and will cause a null pointer dereference, impacting availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-30"
+          },
+          "Updated": {
+            "Date": "2023-06-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-05190",
+              "Impact": "High",
+              "Public": "20210603",
+              "CveID": "BDU:2021-05190"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-21041",
+              "Impact": "High",
+              "Public": "20210524",
+              "CveID": "CVE-2020-21041"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3109",
+              "Impact": "High",
+              "Public": "20221216",
+              "CveID": "CVE-2022-3109"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100001",
+                "Comment": "ffmpeg is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100002",
+                "Comment": "ffmpeg-doc is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100003",
+                "Comment": "ffplay is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100004",
+                "Comment": "ffplay-doc is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100005",
+                "Comment": "ffprobe is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100006",
+                "Comment": "ffprobe-doc is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100007",
+                "Comment": "ffserver-doc is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100008",
+                "Comment": "libavcodec-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100009",
+                "Comment": "libavcodec58 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100010",
+                "Comment": "libavdevice-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100011",
+                "Comment": "libavdevice58 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100012",
+                "Comment": "libavfilter-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100013",
+                "Comment": "libavfilter7 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100014",
+                "Comment": "libavformat-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100015",
+                "Comment": "libavformat58 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100016",
+                "Comment": "libavresample-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100017",
+                "Comment": "libavresample4 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100018",
+                "Comment": "libavutil-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100019",
+                "Comment": "libavutil56 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100020",
+                "Comment": "libpostproc-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100021",
+                "Comment": "libpostproc55 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100022",
+                "Comment": "libswresample-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100023",
+                "Comment": "libswresample3 is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100024",
+                "Comment": "libswscale-devel is earlier than 2:4.3.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234100025",
+                "Comment": "libswscale5 is earlier than 2:4.3.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

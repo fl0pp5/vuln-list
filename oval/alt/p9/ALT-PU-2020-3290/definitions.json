@@ -1,0 +1,114 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203290",
+      "Version": "oval:org.altlinux.errata:def:20203290",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3290: package `puppetdb` update to version 6.13.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3290",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3290",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-7943",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7943",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades puppetdb to version 6.13.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-7943: Puppet Server and PuppetDB provide useful performance and debugging information via their metrics API endpoints. For PuppetDB this may contain things like hostnames. Puppet Server reports resource names and titles for defined types (which may contain sensitive information) as well as function names and class names. Previously, these endpoints were open to the local network. PE 2018.1.13 \u0026 2019.5.0, Puppet Server 6.9.2 \u0026 5.3.12, and PuppetDB 6.9.1 \u0026 5.2.13 disable trapperkeeper-metrics /v1 metrics API and only allows /v2 access on localhost by default. This affects software versions: Puppet Enterprise 2018.1.x stream prior to 2018.1.13 Puppet Enterprise prior to 2019.5.0 Puppet Server prior to 6.9.2 Puppet Server prior to 5.3.12 PuppetDB prior to 6.9.1 PuppetDB prior to 5.2.13 Resolved in: Puppet Enterprise 2018.1.13 Puppet Enterprise 2019.5.0 Puppet Server 6.9.2 Puppet Server 5.3.12 PuppetDB 6.9.1 PuppetDB 5.2.13",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-13"
+          },
+          "Updated": {
+            "Date": "2020-11-13"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7943",
+              "Impact": "High",
+              "Public": "20200311",
+              "CveID": "CVE-2020-7943"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203290001",
+                "Comment": "puppetdb is earlier than 0:6.13.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203290002",
+                "Comment": "puppetdb-terminus is earlier than 0:6.13.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

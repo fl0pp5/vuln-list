@@ -1,0 +1,129 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192567",
+      "Version": "oval:org.altlinux.errata:def:20192567",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2567: package `neovim` update to version 0.3.8-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2567",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2567",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03251",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03251",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-12735",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12735",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades neovim to version 0.3.8-alt2. \nSecurity Fix(es):\n\n * BDU:2019-03251: Уязвимость библиотеки getchar.c текстового редактора Vim, связанная с отсутствием мер по нейтрализации специальных элементов, используемых в команде операционной системы, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-12735: getchar.c in Vim before 8.1.1365 and Neovim before 0.3.6 allows remote attackers to execute arbitrary OS commands via the :source! command in a modeline, as demonstrated by execute in Vim, and assert_fails or nvim_input in Neovim.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-29"
+          },
+          "Updated": {
+            "Date": "2019-08-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2019-03251",
+              "Impact": "High",
+              "Public": "20190605",
+              "CveID": "BDU:2019-03251"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12735",
+              "Impact": "High",
+              "Public": "20190605",
+              "CveID": "CVE-2019-12735"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192567001",
+                "Comment": "neovim is earlier than 0:0.3.8-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192567002",
+                "Comment": "neovim-runtime is earlier than 0:0.3.8-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

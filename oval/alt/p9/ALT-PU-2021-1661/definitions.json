@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211661",
+      "Version": "oval:org.altlinux.errata:def:20211661",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1661: package `kernel-image-un-def` update to version 5.10.29-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1661",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1661",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02182",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02182",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-29154",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-29154",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.29-alt2. \nSecurity Fix(es):\n\n * BDU:2021-02182: Уязвимость компонента BPF JIT (arch/x86/net/bpf_jit_comp.c и arch/x86/net/bpf_jit_comp32.c.) ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2021-29154: BPF JIT compilers in the Linux kernel through 5.11.12 have incorrect computation of branch displacements, allowing them to execute arbitrary code within the kernel context. This affects arch/x86/net/bpf_jit_comp.c and arch/x86/net/bpf_jit_comp32.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-04-14"
+          },
+          "Updated": {
+            "Date": "2021-04-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2021-02182",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "BDU:2021-02182"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-29154",
+              "Impact": "High",
+              "Public": "20210408",
+              "CveID": "CVE-2021-29154"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.29-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211661010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.29-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

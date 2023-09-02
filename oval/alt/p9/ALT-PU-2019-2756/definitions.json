@@ -1,0 +1,363 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192756",
+      "Version": "oval:org.altlinux.errata:def:20192756",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2756: package `ilmbase` update to version 2.3.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2756",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2756",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2018-00020",
+            "RefURL": "https://bdu.fstec.ru/vul/2018-00020",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03495",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03495",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03496",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03496",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03497",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03497",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03498",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03498",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03759",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03759",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03765",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03765",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03768",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03768",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-12596",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-12596",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-14988",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-14988",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9110",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9110",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9111",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9111",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9112",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9112",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9113",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9113",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9115",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9115",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-9116",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-9116",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ilmbase to version 2.3.0-alt1. \nSecurity Fix(es):\n\n * BDU:2018-00020: Уязвимость функции uncompress (ImfZip.cpp) библиотеки OpenEXR, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03495: Уязвимость функции operator компонента half.h программного обеспечения для хранения изображений с широкими динамическими диапазоном яркости OpenEXR, связанная с выходом операции за допустимые границы буфера данных, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * BDU:2021-03496: Уязвимость функции refill компонента ImfFastHuf.cpp программного обеспечения для хранения изображений с широкими динамическими диапазоном яркости OpenEXR, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03497: Уязвимость функции bufferedReadPixels программного обеспечения для хранения изображений с широкими динамическими диапазоном яркости OpenEXR, связанная с недостаточной проверки входных данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03498: Уязвимость функции storeSSE программного обеспечения для хранения изображений с широкими динамическими диапазоном яркости OpenEXR, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * BDU:2021-03759: Уязвимость функции hufDecode библиотеки OpenEXR, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03765: Уязвимость функции getBits библиотеки OpenEXR, связанная с связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03768: Уязвимость функции hufDecode библиотеки OpenEXR, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * CVE-2017-12596: In OpenEXR 2.2.0, a crafted image causes a heap-based buffer over-read in the hufDecode function in IlmImf/ImfHuf.cpp during exrmaketiled execution; it may result in denial of service or possibly unspecified other impact.\n\n * CVE-2017-14988: ** DISPUTED ** Header::readfrom in IlmImf/ImfHeader.cpp in OpenEXR 2.2.0 allows remote attackers to cause a denial of service (excessive memory allocation) via a crafted file that is accessed with the ImfOpenInputFile function in IlmImf/ImfCRgbaFile.cpp. NOTE: The maintainer and multiple third parties believe that this vulnerability isn't valid.\n\n * CVE-2017-9110: In OpenEXR 2.2.0, an invalid read of size 2 in the hufDecode function in ImfHuf.cpp could cause the application to crash.\n\n * CVE-2017-9111: In OpenEXR 2.2.0, an invalid write of size 8 in the storeSSE function in ImfOptimizedPixelReading.h could cause the application to crash or execute arbitrary code.\n\n * CVE-2017-9112: In OpenEXR 2.2.0, an invalid read of size 1 in the getBits function in ImfHuf.cpp could cause the application to crash.\n\n * CVE-2017-9113: In OpenEXR 2.2.0, an invalid write of size 1 in the bufferedReadPixels function in ImfInputFile.cpp could cause the application to crash or execute arbitrary code.\n\n * CVE-2017-9114: In OpenEXR 2.2.0, an invalid read of size 1 in the refill function in ImfFastHuf.cpp could cause the application to crash.\n\n * CVE-2017-9115: In OpenEXR 2.2.0, an invalid write of size 2 in the = operator function in half.h could cause the application to crash or execute arbitrary code.\n\n * CVE-2017-9116: In OpenEXR 2.2.0, an invalid read of size 1 in the uncompress function in ImfZip.cpp could cause the application to crash.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-20"
+          },
+          "Updated": {
+            "Date": "2019-09-20"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-189",
+              "Href": "https://bdu.fstec.ru/vul/2018-00020",
+              "Impact": "Low",
+              "Public": "20170604",
+              "CveID": "BDU:2018-00020"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03495",
+              "Impact": "High",
+              "Public": "20170521",
+              "CveID": "BDU:2021-03495"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03496",
+              "Impact": "Low",
+              "Public": "20170521",
+              "CveID": "BDU:2021-03496"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-03497",
+              "Impact": "High",
+              "Public": "20170604",
+              "CveID": "BDU:2021-03497"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03498",
+              "Impact": "High",
+              "Public": "20170604",
+              "CveID": "BDU:2021-03498"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03759",
+              "Impact": "Low",
+              "Public": "20170604",
+              "CveID": "BDU:2021-03759"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03765",
+              "Impact": "Low",
+              "Public": "20170604",
+              "CveID": "BDU:2021-03765"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-03768",
+              "Impact": "High",
+              "Public": "20170930",
+              "CveID": "BDU:2021-03768"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-12596",
+              "Impact": "High",
+              "Public": "20170807",
+              "CveID": "CVE-2017-12596"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-14988",
+              "Impact": "Low",
+              "Public": "20171003",
+              "CveID": "CVE-2017-14988"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9110",
+              "Impact": "Low",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9110"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9111",
+              "Impact": "High",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9111"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9112",
+              "Impact": "Low",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9112"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9113",
+              "Impact": "High",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9113"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9114",
+              "Impact": "Low",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9114"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9115",
+              "Impact": "High",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9115"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-9116",
+              "Impact": "Low",
+              "Public": "20170521",
+              "CveID": "CVE-2017-9116"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756001",
+                "Comment": "ilmbase is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756002",
+                "Comment": "ilmbase-devel is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756003",
+                "Comment": "ilmbase24-common is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756004",
+                "Comment": "libhalf24 is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756005",
+                "Comment": "libiex24 is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756006",
+                "Comment": "libiexmath24 is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756007",
+                "Comment": "libilmthread24 is earlier than 0:2.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192756008",
+                "Comment": "libimath24 is earlier than 0:2.3.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213266",
+      "Version": "oval:org.altlinux.errata:def:20213266",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3266: package `screen` update to version 4.6.2-alt3.p9.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3266",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3266",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03746",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03746",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-26937",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-26937",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades screen to version 4.6.2-alt3.p9.2. \nSecurity Fix(es):\n\n * BDU:2021-03746: Уязвимость компонента encoding.c оконного менеджера GNU Screen, связанная с внедрением или модификацией аргумента, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-26937: encoding.c in GNU Screen through 4.8.0 allows remote attackers to cause a denial of service (invalid write access and application crash) or possibly have unspecified other impact via a crafted UTF-8 character sequence.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-12"
+          },
+          "Updated": {
+            "Date": "2021-11-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://bdu.fstec.ru/vul/2021-03746",
+              "Impact": "Critical",
+              "Public": "20210209",
+              "CveID": "BDU:2021-03746"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-88",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-26937",
+              "Impact": "Critical",
+              "Public": "20210209",
+              "CveID": "CVE-2021-26937"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213266001",
+                "Comment": "screen is earlier than 0:4.6.2-alt3.p9.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

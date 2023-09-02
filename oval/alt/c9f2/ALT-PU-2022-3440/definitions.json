@@ -1,0 +1,106 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223440",
+      "Version": "oval:org.altlinux.errata:def:20223440",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3440: package `elinks` update to version 0.15.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3440",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3440",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2012-4545",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2012-4545",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2012-6709",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2012-6709",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades elinks to version 0.15.1-alt1. \nSecurity Fix(es):\n\n * CVE-2012-4545: The http_negotiate_create_context function in protocol/http/http_negotiate.c in ELinks 0.12 before 0.12pre6, when using HTTP Negotiate or GSS-Negotiate authentication, delegates user credentials through GSSAPI, which allows remote servers to authenticate as the client via the delegated credentials.\n\n * CVE-2012-6709: ELinks 0.12 and Twibright Links 2.3 have Missing SSL Certificate Validation.\n\n * #36113: network/socket.c: Don't take address of a pointer",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-30"
+          },
+          "Updated": {
+            "Date": "2022-12-30"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2012-4545",
+              "Impact": "Low",
+              "Public": "20130103",
+              "CveID": "CVE-2012-4545"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2012-6709",
+              "Impact": "Low",
+              "Public": "20180223",
+              "CveID": "CVE-2012-6709"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "36113",
+              "Href": "https://bugzilla.altlinux.org/36113",
+              "Data": "network/socket.c: Don't take address of a pointer"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223440001",
+                "Comment": "elinks is earlier than 0:0.15.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

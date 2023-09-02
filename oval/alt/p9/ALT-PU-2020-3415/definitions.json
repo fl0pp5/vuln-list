@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203415",
+      "Version": "oval:org.altlinux.errata:def:20203415",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3415: package `cifs-utils` update to version 6.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3415",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3415",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00213",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00213",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14342",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14342",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cifs-utils to version 6.11-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00213: Уязвимость команды arbitrary утилит файловой системы CIFS CIFS-utils, связанная с отсутствием мер по очистке входных данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-14342: It was found that cifs-utils' mount.cifs was invoking a shell when requesting the Samba password, which could be used to inject arbitrary commands. An attacker able to invoke mount.cifs with special permission, such as via sudo rules, could use this flaw to escalate their privileges.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-25"
+          },
+          "Updated": {
+            "Date": "2020-11-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2023-00213",
+              "Impact": "High",
+              "Public": "20200716",
+              "CveID": "BDU:2023-00213"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14342",
+              "Impact": "High",
+              "Public": "20200909",
+              "CveID": "CVE-2020-14342"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203415001",
+                "Comment": "cifs-utils is earlier than 0:6.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203415002",
+                "Comment": "cifs-utils-devel is earlier than 0:6.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203415003",
+                "Comment": "pam_cifscreds is earlier than 0:6.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

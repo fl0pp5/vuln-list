@@ -1,0 +1,181 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221562",
+      "Version": "oval:org.altlinux.errata:def:20221562",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1562: package `openssl1.1` update to version 1.1.1n-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1562",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1562",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01315",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01315",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02820",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02820",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-4160",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4160",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0778",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0778",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1n-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01315: Уязвимость функции BN_mod_sqrt() библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02820: Уязвимость процедур возведения в квадрат MIPS32 и MIPS64 библиотеки OpenSSL, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2021-4160: There is a carry propagation bug in the MIPS32 and MIPS64 squaring procedure. Many EC algorithms are affected, including some of the TLS 1.3 default curves. Impact was not analyzed in detail, because the pre-requisites for attack are considered unlikely and include reusing private keys. Analysis suggests that attacks against RSA and DSA as a result of this defect would be very difficult to perform and are not believed likely. Attacks against DH are considered just feasible (although very difficult) because most of the work necessary to deduce information about a private key may be performed offline. The amount of resources required for such an attack would be significant. However, for an attack on TLS to be meaningful, the server would have to share the DH private key among multiple clients, which is no longer an option since CVE-2016-0701. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0.0. It was addressed in the releases of 1.1.1m and 3.0.1 on the 15th of December 2021. For the 1.0.2 release it is addressed in git commit 6fc1aaaf3 that is available to premium support customers only. It will be made available in 1.0.2zc when it is released. The issue only affects OpenSSL on MIPS platforms. Fixed in OpenSSL 3.0.1 (Affected 3.0.0). Fixed in OpenSSL 1.1.1m (Affected 1.1.1-1.1.1l). Fixed in OpenSSL 1.0.2zc-dev (Affected 1.0.2-1.0.2zb).\n\n * CVE-2022-0778: The BN_mod_sqrt() function, which computes a modular square root, contains a bug that can cause it to loop forever for non-prime moduli. Internally this function is used when parsing certificates that contain elliptic curve public keys in compressed form or explicit elliptic curve parameters with a base point encoded in compressed form. It is possible to trigger the infinite loop by crafting a certificate that has invalid explicit curve parameters. Since certificate parsing happens prior to verification of the certificate signature, any process that parses an externally supplied certificate may thus be subject to a denial of service attack. The infinite loop can also be reached when parsing crafted private keys as they can contain explicit elliptic curve parameters. Thus vulnerable situations include: - TLS clients consuming server certificates - TLS servers consuming client certificates - Hosting providers taking certificates or private keys from customers - Certificate authorities parsing certification requests from subscribers - Anything else which parses ASN.1 elliptic curve parameters Also any other applications that use the BN_mod_sqrt() where the attacker can control the parameter values are vulnerable to this DoS issue. In the OpenSSL 1.0.2 version the public key is not parsed during initial parsing of the certificate which makes it slightly harder to trigger the infinite loop. However any operation which requires the public key from the certificate will trigger the infinite loop. In particular the attacker can use a self-signed certificate to trigger the loop during verification of the certificate signature. This issue affects OpenSSL versions 1.0.2, 1.1.1 and 3.0. It was addressed in the releases of 1.1.1n and 3.0.2 on the 15th March 2022. Fixed in OpenSSL 3.0.2 (Affected 3.0.0,3.0.1). Fixed in OpenSSL 1.1.1n (Affected 1.1.1-1.1.1m). Fixed in OpenSSL 1.0.2zd (Affected 1.0.2-1.0.2zc).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-24"
+          },
+          "Updated": {
+            "Date": "2022-03-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2022-01315",
+              "Impact": "High",
+              "Public": "20220315",
+              "CveID": "BDU:2022-01315"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200, CWE-327",
+              "Href": "https://bdu.fstec.ru/vul/2022-02820",
+              "Impact": "Low",
+              "Public": "20211210",
+              "CveID": "BDU:2022-02820"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4160",
+              "Impact": "Low",
+              "Public": "20220128",
+              "CveID": "CVE-2021-4160"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0778",
+              "Impact": "High",
+              "Public": "20220315",
+              "CveID": "CVE-2022-0778"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562005",
+                "Comment": "openssl is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1n-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221562008",
+                "Comment": "tsget is earlier than 0:1.1.1n-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

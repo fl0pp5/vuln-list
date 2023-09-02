@@ -1,0 +1,299 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212478",
+      "Version": "oval:org.altlinux.errata:def:20212478",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2478: package `python` update to version 2.7.18-alt6",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2478",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2478",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01781",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01781",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03763",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03763",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-27619",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27619",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-23336",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-23336",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3177",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python to version 2.7.18-alt6. \nSecurity Fix(es):\n\n * BDU:2021-01781: Уязвимость функции PyCArg_repr (ctypes/callproc.c) интерпретатора языка программирования Python, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-03763: Уязвимость пакета cpython языка программирования Python, связанная с недостатками обработки HTTP-запросов, позволяющая нарушителю нарушить целостность данных или вызвать отказ в обслуживании\n\n * CVE-2020-27619: In Python 3 through 3.9.0, the Lib/test/multibytecodec_support.py CJK codec tests call eval() on content retrieved via HTTP.\n\n * CVE-2021-23336: The package python/cpython from 0 and before 3.6.13, from 3.7.0 and before 3.7.10, from 3.8.0 and before 3.8.8, from 3.9.0 and before 3.9.2 are vulnerable to Web Cache Poisoning via urllib.parse.parse_qsl and urllib.parse.parse_qs by using a vector called parameter cloaking. When the attacker can separate query parameters using a semicolon (;), they can cause a difference in the interpretation of the request between the proxy (running with default configuration) and the server. This can result in malicious requests being cached as completely safe ones, as the proxy would usually not see the semicolon as a separator, and therefore would not include it in a cache key of an unkeyed parameter.\n\n * CVE-2021-3177: Python 3.x through 3.9.1 has a buffer overflow in PyCArg_repr in _ctypes/callproc.c, which may lead to remote code execution in certain Python applications that accept floating-point numbers as untrusted input, as demonstrated by a 1e300 argument to c_double.from_param. This occurs because sprintf is used unsafely.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-10"
+          },
+          "Updated": {
+            "Date": "2021-08-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-01781",
+              "Impact": "Critical",
+              "Public": "20210119",
+              "CveID": "BDU:2021-01781"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2021-03763",
+              "Impact": "Low",
+              "Public": "20210219",
+              "CveID": "BDU:2021-03763"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27619",
+              "Impact": "Critical",
+              "Public": "20201022",
+              "CveID": "CVE-2020-27619"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-23336",
+              "Impact": "Low",
+              "Public": "20210215",
+              "CveID": "CVE-2021-23336"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3177",
+              "Impact": "Critical",
+              "Public": "20210119",
+              "CveID": "CVE-2021-3177"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478001",
+                "Comment": "libpython is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478002",
+                "Comment": "python is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478003",
+                "Comment": "python-dev is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478004",
+                "Comment": "python-devel-static is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478005",
+                "Comment": "python-modules is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478006",
+                "Comment": "python-modules-bsddb is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478007",
+                "Comment": "python-modules-compiler is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478008",
+                "Comment": "python-modules-ctypes is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478009",
+                "Comment": "python-modules-curses is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478010",
+                "Comment": "python-modules-distutils is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478011",
+                "Comment": "python-modules-email is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478012",
+                "Comment": "python-modules-encodings is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478013",
+                "Comment": "python-modules-ensurepip is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478014",
+                "Comment": "python-modules-hotshot is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478015",
+                "Comment": "python-modules-json is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478016",
+                "Comment": "python-modules-logging is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478017",
+                "Comment": "python-modules-multiprocessing is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478018",
+                "Comment": "python-modules-sqlite3 is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478019",
+                "Comment": "python-modules-tkinter is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478020",
+                "Comment": "python-modules-unittest is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478021",
+                "Comment": "python-modules-wsgiref is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478022",
+                "Comment": "python-modules-xml is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478023",
+                "Comment": "python-relaxed is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478024",
+                "Comment": "python-strict is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478025",
+                "Comment": "python-test is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478026",
+                "Comment": "python-tools-2to3 is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478027",
+                "Comment": "python-tools-i18n is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478028",
+                "Comment": "python-tools-idle is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478029",
+                "Comment": "python-tools-pynche is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478030",
+                "Comment": "python-tools-scripts is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478031",
+                "Comment": "python-tools-smtpd is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478032",
+                "Comment": "python-tools-webchecker is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478033",
+                "Comment": "python-user-scripts is earlier than 0:2.7.18-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212478034",
+                "Comment": "python2-base is earlier than 0:2.7.18-alt6"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

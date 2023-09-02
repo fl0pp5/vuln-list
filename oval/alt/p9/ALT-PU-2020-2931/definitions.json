@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202931",
+      "Version": "oval:org.altlinux.errata:def:20202931",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2931: package `sane` update to version 1.0.31-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2931",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2931",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades sane to version 1.0.31-alt3. \nSecurity Fix(es):\n\n * #37739: Обновление до 1.0.31 ломает работу сканеров Canon Lide 60 (genesys) и Mustek 1248UB (gt68xx)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-02"
+          },
+          "Updated": {
+            "Date": "2020-10-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37739",
+              "Href": "https://bugzilla.altlinux.org/37739",
+              "Data": "Обновление до 1.0.31 ломает работу сканеров Canon Lide 60 (genesys) и Mustek 1248UB (gt68xx)"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931001",
+                "Comment": "libsane is earlier than 0:1.0.31-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931002",
+                "Comment": "libsane-devel is earlier than 0:1.0.31-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931003",
+                "Comment": "libsane-gphoto2 is earlier than 0:1.0.31-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931004",
+                "Comment": "sane is earlier than 0:1.0.31-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931005",
+                "Comment": "sane-doc is earlier than 0:1.0.31-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202931006",
+                "Comment": "sane-server is earlier than 0:1.0.31-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

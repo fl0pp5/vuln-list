@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211038",
+      "Version": "oval:org.altlinux.errata:def:20211038",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1038: package `kernel-image-std-debug` update to version 5.4.89-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1038",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1038",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02587",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02587",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-28374",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-28374",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-debug to version 5.4.89-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02587: Уязвимость драйверов drivers/target/target_core_xcopy.c ядра операционной системы Linux, позволяющая нарушителю получить доступ на чтение, изменение, добавление или удаление данных\n\n * CVE-2020-28374: In drivers/target/target_core_xcopy.c in the Linux kernel before 5.10.7, insufficient identifier checking in the LIO SCSI target code can be used by remote attackers to read or write files via directory traversal in an XCOPY request, aka CID-2896c93811e3. For example, an attack can occur over a network if the attacker has access to one iSCSI LUN. The attacker gains control over file access because I/O operations are proxied via an attacker-selected backstore.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-01-14"
+          },
+          "Updated": {
+            "Date": "2021-01-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2021-02587",
+              "Impact": "Low",
+              "Public": "20210113",
+              "CveID": "BDU:2021-02587"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-28374",
+              "Impact": "High",
+              "Public": "20210113",
+              "CveID": "CVE-2020-28374"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038001",
+                "Comment": "kernel-headers-modules-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038002",
+                "Comment": "kernel-headers-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038003",
+                "Comment": "kernel-image-domU-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038004",
+                "Comment": "kernel-image-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038005",
+                "Comment": "kernel-modules-drm-ancient-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038006",
+                "Comment": "kernel-modules-drm-nouveau-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038007",
+                "Comment": "kernel-modules-drm-radeon-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038008",
+                "Comment": "kernel-modules-drm-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038009",
+                "Comment": "kernel-modules-ide-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038010",
+                "Comment": "kernel-modules-staging-std-debug is earlier than 2:5.4.89-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211038011",
+                "Comment": "kernel-modules-v4l-std-debug is earlier than 2:5.4.89-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

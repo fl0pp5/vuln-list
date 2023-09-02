@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211545",
+      "Version": "oval:org.altlinux.errata:def:20211545",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1545: package `gnutls30` update to version 3.6.15-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1545",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1545",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-00206",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00206",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00220",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00220",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20231",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20231",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20232",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20232",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gnutls30 to version 3.6.15-alt2. \nSecurity Fix(es):\n\n * BDU:2022-00206: Уязвимость расширения key_share библиотеки безопасности транспортного уровня GnuTLS, связанная с использованием памяти после её освобождения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-00220: Уязвимость функции client_send_params компонента lib/ext/pre_shared_key.c библиотеки безопасности транспортного уровня GnuTLS, связанная с использованием памяти после её освобождения, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2021-20231: A flaw was found in gnutls. A use after free issue in client sending key_share extension may lead to memory corruption and other consequences.\n\n * CVE-2021-20232: A flaw was found in gnutls. A use after free issue in client_send_params in lib/ext/pre_shared_key.c may lead to memory corruption and other potential consequences.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-24"
+          },
+          "Updated": {
+            "Date": "2021-03-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-00206",
+              "Impact": "Critical",
+              "Public": "20210122",
+              "CveID": "BDU:2022-00206"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-00220",
+              "Impact": "Critical",
+              "Public": "20210122",
+              "CveID": "BDU:2022-00220"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20231",
+              "Impact": "Critical",
+              "Public": "20210312",
+              "CveID": "CVE-2021-20231"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20232",
+              "Impact": "Critical",
+              "Public": "20210312",
+              "CveID": "CVE-2021-20232"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545001",
+                "Comment": "gnutls-utils is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545002",
+                "Comment": "gnutls30-devel-doc is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545003",
+                "Comment": "libgnutls-devel is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545004",
+                "Comment": "libgnutls-guile is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545005",
+                "Comment": "libgnutls-openssl-devel is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545006",
+                "Comment": "libgnutls27-openssl is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545007",
+                "Comment": "libgnutls30 is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545008",
+                "Comment": "libgnutlsxx-devel is earlier than 0:3.6.15-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211545009",
+                "Comment": "libgnutlsxx28 is earlier than 0:3.6.15-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222423",
+      "Version": "oval:org.altlinux.errata:def:20222423",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2423: package `hostapd` update to version 2.10-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2423",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2423",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04775",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04775",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07363",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07363",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07364",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07364",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16275",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16275",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30004",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30004",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23303",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23303",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23304",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23304",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades hostapd to version 2.10-alt2. \nSecurity Fix(es):\n\n * BDU:2019-04775: Уязвимость компонента защищённого доступа Wi-Fi WPA Supplicant, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-07363: Уязвимость реализации SAE клиента защищённого доступа Wi-Fi WPA Supplicant, связанная с раскрытием информации через несоответствие, позволяющая нарушителю раскрыть защищаемую информацию\n\n * BDU:2022-07364: Уязвимость реализации EAP-pwd клиента защищённого доступа Wi-Fi WPA Supplicant, связанная с  раскрытием информации через несоответствие, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2019-16275: hostapd before 2.10 and wpa_supplicant before 2.10 allow an incorrect indication of disconnection in certain situations because source address validation is mishandled. This is a denial of service that should have been prevented by PMF (aka management frame protection). The attacker must send a crafted 802.11 frame from a location that is within the 802.11 communications range.\n\n * CVE-2021-30004: In wpa_supplicant and hostapd 2.9, forging attacks may occur because AlgorithmIdentifier parameters are mishandled in tls/pkcs1.c and tls/x509v3.c.\n\n * CVE-2022-23303: The implementations of SAE in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9494.\n\n * CVE-2022-23304: The implementations of EAP-pwd in hostapd before 2.10 and wpa_supplicant before 2.10 are vulnerable to side-channel attacks as a result of cache access patterns. NOTE: this issue exists because of an incomplete fix for CVE-2019-9495.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-11"
+          },
+          "Updated": {
+            "Date": "2022-08-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20, CWE-346",
+              "Href": "https://bdu.fstec.ru/vul/2019-04775",
+              "Impact": "Low",
+              "Public": "20190912",
+              "CveID": "BDU:2019-04775"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-203",
+              "Href": "https://bdu.fstec.ru/vul/2022-07363",
+              "Impact": "Critical",
+              "Public": "20220116",
+              "CveID": "BDU:2022-07363"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-203",
+              "Href": "https://bdu.fstec.ru/vul/2022-07364",
+              "Impact": "Critical",
+              "Public": "20220116",
+              "CveID": "BDU:2022-07364"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-346",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16275",
+              "Impact": "Low",
+              "Public": "20190912",
+              "CveID": "CVE-2019-16275"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30004",
+              "Impact": "Low",
+              "Public": "20210402",
+              "CveID": "CVE-2021-30004"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23303",
+              "Impact": "Critical",
+              "Public": "20220117",
+              "CveID": "CVE-2022-23303"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-203",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23304",
+              "Impact": "Critical",
+              "Public": "20220117",
+              "CveID": "CVE-2022-23304"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222423001",
+                "Comment": "hostapd is earlier than 0:2.10-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

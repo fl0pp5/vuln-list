@@ -1,0 +1,146 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234922",
+      "Version": "oval:org.altlinux.errata:def:20234922",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4922: package `libexif` update to version 0.6.24-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4922",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4922",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-02074",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02074",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03096",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03096",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-0181",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0181",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-0198",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0198",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-0452",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0452",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libexif to version 0.6.24-alt1. \nSecurity Fix(es):\n\n * BDU:2021-02074: Уязвимость фунции exif_data_load_data_content (exif-data.c) операционной системы Android, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03096: Уязвимость функции exif_entry_get_value компонента exif-entry.c библиотеки для грамматического разбора EXIF-файлов Libexif, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-0181: In exif_data_load_data_thumbnail of exif-data.c, there is a possible denial of service due to an integer overflow. This could lead to remote denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-145075076\n\n * CVE-2020-0198: In exif_data_load_data_content of exif-data.c, there is a possible UBSAN abort due to an integer overflow. This could lead to remote denial of service with no additional execution privileges needed. User interaction is needed for exploitation.Product: AndroidVersions: Android-10Android ID: A-146428941\n\n * CVE-2020-0452: In exif_entry_get_value of exif-entry.c, there is a possible out of bounds write due to an integer overflow. This could lead to remote code execution if a third party app used this library to process remote image data with no additional execution privileges needed. User interaction is not needed for exploitation.Product: AndroidVersions: Android-8.1 Android-9 Android-10 Android-11 Android-8.0Android ID: A-159625731",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-16"
+          },
+          "Updated": {
+            "Date": "2023-08-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-02074",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "BDU:2021-02074"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-03096",
+              "Impact": "High",
+              "Public": "20201110",
+              "CveID": "BDU:2021-03096"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0181",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "CVE-2020-0181"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0198",
+              "Impact": "High",
+              "Public": "20200611",
+              "CveID": "CVE-2020-0198"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0452",
+              "Impact": "Critical",
+              "Public": "20201110",
+              "CveID": "CVE-2020-0452"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234922001",
+                "Comment": "libexif is earlier than 0:0.6.24-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234922002",
+                "Comment": "libexif-devel is earlier than 0:0.6.24-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

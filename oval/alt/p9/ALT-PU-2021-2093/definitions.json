@@ -1,0 +1,188 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212093",
+      "Version": "oval:org.altlinux.errata:def:20212093",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2093: package `redis` update to version 6.2.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2093",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2093",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00559",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00559",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-02181",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02181",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2015-8080",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-8080",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14147",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14147",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-21309",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21309",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3470",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3470",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades redis to version 6.2.4-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00559: Уязвимость реализации функции getnum() резидентной системы управления базами данных класса NoSQL Redis, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * BDU:2023-02181: Уязвимость системы управления базами данных NoSQL Redis, связанная с целочисленным переполнением, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2015-8080: Integer overflow in the getnum function in lua_struct.c in Redis 2.8.x before 2.8.24 and 3.0.x before 3.0.6 allows context-dependent attackers with permission to run Lua code in a Redis session to cause a denial of service (memory corruption and application crash) or possibly bypass intended sandbox restrictions via a large number, which triggers a stack-based buffer overflow.\n\n * CVE-2020-14147: An integer overflow in the getnum function in lua_struct.c in Redis before 6.0.3 allows context-dependent attackers with permission to run Lua code in a Redis session to cause a denial of service (memory corruption and application crash) or possibly bypass intended sandbox restrictions via a large number, which triggers a stack-based buffer overflow. NOTE: this issue exists because of a CVE-2015-8080 regression.\n\n * CVE-2021-21309: Redis is an open-source, in-memory database that persists on disk. In affected versions of Redis an integer overflow bug in 32-bit Redis version 4.0 or newer could be exploited to corrupt the heap and potentially result with remote code execution. Redis 4.0 or newer uses a configurable limit for the maximum supported bulk input size. By default, it is 512MB which is a safe value for all platforms. If the limit is significantly increased, receiving a large request from a client may trigger several integer overflow scenarios, which would result with buffer overflow and heap corruption. We believe this could in certain conditions be exploited for remote code execution. By default, authenticated Redis users have access to all configuration parameters and can therefore use the “CONFIG SET proto-max-bulk-len” to change the safe default, making the system vulnerable. **This problem only affects 32-bit Redis (on a 32-bit system, or as a 32-bit executable running on a 64-bit system).** The problem is fixed in version 6.2, and the fix is back ported to 6.0.11 and 5.0.11. Make sure you use one of these versions if you are running 32-bit Redis. An additional workaround to mitigate the problem without patching the redis-server executable is to prevent clients from directly executing `CONFIG SET`: Using Redis 6.0 or newer, ACL configuration can be used to block the command. Using older versions, the `rename-command` configuration directive can be used to rename the command to a random string unknown to users, rendering it inaccessible. Please note that this workaround may have an additional impact on users or operational systems that expect `CONFIG SET` to behave in certain ways.\n\n * CVE-2021-3470: A heap overflow issue was found in Redis in versions before 5.0.10, before 6.0.9 and before 6.2.0 when using a heap allocator other than jemalloc or glibc's malloc, leading to potential out of bound write or process crash. Effectively this flaw does not affect the vast majority of users, who use jemalloc or glibc malloc.\n\n * #40279: Прошу собрать версию 6.2.4",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-06-30"
+          },
+          "Updated": {
+            "Date": "2021-06-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2021-00559",
+              "Impact": "High",
+              "Public": "20200719",
+              "CveID": "BDU:2021-00559"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2023-02181",
+              "Impact": "High",
+              "Public": "20211004",
+              "CveID": "BDU:2023-02181"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-8080",
+              "Impact": "High",
+              "Public": "20160413",
+              "CveID": "CVE-2015-8080"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14147",
+              "Impact": "High",
+              "Public": "20200615",
+              "CveID": "CVE-2020-14147"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21309",
+              "Impact": "High",
+              "Public": "20210226",
+              "CveID": "CVE-2021-21309"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3470",
+              "Impact": "Low",
+              "Public": "20210331",
+              "CveID": "CVE-2021-3470"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40279",
+              "Href": "https://bugzilla.altlinux.org/40279",
+              "Data": "Прошу собрать версию 6.2.4"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212093001",
+                "Comment": "redis is earlier than 0:6.2.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

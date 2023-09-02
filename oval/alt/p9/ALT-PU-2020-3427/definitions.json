@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203427",
+      "Version": "oval:org.altlinux.errata:def:20203427",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3427: package `exiv2` update to version 0.27.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3427",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3427",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05759",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05759",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01492",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01492",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01655",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01655",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-13504",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-13504",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17402",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17402",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-20421",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-20421",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades exiv2 to version 0.27.3-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05759: Уязвимость модуля  crwimage_int.cpp библиотеки Exiv2, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01492: Уязвимость функции Jp2Image::readMetadata() файла jp2image.cpp библиотеки для управления метаданными медиафайлов Exiv2, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-01655: Уязвимость компонента mrwimage.cpp библиотеки для управления метаданными медиафайлов Exiv2, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-13504: There is an out-of-bounds read in Exiv2::MrwImage::readMetadata in mrwimage.cpp in Exiv2 through 0.27.2.\n\n * CVE-2019-17402: Exiv2 0.27.2 allows attackers to trigger a crash in Exiv2::getULong in types.cpp when called from Exiv2::Internal::CiffDirectory::readDirectory in crwimage_int.cpp, because there is no validation of the relationship of the total size to the offset and size.\n\n * CVE-2019-20421: In Jp2Image::readMetadata() in jp2image.cpp in Exiv2 0.27.2, an input file can result in an infinite loop and hang, with high CPU consumption. Remote attackers could leverage this vulnerability to cause a denial of service via a crafted file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-27"
+          },
+          "Updated": {
+            "Date": "2020-11-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2020-05759",
+              "Impact": "Low",
+              "Public": "20201009",
+              "CveID": "BDU:2020-05759"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2021-01492",
+              "Impact": "High",
+              "Public": "20190930",
+              "CveID": "BDU:2021-01492"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-01655",
+              "Impact": "Low",
+              "Public": "20190703",
+              "CveID": "BDU:2023-01655"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-13504",
+              "Impact": "Low",
+              "Public": "20190711",
+              "CveID": "CVE-2019-13504"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17402",
+              "Impact": "Low",
+              "Public": "20191009",
+              "CveID": "CVE-2019-17402"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-20421",
+              "Impact": "High",
+              "Public": "20200127",
+              "CveID": "CVE-2019-20421"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203427001",
+                "Comment": "exiv2 is earlier than 0:0.27.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203427002",
+                "Comment": "libexiv2 is earlier than 0:0.27.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203427003",
+                "Comment": "libexiv2-devel is earlier than 0:0.27.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

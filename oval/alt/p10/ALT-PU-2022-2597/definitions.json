@@ -1,0 +1,141 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222597",
+      "Version": "oval:org.altlinux.errata:def:20222597",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2597: package `open-vm-tools` update to version 12.1.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2597",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2597",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02316",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02316",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-22943",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-22943",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades open-vm-tools to version 12.1.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02316: Уязвимость набора утилит VMware Tools для операционных систем Windows, связанная с использованием ненадёжного пути поиска, позволяющая нарушителю выполнить произвольный код с системными привилегиями\n\n * CVE-2022-22943: VMware Tools for Windows (11.x.y and 10.x.y prior to 12.0.0) contains an uncontrolled search path vulnerability. A malicious actor with local administrative privileges in the Windows guest OS, where VMware Tools is installed, may be able to execute code with system privileges in the Windows guest OS due to an uncontrolled search path element.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-09-13"
+          },
+          "Updated": {
+            "Date": "2022-09-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:M/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://bdu.fstec.ru/vul/2022-02316",
+              "Impact": "High",
+              "Public": "20220301",
+              "CveID": "BDU:2022-02316"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-427",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-22943",
+              "Impact": "Low",
+              "Public": "20220303",
+              "CveID": "CVE-2022-22943"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222597001",
+                "Comment": "open-vm-tools is earlier than 0:12.1.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222597002",
+                "Comment": "open-vm-tools-desktop is earlier than 0:12.1.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222597003",
+                "Comment": "open-vm-tools-devel is earlier than 0:12.1.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222597004",
+                "Comment": "open-vm-tools-salt-minion is earlier than 0:12.1.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222597005",
+                "Comment": "open-vm-tools-test is earlier than 0:12.1.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

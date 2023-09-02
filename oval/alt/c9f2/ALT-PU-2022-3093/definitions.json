@@ -1,0 +1,143 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223093",
+      "Version": "oval:org.altlinux.errata:def:20223093",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3093: package `php8.1` update to version 8.1.12-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3093",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3093",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06445",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06445",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07409",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07409",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-31630",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-31630",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-37454",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37454",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php8.1 to version 8.1.12-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06445: Уязвимость криптографической хэш-функции SHA-3 программного пакета eXtended Keccak Code Package (XKCP), позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07409: Уязвимость функции imageloadfont() интерпретатора языка программирования PHP, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2022-31630: In PHP versions prior to 7.4.33, 8.0.25 and 8.2.12, when using imageloadfont() function in gd extension, it is possible to supply a specially crafted font file, such as if the loaded font is used with imagechar() function, the read outside allocated buffer will be used. This can lead to crashes or disclosure of confidential information.\n\n * CVE-2022-37454: The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-16"
+          },
+          "Updated": {
+            "Date": "2022-11-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-06445",
+              "Impact": "Critical",
+              "Public": "20221021",
+              "CveID": "BDU:2022-06445"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125, CWE-131, CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-07409",
+              "Impact": "High",
+              "Public": "20221114",
+              "CveID": "BDU:2022-07409"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-31630",
+              "Impact": "High",
+              "Public": "20221114",
+              "CveID": "CVE-2022-31630"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37454",
+              "Impact": "Critical",
+              "Public": "20221021",
+              "CveID": "CVE-2022-37454"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223093001",
+                "Comment": "php8.1 is earlier than 0:8.1.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223093002",
+                "Comment": "php8.1-devel is earlier than 0:8.1.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223093003",
+                "Comment": "php8.1-libs is earlier than 0:8.1.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223093004",
+                "Comment": "php8.1-mysqlnd is earlier than 0:8.1.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223093005",
+                "Comment": "rpm-build-php8.1-version is earlier than 0:8.1.12-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203007",
+      "Version": "oval:org.altlinux.errata:def:20203007",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3007: package `graphviz` update to version 2.41.2-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3007",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3007",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01391",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01391",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-10196",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-10196",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-9904",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-9904",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades graphviz to version 2.41.2-alt4. \nSecurity Fix(es):\n\n * BDU:2021-01391: Уязвимость функции rebuild_vlists в lib/dotgen/conc.c библиотеки dotgen ПО для визуализации графиков Graphviz, связанная с разыменованием нулевого указателя, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2018-10196: NULL pointer dereference vulnerability in the rebuild_vlists function in lib/dotgen/conc.c in the dotgen library in Graphviz 2.40.1 allows remote attackers to cause a denial of service (application crash) via a crafted file.\n\n * CVE-2019-9904: An issue was discovered in lib\\cdt\\dttree.c in libcdt.a in graphviz 2.40.1. Stack consumption occurs because of recursive agclose calls in lib\\cgraph\\graph.c in libcgraph.a, related to agfstsubg in lib\\cgraph\\subg.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-10"
+          },
+          "Updated": {
+            "Date": "2020-10-10"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-01391",
+              "Impact": "Low",
+              "Public": "20180109",
+              "CveID": "BDU:2021-01391"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-10196",
+              "Impact": "Low",
+              "Public": "20180530",
+              "CveID": "CVE-2018-10196"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-9904",
+              "Impact": "Low",
+              "Public": "20190321",
+              "CveID": "CVE-2019-9904"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007001",
+                "Comment": "graphviz is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007002",
+                "Comment": "graphviz-doc is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007003",
+                "Comment": "graphviz-graphs is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007004",
+                "Comment": "graphviz-guile is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007005",
+                "Comment": "graphviz-lua is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007006",
+                "Comment": "graphviz-perl is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007007",
+                "Comment": "graphviz-python3 is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007008",
+                "Comment": "graphviz-tcl is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007009",
+                "Comment": "libgraphviz is earlier than 0:2.41.2-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203007010",
+                "Comment": "libgraphviz-devel is earlier than 0:2.41.2-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

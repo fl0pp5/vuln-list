@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213543",
+      "Version": "oval:org.altlinux.errata:def:20213543",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3543: package `grafana` update to version 8.1.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3543",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3543",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00493",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00493",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01019",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01019",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-39226",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-39226",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43798",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43798",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades grafana to version 8.1.8-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00493: Уязвимость веб-инструмента представления данных Grafana, связанная с неверным ограничением имени пути к каталогу с ограниченным доступом, позволяющая нарушителю читать произвольные файлы\n\n * BDU:2023-01019: Уязвимость веб-инструмента представления данных Grafana, связанная с недостатками процедуры аутентификации, позволяющая нарушителю доступ к защищаемой информации, вызвать отказ в обслуживании или повысить свои привилегии\n\n * CVE-2021-39226: Grafana is an open source data visualization platform. In affected versions unauthenticated and authenticated users are able to view the snapshot with the lowest database key by accessing the literal paths: /dashboard/snapshot/:key, or /api/snapshots/:key. If the snapshot \"public_mode\" configuration setting is set to true (vs default of false), unauthenticated users are able to delete the snapshot with the lowest database key by accessing the literal path: /api/snapshots-delete/:deleteKey. Regardless of the snapshot \"public_mode\" setting, authenticated users are able to delete the snapshot with the lowest database key by accessing the literal paths: /api/snapshots/:key, or /api/snapshots-delete/:deleteKey. The combination of deletion and viewing enables a complete walk through all snapshot data while resulting in complete snapshot data loss. This issue has been resolved in versions 8.1.6 and 7.5.11. If for some reason you cannot upgrade you can use a reverse proxy or similar to block access to the literal paths: /api/snapshots/:key, /api/snapshots-delete/:deleteKey, /dashboard/snapshot/:key, and /api/snapshots/:key. They have no normal function and can be disabled without side effects.\n\n * CVE-2021-43798: Grafana is an open-source platform for monitoring and observability. Grafana versions 8.0.0-beta1 through 8.3.0 (except for patched versions) iss vulnerable to directory traversal, allowing access to local files. The vulnerable URL path is: `\u003cgrafana_host_url\u003e/public/plugins//`, where is the plugin ID for any installed plugin. At no time has Grafana Cloud been vulnerable. Users are advised to upgrade to patched versions 8.0.7, 8.1.8, 8.2.7, or 8.3.1. The GitHub Security Advisory contains more information about vulnerable URL paths, mitigation, and the disclosure timeline.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-16"
+          },
+          "Updated": {
+            "Date": "2021-12-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2023-00493",
+              "Impact": "High",
+              "Public": "20211203",
+              "CveID": "BDU:2023-00493"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2023-01019",
+              "Impact": "Critical",
+              "Public": "20211005",
+              "CveID": "BDU:2023-01019"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-39226",
+              "Impact": "High",
+              "Public": "20211005",
+              "CveID": "CVE-2021-39226"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43798",
+              "Impact": "High",
+              "Public": "20211207",
+              "CveID": "CVE-2021-43798"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213543001",
+                "Comment": "grafana is earlier than 0:8.1.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

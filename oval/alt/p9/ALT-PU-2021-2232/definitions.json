@@ -1,0 +1,111 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212232",
+      "Version": "oval:org.altlinux.errata:def:20212232",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2232: package `packageinstall` update to version 1.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2232",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2232",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades packageinstall to version 1.3-alt1. \nSecurity Fix(es):\n\n * #30389: По завершении предлагает ждать\n\n * #30931: Неправильная обработка вывода apt-get\n\n * #39768: [FR] apt-get update",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-14"
+          },
+          "Updated": {
+            "Date": "2021-07-14"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "30389",
+              "Href": "https://bugzilla.altlinux.org/30389",
+              "Data": "По завершении предлагает ждать"
+            },
+            {
+              "Id": "30931",
+              "Href": "https://bugzilla.altlinux.org/30931",
+              "Data": "Неправильная обработка вывода apt-get"
+            },
+            {
+              "Id": "39768",
+              "Href": "https://bugzilla.altlinux.org/39768",
+              "Data": "[FR] apt-get update"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212232001",
+                "Comment": "packageinstall is earlier than 0:1.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221423",
+      "Version": "oval:org.altlinux.errata:def:20221423",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1423: package `gimp` update to version 2.10.30-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1423",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1423",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02388",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02388",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-45463",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45463",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gimp to version 2.10.30-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02388: Уязвимость функции load_cache графического редактора GIMP, позволяющая нарушителю передавать специальные данные приложению и выполнять произвольные команды ОС в целевой системе\n\n * CVE-2021-45463: load_cache in GEGL before 0.4.34 allows shell expansion when a pathname in a constructed command line is not escaped or filtered. This is caused by use of the system library function for execution of the ImageMagick convert fallback in magick-load. NOTE: GEGL releases before 0.4.34 are used in GIMP releases before 2.10.30; however, this does not imply that GIMP builds enable the vulnerable feature.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-03"
+          },
+          "Updated": {
+            "Date": "2022-03-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2022-02388",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "BDU:2022-02388"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45463",
+              "Impact": "High",
+              "Public": "20211223",
+              "CveID": "CVE-2021-45463"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221423001",
+                "Comment": "gimp is earlier than 0:2.10.30-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221423002",
+                "Comment": "libgimp is earlier than 0:2.10.30-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221423003",
+                "Comment": "libgimp-devel is earlier than 0:2.10.30-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

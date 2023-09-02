@@ -1,0 +1,180 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234146",
+      "Version": "oval:org.altlinux.errata:def:20234146",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4146: package `kernel-image-std-def` update to version 5.10.185-alt0.c9f.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4146",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4146",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-07339",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07339",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01780",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01780",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-4379",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4379",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-1670",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1670",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-3389",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3389",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.185-alt0.c9f.2. \nSecurity Fix(es):\n\n * BDU:2022-07339: Уязвимость драйвера файловой системы NFS ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-01780: Уязвимость функции xirc2ps_detach() драйвера сетевого адаптера Xircom 16-bit PCMCIA (PC-card) операционных систем Linux, позволяющая нарушителю повысить свои привилегии или вызвать отказ в обслуживании\n\n * CVE-2022-4379: A use-after-free vulnerability was found in __nfs42_ssc_open() in fs/nfs/nfs4file.c in the Linux kernel. This flaw allows an attacker to conduct a remote denial\n\n * CVE-2023-1670: A flaw use after free in the Linux kernel Xircom 16-bit PCMCIA (PC-card) Ethernet driver was found.A local user could use this flaw to crash the system or potentially escalate their privileges on the system.\n\n * CVE-2023-3389: A use-after-free vulnerability in the Linux Kernel io_uring subsystem can be exploited to achieve local privilege escalation.\n\nRacing a io_uring cancel poll request with a linked timeout can cause a UAF in a hrtimer.\n\nWe recommend upgrading past commit ef7dfac51d8ed961b742218f526bd589f3900a59 (4716c73b188566865bdd79c3a6709696a224ac04 for 5.10 stable and 0e388fce7aec40992eadee654193cad345d62663 for 5.15 stable).\n\n",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-03"
+          },
+          "Updated": {
+            "Date": "2023-07-03"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-07339",
+              "Impact": "High",
+              "Public": "20221211",
+              "CveID": "BDU:2022-07339"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01780",
+              "Impact": "Low",
+              "Public": "20230317",
+              "CveID": "BDU:2023-01780"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4379",
+              "Impact": "High",
+              "Public": "20230110",
+              "CveID": "CVE-2022-4379"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1670",
+              "Impact": "High",
+              "Public": "20230330",
+              "CveID": "CVE-2023-1670"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3389",
+              "Impact": "High",
+              "Public": "20230628",
+              "CveID": "CVE-2023-3389"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146010",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234146011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.185-alt0.c9f.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

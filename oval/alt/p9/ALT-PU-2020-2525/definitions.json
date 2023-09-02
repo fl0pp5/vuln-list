@@ -1,0 +1,125 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202525",
+      "Version": "oval:org.altlinux.errata:def:20202525",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2525: package `php7-mysqli` update to version 7.3.21-alt1.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2525",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2525",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01911",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01911",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-7068",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7068",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades php7-mysqli to version 7.3.21-alt1.2. \nSecurity Fix(es):\n\n * BDU:2021-01911: Уязвимость функции phar_parse_zipfile языка программирования php, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2020-7068: In PHP versions 7.2.x below 7.2.33, 7.3.x below 7.3.21 and 7.4.x below 7.4.9, while processing PHAR files using phar extension, phar_parse_zipfile could be tricked into accessing freed memory, which could lead to a crash or information disclosure.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-11"
+          },
+          "Updated": {
+            "Date": "2020-08-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01911",
+              "Impact": "Low",
+              "Public": "20200803",
+              "CveID": "BDU:2021-01911"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7068",
+              "Impact": "Low",
+              "Public": "20200909",
+              "CveID": "CVE-2020-7068"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202525001",
+                "Comment": "php7-mysqli is earlier than 0:7.3.21-alt1.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

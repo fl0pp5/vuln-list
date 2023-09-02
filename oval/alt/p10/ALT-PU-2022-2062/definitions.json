@@ -1,0 +1,902 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222062",
+      "Version": "oval:org.altlinux.errata:def:20222062",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2062: package `qemu` update to version 6.2.0-alt1.p10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2062",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2062",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01465",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01465",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05772",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05772",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-20257",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20257",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3748",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3748",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3929",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3929",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-3930",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3930",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-4158",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-4158",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-0358",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0358",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qemu to version 6.2.0-alt1.p10. \nSecurity Fix(es):\n\n * BDU:2022-01465: Уязвимость компонента virtio-fs (virtiofsd) эмулятора QEMU, позволяющая нарушителю повысить свои привилегии в системе\n\n * BDU:2022-05772: Уязвимость эмулятора аппаратного обеспечения QEMU, связанная с выполнением цикла с недоступным условием выхода, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-20257: An infinite loop flaw was found in the e1000 NIC emulator of the QEMU. This issue occurs while processing transmits (tx) descriptors in process_tx_desc if various descriptor fields are initialized with invalid values. This flaw allows a guest to consume CPU cycles on the host, resulting in a denial of service. The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-3748: A use-after-free vulnerability was found in the virtio-net device of QEMU. It could occur when the descriptor's address belongs to the non direct access region, due to num_buffers being set after the virtqueue elem has been unmapped. A malicious guest could use this flaw to crash QEMU, resulting in a denial of service condition, or potentially execute code on the host with the privileges of the QEMU process.\n\n * CVE-2021-3929: A DMA reentrancy issue was found in the NVM Express Controller (NVME) emulation in QEMU. This CVE is similar to CVE-2021-3750 and, just like it, when the reentrancy write triggers the reset function nvme_ctrl_reset(), data structs will be freed leading to a use-after-free issue. A malicious guest could use this flaw to crash the QEMU process on the host, resulting in a denial of service condition or, potentially, executing arbitrary code within the context of the QEMU process on the host.\n\n * CVE-2021-3930: An off-by-one error was found in the SCSI device emulation in QEMU. It could occur while processing MODE SELECT commands in mode_sense_page() if the 'page' argument was set to MODE_PAGE_ALLS (0x3f). A malicious guest could use this flaw to potentially crash QEMU, resulting in a denial of service condition.\n\n * CVE-2021-4158: A NULL pointer dereference issue was found in the ACPI code of QEMU. A malicious, privileged user within the guest could use this flaw to crash the QEMU process on the host, resulting in a denial of service condition.\n\n * CVE-2022-0358: A flaw was found in the QEMU virtio-fs shared file system daemon (virtiofsd) implementation. This flaw is strictly related to CVE-2018-13405. A local guest user can create files in the directories shared by virtio-fs with unintended group ownership in a scenario where a directory is SGID to a certain group and is writable by a user who is not a member of the group. This could allow a malicious unprivileged user inside the guest to gain access to resources accessible to the root group, potentially escalating their privileges within the guest. A malicious local user in the host might also leverage this unexpected executable file created by the guest to escalate their privileges on the host system.\n\n * #42325: Ошибка при создании виртуальной машины\n\n * #42713: Проблема при создании виртуальной машины в Opennebula",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-06-16"
+          },
+          "Updated": {
+            "Date": "2022-06-16"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-276",
+              "Href": "https://bdu.fstec.ru/vul/2022-01465",
+              "Impact": "High",
+              "Public": "20220321",
+              "CveID": "BDU:2022-01465"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://bdu.fstec.ru/vul/2022-05772",
+              "Impact": "Low",
+              "Public": "20210210",
+              "CveID": "BDU:2022-05772"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20257",
+              "Impact": "Low",
+              "Public": "20220316",
+              "CveID": "CVE-2021-20257"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3748",
+              "Impact": "High",
+              "Public": "20220323",
+              "CveID": "CVE-2021-3748"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3929",
+              "Impact": "High",
+              "Public": "20220825",
+              "CveID": "CVE-2021-3929"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-193",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3930",
+              "Impact": "Low",
+              "Public": "20220218",
+              "CveID": "CVE-2021-3930"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-4158",
+              "Impact": "Low",
+              "Public": "20220824",
+              "CveID": "CVE-2021-4158"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-273",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0358",
+              "Impact": "High",
+              "Public": "20220829",
+              "CveID": "CVE-2022-0358"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "42325",
+              "Href": "https://bugzilla.altlinux.org/42325",
+              "Data": "Ошибка при создании виртуальной машины"
+            },
+            {
+              "Id": "42713",
+              "Href": "https://bugzilla.altlinux.org/42713",
+              "Data": "Проблема при создании виртуальной машины в Opennebula"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062001",
+                "Comment": "qemu is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062002",
+                "Comment": "qemu-audio-alsa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062003",
+                "Comment": "qemu-audio-oss is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062004",
+                "Comment": "qemu-audio-pa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062005",
+                "Comment": "qemu-audio-sdl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062006",
+                "Comment": "qemu-audio-spice is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062007",
+                "Comment": "qemu-aux is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062008",
+                "Comment": "qemu-block-curl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062009",
+                "Comment": "qemu-block-dmg is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062010",
+                "Comment": "qemu-block-gluster is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062011",
+                "Comment": "qemu-block-iscsi is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062012",
+                "Comment": "qemu-block-nfs is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062013",
+                "Comment": "qemu-block-rbd is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062014",
+                "Comment": "qemu-block-ssh is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062015",
+                "Comment": "qemu-char-spice is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062016",
+                "Comment": "qemu-common is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062017",
+                "Comment": "qemu-device-display-qxl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062018",
+                "Comment": "qemu-device-display-vhost-user-gpu is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062019",
+                "Comment": "qemu-device-display-virtio-gpu is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062020",
+                "Comment": "qemu-device-display-virtio-gpu-ccw is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062021",
+                "Comment": "qemu-device-display-virtio-gpu-gl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062022",
+                "Comment": "qemu-device-display-virtio-gpu-pci is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062023",
+                "Comment": "qemu-device-display-virtio-gpu-pci-gl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062024",
+                "Comment": "qemu-device-display-virtio-vga is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062025",
+                "Comment": "qemu-device-display-virtio-vga-gl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062026",
+                "Comment": "qemu-device-usb-host is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062027",
+                "Comment": "qemu-device-usb-redirect is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062028",
+                "Comment": "qemu-device-usb-smartcard is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062029",
+                "Comment": "qemu-doc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062030",
+                "Comment": "qemu-guest-agent is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062031",
+                "Comment": "qemu-img is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062032",
+                "Comment": "qemu-kvm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062033",
+                "Comment": "qemu-kvm-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062034",
+                "Comment": "qemu-pr-helper is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062035",
+                "Comment": "qemu-system is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062036",
+                "Comment": "qemu-system-aarch64 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062037",
+                "Comment": "qemu-system-aarch64-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062038",
+                "Comment": "qemu-system-alpha is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062039",
+                "Comment": "qemu-system-alpha-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062040",
+                "Comment": "qemu-system-arm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062041",
+                "Comment": "qemu-system-arm-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062042",
+                "Comment": "qemu-system-avr is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062043",
+                "Comment": "qemu-system-avr-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062044",
+                "Comment": "qemu-system-cris is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062045",
+                "Comment": "qemu-system-cris-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062046",
+                "Comment": "qemu-system-hppa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062047",
+                "Comment": "qemu-system-hppa-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062048",
+                "Comment": "qemu-system-m68k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062049",
+                "Comment": "qemu-system-m68k-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062050",
+                "Comment": "qemu-system-microblaze is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062051",
+                "Comment": "qemu-system-microblaze-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062052",
+                "Comment": "qemu-system-mips is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062053",
+                "Comment": "qemu-system-mips-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062054",
+                "Comment": "qemu-system-nios2 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062055",
+                "Comment": "qemu-system-nios2-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062056",
+                "Comment": "qemu-system-or1k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062057",
+                "Comment": "qemu-system-or1k-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062058",
+                "Comment": "qemu-system-ppc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062059",
+                "Comment": "qemu-system-ppc-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062060",
+                "Comment": "qemu-system-riscv is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062061",
+                "Comment": "qemu-system-riscv-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062062",
+                "Comment": "qemu-system-rx is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062063",
+                "Comment": "qemu-system-rx-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062064",
+                "Comment": "qemu-system-s390x is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062065",
+                "Comment": "qemu-system-s390x-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062066",
+                "Comment": "qemu-system-sh4 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062067",
+                "Comment": "qemu-system-sh4-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062068",
+                "Comment": "qemu-system-sparc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062069",
+                "Comment": "qemu-system-sparc-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062070",
+                "Comment": "qemu-system-tricore is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062071",
+                "Comment": "qemu-system-tricore-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062072",
+                "Comment": "qemu-system-x86 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062073",
+                "Comment": "qemu-system-x86-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062074",
+                "Comment": "qemu-system-xtensa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062075",
+                "Comment": "qemu-system-xtensa-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062076",
+                "Comment": "qemu-tests is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062077",
+                "Comment": "qemu-tools is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062078",
+                "Comment": "qemu-ui-curses is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062079",
+                "Comment": "qemu-ui-egl-headless is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062080",
+                "Comment": "qemu-ui-gtk is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062081",
+                "Comment": "qemu-ui-opengl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062082",
+                "Comment": "qemu-ui-sdl is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062083",
+                "Comment": "qemu-ui-spice-app is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062084",
+                "Comment": "qemu-ui-spice-core is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062085",
+                "Comment": "qemu-user is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062086",
+                "Comment": "qemu-user-aarch64 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062087",
+                "Comment": "qemu-user-alpha is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062088",
+                "Comment": "qemu-user-arm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062089",
+                "Comment": "qemu-user-avr is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062090",
+                "Comment": "qemu-user-binfmt is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062091",
+                "Comment": "qemu-user-binfmt-aarch64 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062092",
+                "Comment": "qemu-user-binfmt-alpha is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062093",
+                "Comment": "qemu-user-binfmt-arm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062094",
+                "Comment": "qemu-user-binfmt-avr is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062095",
+                "Comment": "qemu-user-binfmt-cris is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062096",
+                "Comment": "qemu-user-binfmt-hexagon is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062097",
+                "Comment": "qemu-user-binfmt-hppa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062098",
+                "Comment": "qemu-user-binfmt-m68k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062099",
+                "Comment": "qemu-user-binfmt-microblaze is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062100",
+                "Comment": "qemu-user-binfmt-mips is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062101",
+                "Comment": "qemu-user-binfmt-nios2 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062102",
+                "Comment": "qemu-user-binfmt-or1k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062103",
+                "Comment": "qemu-user-binfmt-ppc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062104",
+                "Comment": "qemu-user-binfmt-riscv is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062105",
+                "Comment": "qemu-user-binfmt-rx is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062106",
+                "Comment": "qemu-user-binfmt-s390x is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062107",
+                "Comment": "qemu-user-binfmt-sh4 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062108",
+                "Comment": "qemu-user-binfmt-sparc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062109",
+                "Comment": "qemu-user-binfmt-tricore is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062110",
+                "Comment": "qemu-user-binfmt-x86 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062111",
+                "Comment": "qemu-user-binfmt-xtensa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062112",
+                "Comment": "qemu-user-cris is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062113",
+                "Comment": "qemu-user-hexagon is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062114",
+                "Comment": "qemu-user-hppa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062115",
+                "Comment": "qemu-user-m68k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062116",
+                "Comment": "qemu-user-microblaze is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062117",
+                "Comment": "qemu-user-mips is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062118",
+                "Comment": "qemu-user-nios2 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062119",
+                "Comment": "qemu-user-or1k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062120",
+                "Comment": "qemu-user-ppc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062121",
+                "Comment": "qemu-user-riscv is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062122",
+                "Comment": "qemu-user-rx is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062123",
+                "Comment": "qemu-user-s390x is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062124",
+                "Comment": "qemu-user-sh4 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062125",
+                "Comment": "qemu-user-sparc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062126",
+                "Comment": "qemu-user-static is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062127",
+                "Comment": "qemu-user-static-aarch64 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062128",
+                "Comment": "qemu-user-static-alpha is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062129",
+                "Comment": "qemu-user-static-arm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062130",
+                "Comment": "qemu-user-static-avr is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062131",
+                "Comment": "qemu-user-static-binfmt is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062132",
+                "Comment": "qemu-user-static-binfmt-aarch64 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062133",
+                "Comment": "qemu-user-static-binfmt-alpha is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062134",
+                "Comment": "qemu-user-static-binfmt-arm is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062135",
+                "Comment": "qemu-user-static-binfmt-avr is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062136",
+                "Comment": "qemu-user-static-binfmt-cris is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062137",
+                "Comment": "qemu-user-static-binfmt-hexagon is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062138",
+                "Comment": "qemu-user-static-binfmt-hppa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062139",
+                "Comment": "qemu-user-static-binfmt-m68k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062140",
+                "Comment": "qemu-user-static-binfmt-microblaze is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062141",
+                "Comment": "qemu-user-static-binfmt-mips is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062142",
+                "Comment": "qemu-user-static-binfmt-nios2 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062143",
+                "Comment": "qemu-user-static-binfmt-or1k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062144",
+                "Comment": "qemu-user-static-binfmt-ppc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062145",
+                "Comment": "qemu-user-static-binfmt-riscv is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062146",
+                "Comment": "qemu-user-static-binfmt-rx is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062147",
+                "Comment": "qemu-user-static-binfmt-s390x is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062148",
+                "Comment": "qemu-user-static-binfmt-sh4 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062149",
+                "Comment": "qemu-user-static-binfmt-sparc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062150",
+                "Comment": "qemu-user-static-binfmt-tricore is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062151",
+                "Comment": "qemu-user-static-binfmt-x86 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062152",
+                "Comment": "qemu-user-static-binfmt-xtensa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062153",
+                "Comment": "qemu-user-static-cris is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062154",
+                "Comment": "qemu-user-static-hexagon is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062155",
+                "Comment": "qemu-user-static-hppa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062156",
+                "Comment": "qemu-user-static-m68k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062157",
+                "Comment": "qemu-user-static-microblaze is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062158",
+                "Comment": "qemu-user-static-mips is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062159",
+                "Comment": "qemu-user-static-nios2 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062160",
+                "Comment": "qemu-user-static-or1k is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062161",
+                "Comment": "qemu-user-static-ppc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062162",
+                "Comment": "qemu-user-static-riscv is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062163",
+                "Comment": "qemu-user-static-rx is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062164",
+                "Comment": "qemu-user-static-s390x is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062165",
+                "Comment": "qemu-user-static-sh4 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062166",
+                "Comment": "qemu-user-static-sparc is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062167",
+                "Comment": "qemu-user-static-tricore is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062168",
+                "Comment": "qemu-user-static-x86 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062169",
+                "Comment": "qemu-user-static-xtensa is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062170",
+                "Comment": "qemu-user-tricore is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062171",
+                "Comment": "qemu-user-x86 is earlier than 0:6.2.0-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222062172",
+                "Comment": "qemu-user-xtensa is earlier than 0:6.2.0-alt1.p10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

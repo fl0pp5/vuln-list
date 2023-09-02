@@ -1,0 +1,263 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222832",
+      "Version": "oval:org.altlinux.errata:def:20222832",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2832: package `ImageMagick` update to version 6.9.12.64-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2832",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2832",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01717",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01717",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01719",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01719",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01721",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01721",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01724",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01724",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1114",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1114",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1115",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1115",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-3213",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3213",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32545",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32545",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32546",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32546",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32547",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32547",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ImageMagick to version 6.9.12.64-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01717: Уязвимость компонента coders/pcl.c консольного графического редактора ImageMagick, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2023-01719: Уязвимость функции RelinquishDCMInfo() компонента dcm.c консольного графического редактора ImageMagick, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * BDU:2023-01721: Уязвимость компонента coders/psd.c консольного графического редактора ImageMagick, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2023-01724: Уязвимость компонента MagickCore/property.c консольного графического редактора ImageMagick, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2022-1114: A heap-use-after-free flaw was found in ImageMagick's RelinquishDCMInfo() function of dcm.c file. This vulnerability is triggered when an attacker passes a specially crafted DICOM image file to ImageMagick for conversion, potentially leading to information disclosure and a denial of service.\n\n * CVE-2022-1115: A heap-buffer-overflow flaw was found in ImageMagick’s PushShortPixel() function of quantum-private.h file. This vulnerability is triggered when an attacker passes a specially crafted TIFF image file to ImageMagick for conversion, potentially leading to a denial of service.\n\n * CVE-2022-3213: A heap buffer overflow issue was found in ImageMagick. When an application processes a malformed TIFF file, it could lead to undefined behavior or a crash causing a denial of service.\n\n * CVE-2022-32545: A vulnerability was found in ImageMagick, causing an outside the range of representable values of type 'unsigned char' at coders/psd.c, when crafted or untrusted input is processed. This leads to a negative impact to application availability or other problems related to undefined behavior.\n\n * CVE-2022-32546: A vulnerability was found in ImageMagick, causing an outside the range of representable values of type 'unsigned long' at coders/pcl.c, when crafted or untrusted input is processed. This leads to a negative impact to application availability or other problems related to undefined behavior.\n\n * CVE-2022-32547: In ImageMagick, there is load of misaligned address for type 'double', which requires 8 byte alignment and for type 'float', which requires 4 byte alignment at MagickCore/property.c. Whenever crafted or untrusted input is processed by ImageMagick, this causes a negative impact to application availability or other problems related to undefined behavior.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-13"
+          },
+          "Updated": {
+            "Date": "2022-10-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2023-01717",
+              "Impact": "High",
+              "Public": "20220324",
+              "CveID": "BDU:2023-01717"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01719",
+              "Impact": "Low",
+              "Public": "20220314",
+              "CveID": "BDU:2023-01719"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2023-01721",
+              "Impact": "High",
+              "Public": "20220317",
+              "CveID": "BDU:2023-01721"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-704",
+              "Href": "https://bdu.fstec.ru/vul/2023-01724",
+              "Impact": "High",
+              "Public": "20220409",
+              "CveID": "BDU:2023-01724"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1114",
+              "Impact": "High",
+              "Public": "20220429",
+              "CveID": "CVE-2022-1114"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1115",
+              "Impact": "Low",
+              "Public": "20220829",
+              "CveID": "CVE-2022-1115"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3213",
+              "Impact": "Low",
+              "Public": "20220919",
+              "CveID": "CVE-2022-3213"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32545",
+              "Impact": "High",
+              "Public": "20220616",
+              "CveID": "CVE-2022-32545"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32546",
+              "Impact": "High",
+              "Public": "20220616",
+              "CveID": "CVE-2022-32546"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-704",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32547",
+              "Impact": "High",
+              "Public": "20220616",
+              "CveID": "CVE-2022-32547"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832001",
+                "Comment": "ImageMagick is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832002",
+                "Comment": "ImageMagick-doc is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832003",
+                "Comment": "ImageMagick-tools is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832004",
+                "Comment": "libImageMagick++6.9 is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832005",
+                "Comment": "libImageMagick-devel is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832006",
+                "Comment": "libImageMagick6-common is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832007",
+                "Comment": "libImageMagick6.7 is earlier than 0:6.9.12.64-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222832008",
+                "Comment": "perl-Magick is earlier than 0:6.9.12.64-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

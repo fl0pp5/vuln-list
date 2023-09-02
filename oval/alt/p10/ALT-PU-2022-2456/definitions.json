@@ -1,0 +1,161 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222456",
+      "Version": "oval:org.altlinux.errata:def:20222456",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2456: package `strongswan` update to version 5.9.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2456",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2456",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02802",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02802",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-41990",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41990",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41991",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41991",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-45079",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-45079",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades strongswan to version 5.9.6-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02802: Уязвимость демона strongSwan, вызванная целочисленным переполнением (при условии, что кэш сертификатов в памяти полон), позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-41990: The gmp plugin in strongSwan before 5.9.4 has a remote integer overflow via a crafted certificate with an RSASSA-PSS signature. For example, this can be triggered by an unrelated self-signed CA certificate sent by an initiator. Remote code execution cannot occur.\n\n * CVE-2021-41991: The in-memory certificate cache in strongSwan before 5.9.4 has a remote integer overflow upon receiving many requests with different certificates to fill the cache and later trigger the replacement of cache entries. The code attempts to select a less-often-used cache entry by means of a random number generator, but this is not done correctly. Remote code execution might be a slight possibility.\n\n * CVE-2021-45079: In strongSwan before 5.9.5, a malicious responder can send an EAP-Success message too early without actually authenticating the client and (in the case of EAP methods with mutual authentication and EAP-only authentication for IKEv2) even without server authentication.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-18"
+          },
+          "Updated": {
+            "Date": "2022-08-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2023-02802",
+              "Impact": "High",
+              "Public": "20211018",
+              "CveID": "BDU:2023-02802"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41990",
+              "Impact": "High",
+              "Public": "20211018",
+              "CveID": "CVE-2021-41990"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41991",
+              "Impact": "High",
+              "Public": "20211018",
+              "CveID": "CVE-2021-41991"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-45079",
+              "Impact": "Critical",
+              "Public": "20220131",
+              "CveID": "CVE-2021-45079"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222456001",
+                "Comment": "strongswan is earlier than 0:5.9.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222456002",
+                "Comment": "strongswan-charon-nm is earlier than 0:5.9.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222456003",
+                "Comment": "strongswan-testing is earlier than 0:5.9.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

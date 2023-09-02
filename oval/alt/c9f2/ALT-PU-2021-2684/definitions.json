@@ -1,0 +1,97 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212684",
+      "Version": "oval:org.altlinux.errata:def:20212684",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2684: package `linux-pam` update to version 1.5.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2684",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2684",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades linux-pam to version 1.5.1-alt1. \nSecurity Fix(es):\n\n * #38389: pam: can't login, pam_motd failed",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-02"
+          },
+          "Updated": {
+            "Date": "2021-09-02"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "38389",
+              "Href": "https://bugzilla.altlinux.org/38389",
+              "Data": "pam: can't login, pam_motd failed"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684001",
+                "Comment": "libpam0 is earlier than 0:1.5.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684002",
+                "Comment": "libpam0-devel is earlier than 0:1.5.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684003",
+                "Comment": "pam is earlier than 0:1.5.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684004",
+                "Comment": "pam-doc is earlier than 0:1.5.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684005",
+                "Comment": "pam0_timestamp is earlier than 0:1.5.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212684006",
+                "Comment": "rpm-macros-pam0 is earlier than 0:1.5.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

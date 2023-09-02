@@ -1,0 +1,52 @@
+{
+  "TextFileContent54Objects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:2001",
+      "Version": "1",
+      "comment": "Evaluate `/etc/os-release` file content",
+      "Path": {
+        "dataType": "string",
+        "Text": "/etc"
+      },
+      "Filepath": {
+        "Datatype": "string",
+        "Text": "os-release"
+      },
+      "Pattern": {
+        "Datatype": "string",
+        "Operation": "pattern match",
+        "Text": "cpe:\\/o:alt:(?!sp)[a-z\\-]+:p?(\\d+)(?:\\.\\d)*"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "Text": "1"
+      }
+    }
+  ],
+  "RpmInfoObjects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:20231805001",
+      "Version": "1",
+      "comment": "dpdk is installed",
+      "Name": "dpdk"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20231805002",
+      "Version": "1",
+      "comment": "dpdk-devel is installed",
+      "Name": "dpdk-devel"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20231805003",
+      "Version": "1",
+      "comment": "dpdk-tools is installed",
+      "Name": "dpdk-tools"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20231805004",
+      "Version": "1",
+      "comment": "libdpdk is installed",
+      "Name": "libdpdk"
+    }
+  ]
+}

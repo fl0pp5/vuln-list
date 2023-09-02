@@ -1,0 +1,151 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201358",
+      "Version": "oval:org.altlinux.errata:def:20201358",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1358: package `qt5-sensors` update to version 5.12.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1358",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1358",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01758",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01758",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-0570",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-0570",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-24742",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-24742",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades qt5-sensors to version 5.12.7-alt1. \nSecurity Fix(es):\n\n * BDU:2022-01758: Уязвимость компонента QPluginLoader кроссплатформенного фреймворка для разработки программного обеспечения Qt, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-0570: Uncontrolled search path in the QT Library before 5.14.0, 5.12.7 and 5.9.10 may allow an authenticated user to potentially enable elevation of privilege via local access.\n\n * CVE-2020-24742: An issue has been fixed in Qt versions 5.14.0 where QPluginLoader attempts to load plugins relative to the working directory, allowing attackers to execute arbitrary code via crafted files.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-02-26"
+          },
+          "Updated": {
+            "Date": "2020-02-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2022-01758",
+              "Impact": "High",
+              "Public": "20210809",
+              "CveID": "BDU:2022-01758"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-426",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-0570",
+              "Impact": "High",
+              "Public": "20200914",
+              "CveID": "CVE-2020-0570"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-24742",
+              "Impact": "High",
+              "Public": "20210809",
+              "CveID": "CVE-2020-24742"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201358001",
+                "Comment": "libqt5-sensors is earlier than 0:5.12.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201358002",
+                "Comment": "qt5-sensors-common is earlier than 0:5.12.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201358003",
+                "Comment": "qt5-sensors-devel is earlier than 0:5.12.7-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201358004",
+                "Comment": "qt5-sensors-doc is earlier than 0:5.12.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

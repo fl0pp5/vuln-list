@@ -1,0 +1,231 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221953",
+      "Version": "oval:org.altlinux.errata:def:20221953",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1953: package `LibreOffice` update to version 7.3.3.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1953",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1953",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04770",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04770",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04785",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04785",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-26306",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26306",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-26307",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26307",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades LibreOffice to version 7.3.3.2-alt1. \nSecurity Fix(es):\n\n * BDU:2022-04770: Уязвимость пакета офисных программ LibreOffice, связанная с недостаточно стойким шифрованием данных, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2022-04785: Уязвимость базы данных конфигураций пользователя пакета офисных программ LibreOffice, позволяющая нарушителю раскрыть защищаемую информацию\n\n * CVE-2022-26306: LibreOffice supports the storage of passwords for web connections in the user’s configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in LibreOffice existed where the required initialization vector for encryption was always the same which weakens the security of the encryption making them vulnerable if an attacker has access to the user's configuration data. This issue affects: The Document Foundation LibreOffice 7.2 versions prior to 7.2.7; 7.3 versions prior to 7.3.1.\n\n * CVE-2022-26307: LibreOffice supports the storage of passwords for web connections in the user’s configuration database. The stored passwords are encrypted with a single master key provided by the user. A flaw in LibreOffice existed where master key was poorly encoded resulting in weakening its entropy from 128 to 43 bits making the stored passwords vulerable to a brute force attack if an attacker has access to the users stored config. This issue affects: The Document Foundation LibreOffice 7.2 versions prior to 7.2.7; 7.3 versions prior to 7.3.3.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-05-27"
+          },
+          "Updated": {
+            "Date": "2022-05-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-312, CWE-326",
+              "Href": "https://bdu.fstec.ru/vul/2022-04770",
+              "Impact": "High",
+              "Public": "20220725",
+              "CveID": "BDU:2022-04770"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-326",
+              "Href": "https://bdu.fstec.ru/vul/2022-04785",
+              "Impact": "High",
+              "Public": "20220725",
+              "CveID": "BDU:2022-04785"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-330",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26306",
+              "Impact": "High",
+              "Public": "20220725",
+              "CveID": "CVE-2022-26306"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26307",
+              "Impact": "High",
+              "Public": "20220725",
+              "CveID": "CVE-2022-26307"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953001",
+                "Comment": "LibreOffice is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953002",
+                "Comment": "LibreOffice-common is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953003",
+                "Comment": "LibreOffice-extensions is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953004",
+                "Comment": "LibreOffice-gtk3 is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953005",
+                "Comment": "LibreOffice-gtk3-kde5 is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953006",
+                "Comment": "LibreOffice-integrated is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953007",
+                "Comment": "LibreOffice-kde5 is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953008",
+                "Comment": "LibreOffice-langpack-be is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953009",
+                "Comment": "LibreOffice-langpack-de is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953010",
+                "Comment": "LibreOffice-langpack-es is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953011",
+                "Comment": "LibreOffice-langpack-fr is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953012",
+                "Comment": "LibreOffice-langpack-kk is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953013",
+                "Comment": "LibreOffice-langpack-pt-BR is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953014",
+                "Comment": "LibreOffice-langpack-ru is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953015",
+                "Comment": "LibreOffice-langpack-tt is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953016",
+                "Comment": "LibreOffice-langpack-uk is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953017",
+                "Comment": "LibreOffice-mimetypes is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953018",
+                "Comment": "LibreOffice-qt5 is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953019",
+                "Comment": "LibreOffice-sdk is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953020",
+                "Comment": "libreofficekit is earlier than 0:7.3.3.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221953021",
+                "Comment": "libreofficekit-devel is earlier than 0:7.3.3.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201645",
+      "Version": "oval:org.altlinux.errata:def:20201645",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1645: package `podman` update to version 1.8.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1645",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1645",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-25067",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-25067",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20188",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20188",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades podman to version 1.8.2-alt1. \nSecurity Fix(es):\n\n * CVE-2019-25067: A vulnerability, which was classified as critical, was found in Podman and Varlink 1.5.1. This affects an unknown part of the component API. The manipulation leads to Privilege Escalation. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.\n\n * CVE-2021-20188: A flaw was found in podman before 1.7.0. File permissions for non-root users running in a privileged container are not correctly checked. This flaw can be abused by a low-privileged user inside the container to access any other file in the container, even if owned by the root user inside the container. It does not allow to directly escape the container, though being a privileged container means that a lot of security features are disabled when running the container. The highest threat from this vulnerability is to data confidentiality and integrity as well as system availability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-30"
+          },
+          "Updated": {
+            "Date": "2020-03-30"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-25067",
+              "Impact": "High",
+              "Public": "20220609",
+              "CveID": "CVE-2019-25067"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20188",
+              "Impact": "High",
+              "Public": "20210211",
+              "CveID": "CVE-2021-20188"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201645001",
+                "Comment": "podman is earlier than 0:1.8.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201645002",
+                "Comment": "podman-docker is earlier than 0:1.8.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

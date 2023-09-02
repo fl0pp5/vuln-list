@@ -1,0 +1,172 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221751",
+      "Version": "oval:org.altlinux.errata:def:20221751",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1751: package `kernel-image-std-def` update to version 5.4.190-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1751",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1751",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00629",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00629",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-41858",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41858",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.190-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00629: Уязвимость функции sl_tx_timeout() в модуле drivers/net/slip.c драйвера SLIP ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-41858: A flaw was found in the Linux kernel. A NULL pointer dereference may occur while a slip driver is in progress to detach in sl_tx_timeout in drivers/net/slip/slip.c. This issue could allow an attacker to crash the system or leak internal kernel information.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-22"
+          },
+          "Updated": {
+            "Date": "2022-04-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00629",
+              "Impact": "High",
+              "Public": "20220406",
+              "CveID": "BDU:2023-00629"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41858",
+              "Impact": "High",
+              "Public": "20230117",
+              "CveID": "CVE-2022-41858"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751001",
+                "Comment": "kernel-doc-std is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.4.190-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221751013",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 2:5.4.190-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

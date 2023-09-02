@@ -1,0 +1,200 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231890",
+      "Version": "oval:org.altlinux.errata:def:20231890",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1890: package `ncurses` update to version 6.3.20220618-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1890",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1890",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00296",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00296",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-29458",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ncurses to version 6.3.20220618-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00296: Уязвимость функции convert_strings компонента tinfo/read_entry.c библиотеки управления вводом-выводом на терминал Ncurses, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2022-29458: ncurses 6.3 before patch 20220416 has an out-of-bounds read and segmentation violation in convert_strings in tinfo/read_entry.c in the terminfo library.\n\n * #40808: Move /usr/bin/infocmp to termutils",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-26"
+          },
+          "Updated": {
+            "Date": "2023-05-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-00296",
+              "Impact": "High",
+              "Public": "20211021",
+              "CveID": "BDU:2023-00296"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-29458",
+              "Impact": "High",
+              "Public": "20220418",
+              "CveID": "CVE-2022-29458"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40808",
+              "Href": "https://bugzilla.altlinux.org/40808",
+              "Data": "Move /usr/bin/infocmp to termutils"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890001",
+                "Comment": "libncurses is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890002",
+                "Comment": "libncurses++ is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890003",
+                "Comment": "libncurses++-devel is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890004",
+                "Comment": "libncurses++-devel-static is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890005",
+                "Comment": "libncurses-devel is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890006",
+                "Comment": "libncurses-devel-static is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890007",
+                "Comment": "libncursesw is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890008",
+                "Comment": "libncursesw-devel is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890009",
+                "Comment": "libtic is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890010",
+                "Comment": "libtic-devel is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890011",
+                "Comment": "libtinfo is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890012",
+                "Comment": "libtinfo-devel is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890013",
+                "Comment": "libtinfo-devel-static is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890014",
+                "Comment": "ncurses is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890015",
+                "Comment": "terminfo is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890016",
+                "Comment": "terminfo-extra is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890017",
+                "Comment": "termutils is earlier than 0:6.3.20220618-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231890018",
+                "Comment": "termutils-devel is earlier than 0:6.3.20220618-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

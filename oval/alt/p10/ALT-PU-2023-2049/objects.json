@@ -1,0 +1,40 @@
+{
+  "TextFileContent54Objects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:2001",
+      "Version": "1",
+      "comment": "Evaluate `/etc/os-release` file content",
+      "Path": {
+        "dataType": "string",
+        "Text": "/etc"
+      },
+      "Filepath": {
+        "Datatype": "string",
+        "Text": "os-release"
+      },
+      "Pattern": {
+        "Datatype": "string",
+        "Operation": "pattern match",
+        "Text": "cpe:\\/o:alt:(?!sp)[a-z\\-]+:p?(\\d+)(?:\\.\\d)*"
+      },
+      "Instance": {
+        "Datatype": "int",
+        "Text": "1"
+      }
+    }
+  ],
+  "RpmInfoObjects": [
+    {
+      "ID": "oval:org.altlinux.errata:obj:20232049001",
+      "Version": "1",
+      "comment": "dpkg is installed",
+      "Name": "dpkg"
+    },
+    {
+      "ID": "oval:org.altlinux.errata:obj:20232049002",
+      "Version": "1",
+      "comment": "perl-Dpkg is installed",
+      "Name": "perl-Dpkg"
+    }
+  ]
+}

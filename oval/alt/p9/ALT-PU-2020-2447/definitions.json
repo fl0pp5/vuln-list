@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202447",
+      "Version": "oval:org.altlinux.errata:def:20202447",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2447: package `curl` update to version 7.71.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2447",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2447",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-04539",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04539",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-04592",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-04592",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03241",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03241",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-03242",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03242",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-5481",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5481",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-5482",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-5482",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8169",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8169",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8177",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8177",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades curl to version 7.71.0-alt1. \nSecurity Fix(es):\n\n * BDU:2019-04539: Уязвимость функции tftp_receive_packet библиотеки libcurl, связанная с переполнением буфера в памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2019-04592: Уязвимость реализации сетевого протокола FTP с поддержкой идентификации Kerberos библиотеки libcurl, связанная с повторным освобождением памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-03241: Уязвимость программного средства для взаимодействия с серверами curl, существующая из-за логической ошибки при обработке Content-Disposition заголовка ответа HTTP, позволяющая нарушителю перезаписать локальный файл\n\n * BDU:2020-03242: Уязвимость программного средства для взаимодействия с серверами curl, связанная с ошибками обработки учетных данных, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * CVE-2019-5481: Double-free vulnerability in the FTP-kerberos code in cURL 7.52.0 to 7.65.3.\n\n * CVE-2019-5482: Heap buffer overflow in the TFTP protocol handler in cURL 7.19.4 to 7.65.3.\n\n * CVE-2020-8169: curl 7.62.0 through 7.70.0 is vulnerable to an information disclosure vulnerability that can lead to a partial password being leaked over the network and to the DNS server(s).\n\n * CVE-2020-8177: curl 7.20.0 through 7.70.0 is vulnerable to improper restriction of names for files and other resources that can lead too overwriting a local file when the -J flag is used.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-07-24"
+          },
+          "Updated": {
+            "Date": "2020-07-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120, CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2019-04539",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "BDU:2019-04539"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://bdu.fstec.ru/vul/2019-04592",
+              "Impact": "Critical",
+              "Public": "20190911",
+              "CveID": "BDU:2019-04592"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-644",
+              "Href": "https://bdu.fstec.ru/vul/2020-03241",
+              "Impact": "Low",
+              "Public": "20200625",
+              "CveID": "BDU:2020-03241"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:H/PR:N/UI:N/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-03242",
+              "Impact": "Low",
+              "Public": "20200627",
+              "CveID": "BDU:2020-03242"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5481",
+              "Impact": "Critical",
+              "Public": "20190916",
+              "CveID": "CVE-2019-5481"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-5482",
+              "Impact": "Critical",
+              "Public": "20190916",
+              "CveID": "CVE-2019-5482"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8169",
+              "Impact": "High",
+              "Public": "20201214",
+              "CveID": "CVE-2020-8169"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8177",
+              "Impact": "High",
+              "Public": "20201214",
+              "CveID": "CVE-2020-8177"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202447001",
+                "Comment": "curl is earlier than 0:7.71.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202447002",
+                "Comment": "libcurl is earlier than 0:7.71.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202447003",
+                "Comment": "libcurl-devel is earlier than 0:7.71.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202447004",
+                "Comment": "libcurl-devel-static is earlier than 0:7.71.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

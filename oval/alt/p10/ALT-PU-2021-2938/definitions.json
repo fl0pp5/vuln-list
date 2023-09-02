@@ -1,0 +1,224 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212938",
+      "Version": "oval:org.altlinux.errata:def:20212938",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2938: package `kernel-image-std-def` update to version 5.10.69-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2938",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2938",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2017-01556",
+            "RefURL": "https://bdu.fstec.ru/vul/2017-01556",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03395",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03395",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00681",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00681",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-6074",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-6074",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-16119",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16119",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-41073",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-41073",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.69-alt1. \nSecurity Fix(es):\n\n * BDU:2017-01556: Уязвимость операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или получить привилегии суперпользователя\n\n * BDU:2021-03395: Уязвимость ядра операционной системы Linux, связанная с использованием области памяти после её освобождения, позволяющая нарушителю получить доступ к конфиденциальной информации или вызвать отказ в обслуживании\n\n * BDU:2022-00681: Уязвимость функции loop_rw_iter (fs/io_uring.c ) ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2017-6074: The dccp_rcv_state_process function in net/dccp/input.c in the Linux kernel through 4.9.11 mishandles DCCP_PKT_REQUEST packet data structures in the LISTEN state, which allows local users to obtain root privileges or cause a denial of service (double free) via an application that makes an IPV6_RECVPKTINFO setsockopt system call.\n\n * CVE-2020-16119: Use-after-free vulnerability in the Linux kernel exploitable by a local attacker due to reuse of a DCCP socket with an attached dccps_hc_tx_ccid object as a listener after being released. Fixed in Ubuntu Linux kernel 5.4.0-51.56, 5.3.0-68.63, 4.15.0-121.123, 4.4.0-193.224, 3.13.0.182.191 and 3.2.0-149.196.\n\n * CVE-2021-41073: loop_rw_iter in fs/io_uring.c in the Linux kernel 5.10 through 5.14.6 allows local users to gain privileges by using IORING_OP_PROVIDE_BUFFERS to trigger a free of a kernel buffer, as demonstrated by using /proc/\u003cpid\u003e/maps for exploitation.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-09-30"
+          },
+          "Updated": {
+            "Date": "2021-09-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2017-01556",
+              "Impact": "Critical",
+              "Public": "20170219",
+              "CveID": "BDU:2017-01556"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-03395",
+              "Impact": "High",
+              "Public": "20201013",
+              "CveID": "BDU:2021-03395"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-269, CWE-763",
+              "Href": "https://bdu.fstec.ru/vul/2022-00681",
+              "Impact": "High",
+              "Public": "20210919",
+              "CveID": "BDU:2022-00681"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-415",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-6074",
+              "Impact": "High",
+              "Public": "20170218",
+              "CveID": "CVE-2017-6074"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16119",
+              "Impact": "High",
+              "Public": "20210114",
+              "CveID": "CVE-2020-16119"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-763",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-41073",
+              "Impact": "High",
+              "Public": "20210919",
+              "CveID": "CVE-2021-41073"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938006",
+                "Comment": "kernel-image-std-def-checkinstall is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938007",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938008",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938011",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.69-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212938012",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.69-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

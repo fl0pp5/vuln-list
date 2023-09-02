@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235110",
+      "Version": "oval:org.altlinux.errata:def:20235110",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5110: package `usbguard` update to version 1.1.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5110",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5110",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01654",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01654",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-25058",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-25058",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades usbguard to version 1.1.2-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01654: Уязвимость демона usbguard-dbus программного обеспечения защиты USB устройств USBGuard, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2019-25058: An issue was discovered in USBGuard before 1.1.0. On systems with the usbguard-dbus daemon running, an unprivileged user could make USBGuard allow all USB devices to be connected in the future.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-25"
+          },
+          "Updated": {
+            "Date": "2023-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:M/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://bdu.fstec.ru/vul/2023-01654",
+              "Impact": "High",
+              "Public": "20190207",
+              "CveID": "BDU:2023-01654"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-25058",
+              "Impact": "High",
+              "Public": "20220224",
+              "CveID": "CVE-2019-25058"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110001",
+                "Comment": "libusbguard1 is earlier than 0:1.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110002",
+                "Comment": "usbguard is earlier than 0:1.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110003",
+                "Comment": "usbguard-common is earlier than 0:1.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110004",
+                "Comment": "usbguard-dbus is earlier than 0:1.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110005",
+                "Comment": "usbguard-devel is earlier than 0:1.1.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235110006",
+                "Comment": "usbguard-utils is earlier than 0:1.1.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

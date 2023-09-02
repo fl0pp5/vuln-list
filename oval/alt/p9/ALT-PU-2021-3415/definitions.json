@@ -1,0 +1,189 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213415",
+      "Version": "oval:org.altlinux.errata:def:20213415",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3415: package `kernel-image-un-def` update to version 5.10.82-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3415",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3415",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05673",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05673",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00828",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00828",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-27820",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-27820",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-43267",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43267",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.10.82-alt1. \nSecurity Fix(es):\n\n * BDU:2021-05673: Уязвимость реализации функции tipc_crypto_key_rcv() протокола для внутрикластерного взаимодействия Transparent Inter-Process Communication (TIPC) ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * BDU:2022-00828: Уязвимость функции postclose() ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2020-27820: A vulnerability was found in Linux kernel, where a use-after-frees in nouveau's postclose() handler could happen if removing device (that is not common to remove video card physically without power-off, but same happens if \"unbind\" the driver).\n\n * CVE-2021-43267: An issue was discovered in net/tipc/crypto.c in the Linux kernel before 5.14.16. The Transparent Inter-Process Communication (TIPC) functionality allows remote attackers to exploit insufficient validation of user-supplied sizes for the MSG_CRYPTO message type.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-29"
+          },
+          "Updated": {
+            "Date": "2021-11-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-1284",
+              "Href": "https://bdu.fstec.ru/vul/2021-05673",
+              "Impact": "Critical",
+              "Public": "20211026",
+              "CveID": "BDU:2021-05673"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-00828",
+              "Impact": "Low",
+              "Public": "20211103",
+              "CveID": "BDU:2022-00828"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-27820",
+              "Impact": "Low",
+              "Public": "20211103",
+              "CveID": "CVE-2020-27820"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-1284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43267",
+              "Impact": "Critical",
+              "Public": "20211102",
+              "CveID": "CVE-2021-43267"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415001",
+                "Comment": "kernel-doc-un is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415006",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415007",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415008",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415009",
+                "Comment": "kernel-modules-ide-un-def is earlier than 1:5.10.82-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213415010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.10.82-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

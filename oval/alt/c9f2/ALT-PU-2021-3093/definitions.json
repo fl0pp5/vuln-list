@@ -1,0 +1,106 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213093",
+      "Version": "oval:org.altlinux.errata:def:20213093",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3093: package `libjpeg-turbo` update to version 2.0.2-alt1.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3093",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3093",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-17541",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17541",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libjpeg-turbo to version 2.0.2-alt1.c9f2.1. \nSecurity Fix(es):\n\n * CVE-2020-17541: Libjpeg-turbo all version have a stack-based buffer overflow in the \"transform\" component. A remote attacker can send a malformed jpeg file to the service and cause arbitrary code execution or denial of service of the target service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-10-21"
+          },
+          "Updated": {
+            "Date": "2021-10-21"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17541",
+              "Impact": "High",
+              "Public": "20210601",
+              "CveID": "CVE-2020-17541"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093001",
+                "Comment": "libjpeg is earlier than 2:2.0.2-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093002",
+                "Comment": "libjpeg-devel is earlier than 2:2.0.2-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093003",
+                "Comment": "libjpeg-devel-static is earlier than 2:2.0.2-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093004",
+                "Comment": "libjpeg-utils is earlier than 2:2.0.2-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093005",
+                "Comment": "libturbojpeg is earlier than 2:2.0.2-alt1.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213093006",
+                "Comment": "libturbojpeg-devel is earlier than 2:2.0.2-alt1.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

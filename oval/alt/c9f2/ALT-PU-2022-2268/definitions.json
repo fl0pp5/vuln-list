@@ -1,0 +1,113 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222268",
+      "Version": "oval:org.altlinux.errata:def:20222268",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2268: package `openvpn` update to version 2.4.9-alt1.c9f2.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2268",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2268",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-01642",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01642",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-0547",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0547",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openvpn to version 2.4.9-alt1.c9f2.2. \nSecurity Fix(es):\n\n * BDU:2022-01642: Уязвимость программного обеспечения OpenVPN, связанная с недостатками процедуры аутентификации, позволяющая нарушителю обойти процесс аутентификации и получить доступ к конфиденциальной информации\n\n * CVE-2022-0547: OpenVPN 2.1 until v2.4.12 and v2.5.6 may enable authentication bypass in external authentication plug-ins when more than one of them makes use of deferred authentication replies, which allows an external user to be granted access with only partially correct credentials.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-18"
+          },
+          "Updated": {
+            "Date": "2022-07-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2022-01642",
+              "Impact": "Low",
+              "Public": "20220324",
+              "CveID": "BDU:2022-01642"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0547",
+              "Impact": "Critical",
+              "Public": "20220318",
+              "CveID": "CVE-2022-0547"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222268001",
+                "Comment": "openvpn is earlier than 0:2.4.9-alt1.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222268002",
+                "Comment": "openvpn-devel is earlier than 0:2.4.9-alt1.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222268003",
+                "Comment": "openvpn-docs is earlier than 0:2.4.9-alt1.c9f2.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222268004",
+                "Comment": "openvpn-plugins is earlier than 0:2.4.9-alt1.c9f2.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

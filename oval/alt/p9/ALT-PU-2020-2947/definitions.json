@@ -1,0 +1,233 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202947",
+      "Version": "oval:org.altlinux.errata:def:20202947",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2947: package `systemd` update to version 243.9-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2947",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2947",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00092",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00092",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-13776",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13776",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades systemd to version 243.9-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00092: Уязвимость подсистемы инициализации и управления службами Linux systemd, связанная с недостатком механизма проверки вводимых данных, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-13776: systemd through v245 mishandles numerical usernames such as ones composed of decimal digits or 0x followed by hex digits, as demonstrated by use of root privileges when privileges of the 0x0 user account were intended. NOTE: this issue exists because of an incomplete fix for CVE-2017-1000082.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-06"
+          },
+          "Updated": {
+            "Date": "2020-10-06"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-00092",
+              "Impact": "Low",
+              "Public": "20200603",
+              "CveID": "BDU:2021-00092"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13776",
+              "Impact": "Low",
+              "Public": "20200603",
+              "CveID": "CVE-2020-13776"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947001",
+                "Comment": "libnss-myhostname is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947002",
+                "Comment": "libnss-mymachines is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947003",
+                "Comment": "libnss-resolve is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947004",
+                "Comment": "libnss-systemd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947005",
+                "Comment": "libsystemd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947006",
+                "Comment": "libsystemd-devel is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947007",
+                "Comment": "libsystemd-devel-static is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947008",
+                "Comment": "libudev-devel is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947009",
+                "Comment": "libudev-devel-static is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947010",
+                "Comment": "libudev1 is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947011",
+                "Comment": "pam_systemd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947012",
+                "Comment": "systemd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947013",
+                "Comment": "systemd-analyze is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947014",
+                "Comment": "systemd-boot-efi is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947015",
+                "Comment": "systemd-container is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947016",
+                "Comment": "systemd-coredump is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947017",
+                "Comment": "systemd-journal-remote is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947018",
+                "Comment": "systemd-networkd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947019",
+                "Comment": "systemd-portable is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947020",
+                "Comment": "systemd-services is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947021",
+                "Comment": "systemd-stateless is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947022",
+                "Comment": "systemd-sysvinit is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947023",
+                "Comment": "systemd-timesyncd is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947024",
+                "Comment": "systemd-utils is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947025",
+                "Comment": "udev is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947026",
+                "Comment": "udev-extras is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947027",
+                "Comment": "udev-hwdb is earlier than 1:243.9-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202947028",
+                "Comment": "udev-rules is earlier than 1:243.9-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

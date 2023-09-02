@@ -1,0 +1,337 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203295",
+      "Version": "oval:org.altlinux.errata:def:20203295",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3295: package `mariadb` update to version 10.4.17-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3295",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3295",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-05020",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05020",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05076",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05076",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05078",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05078",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-05084",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-05084",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-02469",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-02469",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03502",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03502",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14765",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14765",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14776",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14776",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14789",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14789",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-14812",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14812",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-15180",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15180",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-2194",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-2194",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades mariadb to version 10.4.17-alt1. \nSecurity Fix(es):\n\n * BDU:2020-05020: Уязвимость системы управления базами данных MariaDB, компонента Server: FTS СУБД MySQL, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05076: Уязвимость компонента Server: Locking системы управления базами данных MySQL Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05078: Уязвимость компонента Server: FTS системы управления базами данных MySQL Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-05084: Уязвимость компонента InnoDB системы управления базами данных MySQL Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-02469: Уязвимость компонента InnoDB системы управления базами данных Oracle MySQL Server, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-03502: Уязвимость компонента mysql-wsrep СУБД MariaDB, связанная с ошибками обработки входных данных при выполнении синтаксического анализа кода, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-14765: Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: FTS). Supported versions that are affected are 5.6.49 and prior, 5.7.31 and prior and 8.0.21 and prior. Easily exploitable vulnerability allows low privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 6.5 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2020-14776: Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB). Supported versions that are affected are 5.7.31 and prior and 8.0.21 and prior. Easily exploitable vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.9 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2020-14789: Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: FTS). Supported versions that are affected are 5.7.31 and prior and 8.0.21 and prior. Easily exploitable vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.9 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2020-14812: Vulnerability in the MySQL Server product of Oracle MySQL (component: Server: Locking). Supported versions that are affected are 5.6.49 and prior, 5.7.31 and prior and 8.0.21 and prior. Easily exploitable vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.9 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H).\n\n * CVE-2020-15180: A flaw was found in the mysql-wsrep component of mariadb. Lack of input sanitization in `wsrep_sst_method` allows for command injection that can be exploited by a remote attacker to execute arbitrary commands on galera cluster nodes. This threatens the system's confidentiality, integrity, and availability. This flaw affects mariadb versions before 10.1.47, before 10.2.34, before 10.3.25, before 10.4.15 and before 10.5.6.\n\n * CVE-2021-2194: Vulnerability in the MySQL Server product of Oracle MySQL (component: InnoDB). Supported versions that are affected are 5.7.33 and prior and 8.0.23 and prior. Easily exploitable vulnerability allows high privileged attacker with network access via multiple protocols to compromise MySQL Server. Successful attacks of this vulnerability can result in unauthorized ability to cause a hang or frequently repeatable crash (complete DOS) of MySQL Server. CVSS 3.1 Base Score 4.9 (Availability impacts). CVSS Vector: (CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-13"
+          },
+          "Updated": {
+            "Date": "2020-11-13"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-05020",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "BDU:2020-05020"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-05076",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "BDU:2020-05076"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-05078",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "BDU:2020-05078"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2020-05084",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "BDU:2020-05084"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2021-02469",
+              "Impact": "Low",
+              "Public": "20210420",
+              "CveID": "BDU:2021-02469"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-96",
+              "Href": "https://bdu.fstec.ru/vul/2021-03502",
+              "Impact": "Critical",
+              "Public": "20201003",
+              "CveID": "BDU:2021-03502"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14765",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "CVE-2020-14765"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14776",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "CVE-2020-14776"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14789",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "CVE-2020-14789"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14812",
+              "Impact": "Low",
+              "Public": "20201021",
+              "CveID": "CVE-2020-14812"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15180",
+              "Impact": "Critical",
+              "Public": "20210527",
+              "CveID": "CVE-2020-15180"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-2194",
+              "Impact": "Low",
+              "Public": "20210422",
+              "CveID": "CVE-2021-2194"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295001",
+                "Comment": "libmariadb-devel is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295002",
+                "Comment": "libmariadb3 is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295003",
+                "Comment": "libmariadbd-devel is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295004",
+                "Comment": "libmariadbd19 is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295005",
+                "Comment": "mariadb is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295006",
+                "Comment": "mariadb-backup is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295007",
+                "Comment": "mariadb-bench is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295008",
+                "Comment": "mariadb-client is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295009",
+                "Comment": "mariadb-common is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295010",
+                "Comment": "mariadb-connect-engine is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295011",
+                "Comment": "mariadb-cracklib-password-check is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295012",
+                "Comment": "mariadb-gssapi-server is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295013",
+                "Comment": "mariadb-oqgraph-engine is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295014",
+                "Comment": "mariadb-rocksdb-engine is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295015",
+                "Comment": "mariadb-server is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295016",
+                "Comment": "mariadb-server-control is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295017",
+                "Comment": "mariadb-server-galera is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295018",
+                "Comment": "mariadb-server-perl is earlier than 0:10.4.17-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203295019",
+                "Comment": "mariadb-sphinx-engine is earlier than 0:10.4.17-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

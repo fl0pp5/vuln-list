@@ -1,0 +1,167 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202252",
+      "Version": "oval:org.altlinux.errata:def:20202252",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2252: package `libjpeg8` update to version 2.0.5-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2252",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2252",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01309",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01309",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01352",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01352",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2018-14498",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-14498",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-13790",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13790",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-17541",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-17541",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libjpeg8 to version 2.0.5-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01309: Уязвимость функции get_8bit_row (rdbmp.c) библиотеки программ libjpeg, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-01352: Уязвимость функции start_input_ppm из rdppm.c библиотеки для работы с изображениями libjpeg-turbo, связанная с чтением за допустимыми границами буфера данных, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2018-14498: get_8bit_row in rdbmp.c in libjpeg-turbo through 1.5.90 and MozJPEG through 3.3.1 allows attackers to cause a denial of service (heap-based buffer over-read and application crash) via a crafted 8-bit BMP in which one or more of the color indices is out of range for the number of palette entries.\n\n * CVE-2020-13790: libjpeg-turbo 2.0.4, and mozjpeg 4.0.0, has a heap-based buffer over-read in get_rgb_row() in rdppm.c via a malformed PPM input file.\n\n * CVE-2020-17541: Libjpeg-turbo all version have a stack-based buffer overflow in the \"transform\" component. A remote attacker can send a malformed jpeg file to the service and cause arbitrary code execution or denial of service of the target service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-30"
+          },
+          "Updated": {
+            "Date": "2020-06-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-01309",
+              "Impact": "Low",
+              "Public": "20140312",
+              "CveID": "BDU:2021-01309"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2021-01352",
+              "Impact": "High",
+              "Public": "20200614",
+              "CveID": "BDU:2021-01352"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-14498",
+              "Impact": "Low",
+              "Public": "20190307",
+              "CveID": "CVE-2018-14498"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13790",
+              "Impact": "High",
+              "Public": "20200603",
+              "CveID": "CVE-2020-13790"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-17541",
+              "Impact": "High",
+              "Public": "20210601",
+              "CveID": "CVE-2020-17541"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202252001",
+                "Comment": "libjpeg8 is earlier than 0:2.0.5-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

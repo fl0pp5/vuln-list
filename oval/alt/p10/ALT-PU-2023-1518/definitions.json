@@ -1,0 +1,355 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231518",
+      "Version": "oval:org.altlinux.errata:def:20231518",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1518: package `python3` update to version 3.9.16-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1518",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1518",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-02881",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02881",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-01720",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01720",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-01641",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-01641",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-03962",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-03962",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06445",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06445",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2013-0340",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-0340",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2015-20107",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-20107",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-3189",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-3189",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2018-25032",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2018-25032",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12900",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12900",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-10735",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-10735",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-28861",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-28861",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-37454",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-37454",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42919",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42919",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-45061",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-45061",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades python3 to version 3.9.16-alt1. \nSecurity Fix(es):\n\n * BDU:2019-02881: Уязвимость функции BZ2_decompress утилиты для сжатия данных bzip2, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2021-01720: Уязвимость функции bzip2recover программного обеспечения для сжатия данных Bzip2, связанная с использованием после освобождения, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-01641: Уязвимость библиотеки zlib, связанная с выходом операции за границы буфера в памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-03962: Уязвимость модуля mailcap интерпретатора языка программирования Python, позволяющая нарушителю выполнить произвольную команду\n\n * BDU:2022-06445: Уязвимость криптографической хэш-функции SHA-3 программного пакета eXtended Keccak Code Package (XKCP), позволяющая нарушителю выполнить произвольный код\n\n * CVE-2013-0340: expat 2.1.0 and earlier does not properly handle entities expansion unless an application developer uses the XML_SetEntityDeclHandler function, which allows remote attackers to cause a denial of service (resource consumption), send HTTP requests to intranet servers, or read arbitrary files via a crafted XML document, aka an XML External Entity (XXE) issue. NOTE: it could be argued that because expat already provides the ability to disable external entity expansion, the responsibility for resolving this issue lies with application developers; according to this argument, this entry should be REJECTed, and each affected application would need its own CVE.\n\n * CVE-2015-20107: In Python (aka CPython) up to 3.10.8, the mailcap module does not add escape characters into commands discovered in the system mailcap file. This may allow attackers to inject shell commands into applications that call mailcap.findmatch with untrusted input (if they lack validation of user-provided filenames or arguments). The fix is also back-ported to 3.7, 3.8, 3.9\n\n * CVE-2016-3189: Use-after-free vulnerability in bzip2recover in bzip2 1.0.6 allows remote attackers to cause a denial of service (crash) via a crafted bzip2 file, related to block ends set to before the start of the block.\n\n * CVE-2018-25032: zlib before 1.2.12 allows memory corruption when deflating (i.e., when compressing) if the input has many distant matches.\n\n * CVE-2019-12900: BZ2_decompress in decompress.c in bzip2 through 1.0.6 has an out-of-bounds write when there are many selectors.\n\n * CVE-2020-10735: A flaw was found in python. In algorithms with quadratic time complexity using non-binary bases, when using int(\"text\"), a system could take 50ms to parse an int string with 100,000 digits and 5s for 1,000,000 digits (float, decimal, int.from_bytes(), and int() for binary bases 2, 4, 8, 16, and 32 are not affected). The highest threat from this vulnerability is to system availability.\n\n * CVE-2021-28861: ** DISPUTED ** Python 3.x through 3.10 has an open redirection vulnerability in lib/http/server.py due to no protection against multiple (/) at the beginning of URI path which may leads to information disclosure. NOTE: this is disputed by a third party because the http.server.html documentation page states \"Warning: http.server is not recommended for production. It only implements basic security checks.\"\n\n * CVE-2022-37454: The Keccak XKCP SHA-3 reference implementation before fdc6fef has an integer overflow and resultant buffer overflow that allows attackers to execute arbitrary code or eliminate expected cryptographic properties. This occurs in the sponge function interface.\n\n * CVE-2022-42919: Python 3.9.x before 3.9.16 and 3.10.x before 3.10.9 on Linux allows local privilege escalation in a non-default configuration. The Python multiprocessing library, when used with the forkserver start method on Linux, allows pickles to be deserialized from any user in the same machine local network namespace, which in many system configurations means any user on the same machine. Pickles can execute arbitrary code. Thus, this allows for local user privilege escalation to the user that any forkserver process is running as. Setting multiprocessing.util.abstract_sockets_supported to False is a workaround. The forkserver start method for multiprocessing is not the default start method. This issue is Linux specific because only Linux supports abstract namespace sockets. CPython before 3.9 does not make use of Linux abstract namespace sockets by default. Support for users manually specifying an abstract namespace socket was added as a bugfix in 3.7.8 and 3.8.3, but users would need to make specific uncommon API calls in order to do that in CPython before 3.9.\n\n * CVE-2022-45061: An issue was discovered in Python before 3.11.1. An unnecessary quadratic algorithm exists in one path when processing some inputs to the IDNA (RFC 3490) decoder, such that a crafted, unreasonably long name being presented to the decoder could lead to a CPU denial of service. Hostnames are often supplied by remote servers that could be controlled by a malicious actor; in such a scenario, they could trigger excessive CPU consumption on the client attempting to make use of an attacker-supplied supposed hostname. For example, the attack payload could be placed in the Location header of an HTTP response with status code 302. A fix is planned in 3.11.1, 3.10.9, 3.9.16, 3.8.16, and 3.7.16.\n\n * #40278: В python3-base задаются заведомо неоптимальные флаги сборки\n\n * #40939: Статический билд python3 ломает сборку пакетов, предлагая им линковаться с libpython3.9.a\n\n * #41006: python3: BR /proc on riscv64\n\n * #45598: Обновление python3",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-03-27"
+          },
+          "Updated": {
+            "Date": "2023-03-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2019-02881",
+              "Impact": "High",
+              "Public": "20190606",
+              "CveID": "BDU:2019-02881"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-01720",
+              "Impact": "Low",
+              "Public": "20160630",
+              "CveID": "BDU:2021-01720"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+              "Cwe": "CWE-119, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-01641",
+              "Impact": "High",
+              "Public": "20220323",
+              "CveID": "BDU:2022-01641"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-77",
+              "Href": "https://bdu.fstec.ru/vul/2022-03962",
+              "Impact": "Critical",
+              "Public": "20220413",
+              "CveID": "BDU:2022-03962"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-06445",
+              "Impact": "Critical",
+              "Public": "20221021",
+              "CveID": "BDU:2022-06445"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cwe": "CWE-611",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-0340",
+              "Impact": "Low",
+              "Public": "20140121",
+              "CveID": "CVE-2013-0340"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:C/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
+              "Cwe": "CWE-77",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-20107",
+              "Impact": "High",
+              "Public": "20220413",
+              "CveID": "CVE-2015-20107"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-3189",
+              "Impact": "Low",
+              "Public": "20160630",
+              "CveID": "CVE-2016-3189"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2018-25032",
+              "Impact": "High",
+              "Public": "20220325",
+              "CveID": "CVE-2018-25032"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12900",
+              "Impact": "Critical",
+              "Public": "20190619",
+              "CveID": "CVE-2019-12900"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-704",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-10735",
+              "Impact": "High",
+              "Public": "20220909",
+              "CveID": "CVE-2020-10735"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-28861",
+              "Impact": "High",
+              "Public": "20220823",
+              "CveID": "CVE-2021-28861"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-37454",
+              "Impact": "Critical",
+              "Public": "20221021",
+              "CveID": "CVE-2022-37454"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42919",
+              "Impact": "High",
+              "Public": "20221107",
+              "CveID": "CVE-2022-42919"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-407",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-45061",
+              "Impact": "High",
+              "Public": "20221109",
+              "CveID": "CVE-2022-45061"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40278",
+              "Href": "https://bugzilla.altlinux.org/40278",
+              "Data": "В python3-base задаются заведомо неоптимальные флаги сборки"
+            },
+            {
+              "Id": "40939",
+              "Href": "https://bugzilla.altlinux.org/40939",
+              "Data": "Статический билд python3 ломает сборку пакетов, предлагая им линковаться с libpython3.9.a"
+            },
+            {
+              "Id": "41006",
+              "Href": "https://bugzilla.altlinux.org/41006",
+              "Data": "python3: BR /proc on riscv64"
+            },
+            {
+              "Id": "45598",
+              "Href": "https://bugzilla.altlinux.org/45598",
+              "Data": "Обновление python3"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518001",
+                "Comment": "libpython3 is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518002",
+                "Comment": "python3 is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518003",
+                "Comment": "python3-base is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518004",
+                "Comment": "python3-dev is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518005",
+                "Comment": "python3-modules-curses is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518006",
+                "Comment": "python3-modules-sqlite3 is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518007",
+                "Comment": "python3-modules-tkinter is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518008",
+                "Comment": "python3-test is earlier than 0:3.9.16-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231518009",
+                "Comment": "python3-tools is earlier than 0:3.9.16-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

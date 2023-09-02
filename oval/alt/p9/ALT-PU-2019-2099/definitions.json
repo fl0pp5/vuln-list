@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192099",
+      "Version": "oval:org.altlinux.errata:def:20192099",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2099: package `qt-creator` update to version 4.9.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2099",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2099",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades qt-creator to version 4.9.1-alt2. \nSecurity Fix(es):\n\n * #36917: missing plugins",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-06-19"
+          },
+          "Updated": {
+            "Date": "2019-06-19"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "36917",
+              "Href": "https://bugzilla.altlinux.org/36917",
+              "Data": "missing plugins"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192099001",
+                "Comment": "qt-creator is earlier than 0:4.9.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192099002",
+                "Comment": "qt-creator-data is earlier than 0:4.9.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192099003",
+                "Comment": "qt-creator-doc is earlier than 0:4.9.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

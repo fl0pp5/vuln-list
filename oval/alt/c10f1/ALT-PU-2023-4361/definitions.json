@@ -1,0 +1,301 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234361",
+      "Version": "oval:org.altlinux.errata:def:20234361",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4361: package `ceph` update to version 17.2.6-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4361",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4361",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-0670",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-0670",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ceph to version 17.2.6-alt2. \nSecurity Fix(es):\n\n * CVE-2022-0670: A flaw was found in Openstack manilla owning a Ceph File system \"share\", which enables the owner to read/write any manilla share or entire file system. The vulnerability is due to a bug in the \"volumes\" plugin in Ceph Manager. This allows an attacker to compromise Confidentiality and Integrity of a file system. Fixed in RHCS 5.2 and Ceph 17.2.2.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-18"
+          },
+          "Updated": {
+            "Date": "2023-07-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-0670",
+              "Impact": "Critical",
+              "Public": "20220725",
+              "CveID": "CVE-2022-0670"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361001",
+                "Comment": "ceph is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361002",
+                "Comment": "ceph-base is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361003",
+                "Comment": "ceph-common is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361004",
+                "Comment": "ceph-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361005",
+                "Comment": "ceph-exporter is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361006",
+                "Comment": "ceph-fuse is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361007",
+                "Comment": "ceph-immutable-object-cache is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361008",
+                "Comment": "ceph-mds is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361009",
+                "Comment": "ceph-mgr is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361010",
+                "Comment": "ceph-mgr-cephadm is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361011",
+                "Comment": "ceph-mgr-dashboard is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361012",
+                "Comment": "ceph-mgr-diskprediction-local is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361013",
+                "Comment": "ceph-mgr-influx is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361014",
+                "Comment": "ceph-mgr-insights is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361015",
+                "Comment": "ceph-mgr-k8sevents is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361016",
+                "Comment": "ceph-mgr-modules-core is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361017",
+                "Comment": "ceph-mgr-prometheus is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361018",
+                "Comment": "ceph-mgr-restful is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361019",
+                "Comment": "ceph-mgr-rook is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361020",
+                "Comment": "ceph-mgr-telegraf is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361021",
+                "Comment": "ceph-mgr-zabbix is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361022",
+                "Comment": "ceph-mon is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361023",
+                "Comment": "ceph-osd is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361024",
+                "Comment": "ceph-prometheus-alerts is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361025",
+                "Comment": "ceph-radosgw is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361026",
+                "Comment": "ceph-resource-agents is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361027",
+                "Comment": "ceph-volume is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361028",
+                "Comment": "cephadm is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361029",
+                "Comment": "cephfs-mirror is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361030",
+                "Comment": "cephfs-shell is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361031",
+                "Comment": "cephfs-top is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361032",
+                "Comment": "grafana-dashboards-ceph is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361033",
+                "Comment": "libcephfs-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361034",
+                "Comment": "libcephfs2 is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361035",
+                "Comment": "libcephsqlite is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361036",
+                "Comment": "libcephsqlite-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361037",
+                "Comment": "librados-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361038",
+                "Comment": "librados2 is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361039",
+                "Comment": "libradosstriper-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361040",
+                "Comment": "libradosstriper1 is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361041",
+                "Comment": "librbd-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361042",
+                "Comment": "librbd1 is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361043",
+                "Comment": "librgw-devel is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361044",
+                "Comment": "librgw2 is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361045",
+                "Comment": "python3-module-ceph is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361046",
+                "Comment": "python3-module-ceph-argparse is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361047",
+                "Comment": "python3-module-ceph-common is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361048",
+                "Comment": "python3-module-ceph_volume is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361049",
+                "Comment": "python3-module-cephfs is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361050",
+                "Comment": "python3-module-rados is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361051",
+                "Comment": "python3-module-rbd is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361052",
+                "Comment": "python3-module-rgw is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361053",
+                "Comment": "rbd-fuse is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361054",
+                "Comment": "rbd-mirror is earlier than 0:17.2.6-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234361055",
+                "Comment": "rbd-nbd is earlier than 0:17.2.6-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

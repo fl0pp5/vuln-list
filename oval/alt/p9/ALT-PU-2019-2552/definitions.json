@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192552",
+      "Version": "oval:org.altlinux.errata:def:20192552",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2552: package `pwgen` update to version 2.08-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2552",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2552",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2013-4440",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4440",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2013-4441",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4441",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2013-4442",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-4442",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pwgen to version 2.08-alt1. \nSecurity Fix(es):\n\n * CVE-2013-4440: Password Generator (aka Pwgen) before 2.07 generates weak non-tty passwords, which makes it easier for context-dependent attackers to guess the password via a brute-force attack.\n\n * CVE-2013-4441: The Phonemes mode in Pwgen 2.06 generates predictable passwords, which makes it easier for context-dependent attackers to guess the password via a brute-force attack.\n\n * CVE-2013-4442: Password Generator (aka Pwgen) before 2.07 uses weak pseudo generated numbers when /dev/urandom is unavailable, which makes it easier for context-dependent attackers to guess the numbers.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-08-28"
+          },
+          "Updated": {
+            "Date": "2019-08-28"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cwe": "CWE-255",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-4440",
+              "Impact": "Low",
+              "Public": "20141219",
+              "CveID": "CVE-2013-4440"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-307",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-4441",
+              "Impact": "Critical",
+              "Public": "20200127",
+              "CveID": "CVE-2013-4441"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cwe": "CWE-310",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-4442",
+              "Impact": "Low",
+              "Public": "20141219",
+              "CveID": "CVE-2013-4442"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192552001",
+                "Comment": "pwgen is earlier than 0:2.08-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

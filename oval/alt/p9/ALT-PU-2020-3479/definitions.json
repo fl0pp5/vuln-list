@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203479",
+      "Version": "oval:org.altlinux.errata:def:20203479",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3479: package `openssl1.1` update to version 1.1.1i-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3479",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3479",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-00872",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-00872",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-1971",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-1971",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1i-alt1. \nSecurity Fix(es):\n\n * BDU:2021-00872: Уязвимость функции GENERAL_NAME_cmp библиотеки OpenSSL, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-1971: The X.509 GeneralName type is a generic type for representing different types of names. One of those name types is known as EDIPartyName. OpenSSL provides a function GENERAL_NAME_cmp which compares different instances of a GENERAL_NAME to see if they are equal or not. This function behaves incorrectly when both GENERAL_NAMEs contain an EDIPARTYNAME. A NULL pointer dereference and a crash may occur leading to a possible denial of service attack. OpenSSL itself uses the GENERAL_NAME_cmp function for two purposes: 1) Comparing CRL distribution point names between an available CRL and a CRL distribution point embedded in an X509 certificate 2) When verifying that a timestamp response token signer matches the timestamp authority name (exposed via the API functions TS_RESP_verify_response and TS_RESP_verify_token) If an attacker can control both items being compared then that attacker could trigger a crash. For example if the attacker can trick a client or server into checking a malicious certificate against a malicious CRL then this may occur. Note that some applications automatically download CRLs based on a URL embedded in a certificate. This checking happens prior to the signatures on the certificate and CRL being verified. OpenSSL's s_server, s_client and verify tools have support for the \"-crl_download\" option which implements automatic CRL downloading and this attack has been demonstrated to work against those tools. Note that an unrelated bug means that affected versions of OpenSSL cannot parse or construct correct encodings of EDIPARTYNAME. However it is possible to construct a malformed EDIPARTYNAME that OpenSSL's parser will accept and hence trigger this attack. All OpenSSL 1.1.1 and 1.0.2 versions are affected by this issue. Other OpenSSL releases are out of support and have not been checked. Fixed in OpenSSL 1.1.1i (Affected 1.1.1-1.1.1h). Fixed in OpenSSL 1.0.2x (Affected 1.0.2-1.0.2w).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-09"
+          },
+          "Updated": {
+            "Date": "2020-12-09"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2021-00872",
+              "Impact": "Low",
+              "Public": "20201218",
+              "CveID": "BDU:2021-00872"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-1971",
+              "Impact": "Low",
+              "Public": "20201208",
+              "CveID": "CVE-2020-1971"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479005",
+                "Comment": "openssl is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1i-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203479008",
+                "Comment": "tsget is earlier than 0:1.1.1i-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

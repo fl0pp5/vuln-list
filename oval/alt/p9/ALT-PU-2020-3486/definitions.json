@@ -1,0 +1,122 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203486",
+      "Version": "oval:org.altlinux.errata:def:20203486",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3486: package `libtomcrypt` update to version 1.18.2-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3486",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3486",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-17362",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17362",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libtomcrypt to version 1.18.2-alt3. \nSecurity Fix(es):\n\n * CVE-2019-17362: In LibTomCrypt through 1.18.2, the der_decode_utf8_string function (in der_decode_utf8_string.c) does not properly detect certain invalid UTF-8 sequences. This allows context-dependent attackers to cause a denial of service (out-of-bounds read and crash) or read information from other memory locations via carefully crafted DER-encoded data.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-12-10"
+          },
+          "Updated": {
+            "Date": "2020-12-10"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17362",
+              "Impact": "Critical",
+              "Public": "20191009",
+              "CveID": "CVE-2019-17362"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203486001",
+                "Comment": "libtomcrypt is earlier than 0:1.18.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203486002",
+                "Comment": "libtomcrypt-devel is earlier than 0:1.18.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203486003",
+                "Comment": "libtomcrypt-devel-static is earlier than 0:1.18.2-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203486004",
+                "Comment": "libtomcrypt-doc is earlier than 0:1.18.2-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

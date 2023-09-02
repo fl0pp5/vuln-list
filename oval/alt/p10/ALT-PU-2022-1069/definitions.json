@@ -1,0 +1,109 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221069",
+      "Version": "oval:org.altlinux.errata:def:20221069",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1069: package `perl-Gear-Remotes` update to version 0.030-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1069",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1069",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades perl-Gear-Remotes to version 0.030-alt1. \nSecurity Fix(es):\n\n * #41694: Undefined subroutine \u0026RPM::Devscripts::Versort::myvercmp",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-01-17"
+          },
+          "Updated": {
+            "Date": "2022-01-17"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41694",
+              "Href": "https://bugzilla.altlinux.org/41694",
+              "Data": "Undefined subroutine \u0026RPM::Devscripts::Versort::myvercmp"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221069001",
+                "Comment": "gear-remotes-batch-watch is earlier than 0:0.030-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221069002",
+                "Comment": "gear-remotes-utils is earlier than 0:0.030-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221069003",
+                "Comment": "perl-Gear-Remotes is earlier than 0:0.030-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

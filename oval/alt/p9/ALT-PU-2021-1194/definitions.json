@@ -1,0 +1,188 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211194",
+      "Version": "oval:org.altlinux.errata:def:20211194",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1194: package `nagios` update to version 3.0.6-alt15",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1194",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1194",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2015-03479",
+            "RefURL": "https://bdu.fstec.ru/vul/2015-03479",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2014-1878",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2014-1878",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-8641",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-8641",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-9566",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-9566",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2017-12847",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-12847",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nagios to version 3.0.6-alt15. \nSecurity Fix(es):\n\n * BDU:2015-03479: Уязвимости операционной системы Debian GNU/Linux, позволяющие удаленному злоумышленнику нарушить конфиденциальность, целостность и доступность защищаемой информации\n\n * CVE-2014-1878: Stack-based buffer overflow in the cmd_submitf function in cgi/cmd.c in Nagios Core, possibly 4.0.3rc1 and earlier, and Icinga before 1.8.6, 1.9 before 1.9.5, and 1.10 before 1.10.3 allows remote attackers to cause a denial of service (segmentation fault) via a long message to cmd.cgi.\n\n * CVE-2016-8641: A privilege escalation vulnerability was found in nagios 4.2.x that occurs in daemon-init.in when creating necessary files and insecurely changing the ownership afterwards. It's possible for the local attacker to create symbolic links before the files are to be created and possibly escalating the privileges with the ownership change.\n\n * CVE-2016-9566: base/logging.c in Nagios Core before 4.2.4 allows local users with access to an account in the nagios group to gain root privileges via a symlink attack on the log file.  NOTE: this can be leveraged by remote attackers using CVE-2016-9565.\n\n * CVE-2017-12847: Nagios Core before 4.3.3 creates a nagios.lock PID file after dropping privileges to a non-root account, which might allow local users to kill arbitrary processes by leveraging access to this non-root account for nagios.lock modification before a root script executes a \"kill `cat /pathname/nagios.lock`\" command.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-02-02"
+          },
+          "Updated": {
+            "Date": "2021-02-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Href": "https://bdu.fstec.ru/vul/2015-03479",
+              "Impact": "Low",
+              "Public": "19700101",
+              "CveID": "BDU:2015-03479"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2014-1878",
+              "Impact": "Low",
+              "Public": "20140228",
+              "CveID": "CVE-2014-1878"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-59",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-8641",
+              "Impact": "High",
+              "Public": "20180801",
+              "CveID": "CVE-2016-8641"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-264",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-9566",
+              "Impact": "High",
+              "Public": "20161215",
+              "CveID": "CVE-2016-9566"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:C/A:C",
+              "Cvss3": "CVSS:3.0/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-665",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-12847",
+              "Impact": "Low",
+              "Public": "20170823",
+              "CveID": "CVE-2017-12847"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194001",
+                "Comment": "nagios is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194002",
+                "Comment": "nagios-common is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194003",
+                "Comment": "nagios-doc is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194004",
+                "Comment": "nagios-full is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194005",
+                "Comment": "nagios-www is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194006",
+                "Comment": "nagios-www-apache2 is earlier than 0:3.0.6-alt15"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211194007",
+                "Comment": "nagios-www-lighttpd is earlier than 0:3.0.6-alt15"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

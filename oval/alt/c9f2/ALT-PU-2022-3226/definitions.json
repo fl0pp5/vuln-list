@@ -1,0 +1,194 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223226",
+      "Version": "oval:org.altlinux.errata:def:20223226",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3226: package `kernel-image-std-def` update to version 5.10.156-alt0.c9f.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3226",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3226",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06550",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06550",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-07074",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-07074",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00159",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00159",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-3640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3640",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42896",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42896",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-47946",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-47946",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.156-alt0.c9f.2. \nSecurity Fix(es):\n\n * BDU:2022-06550: Уязвимость функции l2cap_conn_del() (net/bluetooth/l2cap_core.c) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-07074: Уязвимость функций l2cap_connect и l2cap_le_connect_req (net/bluetooth/l2cap_core.c) ядра операционных систем Linux, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-00159: Уязвимость компонента fs/io_uring.c ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-3640: A vulnerability, which was classified as critical, was found in Linux Kernel. Affected is the function l2cap_conn_del of the file net/bluetooth/l2cap_core.c of the component Bluetooth. The manipulation leads to use after free. It is recommended to apply a patch to fix this issue. The identifier of this vulnerability is VDB-211944.\n\n * CVE-2022-42896: There are use-after-free vulnerabilities in the Linux kernel's net/bluetooth/l2cap_core.c's l2cap_connect and l2cap_le_connect_req functions which may allow code execution and leaking kernel memory (respectively) remotely via Bluetooth. A remote attacker could execute code leaking kernel memory via Bluetooth if within proximity of the victim. We recommend upgrading past commit https://www.google.com/url https://github.com/torvalds/linux/commit/711f8c3fb3db61897080468586b970c87c61d9e4 https://www.google.com/url\n\n * CVE-2022-47946: An issue was discovered in the Linux kernel 5.10.x before 5.10.155. A use-after-free in io_sqpoll_wait_sq in fs/io_uring.c allows an attacker to crash the kernel, resulting in denial of service. finish_wait can be skipped. An attack can occur in some situations by forking a process and then quickly terminating it. NOTE: later kernel versions, such as the 5.15 longterm series, substantially changed the implementation of io_sqpoll_wait_sq.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-28"
+          },
+          "Updated": {
+            "Date": "2022-11-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-06550",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "BDU:2022-06550"
+            },
+            {
+              "Cvss": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2022-07074",
+              "Impact": "High",
+              "Public": "20221123",
+              "CveID": "BDU:2022-07074"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-00159",
+              "Impact": "Low",
+              "Public": "20210303",
+              "CveID": "BDU:2023-00159"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3640",
+              "Impact": "High",
+              "Public": "20221021",
+              "CveID": "CVE-2022-3640"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42896",
+              "Impact": "High",
+              "Public": "20221123",
+              "CveID": "CVE-2022-42896"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-47946",
+              "Impact": "Low",
+              "Public": "20221223",
+              "CveID": "CVE-2022-47946"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226010",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223226011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.156-alt0.c9f.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193140",
+      "Version": "oval:org.altlinux.errata:def:20193140",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3140: package `hplip` update to version 3.19.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3140",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3140",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades hplip to version 3.19.11-alt1. \nSecurity Fix(es):\n\n * #37289: Собран hplip с python2",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-11-15"
+          },
+          "Updated": {
+            "Date": "2019-11-15"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "37289",
+              "Href": "https://bugzilla.altlinux.org/37289",
+              "Data": "Собран hplip с python2"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140001",
+                "Comment": "hplip is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140002",
+                "Comment": "hplip-PPDs is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140003",
+                "Comment": "hplip-common is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140004",
+                "Comment": "hplip-gui is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140005",
+                "Comment": "hplip-gui-autostart is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140006",
+                "Comment": "hplip-hpcups is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140007",
+                "Comment": "hplip-hpcups-PPDs is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140008",
+                "Comment": "hplip-hpijs is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140009",
+                "Comment": "hplip-hpijs-PPDs is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140010",
+                "Comment": "hplip-ps-PPDs is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140011",
+                "Comment": "hplip-recommends is earlier than 1:3.19.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193140012",
+                "Comment": "hplip-sane is earlier than 1:3.19.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

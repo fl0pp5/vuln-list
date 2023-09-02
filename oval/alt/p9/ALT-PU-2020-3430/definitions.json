@@ -1,0 +1,269 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203430",
+      "Version": "oval:org.altlinux.errata:def:20203430",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3430: package `cacti` update to version 1.2.15-alt3",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3430",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3430",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00798",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00798",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00950",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00950",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01954",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01954",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01955",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01955",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-16723",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16723",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17357",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17357",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-17358",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-17358",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-13230",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13230",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-13231",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13231",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7106",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7106",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-7237",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-7237",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8813",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8813",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cacti to version 1.2.15-alt3. \nSecurity Fix(es):\n\n * BDU:2020-00798: Уязвимость компонента lib/functions.php программного средства мониторинга сети Cacti, позволяющая нарушителю оказать воздействие на целостность данных или вызвать отказ в обслуживании\n\n * BDU:2020-00950: Уязвимость в файле graph_realtime.php программного средства мониторинга сети Cacti, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2020-01954: Уязвимость функции local_graph_id системы мониторинга сервера Cacti, связанная с обходом авторизации посредством использования ключа, контролируемого пользователем, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2020-01955: Уязвимость функции template_id системы мониторинга сервера Cacti, связанная с непринятием мер по защите структуры запроса sql, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2019-16723: In Cacti through 1.2.6, authenticated users may bypass authorization checks (for viewing a graph) via a direct graph_json.php request with a modified local_graph_id parameter.\n\n * CVE-2019-17357: Cacti through 1.2.7 is affected by a graphs.php?template_id= SQL injection vulnerability affecting how template identifiers are handled when a string and id composite value are used to identify the template type and id. An authenticated attacker can exploit this to extract data from the database, or an unauthenticated remote attacker could exploit this via Cross-Site Request Forgery.\n\n * CVE-2019-17358: Cacti through 1.2.7 is affected by multiple instances of lib/functions.php unsafe deserialization of user-controlled data to populate arrays. An authenticated attacker could use this to influence object data values and control actions taken by Cacti or potentially cause memory corruption in the PHP module.\n\n * CVE-2020-13230: In Cacti before 1.2.11, disabling a user account does not immediately invalidate any permissions granted to that account (e.g., permission to view logs).\n\n * CVE-2020-13231: In Cacti before 1.2.11, auth_profile.php?action=edit allows CSRF for an admin email change.\n\n * CVE-2020-7106: Cacti 1.2.8 has stored XSS in data_sources.php, color_templates_item.php, graphs.php, graph_items.php, lib/api_automation.php, user_admin.php, and user_group_admin.php, as demonstrated by the description parameter in data_sources.php (a raw string from the database that is displayed by $header to trigger the XSS).\n\n * CVE-2020-7237: Cacti 1.2.8 allows Remote Code Execution (by privileged users) via shell metacharacters in the Performance Boost Debug Log field of poller_automation.php. OS commands are executed when a new poller cycle begins. The attacker must be authenticated, and must have access to modify the Performance Settings of the product.\n\n * CVE-2020-8813: graph_realtime.php in Cacti 1.2.8 allows remote attackers to execute arbitrary OS commands via shell metacharacters in a cookie, if a guest user has the graph real-time privilege.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-30"
+          },
+          "Updated": {
+            "Date": "2020-11-30"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-502",
+              "Href": "https://bdu.fstec.ru/vul/2020-00798",
+              "Impact": "High",
+              "Public": "20191212",
+              "CveID": "BDU:2020-00798"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://bdu.fstec.ru/vul/2020-00950",
+              "Impact": "High",
+              "Public": "20200208",
+              "CveID": "BDU:2020-00950"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-639",
+              "Href": "https://bdu.fstec.ru/vul/2020-01954",
+              "Impact": "Low",
+              "Public": "20190923",
+              "CveID": "BDU:2020-01954"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://bdu.fstec.ru/vul/2020-01955",
+              "Impact": "Low",
+              "Public": "20190923",
+              "CveID": "BDU:2020-01955"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-639",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16723",
+              "Impact": "Low",
+              "Public": "20190923",
+              "CveID": "CVE-2019-16723"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17357",
+              "Impact": "Low",
+              "Public": "20200121",
+              "CveID": "CVE-2019-17357"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-17358",
+              "Impact": "High",
+              "Public": "20191212",
+              "CveID": "CVE-2019-17358"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-281",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13230",
+              "Impact": "Low",
+              "Public": "20200520",
+              "CveID": "CVE-2020-13230"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13231",
+              "Impact": "Low",
+              "Public": "20200520",
+              "CveID": "CVE-2020-13231"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7106",
+              "Impact": "Low",
+              "Public": "20200116",
+              "CveID": "CVE-2020-7106"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-7237",
+              "Impact": "High",
+              "Public": "20200120",
+              "CveID": "CVE-2020-7237"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-78",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8813",
+              "Impact": "High",
+              "Public": "20200222",
+              "CveID": "CVE-2020-8813"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203430001",
+                "Comment": "cacti is earlier than 0:1.2.15-alt3"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203430002",
+                "Comment": "cacti-setup is earlier than 0:1.2.15-alt3"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

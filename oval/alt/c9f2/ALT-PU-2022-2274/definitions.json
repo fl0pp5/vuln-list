@@ -1,0 +1,121 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222274",
+      "Version": "oval:org.altlinux.errata:def:20222274",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2274: package `gmp` update to version 6.1.2-alt3.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2274",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2274",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05776",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05776",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-43618",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-43618",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gmp to version 6.1.2-alt3.c9f2.1. \nSecurity Fix(es):\n\n * BDU:2022-05776: Уязвимость компонента mpz/inp_raw.c библиотеки арифметических операций GMP на 32-разрядных платформах, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-43618: GNU Multiple Precision Arithmetic Library (GMP) through 6.2.1 has an mpz/inp_raw.c integer overflow and resultant buffer overflow via crafted input, leading to a segmentation fault on 32-bit platforms.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-19"
+          },
+          "Updated": {
+            "Date": "2022-07-19"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://bdu.fstec.ru/vul/2022-05776",
+              "Impact": "High",
+              "Public": "20210915",
+              "CveID": "BDU:2022-05776"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-43618",
+              "Impact": "High",
+              "Public": "20211115",
+              "CveID": "CVE-2021-43618"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274001",
+                "Comment": "libgmp-devel is earlier than 0:6.1.2-alt3.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274002",
+                "Comment": "libgmp-devel-static is earlier than 0:6.1.2-alt3.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274003",
+                "Comment": "libgmp10 is earlier than 0:6.1.2-alt3.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274004",
+                "Comment": "libgmpxx-devel is earlier than 0:6.1.2-alt3.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274005",
+                "Comment": "libgmpxx-devel-static is earlier than 0:6.1.2-alt3.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222274006",
+                "Comment": "libgmpxx4 is earlier than 0:6.1.2-alt3.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

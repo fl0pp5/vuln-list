@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223252",
+      "Version": "oval:org.altlinux.errata:def:20223252",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3252: package `djvu` update to version 3.5.28-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3252",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3252",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03577",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03577",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3630",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3630",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades djvu to version 3.5.28-alt2. \nSecurity Fix(es):\n\n * BDU:2021-03577: Уязвимость функции DJVU::DjVuTXT::decode() набора библиотек и утилит для просмотра, создания и редактирования DjVu-файлов DjVuLibre, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-3630: An out-of-bounds write vulnerability was found in DjVuLibre in DJVU::DjVuTXT::decode() in DjVuText.cpp via a crafted djvu file which may lead to crash and segmentation fault. This flaw affects DjVuLibre versions prior to 3.5.28.\n\n * #16141: \"any2djvu -q\" returns wrong status code",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-01"
+          },
+          "Updated": {
+            "Date": "2022-12-01"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2021-03577",
+              "Impact": "Low",
+              "Public": "20210625",
+              "CveID": "BDU:2021-03577"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3630",
+              "Impact": "Low",
+              "Public": "20210630",
+              "CveID": "CVE-2021-3630"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "16141",
+              "Href": "https://bugzilla.altlinux.org/16141",
+              "Data": "\"any2djvu -q\" returns wrong status code"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252001",
+                "Comment": "djvu-common is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252002",
+                "Comment": "djvu-doc is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252003",
+                "Comment": "djvu-utils is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252004",
+                "Comment": "djvu-xmltools is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252005",
+                "Comment": "libdjvu is earlier than 0:3.5.28-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223252006",
+                "Comment": "libdjvu-devel is earlier than 0:3.5.28-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

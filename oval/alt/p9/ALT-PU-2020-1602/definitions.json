@@ -1,0 +1,169 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201602",
+      "Version": "oval:org.altlinux.errata:def:20201602",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1602: package `kernel-image-std-def` update to version 5.4.28-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1602",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1602",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00338",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00338",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-19769",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19769",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.4.28-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00338: Уязвимость функции perf_trace_lock_acquire ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2019-19769: In the Linux kernel 5.3.10, there is a use-after-free (read) in the perf_trace_lock_acquire function (related to include/trace/events/lock.h).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-03-26"
+          },
+          "Updated": {
+            "Date": "2020-03-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-00338",
+              "Impact": "High",
+              "Public": "20191129",
+              "CveID": "BDU:2020-00338"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19769",
+              "Impact": "Low",
+              "Public": "20191212",
+              "CveID": "CVE-2019-19769"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602001",
+                "Comment": "kernel-doc-std is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602003",
+                "Comment": "kernel-headers-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602005",
+                "Comment": "kernel-image-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:5.4.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201602012",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:5.4.28-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

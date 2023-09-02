@@ -1,0 +1,86 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221254",
+      "Version": "oval:org.altlinux.errata:def:20221254",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1254: package `prometheus-blackbox_exporter` update to version 0.18.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1254",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1254",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-16248",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-16248",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades prometheus-blackbox_exporter to version 0.18.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-16248: ** DISPUTED ** Prometheus Blackbox Exporter through 0.17.0 allows /probe?target= SSRF. NOTE: follow-on discussion suggests that this might plausibly be interpreted as both intended functionality and also a vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-02-11"
+          },
+          "Updated": {
+            "Date": "2022-02-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+              "Cwe": "CWE-918",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-16248",
+              "Impact": "Low",
+              "Public": "20200809",
+              "CveID": "CVE-2020-16248"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221254001",
+                "Comment": "prometheus-blackbox_exporter is earlier than 0:0.18.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

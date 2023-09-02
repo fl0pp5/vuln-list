@@ -1,0 +1,159 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222771",
+      "Version": "oval:org.altlinux.errata:def:20222771",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2771: package `zoneminder` update to version 1.36.26-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2771",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2771",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01774",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01774",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-29806",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-29806",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30768",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30768",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30769",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30769",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zoneminder to version 1.36.26-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01774: Уязвимость программного обеспечения для организации видеонаблюдения ZoneMinder, связанная с неверным ограничением имени пути к каталогу с ограниченным доступом, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-29806: ZoneMinder before 1.36.13 allows remote code execution via an invalid language. Ability to create a debug log file at an arbitrary pathname contributes to exploitability.\n\n * CVE-2022-30768: A Stored Cross Site Scripting (XSS) issue in ZoneMinder 1.36.12 allows an attacker to execute HTML or JavaScript code via the Username field when an Admin (or non-Admin users that can see other users logged into the platform) clicks on Logout. NOTE: this exists in later versions than CVE-2019-7348 and requires a different attack method.\n\n * CVE-2022-30769: Session fixation exists in ZoneMinder through 1.36.12 as an attacker can poison a session cookie to the next logged-in user.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-10-12"
+          },
+          "Updated": {
+            "Date": "2022-10-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2023-01774",
+              "Impact": "Critical",
+              "Public": "20220208",
+              "CveID": "BDU:2023-01774"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-29806",
+              "Impact": "Critical",
+              "Public": "20220426",
+              "CveID": "CVE-2022-29806"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30768",
+              "Impact": "Low",
+              "Public": "20221115",
+              "CveID": "CVE-2022-30768"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-384",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30769",
+              "Impact": "Low",
+              "Public": "20221115",
+              "CveID": "CVE-2022-30769"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222771001",
+                "Comment": "zoneminder is earlier than 0:1.36.26-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222771002",
+                "Comment": "zoneminder-api is earlier than 0:1.36.26-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222771003",
+                "Comment": "zoneminder-nginx is earlier than 0:1.36.26-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

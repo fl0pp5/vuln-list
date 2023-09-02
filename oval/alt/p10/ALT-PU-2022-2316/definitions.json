@@ -1,0 +1,266 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222316",
+      "Version": "oval:org.altlinux.errata:def:20222316",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2316: package `golang` update to version 1.17.12-alt1.p10",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2316",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2316",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-05522",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05522",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06492",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06492",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-1705",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1705",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-1962",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-1962",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-28131",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-28131",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30630",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30630",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30631",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30631",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30632",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30632",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30633",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30633",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-30635",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-30635",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32148",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32148",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.17.12-alt1.p10. \nSecurity Fix(es):\n\n * BDU:2022-05522: Уязвимость пакета compress/gzip языка программирования Go, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06492: Уязвимость компонента Decoder.Skip языка программирования Go, связанная с неконтролируемой рекурсией, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2022-1705: Acceptance of some invalid Transfer-Encoding headers in the HTTP/1 client in net/http before Go 1.17.12 and Go 1.18.4 allows HTTP request smuggling if combined with an intermediate server that also improperly fails to reject the header as invalid.\n\n * CVE-2022-1962: Uncontrolled recursion in the Parse functions in go/parser before Go 1.17.12 and Go 1.18.4 allow an attacker to cause a panic due to stack exhaustion via deeply nested types or declarations.\n\n * CVE-2022-28131: Uncontrolled recursion in Decoder.Skip in encoding/xml before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via a deeply nested XML document.\n\n * CVE-2022-30630: Uncontrolled recursion in Glob in io/fs before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via a path which contains a large number of path separators.\n\n * CVE-2022-30631: Uncontrolled recursion in Reader.Read in compress/gzip before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via an archive containing a large number of concatenated 0-length compressed files.\n\n * CVE-2022-30632: Uncontrolled recursion in Glob in path/filepath before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via a path containing a large number of path separators.\n\n * CVE-2022-30633: Uncontrolled recursion in Unmarshal in encoding/xml before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via unmarshalling an XML document into a Go struct which has a nested field that uses the 'any' field tag.\n\n * CVE-2022-30635: Uncontrolled recursion in Decoder.Decode in encoding/gob before Go 1.17.12 and Go 1.18.4 allows an attacker to cause a panic due to stack exhaustion via a message which contains deeply nested structures.\n\n * CVE-2022-32148: Improper exposure of client IP addresses in net/http before Go 1.17.12 and Go 1.18.4 can be triggered by calling httputil.ReverseProxy.ServeHTTP with a Request.Header map containing a nil value for the X-Forwarded-For header, which causes ReverseProxy to set the client IP as the value of the X-Forwarded-For header.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-29"
+          },
+          "Updated": {
+            "Date": "2022-07-29"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2022-05522",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "BDU:2022-05522"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2022-06492",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "BDU:2022-06492"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1705",
+              "Impact": "Low",
+              "Public": "20220810",
+              "CveID": "CVE-2022-1705"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-1962",
+              "Impact": "Low",
+              "Public": "20220810",
+              "CveID": "CVE-2022-1962"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-28131",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-28131"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30630",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30630"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30631",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30631"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30632",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30632"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30633",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30633"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-30635",
+              "Impact": "High",
+              "Public": "20220810",
+              "CveID": "CVE-2022-30635"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32148",
+              "Impact": "Low",
+              "Public": "20220810",
+              "CveID": "CVE-2022-32148"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316001",
+                "Comment": "golang is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316002",
+                "Comment": "golang-docs is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316003",
+                "Comment": "golang-gdb is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316004",
+                "Comment": "golang-misc is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316005",
+                "Comment": "golang-shared is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316006",
+                "Comment": "golang-src is earlier than 0:1.17.12-alt1.p10"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222316007",
+                "Comment": "golang-tests is earlier than 0:1.17.12-alt1.p10"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

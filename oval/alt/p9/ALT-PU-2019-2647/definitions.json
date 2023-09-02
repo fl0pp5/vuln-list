@@ -1,0 +1,337 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192647",
+      "Version": "oval:org.altlinux.errata:def:20192647",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2647: package `proftpd` update to version 1.3.6-alt0.1.ga73dbfe3b",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2647",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2647",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2015-10225",
+            "RefURL": "https://bdu.fstec.ru/vul/2015-10225",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2016-00938",
+            "RefURL": "https://bdu.fstec.ru/vul/2016-00938",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-02747",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-02747",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2015-3306",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2016-3125",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2016-3125",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-12815",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-12815",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19271",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19271",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-19272",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-19272",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades proftpd to version 1.3.6-alt0.1.ga73dbfe3b. \nSecurity Fix(es):\n\n * BDU:2015-10225: Уязвимость FTP-сервера ProFTPD, позволяющая удалённому нарушителю получить доступ к защищаемой информации\n\n * BDU:2016-00938: Уязвимость FTP-сервера ProFTPd, позволяющая нарушителю повлиять на целостность, доступность и конфиденциальность информации\n\n * BDU:2019-02747: Уязвимость модуля mod_copy FTP-сервера ProFTPD, позволяющая нарушителю выполнить произвольный код в целевой системе посредством передачи команд CPFR и CPTO на сервер ProFTPD\n\n * CVE-2015-3306: The mod_copy module in ProFTPD 1.3.5 allows remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.\n\n * CVE-2016-3125: The mod_tls module in ProFTPD before 1.3.5b and 1.3.6 before 1.3.6rc2 does not properly handle the TLSDHParamFile directive, which might cause a weaker than intended Diffie-Hellman (DH) key to be used and consequently allow attackers to have unspecified impact via unknown vectors.\n\n * CVE-2019-12815: An arbitrary file copy vulnerability in mod_copy in ProFTPD up to 1.3.5b allows for remote code execution and information disclosure without authentication, a related issue to CVE-2015-3306.\n\n * CVE-2019-19271: An issue was discovered in tls_verify_crl in ProFTPD before 1.3.6. A wrong iteration variable, used when checking a client certificate against CRL entries (installed by a system administrator), can cause some CRL entries to be ignored, and can allow clients whose certificates have been revoked to proceed with a connection to the server.\n\n * CVE-2019-19272: An issue was discovered in tls_verify_crl in ProFTPD before 1.3.6. Direct dereference of a NULL pointer (a variable initialized to NULL) leads to a crash when validating the certificate of a client connecting to the server in a TLS client/server mutual-authentication setup.\n\n * #37056: CVE-2019-12815",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-09-05"
+          },
+          "Updated": {
+            "Date": "2019-09-05"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2015-10225",
+              "Impact": "Critical",
+              "Public": "20150518",
+              "CveID": "BDU:2015-10225"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cwe": "CWE-310",
+              "Href": "https://bdu.fstec.ru/vul/2016-00938",
+              "Impact": "Critical",
+              "Public": "20160405",
+              "CveID": "BDU:2016-00938"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-02747",
+              "Impact": "Critical",
+              "Public": "20190717",
+              "CveID": "BDU:2019-02747"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cwe": "CWE-284",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2015-3306",
+              "Impact": "Critical",
+              "Public": "20150518",
+              "CveID": "CVE-2015-3306"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-310",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2016-3125",
+              "Impact": "High",
+              "Public": "20160405",
+              "CveID": "CVE-2016-3125"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-755",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-12815",
+              "Impact": "Critical",
+              "Public": "20190719",
+              "CveID": "CVE-2019-12815"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19271",
+              "Impact": "High",
+              "Public": "20191126",
+              "CveID": "CVE-2019-19271"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-19272",
+              "Impact": "High",
+              "Public": "20191126",
+              "CveID": "CVE-2019-19272"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "37056",
+              "Href": "https://bugzilla.altlinux.org/37056",
+              "Data": "CVE-2019-12815"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647001",
+                "Comment": "proftpd is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647002",
+                "Comment": "proftpd-control is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647003",
+                "Comment": "proftpd-devel is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647004",
+                "Comment": "proftpd-mod_ban is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647005",
+                "Comment": "proftpd-mod_ctrls_admin is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647006",
+                "Comment": "proftpd-mod_dynmasq is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647007",
+                "Comment": "proftpd-mod_exec is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647008",
+                "Comment": "proftpd-mod_facl is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647009",
+                "Comment": "proftpd-mod_ifsession is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647010",
+                "Comment": "proftpd-mod_ldap is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647011",
+                "Comment": "proftpd-mod_load is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647012",
+                "Comment": "proftpd-mod_quotatab is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647013",
+                "Comment": "proftpd-mod_quotatab_file is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647014",
+                "Comment": "proftpd-mod_quotatab_ldap is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647015",
+                "Comment": "proftpd-mod_quotatab_sql is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647016",
+                "Comment": "proftpd-mod_radius is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647017",
+                "Comment": "proftpd-mod_ratio is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647018",
+                "Comment": "proftpd-mod_rewrite is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647019",
+                "Comment": "proftpd-mod_sftp is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647020",
+                "Comment": "proftpd-mod_sftp_pam is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647021",
+                "Comment": "proftpd-mod_sftp_sql is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647022",
+                "Comment": "proftpd-mod_shaper is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647023",
+                "Comment": "proftpd-mod_site_misc is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647024",
+                "Comment": "proftpd-mod_sql is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647025",
+                "Comment": "proftpd-mod_sql_mysql is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647026",
+                "Comment": "proftpd-mod_sql_passwd is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647027",
+                "Comment": "proftpd-mod_sql_postgres is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647028",
+                "Comment": "proftpd-mod_sql_sqlite is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647029",
+                "Comment": "proftpd-mod_tls is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647030",
+                "Comment": "proftpd-mod_tls_memcache is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647031",
+                "Comment": "proftpd-mod_tls_shmcache is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192647032",
+                "Comment": "proftpd-mod_unique_id is earlier than 0:1.3.6-alt0.1.ga73dbfe3b"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

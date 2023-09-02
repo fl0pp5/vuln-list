@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202665",
+      "Version": "oval:org.altlinux.errata:def:20202665",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2665: package `ntp` update to version 4.2.8p15-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2665",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2665",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-03219",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-03219",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-15025",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-15025",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades ntp to version 4.2.8p15-alt1. \nSecurity Fix(es):\n\n * BDU:2020-03219: Уязвимость демона ntpd реализации протокола синхронизации времени NTP, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-15025: ntpd in ntp 4.2.8 before 4.2.8p15 and 4.3.x before 4.3.101 allows remote attackers to cause a denial of service (memory consumption) by sending packets, because memory is not freed in situations where a CMAC key is used and associated with a CMAC algorithm in the ntp.keys file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-08-25"
+          },
+          "Updated": {
+            "Date": "2020-08-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://bdu.fstec.ru/vul/2020-03219",
+              "Impact": "Low",
+              "Public": "20200624",
+              "CveID": "BDU:2020-03219"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-401",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-15025",
+              "Impact": "Low",
+              "Public": "20200624",
+              "CveID": "CVE-2020-15025"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665001",
+                "Comment": "ntp is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665002",
+                "Comment": "ntp-aux is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665003",
+                "Comment": "ntp-doc is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665004",
+                "Comment": "ntp-utils is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665005",
+                "Comment": "ntpd is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665006",
+                "Comment": "ntpdate is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665007",
+                "Comment": "ntpq is earlier than 0:4.2.8p15-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202665008",
+                "Comment": "perl-NTP-Util is earlier than 0:4.2.8p15-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

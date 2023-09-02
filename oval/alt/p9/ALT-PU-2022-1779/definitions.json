@@ -1,0 +1,153 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221779",
+      "Version": "oval:org.altlinux.errata:def:20221779",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1779: package `nss` update to version 3.72-alt1.p9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1779",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1779",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05184",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05184",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-25648",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-25648",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades nss to version 3.72-alt1.p9.1. \nSecurity Fix(es):\n\n * BDU:2021-05184: Уязвимость пакета библиотек для сетевой защиты приложений NSS, связанная с выделением неограниченной памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-25648: A flaw was found in the way NSS handled CCS (ChangeCipherSpec) messages in TLS 1.3. This flaw allows a remote attacker to send multiple CCS messages, causing a denial of service for servers compiled with the NSS library. The highest threat from this vulnerability is to system availability. This flaw affects NSS versions before 3.58.\n\n * #40510: python3-module-nss FTBFS on ppc64le\n\n * #41317: nss-utils и conflict конфликтуют по файлу /usr/bin/conflict",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-28"
+          },
+          "Updated": {
+            "Date": "2022-04-28"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://bdu.fstec.ru/vul/2021-05184",
+              "Impact": "High",
+              "Public": "20201020",
+              "CveID": "BDU:2021-05184"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-25648",
+              "Impact": "High",
+              "Public": "20201020",
+              "CveID": "CVE-2020-25648"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40510",
+              "Href": "https://bugzilla.altlinux.org/40510",
+              "Data": "python3-module-nss FTBFS on ppc64le"
+            },
+            {
+              "Id": "41317",
+              "Href": "https://bugzilla.altlinux.org/41317",
+              "Data": "nss-utils и conflict конфликтуют по файлу /usr/bin/conflict"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221779001",
+                "Comment": "libnss is earlier than 0:3.72-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221779002",
+                "Comment": "libnss-devel is earlier than 0:3.72-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221779003",
+                "Comment": "libnss-devel-static is earlier than 0:3.72-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221779004",
+                "Comment": "libnss-nssckbi-checkinstall is earlier than 0:3.72-alt1.p9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221779005",
+                "Comment": "nss-utils is earlier than 0:3.72-alt1.p9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

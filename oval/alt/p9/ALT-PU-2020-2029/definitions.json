@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202029",
+      "Version": "oval:org.altlinux.errata:def:20202029",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2029: package `wireshark` update to version 3.2.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2029",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2029",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-04388",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-04388",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00277",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00277",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-11647",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-11647",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-13164",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-13164",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 3.2.4-alt1. \nSecurity Fix(es):\n\n * BDU:2020-04388: Уязвимость диссектора BACapp анализатора трафика компьютерных сетей Wireshark, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-00277: Уязвимость программы для анализа трафика wireshark, связанная с неконтролируемой рекурсией, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2020-11647: In Wireshark 3.2.0 to 3.2.2, 3.0.0 to 3.0.9, and 2.6.0 to 2.6.15, the BACapp dissector could crash. This was addressed in epan/dissectors/packet-bacapp.c by limiting the amount of recursion.\n\n * CVE-2020-13164: In Wireshark 3.2.0 to 3.2.3, 3.0.0 to 3.0.10, and 2.6.0 to 2.6.16, the NFS dissector could crash. This was addressed in epan/dissectors/packet-nfs.c by preventing excessive recursion, such as for a cycle in the directory graph on a filesystem.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-27"
+          },
+          "Updated": {
+            "Date": "2020-05-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2020-04388",
+              "Impact": "High",
+              "Public": "20201009",
+              "CveID": "BDU:2020-04388"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://bdu.fstec.ru/vul/2022-00277",
+              "Impact": "High",
+              "Public": "20200519",
+              "CveID": "BDU:2022-00277"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-11647",
+              "Impact": "High",
+              "Public": "20200410",
+              "CveID": "CVE-2020-11647"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-13164",
+              "Impact": "High",
+              "Public": "20200519",
+              "CveID": "CVE-2020-13164"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202029001",
+                "Comment": "tshark is earlier than 0:3.2.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202029002",
+                "Comment": "wireshark-base is earlier than 0:3.2.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202029003",
+                "Comment": "wireshark-devel is earlier than 0:3.2.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202029004",
+                "Comment": "wireshark-qt5 is earlier than 0:3.2.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

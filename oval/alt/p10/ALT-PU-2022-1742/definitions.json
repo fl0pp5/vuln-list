@@ -1,0 +1,186 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221742",
+      "Version": "oval:org.altlinux.errata:def:20221742",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1742: package `fribidi` update to version 1.0.12-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1742",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1742",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02658",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02658",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02659",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02659",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02660",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02660",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-25308",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-25308",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-25309",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-25309",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-25310",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-25310",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades fribidi to version 1.0.12-alt1. \nSecurity Fix(es):\n\n * BDU:2022-02658: Уязвимость функции fribidi_remove_bidi_marks() библиотеки GNU FriBidi, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-02659: Уязвимость библиотеки GNU FriBidi, вызванная переполнением буфера на стеке, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-02660: Уязвимость функции fribidi_cap_rtl_to_unicode библиотеки GNU FriBidi, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2022-25308: A stack-based buffer overflow flaw was found in the Fribidi package. This flaw allows an attacker to pass a specially crafted file to the Fribidi application, which leads to a possible memory leak or a denial of service.\n\n * CVE-2022-25309: A heap-based buffer overflow flaw was found in the Fribidi package and affects the fribidi_cap_rtl_to_unicode() function of the fribidi-char-sets-cap-rtl.c file. This flaw allows an attacker to pass a specially crafted file to the Fribidi application with the '--caprtl' option, leading to a crash and causing a denial of service.\n\n * CVE-2022-25310: A segmentation fault (SEGV) flaw was found in the Fribidi package and affects the fribidi_remove_bidi_marks() function of the lib/fribidi.c file. This flaw allows an attacker to pass a specially crafted file to Fribidi, leading to a crash and causing a denial of service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-04-22"
+          },
+          "Updated": {
+            "Date": "2022-04-22"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2022-02658",
+              "Impact": "Critical",
+              "Public": "20220408",
+              "CveID": "BDU:2022-02658"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://bdu.fstec.ru/vul/2022-02659",
+              "Impact": "Critical",
+              "Public": "20220408",
+              "CveID": "BDU:2022-02659"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-122",
+              "Href": "https://bdu.fstec.ru/vul/2022-02660",
+              "Impact": "Critical",
+              "Public": "20220408",
+              "CveID": "BDU:2022-02660"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-121",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-25308",
+              "Impact": "High",
+              "Public": "20220906",
+              "CveID": "CVE-2022-25308"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-122",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-25309",
+              "Impact": "Low",
+              "Public": "20220906",
+              "CveID": "CVE-2022-25309"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-25310",
+              "Impact": "Low",
+              "Public": "20220906",
+              "CveID": "CVE-2022-25310"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221742001",
+                "Comment": "fribidi is earlier than 0:1.0.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221742002",
+                "Comment": "libfribidi is earlier than 0:1.0.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221742003",
+                "Comment": "libfribidi-devel is earlier than 0:1.0.12-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

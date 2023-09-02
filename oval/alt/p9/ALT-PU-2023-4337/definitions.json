@@ -1,0 +1,196 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234337",
+      "Version": "oval:org.altlinux.errata:def:20234337",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4337: package `rust` update to version 1.64.0-alt0.c9.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4337",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4337",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-05328",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05328",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05167",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05167",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-42574",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42574",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-21658",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-21658",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades rust to version 1.64.0-alt0.c9.1. \nSecurity Fix(es):\n\n * BDU:2021-05328: Уязвимость двунаправленного алгоритма в реализации стандарта Unicode, связанная с ошибками при генерации кода, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2022-05167: Уязвимость функции std::fs::remove_dir_all языка программирования Rust, позволяющая нарушителю удалить произвольные системные файлы и каталоги\n\n * CVE-2021-42574: ** DISPUTED ** An issue was discovered in the Bidirectional Algorithm in the Unicode Specification through 14.0. It permits the visual reordering of characters via control sequences, which can be used to craft source code that renders different logic than the logical ordering of tokens ingested by compilers and interpreters. Adversaries can leverage this to encode source code for compilers accepting Unicode such that targeted vulnerabilities are introduced invisibly to human reviewers. NOTE: the Unicode Consortium offers the following alternative approach to presenting this concern. An issue is noted in the nature of international text that can affect applications that implement support for The Unicode Standard and the Unicode Bidirectional Algorithm (all versions). Due to text display behavior when text includes left-to-right and right-to-left characters, the visual order of tokens may be different from their logical order. Additionally, control characters needed to fully support the requirements of bidirectional text can further obfuscate the logical order of tokens. Unless mitigated, an adversary could craft source code such that the ordering of tokens perceived by human reviewers does not match what will be processed by a compiler/interpreter/etc. The Unicode Consortium has documented this class of vulnerability in its document, Unicode Technical Report #36, Unicode Security Considerations. The Unicode Consortium also provides guidance on mitigations for this class of issues in Unicode Technical Standard #39, Unicode Security Mechanisms, and in Unicode Standard Annex #31, Unicode Identifier and Pattern Syntax. Also, the BIDI specification allows applications to tailor the implementation in ways that can mitigate misleading visual reordering in program text; see HL4 in Unicode Standard Annex #9, Unicode Bidirectional Algorithm.\n\n * CVE-2022-21658: Rust is a multi-paradigm, general-purpose programming language designed for performance and safety, especially safe concurrency. The Rust Security Response WG was notified that the `std::fs::remove_dir_all` standard library function is vulnerable a race condition enabling symlink following (CWE-363). An attacker could use this security issue to trick a privileged program into deleting files and directories the attacker couldn't otherwise access or delete. Rust 1.0.0 through Rust 1.58.0 is affected by this vulnerability with 1.58.1 containing a patch. Note that the following build targets don't have usable APIs to properly mitigate the attack, and are thus still vulnerable even with a patched toolchain: macOS before version 10.10 (Yosemite) and REDOX. We recommend everyone to update to Rust 1.58.1 as soon as possible, especially people developing programs expected to run in privileged contexts (including system daemons and setuid binaries), as those have the highest risk of being affected by this. Note that adding checks in your codebase before calling remove_dir_all will not mitigate the vulnerability, as they would also be vulnerable to race conditions like remove_dir_all itself. The existing mitigation is working as intended outside of race conditions.\n\n * #41534: cargo vendor is broken",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-07-11"
+          },
+          "Updated": {
+            "Date": "2023-07-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-20, CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2021-05328",
+              "Impact": "Critical",
+              "Public": "20211101",
+              "CveID": "BDU:2021-05328"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://bdu.fstec.ru/vul/2022-05167",
+              "Impact": "Critical",
+              "Public": "20220123",
+              "CveID": "BDU:2022-05167"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42574",
+              "Impact": "High",
+              "Public": "20211101",
+              "CveID": "CVE-2021-42574"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+              "Cwe": "CWE-363",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-21658",
+              "Impact": "Low",
+              "Public": "20220120",
+              "CveID": "CVE-2022-21658"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "41534",
+              "Href": "https://bugzilla.altlinux.org/41534",
+              "Data": "cargo vendor is broken"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337001",
+                "Comment": "clippy is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337002",
+                "Comment": "rls is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337003",
+                "Comment": "rust is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337004",
+                "Comment": "rust-analysis is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337005",
+                "Comment": "rust-cargo is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337006",
+                "Comment": "rust-cargo-doc is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337007",
+                "Comment": "rust-doc is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337008",
+                "Comment": "rust-gdb is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337009",
+                "Comment": "rust-src is earlier than 1:1.64.0-alt0.c9.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234337010",
+                "Comment": "rustfmt is earlier than 1:1.64.0-alt0.c9.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

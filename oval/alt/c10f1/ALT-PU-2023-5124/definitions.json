@@ -1,0 +1,85 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235124",
+      "Version": "oval:org.altlinux.errata:def:20235124",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5124: package `iperf3` update to version 3.14-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5124",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5124",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades iperf3 to version 3.14-alt2. \nSecurity Fix(es):\n\n * #47017: Не отображает sender в суммарной таблице при проверке трафика с UDP на i586",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-24"
+          },
+          "Updated": {
+            "Date": "2023-08-24"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "47017",
+              "Href": "https://bugzilla.altlinux.org/47017",
+              "Data": "Не отображает sender в суммарной таблице при проверке трафика с UDP на i586"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235124001",
+                "Comment": "iperf3 is earlier than 0:3.14-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235124002",
+                "Comment": "libiperf3-0 is earlier than 0:3.14-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235124003",
+                "Comment": "libiperf3-devel is earlier than 0:3.14-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

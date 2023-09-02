@@ -1,0 +1,147 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231036",
+      "Version": "oval:org.altlinux.errata:def:20231036",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1036: package `wireshark` update to version 4.0.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1036",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1036",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-3725",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-3725",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4344",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4344",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-4345",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-4345",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wireshark to version 4.0.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-3725: Crash in the OPUS protocol dissector in Wireshark 3.6.0 to 3.6.8 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-4344: Memory exhaustion in the Kafka protocol dissector in Wireshark 4.0.0 to 4.0.1 and 3.6.0 to 3.6.9 allows denial of service via packet injection or crafted capture file\n\n * CVE-2022-4345: Infinite loops in the BPv6, OpenFlow, and Kafka protocol dissectors in Wireshark 4.0.0 to 4.0.1 and 3.6.0 to 3.6.9 allows denial of service via packet injection or crafted capture file",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-12"
+          },
+          "Updated": {
+            "Date": "2023-01-12"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-3725",
+              "Impact": "High",
+              "Public": "20221027",
+              "CveID": "CVE-2022-3725"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4344",
+              "Impact": "Low",
+              "Public": "20230112",
+              "CveID": "CVE-2022-4344"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-4345",
+              "Impact": "Low",
+              "Public": "20230112",
+              "CveID": "CVE-2022-4345"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231036001",
+                "Comment": "tshark is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231036002",
+                "Comment": "wireshark-base is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231036003",
+                "Comment": "wireshark-devel is earlier than 0:4.0.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231036004",
+                "Comment": "wireshark-qt5 is earlier than 0:4.0.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

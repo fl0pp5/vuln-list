@@ -1,0 +1,145 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235298",
+      "Version": "oval:org.altlinux.errata:def:20235298",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5298: package `branding-xalt-kworkstation` update to version 10.2.0-alt7",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5298",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5298",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades branding-xalt-kworkstation to version 10.2.0-alt7. \nSecurity Fix(es):\n\n * #47285: Добавить параметр LOGO=\"altlinux\" в /etc/os-release",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-01"
+          },
+          "Updated": {
+            "Date": "2023-09-01"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "47285",
+              "Href": "https://bugzilla.altlinux.org/47285",
+              "Data": "Добавить параметр LOGO=\"altlinux\" в /etc/os-release"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298001",
+                "Comment": "branding-xalt-kworkstation-alterator is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298002",
+                "Comment": "branding-xalt-kworkstation-bootloader is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298003",
+                "Comment": "branding-xalt-kworkstation-bootsplash is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298004",
+                "Comment": "branding-xalt-kworkstation-fvwm-settings is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298005",
+                "Comment": "branding-xalt-kworkstation-gnome-settings is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298006",
+                "Comment": "branding-xalt-kworkstation-graphics is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298007",
+                "Comment": "branding-xalt-kworkstation-indexhtml is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298008",
+                "Comment": "branding-xalt-kworkstation-kde4-settings is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298009",
+                "Comment": "branding-xalt-kworkstation-mate-settings is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298010",
+                "Comment": "branding-xalt-kworkstation-notes is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298011",
+                "Comment": "branding-xalt-kworkstation-release is earlier than 0:10.2.0-alt7"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235298012",
+                "Comment": "branding-xalt-kworkstation-slideshow is earlier than 0:10.2.0-alt7"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

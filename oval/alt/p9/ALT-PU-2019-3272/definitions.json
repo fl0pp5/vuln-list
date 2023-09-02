@@ -1,0 +1,197 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20193272",
+      "Version": "oval:org.altlinux.errata:def:20193272",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-3272: package `kernel-image-std-def` update to version 4.19.87-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-3272",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-3272",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-03219",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03219",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-02944",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-02944",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-15099",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-15099",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18660",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18660",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 4.19.87-alt1. \nSecurity Fix(es):\n\n * BDU:2019-03219: Уязвимость драйвера drivers/net/wireless/ath/ath10k/usb.c ядра операционных систем Linux, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-02944: Уязвимость компонентов arch/powerpc/kernel/entry_64.S и arch/powerpc/kernel/security.c ядра операционной системы Linux, позволяющая нарушителю получить несанкционированный доступ к информации\n\n * CVE-2019-15099: drivers/net/wireless/ath/ath10k/usb.c in the Linux kernel through 5.2.8 has a NULL pointer dereference via an incomplete address in an endpoint descriptor.\n\n * CVE-2019-18660: The Linux kernel before 5.4.1 on powerpc allows Information Exposure because the Spectre-RSB mitigation is not in place for all applicable CPUs, aka CID-39e72bf96f58. This is related to arch/powerpc/kernel/entry_64.S and arch/powerpc/kernel/security.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-12-11"
+          },
+          "Updated": {
+            "Date": "2019-12-11"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2019-03219",
+              "Impact": "High",
+              "Public": "20190804",
+              "CveID": "BDU:2019-03219"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:N/A:N",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://bdu.fstec.ru/vul/2020-02944",
+              "Impact": "Low",
+              "Public": "20191127",
+              "CveID": "BDU:2020-02944"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-15099",
+              "Impact": "High",
+              "Public": "20190816",
+              "CveID": "CVE-2019-15099"
+            },
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-200",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18660",
+              "Impact": "Low",
+              "Public": "20191127",
+              "CveID": "CVE-2019-18660"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272001",
+                "Comment": "kernel-doc-std is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272003",
+                "Comment": "kernel-headers-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272004",
+                "Comment": "kernel-image-domU-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272005",
+                "Comment": "kernel-image-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272008",
+                "Comment": "kernel-modules-drm-radeon-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272009",
+                "Comment": "kernel-modules-drm-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272010",
+                "Comment": "kernel-modules-ide-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 1:4.19.87-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20193272012",
+                "Comment": "kernel-modules-v4l-std-def is earlier than 1:4.19.87-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

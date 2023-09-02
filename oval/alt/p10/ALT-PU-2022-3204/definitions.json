@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223204",
+      "Version": "oval:org.altlinux.errata:def:20223204",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3204: package `pascalabcnet` update to version 3.8.3.3205-alt1.git88d903bb",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3204",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3204",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades pascalabcnet to version 3.8.3.3205-alt1.git88d903bb. \nSecurity Fix(es):\n\n * #44328: Повторно не открывается информационное окно \"О программе\"",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-24"
+          },
+          "Updated": {
+            "Date": "2022-11-24"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44328",
+              "Href": "https://bugzilla.altlinux.org/44328",
+              "Data": "Повторно не открывается информационное окно \"О программе\""
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223204001",
+                "Comment": "pascalabcnet is earlier than 0:3.8.3.3205-alt1.git88d903bb"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

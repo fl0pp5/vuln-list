@@ -1,0 +1,146 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203431",
+      "Version": "oval:org.altlinux.errata:def:20203431",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3431: package `opensc` update to version 0.21.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3431",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3431",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-26570",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26570",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26571",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26571",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-26572",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-26572",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades opensc to version 0.21.0-alt1. \nSecurity Fix(es):\n\n * CVE-2020-26570: The Oberthur smart card software driver in OpenSC before 0.21.0-rc1 has a heap-based buffer overflow in sc_oberthur_read_file.\n\n * CVE-2020-26571: The gemsafe GPK smart card software driver in OpenSC before 0.21.0-rc1 has a stack-based buffer overflow in sc_pkcs15emu_gemsafeGPK_init.\n\n * CVE-2020-26572: The TCOS smart card software driver in OpenSC before 0.21.0-rc1 has a stack-based buffer overflow in tcos_decipher.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-11-30"
+          },
+          "Updated": {
+            "Date": "2020-11-30"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26570",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26570"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26571",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26571"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-26572",
+              "Impact": "Low",
+              "Public": "20201006",
+              "CveID": "CVE-2020-26572"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203431001",
+                "Comment": "libopensc is earlier than 0:0.21.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203431002",
+                "Comment": "libopensc-devel is earlier than 0:0.21.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203431003",
+                "Comment": "opensc is earlier than 0:0.21.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

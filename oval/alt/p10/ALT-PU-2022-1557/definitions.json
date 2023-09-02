@@ -1,0 +1,205 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20221557",
+      "Version": "oval:org.altlinux.errata:def:20221557",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-1557: package `openssh` update to version 7.9p1-alt4.p10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-1557",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-1557",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2019-00830",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00830",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-00832",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-00832",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03788",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03788",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2019-03791",
+            "RefURL": "https://bdu.fstec.ru/vul/2019-03791",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-6109",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-6111",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssh to version 7.9p1-alt4.p10.1. \nSecurity Fix(es):\n\n * BDU:2019-00830: Уязвимость реализаций утилиты для удаленного копирования файлов scp, связанная с недостаточной проверкой вводимых данных, позволяющая нарушителю манипулировать файлами в каталоге клиента\n\n * BDU:2019-00832: Уязвимость реализаций утилиты для удаленного копирования файлов scp, связанная с недостатками контроля доступа, позволяющая нарушителю скрывать имя передаваемого файла\n\n * BDU:2019-03788: Уязвимость средства криптографической защиты OpenSSH, вызваная ошибками при проверке имени каталога scp.c в клиенте scp, позволяющая нарушителю изменить права доступа к целевому каталогу\n\n * BDU:2019-03791: Уязвимость функции refresh_progress_meter() (progressmeter.c) средства криптографической защиты OpenSSH, позволяющая нарушителю раскрыть защищаемую информацию или выполнить произвольный код\n\n * CVE-2019-6109: An issue was discovered in OpenSSH 7.9. Due to missing character encoding in the progress display, a malicious server (or Man-in-The-Middle attacker) can employ crafted object names to manipulate the client output, e.g., by using ANSI control codes to hide additional files being transferred. This affects refresh_progress_meter() in progressmeter.c.\n\n * CVE-2019-6111: An issue was discovered in OpenSSH 7.9. Due to the scp implementation being derived from 1983 rcp, the server chooses which files/directories are sent to the client. However, the scp client only performs cursory validation of the object name returned (only directory traversal attacks are prevented). A malicious scp server (or Man-in-The-Middle attacker) can overwrite arbitrary files in the scp client target directory. If recursive operation (-r) is performed, the server can manipulate subdirectories as well (for example, to overwrite the .ssh/authorized_keys file).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-03-23"
+          },
+          "Updated": {
+            "Date": "2022-03-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:N/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-00830",
+              "Impact": "Low",
+              "Public": "20190115",
+              "CveID": "BDU:2019-00830"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-00832",
+              "Impact": "Low",
+              "Public": "20190115",
+              "CveID": "BDU:2019-00832"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-20",
+              "Href": "https://bdu.fstec.ru/vul/2019-03788",
+              "Impact": "Low",
+              "Public": "20190114",
+              "CveID": "BDU:2019-03788"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-284",
+              "Href": "https://bdu.fstec.ru/vul/2019-03791",
+              "Impact": "Low",
+              "Public": "20190114",
+              "CveID": "BDU:2019-03791"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6109",
+              "Impact": "Low",
+              "Public": "20190131",
+              "CveID": "CVE-2019-6109"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-6111",
+              "Impact": "Low",
+              "Public": "20190131",
+              "CveID": "CVE-2019-6111"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557001",
+                "Comment": "openssh is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557002",
+                "Comment": "openssh-askpass-common is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557003",
+                "Comment": "openssh-clients is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557004",
+                "Comment": "openssh-common is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557005",
+                "Comment": "openssh-keysign is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557006",
+                "Comment": "openssh-server is earlier than 0:7.9p1-alt4.p10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20221557007",
+                "Comment": "openssh-server-control is earlier than 0:7.9p1-alt4.p10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

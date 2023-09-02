@@ -1,0 +1,205 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20232039",
+      "Version": "oval:org.altlinux.errata:def:20232039",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-2039: package `openssl1.1` update to version 1.1.1u-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-2039",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-2039",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-02108",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-02108",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03312",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03312",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-0464",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0465",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-0466",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-2650",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades openssl1.1 to version 1.1.1u-alt1. \nSecurity Fix(es):\n\n * BDU:2023-02108: Уязвимость криптографической библиотеки OpenSSL, связанная с проверкой цепочек сертификатов X.509, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-03312: Уязвимость криптографической библиотеки OpenSSL, связанная с игнорированием недействительной политики сертификатов в листовых сертификатах, которые пропускаются для этого сертификата, позволяющая нарушителю обойти проверку политик для сертификата\n\n * CVE-2023-0464: A security vulnerability has been identified in all supported versions\n\nof OpenSSL related to the verification of X.509 certificate chains\nthat include policy constraints.  Attackers may be able to exploit this\nvulnerability by creating a malicious certificate chain that triggers\nexponential use of computational resources, leading to a denial-of-service\n(DoS) attack on affected systems.\n\nPolicy processing is disabled by default but can be enabled by passing\nthe `-policy' argument to the command line utilities or by calling the\n`X509_VERIFY_PARAM_set1_policies()' function.\n\n * CVE-2023-0465: Applications that use a non-default option when verifying certificates may be\nvulnerable to an attack from a malicious CA to circumvent certain checks.\n\nInvalid certificate policies in leaf certificates are silently ignored by\nOpenSSL and other certificate policy checks are skipped for that certificate.\nA malicious CA could use this to deliberately assert invalid certificate policies\nin order to circumvent policy checking on the certificate altogether.\n\nPolicy processing is disabled by default but can be enabled by passing\nthe `-policy' argument to the command line utilities or by calling the\n`X509_VERIFY_PARAM_set1_policies()' function.\n\n * CVE-2023-0466: The function X509_VERIFY_PARAM_add0_policy() is documented to\nimplicitly enable the certificate policy check when doing certificate\nverification. However the implementation of the function does not\nenable the check which allows certificates with invalid or incorrect\npolicies to pass the certificate verification.\n\nAs suddenly enabling the policy check could break existing deployments it was\ndecided to keep the existing behavior of the X509_VERIFY_PARAM_add0_policy()\nfunction.\n\nInstead the applications that require OpenSSL to perform certificate\npolicy check need to use X509_VERIFY_PARAM_set1_policies() or explicitly\nenable the policy check by calling X509_VERIFY_PARAM_set_flags() with\nthe X509_V_FLAG_POLICY_CHECK flag argument.\n\nCertificate policy checks are disabled by default in OpenSSL and are not\ncommonly used by applications.\n\n * CVE-2023-2650: Issue summary: Processing some specially crafted ASN.1 object identifiers or\ndata containing them may be very slow.\n\nImpact summary: Applications that use OBJ_obj2txt() directly, or use any of\nthe OpenSSL subsystems OCSP, PKCS7/SMIME, CMS, CMP/CRMF or TS with no message\nsize limit may experience notable to very long delays when processing those\nmessages, which may lead to a Denial of Service.\n\nAn OBJECT IDENTIFIER is composed of a series of numbers - sub-identifiers -\nmost of which have no size limit.  OBJ_obj2txt() may be used to translate\nan ASN.1 OBJECT IDENTIFIER given in DER encoding form (using the OpenSSL\ntype ASN1_OBJECT) to its canonical numeric text form, which are the\nsub-identifiers of the OBJECT IDENTIFIER in decimal form, separated by\nperiods.\n\nWhen one of the sub-identifiers in the OBJECT IDENTIFIER is very large\n(these are sizes that are seen as absurdly large, taking up tens or hundreds\nof KiBs), the translation to a decimal number in text may take a very long\ntime.  The time complexity is O(n^2) with 'n' being the size of the\nsub-identifiers in bytes (*).\n\nWith OpenSSL 3.0, support to fetch cryptographic algorithms using names /\nidentifiers in string form was introduced.  This includes using OBJECT\nIDENTIFIERs in canonical numeric text form as identifiers for fetching\nalgorithms.\n\nSuch OBJECT IDENTIFIERs may be received through the ASN.1 structure\nAlgorithmIdentifier, which is commonly used in multiple protocols to specify\nwhat cryptographic algorithm should be used to sign or verify, encrypt or\ndecrypt, or digest passed data.\n\nApplications that call OBJ_obj2txt() directly with untrusted data are\naffected, with any version of OpenSSL.  If the use is for the mere purpose\nof display, the severity is considered low.\n\nIn OpenSSL 3.0 and newer, this affects the subsystems OCSP, PKCS7/SMIME,\nCMS, CMP/CRMF or TS.  It also impacts anything that processes X.509\ncertificates, including simple things like verifying its signature.\n\nThe impact on TLS is relatively low, because all versions of OpenSSL have a\n100KiB limit on the peer's certificate chain.  Additionally, this only\nimpacts clients, or servers that have explicitly enabled client\nauthentication.\n\nIn OpenSSL 1.1.1 and 1.0.2, this only affects displaying diverse objects,\nsuch as X.509 certificates.  This is assumed to not happen in such a way\nthat it would cause a Denial of Service, so these versions are considered\nnot affected by this issue in such a way that it would be cause for concern,\nand the severity is therefore considered low.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-06-21"
+          },
+          "Updated": {
+            "Date": "2023-06-21"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2023-02108",
+              "Impact": "High",
+              "Public": "20230322",
+              "CveID": "BDU:2023-02108"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://bdu.fstec.ru/vul/2023-03312",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "BDU:2023-03312"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0464",
+              "Impact": "High",
+              "Public": "20230322",
+              "CveID": "CVE-2023-0464"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0465",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "CVE-2023-0465"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-0466",
+              "Impact": "Low",
+              "Public": "20230328",
+              "CveID": "CVE-2023-0466"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-2650",
+              "Impact": "Low",
+              "Public": "20230530",
+              "CveID": "CVE-2023-2650"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039001",
+                "Comment": "libcrypto1.1 is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039002",
+                "Comment": "libssl-devel is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039003",
+                "Comment": "libssl-devel-static is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039004",
+                "Comment": "libssl1.1 is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039005",
+                "Comment": "openssl is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039006",
+                "Comment": "openssl-doc is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039007",
+                "Comment": "openssl-engines is earlier than 0:1.1.1u-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20232039008",
+                "Comment": "tsget is earlier than 0:1.1.1u-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

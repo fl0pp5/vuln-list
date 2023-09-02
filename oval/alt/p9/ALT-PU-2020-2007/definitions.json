@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202007",
+      "Version": "oval:org.altlinux.errata:def:20202007",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2007: package `unbound` update to version 1.10.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2007",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2007",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2020-12662",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12662",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-12663",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-12663",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades unbound to version 1.10.2-alt1. \nSecurity Fix(es):\n\n * CVE-2020-12662: Unbound before 1.10.1 has Insufficient Control of Network Message Volume, aka an \"NXNSAttack\" issue. This is triggered by random subdomains in the NSDNAME in NS records.\n\n * CVE-2020-12663: Unbound before 1.10.1 has an infinite loop via malformed DNS answers received from upstream servers.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-05-25"
+          },
+          "Updated": {
+            "Date": "2020-05-25"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12662",
+              "Impact": "High",
+              "Public": "20200519",
+              "CveID": "CVE-2020-12662"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-12663",
+              "Impact": "High",
+              "Public": "20200519",
+              "CveID": "CVE-2020-12663"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202007001",
+                "Comment": "libunbound is earlier than 0:1.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202007002",
+                "Comment": "libunbound-devel is earlier than 0:1.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202007003",
+                "Comment": "unbound is earlier than 0:1.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202007004",
+                "Comment": "unbound-control is earlier than 0:1.10.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

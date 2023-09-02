@@ -1,0 +1,77 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223238",
+      "Version": "oval:org.altlinux.errata:def:20223238",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3238: package `npm` update to version 8.19.2-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3238",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3238",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades npm to version 8.19.2-alt2. \nSecurity Fix(es):\n\n * #43430: Не отображается версия в выводе npm config get user-agent",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-11-29"
+          },
+          "Updated": {
+            "Date": "2022-11-29"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "43430",
+              "Href": "https://bugzilla.altlinux.org/43430",
+              "Data": "Не отображается версия в выводе npm config get user-agent"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223238001",
+                "Comment": "npm is earlier than 0:8.19.2-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

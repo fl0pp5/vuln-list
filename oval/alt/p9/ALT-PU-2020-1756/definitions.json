@@ -1,0 +1,217 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20201756",
+      "Version": "oval:org.altlinux.errata:def:20201756",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-1756: package `thunderbird` update to version 68.7.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-1756",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-1756",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-01392",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01392",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-01393",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-01393",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05939",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05939",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-6819",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6819",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6820",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6820",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6821",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6821",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6822",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6822",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-6825",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-6825",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades thunderbird to version 68.7.0-alt2. \nSecurity Fix(es):\n\n * BDU:2020-01392: Уязвимость деструктора nsDocShell веб-браузеров Firefox ESR и Firefox и почтового клиента Thunderbird, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2020-01393: Уязвимость компонента ReadableStream веб-браузеров Firefox ESR и Firefox и почтового клиента Thunderbird, связанная с повторном освобождении области памяти, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2022-05939: Уязвимость браузеров Mozilla Firefox, Mozilla Firefox ESR и почтового клиента Thunderbird, связанная с записью за границами буфера в памяти, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2020-6819: Under certain conditions, when running the nsDocShell destructor, a race condition can cause a use-after-free. We are aware of targeted attacks in the wild abusing this flaw. This vulnerability affects Thunderbird \u003c 68.7.0, Firefox \u003c 74.0.1, and Firefox ESR \u003c 68.6.1.\n\n * CVE-2020-6820: Under certain conditions, when handling a ReadableStream, a race condition can cause a use-after-free. We are aware of targeted attacks in the wild abusing this flaw. This vulnerability affects Thunderbird \u003c 68.7.0, Firefox \u003c 74.0.1, and Firefox ESR \u003c 68.6.1.\n\n * CVE-2020-6821: When reading from areas partially or fully outside the source resource with WebGL's \u003ccode\u003ecopyTexSubImage\u003c/code\u003e method, the specification requires the returned values be zero. Previously, this memory was uninitialized, leading to potentially sensitive data disclosure. This vulnerability affects Thunderbird \u003c 68.7.0, Firefox ESR \u003c 68.7, and Firefox \u003c 75.\n\n * CVE-2020-6822: On 32-bit builds, an out of bounds write could have occurred when processing an image larger than 4 GB in \u003ccode\u003eGMPDecodeData\u003c/code\u003e. It is possible that with enough effort this could have been exploited to run arbitrary code. This vulnerability affects Thunderbird \u003c 68.7.0, Firefox ESR \u003c 68.7, and Firefox \u003c 75.\n\n * CVE-2020-6825: Mozilla developers and community members Tyson Smith and Christian Holler reported memory safety bugs present in Firefox 74 and Firefox ESR 68.6. Some of these bugs showed evidence of memory corruption and we presume that with enough effort some of these could have been exploited to run arbitrary code. This vulnerability affects Thunderbird \u003c 68.7.0, Firefox ESR \u003c 68.7, and Firefox \u003c 75.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-04-14"
+          },
+          "Updated": {
+            "Date": "2020-04-14"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-01392",
+              "Impact": "Low",
+              "Public": "20200424",
+              "CveID": "BDU:2020-01392"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-415, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2020-01393",
+              "Impact": "Low",
+              "Public": "20200424",
+              "CveID": "BDU:2020-01393"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-119, CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05939",
+              "Impact": "High",
+              "Public": "20200407",
+              "CveID": "BDU:2022-05939"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6819",
+              "Impact": "High",
+              "Public": "20200424",
+              "CveID": "CVE-2020-6819"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6820",
+              "Impact": "High",
+              "Public": "20200424",
+              "CveID": "CVE-2020-6820"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-908",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6821",
+              "Impact": "High",
+              "Public": "20200424",
+              "CveID": "CVE-2020-6821"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6822",
+              "Impact": "High",
+              "Public": "20200424",
+              "CveID": "CVE-2020-6822"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-6825",
+              "Impact": "Critical",
+              "Public": "20200424",
+              "CveID": "CVE-2020-6825"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201756001",
+                "Comment": "rpm-build-thunderbird is earlier than 0:68.7.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201756002",
+                "Comment": "thunderbird is earlier than 0:68.7.0-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20201756003",
+                "Comment": "thunderbird-enigmail is earlier than 0:68.7.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

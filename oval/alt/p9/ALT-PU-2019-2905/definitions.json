@@ -1,0 +1,231 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20192905",
+      "Version": "oval:org.altlinux.errata:def:20192905",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2019-2905: package `libvirglrenderer` update to version 0.8.0.0.34.4ac3a04c-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2019-2905",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2019-2905",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2020-00553",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00553",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2020-00554",
+            "RefURL": "https://bdu.fstec.ru/vul/2020-00554",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00915",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00915",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-00916",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00916",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2017-6386",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2017-6386",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18388",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18388",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18389",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18389",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18390",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18390",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-18391",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18391",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libvirglrenderer to version 0.8.0.0.34.4ac3a04c-alt1. \nSecurity Fix(es):\n\n * BDU:2020-00553: Уязвимость функции vrend_blit_need_swizzle (vrend_renderer.c) библиотеки virglrenderer, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2020-00554: Уязвимость функции vrend_renderer_transfer_write_iov (vrend_renderer.c) библиотеки virglrenderer, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2023-00915: Уязвимость функции vrend_renderer_transfer_write_iov компонента vrend_renderer.c виртуального OpenGL рендерера Virglrenderer, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * BDU:2023-00916: Уязвимость компонента vrend_renderer.c виртуального OpenGL рендерера Virglrenderer, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2017-6386: Memory leak in the vrend_create_vertex_elements_state function in vrend_renderer.c in virglrenderer allows local guest OS users to cause a denial of service (host memory consumption) via a large number of VIRGL_OBJECT_VERTEX_ELEMENTS commands.\n\n * CVE-2019-18388: A NULL pointer dereference in vrend_renderer.c in virglrenderer through 0.8.0 allows guest OS users to cause a denial of service via malformed commands.\n\n * CVE-2019-18389: A heap-based buffer overflow in the vrend_renderer_transfer_write_iov function in vrend_renderer.c in virglrenderer through 0.8.0 allows guest OS users to cause a denial of service, or QEMU guest-to-host escape and code execution, via VIRGL_CCMD_RESOURCE_INLINE_WRITE commands.\n\n * CVE-2019-18390: An out-of-bounds read in the vrend_blit_need_swizzle function in vrend_renderer.c in virglrenderer through 0.8.0 allows guest OS users to cause a denial of service via VIRGL_CCMD_BLIT commands.\n\n * CVE-2019-18391: A heap-based buffer overflow in the vrend_renderer_transfer_write_iov function in vrend_renderer.c in virglrenderer through 0.8.0 allows guest OS users to cause a denial of service via VIRGL_CCMD_RESOURCE_INLINE_WRITE commands.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2019-10-15"
+          },
+          "Updated": {
+            "Date": "2019-10-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2020-00553",
+              "Impact": "High",
+              "Public": "20191223",
+              "CveID": "BDU:2020-00553"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2020-00554",
+              "Impact": "Low",
+              "Public": "20191223",
+              "CveID": "BDU:2020-00554"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2023-00915",
+              "Impact": "High",
+              "Public": "20191007",
+              "CveID": "BDU:2023-00915"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2023-00916",
+              "Impact": "Low",
+              "Public": "20191008",
+              "CveID": "BDU:2023-00916"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2017-6386",
+              "Impact": "Low",
+              "Public": "20170315",
+              "CveID": "CVE-2017-6386"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18388",
+              "Impact": "Low",
+              "Public": "20191223",
+              "CveID": "CVE-2019-18388"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18389",
+              "Impact": "High",
+              "Public": "20191223",
+              "CveID": "CVE-2019-18389"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18390",
+              "Impact": "High",
+              "Public": "20191223",
+              "CveID": "CVE-2019-18390"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18391",
+              "Impact": "Low",
+              "Public": "20191223",
+              "CveID": "CVE-2019-18391"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192905001",
+                "Comment": "libvirglrenderer is earlier than 0:0.8.0.0.34.4ac3a04c-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192905002",
+                "Comment": "libvirglrenderer-devel is earlier than 0:0.8.0.0.34.4ac3a04c-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20192905003",
+                "Comment": "libvirglrenderer-test-server is earlier than 0:0.8.0.0.34.4ac3a04c-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

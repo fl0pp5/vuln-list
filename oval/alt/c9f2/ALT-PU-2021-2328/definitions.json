@@ -1,0 +1,213 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212328",
+      "Version": "oval:org.altlinux.errata:def:20212328",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2328: package `systemd` update to version 246.14-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2328",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2328",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04153",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04153",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33910",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33910",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades systemd to version 246.14-alt1. \nSecurity Fix(es):\n\n * BDU:2021-04153: Уязвимость функций alloca() и strdup() подсистемы инициализации и управления службами Systemd, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2021-33910: basic/unit-name.c in systemd prior to 246.15, 247.8, 248.5, and 249.1 has a Memory Allocation with an Excessive Size Value (involving strdupa and alloca for a pathname controlled by a local attacker) that results in an operating system crash.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-26"
+          },
+          "Updated": {
+            "Date": "2021-07-26"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-04153",
+              "Impact": "Low",
+              "Public": "20210609",
+              "CveID": "BDU:2021-04153"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33910",
+              "Impact": "Low",
+              "Public": "20210720",
+              "CveID": "CVE-2021-33910"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328001",
+                "Comment": "libnss-myhostname is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328002",
+                "Comment": "libnss-mymachines is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328003",
+                "Comment": "libnss-resolve is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328004",
+                "Comment": "libnss-systemd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328005",
+                "Comment": "libsystemd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328006",
+                "Comment": "libsystemd-devel is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328007",
+                "Comment": "libsystemd-devel-static is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328008",
+                "Comment": "libudev-devel is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328009",
+                "Comment": "libudev-devel-static is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328010",
+                "Comment": "libudev1 is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328011",
+                "Comment": "pam_systemd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328012",
+                "Comment": "pam_systemd_home is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328013",
+                "Comment": "systemd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328014",
+                "Comment": "systemd-analyze is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328015",
+                "Comment": "systemd-boot-efi is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328016",
+                "Comment": "systemd-container is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328017",
+                "Comment": "systemd-coredump is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328018",
+                "Comment": "systemd-homed is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328019",
+                "Comment": "systemd-journal-remote is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328020",
+                "Comment": "systemd-networkd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328021",
+                "Comment": "systemd-portable is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328022",
+                "Comment": "systemd-services is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328023",
+                "Comment": "systemd-stateless is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328024",
+                "Comment": "systemd-sysvinit is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328025",
+                "Comment": "systemd-timesyncd is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328026",
+                "Comment": "systemd-utils is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328027",
+                "Comment": "udev is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328028",
+                "Comment": "udev-hwdb is earlier than 1:246.14-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212328029",
+                "Comment": "udev-rules is earlier than 1:246.14-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

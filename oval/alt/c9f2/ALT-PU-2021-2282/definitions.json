@@ -1,0 +1,165 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212282",
+      "Version": "oval:org.altlinux.errata:def:20212282",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2282: package `zabbix` update to version 5.0.12-alt0.p9.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2282",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2282",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2013-1364",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2013-1364",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades zabbix to version 5.0.12-alt0.p9.2. \nSecurity Fix(es):\n\n * CVE-2013-1364: The user.login function in Zabbix before 1.8.16 and 2.x before 2.0.5rc1 allows remote attackers to override LDAP configuration via the cnf parameter.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-07-20"
+          },
+          "Updated": {
+            "Date": "2021-07-20"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2013-1364",
+              "Impact": "Low",
+              "Public": "20131214",
+              "CveID": "CVE-2013-1364"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282001",
+                "Comment": "zabbix-agent is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282002",
+                "Comment": "zabbix-agent-sudo is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282003",
+                "Comment": "zabbix-agent2 is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282004",
+                "Comment": "zabbix-common is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282005",
+                "Comment": "zabbix-common-database-mysql is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282006",
+                "Comment": "zabbix-common-database-pgsql is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282007",
+                "Comment": "zabbix-common-database-sqlite3 is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282008",
+                "Comment": "zabbix-contrib is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282009",
+                "Comment": "zabbix-doc is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282010",
+                "Comment": "zabbix-java-gateway is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282011",
+                "Comment": "zabbix-phpfrontend-apache2 is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282012",
+                "Comment": "zabbix-phpfrontend-apache2-mod_php7 is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282013",
+                "Comment": "zabbix-phpfrontend-engine is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282014",
+                "Comment": "zabbix-phpfrontend-php7 is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282015",
+                "Comment": "zabbix-proxy is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282016",
+                "Comment": "zabbix-proxy-common is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282017",
+                "Comment": "zabbix-proxy-pgsql is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282018",
+                "Comment": "zabbix-server-common is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282019",
+                "Comment": "zabbix-server-mysql is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282020",
+                "Comment": "zabbix-server-pgsql is earlier than 1:5.0.12-alt0.p9.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212282021",
+                "Comment": "zabbix-source is earlier than 1:5.0.12-alt0.p9.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

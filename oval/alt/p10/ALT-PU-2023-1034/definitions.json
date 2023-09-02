@@ -1,0 +1,221 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231034",
+      "Version": "oval:org.altlinux.errata:def:20231034",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1034: package `wolfssl` update to version 5.5.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1034",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1034",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00042",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00042",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-44718",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44718",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-25638",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-25638",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-25640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-25640",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-34293",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-34293",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-38152",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-38152",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-39173",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-39173",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42905",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42905",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-42961",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-42961",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades wolfssl to version 5.5.4-alt1. \nSecurity Fix(es):\n\n * BDU:2023-00042: Уязвимость библиотеки SSL/TLS WolfSSL связана с возможностью чтения за границами буфера в памяти, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации или вызвать отказ в обслуживании\n\n * CVE-2021-44718: wolfSSL through 5.0.0 allows an attacker to cause a denial of service and infinite loop in the client component by sending crafted traffic from a Machine-in-the-Middle (MITM) position. The root cause is that the client module accepts TLS messages that normally are only sent to TLS servers.\n\n * CVE-2022-25638: In wolfSSL before 5.2.0, certificate validation may be bypassed during attempted authentication by a TLS 1.3 client to a TLS 1.3 server. This occurs when the sig_algo field differs between the certificate_verify message and the certificate message.\n\n * CVE-2022-25640: In wolfSSL before 5.2.0, a TLS 1.3 server cannot properly enforce a requirement for mutual authentication. A client can simply omit the certificate_verify message from the handshake, and never present a certificate.\n\n * CVE-2022-34293: wolfSSL before 5.4.0 allows remote attackers to cause a denial of service via DTLS because a check for return-routability can be skipped.\n\n * CVE-2022-38152: An issue was discovered in wolfSSL before 5.5.0. When a TLS 1.3 client connects to a wolfSSL server and SSL_clear is called on its session, the server crashes with a segmentation fault. This occurs in the second session, which is created through TLS session resumption and reuses the initial struct WOLFSSL. If the server reuses the previous session structure (struct WOLFSSL) by calling wolfSSL_clear(WOLFSSL* ssl) on it, the next received Client Hello (that resumes the previous session) crashes the server. Note that this bug is only triggered when resuming sessions using TLS session resumption. Only servers that use wolfSSL_clear instead of the recommended SSL_free; SSL_new sequence are affected. Furthermore, wolfSSL_clear is part of wolfSSL's compatibility layer and is not enabled by default. It is not part of wolfSSL's native API.\n\n * CVE-2022-39173: In wolfSSL before 5.5.1, malicious clients can cause a buffer overflow during a TLS 1.3 handshake. This occurs when an attacker supposedly resumes a previous TLS session. During the resumption Client Hello a Hello Retry Request must be triggered. Both Client Hellos are required to contain a list of duplicate cipher suites to trigger the buffer overflow. In total, two Client Hellos have to be sent: one in the resumed session, and a second one as a response to a Hello Retry Request message.\n\n * CVE-2022-42905: In wolfSSL before 5.5.2, if callback functions are enabled (via the WOLFSSL_CALLBACKS flag), then a malicious TLS 1.3 client or network attacker can trigger a buffer over-read on the heap of 5 bytes. (WOLFSSL_CALLBACKS is only intended for debugging.)\n\n * CVE-2022-42961: An issue was discovered in wolfSSL before 5.5.0. A fault injection attack on RAM via Rowhammer leads to ECDSA key disclosure. Users performing signing operations with private ECC keys, such as in server-side TLS connections, might leak faulty ECC signatures. These signatures can be processed via an advanced technique for ECDSA key recovery. (In 5.5.0 and later, WOLFSSL_CHECK_SIG_FAULTS can be used to address the vulnerability.)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-12"
+          },
+          "Updated": {
+            "Date": "2023-01-12"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://bdu.fstec.ru/vul/2023-00042",
+              "Impact": "Critical",
+              "Public": "20221106",
+              "CveID": "BDU:2023-00042"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-835",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44718",
+              "Impact": "Low",
+              "Public": "20220902",
+              "CveID": "CVE-2021-44718"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-25638",
+              "Impact": "Low",
+              "Public": "20220224",
+              "CveID": "CVE-2022-25638"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-25640",
+              "Impact": "High",
+              "Public": "20220224",
+              "CveID": "CVE-2022-25640"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-34293",
+              "Impact": "High",
+              "Public": "20220808",
+              "CveID": "CVE-2022-34293"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-754",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-38152",
+              "Impact": "High",
+              "Public": "20220831",
+              "CveID": "CVE-2022-38152"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-39173",
+              "Impact": "High",
+              "Public": "20220929",
+              "CveID": "CVE-2022-39173"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42905",
+              "Impact": "Critical",
+              "Public": "20221107",
+              "CveID": "CVE-2022-42905"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-42961",
+              "Impact": "Low",
+              "Public": "20221015",
+              "CveID": "CVE-2022-42961"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231034001",
+                "Comment": "libwolfssl-devel is earlier than 0:5.5.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231034002",
+                "Comment": "libwolfssl35 is earlier than 0:5.5.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

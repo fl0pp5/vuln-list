@@ -1,0 +1,191 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211497",
+      "Version": "oval:org.altlinux.errata:def:20211497",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1497: package `moodle` update to version 3.10.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1497",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1497",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-20279",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20279",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20280",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20280",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20281",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20281",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20282",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20282",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-20283",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-20283",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-27131",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-27131",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades moodle to version 3.10.2-alt1. \nSecurity Fix(es):\n\n * CVE-2021-20279: The ID number user profile field required additional sanitizing to prevent a stored XSS risk in moodle before 3.10.2, 3.9.5, 3.8.8, 3.5.17.\n\n * CVE-2021-20280: Text-based feedback answers required additional sanitizing to prevent stored XSS and blind SSRF risks in moodle before 3.10.2, 3.9.5, 3.8.8, 3.5.17.\n\n * CVE-2021-20281: It was possible for some users without permission to view other users' full names to do so via the online users block in moodle before 3.10.2, 3.9.5, 3.8.8, 3.5.17.\n\n * CVE-2021-20282: When creating a user account, it was possible to verify the account without having access to the verification email link/secret in moodle before 3.10.2, 3.9.5, 3.8.8, 3.5.17.\n\n * CVE-2021-20283: The web service responsible for fetching other users' enrolled courses did not validate that the requesting user had permission to view that information in each course in moodle before 3.10.2, 3.9.5, 3.8.8, 3.5.17.\n\n * CVE-2021-27131: ** DISPUTED ** Moodle 3.10.1 is vulnerable to persistent/stored cross-site scripting (XSS) due to the improper input sanitization on the \"Additional HTML Section\" via \"Header and Footer\" parameter in /admin/settings.php. This vulnerability is leading an attacker to steal admin and all user account cookies by storing the malicious XSS payload in Header and Footer. NOTE: this is disputed by the vendor because the \"Additional HTML Section\" for \"Header and Footer\" can only be supplied by an administrator, who is intentionally allowed to enter unsanitized input (e.g., site-specific JavaScript).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-16"
+          },
+          "Updated": {
+            "Date": "2021-03-16"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20279",
+              "Impact": "Low",
+              "Public": "20210315",
+              "CveID": "CVE-2021-20279"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:S/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20280",
+              "Impact": "Low",
+              "Public": "20210315",
+              "CveID": "CVE-2021-20280"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20281",
+              "Impact": "Low",
+              "Public": "20210315",
+              "CveID": "CVE-2021-20281"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-863",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20282",
+              "Impact": "Low",
+              "Public": "20210315",
+              "CveID": "CVE-2021-20282"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-862",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-20283",
+              "Impact": "Low",
+              "Public": "20210315",
+              "CveID": "CVE-2021-20283"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-27131",
+              "Impact": "Low",
+              "Public": "20230516",
+              "CveID": "CVE-2021-27131"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211497001",
+                "Comment": "moodle is earlier than 0:3.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211497002",
+                "Comment": "moodle-apache2 is earlier than 0:3.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211497003",
+                "Comment": "moodle-base is earlier than 0:3.10.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211497004",
+                "Comment": "moodle-local-mysql is earlier than 0:3.10.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

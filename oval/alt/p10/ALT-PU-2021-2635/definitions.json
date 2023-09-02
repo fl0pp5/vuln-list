@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20212635",
+      "Version": "oval:org.altlinux.errata:def:20212635",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-2635: package `alterator-setup` update to version 0.3.11-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-2635",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-2635",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades alterator-setup to version 0.3.11-alt1. \nSecurity Fix(es):\n\n * #39546: При удалении пакета не удаляет default.target\n\n * #40770: При установке не создаёт default.target",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-08-26"
+          },
+          "Updated": {
+            "Date": "2021-08-26"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "39546",
+              "Href": "https://bugzilla.altlinux.org/39546",
+              "Data": "При удалении пакета не удаляет default.target"
+            },
+            {
+              "Id": "40770",
+              "Href": "https://bugzilla.altlinux.org/40770",
+              "Data": "При установке не создаёт default.target"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212635001",
+                "Comment": "alterator-setup is earlier than 0:0.3.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212635002",
+                "Comment": "alterator-setup-x11vnc is earlier than 0:0.3.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212635003",
+                "Comment": "installer-feature-alterator-setup-stage2 is earlier than 0:0.3.11-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20212635004",
+                "Comment": "installer-feature-alterator-setup-x11vnc-stage2 is earlier than 0:0.3.11-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

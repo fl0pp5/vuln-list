@@ -1,0 +1,127 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222353",
+      "Version": "oval:org.altlinux.errata:def:20222353",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2353: package `plasma5-desktop` update to version 5.24.6-alt4",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2353",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2353",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades plasma5-desktop to version 5.24.6-alt4. \nSecurity Fix(es):\n\n * #41709: Исчезает индикатор раскладки клавиатуры при подключении USB клавиатуры\n\n * #42348: При добавлении устройств на виртуальной машине, ломается переключение раскладки на основной\n\n * #42790: Пропадает индикатор раскладки клавиатуры при сопряжении с устройством по Bluetooth",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-08-05"
+          },
+          "Updated": {
+            "Date": "2022-08-05"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41709",
+              "Href": "https://bugzilla.altlinux.org/41709",
+              "Data": "Исчезает индикатор раскладки клавиатуры при подключении USB клавиатуры"
+            },
+            {
+              "Id": "42348",
+              "Href": "https://bugzilla.altlinux.org/42348",
+              "Data": "При добавлении устройств на виртуальной машине, ломается переключение раскладки на основной"
+            },
+            {
+              "Id": "42790",
+              "Href": "https://bugzilla.altlinux.org/42790",
+              "Data": "Пропадает индикатор раскладки клавиатуры при сопряжении с устройством по Bluetooth"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222353001",
+                "Comment": "plasma5-desktop is earlier than 0:5.24.6-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222353002",
+                "Comment": "plasma5-desktop-common is earlier than 0:5.24.6-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222353003",
+                "Comment": "plasma5-desktop-devel is earlier than 0:5.24.6-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222353004",
+                "Comment": "plasma5-desktop-maxi is earlier than 0:5.24.6-alt4"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222353005",
+                "Comment": "polkit-kde-plasma-desktop is earlier than 0:5.24.6-alt4"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234658",
+      "Version": "oval:org.altlinux.errata:def:20234658",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4658: package `pcre2` update to version 10.42-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4658",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4658",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-41409",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-41409",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pcre2 to version 10.42-alt1. \nSecurity Fix(es):\n\n * CVE-2022-41409: Integer overflow vulnerability in pcre2test before 10.41 allows attackers to cause a denial of service or other unspecified impacts via negative input.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-08-09"
+          },
+          "Updated": {
+            "Date": "2023-08-09"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-41409",
+              "Impact": "High",
+              "Public": "20230718",
+              "CveID": "CVE-2022-41409"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234658001",
+                "Comment": "libpcre2 is earlier than 0:10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234658002",
+                "Comment": "libpcre2-devel is earlier than 0:10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234658003",
+                "Comment": "libpcre2-devel-static is earlier than 0:10.42-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234658004",
+                "Comment": "pcre2-tools is earlier than 0:10.42-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

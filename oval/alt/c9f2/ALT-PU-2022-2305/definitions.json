@@ -1,0 +1,168 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20222305",
+      "Version": "oval:org.altlinux.errata:def:20222305",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-2305: package `kernel-image-std-def` update to version 5.10.130-alt0.c9f.2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-2305",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-2305",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-04733",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04733",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-05829",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-05829",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-33656",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33656",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-34918",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-34918",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-std-def to version 5.10.130-alt0.c9f.2. \nSecurity Fix(es):\n\n * BDU:2022-04733: Уязвимость функция nft_set_elem_init файла net/netfilter/nf_tables_api.c компонента User Namespace Handler ядра операционной системы Linux, позволяющая нарушителю получить root доступ\n\n * BDU:2022-05829: Уязвимость ioctl cmd PIO_FONT ядра операционной системы Linux, позволяющая нарушителю выполнить произвольный код с повышенными привилегиями\n\n * CVE-2021-33656: When setting font with malicous data by ioctl cmd PIO_FONT,kernel will write memory out of bounds.\n\n * CVE-2022-34918: An issue was discovered in the Linux kernel through 5.18.9. A type confusion bug in nft_set_elem_init (leading to a buffer overflow) could be used by a local attacker to escalate privileges, a different vulnerability than CVE-2022-32250. (The attacker can obtain root access, but must start with an unprivileged user namespace to obtain CAP_NET_ADMIN access.) This can be fixed in nft_setelem_parse_data in net/netfilter/nf_tables_api.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-07-27"
+          },
+          "Updated": {
+            "Date": "2022-07-27"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://bdu.fstec.ru/vul/2022-04733",
+              "Impact": "High",
+              "Public": "20220704",
+              "CveID": "BDU:2022-04733"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2022-05829",
+              "Impact": "High",
+              "Public": "20220817",
+              "CveID": "BDU:2022-05829"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33656",
+              "Impact": "Low",
+              "Public": "20220718",
+              "CveID": "CVE-2021-33656"
+            },
+            {
+              "Cvss": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-843",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-34918",
+              "Impact": "High",
+              "Public": "20220704",
+              "CveID": "CVE-2022-34918"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305001",
+                "Comment": "kernel-doc-std is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305002",
+                "Comment": "kernel-headers-modules-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305003",
+                "Comment": "kernel-headers-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305004",
+                "Comment": "kernel-image-domU-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305005",
+                "Comment": "kernel-image-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305006",
+                "Comment": "kernel-modules-drm-ancient-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305007",
+                "Comment": "kernel-modules-drm-nouveau-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305008",
+                "Comment": "kernel-modules-drm-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305009",
+                "Comment": "kernel-modules-ide-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305010",
+                "Comment": "kernel-modules-midgard-be-m1000-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20222305011",
+                "Comment": "kernel-modules-staging-std-def is earlier than 2:5.10.130-alt0.c9f.2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

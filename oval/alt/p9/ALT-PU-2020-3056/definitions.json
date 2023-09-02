@@ -1,0 +1,441 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20203056",
+      "Version": "oval:org.altlinux.errata:def:20203056",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-3056: package `vlc` update to version 3.0.11.1-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-3056",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-3056",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-02233",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02233",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02238",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02238",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02239",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02239",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-02240",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-02240",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-25801",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25801",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25802",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25802",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25803",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25803",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-25804",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-25804",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades vlc to version 3.0.11.1-alt2. \nSecurity Fix(es):\n\n * BDU:2022-02233: Уязвимость компонента avi.c медиаплеера VLC Media Player, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-02238: Уязвимость компонента vlc_input_attachment_New медиаплеера VLC Media Player, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * BDU:2022-02239: Уязвимость компонента AVI_ExtractSubtitle медиаплеера VLC Media Player, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * BDU:2022-02240: Уязвимость компонента __Parse_indx медиаплеера VLC Media Player, позволяющая нарушителю получить доступ к конфиденциальным данным, а также вызвать отказ в обслуживании\n\n * CVE-2021-25801: A buffer overflow vulnerability in the __Parse_indx component of VideoLAN VLC Media Player 3.0.11 allows attackers to cause an out-of-bounds read via a crafted .avi file.\n\n * CVE-2021-25802: A buffer overflow vulnerability in the AVI_ExtractSubtitle component of VideoLAN VLC Media Player 3.0.11 allows attackers to cause an out-of-bounds read via a crafted .avi file.\n\n * CVE-2021-25803: A buffer overflow vulnerability in the vlc_input_attachment_New component of VideoLAN VLC Media Player 3.0.11 allows attackers to cause an out-of-bounds read via a crafted .avi file.\n\n * CVE-2021-25804: A NULL-pointer dereference in \"Open\" in avi.c of VideoLAN VLC Media Player 3.0.11 can a denial of service (DOS) in the application.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-10-15"
+          },
+          "Updated": {
+            "Date": "2020-10-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://bdu.fstec.ru/vul/2022-02233",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "BDU:2022-02233"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-02238",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "BDU:2022-02238"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-02239",
+              "Impact": "High",
+              "Public": "20200726",
+              "CveID": "BDU:2022-02239"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2022-02240",
+              "Impact": "High",
+              "Public": "20201022",
+              "CveID": "BDU:2022-02240"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25801",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-25801"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25802",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-25802"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25803",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-25803"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-476",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-25804",
+              "Impact": "High",
+              "Public": "20210726",
+              "CveID": "CVE-2021-25804"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056001",
+                "Comment": "fortunes-vlc is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056002",
+                "Comment": "libvlc is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056003",
+                "Comment": "libvlc-devel is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056004",
+                "Comment": "vim-plugin-vlc-syntax is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056005",
+                "Comment": "vlc is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056006",
+                "Comment": "vlc-interface-lirc is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056007",
+                "Comment": "vlc-interface-ncurses is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056008",
+                "Comment": "vlc-interface-qt is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056009",
+                "Comment": "vlc-interface-skins2 is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056010",
+                "Comment": "vlc-maxi is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056011",
+                "Comment": "vlc-mini is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056012",
+                "Comment": "vlc-plugin-aa is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056013",
+                "Comment": "vlc-plugin-ass is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056014",
+                "Comment": "vlc-plugin-audiocd is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056015",
+                "Comment": "vlc-plugin-bluray is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056016",
+                "Comment": "vlc-plugin-chromaprint is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056017",
+                "Comment": "vlc-plugin-dbus is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056018",
+                "Comment": "vlc-plugin-dv is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056019",
+                "Comment": "vlc-plugin-dvdnav is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056020",
+                "Comment": "vlc-plugin-dvdread is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056021",
+                "Comment": "vlc-plugin-ffmpeg is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056022",
+                "Comment": "vlc-plugin-flac is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056023",
+                "Comment": "vlc-plugin-fluidsynth is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056024",
+                "Comment": "vlc-plugin-framebuffer is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056025",
+                "Comment": "vlc-plugin-freetype is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056026",
+                "Comment": "vlc-plugin-globalhotkeys is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056027",
+                "Comment": "vlc-plugin-gnutls is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056028",
+                "Comment": "vlc-plugin-h264 is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056029",
+                "Comment": "vlc-plugin-h265 is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056030",
+                "Comment": "vlc-plugin-jack is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056031",
+                "Comment": "vlc-plugin-linsys is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056032",
+                "Comment": "vlc-plugin-live555 is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056033",
+                "Comment": "vlc-plugin-matroska is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056034",
+                "Comment": "vlc-plugin-modplug is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056035",
+                "Comment": "vlc-plugin-mpeg2 is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056036",
+                "Comment": "vlc-plugin-mtp is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056037",
+                "Comment": "vlc-plugin-musepack is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056038",
+                "Comment": "vlc-plugin-notify is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056039",
+                "Comment": "vlc-plugin-ogg is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056040",
+                "Comment": "vlc-plugin-opus is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056041",
+                "Comment": "vlc-plugin-png is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056042",
+                "Comment": "vlc-plugin-podcast is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056043",
+                "Comment": "vlc-plugin-projectm is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056044",
+                "Comment": "vlc-plugin-pulseaudio is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056045",
+                "Comment": "vlc-plugin-realrtsp is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056046",
+                "Comment": "vlc-plugin-schroedinger is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056047",
+                "Comment": "vlc-plugin-shout is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056048",
+                "Comment": "vlc-plugin-smb is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056049",
+                "Comment": "vlc-plugin-speex is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056050",
+                "Comment": "vlc-plugin-svg is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056051",
+                "Comment": "vlc-plugin-taglib is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056052",
+                "Comment": "vlc-plugin-theora is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056053",
+                "Comment": "vlc-plugin-twolame is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056054",
+                "Comment": "vlc-plugin-upnp is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056055",
+                "Comment": "vlc-plugin-v4l is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056056",
+                "Comment": "vlc-plugin-videocd is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056057",
+                "Comment": "vlc-plugin-vpx is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056058",
+                "Comment": "vlc-plugin-xcb is earlier than 0:3.0.11.1-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20203056059",
+                "Comment": "vlc-plugin-xml is earlier than 0:3.0.11.1-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

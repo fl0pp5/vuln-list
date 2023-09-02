@@ -1,0 +1,115 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231121",
+      "Version": "oval:org.altlinux.errata:def:20231121",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1121: package `sudo` update to version 1.9.12p2-alt0.c9f2.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1121",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1121",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-00210",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-00210",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-22809",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22809",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades sudo to version 1.9.12p2-alt0.c9f2.1. \nSecurity Fix(es):\n\n * BDU:2023-00210: Уязвимость функции sudoedit программы системного администрирования Sudo, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2023-22809: In Sudo before 1.9.12p2, the sudoedit (aka -e) feature mishandles extra arguments passed in the user-provided environment variables (SUDO_EDITOR, VISUAL, and EDITOR), allowing a local attacker to append arbitrary entries to the list of files to process. This can lead to privilege escalation. Affected versions are 1.8.0 through 1.9.12.p1. The problem exists because a user-specified editor may contain a \"--\" argument that defeats a protection mechanism, e.g., an EDITOR='vim -- /path/to/extra/file' value.\n\n * #44965: уязвимость (CVE-2023-22809)",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-01-24"
+          },
+          "Updated": {
+            "Date": "2023-01-24"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-693",
+              "Href": "https://bdu.fstec.ru/vul/2023-00210",
+              "Impact": "High",
+              "Public": "20230118",
+              "CveID": "BDU:2023-00210"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-269",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22809",
+              "Impact": "High",
+              "Public": "20230118",
+              "CveID": "CVE-2023-22809"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "44965",
+              "Href": "https://bugzilla.altlinux.org/44965",
+              "Data": "уязвимость (CVE-2023-22809)"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231121001",
+                "Comment": "sudo is earlier than 1:1.9.12p2-alt0.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231121002",
+                "Comment": "sudo-devel is earlier than 1:1.9.12p2-alt0.c9f2.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231121003",
+                "Comment": "sudo-python is earlier than 1:1.9.12p2-alt0.c9f2.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

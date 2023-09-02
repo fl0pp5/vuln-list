@@ -1,0 +1,77 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213480",
+      "Version": "oval:org.altlinux.errata:def:20213480",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3480: package `bubblewrap` update to version 0.5.0-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3480",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3480",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades bubblewrap to version 0.5.0-alt2. \nSecurity Fix(es):\n\n * #41418: Выключает userns_restrict даже в режиме suid",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-12-06"
+          },
+          "Updated": {
+            "Date": "2021-12-06"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "41418",
+              "Href": "https://bugzilla.altlinux.org/41418",
+              "Data": "Выключает userns_restrict даже в режиме suid"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213480001",
+                "Comment": "bubblewrap is earlier than 0:0.5.0-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20231880",
+      "Version": "oval:org.altlinux.errata:def:20231880",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-1880: package `libheif` update to version 1.15.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-1880",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-1880",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03407",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03407",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-29659",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29659",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libheif to version 1.15.2-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03407: Уязвимость функции heif::Fraction::round() в box.cc декодера форматов файлов HEIF и AVIF libheif, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-29659: A Segmentation fault caused by a floating point exception exists in libheif 1.15.1 using crafted heif images via the heif::Fraction::round() function in box.cc, which causes a denial of service.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-05-25"
+          },
+          "Updated": {
+            "Date": "2023-05-25"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://bdu.fstec.ru/vul/2023-03407",
+              "Impact": "Low",
+              "Public": "20230505",
+              "CveID": "BDU:2023-03407"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-369",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29659",
+              "Impact": "Low",
+              "Public": "20230505",
+              "CveID": "CVE-2023-29659"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231880001",
+                "Comment": "libheif is earlier than 0:1.15.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20231880002",
+                "Comment": "libheif-devel is earlier than 0:1.15.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

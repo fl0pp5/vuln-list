@@ -1,0 +1,152 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20211436",
+      "Version": "oval:org.altlinux.errata:def:20211436",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-1436: package `bind` update to version 9.11.28-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-1436",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-1436",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-01179",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-01179",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8625",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8625",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades bind to version 9.11.28-alt1. \nSecurity Fix(es):\n\n * BDU:2021-01179: Уязвимость реализации механизма SPNEGO DNS-сервера BIND, позволяющая нарушителю вызвать отказ в обслуживании или выполнить произвольный код\n\n * CVE-2020-8625: BIND servers are vulnerable if they are running an affected version and are configured to use GSS-TSIG features. In a configuration which uses BIND's default settings the vulnerable code path is not exposed, but a server can be rendered vulnerable by explicitly setting valid values for the tkey-gssapi-keytab or tkey-gssapi-credentialconfiguration options. Although the default configuration is not vulnerable, GSS-TSIG is frequently used in networks where BIND is integrated with Samba, as well as in mixed-server environments that combine BIND servers with Active Directory domain controllers. The most likely outcome of a successful exploitation of the vulnerability is a crash of the named process. However, remote code execution, while unproven, is theoretically possible. Affects: BIND 9.5.0 -\u003e 9.11.27, 9.12.0 -\u003e 9.16.11, and versions BIND 9.11.3-S1 -\u003e 9.11.27-S1 and 9.16.8-S1 -\u003e 9.16.11-S1 of BIND Supported Preview Edition. Also release versions 9.17.0 -\u003e 9.17.1 of the BIND 9.17 development branch\n\n * #39350: mdig(1) unformatted in bind-utils-9.11.25-alt1",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-03-04"
+          },
+          "Updated": {
+            "Date": "2021-03-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-119, CWE-120",
+              "Href": "https://bdu.fstec.ru/vul/2021-01179",
+              "Impact": "High",
+              "Public": "20210218",
+              "CveID": "BDU:2021-01179"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-120",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8625",
+              "Impact": "High",
+              "Public": "20210217",
+              "CveID": "CVE-2020-8625"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "39350",
+              "Href": "https://bugzilla.altlinux.org/39350",
+              "Data": "mdig(1) unformatted in bind-utils-9.11.25-alt1"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436001",
+                "Comment": "bind is earlier than 0:9.11.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436002",
+                "Comment": "bind-devel is earlier than 0:9.11.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436003",
+                "Comment": "bind-doc is earlier than 0:9.11.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436004",
+                "Comment": "bind-utils is earlier than 0:9.11.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436005",
+                "Comment": "libbind is earlier than 0:9.11.28-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20211436006",
+                "Comment": "lwresd is earlier than 0:9.11.28-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

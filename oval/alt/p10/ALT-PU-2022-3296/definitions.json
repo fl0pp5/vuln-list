@@ -1,0 +1,244 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20223296",
+      "Version": "oval:org.altlinux.errata:def:20223296",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2022-3296: package `tomcat` update to version 9.0.59-alt1_3jpp11",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2022-3296",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2022-3296",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03686",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03686",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-03688",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03688",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-06115",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-06115",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-06690",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06690",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-30640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30640",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-33037",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-33037",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-42340",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-42340",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23181",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23181",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades tomcat to version 9.0.59-alt1_3jpp11. \nSecurity Fix(es):\n\n * BDU:2021-03686: Уязвимость реализации модуля JNDIRealm сервера приложений Apache Tomcat, позволяющая нарушителю получить несанкционированный доступ к защищаемой информации\n\n * BDU:2021-03688: Уязвимость сервера приложений Apache Tomcat, связанная с недостатками обработки HTTP-запросов, позволяющая нарушителю отправить скрытый HTTP-запрос\n\n * BDU:2021-06115: Уязвимость сервера приложений Apache Tomcat, связанная с утечкой памяти, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-06690: Уязвимость сервера приложений Apache Tomcat, связанная с ошибками синхронизации при использовании общего ресурса, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-30640: A vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to authenticate using variations of a valid user name and/or to bypass some of the protection provided by the LockOut Realm. This issue affects Apache Tomcat 10.0.0-M1 to 10.0.5; 9.0.0.M1 to 9.0.45; 8.5.0 to 8.5.65.\n\n * CVE-2021-33037: Apache Tomcat 10.0.0-M1 to 10.0.6, 9.0.0.M1 to 9.0.46 and 8.5.0 to 8.5.66 did not correctly parse the HTTP transfer-encoding request header in some circumstances leading to the possibility to request smuggling when used with a reverse proxy. Specifically: - Tomcat incorrectly ignored the transfer encoding header if the client declared it would only accept an HTTP/1.0 response; - Tomcat honoured the identify encoding; and - Tomcat did not ensure that, if present, the chunked encoding was the final encoding.\n\n * CVE-2021-42340: The fix for bug 63362 present in Apache Tomcat 10.1.0-M1 to 10.1.0-M5, 10.0.0-M1 to 10.0.11, 9.0.40 to 9.0.53 and 8.5.60 to 8.5.71 introduced a memory leak. The object introduced to collect metrics for HTTP upgrade connections was not released for WebSocket connections once the connection was closed. This created a memory leak that, over time, could lead to a denial of service via an OutOfMemoryError.\n\n * CVE-2022-23181: The fix for bug CVE-2020-9484 introduced a time of check, time of use vulnerability into Apache Tomcat 10.1.0-M1 to 10.1.0-M8, 10.0.0-M5 to 10.0.14, 9.0.35 to 9.0.56 and 8.5.55 to 8.5.73 that allowed a local attacker to perform actions with the privileges of the user that the Tomcat process is using. This issue is only exploitable when Tomcat is configured to persist sessions using the FileStore.\n\n * #40819: Jasper is unabled to compile class for JSP",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2022-12-07"
+          },
+          "Updated": {
+            "Date": "2022-12-07"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2021-03686",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "BDU:2021-03686"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://bdu.fstec.ru/vul/2021-03688",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "BDU:2021-03688"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://bdu.fstec.ru/vul/2021-06115",
+              "Impact": "High",
+              "Public": "20211014",
+              "CveID": "BDU:2021-06115"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-367",
+              "Href": "https://bdu.fstec.ru/vul/2022-06690",
+              "Impact": "High",
+              "Public": "20220126",
+              "CveID": "BDU:2022-06690"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
+              "Cwe": "CWE-116",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30640",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "CVE-2021-30640"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-444",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-33037",
+              "Impact": "Low",
+              "Public": "20210712",
+              "CveID": "CVE-2021-33037"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-772",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-42340",
+              "Impact": "High",
+              "Public": "20211014",
+              "CveID": "CVE-2021-42340"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-367",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23181",
+              "Impact": "High",
+              "Public": "20220127",
+              "CveID": "CVE-2022-23181"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "40819",
+              "Href": "https://bugzilla.altlinux.org/40819",
+              "Data": "Jasper is unabled to compile class for JSP"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296001",
+                "Comment": "tomcat is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296002",
+                "Comment": "tomcat-admin-webapps is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296003",
+                "Comment": "tomcat-docs-webapp is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296004",
+                "Comment": "tomcat-el-3.0-api is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296005",
+                "Comment": "tomcat-jsp-2.3-api is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296006",
+                "Comment": "tomcat-lib is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296007",
+                "Comment": "tomcat-servlet-4.0-api is earlier than 1:9.0.59-alt1_3jpp11"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20223296008",
+                "Comment": "tomcat-webapps is earlier than 1:9.0.59-alt1_3jpp11"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

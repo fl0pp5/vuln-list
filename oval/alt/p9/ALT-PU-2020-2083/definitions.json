@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20202083",
+      "Version": "oval:org.altlinux.errata:def:20202083",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2020-2083: package `cryptsetup` update to version 2.3.3-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p9"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2020-2083",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2020-2083",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-01662",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01662",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-14382",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-14382",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cryptsetup to version 2.3.3-alt1. \nSecurity Fix(es):\n\n * BDU:2023-01662: Уязвимость функции hdr_validate_segments() компонента lib/luks2/luks2_json_metadata.c программы шифрования диска Cryptsetup, позволяющая нарушителю получить доступ к конфиденциальным данным, нарушить их целостность, а также вызвать отказ в обслуживании\n\n * CVE-2020-14382: A vulnerability was found in upstream release cryptsetup-2.2.0 where, there's a bug in LUKS2 format validation code, that is effectively invoked on every device/image presenting itself as LUKS2 container. The bug is in segments validation code in file 'lib/luks2/luks2_json_metadata.c' in function hdr_validate_segments(struct crypt_device *cd, json_object *hdr_jobj) where the code does not check for possible overflow on memory allocation used for intervals array (see statement \"intervals = malloc(first_backup * sizeof(*intervals));\"). Due to the bug, library can be *tricked* to expect such allocation was successful but for far less memory then originally expected. Later it may read data FROM image crafted by an attacker and actually write such data BEYOND allocated memory.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2020-06-02"
+          },
+          "Updated": {
+            "Date": "2020-06-02"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://bdu.fstec.ru/vul/2023-01662",
+              "Impact": "High",
+              "Public": "20200824",
+              "CveID": "BDU:2023-01662"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-14382",
+              "Impact": "High",
+              "Public": "20200916",
+              "CveID": "CVE-2020-14382"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:9",
+              "cpe:/o:alt:workstation:9",
+              "cpe:/o:alt:server:9",
+              "cpe:/o:alt:server-v:9",
+              "cpe:/o:alt:education:9",
+              "cpe:/o:alt:slinux:9",
+              "cpe:/o:alt:starterkit:p9",
+              "cpe:/o:alt:kworkstation:9.1",
+              "cpe:/o:alt:workstation:9.1",
+              "cpe:/o:alt:server:9.1",
+              "cpe:/o:alt:server-v:9.1",
+              "cpe:/o:alt:education:9.1",
+              "cpe:/o:alt:slinux:9.1",
+              "cpe:/o:alt:starterkit:9.1",
+              "cpe:/o:alt:kworkstation:9.2",
+              "cpe:/o:alt:workstation:9.2",
+              "cpe:/o:alt:server:9.2",
+              "cpe:/o:alt:server-v:9.2",
+              "cpe:/o:alt:education:9.2",
+              "cpe:/o:alt:slinux:9.2",
+              "cpe:/o:alt:starterkit:9.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:1001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202083001",
+                "Comment": "cryptsetup is earlier than 0:2.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202083002",
+                "Comment": "libcryptsetup is earlier than 0:2.3.3-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20202083003",
+                "Comment": "libcryptsetup-devel is earlier than 0:2.3.3-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

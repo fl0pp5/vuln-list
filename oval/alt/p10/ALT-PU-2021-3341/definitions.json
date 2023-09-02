@@ -1,0 +1,188 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20213341",
+      "Version": "oval:org.altlinux.errata:def:20213341",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2021-3341: package `kernel-image-un-def` update to version 5.14.20-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2021-3341",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2021-3341",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-03902",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-03902",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-01273",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-01273",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-3640",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-3640",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-1252",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-1252",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades kernel-image-un-def to version 5.14.20-alt1. \nSecurity Fix(es):\n\n * BDU:2021-03902: Уязвимость функции sco_sock_sendmsg() подсистемы HCI ядра операционной системы Linux, позволяющая нарушителю вызвать аварийное завершение системы или повысить свои привилегии\n\n * BDU:2023-01273: Уязвимость функции ovl_write_iter() файловой системы overlayfs ядра операционной системы Linux, позволяющая нарушителю вызвать отказ в обслуживании или повысить свои привилегии\n\n * CVE-2021-3640: A flaw use-after-free in function sco_sock_sendmsg() of the Linux kernel HCI subsystem was found in the way user calls ioct UFFDIO_REGISTER or other way triggers race condition of the call sco_conn_del() together with the call sco_sock_sendmsg() with the expected controllable faulting memory page. A privileged local user could use this flaw to crash the system or escalate their privileges on the system.\n\n * CVE-2023-1252: A use-after-free flaw was found in the Linux kernel’s Ext4 File System in how a user triggers several file operations simultaneously with the overlay FS usage. This flaw allows a local user to crash or potentially escalate their privileges on the system. Only if patch 9a2544037600 (\"ovl: fix use after free in struct ovl_aio_req\") not applied yet, the kernel could be affected.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2021-11-23"
+          },
+          "Updated": {
+            "Date": "2021-11-23"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:L/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362, CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2021-03902",
+              "Impact": "High",
+              "Public": "20210722",
+              "CveID": "BDU:2021-03902"
+            },
+            {
+              "Cvss": "AV:L/AC:H/Au:S/C:C/I:C/A:C",
+              "Cvss3": "AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://bdu.fstec.ru/vul/2023-01273",
+              "Impact": "High",
+              "Public": "20211029",
+              "CveID": "BDU:2023-01273"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-362",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-3640",
+              "Impact": "High",
+              "Public": "20220303",
+              "CveID": "CVE-2021-3640"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-1252",
+              "Impact": "High",
+              "Public": "20230323",
+              "CveID": "CVE-2023-1252"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341001",
+                "Comment": "kernel-doc-un is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341002",
+                "Comment": "kernel-headers-modules-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341003",
+                "Comment": "kernel-headers-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341004",
+                "Comment": "kernel-image-domU-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341005",
+                "Comment": "kernel-image-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341006",
+                "Comment": "kernel-image-un-def-checkinstall is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341007",
+                "Comment": "kernel-modules-drm-ancient-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341008",
+                "Comment": "kernel-modules-drm-nouveau-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341009",
+                "Comment": "kernel-modules-drm-un-def is earlier than 1:5.14.20-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20213341010",
+                "Comment": "kernel-modules-staging-un-def is earlier than 1:5.14.20-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
