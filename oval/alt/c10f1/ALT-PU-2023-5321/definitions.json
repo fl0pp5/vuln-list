@@ -1,0 +1,81 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235321",
+      "Version": "oval:org.altlinux.errata:def:20235321",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5321: package `realmd` update to version 0.17.1-alt6",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5321",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5321",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades realmd to version 0.17.1-alt6. \nSecurity Fix(es):\n\n * #47410: Не хватает необходимых пакетов для ввода в домен Active Directory",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-04"
+          },
+          "Updated": {
+            "Date": "2023-09-04"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "47410",
+              "Href": "https://bugzilla.altlinux.org/47410",
+              "Data": "Не хватает необходимых пакетов для ввода в домен Active Directory"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235321001",
+                "Comment": "realmd is earlier than 0:0.17.1-alt6"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235321002",
+                "Comment": "realmd-devel-docs is earlier than 0:0.17.1-alt6"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

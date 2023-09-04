@@ -1,0 +1,108 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235194",
+      "Version": "oval:org.altlinux.errata:def:20235194",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5194: package `libX11` update to version 1.8.6-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5194",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5194",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03596",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03596",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-3138",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-3138",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades libX11 to version 1.8.6-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03596: Уязвимость файла src/InitExt.c библиотеки предоставления клиентского API для X Window System libX11, позволяющая нарушителю вызвать отказ в обслуживании\n\n * CVE-2023-3138: A vulnerability was found in libX11. The security flaw occurs because the functions in src/InitExt.c in libX11 do not check that the values provided for the Request, Event, or Error IDs are within the bounds of the arrays that those functions write to, using those IDs as array indexes. They trust that they were called with values provided by an Xserver adhering to the bounds specified in the X11 protocol, as all X servers provided by X.Org do. As the protocol only specifies a single byte for these values, an out-of-bounds value provided by a malicious server (or a malicious proxy-in-the-middle) can only overwrite other portions of the Display structure and not write outside the bounds of the Display structure itself, possibly causing the client to crash with this memory corruption.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-04"
+          },
+          "Updated": {
+            "Date": "2023-09-04"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-119",
+              "Href": "https://bdu.fstec.ru/vul/2023-03596",
+              "Impact": "Low",
+              "Public": "20230615",
+              "CveID": "BDU:2023-03596"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-3138",
+              "Impact": "High",
+              "Public": "20230628",
+              "CveID": "CVE-2023-3138"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235194001",
+                "Comment": "libX11 is earlier than 3:1.8.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235194002",
+                "Comment": "libX11-devel is earlier than 3:1.8.6-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235194003",
+                "Comment": "libX11-locales is earlier than 3:1.8.6-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
