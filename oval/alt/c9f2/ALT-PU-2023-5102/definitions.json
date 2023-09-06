@@ -1,0 +1,94 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235102",
+      "Version": "oval:org.altlinux.errata:def:20235102",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5102: package `fluidsynth` update to version 2.2.4-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5102",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5102",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-21417",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-21417",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades fluidsynth to version 2.2.4-alt1. \nSecurity Fix(es):\n\n * CVE-2021-21417: fluidsynth is a software synthesizer based on the SoundFont 2 specifications. A use after free violation was discovered in fluidsynth, that can be triggered when loading an invalid SoundFont file.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-06"
+          },
+          "Updated": {
+            "Date": "2023-09-06"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-21417",
+              "Impact": "Low",
+              "Public": "20210429",
+              "CveID": "CVE-2021-21417"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235102001",
+                "Comment": "fluidsynth is earlier than 0:2.2.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235102002",
+                "Comment": "libfluidsynth is earlier than 0:2.2.4-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235102003",
+                "Comment": "libfluidsynth-devel is earlier than 0:2.2.4-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
