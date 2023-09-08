@@ -1,0 +1,118 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235437",
+      "Version": "oval:org.altlinux.errata:def:20235437",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5437: package `pidgin` update to version 2.14.12-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5437",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5437",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-26491",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-26491",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades pidgin to version 2.14.12-alt1. \nSecurity Fix(es):\n\n * CVE-2022-26491: An issue was discovered in Pidgin before 2.14.9. A remote attacker who can spoof DNS responses can redirect a client connection to a malicious server. The client will perform TLS certificate verification of the malicious domain name instead of the original XMPP service domain, allowing the attacker to take over control over the XMPP connection and to obtain user credentials and all communication content. This is similar to CVE-2022-24968.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-08"
+          },
+          "Updated": {
+            "Date": "2023-09-08"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-295",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-26491",
+              "Impact": "Low",
+              "Public": "20220602",
+              "CveID": "CVE-2022-26491"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437001",
+                "Comment": "finch is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437002",
+                "Comment": "finch-devel is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437003",
+                "Comment": "libpurple is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437004",
+                "Comment": "libpurple-client is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437005",
+                "Comment": "libpurple-dbus is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437006",
+                "Comment": "libpurple-devel is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437007",
+                "Comment": "pidgin is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437008",
+                "Comment": "pidgin-devel is earlier than 0:2.14.12-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235437009",
+                "Comment": "pidgin-relnot is earlier than 0:2.14.12-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

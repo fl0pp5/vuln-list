@@ -1,0 +1,136 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235421",
+      "Version": "oval:org.altlinux.errata:def:20235421",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5421: package `podofo` update to version 0.9.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5421",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5421",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2021-30469",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30469",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30470",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30470",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30471",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30471",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-30472",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-30472",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades podofo to version 0.9.8-alt1. \nSecurity Fix(es):\n\n * CVE-2021-30469: A flaw was found in PoDoFo 0.9.7. An use-after-free in PoDoFo::PdfVecObjects::Clear() function can cause a denial of service via a crafted PDF file.\n\n * CVE-2021-30470: A flaw was found in PoDoFo 0.9.7. An uncontrolled recursive call among PdfTokenizer::ReadArray(), PdfTokenizer::GetNextVariant() and PdfTokenizer::ReadDataType() functions can lead to a stack overflow.\n\n * CVE-2021-30471: A flaw was found in PoDoFo 0.9.7. An uncontrolled recursive call in PdfNamesTree::AddToDictionary function in src/podofo/doc/PdfNamesTree.cpp can lead to a stack overflow.\n\n * CVE-2021-30472: A flaw was found in PoDoFo 0.9.7. A stack-based buffer overflow in PdfEncryptMD5Base::ComputeOwnerKey function in PdfEncrypt.cpp is possible because of a improper check of the keyLength value.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-08"
+          },
+          "Updated": {
+            "Date": "2023-09-08"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30469",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-30469"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30470",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-30470"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30471",
+              "Impact": "Low",
+              "Public": "20210526",
+              "CveID": "CVE-2021-30471"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-787",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-30472",
+              "Impact": "High",
+              "Public": "20210526",
+              "CveID": "CVE-2021-30472"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235421001",
+                "Comment": "libpodofo is earlier than 0:0.9.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235421002",
+                "Comment": "libpodofo-devel is earlier than 0:0.9.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235421003",
+                "Comment": "podofo is earlier than 0:0.9.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

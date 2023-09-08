@@ -1,0 +1,101 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235169",
+      "Version": "oval:org.altlinux.errata:def:20235169",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5169: package `docs-alt-server-v` update to version 10.1-alt7",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5169",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5169",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades docs-alt-server-v to version 10.1-alt7. \nSecurity Fix(es):\n\n * #45284: Пропущен пробел в главе про проброс PCI(e) в документации для ALT Server V",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-08"
+          },
+          "Updated": {
+            "Date": "2023-09-08"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "45284",
+              "Href": "https://bugzilla.altlinux.org/45284",
+              "Data": "Пропущен пробел в главе про проброс PCI(e) в документации для ALT Server V"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235169001",
+                "Comment": "docs-alt-server-v is earlier than 0:10.1-alt7"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
