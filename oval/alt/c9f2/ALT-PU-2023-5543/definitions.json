@@ -1,0 +1,100 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235543",
+      "Version": "oval:org.altlinux.errata:def:20235543",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5543: package `cflow` update to version 1.7-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c9f2"
+            ],
+            "Products": [
+              "ALT SPWorkstation",
+              "ALT SPServer"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5543",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5543",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2019-16165",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16165",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2019-16166",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-16166",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades cflow to version 1.7-alt1. \nSecurity Fix(es):\n\n * CVE-2019-16165: GNU cflow through 1.6 has a use-after-free in the reference function in parser.c.\n\n * CVE-2019-16166: GNU cflow through 1.6 has a heap-based buffer over-read in the nexttoken function in parser.c.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-11"
+          },
+          "Updated": {
+            "Date": "2023-09-11"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-416",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16165",
+              "Impact": "Low",
+              "Public": "20190909",
+              "CveID": "CVE-2019-16165"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-125",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-16166",
+              "Impact": "Low",
+              "Public": "20190909",
+              "CveID": "CVE-2019-16166"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:8.4",
+              "cpe:/o:alt:spserver:8.4"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:3001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235543001",
+                "Comment": "cflow is earlier than 0:1.7-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
