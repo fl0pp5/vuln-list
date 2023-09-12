@@ -1,0 +1,128 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235513",
+      "Version": "oval:org.altlinux.errata:def:20235513",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5513: package `myconnector` update to version 2.4.4-alt2",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5513",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5513",
+            "Source": "ALTPU"
+          }
+        ],
+        "Description": "This update upgrades myconnector to version 2.4.4-alt2. \nSecurity Fix(es):\n\n * #44386: На Kworkstation 10.1 при использовании SDDM не запускается режим KIOSK\n\n * #44815: Не создаётся пользователь kiosk с помощью MyConnector Kiosk для MATE\n\n * #47181: Требует xterm\n\n * #47441: Некорректно создается новый пользователь для режима киоск",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-12"
+          },
+          "Updated": {
+            "Date": "2023-09-12"
+          },
+          "bdu": null,
+          "Bugzilla": [
+            {
+              "Id": "44386",
+              "Href": "https://bugzilla.altlinux.org/44386",
+              "Data": "На Kworkstation 10.1 при использовании SDDM не запускается режим KIOSK"
+            },
+            {
+              "Id": "44815",
+              "Href": "https://bugzilla.altlinux.org/44815",
+              "Data": "Не создаётся пользователь kiosk с помощью MyConnector Kiosk для MATE"
+            },
+            {
+              "Id": "47181",
+              "Href": "https://bugzilla.altlinux.org/47181",
+              "Data": "Требует xterm"
+            },
+            {
+              "Id": "47441",
+              "Href": "https://bugzilla.altlinux.org/47441",
+              "Data": "Некорректно создается новый пользователь для режима киоск"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235513001",
+                "Comment": "myconnector is earlier than 0:2.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235513002",
+                "Comment": "myconnector-autostart is earlier than 0:2.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235513003",
+                "Comment": "myconnector-docs is earlier than 0:2.4.4-alt2"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235513004",
+                "Comment": "myconnector-kiosk is earlier than 0:2.4.4-alt2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
