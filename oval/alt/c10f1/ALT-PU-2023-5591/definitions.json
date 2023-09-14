@@ -1,0 +1,110 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235591",
+      "Version": "oval:org.altlinux.errata:def:20235591",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5591: package `salt` update to version 3005.2-alt0.c10.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5591",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5591",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2023-20897",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-20897",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-20898",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-20898",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades salt to version 3005.2-alt0.c10.1. \nSecurity Fix(es):\n\n * CVE-2023-20897: Salt masters prior to 3005.2 or 3006.2 contain a DOS in minion return. After receiving several bad packets on the request server equal to the number of worker threads, the master will become unresponsive to return requests until restarted.\n\n\n * CVE-2023-20898: Git Providers can read from the wrong environment because they get the same cache directory base name in Salt masters prior to 3005.2 or 3006.2. Anything that uses Git Providers with different environments can get garbage data or the wrong data, which can lead to wrongful data disclosure, wrongful executions, data corruption and/or crash.\n",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-14"
+          },
+          "Updated": {
+            "Date": "2023-09-14"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-404",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-20897",
+              "Impact": "Low",
+              "Public": "20230905",
+              "CveID": "CVE-2023-20897"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-20898",
+              "Impact": "High",
+              "Public": "20230905",
+              "CveID": "CVE-2023-20898"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235591001",
+                "Comment": "python3-module-salt is earlier than 0:3005.2-alt0.c10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235591002",
+                "Comment": "salt-api is earlier than 0:3005.2-alt0.c10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235591003",
+                "Comment": "salt-master is earlier than 0:3005.2-alt0.c10.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235591004",
+                "Comment": "salt-minion is earlier than 0:3005.2-alt0.c10.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

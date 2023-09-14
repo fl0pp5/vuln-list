@@ -58,7 +58,7 @@
         "Description": "This update upgrades golang to version 1.20.8-alt1. \nSecurity Fix(es):\n\n * CVE-2023-39318: The html/template package does not properly handle HTML-like \"\" comment tokens, nor hashbang \"#!\" comment tokens, in \u003cscript\u003e contexts. This may cause the template parser to improperly interpret the contents of \u003cscript\u003e contexts, causing actions to be improperly escaped. This may be leveraged to perform an XSS attack.\n\n * CVE-2023-39319: The html/template package does not apply the proper rules for handling occurrences of \"\u003cscript\", \"\u003c!--\", and \"\u003c/script\" within JS literals in \u003cscript\u003e contexts. This may cause the template parser to improperly consider script contexts to be terminated early, causing actions to be improperly escaped. This could be leveraged to perform an XSS attack.\n\n * CVE-2023-39320: The go.mod toolchain directive, introduced in Go 1.21, can be leveraged to execute scripts and binaries relative to the root of the module when the \"go\" command was executed within the module. This applies to modules downloaded using the \"go\" command from the module proxy, as well as modules downloaded directly using VCS software.\n\n * CVE-2023-39321: Processing an incomplete post-handshake message for a QUIC connection can cause a panic.\n\n * CVE-2023-39322: QUIC connections do not set an upper bound on the amount of data buffered when reading post-handshake messages, allowing a malicious QUIC connection to cause unbounded memory growth. With fix, connections now consistently reject messages larger than 65KiB in size.",
         "Advisory": {
           "From": "errata.altlinux.org",
-          "Severity": "Low",
+          "Severity": "Critical",
           "Rights": "Copyright 2023 BaseALT Ltd.",
           "Issued": {
             "Date": "2023-09-07"
@@ -69,32 +69,42 @@
           "bdu": null,
           "Cves": [
             {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
               "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39318",
-              "Impact": "None",
+              "Impact": "Low",
               "Public": "20230908",
               "CveID": "CVE-2023-39318"
             },
             {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
               "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39319",
-              "Impact": "None",
+              "Impact": "Low",
               "Public": "20230908",
               "CveID": "CVE-2023-39319"
             },
             {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
               "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39320",
-              "Impact": "None",
+              "Impact": "Critical",
               "Public": "20230908",
               "CveID": "CVE-2023-39320"
             },
             {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
               "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39321",
-              "Impact": "None",
+              "Impact": "High",
               "Public": "20230908",
               "CveID": "CVE-2023-39321"
             },
             {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
               "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39322",
-              "Impact": "None",
+              "Impact": "High",
               "Public": "20230908",
               "CveID": "CVE-2023-39322"
             }
