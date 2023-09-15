@@ -1,0 +1,163 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235642",
+      "Version": "oval:org.altlinux.errata:def:20235642",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5642: package `open-vm-tools` update to version 12.3.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5642",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5642",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03162",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03162",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-05064",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-05064",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2021-31693",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-31693",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-20867",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-20867",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-20900",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-20900",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades open-vm-tools to version 12.3.0-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03162: Уязвимость модуля vgauth компонента VMware Tools гипервизора VMware ESXi, позволяющая нарушителю оказать влияние на конфиденциальность и целостность защищаемой информации\n\n * BDU:2023-05064: Уязвимость набора утилит VMware Tools, связанная с возможностью обхода подписи SAML-токена, позволяющая нарушителю повысить свои привилегии\n\n * CVE-2021-31693: The 10Web Photo Gallery plugin through 1.5.68 for WordPress allows XSS via album_gallery_id_0, bwg_album_search_0, and type_0 for bwg_frontend_data. NOTE: other parameters are covered by CVE-2021-24291, CVE-2021-25041, and CVE-2021-46889. NOTE: VMware information, previously connected to this CVE ID because of a typo, is at CVE-2022-31693.\n\n * CVE-2023-20867: A fully compromised ESXi host can force VMware Tools to fail to authenticate host-to-guest operations, impacting the confidentiality and integrity of the guest virtual machine.\n\n * CVE-2023-20900: A malicious actor that has been granted  Guest Operation Privileges https://docs.vmware.com/en/VMware-vSphere/8.0/vsphere-security/GUID-6A952214-0E5E-4CCF-9D2A-90948FF643EC.html  in a target virtual machine may be able to elevate their privileges if that target virtual machine has been assigned a more privileged  Guest Alias https://vdc-download.vmware.com/vmwb-repository/dcr-public/d1902b0e-d479-46bf-8ac9-cee0e31e8ec0/07ce8dbd-db48-4261-9b8f-c6d3ad8ba472/vim.vm.guest.AliasManager.html .\n\n * #35890: Миграция на /run и /run/lock",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-15"
+          },
+          "Updated": {
+            "Date": "2023-09-15"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:L/AC:H/Au:M/C:P/I:P/A:N",
+              "Cvss3": "AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://bdu.fstec.ru/vul/2023-03162",
+              "Impact": "Low",
+              "Public": "20230613",
+              "CveID": "BDU:2023-03162"
+            },
+            {
+              "Cvss": "AV:A/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-310",
+              "Href": "https://bdu.fstec.ru/vul/2023-05064",
+              "Impact": "High",
+              "Public": "20230831",
+              "CveID": "BDU:2023-05064"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-31693",
+              "Impact": "Low",
+              "Public": "20221129",
+              "CveID": "CVE-2021-31693"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-287",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-20867",
+              "Impact": "Low",
+              "Public": "20230613",
+              "CveID": "CVE-2023-20867"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:A/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-294",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-20900",
+              "Impact": "High",
+              "Public": "20230831",
+              "CveID": "CVE-2023-20900"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "35890",
+              "Href": "https://bugzilla.altlinux.org/35890",
+              "Data": "Миграция на /run и /run/lock"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235642001",
+                "Comment": "open-vm-tools is earlier than 0:12.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235642002",
+                "Comment": "open-vm-tools-desktop is earlier than 0:12.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235642003",
+                "Comment": "open-vm-tools-devel is earlier than 0:12.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235642004",
+                "Comment": "open-vm-tools-salt-minion is earlier than 0:12.3.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235642005",
+                "Comment": "open-vm-tools-test is earlier than 0:12.3.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
