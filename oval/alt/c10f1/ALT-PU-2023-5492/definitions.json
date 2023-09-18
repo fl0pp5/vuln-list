@@ -1,0 +1,436 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20235492",
+      "Version": "oval:org.altlinux.errata:def:20235492",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-5492: package `golang` update to version 1.20.8-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch c10f1"
+            ],
+            "Products": [
+              "ALT SP Workstation",
+              "ALT SP Server"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-5492",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-5492",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2023-03200",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03200",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03201",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03201",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03470",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03470",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03471",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03471",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-03472",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-03472",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04160",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04160",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2023-04161",
+            "RefURL": "https://bdu.fstec.ru/vul/2023-04161",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2023-24534",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24534",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24536",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24536",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24537",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24537",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24538",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24538",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24539",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24539",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-24540",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-24540",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29400",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29400",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29402",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29402",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29403",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29403",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29404",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29404",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29405",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29405",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29406",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29406",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-29409",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-29409",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39318",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39318",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39319",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39319",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39320",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39320",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39321",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39321",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-39322",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-39322",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades golang to version 1.20.8-alt1. \nSecurity Fix(es):\n\n * BDU:2023-03200: Уязвимость языка программирования Go, связанная с небезопасным внешним контролем за критическими данными состояния, позволяющая нарушителю повысить свои привилегии и получить доступ на чтение, изменение или удаление данных\n\n * BDU:2023-03201: Уязвимость модуля Cgo языка программирования Go, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03470: Уязвимость языка программирования Go, связанная с ошибками при обработке специальных символов \u0026quot;\u0026lt;\u0026gt;\u0026quot; в контексте CSS, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-03471: Уязвимость языка программирования Go, связанная с ошибками при обработке пробельных символов в контексте JavaScript, позволяющая нарушителю оказать воздействие на конфиденциальность, целостность и доступность защищаемой информации\n\n * BDU:2023-03472: Уязвимость языка программирования Go, существующая из-за непринятия мер по нейтрализации специальных элементов, позволяющая нарушителю внедрить произвольные атрибуты в теги HTML\n\n * BDU:2023-04160: Уязвимость расширения Cgo языка программирования Go, позволяющая нарушителю выполнить произвольный код\n\n * BDU:2023-04161: Уязвимость расширения Cgo языка программирования Go, позволяющая нарушителю выполнить произвольный код\n\n * CVE-2023-24534: HTTP and MIME header parsing can allocate large amounts of memory, even when parsing small inputs, potentially leading to a denial of service. Certain unusual patterns of input data can cause the common function used to parse HTTP and MIME headers to allocate substantially more memory than required to hold the parsed headers. An attacker can exploit this behavior to cause an HTTP server to allocate large amounts of memory from a small request, potentially leading to memory exhaustion and a denial of service. With fix, header parsing now correctly allocates only the memory required to hold parsed headers.\n\n * CVE-2023-24536: Multipart form parsing can consume large amounts of CPU and memory when processing form inputs containing very large numbers of parts. This stems from several causes: 1. mime/multipart.Reader.ReadForm limits the total memory a parsed multipart form can consume. ReadForm can undercount the amount of memory consumed, leading it to accept larger inputs than intended. 2. Limiting total memory does not account for increased pressure on the garbage collector from large numbers of small allocations in forms with many parts. 3. ReadForm can allocate a large number of short-lived buffers, further increasing pressure on the garbage collector. The combination of these factors can permit an attacker to cause an program that parses multipart forms to consume large amounts of CPU and memory, potentially resulting in a denial of service. This affects programs that use mime/multipart.Reader.ReadForm, as well as form parsing in the net/http package with the Request methods FormFile, FormValue, ParseMultipartForm, and PostFormValue. With fix, ReadForm now does a better job of estimating the memory consumption of parsed forms, and performs many fewer short-lived allocations. In addition, the fixed mime/multipart.Reader imposes the following limits on the size of parsed forms: 1. Forms parsed with ReadForm may contain no more than 1000 parts. This limit may be adjusted with the environment variable GODEBUG=multipartmaxparts=. 2. Form parts parsed with NextPart and NextRawPart may contain no more than 10,000 header fields. In addition, forms parsed with ReadForm may contain no more than 10,000 header fields across all parts. This limit may be adjusted with the environment variable GODEBUG=multipartmaxheaders=.\n\n * CVE-2023-24537: Calling any of the Parse functions on Go source code which contains //line directives with very large line numbers can cause an infinite loop due to integer overflow.\n\n * CVE-2023-24538: Templates do not properly consider backticks (`) as Javascript string delimiters, and do not escape them as expected. Backticks are used, since ES6, for JS template literals. If a template contains a Go template action within a Javascript template literal, the contents of the action can be used to terminate the literal, injecting arbitrary Javascript code into the Go template. As ES6 template literals are rather complex, and themselves can do string interpolation, the decision was made to simply disallow Go template actions from being used inside of them (e.g. \"var a = {{.}}\"), since there is no obviously safe way to allow this behavior. This takes the same approach as github.com/google/safehtml. With fix, Template.Parse returns an Error when it encounters templates like this, with an ErrorCode of value 12. This ErrorCode is currently unexported, but will be exported in the release of Go 1.21. Users who rely on the previous behavior can re-enable it using the GODEBUG flag jstmpllitinterp=1, with the caveat that backticks will now be escaped. This should be used with caution.\n\n * CVE-2023-24539: Angle brackets (\u003c\u003e) are not considered dangerous characters when inserted into CSS contexts. Templates containing multiple actions separated by a '/' character can result in unexpectedly closing the CSS context and allowing for injection of unexpected HTML, if executed with untrusted input.\n\n * CVE-2023-24540: Not all valid JavaScript whitespace characters are considered to be whitespace. Templates containing whitespace characters outside of the character set \"\\t\\n\\f\\r\\u0020\\u2028\\u2029\" in JavaScript contexts that also contain actions may not be properly sanitized during execution.\n\n * CVE-2023-29400: Templates containing actions in unquoted HTML attributes (e.g. \"attr={{.}}\") executed with empty input can result in output with unexpected results when parsed due to HTML normalization rules. This may allow injection of arbitrary attributes into tags.\n\n * CVE-2023-29402: The go command may generate unexpected code at build time when using cgo. This may result in unexpected behavior when running a go program which uses cgo. This may occur when running an untrusted module which contains directories with newline characters in their names. Modules which are retrieved using the go command, i.e. via \"go get\", are not affected (modules retrieved using GOPATH-mode, i.e. GO111MODULE=off, may be affected).\n\n * CVE-2023-29403: On Unix platforms, the Go runtime does not behave differently when a binary is run with the setuid/setgid bits. This can be dangerous in certain cases, such as when dumping memory state, or assuming the status of standard i/o file descriptors. If a setuid/setgid binary is executed with standard I/O file descriptors closed, opening any files can result in unexpected content being read or written with elevated privileges. Similarly, if a setuid/setgid program is terminated, either via panic or signal, it may leak the contents of its registers.\n\n * CVE-2023-29404: The go command may execute arbitrary code at build time when using cgo. This may occur when running \"go get\" on a malicious module, or when running any other command which builds untrusted code. This is can by triggered by linker flags, specified via a \"#cgo LDFLAGS\" directive. The arguments for a number of flags which are non-optional are incorrectly considered optional, allowing disallowed flags to be smuggled through the LDFLAGS sanitization. This affects usage of both the gc and gccgo compilers.\n\n * CVE-2023-29405: The go command may execute arbitrary code at build time when using cgo. This may occur when running \"go get\" on a malicious module, or when running any other command which builds untrusted code. This is can by triggered by linker flags, specified via a \"#cgo LDFLAGS\" directive. Flags containing embedded spaces are mishandled, allowing disallowed flags to be smuggled through the LDFLAGS sanitization by including them in the argument of another flag. This only affects usage of the gccgo compiler.\n\n * CVE-2023-29406: The HTTP/1 client does not fully validate the contents of the Host header. A maliciously crafted Host header can inject additional headers or entire requests. With fix, the HTTP/1 client now refuses to send requests containing an invalid Request.Host or Request.URL.Host value.\n\n * CVE-2023-29409: Extremely large RSA keys in certificate chains can cause a client/server to expend significant CPU time verifying signatures. With fix, the size of RSA keys transmitted during handshakes is restricted to \u003c= 8192 bits. Based on a survey of publicly trusted RSA keys, there are currently only three certificates in circulation with keys larger than this, and all three appear to be test certificates that are not actively deployed. It is possible there are larger keys in use in private PKIs, but we target the web PKI, so causing breakage here in the interests of increasing the default safety of users of crypto/tls seems reasonable.\n\n * CVE-2023-39318: The html/template package does not properly handle HTML-like \"\" comment tokens, nor hashbang \"#!\" comment tokens, in \u003cscript\u003e contexts. This may cause the template parser to improperly interpret the contents of \u003cscript\u003e contexts, causing actions to be improperly escaped. This may be leveraged to perform an XSS attack.\n\n * CVE-2023-39319: The html/template package does not apply the proper rules for handling occurrences of \"\u003cscript\", \"\u003c!--\", and \"\u003c/script\" within JS literals in \u003cscript\u003e contexts. This may cause the template parser to improperly consider script contexts to be terminated early, causing actions to be improperly escaped. This could be leveraged to perform an XSS attack.\n\n * CVE-2023-39320: The go.mod toolchain directive, introduced in Go 1.21, can be leveraged to execute scripts and binaries relative to the root of the module when the \"go\" command was executed within the module. This applies to modules downloaded using the \"go\" command from the module proxy, as well as modules downloaded directly using VCS software.\n\n * CVE-2023-39321: Processing an incomplete post-handshake message for a QUIC connection can cause a panic.\n\n * CVE-2023-39322: QUIC connections do not set an upper bound on the amount of data buffered when reading post-handshake messages, allowing a malicious QUIC connection to cause unbounded memory growth. With fix, connections now consistently reject messages larger than 65KiB in size.\n\n * #45547: golang ultimately depends on cmake and /usr/bin/docker",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:L",
+              "Cwe": "CWE-642",
+              "Href": "https://bdu.fstec.ru/vul/2023-03200",
+              "Impact": "Low",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03200"
+            },
+            {
+              "Cvss": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2023-03201",
+              "Impact": "High",
+              "Public": "20230405",
+              "CveID": "BDU:2023-03201"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2023-03470",
+              "Impact": "High",
+              "Public": "20230511",
+              "CveID": "BDU:2023-03470"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2023-03471",
+              "Impact": "Critical",
+              "Public": "20230511",
+              "CveID": "BDU:2023-03471"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://bdu.fstec.ru/vul/2023-03472",
+              "Impact": "High",
+              "Public": "20230511",
+              "CveID": "BDU:2023-03472"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74, CWE-88",
+              "Href": "https://bdu.fstec.ru/vul/2023-04160",
+              "Impact": "Critical",
+              "Public": "20230519",
+              "CveID": "BDU:2023-04160"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://bdu.fstec.ru/vul/2023-04161",
+              "Impact": "Critical",
+              "Public": "20230519",
+              "CveID": "BDU:2023-04161"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24534",
+              "Impact": "High",
+              "Public": "20230406",
+              "CveID": "CVE-2023-24534"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24536",
+              "Impact": "High",
+              "Public": "20230406",
+              "CveID": "CVE-2023-24536"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-190",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24537",
+              "Impact": "High",
+              "Public": "20230406",
+              "CveID": "CVE-2023-24537"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24538",
+              "Impact": "Critical",
+              "Public": "20230406",
+              "CveID": "CVE-2023-24538"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24539",
+              "Impact": "High",
+              "Public": "20230511",
+              "CveID": "CVE-2023-24539"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-24540",
+              "Impact": "Critical",
+              "Public": "20230511",
+              "CveID": "CVE-2023-24540"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29400",
+              "Impact": "High",
+              "Public": "20230511",
+              "CveID": "CVE-2023-29400"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29402",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29402"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-668",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29403",
+              "Impact": "High",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29403"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29404",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29404"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-74",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29405",
+              "Impact": "Critical",
+              "Public": "20230608",
+              "CveID": "CVE-2023-29405"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-436",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29406",
+              "Impact": "Low",
+              "Public": "20230711",
+              "CveID": "CVE-2023-29406"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-29409",
+              "Impact": "Low",
+              "Public": "20230802",
+              "CveID": "CVE-2023-29409"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39318",
+              "Impact": "Low",
+              "Public": "20230908",
+              "CveID": "CVE-2023-39318"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39319",
+              "Impact": "Low",
+              "Public": "20230908",
+              "CveID": "CVE-2023-39319"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39320",
+              "Impact": "Critical",
+              "Public": "20230908",
+              "CveID": "CVE-2023-39320"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39321",
+              "Impact": "High",
+              "Public": "20230908",
+              "CveID": "CVE-2023-39321"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-770",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-39322",
+              "Impact": "High",
+              "Public": "20230908",
+              "CveID": "CVE-2023-39322"
+            }
+          ],
+          "Bugzilla": [
+            {
+              "Id": "45547",
+              "Href": "https://bugzilla.altlinux.org/45547",
+              "Data": "golang ultimately depends on cmake and /usr/bin/docker"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:spworkstation:10",
+              "cpe:/o:alt:spserver:10"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:4001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492001",
+                "Comment": "golang is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492002",
+                "Comment": "golang-docs is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492003",
+                "Comment": "golang-gdb is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492004",
+                "Comment": "golang-misc is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492005",
+                "Comment": "golang-shared is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492006",
+                "Comment": "golang-src is earlier than 0:1.20.8-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20235492007",
+                "Comment": "golang-tests is earlier than 0:1.20.8-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
