@@ -1,0 +1,185 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234269",
+      "Version": "oval:org.altlinux.errata:def:20234269",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4269: package `gem-rails-html-sanitizer` update to version 1.5.0-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4269",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4269",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2022-06004",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-06004",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2022-23517",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23517",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23518",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23518",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23519",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23519",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23520",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23520",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32209",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32209",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-rails-html-sanitizer to version 1.5.0-alt1. \nSecurity Fix(es):\n\n * BDU:2022-06004: Уязвимость реализации конфигурации инструмента очистки HTML для приложений Rails Rails Html Sanitizer, позволяющая нарушителю проводить межсайтовые сценарные атаки\n\n * CVE-2022-23517: rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. Certain configurations of rails-html-sanitizer \u003c 1.4.4 use an inefficient regular expression that is susceptible to excessive backtracking when attempting to sanitize certain SVG attributes. This may lead to a denial of service through CPU resource consumption. This issue has been patched in version 1.4.4.\n\n * CVE-2022-23518: rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. Versions \u003e= 1.0.3, \u003c 1.4.4 are vulnerable to cross-site scripting via data URIs when used in combination with Loofah \u003e= 2.1.0. This issue is patched in version 1.4.4.\n\n * CVE-2022-23519: rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. Prior to version 1.4.4, a possible XSS vulnerability with certain configurations of Rails::Html::Sanitizer may allow an attacker to inject content if the application developer has overridden the sanitizer's allowed tags in either of the following ways: allow both \"math\" and \"style\" elements,  or allow both \"svg\" and \"style\" elements. Code is only impacted if allowed tags are being overridden. . This issue is fixed in version 1.4.4. All users overriding the allowed tags to include \"math\" or \"svg\" and \"style\" should either upgrade or use the following workaround immediately: Remove \"style\" from the overridden allowed tags, or remove \"math\" and \"svg\" from the overridden allowed tags.\n\n\n * CVE-2022-23520: rails-html-sanitizer is responsible for sanitizing HTML fragments in Rails applications. Prior to version 1.4.4, there is a possible XSS vulnerability with certain configurations of Rails::Html::Sanitizer due to an incomplete fix of CVE-2022-32209. Rails::Html::Sanitizer may allow an attacker to inject content if the application developer has overridden the sanitizer's allowed tags to allow both \"select\" and \"style\" elements. Code is only impacted if allowed tags are being overridden. This issue is patched in version 1.4.4. All users overriding the allowed tags to include both \"select\" and \"style\" should either upgrade or use this workaround: Remove either \"select\" or \"style\" from the overridden allowed tags. NOTE: Code is _not_ impacted if allowed tags are overridden using either the :tags option to the Action View helper method sanitize or the :tags option to the instance method SafeListSanitizer#sanitize.\n\n\n * CVE-2022-32209: # Possible XSS Vulnerability in Rails::Html::SanitizerThere is a possible XSS vulnerability with certain configurations of Rails::Html::Sanitizer.This vulnerability has been assigned the CVE identifier CVE-2022-32209.Versions Affected: ALLNot affected: NONEFixed Versions: v1.4.3## ImpactA possible XSS vulnerability with certain configurations of Rails::Html::Sanitizer may allow an attacker to inject content if the application developer has overridden the sanitizer's allowed tags to allow both `select` and `style` elements.Code is only impacted if allowed tags are being overridden. This may be done via application configuration:```ruby# In config/application.rbconfig.action_view.sanitized_allowed_tags = [\"select\", \"style\"]```see https://guides.rubyonrails.org/configuring.html#configuring-action-viewOr it may be done with a `:tags` option to the Action View helper `sanitize`:```\u003c%= sanitize @comment.body, tags: [\"select\", \"style\"] %\u003e```see https://api.rubyonrails.org/classes/ActionView/Helpers/SanitizeHelper.html#method-i-sanitizeOr it may be done with Rails::Html::SafeListSanitizer directly:```ruby# class-level optionRails::Html::SafeListSanitizer.allowed_tags = [\"select\", \"style\"]```or```ruby# instance-level optionRails::Html::SafeListSanitizer.new.sanitize(@article.body, tags: [\"select\", \"style\"])```All users overriding the allowed tags by any of the above mechanisms to include both \"select\" and \"style\" should either upgrade or use one of the workarounds immediately.## ReleasesThe FIXED releases are available at the normal locations.## WorkaroundsRemove either `select` or `style` from the overridden allowed tags.## CreditsThis vulnerability was responsibly reported by [windshock](https://hackerone.com/windshock?type=user).",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-06004",
+              "Impact": "Low",
+              "Public": "20220405",
+              "CveID": "BDU:2022-06004"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-1333",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23517",
+              "Impact": "High",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23517"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23518",
+              "Impact": "Low",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23518"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23519",
+              "Impact": "Low",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23519"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23520",
+              "Impact": "Low",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23520"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32209",
+              "Impact": "Low",
+              "Public": "20220624",
+              "CveID": "CVE-2022-32209"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234269001",
+                "Comment": "gem-rails-html-sanitizer is earlier than 0:1.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234269002",
+                "Comment": "gem-rails-html-sanitizer-devel is earlier than 0:1.5.0-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234269003",
+                "Comment": "gem-rails-html-sanitizer-doc is earlier than 0:1.5.0-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

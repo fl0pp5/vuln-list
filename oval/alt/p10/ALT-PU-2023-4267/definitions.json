@@ -1,0 +1,143 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234267",
+      "Version": "oval:org.altlinux.errata:def:20234267",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4267: package `gem-loofah` update to version 2.19.1-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4267",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4267",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-23514",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23514",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23515",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23515",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23516",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23516",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-loofah to version 2.19.1-alt1. \nSecurity Fix(es):\n\n * CVE-2022-23514: Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Loofah \u003c 2.19.1 contains an inefficient regular expression that is susceptible to excessive backtracking when attempting to sanitize certain SVG attributes. This may lead to a denial of service through CPU resource consumption. This issue is patched in version 2.19.1.\n\n * CVE-2022-23515: Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Loofah \u003e= 2.1.0, \u003c 2.19.1 is vulnerable to cross-site scripting via the image/svg+xml media type in data URIs. This issue is patched in version 2.19.1.\n\n * CVE-2022-23516: Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Loofah \u003e= 2.2.0, \u003c 2.19.1 uses recursion for sanitizing CDATA sections, making it susceptible to stack exhaustion and raising a SystemStackError exception.  This may lead to a denial of service through CPU resource consumption. This issue is patched in version 2.19.1. Users who are unable to upgrade may be able to mitigate this vulnerability by limiting the length of the strings that are sanitized.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "High",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-1333",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23514",
+              "Impact": "High",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23514"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23515",
+              "Impact": "Low",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23515"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-674",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23516",
+              "Impact": "High",
+              "Public": "20221214",
+              "CveID": "CVE-2022-23516"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234267001",
+                "Comment": "gem-loofah is earlier than 0:2.19.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234267002",
+                "Comment": "gem-loofah-devel is earlier than 0:2.19.1-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234267003",
+                "Comment": "gem-loofah-doc is earlier than 0:2.19.1-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

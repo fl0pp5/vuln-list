@@ -1,0 +1,565 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234268",
+      "Version": "oval:org.altlinux.errata:def:20234268",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4268: package `gem-rails` update to version 6.1.7.1-alt1.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4268",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4268",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04601",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04601",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05203",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05203",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2021-05269",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-05269",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-00323",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-00323",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "BDU:2022-04353",
+            "RefURL": "https://bdu.fstec.ru/vul/2022-04353",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2020-8166",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8166",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8167",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8167",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2020-8185",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2020-8185",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22880",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22880",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22885",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22885",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22902",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22902",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-22904",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-22904",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2021-44528",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2021-44528",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-21831",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-21831",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23633",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23633",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-23634",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-23634",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-27777",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-27777",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-32224",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32224",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2022-44566",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-44566",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22792",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22792",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22794",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22794",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22795",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22795",
+            "Source": "CVE"
+          },
+          {
+            "RefID": "CVE-2023-22796",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2023-22796",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-rails to version 6.1.7.1-alt1.1. \nSecurity Fix(es):\n\n * BDU:2021-04601: Уязвимость обработчика регулярных выражений парсера Mime-типа функционала Action Dispatch фреймворка actionpack ruby gem программной платформы Ruby on Rails, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05203: Уязвимость логики Token Authentication компонента Action Controller плагина actionpack программной платформы Ruby on Rails, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2021-05269: Уязвимость справок redirect_to и polymorphic_url компонента Action Pack программной платформы Ruby on Rails, связанная с утечкой информации в сообщениях об ошибках, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * BDU:2022-00323: Уязвимость адаптера PostgreSQL фреймворка rails, связанная с неконтролируемым расходом ресурсов, позволяющая нарушителю вызвать отказ в обслуживании\n\n * BDU:2022-04353: Уязвимость плагина actionpack программной платформы Ruby on Rails, позволяющая нарушителю провести атаку межсайтового скриптинга (XSS)\n\n * CVE-2020-8166: A CSRF forgery vulnerability exists in rails \u003c 5.2.5, rails \u003c 6.0.4 that makes it possible for an attacker to, given a global CSRF token such as the one present in the authenticity_token meta tag, forge a per-form CSRF token.\n\n * CVE-2020-8167: A CSRF vulnerability exists in rails \u003c= 6.0.3 rails-ujs module that could allow attackers to send CSRF tokens to wrong domains.\n\n * CVE-2020-8185: A denial of service vulnerability exists in Rails \u003c6.0.3.2 that allowed an untrusted user to run any pending migrations on a Rails app running in production.\n\n * CVE-2021-22880: The PostgreSQL adapter in Active Record before 6.1.2.1, 6.0.3.5, 5.2.4.5 suffers from a regular expression denial of service (REDoS) vulnerability. Carefully crafted input can cause the input validation in the `money` type of the PostgreSQL adapter in Active Record to spend too much time in a regular expression, resulting in the potential for a DoS attack. This only impacts Rails applications that are using PostgreSQL along with money type columns that take user input.\n\n * CVE-2021-22885: A possible information disclosure / unintended method execution vulnerability in Action Pack \u003e= 2.0.0 when using the `redirect_to` or `polymorphic_url`helper with untrusted user input.\n\n * CVE-2021-22902: The actionpack ruby gem (a framework for handling and responding to web requests in Rails) before 6.0.3.7, 6.1.3.2 suffers from a possible denial of service vulnerability in the Mime type parser of Action Dispatch. Carefully crafted Accept headers can cause the mime type parser in Action Dispatch to do catastrophic backtracking in the regular expression engine.\n\n * CVE-2021-22904: The actionpack ruby gem before 6.1.3.2, 6.0.3.7, 5.2.4.6, 5.2.6 suffers from a possible denial of service vulnerability in the Token Authentication logic in Action Controller due to a too permissive regular expression. Impacted code uses `authenticate_or_request_with_http_token` or `authenticate_with_http_token` for request authentication.\n\n * CVE-2021-44528: A open redirect vulnerability exists in Action Pack \u003e= 6.0.0 that could allow an attacker to craft a \"X-Forwarded-Host\" headers in combination with certain \"allowed host\" formats can cause the Host Authorization middleware in Action Pack to redirect users to a malicious website.\n\n * CVE-2022-21831: A code injection vulnerability exists in the Active Storage \u003e= v5.2.0 that could allow an attacker to execute code via image_processing arguments.\n\n * CVE-2022-23633: Action Pack is a framework for handling and responding to web requests. Under certain circumstances response bodies will not be closed. In the event a response is *not* notified of a `close`, `ActionDispatch::Executor` will not know to reset thread local state for the next request. This can lead to data being leaked to subsequent requests.This has been fixed in Rails 7.0.2.1, 6.1.4.5, 6.0.4.5, and 5.2.6.1. Upgrading is highly recommended, but to work around this problem a middleware described in GHSA-wh98-p28r-vrc9 can be used.\n\n * CVE-2022-23634: Puma is a Ruby/Rack web server built for parallelism. Prior to `puma` version `5.6.2`, `puma` may not always call `close` on the response body. Rails, prior to version `7.0.2.2`, depended on the response body being closed in order for its `CurrentAttributes` implementation to work correctly. The combination of these two behaviors (Puma not closing the body + Rails' Executor implementation) causes information leakage. This problem is fixed in Puma versions 5.6.2 and 4.3.11. This problem is fixed in Rails versions 7.02.2, 6.1.4.6, 6.0.4.6, and 5.2.6.2. Upgrading to a patched Rails _or_ Puma version fixes the vulnerability.\n\n * CVE-2022-27777: A XSS Vulnerability in Action View tag helpers \u003e= 5.2.0 and \u003c 5.2.0 which would allow an attacker to inject content if able to control input into specific attributes.\n\n * CVE-2022-32224: A possible escalation to RCE vulnerability exists when using YAML serialized columns in Active Record \u003c 7.0.3.1, \u003c6.1.6.1, \u003c6.0.5.1 and \u003c5.2.8.1 which could allow an attacker, that can manipulate data in the database (via means like SQL injection), the ability to escalate to an RCE.\n\n * CVE-2022-44566: A denial of service vulnerability present in ActiveRecord's PostgreSQL adapter \u003c7.0.4.1 and \u003c6.1.7.1. When a value outside the range for a 64bit signed integer is provided to the PostgreSQL connection adapter, it will treat the target column type as numeric. Comparing integer values against numeric values can result in a slow sequential scan resulting in potential Denial of Service.\n\n * CVE-2023-22792: A regular expression based DoS vulnerability in Action Dispatch \u003c6.0.6.1,\u003c 6.1.7.1, and \u003c7.0.4.1. Specially crafted cookies, in combination with a specially crafted X_FORWARDED_HOST header can cause the regular expression engine to enter a state of catastrophic backtracking. This can cause the process to use large amounts of CPU and memory, leading to a possible DoS vulnerability All users running an affected release should either upgrade or use one of the workarounds immediately.\n\n * CVE-2023-22794: A vulnerability in ActiveRecord \u003c6.0.6.1, v6.1.7.1 and v7.0.4.1 related to the sanitization of comments. If malicious user input is passed to either the `annotate` query method, the `optimizer_hints` query method, or through the QueryLogs interface which automatically adds annotations, it may be sent to the database withinsufficient sanitization and be able to inject SQL outside of the comment.\n\n * CVE-2023-22795: A regular expression based DoS vulnerability in Action Dispatch \u003c6.1.7.1 and \u003c7.0.4.1 related to the If-None-Match header. A specially crafted HTTP If-None-Match header can cause the regular expression engine to enter a state of catastrophic backtracking, when on a version of Ruby below 3.2.0. This can cause the process to use large amounts of CPU and memory, leading to a possible DoS vulnerability All users running an affected release should either upgrade or use one of the workarounds immediately.\n\n * CVE-2023-22796: A regular expression based DoS vulnerability in Active Support \u003c6.1.7.1 and \u003c7.0.4.1. A specially crafted string passed to the underscore method can cause the regular expression engine to enter a state of catastrophic backtracking. This can cause the process to use large amounts of CPU and memory, leading to a possible DoS vulnerability.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-04601",
+              "Impact": "High",
+              "Public": "20210501",
+              "CveID": "BDU:2021-04601"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2021-05203",
+              "Impact": "High",
+              "Public": "20210501",
+              "CveID": "BDU:2021-05203"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-209",
+              "Href": "https://bdu.fstec.ru/vul/2021-05269",
+              "Impact": "High",
+              "Public": "20210218",
+              "CveID": "BDU:2021-05269"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://bdu.fstec.ru/vul/2022-00323",
+              "Impact": "High",
+              "Public": "20210211",
+              "CveID": "BDU:2022-00323"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://bdu.fstec.ru/vul/2022-04353",
+              "Impact": "Low",
+              "Public": "20220526",
+              "CveID": "BDU:2022-04353"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8166",
+              "Impact": "Low",
+              "Public": "20200702",
+              "CveID": "CVE-2020-8166"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+              "Cwe": "CWE-352",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8167",
+              "Impact": "Low",
+              "Public": "20200619",
+              "CveID": "CVE-2020-8167"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:S/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2020-8185",
+              "Impact": "Low",
+              "Public": "20200702",
+              "CveID": "CVE-2020-8185"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-400",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22880",
+              "Impact": "High",
+              "Public": "20210211",
+              "CveID": "CVE-2021-22880"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-209",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22885",
+              "Impact": "High",
+              "Public": "20210527",
+              "CveID": "CVE-2021-22885"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22902",
+              "Impact": "High",
+              "Public": "20210611",
+              "CveID": "CVE-2021-22902"
+            },
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-22904",
+              "Impact": "High",
+              "Public": "20210611",
+              "CveID": "CVE-2021-22904"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-601",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2021-44528",
+              "Impact": "Low",
+              "Public": "20220110",
+              "CveID": "CVE-2021-44528"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-94",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-21831",
+              "Impact": "Critical",
+              "Public": "20220526",
+              "CveID": "CVE-2022-21831"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-212",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23633",
+              "Impact": "Low",
+              "Public": "20220211",
+              "CveID": "CVE-2022-23633"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+              "Cwe": "CWE-404",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-23634",
+              "Impact": "Low",
+              "Public": "20220211",
+              "CveID": "CVE-2022-23634"
+            },
+            {
+              "Cvss": "AV:N/AC:M/Au:N/C:N/I:P/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+              "Cwe": "CWE-79",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-27777",
+              "Impact": "Low",
+              "Public": "20220526",
+              "CveID": "CVE-2022-27777"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-502",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32224",
+              "Impact": "Critical",
+              "Public": "20221205",
+              "CveID": "CVE-2022-32224"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "NVD-CWE-Other",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-44566",
+              "Impact": "High",
+              "Public": "20230209",
+              "CveID": "CVE-2022-44566"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-1333",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22792",
+              "Impact": "High",
+              "Public": "20230209",
+              "CveID": "CVE-2023-22792"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "CWE-89",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22794",
+              "Impact": "High",
+              "Public": "20230209",
+              "CveID": "CVE-2023-22794"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-1333",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22795",
+              "Impact": "High",
+              "Public": "20230209",
+              "CveID": "CVE-2023-22795"
+            },
+            {
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "Cwe": "CWE-1333",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2023-22796",
+              "Impact": "High",
+              "Public": "20230209",
+              "CveID": "CVE-2023-22796"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268001",
+                "Comment": "gem-actioncable is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268002",
+                "Comment": "gem-actioncable-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268003",
+                "Comment": "gem-actioncable-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268004",
+                "Comment": "gem-actionmailbox is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268005",
+                "Comment": "gem-actionmailbox-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268006",
+                "Comment": "gem-actionmailbox-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268007",
+                "Comment": "gem-actionmailer is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268008",
+                "Comment": "gem-actionmailer-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268009",
+                "Comment": "gem-actionmailer-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268010",
+                "Comment": "gem-actionpack is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268011",
+                "Comment": "gem-actionpack-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268012",
+                "Comment": "gem-actionpack-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268013",
+                "Comment": "gem-actiontext is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268014",
+                "Comment": "gem-actiontext-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268015",
+                "Comment": "gem-actiontext-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268016",
+                "Comment": "gem-actionview is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268017",
+                "Comment": "gem-actionview-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268018",
+                "Comment": "gem-actionview-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268019",
+                "Comment": "gem-activejob is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268020",
+                "Comment": "gem-activejob-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268021",
+                "Comment": "gem-activejob-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268022",
+                "Comment": "gem-activemodel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268023",
+                "Comment": "gem-activemodel-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268024",
+                "Comment": "gem-activemodel-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268025",
+                "Comment": "gem-activerecord is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268026",
+                "Comment": "gem-activerecord-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268027",
+                "Comment": "gem-activerecord-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268028",
+                "Comment": "gem-activestorage is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268029",
+                "Comment": "gem-activestorage-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268030",
+                "Comment": "gem-activestorage-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268031",
+                "Comment": "gem-activesupport is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268032",
+                "Comment": "gem-activesupport-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268033",
+                "Comment": "gem-activesupport-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268034",
+                "Comment": "gem-rails is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268035",
+                "Comment": "gem-rails-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268036",
+                "Comment": "gem-railties is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268037",
+                "Comment": "gem-railties-devel is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268038",
+                "Comment": "gem-railties-doc is earlier than 0:6.1.7.1-alt1.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234268039",
+                "Comment": "rails is earlier than 0:6.1.7.1-alt1.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

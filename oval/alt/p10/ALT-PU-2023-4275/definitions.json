@@ -1,0 +1,122 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234275",
+      "Version": "oval:org.altlinux.errata:def:20234275",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4275: package `gem-jmespath` update to version 1.6.2-alt1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4275",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4275",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "CVE-2022-32511",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2022-32511",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-jmespath to version 1.6.2-alt1. \nSecurity Fix(es):\n\n * CVE-2022-32511: jmespath.rb (aka JMESPath for Ruby) before 1.6.1 uses JSON.load in a situation where JSON.parse is preferable.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Critical",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": null,
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:P/A:P",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+              "Cwe": "NVD-CWE-noinfo",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2022-32511",
+              "Impact": "Critical",
+              "Public": "20220606",
+              "CveID": "CVE-2022-32511"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234275001",
+                "Comment": "gem-jmespath is earlier than 0:1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234275002",
+                "Comment": "gem-jmespath-devel is earlier than 0:1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234275003",
+                "Comment": "gem-jmespath-doc is earlier than 0:1.6.2-alt1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234275004",
+                "Comment": "jmespath-rb is earlier than 0:1.6.2-alt1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "Definition": [
+    {
+      "ID": "oval:org.altlinux.errata:def:20234270",
+      "Version": "oval:org.altlinux.errata:def:20234270",
+      "Class": "patch",
+      "Metadata": {
+        "Title": "ALT-PU-2023-4270: package `gem-rack-cors` update to version 2.0.1.0-alt0.1",
+        "AffectedList": [
+          {
+            "Family": "unix",
+            "Platforms": [
+              "ALT Linux branch p10"
+            ],
+            "Products": [
+              "ALT Server",
+              "ALT Virtualization Server",
+              "ALT Workstation",
+              "ALT Workstation K",
+              "ALT Education",
+              "Simply Linux",
+              "Starterkit"
+            ]
+          }
+        ],
+        "References": [
+          {
+            "RefID": "ALT-PU-2023-4270",
+            "RefURL": "https://errata.altlinux.org/ALT-PU-2023-4270",
+            "Source": "ALTPU"
+          },
+          {
+            "RefID": "BDU:2021-04587",
+            "RefURL": "https://bdu.fstec.ru/vul/2021-04587",
+            "Source": "BDU"
+          },
+          {
+            "RefID": "CVE-2019-18978",
+            "RefURL": "https://nvd.nist.gov/vuln/detail/CVE-2019-18978",
+            "Source": "CVE"
+          }
+        ],
+        "Description": "This update upgrades gem-rack-cors to version 2.0.1.0-alt0.1. \nSecurity Fix(es):\n\n * BDU:2021-04587: Уязвимость ПО организации совместимости приложений Rack с CORS Rack-cors, связанная с некорректным ограничением имени пути к каталогу, позволяющая нарушителю получить доступ к конфиденциальным данным\n\n * CVE-2019-18978: An issue was discovered in the rack-cors (aka Rack CORS Middleware) gem before 1.0.4 for Ruby. It allows ../ directory traversal to access private resources because resource matching does not ensure that pathnames are in a canonical format.",
+        "Advisory": {
+          "From": "errata.altlinux.org",
+          "Severity": "Low",
+          "Rights": "Copyright 2023 BaseALT Ltd.",
+          "Issued": {
+            "Date": "2023-09-18"
+          },
+          "Updated": {
+            "Date": "2023-09-18"
+          },
+          "bdu": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://bdu.fstec.ru/vul/2021-04587",
+              "Impact": "Low",
+              "Public": "20191114",
+              "CveID": "BDU:2021-04587"
+            }
+          ],
+          "Cves": [
+            {
+              "Cvss": "AV:N/AC:L/Au:N/C:P/I:N/A:N",
+              "Cvss3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+              "Cwe": "CWE-22",
+              "Href": "https://nvd.nist.gov/vuln/detail/CVE-2019-18978",
+              "Impact": "Low",
+              "Public": "20191114",
+              "CveID": "CVE-2019-18978"
+            }
+          ],
+          "AffectedCpeList": {
+            "Cpe": [
+              "cpe:/o:alt:kworkstation:10",
+              "cpe:/o:alt:workstation:10",
+              "cpe:/o:alt:server:10",
+              "cpe:/o:alt:server-v:10",
+              "cpe:/o:alt:education:10",
+              "cpe:/o:alt:slinux:10",
+              "cpe:/o:alt:starterkit:p10",
+              "cpe:/o:alt:kworkstation:10.1",
+              "cpe:/o:alt:workstation:10.1",
+              "cpe:/o:alt:server:10.1",
+              "cpe:/o:alt:server-v:10.1",
+              "cpe:/o:alt:education:10.1",
+              "cpe:/o:alt:slinux:10.1",
+              "cpe:/o:alt:starterkit:10.1",
+              "cpe:/o:alt:kworkstation:10.2",
+              "cpe:/o:alt:workstation:10.2",
+              "cpe:/o:alt:server:10.2",
+              "cpe:/o:alt:server-v:10.2",
+              "cpe:/o:alt:education:10.2",
+              "cpe:/o:alt:slinux:10.2",
+              "cpe:/o:alt:starterkit:10.2"
+            ]
+          }
+        }
+      },
+      "Criteria": {
+        "Operator": "AND",
+        "Criterions": [
+          {
+            "TestRef": "oval:org.altlinux.errata:tst:2001",
+            "Comment": "ALT Linux must be installed"
+          }
+        ],
+        "Criterias": [
+          {
+            "Operator": "OR",
+            "Criterions": [
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234270001",
+                "Comment": "gem-rack-cors is earlier than 0:2.0.1.0-alt0.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234270002",
+                "Comment": "gem-rack-cors-devel is earlier than 0:2.0.1.0-alt0.1"
+              },
+              {
+                "TestRef": "oval:org.altlinux.errata:tst:20234270003",
+                "Comment": "gem-rack-cors-doc is earlier than 0:2.0.1.0-alt0.1"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
